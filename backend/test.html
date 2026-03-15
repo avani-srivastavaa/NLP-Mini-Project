@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firebase Auth Test</title>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+
+</head>
+
+<body>
+
+<h2>Firebase Login Test</h2>
+
+<button onclick="login()">Login with Google</button>
+
+<p id="user"></p>
+<p id="result"></p>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+const firebaseConfig = {
+
+  apiKey: "AIzaSyBUoQ60m7s-6VMHQOikWBlchQLlp9Nk5k0",
+
+  authDomain: "library-mangament-system.firebaseapp.com",
+
+  projectId: "library-mangament-system",
+
+  storageBucket: "library-mangament-system.firebasestorage.app",
+
+  messagingSenderId: "270784927108",
+
+  appId: "1:270784927108:web:bd5426d0b277da042cb9d1"
+
+};
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth();
+
+const provider = new GoogleAuthProvider();
+
+window.login = async function() {
+
+  const result = await signInWithPopup(auth, provider);
+
+  const user = result.user;
+
+  document.getElementById("user").innerText = "Logged in as: " + user.email;
+
+  const token = await user.getIdToken();
+
+  console.log("TOKEN:", token);
+
+  const response = await fetch("http://127.0.0.1:8000/auth/login", {
+
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+        id_token: token
+      })
+
+  });
+
+  const data = await response.json();
+
+  document.getElementById("result").innerText =
+      JSON.stringify(data, null, 2);
+}
+
+</script>
+
+</body>
+</html>
