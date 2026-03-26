@@ -1,0 +1,101 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+CS001,Introduction to Algorithms (Ed 1),"Cormen, Leiserson",CS,24,24
+CS002,Operating System Concepts (Ed 1),"Silberschatz, Galvin",CS,22,22
+CS003,Computer Networks (Ed 1),Tanenbaum,CS,10,8
+CS004,Artificial Intelligence: A Modern Approach (Ed 1),"Russell, Norvig",CS,17,17
+CS005,Database System Concepts (Ed 1),"Korth, Sudarshan",CS,22,21
+CS006,Compilers: Principles (Ed 1),"Aho, Ullman",CS,22,22
+CS007,Discrete Mathematics (Ed 1),Kenneth Rosen,CS,14,14
+CS008,Speech and Language Processing (Ed 1),"Jurafsky, Martin",CS,20,19
+CS009,Introduction to Algorithms (Ed 2),"Cormen, Leiserson",CS,12,12
+CS010,Operating System Concepts (Ed 2),"Silberschatz, Galvin",CS,16,16
+CS011,Computer Networks (Ed 2),Tanenbaum,CS,13,13
+CS012,Artificial Intelligence: A Modern Approach (Ed 2),"Russell, Norvig",CS,21,21
+CS013,Database System Concepts (Ed 2),"Korth, Sudarshan",CS,24,24
+CS014,Compilers: Principles (Ed 2),"Aho, Ullman",CS,23,22
+CS015,Discrete Mathematics (Ed 2),Kenneth Rosen,CS,14,14
+CS016,Speech and Language Processing (Ed 2),"Jurafsky, Martin",CS,15,14
+CS017,Introduction to Algorithms (Ed 3),"Cormen, Leiserson",CS,11,11
+CS018,Operating System Concepts (Ed 3),"Silberschatz, Galvin",CS,24,23
+CS019,Computer Networks (Ed 3),Tanenbaum,CS,16,16
+CS020,Artificial Intelligence: A Modern Approach (Ed 3),"Russell, Norvig",CS,23,23
+CS021,Database System Concepts (Ed 3),"Korth, Sudarshan",CS,18,18
+CS022,Compilers: Principles (Ed 3),"Aho, Ullman",CS,13,13
+CS023,Discrete Mathematics (Ed 3),Kenneth Rosen,CS,13,12
+CS024,Speech and Language Processing (Ed 3),"Jurafsky, Martin",CS,13,13
+CS025,Introduction to Algorithms (Ed 4),"Cormen, Leiserson",CS,13,13
+CS026,Operating System Concepts (Ed 4),"Silberschatz, Galvin",CS,24,24
+CS027,Computer Networks (Ed 4),Tanenbaum,CS,14,14
+CS028,Artificial Intelligence: A Modern Approach (Ed 4),"Russell, Norvig",CS,24,23
+CS029,Database System Concepts (Ed 4),"Korth, Sudarshan",CS,16,16
+CS030,Compilers: Principles (Ed 4),"Aho, Ullman",CS,15,15
+CS031,Discrete Mathematics (Ed 4),Kenneth Rosen,CS,21,20
+CS032,Speech and Language Processing (Ed 4),"Jurafsky, Martin",CS,15,15
+CS033,Introduction to Algorithms (Ed 5),"Cormen, Leiserson",CS,10,10
+CS034,Operating System Concepts (Ed 5),"Silberschatz, Galvin",CS,14,14
+CS035,Computer Networks (Ed 5),Tanenbaum,CS,23,23
+CS036,Artificial Intelligence: A Modern Approach (Ed 5),"Russell, Norvig",CS,21,21
+CS037,Database System Concepts (Ed 5),"Korth, Sudarshan",CS,11,11
+CS038,Compilers: Principles (Ed 5),"Aho, Ullman",CS,23,23
+CS039,Discrete Mathematics (Ed 5),Kenneth Rosen,CS,11,11
+CS040,Speech and Language Processing (Ed 5),"Jurafsky, Martin",CS,12,12
+CS041,Introduction to Algorithms (Ed 6),"Cormen, Leiserson",CS,16,14
+CS042,Operating System Concepts (Ed 6),"Silberschatz, Galvin",CS,10,9
+CS043,Computer Networks (Ed 6),Tanenbaum,CS,23,23
+CS044,Artificial Intelligence: A Modern Approach (Ed 6),"Russell, Norvig",CS,19,19
+CS045,Database System Concepts (Ed 6),"Korth, Sudarshan",CS,14,14
+CS046,Compilers: Principles (Ed 6),"Aho, Ullman",CS,22,22
+CS047,Discrete Mathematics (Ed 6),Kenneth Rosen,CS,18,18
+CS048,Speech and Language Processing (Ed 6),"Jurafsky, Martin",CS,15,14
+CS049,Introduction to Algorithms (Ed 7),"Cormen, Leiserson",CS,18,18
+CS050,Operating System Concepts (Ed 7),"Silberschatz, Galvin",CS,11,11
+CS051,Computer Networks (Ed 7),Tanenbaum,CS,22,21
+CS052,Artificial Intelligence: A Modern Approach (Ed 7),"Russell, Norvig",CS,24,24
+CS053,Database System Concepts (Ed 7),"Korth, Sudarshan",CS,18,16
+CS054,Compilers: Principles (Ed 7),"Aho, Ullman",CS,24,24
+CS055,Discrete Mathematics (Ed 7),Kenneth Rosen,CS,22,22
+CS056,Speech and Language Processing (Ed 7),"Jurafsky, Martin",CS,25,25
+CS057,Introduction to Algorithms (Ed 8),"Cormen, Leiserson",CS,18,18
+CS058,Operating System Concepts (Ed 8),"Silberschatz, Galvin",CS,17,17
+CS059,Computer Networks (Ed 8),Tanenbaum,CS,25,25
+CS060,Artificial Intelligence: A Modern Approach (Ed 8),"Russell, Norvig",CS,14,14
+CS061,Database System Concepts (Ed 8),"Korth, Sudarshan",CS,14,14
+CS062,Compilers: Principles (Ed 8),"Aho, Ullman",CS,16,16
+CS063,Discrete Mathematics (Ed 8),Kenneth Rosen,CS,10,9
+CS064,Speech and Language Processing (Ed 8),"Jurafsky, Martin",CS,10,9
+CS065,Introduction to Algorithms (Ed 9),"Cormen, Leiserson",CS,11,10
+CS066,Operating System Concepts (Ed 9),"Silberschatz, Galvin",CS,16,16
+CS067,Computer Networks (Ed 9),Tanenbaum,CS,22,22
+CS068,Artificial Intelligence: A Modern Approach (Ed 9),"Russell, Norvig",CS,17,16
+CS069,Database System Concepts (Ed 9),"Korth, Sudarshan",CS,24,24
+CS070,Compilers: Principles (Ed 9),"Aho, Ullman",CS,18,17
+CS071,Discrete Mathematics (Ed 9),Kenneth Rosen,CS,13,13
+CS072,Speech and Language Processing (Ed 9),"Jurafsky, Martin",CS,13,12
+CS073,Introduction to Algorithms (Ed 10),"Cormen, Leiserson",CS,22,22
+CS074,Operating System Concepts (Ed 10),"Silberschatz, Galvin",CS,20,20
+CS075,Computer Networks (Ed 10),Tanenbaum,CS,15,15
+CS076,Artificial Intelligence: A Modern Approach (Ed 10),"Russell, Norvig",CS,21,21
+CS077,Database System Concepts (Ed 10),"Korth, Sudarshan",CS,25,25
+CS078,Compilers: Principles (Ed 10),"Aho, Ullman",CS,10,10
+CS079,Discrete Mathematics (Ed 10),Kenneth Rosen,CS,23,22
+CS080,Speech and Language Processing (Ed 10),"Jurafsky, Martin",CS,16,15
+CS081,Introduction to Algorithms (Ed 11),"Cormen, Leiserson",CS,21,21
+CS082,Operating System Concepts (Ed 11),"Silberschatz, Galvin",CS,11,10
+CS083,Computer Networks (Ed 11),Tanenbaum,CS,24,23
+CS084,Artificial Intelligence: A Modern Approach (Ed 11),"Russell, Norvig",CS,18,18
+CS085,Database System Concepts (Ed 11),"Korth, Sudarshan",CS,17,17
+CS086,Compilers: Principles (Ed 11),"Aho, Ullman",CS,21,21
+CS087,Discrete Mathematics (Ed 11),Kenneth Rosen,CS,11,11
+CS088,Speech and Language Processing (Ed 11),"Jurafsky, Martin",CS,15,15
+CS089,Introduction to Algorithms (Ed 12),"Cormen, Leiserson",CS,17,17
+CS090,Operating System Concepts (Ed 12),"Silberschatz, Galvin",CS,13,11
+CS091,Computer Networks (Ed 12),Tanenbaum,CS,15,15
+CS092,Artificial Intelligence: A Modern Approach (Ed 12),"Russell, Norvig",CS,10,10
+CS093,Database System Concepts (Ed 12),"Korth, Sudarshan",CS,20,19
+CS094,Compilers: Principles (Ed 12),"Aho, Ullman",CS,16,16
+CS095,Discrete Mathematics (Ed 12),Kenneth Rosen,CS,20,20
+CS096,Speech and Language Processing (Ed 12),"Jurafsky, Martin",CS,12,12
+CS097,Introduction to Algorithms (Ed 13),"Cormen, Leiserson",CS,12,12
+CS098,Operating System Concepts (Ed 13),"Silberschatz, Galvin",CS,25,25
+CS099,Computer Networks (Ed 13),Tanenbaum,CS,18,17
+CS100,Artificial Intelligence: A Modern Approach (Ed 13),"Russell, Norvig",CS,19,19

@@ -1,0 +1,101 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+EX001,Principles of Communication Systems (Ed 1),"Taub, Schilling",EXTC,16,16
+EX002,Digital Communications (Ed 1),Simon Haykin,EXTC,11,11
+EX003,Antenna Theory (Ed 1),Constantine Balanis,EXTC,22,22
+EX004,Microwave Engineering (Ed 1),David Pozar,EXTC,11,11
+EX005,Optical Fiber Communications (Ed 1),Gerd Keiser,EXTC,23,21
+EX006,Wireless Communications (Ed 1),Rappaport,EXTC,25,25
+EX007,Principles of Communication Systems (Ed 2),"Taub, Schilling",EXTC,12,12
+EX008,Digital Communications (Ed 2),Simon Haykin,EXTC,10,9
+EX009,Antenna Theory (Ed 2),Constantine Balanis,EXTC,12,11
+EX010,Microwave Engineering (Ed 2),David Pozar,EXTC,16,15
+EX011,Optical Fiber Communications (Ed 2),Gerd Keiser,EXTC,24,24
+EX012,Wireless Communications (Ed 2),Rappaport,EXTC,14,14
+EX013,Principles of Communication Systems (Ed 3),"Taub, Schilling",EXTC,22,22
+EX014,Digital Communications (Ed 3),Simon Haykin,EXTC,23,22
+EX015,Antenna Theory (Ed 3),Constantine Balanis,EXTC,13,13
+EX016,Microwave Engineering (Ed 3),David Pozar,EXTC,11,11
+EX017,Optical Fiber Communications (Ed 3),Gerd Keiser,EXTC,17,16
+EX018,Wireless Communications (Ed 3),Rappaport,EXTC,21,21
+EX019,Principles of Communication Systems (Ed 4),"Taub, Schilling",EXTC,18,16
+EX020,Digital Communications (Ed 4),Simon Haykin,EXTC,19,19
+EX021,Antenna Theory (Ed 4),Constantine Balanis,EXTC,14,14
+EX022,Microwave Engineering (Ed 4),David Pozar,EXTC,16,16
+EX023,Optical Fiber Communications (Ed 4),Gerd Keiser,EXTC,12,12
+EX024,Wireless Communications (Ed 4),Rappaport,EXTC,22,22
+EX025,Principles of Communication Systems (Ed 5),"Taub, Schilling",EXTC,20,19
+EX026,Digital Communications (Ed 5),Simon Haykin,EXTC,21,21
+EX027,Antenna Theory (Ed 5),Constantine Balanis,EXTC,25,25
+EX028,Microwave Engineering (Ed 5),David Pozar,EXTC,10,8
+EX029,Optical Fiber Communications (Ed 5),Gerd Keiser,EXTC,21,21
+EX030,Wireless Communications (Ed 5),Rappaport,EXTC,20,20
+EX031,Principles of Communication Systems (Ed 6),"Taub, Schilling",EXTC,17,17
+EX032,Digital Communications (Ed 6),Simon Haykin,EXTC,10,10
+EX033,Antenna Theory (Ed 6),Constantine Balanis,EXTC,23,22
+EX034,Microwave Engineering (Ed 6),David Pozar,EXTC,21,21
+EX035,Optical Fiber Communications (Ed 6),Gerd Keiser,EXTC,15,14
+EX036,Wireless Communications (Ed 6),Rappaport,EXTC,17,17
+EX037,Principles of Communication Systems (Ed 7),"Taub, Schilling",EXTC,13,13
+EX038,Digital Communications (Ed 7),Simon Haykin,EXTC,23,23
+EX039,Antenna Theory (Ed 7),Constantine Balanis,EXTC,11,11
+EX040,Microwave Engineering (Ed 7),David Pozar,EXTC,21,21
+EX041,Optical Fiber Communications (Ed 7),Gerd Keiser,EXTC,25,25
+EX042,Wireless Communications (Ed 7),Rappaport,EXTC,21,21
+EX043,Principles of Communication Systems (Ed 8),"Taub, Schilling",EXTC,14,14
+EX044,Digital Communications (Ed 8),Simon Haykin,EXTC,15,14
+EX045,Antenna Theory (Ed 8),Constantine Balanis,EXTC,14,13
+EX046,Microwave Engineering (Ed 8),David Pozar,EXTC,17,17
+EX047,Optical Fiber Communications (Ed 8),Gerd Keiser,EXTC,10,10
+EX048,Wireless Communications (Ed 8),Rappaport,EXTC,13,12
+EX049,Principles of Communication Systems (Ed 9),"Taub, Schilling",EXTC,18,17
+EX050,Digital Communications (Ed 9),Simon Haykin,EXTC,18,17
+EX051,Antenna Theory (Ed 9),Constantine Balanis,EXTC,19,19
+EX052,Microwave Engineering (Ed 9),David Pozar,EXTC,12,12
+EX053,Optical Fiber Communications (Ed 9),Gerd Keiser,EXTC,12,12
+EX054,Wireless Communications (Ed 9),Rappaport,EXTC,21,21
+EX055,Principles of Communication Systems (Ed 10),"Taub, Schilling",EXTC,11,11
+EX056,Digital Communications (Ed 10),Simon Haykin,EXTC,22,22
+EX057,Antenna Theory (Ed 10),Constantine Balanis,EXTC,13,13
+EX058,Microwave Engineering (Ed 10),David Pozar,EXTC,18,18
+EX059,Optical Fiber Communications (Ed 10),Gerd Keiser,EXTC,24,24
+EX060,Wireless Communications (Ed 10),Rappaport,EXTC,21,20
+EX061,Principles of Communication Systems (Ed 11),"Taub, Schilling",EXTC,22,22
+EX062,Digital Communications (Ed 11),Simon Haykin,EXTC,22,21
+EX063,Antenna Theory (Ed 11),Constantine Balanis,EXTC,21,20
+EX064,Microwave Engineering (Ed 11),David Pozar,EXTC,23,23
+EX065,Optical Fiber Communications (Ed 11),Gerd Keiser,EXTC,15,15
+EX066,Wireless Communications (Ed 11),Rappaport,EXTC,25,25
+EX067,Principles of Communication Systems (Ed 12),"Taub, Schilling",EXTC,18,18
+EX068,Digital Communications (Ed 12),Simon Haykin,EXTC,19,18
+EX069,Antenna Theory (Ed 12),Constantine Balanis,EXTC,23,23
+EX070,Microwave Engineering (Ed 12),David Pozar,EXTC,17,17
+EX071,Optical Fiber Communications (Ed 12),Gerd Keiser,EXTC,11,11
+EX072,Wireless Communications (Ed 12),Rappaport,EXTC,11,11
+EX073,Principles of Communication Systems (Ed 13),"Taub, Schilling",EXTC,16,15
+EX074,Digital Communications (Ed 13),Simon Haykin,EXTC,23,23
+EX075,Antenna Theory (Ed 13),Constantine Balanis,EXTC,16,16
+EX076,Microwave Engineering (Ed 13),David Pozar,EXTC,20,20
+EX077,Optical Fiber Communications (Ed 13),Gerd Keiser,EXTC,23,23
+EX078,Wireless Communications (Ed 13),Rappaport,EXTC,18,17
+EX079,Principles of Communication Systems (Ed 14),"Taub, Schilling",EXTC,14,14
+EX080,Digital Communications (Ed 14),Simon Haykin,EXTC,15,14
+EX081,Antenna Theory (Ed 14),Constantine Balanis,EXTC,14,14
+EX082,Microwave Engineering (Ed 14),David Pozar,EXTC,17,17
+EX083,Optical Fiber Communications (Ed 14),Gerd Keiser,EXTC,15,14
+EX084,Wireless Communications (Ed 14),Rappaport,EXTC,12,12
+EX085,Principles of Communication Systems (Ed 15),"Taub, Schilling",EXTC,19,19
+EX086,Digital Communications (Ed 15),Simon Haykin,EXTC,11,10
+EX087,Antenna Theory (Ed 15),Constantine Balanis,EXTC,11,11
+EX088,Microwave Engineering (Ed 15),David Pozar,EXTC,13,13
+EX089,Optical Fiber Communications (Ed 15),Gerd Keiser,EXTC,25,25
+EX090,Wireless Communications (Ed 15),Rappaport,EXTC,21,21
+EX091,Principles of Communication Systems (Ed 16),"Taub, Schilling",EXTC,23,23
+EX092,Digital Communications (Ed 16),Simon Haykin,EXTC,19,19
+EX093,Antenna Theory (Ed 16),Constantine Balanis,EXTC,19,19
+EX094,Microwave Engineering (Ed 16),David Pozar,EXTC,25,25
+EX095,Optical Fiber Communications (Ed 16),Gerd Keiser,EXTC,15,14
+EX096,Wireless Communications (Ed 16),Rappaport,EXTC,25,25
+EX097,Principles of Communication Systems (Ed 17),"Taub, Schilling",EXTC,15,15
+EX098,Digital Communications (Ed 17),Simon Haykin,EXTC,24,24
+EX099,Antenna Theory (Ed 17),Constantine Balanis,EXTC,23,22
+EX100,Microwave Engineering (Ed 17),David Pozar,EXTC,13,12

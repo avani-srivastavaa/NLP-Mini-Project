@@ -1,0 +1,101 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+FI001,Higher Engineering Mathematics (Ed 1),B.S. Grewal,First Year,10,8
+FI002,Advanced Engineering Mathematics (Ed 1),Erwin Kreyszig,First Year,14,14
+FI003,Engineering Physics (Ed 1),D.K. Bhattacharya,First Year,11,11
+FI004,Applied Chemistry (Ed 1),S.S. Dara,First Year,24,24
+FI005,Engineering Mechanics (Ed 1),S.S. Bhavikatti,First Year,24,24
+FI006,Basic Electrical Engineering (Ed 1),V.K. Mehta,First Year,22,22
+FI007,Programming in ANSI C (Ed 1),E. Balagurusamy,First Year,16,15
+FI008,Engineering Graphics (Ed 1),N.D. Bhatt,First Year,10,10
+FI009,Higher Engineering Mathematics (Ed 2),B.S. Grewal,First Year,10,10
+FI010,Advanced Engineering Mathematics (Ed 2),Erwin Kreyszig,First Year,17,17
+FI011,Engineering Physics (Ed 2),D.K. Bhattacharya,First Year,17,17
+FI012,Applied Chemistry (Ed 2),S.S. Dara,First Year,11,11
+FI013,Engineering Mechanics (Ed 2),S.S. Bhavikatti,First Year,22,22
+FI014,Basic Electrical Engineering (Ed 2),V.K. Mehta,First Year,14,14
+FI015,Programming in ANSI C (Ed 2),E. Balagurusamy,First Year,21,21
+FI016,Engineering Graphics (Ed 2),N.D. Bhatt,First Year,21,21
+FI017,Higher Engineering Mathematics (Ed 3),B.S. Grewal,First Year,12,12
+FI018,Advanced Engineering Mathematics (Ed 3),Erwin Kreyszig,First Year,15,15
+FI019,Engineering Physics (Ed 3),D.K. Bhattacharya,First Year,19,19
+FI020,Applied Chemistry (Ed 3),S.S. Dara,First Year,21,21
+FI021,Engineering Mechanics (Ed 3),S.S. Bhavikatti,First Year,16,15
+FI022,Basic Electrical Engineering (Ed 3),V.K. Mehta,First Year,17,17
+FI023,Programming in ANSI C (Ed 3),E. Balagurusamy,First Year,13,13
+FI024,Engineering Graphics (Ed 3),N.D. Bhatt,First Year,17,16
+FI025,Higher Engineering Mathematics (Ed 4),B.S. Grewal,First Year,25,25
+FI026,Advanced Engineering Mathematics (Ed 4),Erwin Kreyszig,First Year,10,10
+FI027,Engineering Physics (Ed 4),D.K. Bhattacharya,First Year,13,13
+FI028,Applied Chemistry (Ed 4),S.S. Dara,First Year,15,15
+FI029,Engineering Mechanics (Ed 4),S.S. Bhavikatti,First Year,17,16
+FI030,Basic Electrical Engineering (Ed 4),V.K. Mehta,First Year,18,18
+FI031,Programming in ANSI C (Ed 4),E. Balagurusamy,First Year,15,15
+FI032,Engineering Graphics (Ed 4),N.D. Bhatt,First Year,23,22
+FI033,Higher Engineering Mathematics (Ed 5),B.S. Grewal,First Year,15,14
+FI034,Advanced Engineering Mathematics (Ed 5),Erwin Kreyszig,First Year,12,10
+FI035,Engineering Physics (Ed 5),D.K. Bhattacharya,First Year,22,22
+FI036,Applied Chemistry (Ed 5),S.S. Dara,First Year,20,18
+FI037,Engineering Mechanics (Ed 5),S.S. Bhavikatti,First Year,25,25
+FI038,Basic Electrical Engineering (Ed 5),V.K. Mehta,First Year,24,22
+FI039,Programming in ANSI C (Ed 5),E. Balagurusamy,First Year,23,22
+FI040,Engineering Graphics (Ed 5),N.D. Bhatt,First Year,10,8
+FI041,Higher Engineering Mathematics (Ed 6),B.S. Grewal,First Year,19,18
+FI042,Advanced Engineering Mathematics (Ed 6),Erwin Kreyszig,First Year,10,10
+FI043,Engineering Physics (Ed 6),D.K. Bhattacharya,First Year,12,12
+FI044,Applied Chemistry (Ed 6),S.S. Dara,First Year,15,15
+FI045,Engineering Mechanics (Ed 6),S.S. Bhavikatti,First Year,10,10
+FI046,Basic Electrical Engineering (Ed 6),V.K. Mehta,First Year,18,18
+FI047,Programming in ANSI C (Ed 6),E. Balagurusamy,First Year,18,17
+FI048,Engineering Graphics (Ed 6),N.D. Bhatt,First Year,17,17
+FI049,Higher Engineering Mathematics (Ed 7),B.S. Grewal,First Year,23,23
+FI050,Advanced Engineering Mathematics (Ed 7),Erwin Kreyszig,First Year,24,24
+FI051,Engineering Physics (Ed 7),D.K. Bhattacharya,First Year,25,25
+FI052,Applied Chemistry (Ed 7),S.S. Dara,First Year,15,15
+FI053,Engineering Mechanics (Ed 7),S.S. Bhavikatti,First Year,11,10
+FI054,Basic Electrical Engineering (Ed 7),V.K. Mehta,First Year,18,18
+FI055,Programming in ANSI C (Ed 7),E. Balagurusamy,First Year,11,11
+FI056,Engineering Graphics (Ed 7),N.D. Bhatt,First Year,25,25
+FI057,Higher Engineering Mathematics (Ed 8),B.S. Grewal,First Year,25,24
+FI058,Advanced Engineering Mathematics (Ed 8),Erwin Kreyszig,First Year,18,17
+FI059,Engineering Physics (Ed 8),D.K. Bhattacharya,First Year,13,13
+FI060,Applied Chemistry (Ed 8),S.S. Dara,First Year,21,20
+FI061,Engineering Mechanics (Ed 8),S.S. Bhavikatti,First Year,17,17
+FI062,Basic Electrical Engineering (Ed 8),V.K. Mehta,First Year,21,21
+FI063,Programming in ANSI C (Ed 8),E. Balagurusamy,First Year,12,11
+FI064,Engineering Graphics (Ed 8),N.D. Bhatt,First Year,11,11
+FI065,Higher Engineering Mathematics (Ed 9),B.S. Grewal,First Year,16,16
+FI066,Advanced Engineering Mathematics (Ed 9),Erwin Kreyszig,First Year,14,14
+FI067,Engineering Physics (Ed 9),D.K. Bhattacharya,First Year,22,22
+FI068,Applied Chemistry (Ed 9),S.S. Dara,First Year,16,15
+FI069,Engineering Mechanics (Ed 9),S.S. Bhavikatti,First Year,11,11
+FI070,Basic Electrical Engineering (Ed 9),V.K. Mehta,First Year,15,15
+FI071,Programming in ANSI C (Ed 9),E. Balagurusamy,First Year,23,23
+FI072,Engineering Graphics (Ed 9),N.D. Bhatt,First Year,18,18
+FI073,Higher Engineering Mathematics (Ed 10),B.S. Grewal,First Year,21,21
+FI074,Advanced Engineering Mathematics (Ed 10),Erwin Kreyszig,First Year,21,21
+FI075,Engineering Physics (Ed 10),D.K. Bhattacharya,First Year,13,12
+FI076,Applied Chemistry (Ed 10),S.S. Dara,First Year,25,25
+FI077,Engineering Mechanics (Ed 10),S.S. Bhavikatti,First Year,19,19
+FI078,Basic Electrical Engineering (Ed 10),V.K. Mehta,First Year,20,20
+FI079,Programming in ANSI C (Ed 10),E. Balagurusamy,First Year,21,21
+FI080,Engineering Graphics (Ed 10),N.D. Bhatt,First Year,14,14
+FI081,Higher Engineering Mathematics (Ed 11),B.S. Grewal,First Year,22,22
+FI082,Advanced Engineering Mathematics (Ed 11),Erwin Kreyszig,First Year,17,16
+FI083,Engineering Physics (Ed 11),D.K. Bhattacharya,First Year,11,11
+FI084,Applied Chemistry (Ed 11),S.S. Dara,First Year,14,14
+FI085,Engineering Mechanics (Ed 11),S.S. Bhavikatti,First Year,19,18
+FI086,Basic Electrical Engineering (Ed 11),V.K. Mehta,First Year,10,10
+FI087,Programming in ANSI C (Ed 11),E. Balagurusamy,First Year,22,22
+FI088,Engineering Graphics (Ed 11),N.D. Bhatt,First Year,24,24
+FI089,Higher Engineering Mathematics (Ed 12),B.S. Grewal,First Year,14,14
+FI090,Advanced Engineering Mathematics (Ed 12),Erwin Kreyszig,First Year,24,24
+FI091,Engineering Physics (Ed 12),D.K. Bhattacharya,First Year,21,21
+FI092,Applied Chemistry (Ed 12),S.S. Dara,First Year,23,23
+FI093,Engineering Mechanics (Ed 12),S.S. Bhavikatti,First Year,17,17
+FI094,Basic Electrical Engineering (Ed 12),V.K. Mehta,First Year,23,22
+FI095,Programming in ANSI C (Ed 12),E. Balagurusamy,First Year,20,20
+FI096,Engineering Graphics (Ed 12),N.D. Bhatt,First Year,20,19
+FI097,Higher Engineering Mathematics (Ed 13),B.S. Grewal,First Year,18,17
+FI098,Advanced Engineering Mathematics (Ed 13),Erwin Kreyszig,First Year,25,25
+FI099,Engineering Physics (Ed 13),D.K. Bhattacharya,First Year,19,19
+FI100,Applied Chemistry (Ed 13),S.S. Dara,First Year,15,15
