@@ -1,0 +1,601 @@
+Book_ID,Title,Author,Department,ISBN
+FI001,Higher Engineering Mathematics - Edition 1,B.S. Grewal,First Year,978-0-12-718122-X
+FI002,Advanced Engineering Mathematics - Edition 1,Erwin Kreyszig,First Year,978-0-12-266743-X
+FI003,Engineering Physics - Edition 1,D.K. Bhattacharya,First Year,978-0-12-109058-X
+FI004,Textbook of Engineering Chemistry - Edition 1,S.S. Dara,First Year,978-0-12-738179-X
+FI005,Engineering Mechanics - Edition 1,S.S. Bhavikatti,First Year,978-0-12-896047-X
+FI006,Basic Electrical Engineering - Edition 1,V.K. Mehta,First Year,978-0-12-205762-X
+FI007,Programming in ANSI C - Edition 1,E. Balagurusamy,First Year,978-0-12-486842-X
+FI008,Engineering Graphics - Edition 1,N.D. Bhatt,First Year,978-0-12-814596-X
+FI009,Environmental Studies - Edition 1,Benny Joseph,First Year,978-0-12-501667-X
+FI010,Applied Physics - Edition 1,Arthur Beiser,First Year,978-0-12-507414-X
+FI011,Higher Engineering Mathematics - Edition 2,B.S. Grewal,First Year,978-0-12-164536-X
+FI012,Advanced Engineering Mathematics - Edition 2,Erwin Kreyszig,First Year,978-0-12-793039-X
+FI013,Engineering Physics - Edition 2,D.K. Bhattacharya,First Year,978-0-12-360654-X
+FI014,Textbook of Engineering Chemistry - Edition 2,S.S. Dara,First Year,978-0-12-621347-X
+FI015,Engineering Mechanics - Edition 2,S.S. Bhavikatti,First Year,978-0-12-722651-X
+FI016,Basic Electrical Engineering - Edition 2,V.K. Mehta,First Year,978-0-12-627376-X
+FI017,Programming in ANSI C - Edition 2,E. Balagurusamy,First Year,978-0-12-455336-X
+FI018,Engineering Graphics - Edition 2,N.D. Bhatt,First Year,978-0-12-995818-X
+FI019,Environmental Studies - Edition 2,Benny Joseph,First Year,978-0-12-167857-X
+FI020,Applied Physics - Edition 2,Arthur Beiser,First Year,978-0-12-886294-X
+FI021,Higher Engineering Mathematics - Edition 3,B.S. Grewal,First Year,978-0-12-289203-X
+FI022,Advanced Engineering Mathematics - Edition 3,Erwin Kreyszig,First Year,978-0-12-863341-X
+FI023,Engineering Physics - Edition 3,D.K. Bhattacharya,First Year,978-0-12-786543-X
+FI024,Textbook of Engineering Chemistry - Edition 3,S.S. Dara,First Year,978-0-12-971098-X
+FI025,Engineering Mechanics - Edition 3,S.S. Bhavikatti,First Year,978-0-12-632912-X
+FI026,Basic Electrical Engineering - Edition 3,V.K. Mehta,First Year,978-0-12-655875-X
+FI027,Programming in ANSI C - Edition 3,E. Balagurusamy,First Year,978-0-12-841149-X
+FI028,Engineering Graphics - Edition 3,N.D. Bhatt,First Year,978-0-12-194704-X
+FI029,Environmental Studies - Edition 3,Benny Joseph,First Year,978-0-12-898839-X
+FI030,Applied Physics - Edition 3,Arthur Beiser,First Year,978-0-12-999253-X
+FI031,Higher Engineering Mathematics - Edition 4,B.S. Grewal,First Year,978-0-12-711464-X
+FI032,Advanced Engineering Mathematics - Edition 4,Erwin Kreyszig,First Year,978-0-12-882411-X
+FI033,Engineering Physics - Edition 4,D.K. Bhattacharya,First Year,978-0-12-451695-X
+FI034,Textbook of Engineering Chemistry - Edition 4,S.S. Dara,First Year,978-0-12-389058-X
+FI035,Engineering Mechanics - Edition 4,S.S. Bhavikatti,First Year,978-0-12-929569-X
+FI036,Basic Electrical Engineering - Edition 4,V.K. Mehta,First Year,978-0-12-460979-X
+FI037,Programming in ANSI C - Edition 4,E. Balagurusamy,First Year,978-0-12-895059-X
+FI038,Engineering Graphics - Edition 4,N.D. Bhatt,First Year,978-0-12-498827-X
+FI039,Environmental Studies - Edition 4,Benny Joseph,First Year,978-0-12-920861-X
+FI040,Applied Physics - Edition 4,Arthur Beiser,First Year,978-0-12-639426-X
+FI041,Higher Engineering Mathematics - Edition 5,B.S. Grewal,First Year,978-0-12-912824-X
+FI042,Advanced Engineering Mathematics - Edition 5,Erwin Kreyszig,First Year,978-0-12-116731-X
+FI043,Engineering Physics - Edition 5,D.K. Bhattacharya,First Year,978-0-12-874912-X
+FI044,Textbook of Engineering Chemistry - Edition 5,S.S. Dara,First Year,978-0-12-628311-X
+FI045,Engineering Mechanics - Edition 5,S.S. Bhavikatti,First Year,978-0-12-891417-X
+FI046,Basic Electrical Engineering - Edition 5,V.K. Mehta,First Year,978-0-12-340610-X
+FI047,Programming in ANSI C - Edition 5,E. Balagurusamy,First Year,978-0-12-206354-X
+FI048,Engineering Graphics - Edition 5,N.D. Bhatt,First Year,978-0-12-772325-X
+FI049,Environmental Studies - Edition 5,Benny Joseph,First Year,978-0-12-810716-X
+FI050,Applied Physics - Edition 5,Arthur Beiser,First Year,978-0-12-944724-X
+FI051,Higher Engineering Mathematics - Edition 6,B.S. Grewal,First Year,978-0-12-805759-X
+FI052,Advanced Engineering Mathematics - Edition 6,Erwin Kreyszig,First Year,978-0-12-412693-X
+FI053,Engineering Physics - Edition 6,D.K. Bhattacharya,First Year,978-0-12-906736-X
+FI054,Textbook of Engineering Chemistry - Edition 6,S.S. Dara,First Year,978-0-12-366097-X
+FI055,Engineering Mechanics - Edition 6,S.S. Bhavikatti,First Year,978-0-12-993563-X
+FI056,Basic Electrical Engineering - Edition 6,V.K. Mehta,First Year,978-0-12-590348-X
+FI057,Programming in ANSI C - Edition 6,E. Balagurusamy,First Year,978-0-12-980344-X
+FI058,Engineering Graphics - Edition 6,N.D. Bhatt,First Year,978-0-12-299419-X
+FI059,Environmental Studies - Edition 6,Benny Joseph,First Year,978-0-12-836882-X
+FI060,Applied Physics - Edition 6,Arthur Beiser,First Year,978-0-12-996474-X
+FI061,Higher Engineering Mathematics - Edition 7,B.S. Grewal,First Year,978-0-12-871617-X
+FI062,Advanced Engineering Mathematics - Edition 7,Erwin Kreyszig,First Year,978-0-12-832026-X
+FI063,Engineering Physics - Edition 7,D.K. Bhattacharya,First Year,978-0-12-913398-X
+FI064,Textbook of Engineering Chemistry - Edition 7,S.S. Dara,First Year,978-0-12-277866-X
+FI065,Engineering Mechanics - Edition 7,S.S. Bhavikatti,First Year,978-0-12-106183-X
+FI066,Basic Electrical Engineering - Edition 7,V.K. Mehta,First Year,978-0-12-541537-X
+FI067,Programming in ANSI C - Edition 7,E. Balagurusamy,First Year,978-0-12-370646-X
+FI068,Engineering Graphics - Edition 7,N.D. Bhatt,First Year,978-0-12-518065-X
+FI069,Environmental Studies - Edition 7,Benny Joseph,First Year,978-0-12-472742-X
+FI070,Applied Physics - Edition 7,Arthur Beiser,First Year,978-0-12-173128-X
+FI071,Higher Engineering Mathematics - Edition 8,B.S. Grewal,First Year,978-0-12-498319-X
+FI072,Advanced Engineering Mathematics - Edition 8,Erwin Kreyszig,First Year,978-0-12-579293-X
+FI073,Engineering Physics - Edition 8,D.K. Bhattacharya,First Year,978-0-12-623406-X
+FI074,Textbook of Engineering Chemistry - Edition 8,S.S. Dara,First Year,978-0-12-659246-X
+FI075,Engineering Mechanics - Edition 8,S.S. Bhavikatti,First Year,978-0-12-253013-X
+FI076,Basic Electrical Engineering - Edition 8,V.K. Mehta,First Year,978-0-12-476937-X
+FI077,Programming in ANSI C - Edition 8,E. Balagurusamy,First Year,978-0-12-711204-X
+FI078,Engineering Graphics - Edition 8,N.D. Bhatt,First Year,978-0-12-252979-X
+FI079,Environmental Studies - Edition 8,Benny Joseph,First Year,978-0-12-561630-X
+FI080,Applied Physics - Edition 8,Arthur Beiser,First Year,978-0-12-227661-X
+FI081,Higher Engineering Mathematics - Edition 9,B.S. Grewal,First Year,978-0-12-397055-X
+FI082,Advanced Engineering Mathematics - Edition 9,Erwin Kreyszig,First Year,978-0-12-469393-X
+FI083,Engineering Physics - Edition 9,D.K. Bhattacharya,First Year,978-0-12-891504-X
+FI084,Textbook of Engineering Chemistry - Edition 9,S.S. Dara,First Year,978-0-12-843735-X
+FI085,Engineering Mechanics - Edition 9,S.S. Bhavikatti,First Year,978-0-12-132904-X
+FI086,Basic Electrical Engineering - Edition 9,V.K. Mehta,First Year,978-0-12-159078-X
+FI087,Programming in ANSI C - Edition 9,E. Balagurusamy,First Year,978-0-12-775744-X
+FI088,Engineering Graphics - Edition 9,N.D. Bhatt,First Year,978-0-12-831957-X
+FI089,Environmental Studies - Edition 9,Benny Joseph,First Year,978-0-12-610944-X
+FI090,Applied Physics - Edition 9,Arthur Beiser,First Year,978-0-12-276747-X
+FI091,Higher Engineering Mathematics - Edition 10,B.S. Grewal,First Year,978-0-12-587476-X
+FI092,Advanced Engineering Mathematics - Edition 10,Erwin Kreyszig,First Year,978-0-12-134453-X
+FI093,Engineering Physics - Edition 10,D.K. Bhattacharya,First Year,978-0-12-965141-X
+FI094,Textbook of Engineering Chemistry - Edition 10,S.S. Dara,First Year,978-0-12-230605-X
+FI095,Engineering Mechanics - Edition 10,S.S. Bhavikatti,First Year,978-0-12-598489-X
+FI096,Basic Electrical Engineering - Edition 10,V.K. Mehta,First Year,978-0-12-907846-X
+FI097,Programming in ANSI C - Edition 10,E. Balagurusamy,First Year,978-0-12-867634-X
+FI098,Engineering Graphics - Edition 10,N.D. Bhatt,First Year,978-0-12-414781-X
+FI099,Environmental Studies - Edition 10,Benny Joseph,First Year,978-0-12-427233-X
+FI100,Applied Physics - Edition 10,Arthur Beiser,First Year,978-0-12-100527-X
+CS001,Introduction to Algorithms - Edition 1,"Cormen, Leiserson, Rivest",CS,978-0-12-268406-X
+CS002,Database System Concepts - Edition 1,"Silberschatz, Korth, Sudarshan",CS,978-0-12-364888-X
+CS003,Operating System Concepts - Edition 1,"Silberschatz, Galvin, Gagne",CS,978-0-12-785407-X
+CS004,Computer System Architecture - Edition 1,M. Morris Mano,CS,978-0-12-500509-X
+CS005,Computer Networks - Edition 1,Andrew S. Tanenbaum,CS,978-0-12-601874-X
+CS006,Artificial Intelligence: A Modern Approach - Edition 1,"Stuart Russell, Peter Norvig",CS,978-0-12-819727-X
+CS007,Speech and Language Processing (NLP) - Edition 1,"Dan Jurafsky, James H. Martin",CS,978-0-12-344954-X
+CS008,The C Programming Language - Edition 1,Kernighan & Ritchie,CS,978-0-12-884061-X
+CS009,"Compilers: Principles, Techniques, and Tools - Edition 1","Aho, Sethi, Ullman",CS,978-0-12-156479-X
+CS010,Discrete Mathematics and Its Applications - Edition 1,Kenneth Rosen,CS,978-0-12-897239-X
+CS011,Introduction to Algorithms - Edition 2,"Cormen, Leiserson, Rivest",CS,978-0-12-223818-X
+CS012,Database System Concepts - Edition 2,"Silberschatz, Korth, Sudarshan",CS,978-0-12-362846-X
+CS013,Operating System Concepts - Edition 2,"Silberschatz, Galvin, Gagne",CS,978-0-12-105076-X
+CS014,Computer System Architecture - Edition 2,M. Morris Mano,CS,978-0-12-831060-X
+CS015,Computer Networks - Edition 2,Andrew S. Tanenbaum,CS,978-0-12-673108-X
+CS016,Artificial Intelligence: A Modern Approach - Edition 2,"Stuart Russell, Peter Norvig",CS,978-0-12-777680-X
+CS017,Speech and Language Processing (NLP) - Edition 2,"Dan Jurafsky, James H. Martin",CS,978-0-12-513221-X
+CS018,The C Programming Language - Edition 2,Kernighan & Ritchie,CS,978-0-12-312530-X
+CS019,"Compilers: Principles, Techniques, and Tools - Edition 2","Aho, Sethi, Ullman",CS,978-0-12-832561-X
+CS020,Discrete Mathematics and Its Applications - Edition 2,Kenneth Rosen,CS,978-0-12-401323-X
+CS021,Introduction to Algorithms - Edition 3,"Cormen, Leiserson, Rivest",CS,978-0-12-318356-X
+CS022,Database System Concepts - Edition 3,"Silberschatz, Korth, Sudarshan",CS,978-0-12-973554-X
+CS023,Operating System Concepts - Edition 3,"Silberschatz, Galvin, Gagne",CS,978-0-12-910644-X
+CS024,Computer System Architecture - Edition 3,M. Morris Mano,CS,978-0-12-235386-X
+CS025,Computer Networks - Edition 3,Andrew S. Tanenbaum,CS,978-0-12-594022-X
+CS026,Artificial Intelligence: A Modern Approach - Edition 3,"Stuart Russell, Peter Norvig",CS,978-0-12-340317-X
+CS027,Speech and Language Processing (NLP) - Edition 3,"Dan Jurafsky, James H. Martin",CS,978-0-12-360907-X
+CS028,The C Programming Language - Edition 3,Kernighan & Ritchie,CS,978-0-12-901591-X
+CS029,"Compilers: Principles, Techniques, and Tools - Edition 3","Aho, Sethi, Ullman",CS,978-0-12-423971-X
+CS030,Discrete Mathematics and Its Applications - Edition 3,Kenneth Rosen,CS,978-0-12-426881-X
+CS031,Introduction to Algorithms - Edition 4,"Cormen, Leiserson, Rivest",CS,978-0-12-815748-X
+CS032,Database System Concepts - Edition 4,"Silberschatz, Korth, Sudarshan",CS,978-0-12-499774-X
+CS033,Operating System Concepts - Edition 4,"Silberschatz, Galvin, Gagne",CS,978-0-12-780367-X
+CS034,Computer System Architecture - Edition 4,M. Morris Mano,CS,978-0-12-291274-X
+CS035,Computer Networks - Edition 4,Andrew S. Tanenbaum,CS,978-0-12-609046-X
+CS036,Artificial Intelligence: A Modern Approach - Edition 4,"Stuart Russell, Peter Norvig",CS,978-0-12-343178-X
+CS037,Speech and Language Processing (NLP) - Edition 4,"Dan Jurafsky, James H. Martin",CS,978-0-12-542313-X
+CS038,The C Programming Language - Edition 4,Kernighan & Ritchie,CS,978-0-12-150143-X
+CS039,"Compilers: Principles, Techniques, and Tools - Edition 4","Aho, Sethi, Ullman",CS,978-0-12-649434-X
+CS040,Discrete Mathematics and Its Applications - Edition 4,Kenneth Rosen,CS,978-0-12-676367-X
+CS041,Introduction to Algorithms - Edition 5,"Cormen, Leiserson, Rivest",CS,978-0-12-179173-X
+CS042,Database System Concepts - Edition 5,"Silberschatz, Korth, Sudarshan",CS,978-0-12-812985-X
+CS043,Operating System Concepts - Edition 5,"Silberschatz, Galvin, Gagne",CS,978-0-12-475954-X
+CS044,Computer System Architecture - Edition 5,M. Morris Mano,CS,978-0-12-614563-X
+CS045,Computer Networks - Edition 5,Andrew S. Tanenbaum,CS,978-0-12-400415-X
+CS046,Artificial Intelligence: A Modern Approach - Edition 5,"Stuart Russell, Peter Norvig",CS,978-0-12-126990-X
+CS047,Speech and Language Processing (NLP) - Edition 5,"Dan Jurafsky, James H. Martin",CS,978-0-12-723946-X
+CS048,The C Programming Language - Edition 5,Kernighan & Ritchie,CS,978-0-12-741475-X
+CS049,"Compilers: Principles, Techniques, and Tools - Edition 5","Aho, Sethi, Ullman",CS,978-0-12-731768-X
+CS050,Discrete Mathematics and Its Applications - Edition 5,Kenneth Rosen,CS,978-0-12-958023-X
+CS051,Introduction to Algorithms - Edition 6,"Cormen, Leiserson, Rivest",CS,978-0-12-241791-X
+CS052,Database System Concepts - Edition 6,"Silberschatz, Korth, Sudarshan",CS,978-0-12-426184-X
+CS053,Operating System Concepts - Edition 6,"Silberschatz, Galvin, Gagne",CS,978-0-12-721385-X
+CS054,Computer System Architecture - Edition 6,M. Morris Mano,CS,978-0-12-232445-X
+CS055,Computer Networks - Edition 6,Andrew S. Tanenbaum,CS,978-0-12-267000-X
+CS056,Artificial Intelligence: A Modern Approach - Edition 6,"Stuart Russell, Peter Norvig",CS,978-0-12-333338-X
+CS057,Speech and Language Processing (NLP) - Edition 6,"Dan Jurafsky, James H. Martin",CS,978-0-12-520154-X
+CS058,The C Programming Language - Edition 6,Kernighan & Ritchie,CS,978-0-12-930142-X
+CS059,"Compilers: Principles, Techniques, and Tools - Edition 6","Aho, Sethi, Ullman",CS,978-0-12-108176-X
+CS060,Discrete Mathematics and Its Applications - Edition 6,Kenneth Rosen,CS,978-0-12-313609-X
+CS061,Introduction to Algorithms - Edition 7,"Cormen, Leiserson, Rivest",CS,978-0-12-524713-X
+CS062,Database System Concepts - Edition 7,"Silberschatz, Korth, Sudarshan",CS,978-0-12-567859-X
+CS063,Operating System Concepts - Edition 7,"Silberschatz, Galvin, Gagne",CS,978-0-12-358357-X
+CS064,Computer System Architecture - Edition 7,M. Morris Mano,CS,978-0-12-921429-X
+CS065,Computer Networks - Edition 7,Andrew S. Tanenbaum,CS,978-0-12-483319-X
+CS066,Artificial Intelligence: A Modern Approach - Edition 7,"Stuart Russell, Peter Norvig",CS,978-0-12-536906-X
+CS067,Speech and Language Processing (NLP) - Edition 7,"Dan Jurafsky, James H. Martin",CS,978-0-12-594558-X
+CS068,The C Programming Language - Edition 7,Kernighan & Ritchie,CS,978-0-12-147873-X
+CS069,"Compilers: Principles, Techniques, and Tools - Edition 7","Aho, Sethi, Ullman",CS,978-0-12-430821-X
+CS070,Discrete Mathematics and Its Applications - Edition 7,Kenneth Rosen,CS,978-0-12-498532-X
+CS071,Introduction to Algorithms - Edition 8,"Cormen, Leiserson, Rivest",CS,978-0-12-298814-X
+CS072,Database System Concepts - Edition 8,"Silberschatz, Korth, Sudarshan",CS,978-0-12-290767-X
+CS073,Operating System Concepts - Edition 8,"Silberschatz, Galvin, Gagne",CS,978-0-12-858136-X
+CS074,Computer System Architecture - Edition 8,M. Morris Mano,CS,978-0-12-981606-X
+CS075,Computer Networks - Edition 8,Andrew S. Tanenbaum,CS,978-0-12-579799-X
+CS076,Artificial Intelligence: A Modern Approach - Edition 8,"Stuart Russell, Peter Norvig",CS,978-0-12-921525-X
+CS077,Speech and Language Processing (NLP) - Edition 8,"Dan Jurafsky, James H. Martin",CS,978-0-12-721365-X
+CS078,The C Programming Language - Edition 8,Kernighan & Ritchie,CS,978-0-12-983754-X
+CS079,"Compilers: Principles, Techniques, and Tools - Edition 8","Aho, Sethi, Ullman",CS,978-0-12-795167-X
+CS080,Discrete Mathematics and Its Applications - Edition 8,Kenneth Rosen,CS,978-0-12-611161-X
+CS081,Introduction to Algorithms - Edition 9,"Cormen, Leiserson, Rivest",CS,978-0-12-750356-X
+CS082,Database System Concepts - Edition 9,"Silberschatz, Korth, Sudarshan",CS,978-0-12-932069-X
+CS083,Operating System Concepts - Edition 9,"Silberschatz, Galvin, Gagne",CS,978-0-12-167077-X
+CS084,Computer System Architecture - Edition 9,M. Morris Mano,CS,978-0-12-155017-X
+CS085,Computer Networks - Edition 9,Andrew S. Tanenbaum,CS,978-0-12-274907-X
+CS086,Artificial Intelligence: A Modern Approach - Edition 9,"Stuart Russell, Peter Norvig",CS,978-0-12-454676-X
+CS087,Speech and Language Processing (NLP) - Edition 9,"Dan Jurafsky, James H. Martin",CS,978-0-12-890450-X
+CS088,The C Programming Language - Edition 9,Kernighan & Ritchie,CS,978-0-12-717093-X
+CS089,"Compilers: Principles, Techniques, and Tools - Edition 9","Aho, Sethi, Ullman",CS,978-0-12-749871-X
+CS090,Discrete Mathematics and Its Applications - Edition 9,Kenneth Rosen,CS,978-0-12-921105-X
+CS091,Introduction to Algorithms - Edition 10,"Cormen, Leiserson, Rivest",CS,978-0-12-203275-X
+CS092,Database System Concepts - Edition 10,"Silberschatz, Korth, Sudarshan",CS,978-0-12-367012-X
+CS093,Operating System Concepts - Edition 10,"Silberschatz, Galvin, Gagne",CS,978-0-12-375367-X
+CS094,Computer System Architecture - Edition 10,M. Morris Mano,CS,978-0-12-789760-X
+CS095,Computer Networks - Edition 10,Andrew S. Tanenbaum,CS,978-0-12-595944-X
+CS096,Artificial Intelligence: A Modern Approach - Edition 10,"Stuart Russell, Peter Norvig",CS,978-0-12-189590-X
+CS097,Speech and Language Processing (NLP) - Edition 10,"Dan Jurafsky, James H. Martin",CS,978-0-12-273313-X
+CS098,The C Programming Language - Edition 10,Kernighan & Ritchie,CS,978-0-12-254871-X
+CS099,"Compilers: Principles, Techniques, and Tools - Edition 10","Aho, Sethi, Ullman",CS,978-0-12-421279-X
+CS100,Discrete Mathematics and Its Applications - Edition 10,Kenneth Rosen,CS,978-0-12-859267-X
+IT001,Cloud Computing: Principles and Paradigms - Edition 1,Rajkumar Buyya,IT,978-0-12-782610-X
+IT002,Software Engineering: A Practitioner's Approach - Edition 1,Roger S. Pressman,IT,978-0-12-838688-X
+IT003,Big Data Analytics - Edition 1,Radha Shankarmani,IT,978-0-12-598038-X
+IT004,Web Technologies - Edition 1,Achyut Godbole,IT,978-0-12-665607-X
+IT005,Information Security - Edition 1,Mark Stamp,IT,978-0-12-412098-X
+IT006,Cryptography and Network Security - Edition 1,William Stallings,IT,978-0-12-981531-X
+IT007,Mobile Computing - Edition 1,Asoke K. Talukder,IT,978-0-12-234928-X
+IT008,Data Warehousing and Data Mining - Edition 1,Jiawei Han,IT,978-0-12-495780-X
+IT009,Java: The Complete Reference - Edition 1,Herbert Schildt,IT,978-0-12-963202-X
+IT010,Software Testing Techniques - Edition 1,Boris Beizer,IT,978-0-12-671434-X
+IT011,Cloud Computing: Principles and Paradigms - Edition 2,Rajkumar Buyya,IT,978-0-12-287632-X
+IT012,Software Engineering: A Practitioner's Approach - Edition 2,Roger S. Pressman,IT,978-0-12-664075-X
+IT013,Big Data Analytics - Edition 2,Radha Shankarmani,IT,978-0-12-732428-X
+IT014,Web Technologies - Edition 2,Achyut Godbole,IT,978-0-12-806148-X
+IT015,Information Security - Edition 2,Mark Stamp,IT,978-0-12-764597-X
+IT016,Cryptography and Network Security - Edition 2,William Stallings,IT,978-0-12-362695-X
+IT017,Mobile Computing - Edition 2,Asoke K. Talukder,IT,978-0-12-479080-X
+IT018,Data Warehousing and Data Mining - Edition 2,Jiawei Han,IT,978-0-12-742095-X
+IT019,Java: The Complete Reference - Edition 2,Herbert Schildt,IT,978-0-12-836933-X
+IT020,Software Testing Techniques - Edition 2,Boris Beizer,IT,978-0-12-397694-X
+IT021,Cloud Computing: Principles and Paradigms - Edition 3,Rajkumar Buyya,IT,978-0-12-548015-X
+IT022,Software Engineering: A Practitioner's Approach - Edition 3,Roger S. Pressman,IT,978-0-12-606279-X
+IT023,Big Data Analytics - Edition 3,Radha Shankarmani,IT,978-0-12-341412-X
+IT024,Web Technologies - Edition 3,Achyut Godbole,IT,978-0-12-320011-X
+IT025,Information Security - Edition 3,Mark Stamp,IT,978-0-12-511790-X
+IT026,Cryptography and Network Security - Edition 3,William Stallings,IT,978-0-12-828427-X
+IT027,Mobile Computing - Edition 3,Asoke K. Talukder,IT,978-0-12-475882-X
+IT028,Data Warehousing and Data Mining - Edition 3,Jiawei Han,IT,978-0-12-725965-X
+IT029,Java: The Complete Reference - Edition 3,Herbert Schildt,IT,978-0-12-164518-X
+IT030,Software Testing Techniques - Edition 3,Boris Beizer,IT,978-0-12-790791-X
+IT031,Cloud Computing: Principles and Paradigms - Edition 4,Rajkumar Buyya,IT,978-0-12-181183-X
+IT032,Software Engineering: A Practitioner's Approach - Edition 4,Roger S. Pressman,IT,978-0-12-730520-X
+IT033,Big Data Analytics - Edition 4,Radha Shankarmani,IT,978-0-12-212663-X
+IT034,Web Technologies - Edition 4,Achyut Godbole,IT,978-0-12-656660-X
+IT035,Information Security - Edition 4,Mark Stamp,IT,978-0-12-501681-X
+IT036,Cryptography and Network Security - Edition 4,William Stallings,IT,978-0-12-344607-X
+IT037,Mobile Computing - Edition 4,Asoke K. Talukder,IT,978-0-12-776370-X
+IT038,Data Warehousing and Data Mining - Edition 4,Jiawei Han,IT,978-0-12-473750-X
+IT039,Java: The Complete Reference - Edition 4,Herbert Schildt,IT,978-0-12-664712-X
+IT040,Software Testing Techniques - Edition 4,Boris Beizer,IT,978-0-12-148333-X
+IT041,Cloud Computing: Principles and Paradigms - Edition 5,Rajkumar Buyya,IT,978-0-12-907935-X
+IT042,Software Engineering: A Practitioner's Approach - Edition 5,Roger S. Pressman,IT,978-0-12-280214-X
+IT043,Big Data Analytics - Edition 5,Radha Shankarmani,IT,978-0-12-459829-X
+IT044,Web Technologies - Edition 5,Achyut Godbole,IT,978-0-12-182420-X
+IT045,Information Security - Edition 5,Mark Stamp,IT,978-0-12-157291-X
+IT046,Cryptography and Network Security - Edition 5,William Stallings,IT,978-0-12-858012-X
+IT047,Mobile Computing - Edition 5,Asoke K. Talukder,IT,978-0-12-646785-X
+IT048,Data Warehousing and Data Mining - Edition 5,Jiawei Han,IT,978-0-12-198462-X
+IT049,Java: The Complete Reference - Edition 5,Herbert Schildt,IT,978-0-12-638750-X
+IT050,Software Testing Techniques - Edition 5,Boris Beizer,IT,978-0-12-844156-X
+IT051,Cloud Computing: Principles and Paradigms - Edition 6,Rajkumar Buyya,IT,978-0-12-293484-X
+IT052,Software Engineering: A Practitioner's Approach - Edition 6,Roger S. Pressman,IT,978-0-12-312930-X
+IT053,Big Data Analytics - Edition 6,Radha Shankarmani,IT,978-0-12-817325-X
+IT054,Web Technologies - Edition 6,Achyut Godbole,IT,978-0-12-419473-X
+IT055,Information Security - Edition 6,Mark Stamp,IT,978-0-12-775153-X
+IT056,Cryptography and Network Security - Edition 6,William Stallings,IT,978-0-12-686768-X
+IT057,Mobile Computing - Edition 6,Asoke K. Talukder,IT,978-0-12-475746-X
+IT058,Data Warehousing and Data Mining - Edition 6,Jiawei Han,IT,978-0-12-315848-X
+IT059,Java: The Complete Reference - Edition 6,Herbert Schildt,IT,978-0-12-300613-X
+IT060,Software Testing Techniques - Edition 6,Boris Beizer,IT,978-0-12-272933-X
+IT061,Cloud Computing: Principles and Paradigms - Edition 7,Rajkumar Buyya,IT,978-0-12-295675-X
+IT062,Software Engineering: A Practitioner's Approach - Edition 7,Roger S. Pressman,IT,978-0-12-778847-X
+IT063,Big Data Analytics - Edition 7,Radha Shankarmani,IT,978-0-12-898640-X
+IT064,Web Technologies - Edition 7,Achyut Godbole,IT,978-0-12-478354-X
+IT065,Information Security - Edition 7,Mark Stamp,IT,978-0-12-584473-X
+IT066,Cryptography and Network Security - Edition 7,William Stallings,IT,978-0-12-544537-X
+IT067,Mobile Computing - Edition 7,Asoke K. Talukder,IT,978-0-12-647317-X
+IT068,Data Warehousing and Data Mining - Edition 7,Jiawei Han,IT,978-0-12-220454-X
+IT069,Java: The Complete Reference - Edition 7,Herbert Schildt,IT,978-0-12-231185-X
+IT070,Software Testing Techniques - Edition 7,Boris Beizer,IT,978-0-12-254343-X
+IT071,Cloud Computing: Principles and Paradigms - Edition 8,Rajkumar Buyya,IT,978-0-12-613796-X
+IT072,Software Engineering: A Practitioner's Approach - Edition 8,Roger S. Pressman,IT,978-0-12-853499-X
+IT073,Big Data Analytics - Edition 8,Radha Shankarmani,IT,978-0-12-244709-X
+IT074,Web Technologies - Edition 8,Achyut Godbole,IT,978-0-12-255604-X
+IT075,Information Security - Edition 8,Mark Stamp,IT,978-0-12-899916-X
+IT076,Cryptography and Network Security - Edition 8,William Stallings,IT,978-0-12-683039-X
+IT077,Mobile Computing - Edition 8,Asoke K. Talukder,IT,978-0-12-371417-X
+IT078,Data Warehousing and Data Mining - Edition 8,Jiawei Han,IT,978-0-12-301546-X
+IT079,Java: The Complete Reference - Edition 8,Herbert Schildt,IT,978-0-12-959559-X
+IT080,Software Testing Techniques - Edition 8,Boris Beizer,IT,978-0-12-543241-X
+IT081,Cloud Computing: Principles and Paradigms - Edition 9,Rajkumar Buyya,IT,978-0-12-282775-X
+IT082,Software Engineering: A Practitioner's Approach - Edition 9,Roger S. Pressman,IT,978-0-12-684563-X
+IT083,Big Data Analytics - Edition 9,Radha Shankarmani,IT,978-0-12-580025-X
+IT084,Web Technologies - Edition 9,Achyut Godbole,IT,978-0-12-791227-X
+IT085,Information Security - Edition 9,Mark Stamp,IT,978-0-12-692919-X
+IT086,Cryptography and Network Security - Edition 9,William Stallings,IT,978-0-12-653918-X
+IT087,Mobile Computing - Edition 9,Asoke K. Talukder,IT,978-0-12-535122-X
+IT088,Data Warehousing and Data Mining - Edition 9,Jiawei Han,IT,978-0-12-763792-X
+IT089,Java: The Complete Reference - Edition 9,Herbert Schildt,IT,978-0-12-442648-X
+IT090,Software Testing Techniques - Edition 9,Boris Beizer,IT,978-0-12-375860-X
+IT091,Cloud Computing: Principles and Paradigms - Edition 10,Rajkumar Buyya,IT,978-0-12-523027-X
+IT092,Software Engineering: A Practitioner's Approach - Edition 10,Roger S. Pressman,IT,978-0-12-262976-X
+IT093,Big Data Analytics - Edition 10,Radha Shankarmani,IT,978-0-12-528594-X
+IT094,Web Technologies - Edition 10,Achyut Godbole,IT,978-0-12-232900-X
+IT095,Information Security - Edition 10,Mark Stamp,IT,978-0-12-180873-X
+IT096,Cryptography and Network Security - Edition 10,William Stallings,IT,978-0-12-425291-X
+IT097,Mobile Computing - Edition 10,Asoke K. Talukder,IT,978-0-12-368719-X
+IT098,Data Warehousing and Data Mining - Edition 10,Jiawei Han,IT,978-0-12-403205-X
+IT099,Java: The Complete Reference - Edition 10,Herbert Schildt,IT,978-0-12-231318-X
+IT100,Software Testing Techniques - Edition 10,Boris Beizer,IT,978-0-12-525120-X
+EC001,Digital Design - Edition 1,M. Morris Mano,ECS,978-0-12-553041-X
+EC002,Integrated Electronics - Edition 1,Millman & Halkias,ECS,978-0-12-131305-X
+EC003,Microprocessor Architecture - Edition 1,Ramesh S. Gaonkar,ECS,978-0-12-782620-X
+EC004,Embedded Systems: Architecture and Programming - Edition 1,Raj Kamal,ECS,978-0-12-817565-X
+EC005,Signals and Systems - Edition 1,Alan V. Oppenheim,ECS,978-0-12-660679-X
+EC006,Internet of Things (IoT) - Edition 1,Vijay Madisetti,ECS,978-0-12-703420-X
+EC007,VLSI Design - Edition 1,Debaprasad Das,ECS,978-0-12-643362-X
+EC008,Computer Organization - Edition 1,Carl Hamacher,ECS,978-0-12-180767-X
+EC009,Control Systems Engineering - Edition 1,I.J. Nagrath & M. Gopal,ECS,978-0-12-663795-X
+EC010,Power Electronics - Edition 1,P.S. Bimbhra,ECS,978-0-12-199666-X
+EC011,Digital Design - Edition 2,M. Morris Mano,ECS,978-0-12-981713-X
+EC012,Integrated Electronics - Edition 2,Millman & Halkias,ECS,978-0-12-120253-X
+EC013,Microprocessor Architecture - Edition 2,Ramesh S. Gaonkar,ECS,978-0-12-795066-X
+EC014,Embedded Systems: Architecture and Programming - Edition 2,Raj Kamal,ECS,978-0-12-530998-X
+EC015,Signals and Systems - Edition 2,Alan V. Oppenheim,ECS,978-0-12-637120-X
+EC016,Internet of Things (IoT) - Edition 2,Vijay Madisetti,ECS,978-0-12-138607-X
+EC017,VLSI Design - Edition 2,Debaprasad Das,ECS,978-0-12-662649-X
+EC018,Computer Organization - Edition 2,Carl Hamacher,ECS,978-0-12-154822-X
+EC019,Control Systems Engineering - Edition 2,I.J. Nagrath & M. Gopal,ECS,978-0-12-433176-X
+EC020,Power Electronics - Edition 2,P.S. Bimbhra,ECS,978-0-12-482159-X
+EC021,Digital Design - Edition 3,M. Morris Mano,ECS,978-0-12-602286-X
+EC022,Integrated Electronics - Edition 3,Millman & Halkias,ECS,978-0-12-405958-X
+EC023,Microprocessor Architecture - Edition 3,Ramesh S. Gaonkar,ECS,978-0-12-234689-X
+EC024,Embedded Systems: Architecture and Programming - Edition 3,Raj Kamal,ECS,978-0-12-487557-X
+EC025,Signals and Systems - Edition 3,Alan V. Oppenheim,ECS,978-0-12-480496-X
+EC026,Internet of Things (IoT) - Edition 3,Vijay Madisetti,ECS,978-0-12-894112-X
+EC027,VLSI Design - Edition 3,Debaprasad Das,ECS,978-0-12-686707-X
+EC028,Computer Organization - Edition 3,Carl Hamacher,ECS,978-0-12-653750-X
+EC029,Control Systems Engineering - Edition 3,I.J. Nagrath & M. Gopal,ECS,978-0-12-648721-X
+EC030,Power Electronics - Edition 3,P.S. Bimbhra,ECS,978-0-12-502330-X
+EC031,Digital Design - Edition 4,M. Morris Mano,ECS,978-0-12-238418-X
+EC032,Integrated Electronics - Edition 4,Millman & Halkias,ECS,978-0-12-610174-X
+EC033,Microprocessor Architecture - Edition 4,Ramesh S. Gaonkar,ECS,978-0-12-777659-X
+EC034,Embedded Systems: Architecture and Programming - Edition 4,Raj Kamal,ECS,978-0-12-573535-X
+EC035,Signals and Systems - Edition 4,Alan V. Oppenheim,ECS,978-0-12-124447-X
+EC036,Internet of Things (IoT) - Edition 4,Vijay Madisetti,ECS,978-0-12-344149-X
+EC037,VLSI Design - Edition 4,Debaprasad Das,ECS,978-0-12-801489-X
+EC038,Computer Organization - Edition 4,Carl Hamacher,ECS,978-0-12-688460-X
+EC039,Control Systems Engineering - Edition 4,I.J. Nagrath & M. Gopal,ECS,978-0-12-338774-X
+EC040,Power Electronics - Edition 4,P.S. Bimbhra,ECS,978-0-12-505208-X
+EC041,Digital Design - Edition 5,M. Morris Mano,ECS,978-0-12-937907-X
+EC042,Integrated Electronics - Edition 5,Millman & Halkias,ECS,978-0-12-190578-X
+EC043,Microprocessor Architecture - Edition 5,Ramesh S. Gaonkar,ECS,978-0-12-936789-X
+EC044,Embedded Systems: Architecture and Programming - Edition 5,Raj Kamal,ECS,978-0-12-376334-X
+EC045,Signals and Systems - Edition 5,Alan V. Oppenheim,ECS,978-0-12-109310-X
+EC046,Internet of Things (IoT) - Edition 5,Vijay Madisetti,ECS,978-0-12-679848-X
+EC047,VLSI Design - Edition 5,Debaprasad Das,ECS,978-0-12-892081-X
+EC048,Computer Organization - Edition 5,Carl Hamacher,ECS,978-0-12-136173-X
+EC049,Control Systems Engineering - Edition 5,I.J. Nagrath & M. Gopal,ECS,978-0-12-629016-X
+EC050,Power Electronics - Edition 5,P.S. Bimbhra,ECS,978-0-12-694936-X
+EC051,Digital Design - Edition 6,M. Morris Mano,ECS,978-0-12-382535-X
+EC052,Integrated Electronics - Edition 6,Millman & Halkias,ECS,978-0-12-747177-X
+EC053,Microprocessor Architecture - Edition 6,Ramesh S. Gaonkar,ECS,978-0-12-784916-X
+EC054,Embedded Systems: Architecture and Programming - Edition 6,Raj Kamal,ECS,978-0-12-371103-X
+EC055,Signals and Systems - Edition 6,Alan V. Oppenheim,ECS,978-0-12-988018-X
+EC056,Internet of Things (IoT) - Edition 6,Vijay Madisetti,ECS,978-0-12-941889-X
+EC057,VLSI Design - Edition 6,Debaprasad Das,ECS,978-0-12-722872-X
+EC058,Computer Organization - Edition 6,Carl Hamacher,ECS,978-0-12-847531-X
+EC059,Control Systems Engineering - Edition 6,I.J. Nagrath & M. Gopal,ECS,978-0-12-968331-X
+EC060,Power Electronics - Edition 6,P.S. Bimbhra,ECS,978-0-12-296933-X
+EC061,Digital Design - Edition 7,M. Morris Mano,ECS,978-0-12-719050-X
+EC062,Integrated Electronics - Edition 7,Millman & Halkias,ECS,978-0-12-360425-X
+EC063,Microprocessor Architecture - Edition 7,Ramesh S. Gaonkar,ECS,978-0-12-822205-X
+EC064,Embedded Systems: Architecture and Programming - Edition 7,Raj Kamal,ECS,978-0-12-535231-X
+EC065,Signals and Systems - Edition 7,Alan V. Oppenheim,ECS,978-0-12-730592-X
+EC066,Internet of Things (IoT) - Edition 7,Vijay Madisetti,ECS,978-0-12-593929-X
+EC067,VLSI Design - Edition 7,Debaprasad Das,ECS,978-0-12-422084-X
+EC068,Computer Organization - Edition 7,Carl Hamacher,ECS,978-0-12-867968-X
+EC069,Control Systems Engineering - Edition 7,I.J. Nagrath & M. Gopal,ECS,978-0-12-538933-X
+EC070,Power Electronics - Edition 7,P.S. Bimbhra,ECS,978-0-12-842883-X
+EC071,Digital Design - Edition 8,M. Morris Mano,ECS,978-0-12-276559-X
+EC072,Integrated Electronics - Edition 8,Millman & Halkias,ECS,978-0-12-401587-X
+EC073,Microprocessor Architecture - Edition 8,Ramesh S. Gaonkar,ECS,978-0-12-884148-X
+EC074,Embedded Systems: Architecture and Programming - Edition 8,Raj Kamal,ECS,978-0-12-292797-X
+EC075,Signals and Systems - Edition 8,Alan V. Oppenheim,ECS,978-0-12-993122-X
+EC076,Internet of Things (IoT) - Edition 8,Vijay Madisetti,ECS,978-0-12-487736-X
+EC077,VLSI Design - Edition 8,Debaprasad Das,ECS,978-0-12-689934-X
+EC078,Computer Organization - Edition 8,Carl Hamacher,ECS,978-0-12-423369-X
+EC079,Control Systems Engineering - Edition 8,I.J. Nagrath & M. Gopal,ECS,978-0-12-699114-X
+EC080,Power Electronics - Edition 8,P.S. Bimbhra,ECS,978-0-12-836953-X
+EC081,Digital Design - Edition 9,M. Morris Mano,ECS,978-0-12-413191-X
+EC082,Integrated Electronics - Edition 9,Millman & Halkias,ECS,978-0-12-942325-X
+EC083,Microprocessor Architecture - Edition 9,Ramesh S. Gaonkar,ECS,978-0-12-759046-X
+EC084,Embedded Systems: Architecture and Programming - Edition 9,Raj Kamal,ECS,978-0-12-352496-X
+EC085,Signals and Systems - Edition 9,Alan V. Oppenheim,ECS,978-0-12-398817-X
+EC086,Internet of Things (IoT) - Edition 9,Vijay Madisetti,ECS,978-0-12-308059-X
+EC087,VLSI Design - Edition 9,Debaprasad Das,ECS,978-0-12-463938-X
+EC088,Computer Organization - Edition 9,Carl Hamacher,ECS,978-0-12-706222-X
+EC089,Control Systems Engineering - Edition 9,I.J. Nagrath & M. Gopal,ECS,978-0-12-680122-X
+EC090,Power Electronics - Edition 9,P.S. Bimbhra,ECS,978-0-12-232235-X
+EC091,Digital Design - Edition 10,M. Morris Mano,ECS,978-0-12-983103-X
+EC092,Integrated Electronics - Edition 10,Millman & Halkias,ECS,978-0-12-111840-X
+EC093,Microprocessor Architecture - Edition 10,Ramesh S. Gaonkar,ECS,978-0-12-578485-X
+EC094,Embedded Systems: Architecture and Programming - Edition 10,Raj Kamal,ECS,978-0-12-360302-X
+EC095,Signals and Systems - Edition 10,Alan V. Oppenheim,ECS,978-0-12-825337-X
+EC096,Internet of Things (IoT) - Edition 10,Vijay Madisetti,ECS,978-0-12-877336-X
+EC097,VLSI Design - Edition 10,Debaprasad Das,ECS,978-0-12-172268-X
+EC098,Computer Organization - Edition 10,Carl Hamacher,ECS,978-0-12-534882-X
+EC099,Control Systems Engineering - Edition 10,I.J. Nagrath & M. Gopal,ECS,978-0-12-552014-X
+EC100,Power Electronics - Edition 10,P.S. Bimbhra,ECS,978-0-12-327764-X
+EX001,Principles of Communication Systems - Edition 1,Taub & Schilling,EXTC,978-0-12-182320-X
+EX002,Digital Communications - Edition 1,Simon Haykin,EXTC,978-0-12-221279-X
+EX003,Modern Digital and Analog Communication - Edition 1,B.P. Lathi,EXTC,978-0-12-341198-X
+EX004,Antenna Theory: Analysis and Design - Edition 1,Constantine A. Balanis,EXTC,978-0-12-404026-X
+EX005,Microwave Engineering - Edition 1,David M. Pozar,EXTC,978-0-12-428364-X
+EX006,Optical Fiber Communications - Edition 1,Gerd Keiser,EXTC,978-0-12-554121-X
+EX007,Wireless Communications - Edition 1,Theodore S. Rappaport,EXTC,978-0-12-964502-X
+EX008,Satellite Communications - Edition 1,Timothy Pratt,EXTC,978-0-12-676504-X
+EX009,Electromagnetic Waves and Radiating Systems - Edition 1,Jordan & Balmain,EXTC,978-0-12-737781-X
+EX010,Radar Systems - Edition 1,Merrill Skolnik,EXTC,978-0-12-427282-X
+EX011,Principles of Communication Systems - Edition 2,Taub & Schilling,EXTC,978-0-12-804738-X
+EX012,Digital Communications - Edition 2,Simon Haykin,EXTC,978-0-12-458686-X
+EX013,Modern Digital and Analog Communication - Edition 2,B.P. Lathi,EXTC,978-0-12-420523-X
+EX014,Antenna Theory: Analysis and Design - Edition 2,Constantine A. Balanis,EXTC,978-0-12-754725-X
+EX015,Microwave Engineering - Edition 2,David M. Pozar,EXTC,978-0-12-113806-X
+EX016,Optical Fiber Communications - Edition 2,Gerd Keiser,EXTC,978-0-12-862824-X
+EX017,Wireless Communications - Edition 2,Theodore S. Rappaport,EXTC,978-0-12-237297-X
+EX018,Satellite Communications - Edition 2,Timothy Pratt,EXTC,978-0-12-836211-X
+EX019,Electromagnetic Waves and Radiating Systems - Edition 2,Jordan & Balmain,EXTC,978-0-12-715163-X
+EX020,Radar Systems - Edition 2,Merrill Skolnik,EXTC,978-0-12-170437-X
+EX021,Principles of Communication Systems - Edition 3,Taub & Schilling,EXTC,978-0-12-242870-X
+EX022,Digital Communications - Edition 3,Simon Haykin,EXTC,978-0-12-103845-X
+EX023,Modern Digital and Analog Communication - Edition 3,B.P. Lathi,EXTC,978-0-12-752400-X
+EX024,Antenna Theory: Analysis and Design - Edition 3,Constantine A. Balanis,EXTC,978-0-12-293434-X
+EX025,Microwave Engineering - Edition 3,David M. Pozar,EXTC,978-0-12-654814-X
+EX026,Optical Fiber Communications - Edition 3,Gerd Keiser,EXTC,978-0-12-205643-X
+EX027,Wireless Communications - Edition 3,Theodore S. Rappaport,EXTC,978-0-12-457966-X
+EX028,Satellite Communications - Edition 3,Timothy Pratt,EXTC,978-0-12-871008-X
+EX029,Electromagnetic Waves and Radiating Systems - Edition 3,Jordan & Balmain,EXTC,978-0-12-660063-X
+EX030,Radar Systems - Edition 3,Merrill Skolnik,EXTC,978-0-12-327279-X
+EX031,Principles of Communication Systems - Edition 4,Taub & Schilling,EXTC,978-0-12-997305-X
+EX032,Digital Communications - Edition 4,Simon Haykin,EXTC,978-0-12-131298-X
+EX033,Modern Digital and Analog Communication - Edition 4,B.P. Lathi,EXTC,978-0-12-897905-X
+EX034,Antenna Theory: Analysis and Design - Edition 4,Constantine A. Balanis,EXTC,978-0-12-510337-X
+EX035,Microwave Engineering - Edition 4,David M. Pozar,EXTC,978-0-12-826915-X
+EX036,Optical Fiber Communications - Edition 4,Gerd Keiser,EXTC,978-0-12-588861-X
+EX037,Wireless Communications - Edition 4,Theodore S. Rappaport,EXTC,978-0-12-540526-X
+EX038,Satellite Communications - Edition 4,Timothy Pratt,EXTC,978-0-12-638093-X
+EX039,Electromagnetic Waves and Radiating Systems - Edition 4,Jordan & Balmain,EXTC,978-0-12-705845-X
+EX040,Radar Systems - Edition 4,Merrill Skolnik,EXTC,978-0-12-537757-X
+EX041,Principles of Communication Systems - Edition 5,Taub & Schilling,EXTC,978-0-12-215174-X
+EX042,Digital Communications - Edition 5,Simon Haykin,EXTC,978-0-12-441362-X
+EX043,Modern Digital and Analog Communication - Edition 5,B.P. Lathi,EXTC,978-0-12-994666-X
+EX044,Antenna Theory: Analysis and Design - Edition 5,Constantine A. Balanis,EXTC,978-0-12-205824-X
+EX045,Microwave Engineering - Edition 5,David M. Pozar,EXTC,978-0-12-989060-X
+EX046,Optical Fiber Communications - Edition 5,Gerd Keiser,EXTC,978-0-12-981665-X
+EX047,Wireless Communications - Edition 5,Theodore S. Rappaport,EXTC,978-0-12-467685-X
+EX048,Satellite Communications - Edition 5,Timothy Pratt,EXTC,978-0-12-116575-X
+EX049,Electromagnetic Waves and Radiating Systems - Edition 5,Jordan & Balmain,EXTC,978-0-12-119895-X
+EX050,Radar Systems - Edition 5,Merrill Skolnik,EXTC,978-0-12-977843-X
+EX051,Principles of Communication Systems - Edition 6,Taub & Schilling,EXTC,978-0-12-981254-X
+EX052,Digital Communications - Edition 6,Simon Haykin,EXTC,978-0-12-994333-X
+EX053,Modern Digital and Analog Communication - Edition 6,B.P. Lathi,EXTC,978-0-12-862380-X
+EX054,Antenna Theory: Analysis and Design - Edition 6,Constantine A. Balanis,EXTC,978-0-12-881021-X
+EX055,Microwave Engineering - Edition 6,David M. Pozar,EXTC,978-0-12-897918-X
+EX056,Optical Fiber Communications - Edition 6,Gerd Keiser,EXTC,978-0-12-381546-X
+EX057,Wireless Communications - Edition 6,Theodore S. Rappaport,EXTC,978-0-12-833071-X
+EX058,Satellite Communications - Edition 6,Timothy Pratt,EXTC,978-0-12-335970-X
+EX059,Electromagnetic Waves and Radiating Systems - Edition 6,Jordan & Balmain,EXTC,978-0-12-731395-X
+EX060,Radar Systems - Edition 6,Merrill Skolnik,EXTC,978-0-12-503124-X
+EX061,Principles of Communication Systems - Edition 7,Taub & Schilling,EXTC,978-0-12-305108-X
+EX062,Digital Communications - Edition 7,Simon Haykin,EXTC,978-0-12-685391-X
+EX063,Modern Digital and Analog Communication - Edition 7,B.P. Lathi,EXTC,978-0-12-180623-X
+EX064,Antenna Theory: Analysis and Design - Edition 7,Constantine A. Balanis,EXTC,978-0-12-732720-X
+EX065,Microwave Engineering - Edition 7,David M. Pozar,EXTC,978-0-12-775577-X
+EX066,Optical Fiber Communications - Edition 7,Gerd Keiser,EXTC,978-0-12-624512-X
+EX067,Wireless Communications - Edition 7,Theodore S. Rappaport,EXTC,978-0-12-228244-X
+EX068,Satellite Communications - Edition 7,Timothy Pratt,EXTC,978-0-12-548544-X
+EX069,Electromagnetic Waves and Radiating Systems - Edition 7,Jordan & Balmain,EXTC,978-0-12-778812-X
+EX070,Radar Systems - Edition 7,Merrill Skolnik,EXTC,978-0-12-919775-X
+EX071,Principles of Communication Systems - Edition 8,Taub & Schilling,EXTC,978-0-12-316964-X
+EX072,Digital Communications - Edition 8,Simon Haykin,EXTC,978-0-12-720635-X
+EX073,Modern Digital and Analog Communication - Edition 8,B.P. Lathi,EXTC,978-0-12-545945-X
+EX074,Antenna Theory: Analysis and Design - Edition 8,Constantine A. Balanis,EXTC,978-0-12-603002-X
+EX075,Microwave Engineering - Edition 8,David M. Pozar,EXTC,978-0-12-713517-X
+EX076,Optical Fiber Communications - Edition 8,Gerd Keiser,EXTC,978-0-12-749480-X
+EX077,Wireless Communications - Edition 8,Theodore S. Rappaport,EXTC,978-0-12-959875-X
+EX078,Satellite Communications - Edition 8,Timothy Pratt,EXTC,978-0-12-623089-X
+EX079,Electromagnetic Waves and Radiating Systems - Edition 8,Jordan & Balmain,EXTC,978-0-12-123808-X
+EX080,Radar Systems - Edition 8,Merrill Skolnik,EXTC,978-0-12-120066-X
+EX081,Principles of Communication Systems - Edition 9,Taub & Schilling,EXTC,978-0-12-966913-X
+EX082,Digital Communications - Edition 9,Simon Haykin,EXTC,978-0-12-685845-X
+EX083,Modern Digital and Analog Communication - Edition 9,B.P. Lathi,EXTC,978-0-12-464948-X
+EX084,Antenna Theory: Analysis and Design - Edition 9,Constantine A. Balanis,EXTC,978-0-12-742479-X
+EX085,Microwave Engineering - Edition 9,David M. Pozar,EXTC,978-0-12-309048-X
+EX086,Optical Fiber Communications - Edition 9,Gerd Keiser,EXTC,978-0-12-586062-X
+EX087,Wireless Communications - Edition 9,Theodore S. Rappaport,EXTC,978-0-12-496271-X
+EX088,Satellite Communications - Edition 9,Timothy Pratt,EXTC,978-0-12-176487-X
+EX089,Electromagnetic Waves and Radiating Systems - Edition 9,Jordan & Balmain,EXTC,978-0-12-256729-X
+EX090,Radar Systems - Edition 9,Merrill Skolnik,EXTC,978-0-12-304366-X
+EX091,Principles of Communication Systems - Edition 10,Taub & Schilling,EXTC,978-0-12-417757-X
+EX092,Digital Communications - Edition 10,Simon Haykin,EXTC,978-0-12-315015-X
+EX093,Modern Digital and Analog Communication - Edition 10,B.P. Lathi,EXTC,978-0-12-259244-X
+EX094,Antenna Theory: Analysis and Design - Edition 10,Constantine A. Balanis,EXTC,978-0-12-788434-X
+EX095,Microwave Engineering - Edition 10,David M. Pozar,EXTC,978-0-12-245396-X
+EX096,Optical Fiber Communications - Edition 10,Gerd Keiser,EXTC,978-0-12-326235-X
+EX097,Wireless Communications - Edition 10,Theodore S. Rappaport,EXTC,978-0-12-222067-X
+EX098,Satellite Communications - Edition 10,Timothy Pratt,EXTC,978-0-12-928462-X
+EX099,Electromagnetic Waves and Radiating Systems - Edition 10,Jordan & Balmain,EXTC,978-0-12-635217-X
+EX100,Radar Systems - Edition 10,Merrill Skolnik,EXTC,978-0-12-964647-X
+ME001,Thermodynamics: An Engineering Approach - Edition 1,Yunus Cengel,MECH,978-0-12-419764-X
+ME002,Fluid Mechanics - Edition 1,Fox and McDonald,MECH,978-0-12-822981-X
+ME003,Theory of Machines - Edition 1,S.S. Rattan,MECH,978-0-12-793497-X
+ME004,Shigley's Mechanical Engineering Design - Edition 1,Budynas & Nisbett,MECH,978-0-12-480566-X
+ME005,Strength of Materials - Edition 1,R.K. Rajput,MECH,978-0-12-473920-X
+ME006,Heat and Mass Transfer - Edition 1,P.K. Nag,MECH,978-0-12-767892-X
+ME007,Manufacturing Science - Edition 1,Ghosh and Mallik,MECH,978-0-12-751273-X
+ME008,Refrigeration and Air Conditioning - Edition 1,C.P. Arora,MECH,978-0-12-291935-X
+ME009,Thermodynamics: An Engineering Approach - Edition 2,Yunus Cengel,MECH,978-0-12-331946-X
+ME010,Fluid Mechanics - Edition 2,Fox and McDonald,MECH,978-0-12-304635-X
+ME011,Theory of Machines - Edition 2,S.S. Rattan,MECH,978-0-12-492832-X
+ME012,Shigley's Mechanical Engineering Design - Edition 2,Budynas & Nisbett,MECH,978-0-12-417269-X
+ME013,Strength of Materials - Edition 2,R.K. Rajput,MECH,978-0-12-204734-X
+ME014,Heat and Mass Transfer - Edition 2,P.K. Nag,MECH,978-0-12-579679-X
+ME015,Manufacturing Science - Edition 2,Ghosh and Mallik,MECH,978-0-12-629000-X
+ME016,Refrigeration and Air Conditioning - Edition 2,C.P. Arora,MECH,978-0-12-612726-X
+ME017,Thermodynamics: An Engineering Approach - Edition 3,Yunus Cengel,MECH,978-0-12-769614-X
+ME018,Fluid Mechanics - Edition 3,Fox and McDonald,MECH,978-0-12-546748-X
+ME019,Theory of Machines - Edition 3,S.S. Rattan,MECH,978-0-12-206457-X
+ME020,Shigley's Mechanical Engineering Design - Edition 3,Budynas & Nisbett,MECH,978-0-12-688631-X
+ME021,Strength of Materials - Edition 3,R.K. Rajput,MECH,978-0-12-591646-X
+ME022,Heat and Mass Transfer - Edition 3,P.K. Nag,MECH,978-0-12-179627-X
+ME023,Manufacturing Science - Edition 3,Ghosh and Mallik,MECH,978-0-12-901671-X
+ME024,Refrigeration and Air Conditioning - Edition 3,C.P. Arora,MECH,978-0-12-663201-X
+ME025,Thermodynamics: An Engineering Approach - Edition 4,Yunus Cengel,MECH,978-0-12-560090-X
+ME026,Fluid Mechanics - Edition 4,Fox and McDonald,MECH,978-0-12-484380-X
+ME027,Theory of Machines - Edition 4,S.S. Rattan,MECH,978-0-12-426217-X
+ME028,Shigley's Mechanical Engineering Design - Edition 4,Budynas & Nisbett,MECH,978-0-12-994231-X
+ME029,Strength of Materials - Edition 4,R.K. Rajput,MECH,978-0-12-730185-X
+ME030,Heat and Mass Transfer - Edition 4,P.K. Nag,MECH,978-0-12-398807-X
+ME031,Manufacturing Science - Edition 4,Ghosh and Mallik,MECH,978-0-12-530504-X
+ME032,Refrigeration and Air Conditioning - Edition 4,C.P. Arora,MECH,978-0-12-641775-X
+ME033,Thermodynamics: An Engineering Approach - Edition 5,Yunus Cengel,MECH,978-0-12-458290-X
+ME034,Fluid Mechanics - Edition 5,Fox and McDonald,MECH,978-0-12-246463-X
+ME035,Theory of Machines - Edition 5,S.S. Rattan,MECH,978-0-12-944981-X
+ME036,Shigley's Mechanical Engineering Design - Edition 5,Budynas & Nisbett,MECH,978-0-12-801684-X
+ME037,Strength of Materials - Edition 5,R.K. Rajput,MECH,978-0-12-604050-X
+ME038,Heat and Mass Transfer - Edition 5,P.K. Nag,MECH,978-0-12-902542-X
+ME039,Manufacturing Science - Edition 5,Ghosh and Mallik,MECH,978-0-12-493774-X
+ME040,Refrigeration and Air Conditioning - Edition 5,C.P. Arora,MECH,978-0-12-915052-X
+ME041,Thermodynamics: An Engineering Approach - Edition 6,Yunus Cengel,MECH,978-0-12-745471-X
+ME042,Fluid Mechanics - Edition 6,Fox and McDonald,MECH,978-0-12-284804-X
+ME043,Theory of Machines - Edition 6,S.S. Rattan,MECH,978-0-12-947151-X
+ME044,Shigley's Mechanical Engineering Design - Edition 6,Budynas & Nisbett,MECH,978-0-12-988485-X
+ME045,Strength of Materials - Edition 6,R.K. Rajput,MECH,978-0-12-493699-X
+ME046,Heat and Mass Transfer - Edition 6,P.K. Nag,MECH,978-0-12-874616-X
+ME047,Manufacturing Science - Edition 6,Ghosh and Mallik,MECH,978-0-12-918547-X
+ME048,Refrigeration and Air Conditioning - Edition 6,C.P. Arora,MECH,978-0-12-195707-X
+ME049,Thermodynamics: An Engineering Approach - Edition 7,Yunus Cengel,MECH,978-0-12-774928-X
+ME050,Fluid Mechanics - Edition 7,Fox and McDonald,MECH,978-0-12-900371-X
+AU001,Automotive Mechanics - Edition 1,Crouse & Anglin,AUTO,978-0-12-139861-X
+AU002,Automobile Engineering Vol 1 & 2 - Edition 1,Kirpal Singh,AUTO,978-0-12-289644-X
+AU003,Internal Combustion Engines - Edition 1,V. Ganesan,AUTO,978-0-12-281848-X
+AU004,Vehicle Dynamics - Edition 1,Thomas D. Gillespie,AUTO,978-0-12-174410-X
+AU005,Automotive Chassis and Body - Edition 1,P.L. Kohli,AUTO,978-0-12-797919-X
+AU006,Automobile Electrical and Electronics - Edition 1,A.K. Babu,AUTO,978-0-12-477179-X
+AU007,"Modern Electric, Hybrid Electric Vehicles - Edition 1",Mehrdad Ehsani,AUTO,978-0-12-692417-X
+AU008,IC Engine Fundamentals - Edition 1,John B. Heywood,AUTO,978-0-12-114264-X
+AU009,Automotive Mechanics - Edition 2,Crouse & Anglin,AUTO,978-0-12-799087-X
+AU010,Automobile Engineering Vol 1 & 2 - Edition 2,Kirpal Singh,AUTO,978-0-12-709277-X
+AU011,Internal Combustion Engines - Edition 2,V. Ganesan,AUTO,978-0-12-143922-X
+AU012,Vehicle Dynamics - Edition 2,Thomas D. Gillespie,AUTO,978-0-12-594859-X
+AU013,Automotive Chassis and Body - Edition 2,P.L. Kohli,AUTO,978-0-12-752389-X
+AU014,Automobile Electrical and Electronics - Edition 2,A.K. Babu,AUTO,978-0-12-638727-X
+AU015,"Modern Electric, Hybrid Electric Vehicles - Edition 2",Mehrdad Ehsani,AUTO,978-0-12-716414-X
+AU016,IC Engine Fundamentals - Edition 2,John B. Heywood,AUTO,978-0-12-393366-X
+AU017,Automotive Mechanics - Edition 3,Crouse & Anglin,AUTO,978-0-12-593264-X
+AU018,Automobile Engineering Vol 1 & 2 - Edition 3,Kirpal Singh,AUTO,978-0-12-322312-X
+AU019,Internal Combustion Engines - Edition 3,V. Ganesan,AUTO,978-0-12-788219-X
+AU020,Vehicle Dynamics - Edition 3,Thomas D. Gillespie,AUTO,978-0-12-259943-X
+AU021,Automotive Chassis and Body - Edition 3,P.L. Kohli,AUTO,978-0-12-514972-X
+AU022,Automobile Electrical and Electronics - Edition 3,A.K. Babu,AUTO,978-0-12-815634-X
+AU023,"Modern Electric, Hybrid Electric Vehicles - Edition 3",Mehrdad Ehsani,AUTO,978-0-12-340459-X
+AU024,IC Engine Fundamentals - Edition 3,John B. Heywood,AUTO,978-0-12-786747-X
+AU025,Automotive Mechanics - Edition 4,Crouse & Anglin,AUTO,978-0-12-244082-X
+AU026,Automobile Engineering Vol 1 & 2 - Edition 4,Kirpal Singh,AUTO,978-0-12-228552-X
+AU027,Internal Combustion Engines - Edition 4,V. Ganesan,AUTO,978-0-12-728481-X
+AU028,Vehicle Dynamics - Edition 4,Thomas D. Gillespie,AUTO,978-0-12-600919-X
+AU029,Automotive Chassis and Body - Edition 4,P.L. Kohli,AUTO,978-0-12-552412-X
+AU030,Automobile Electrical and Electronics - Edition 4,A.K. Babu,AUTO,978-0-12-536963-X
+AU031,"Modern Electric, Hybrid Electric Vehicles - Edition 4",Mehrdad Ehsani,AUTO,978-0-12-920091-X
+AU032,IC Engine Fundamentals - Edition 4,John B. Heywood,AUTO,978-0-12-807562-X
+AU033,Automotive Mechanics - Edition 5,Crouse & Anglin,AUTO,978-0-12-667024-X
+AU034,Automobile Engineering Vol 1 & 2 - Edition 5,Kirpal Singh,AUTO,978-0-12-502395-X
+AU035,Internal Combustion Engines - Edition 5,V. Ganesan,AUTO,978-0-12-514797-X
+AU036,Vehicle Dynamics - Edition 5,Thomas D. Gillespie,AUTO,978-0-12-899651-X
+AU037,Automotive Chassis and Body - Edition 5,P.L. Kohli,AUTO,978-0-12-277019-X
+AU038,Automobile Electrical and Electronics - Edition 5,A.K. Babu,AUTO,978-0-12-128361-X
+AU039,"Modern Electric, Hybrid Electric Vehicles - Edition 5",Mehrdad Ehsani,AUTO,978-0-12-706158-X
+AU040,IC Engine Fundamentals - Edition 5,John B. Heywood,AUTO,978-0-12-719844-X
+AU041,Automotive Mechanics - Edition 6,Crouse & Anglin,AUTO,978-0-12-600441-X
+AU042,Automobile Engineering Vol 1 & 2 - Edition 6,Kirpal Singh,AUTO,978-0-12-698672-X
+AU043,Internal Combustion Engines - Edition 6,V. Ganesan,AUTO,978-0-12-941000-X
+AU044,Vehicle Dynamics - Edition 6,Thomas D. Gillespie,AUTO,978-0-12-305435-X
+AU045,Automotive Chassis and Body - Edition 6,P.L. Kohli,AUTO,978-0-12-811588-X
+AU046,Automobile Electrical and Electronics - Edition 6,A.K. Babu,AUTO,978-0-12-863972-X
+AU047,"Modern Electric, Hybrid Electric Vehicles - Edition 6",Mehrdad Ehsani,AUTO,978-0-12-760156-X
+AU048,IC Engine Fundamentals - Edition 6,John B. Heywood,AUTO,978-0-12-611592-X
+AU049,Automotive Mechanics - Edition 7,Crouse & Anglin,AUTO,978-0-12-402585-X
+AU050,Automobile Engineering Vol 1 & 2 - Edition 7,Kirpal Singh,AUTO,978-0-12-243072-X

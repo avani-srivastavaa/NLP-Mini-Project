@@ -1,0 +1,801 @@
+Student Name,Admission No.,Book Name,Date of Issue,Date of Return,Days Due
+Arjun Joshi,2023PE3159,VLSI Design - Edition 1,2026-02-14,2026-03-06,6
+Arjun Joshi,2023PE3159,Database System Concepts - Edition 4,2026-02-07,2026-02-18,0
+Arjun Joshi,2023PE3159,Web Technologies - Edition 3,2026-02-01,2026-02-18,3
+Arjun Joshi,2023PE3159,Theory of Machines - Edition 3,2026-02-13,2026-03-04,5
+Kiara Sharma,2022PE2124,Theory of Machines - Edition 2,2026-02-02,2026-02-17,1
+Kiara Sharma,2022PE2124,Thermodynamics: An Engineering Approach - Edition 4,2026-02-12,2026-02-17,0
+Kiara Sharma,2022PE2124,Database System Concepts - Edition 2,2026-01-15,2026-02-05,7
+Kiara Sharma,2022PE2124,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-06,2026-01-18,0
+Tanvi Iyer,2022PE4767,Theory of Machines - Edition 3,2026-03-01,2026-03-07,0
+Tanvi Iyer,2022PE4767,Operating System Concepts - Edition 5,2026-01-14,2026-02-04,7
+Tanvi Iyer,2022PE4767,VLSI Design - Edition 4,2026-01-25,2026-02-14,6
+Tanvi Iyer,2022PE4767,Software Engineering: A Practitioner's Approach - Edition 5,2026-03-03,2026-03-11,0
+Sanya Deshmukh,2022PE3505,Web Technologies - Edition 2,2026-02-27,2026-03-06,0
+Sanya Deshmukh,2022PE3505,Database System Concepts - Edition 1,2026-01-31,2026-02-17,3
+Sanya Deshmukh,2022PE3505,Database System Concepts - Edition 3,2026-01-30,2026-02-07,0
+Sanya Deshmukh,2022PE3505,Microprocessor Architecture - Edition 4,2026-01-21,2026-02-11,7
+Aarav Deshmukh,2023PE2263,Web Technologies - Edition 3,2026-02-13,2026-02-18,0
+Aarav Deshmukh,2023PE2263,Introduction to Algorithms - Edition 5,2026-02-12,2026-03-06,8
+Aarav Deshmukh,2023PE2263,Thermodynamics: An Engineering Approach - Edition 1,2026-02-21,2026-03-06,0
+Aarav Deshmukh,2023PE2263,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-23,2026-02-11,5
+Aarav Patil,2022PE6674,Automotive Mechanics - Edition 4,2026-02-22,2026-03-05,0
+Aarav Patil,2022PE6674,Database System Concepts - Edition 4,2026-03-03,2026-03-13,0
+Aarav Patil,2022PE6674,Web Technologies - Edition 1,2026-02-04,2026-02-13,0
+Aarav Patil,2022PE6674,Digital Design - Edition 4,2026-01-21,2026-02-04,0
+Aarav Kulkarni,2022PE2069,Automotive Mechanics - Edition 4,2026-02-12,2026-02-20,0
+Aarav Kulkarni,2022PE2069,Automotive Mechanics - Edition 5,2026-02-27,2026-03-15,2
+Aarav Kulkarni,2022PE2069,Higher Engineering Mathematics - Edition 2,2026-03-07,2026-03-17,0
+Aarav Kulkarni,2022PE2069,Database System Concepts - Edition 4,2026-03-14,2026-03-24,0
+Aarav Deshmukh,2022PE1538,Introduction to Algorithms - Edition 1,2026-01-11,2026-01-22,0
+Aarav Deshmukh,2022PE1538,Introduction to Algorithms - Edition 2,2026-02-22,2026-03-09,1
+Aarav Deshmukh,2022PE1538,Operating System Concepts - Edition 1,2026-02-26,2026-03-11,0
+Aarav Deshmukh,2022PE1538,Automotive Mechanics - Edition 1,2026-02-07,2026-02-20,0
+Ananya Nair,2023PE6562,Thermodynamics: An Engineering Approach - Edition 2,2026-02-17,2026-02-24,0
+Ananya Nair,2023PE6562,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-27,2026-02-05,0
+Ananya Nair,2023PE6562,Higher Engineering Mathematics - Edition 2,2026-02-04,2026-02-13,0
+Ananya Nair,2023PE6562,Introduction to Algorithms - Edition 4,2026-03-14,2026-03-20,0
+Isha Deshmukh,2022PE1054,VLSI Design - Edition 5,2026-03-13,2026-04-06,10
+Isha Deshmukh,2022PE1054,Introduction to Algorithms - Edition 5,2026-02-23,2026-03-03,0
+Isha Deshmukh,2022PE1054,Signals and Systems - Edition 4,2026-02-10,2026-02-19,0
+Isha Deshmukh,2022PE1054,Theory of Machines - Edition 4,2026-01-08,2026-01-25,3
+Rohan Iyer,2022PE8289,Higher Engineering Mathematics - Edition 3,2026-03-10,2026-03-19,0
+Rohan Iyer,2022PE8289,Software Engineering: A Practitioner's Approach - Edition 2,2026-02-18,2026-03-07,3
+Rohan Iyer,2022PE8289,Computer Networks - Edition 5,2026-01-22,2026-01-28,0
+Rohan Iyer,2022PE8289,Theory of Machines - Edition 2,2026-01-13,2026-01-25,0
+Kiara Kulkarni,2022PE1522,Computer Networks - Edition 2,2026-03-12,2026-03-30,4
+Kiara Kulkarni,2022PE1522,Higher Engineering Mathematics - Edition 1,2026-03-12,2026-03-22,0
+Kiara Kulkarni,2022PE1522,Thermodynamics: An Engineering Approach - Edition 4,2026-02-13,2026-02-27,0
+Kiara Kulkarni,2022PE1522,Web Technologies - Edition 4,2026-01-06,2026-01-19,0
+Aditya Sharma,2023PE1620,Web Technologies - Edition 3,2026-03-02,2026-03-10,0
+Aditya Sharma,2023PE1620,Database System Concepts - Edition 1,2026-02-28,2026-03-16,2
+Aditya Sharma,2023PE1620,Introduction to Algorithms - Edition 3,2026-03-12,2026-04-05,10
+Aditya Sharma,2023PE1620,Computer Networks - Edition 1,2026-02-24,2026-03-14,4
+Aarav Kulkarni,2023PE8463,Signals and Systems - Edition 2,2026-01-09,2026-01-22,0
+Aarav Kulkarni,2023PE8463,Introduction to Algorithms - Edition 2,2026-03-16,2026-04-05,6
+Aarav Kulkarni,2023PE8463,Thermodynamics: An Engineering Approach - Edition 1,2026-01-11,2026-01-16,0
+Aarav Kulkarni,2023PE8463,Signals and Systems - Edition 2,2026-02-06,2026-02-16,0
+Tanvi Verma,2022PE2034,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-04,2026-02-24,6
+Tanvi Verma,2022PE2034,Operating System Concepts - Edition 2,2026-02-14,2026-03-04,4
+Tanvi Verma,2022PE2034,Web Technologies - Edition 4,2026-02-23,2026-03-16,7
+Tanvi Verma,2022PE2034,Theory of Machines - Edition 3,2026-01-29,2026-02-09,0
+Aditya Sharma,2022PE9519,Higher Engineering Mathematics - Edition 2,2026-01-30,2026-02-10,0
+Aditya Sharma,2022PE9519,Digital Design - Edition 3,2026-01-13,2026-01-25,0
+Aditya Sharma,2022PE9519,Digital Design - Edition 1,2026-03-09,2026-03-24,1
+Aditya Sharma,2022PE9519,Digital Design - Edition 3,2026-02-08,2026-02-17,0
+Isha Kulkarni,2023PE4277,Thermodynamics: An Engineering Approach - Edition 1,2026-02-22,2026-03-16,8
+Isha Kulkarni,2023PE4277,Digital Design - Edition 5,2026-02-22,2026-03-06,0
+Isha Kulkarni,2023PE4277,Theory of Machines - Edition 5,2026-02-16,2026-02-28,0
+Isha Kulkarni,2023PE4277,Database System Concepts - Edition 3,2026-01-28,2026-02-15,4
+Tanvi Sharma,2023PE5492,Database System Concepts - Edition 5,2026-01-11,2026-01-16,0
+Tanvi Sharma,2023PE5492,Thermodynamics: An Engineering Approach - Edition 2,2026-01-25,2026-02-07,0
+Tanvi Sharma,2023PE5492,Introduction to Algorithms - Edition 4,2026-02-25,2026-03-10,0
+Tanvi Sharma,2023PE5492,Web Technologies - Edition 1,2026-02-24,2026-03-16,6
+Ananya Iyer,2023PE5483,Web Technologies - Edition 4,2026-01-10,2026-01-15,0
+Ananya Iyer,2023PE5483,Higher Engineering Mathematics - Edition 4,2026-01-26,2026-02-12,3
+Ananya Iyer,2023PE5483,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-14,2026-03-29,1
+Ananya Iyer,2023PE5483,Database System Concepts - Edition 1,2026-02-28,2026-03-08,0
+Aarav Patil,2023PE9811,VLSI Design - Edition 2,2026-01-17,2026-02-10,10
+Aarav Patil,2023PE9811,Thermodynamics: An Engineering Approach - Edition 2,2026-01-21,2026-01-27,0
+Aarav Patil,2023PE9811,Microprocessor Architecture - Edition 2,2026-01-10,2026-02-04,11
+Aarav Patil,2023PE9811,Database System Concepts - Edition 5,2026-03-05,2026-03-10,0
+Ananya Verma,2023PE3205,Web Technologies - Edition 3,2026-01-07,2026-01-31,10
+Ananya Verma,2023PE3205,Thermodynamics: An Engineering Approach - Edition 5,2026-01-14,2026-01-28,0
+Ananya Verma,2023PE3205,Operating System Concepts - Edition 2,2026-01-26,2026-02-05,0
+Ananya Verma,2023PE3205,Artificial Intelligence: A Modern Approach - Edition 5,2026-01-15,2026-01-30,1
+Vihaan Patil,2022PE2016,Computer Networks - Edition 2,2026-01-31,2026-02-19,5
+Vihaan Patil,2022PE2016,Operating System Concepts - Edition 3,2026-01-23,2026-02-08,2
+Vihaan Patil,2022PE2016,Web Technologies - Edition 1,2026-01-07,2026-01-13,0
+Vihaan Patil,2022PE2016,VLSI Design - Edition 4,2026-02-28,2026-03-22,8
+Vihaan Sharma,2023PE6193,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-14,2026-01-24,0
+Vihaan Sharma,2023PE6193,Signals and Systems - Edition 3,2026-01-30,2026-02-08,0
+Vihaan Sharma,2023PE6193,Artificial Intelligence: A Modern Approach - Edition 5,2026-02-27,2026-03-17,4
+Vihaan Sharma,2023PE6193,Automotive Mechanics - Edition 5,2026-02-26,2026-03-11,0
+Arjun Sharma,2022PE7219,Database System Concepts - Edition 2,2026-03-05,2026-03-11,0
+Arjun Sharma,2022PE7219,Microprocessor Architecture - Edition 1,2026-02-28,2026-03-23,9
+Arjun Sharma,2022PE7219,Signals and Systems - Edition 3,2026-02-02,2026-02-21,5
+Arjun Sharma,2022PE7219,Database System Concepts - Edition 5,2026-01-28,2026-02-05,0
+Aditya Joshi,2023PE4123,Microprocessor Architecture - Edition 3,2026-03-04,2026-03-29,11
+Aditya Joshi,2023PE4123,Theory of Machines - Edition 3,2026-03-10,2026-04-03,10
+Aditya Joshi,2023PE4123,Theory of Machines - Edition 1,2026-02-16,2026-02-24,0
+Aditya Joshi,2023PE4123,Automotive Mechanics - Edition 2,2026-02-09,2026-03-02,7
+Tanvi Patil,2022PE9460,Theory of Machines - Edition 3,2026-02-13,2026-03-04,5
+Tanvi Patil,2022PE9460,Automotive Mechanics - Edition 5,2026-03-11,2026-03-28,3
+Tanvi Patil,2022PE9460,VLSI Design - Edition 3,2026-02-18,2026-03-03,0
+Tanvi Patil,2022PE9460,Computer Networks - Edition 2,2026-01-11,2026-01-24,0
+Tanvi Deshmukh,2022PE8307,Database System Concepts - Edition 2,2026-01-08,2026-01-27,5
+Tanvi Deshmukh,2022PE8307,Automotive Mechanics - Edition 4,2026-02-20,2026-03-15,9
+Tanvi Deshmukh,2022PE8307,VLSI Design - Edition 3,2026-02-21,2026-03-17,10
+Tanvi Deshmukh,2022PE8307,Thermodynamics: An Engineering Approach - Edition 1,2026-02-06,2026-02-26,6
+Rohan Iyer,2023PE7928,Automotive Mechanics - Edition 2,2026-02-25,2026-03-06,0
+Rohan Iyer,2023PE7928,Thermodynamics: An Engineering Approach - Edition 2,2026-03-11,2026-03-16,0
+Rohan Iyer,2023PE7928,Automotive Mechanics - Edition 4,2026-01-25,2026-02-11,3
+Rohan Iyer,2023PE7928,Artificial Intelligence: A Modern Approach - Edition 5,2026-02-02,2026-02-12,0
+Sanya Sharma,2022PE8026,Artificial Intelligence: A Modern Approach - Edition 3,2026-01-23,2026-01-29,0
+Sanya Sharma,2022PE8026,Thermodynamics: An Engineering Approach - Edition 4,2026-01-23,2026-02-05,0
+Sanya Sharma,2022PE8026,Database System Concepts - Edition 1,2026-02-22,2026-03-01,0
+Sanya Sharma,2022PE8026,Higher Engineering Mathematics - Edition 4,2026-03-04,2026-03-21,3
+Rohan Verma,2023PE4863,Web Technologies - Edition 5,2026-01-30,2026-02-10,0
+Rohan Verma,2023PE4863,VLSI Design - Edition 2,2026-01-07,2026-01-16,0
+Rohan Verma,2023PE4863,Digital Design - Edition 3,2026-01-25,2026-02-07,0
+Rohan Verma,2023PE4863,Signals and Systems - Edition 3,2026-01-16,2026-02-09,10
+Rohan Joshi,2023PE9460,Database System Concepts - Edition 5,2026-01-21,2026-02-09,5
+Rohan Joshi,2023PE9460,Web Technologies - Edition 5,2026-01-11,2026-01-31,6
+Rohan Joshi,2023PE9460,Artificial Intelligence: A Modern Approach - Edition 2,2026-02-22,2026-03-07,0
+Rohan Joshi,2023PE9460,Theory of Machines - Edition 2,2026-01-19,2026-02-11,9
+Rohan Nair,2023PE1016,Higher Engineering Mathematics - Edition 5,2026-02-05,2026-02-13,0
+Rohan Nair,2023PE1016,Signals and Systems - Edition 5,2026-02-18,2026-03-10,6
+Rohan Nair,2023PE1016,Database System Concepts - Edition 5,2026-01-22,2026-02-07,2
+Rohan Nair,2023PE1016,Digital Design - Edition 2,2026-02-20,2026-03-10,4
+Kiara Kulkarni,2023PE9977,Digital Design - Edition 1,2026-03-08,2026-03-24,2
+Kiara Kulkarni,2023PE9977,Theory of Machines - Edition 1,2026-02-15,2026-03-06,5
+Kiara Kulkarni,2023PE9977,VLSI Design - Edition 2,2026-03-09,2026-03-17,0
+Kiara Kulkarni,2023PE9977,Database System Concepts - Edition 2,2026-01-17,2026-02-04,4
+Aditya Nair,2023PE8126,Microprocessor Architecture - Edition 3,2026-01-18,2026-01-30,0
+Aditya Nair,2023PE8126,Thermodynamics: An Engineering Approach - Edition 2,2026-01-19,2026-01-25,0
+Aditya Nair,2023PE8126,Operating System Concepts - Edition 5,2026-01-07,2026-01-20,0
+Aditya Nair,2023PE8126,Web Technologies - Edition 4,2026-02-20,2026-03-01,0
+Kiara Deshmukh,2023PE1448,Web Technologies - Edition 1,2026-02-23,2026-02-28,0
+Kiara Deshmukh,2023PE1448,Artificial Intelligence: A Modern Approach - Edition 3,2026-01-29,2026-02-03,0
+Kiara Deshmukh,2023PE1448,Microprocessor Architecture - Edition 2,2026-03-09,2026-03-20,0
+Kiara Deshmukh,2023PE1448,Computer Networks - Edition 4,2026-03-08,2026-03-26,4
+Aditya Verma,2022PE7693,Web Technologies - Edition 3,2026-01-20,2026-02-03,0
+Aditya Verma,2022PE7693,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-14,2026-01-23,0
+Aditya Verma,2022PE7693,Database System Concepts - Edition 3,2026-02-16,2026-02-27,0
+Aditya Verma,2022PE7693,Higher Engineering Mathematics - Edition 2,2026-01-20,2026-02-03,0
+Ananya Iyer,2022PE5696,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-24,2026-03-06,0
+Ananya Iyer,2022PE5696,Operating System Concepts - Edition 5,2026-01-12,2026-01-31,5
+Ananya Iyer,2022PE5696,Theory of Machines - Edition 4,2026-01-21,2026-02-06,2
+Ananya Iyer,2022PE5696,Computer Networks - Edition 3,2026-02-11,2026-02-26,1
+Rohan Joshi,2022PE7781,Higher Engineering Mathematics - Edition 1,2026-03-01,2026-03-12,0
+Rohan Joshi,2022PE7781,Thermodynamics: An Engineering Approach - Edition 1,2026-01-28,2026-02-13,2
+Rohan Joshi,2022PE7781,Operating System Concepts - Edition 1,2026-02-19,2026-03-06,1
+Rohan Joshi,2022PE7781,VLSI Design - Edition 1,2026-03-12,2026-03-27,1
+Isha Patil,2022PE3037,Signals and Systems - Edition 1,2026-02-15,2026-02-24,0
+Isha Patil,2022PE3037,Web Technologies - Edition 4,2026-01-08,2026-01-31,9
+Isha Patil,2022PE3037,Automotive Mechanics - Edition 5,2026-01-14,2026-02-06,9
+Isha Patil,2022PE3037,Operating System Concepts - Edition 5,2026-01-05,2026-01-15,0
+Tanvi Sharma,2022PE7988,Higher Engineering Mathematics - Edition 5,2026-03-06,2026-03-11,0
+Tanvi Sharma,2022PE7988,Higher Engineering Mathematics - Edition 5,2026-01-14,2026-02-03,6
+Tanvi Sharma,2022PE7988,Thermodynamics: An Engineering Approach - Edition 1,2026-01-19,2026-01-31,0
+Tanvi Sharma,2022PE7988,Automotive Mechanics - Edition 5,2026-02-17,2026-03-04,1
+Sanya Kulkarni,2023PE2281,Web Technologies - Edition 5,2026-02-19,2026-02-27,0
+Sanya Kulkarni,2023PE2281,Higher Engineering Mathematics - Edition 4,2026-01-09,2026-01-17,0
+Sanya Kulkarni,2023PE2281,VLSI Design - Edition 4,2026-03-03,2026-03-15,0
+Sanya Kulkarni,2023PE2281,Signals and Systems - Edition 1,2026-02-05,2026-02-12,0
+Rohan Nair,2023PE8884,Theory of Machines - Edition 1,2026-03-02,2026-03-21,5
+Rohan Nair,2023PE8884,Microprocessor Architecture - Edition 2,2026-02-01,2026-02-08,0
+Rohan Nair,2023PE8884,Thermodynamics: An Engineering Approach - Edition 2,2026-03-07,2026-03-19,0
+Rohan Nair,2023PE8884,Database System Concepts - Edition 2,2026-02-21,2026-03-07,0
+Vihaan Deshmukh,2023PE5734,Introduction to Algorithms - Edition 3,2026-03-01,2026-03-14,0
+Vihaan Deshmukh,2023PE5734,Higher Engineering Mathematics - Edition 2,2026-01-19,2026-01-25,0
+Vihaan Deshmukh,2023PE5734,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-28,2026-02-09,0
+Vihaan Deshmukh,2023PE5734,Artificial Intelligence: A Modern Approach - Edition 5,2026-02-28,2026-03-05,0
+Vihaan Verma,2023PE2039,VLSI Design - Edition 5,2026-01-26,2026-02-06,0
+Vihaan Verma,2023PE2039,Microprocessor Architecture - Edition 1,2026-02-14,2026-02-27,0
+Vihaan Verma,2023PE2039,Digital Design - Edition 5,2026-02-14,2026-03-08,8
+Vihaan Verma,2023PE2039,Database System Concepts - Edition 3,2026-02-26,2026-03-03,0
+Isha Iyer,2022PE7420,Thermodynamics: An Engineering Approach - Edition 4,2026-01-05,2026-01-10,0
+Isha Iyer,2022PE7420,Software Engineering: A Practitioner's Approach - Edition 3,2026-03-14,2026-03-20,0
+Isha Iyer,2022PE7420,Microprocessor Architecture - Edition 5,2026-01-11,2026-01-16,0
+Isha Iyer,2022PE7420,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-25,2026-02-06,0
+Arjun Iyer,2022PE4141,Introduction to Algorithms - Edition 2,2026-03-15,2026-04-01,3
+Arjun Iyer,2022PE4141,Thermodynamics: An Engineering Approach - Edition 2,2026-03-03,2026-03-16,0
+Arjun Iyer,2022PE4141,Automotive Mechanics - Edition 1,2026-01-26,2026-02-11,2
+Arjun Iyer,2022PE4141,Automotive Mechanics - Edition 2,2026-02-18,2026-03-15,11
+Ananya Nair,2022PE5613,Signals and Systems - Edition 2,2026-01-15,2026-02-02,4
+Ananya Nair,2022PE5613,Operating System Concepts - Edition 2,2026-02-27,2026-03-18,5
+Ananya Nair,2022PE5613,Thermodynamics: An Engineering Approach - Edition 3,2026-01-16,2026-01-30,0
+Ananya Nair,2022PE5613,Operating System Concepts - Edition 5,2026-02-06,2026-02-12,0
+Arjun Sharma,2022PE3350,Database System Concepts - Edition 1,2026-01-13,2026-01-29,2
+Arjun Sharma,2022PE3350,Higher Engineering Mathematics - Edition 2,2026-01-20,2026-01-26,0
+Arjun Sharma,2022PE3350,Web Technologies - Edition 3,2026-01-13,2026-01-30,3
+Arjun Sharma,2022PE3350,Web Technologies - Edition 5,2026-01-13,2026-02-01,5
+Aarav Patil,2023PE8580,Web Technologies - Edition 1,2026-03-11,2026-03-26,1
+Aarav Patil,2023PE8580,Digital Design - Edition 3,2026-01-06,2026-01-12,0
+Aarav Patil,2023PE8580,Artificial Intelligence: A Modern Approach - Edition 2,2026-01-25,2026-02-06,0
+Aarav Patil,2023PE8580,Web Technologies - Edition 1,2026-01-15,2026-01-31,2
+Rohan Verma,2023PE1563,Operating System Concepts - Edition 5,2026-01-08,2026-01-31,9
+Rohan Verma,2023PE1563,Theory of Machines - Edition 4,2026-01-05,2026-01-24,5
+Rohan Verma,2023PE1563,Higher Engineering Mathematics - Edition 1,2026-03-04,2026-03-17,0
+Rohan Verma,2023PE1563,Automotive Mechanics - Edition 3,2026-03-02,2026-03-19,3
+Aarav Patil,2022PE8193,Computer Networks - Edition 5,2026-01-26,2026-02-15,6
+Aarav Patil,2022PE8193,Digital Design - Edition 1,2026-03-13,2026-04-01,5
+Aarav Patil,2022PE8193,Artificial Intelligence: A Modern Approach - Edition 2,2026-01-14,2026-01-30,2
+Aarav Patil,2022PE8193,Automotive Mechanics - Edition 2,2026-02-13,2026-03-07,8
+Aarav Verma,2023PE2284,Digital Design - Edition 3,2026-03-02,2026-03-19,3
+Aarav Verma,2023PE2284,VLSI Design - Edition 3,2026-02-02,2026-02-11,0
+Aarav Verma,2023PE2284,Microprocessor Architecture - Edition 2,2026-01-23,2026-02-17,11
+Aarav Verma,2023PE2284,Software Engineering: A Practitioner's Approach - Edition 3,2026-02-22,2026-03-14,6
+Rohan Sharma,2022PE6794,Web Technologies - Edition 2,2026-01-05,2026-01-21,2
+Rohan Sharma,2022PE6794,Automotive Mechanics - Edition 5,2026-03-16,2026-03-29,0
+Rohan Sharma,2022PE6794,Automotive Mechanics - Edition 3,2026-01-13,2026-01-25,0
+Rohan Sharma,2022PE6794,Web Technologies - Edition 1,2026-03-16,2026-03-31,1
+Ananya Iyer,2023PE4516,Digital Design - Edition 1,2026-03-16,2026-04-03,4
+Ananya Iyer,2023PE4516,VLSI Design - Edition 1,2026-02-02,2026-02-22,6
+Ananya Iyer,2023PE4516,Database System Concepts - Edition 5,2026-02-04,2026-02-17,0
+Ananya Iyer,2023PE4516,Digital Design - Edition 2,2026-01-21,2026-02-08,4
+Aarav Patil,2023PE6608,Operating System Concepts - Edition 2,2026-02-26,2026-03-10,0
+Aarav Patil,2023PE6608,Higher Engineering Mathematics - Edition 2,2026-01-22,2026-02-11,6
+Aarav Patil,2023PE6608,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-29,2026-02-07,0
+Aarav Patil,2023PE6608,Microprocessor Architecture - Edition 3,2026-02-09,2026-02-25,2
+Sanya Deshmukh,2023PE6758,VLSI Design - Edition 5,2026-01-11,2026-01-24,0
+Sanya Deshmukh,2023PE6758,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-15,2026-04-05,7
+Sanya Deshmukh,2023PE6758,Digital Design - Edition 2,2026-01-31,2026-02-08,0
+Sanya Deshmukh,2023PE6758,Operating System Concepts - Edition 3,2026-01-09,2026-01-19,0
+Rohan Nair,2023PE2170,Computer Networks - Edition 3,2026-01-10,2026-01-16,0
+Rohan Nair,2023PE2170,Automotive Mechanics - Edition 4,2026-01-29,2026-02-16,4
+Rohan Nair,2023PE2170,Computer Networks - Edition 4,2026-02-21,2026-03-07,0
+Rohan Nair,2023PE2170,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-27,2026-02-16,6
+Aditya Sharma,2022PE8840,Software Engineering: A Practitioner's Approach - Edition 5,2026-03-12,2026-04-03,8
+Aditya Sharma,2022PE8840,Microprocessor Architecture - Edition 5,2026-01-14,2026-02-04,7
+Aditya Sharma,2022PE8840,Higher Engineering Mathematics - Edition 1,2026-03-11,2026-03-18,0
+Aditya Sharma,2022PE8840,Microprocessor Architecture - Edition 1,2026-03-15,2026-03-24,0
+Aarav Sharma,2023PE2794,Higher Engineering Mathematics - Edition 3,2026-01-27,2026-02-19,9
+Aarav Sharma,2023PE2794,Thermodynamics: An Engineering Approach - Edition 5,2026-02-04,2026-02-19,1
+Aarav Sharma,2023PE2794,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-31,2026-02-17,3
+Aarav Sharma,2023PE2794,Signals and Systems - Edition 2,2026-03-04,2026-03-25,7
+Kiara Verma,2022PE8725,Web Technologies - Edition 4,2026-03-07,2026-03-25,4
+Kiara Verma,2022PE8725,Signals and Systems - Edition 5,2026-03-08,2026-03-29,7
+Kiara Verma,2022PE8725,Signals and Systems - Edition 3,2026-02-04,2026-02-27,9
+Kiara Verma,2022PE8725,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-04,2026-03-17,0
+Isha Joshi,2023PE6263,Software Engineering: A Practitioner's Approach - Edition 3,2026-02-22,2026-03-14,6
+Isha Joshi,2023PE6263,Higher Engineering Mathematics - Edition 1,2026-02-09,2026-02-14,0
+Isha Joshi,2023PE6263,Artificial Intelligence: A Modern Approach - Edition 4,2026-03-12,2026-03-24,0
+Isha Joshi,2023PE6263,Computer Networks - Edition 1,2026-01-20,2026-02-13,10
+Vihaan Nair,2023PE4065,Higher Engineering Mathematics - Edition 1,2026-03-08,2026-03-13,0
+Vihaan Nair,2023PE4065,Operating System Concepts - Edition 5,2026-02-10,2026-02-23,0
+Vihaan Nair,2023PE4065,Database System Concepts - Edition 5,2026-02-22,2026-03-15,7
+Vihaan Nair,2023PE4065,Operating System Concepts - Edition 4,2026-03-08,2026-03-25,3
+Isha Nair,2022PE6094,Artificial Intelligence: A Modern Approach - Edition 2,2026-02-06,2026-02-22,2
+Isha Nair,2022PE6094,VLSI Design - Edition 3,2026-01-23,2026-01-31,0
+Isha Nair,2022PE6094,Theory of Machines - Edition 4,2026-03-11,2026-03-29,4
+Isha Nair,2022PE6094,Operating System Concepts - Edition 1,2026-02-28,2026-03-10,0
+Arjun Nair,2023PE8116,Microprocessor Architecture - Edition 5,2026-02-28,2026-03-08,0
+Arjun Nair,2023PE8116,Higher Engineering Mathematics - Edition 4,2026-02-20,2026-03-13,7
+Arjun Nair,2023PE8116,Higher Engineering Mathematics - Edition 5,2026-01-06,2026-01-30,10
+Arjun Nair,2023PE8116,Signals and Systems - Edition 1,2026-02-25,2026-03-06,0
+Tanvi Deshmukh,2023PE4024,Digital Design - Edition 1,2026-01-25,2026-02-16,8
+Tanvi Deshmukh,2023PE4024,Signals and Systems - Edition 4,2026-01-24,2026-02-12,5
+Tanvi Deshmukh,2023PE4024,Software Engineering: A Practitioner's Approach - Edition 3,2026-01-24,2026-02-02,0
+Tanvi Deshmukh,2023PE4024,Database System Concepts - Edition 5,2026-01-07,2026-01-12,0
+Sanya Kulkarni,2023PE6135,Software Engineering: A Practitioner's Approach - Edition 5,2026-02-26,2026-03-06,0
+Sanya Kulkarni,2023PE6135,Computer Networks - Edition 3,2026-02-11,2026-02-23,0
+Sanya Kulkarni,2023PE6135,Automotive Mechanics - Edition 4,2026-02-19,2026-03-12,7
+Sanya Kulkarni,2023PE6135,Thermodynamics: An Engineering Approach - Edition 5,2026-03-10,2026-03-27,3
+Rohan Patil,2022PE9946,Signals and Systems - Edition 1,2026-03-12,2026-03-24,0
+Rohan Patil,2022PE9946,Microprocessor Architecture - Edition 4,2026-02-17,2026-03-08,5
+Rohan Patil,2022PE9946,Artificial Intelligence: A Modern Approach - Edition 2,2026-01-25,2026-02-11,3
+Rohan Patil,2022PE9946,Thermodynamics: An Engineering Approach - Edition 3,2026-01-22,2026-02-05,0
+Isha Nair,2023PE1821,Automotive Mechanics - Edition 3,2026-03-08,2026-03-14,0
+Isha Nair,2023PE1821,Artificial Intelligence: A Modern Approach - Edition 5,2026-02-19,2026-02-25,0
+Isha Nair,2023PE1821,Operating System Concepts - Edition 5,2026-03-01,2026-03-22,7
+Isha Nair,2023PE1821,Higher Engineering Mathematics - Edition 5,2026-01-13,2026-01-19,0
+Sanya Patil,2022PE5768,Introduction to Algorithms - Edition 1,2026-02-19,2026-03-16,11
+Sanya Patil,2022PE5768,Thermodynamics: An Engineering Approach - Edition 2,2026-01-08,2026-01-20,0
+Sanya Patil,2022PE5768,Microprocessor Architecture - Edition 1,2026-03-06,2026-03-23,3
+Sanya Patil,2022PE5768,Microprocessor Architecture - Edition 5,2026-01-23,2026-02-15,9
+Isha Patil,2022PE5201,Thermodynamics: An Engineering Approach - Edition 5,2026-02-08,2026-02-27,5
+Isha Patil,2022PE5201,Higher Engineering Mathematics - Edition 3,2026-03-14,2026-03-24,0
+Isha Patil,2022PE5201,VLSI Design - Edition 2,2026-03-14,2026-04-02,5
+Isha Patil,2022PE5201,Thermodynamics: An Engineering Approach - Edition 2,2026-01-08,2026-01-30,8
+Aarav Deshmukh,2022PE4106,Signals and Systems - Edition 1,2026-03-07,2026-03-22,1
+Aarav Deshmukh,2022PE4106,VLSI Design - Edition 3,2026-03-07,2026-03-23,2
+Aarav Deshmukh,2022PE4106,Database System Concepts - Edition 1,2026-01-29,2026-02-17,5
+Aarav Deshmukh,2022PE4106,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-20,2026-01-31,0
+Tanvi Kulkarni,2022PE4752,Artificial Intelligence: A Modern Approach - Edition 4,2026-01-31,2026-02-12,0
+Tanvi Kulkarni,2022PE4752,Microprocessor Architecture - Edition 5,2026-03-11,2026-03-30,5
+Tanvi Kulkarni,2022PE4752,Database System Concepts - Edition 2,2026-02-01,2026-02-18,3
+Tanvi Kulkarni,2022PE4752,Digital Design - Edition 3,2026-02-07,2026-02-24,3
+Rohan Joshi,2022PE5552,Introduction to Algorithms - Edition 4,2026-01-26,2026-02-07,0
+Rohan Joshi,2022PE5552,Higher Engineering Mathematics - Edition 4,2026-01-27,2026-02-09,0
+Rohan Joshi,2022PE5552,Signals and Systems - Edition 2,2026-01-15,2026-01-31,2
+Rohan Joshi,2022PE5552,Web Technologies - Edition 2,2026-02-24,2026-03-08,0
+Tanvi Sharma,2022PE1619,Signals and Systems - Edition 3,2026-02-04,2026-02-21,3
+Tanvi Sharma,2022PE1619,Software Engineering: A Practitioner's Approach - Edition 1,2026-02-14,2026-03-11,11
+Tanvi Sharma,2022PE1619,Thermodynamics: An Engineering Approach - Edition 3,2026-02-04,2026-02-22,4
+Tanvi Sharma,2022PE1619,Automotive Mechanics - Edition 1,2026-01-10,2026-01-20,0
+Aarav Verma,2022PE9236,Introduction to Algorithms - Edition 1,2026-01-12,2026-01-28,2
+Aarav Verma,2022PE9236,Software Engineering: A Practitioner's Approach - Edition 4,2026-02-26,2026-03-08,0
+Aarav Verma,2022PE9236,Database System Concepts - Edition 4,2026-02-24,2026-03-06,0
+Aarav Verma,2022PE9236,Signals and Systems - Edition 2,2026-02-28,2026-03-19,5
+Tanvi Kulkarni,2023PE4896,Signals and Systems - Edition 1,2026-03-05,2026-03-16,0
+Tanvi Kulkarni,2023PE4896,Introduction to Algorithms - Edition 1,2026-03-14,2026-04-07,10
+Tanvi Kulkarni,2023PE4896,Signals and Systems - Edition 2,2026-01-06,2026-01-23,3
+Tanvi Kulkarni,2023PE4896,Thermodynamics: An Engineering Approach - Edition 5,2026-03-09,2026-03-28,5
+Aditya Sharma,2023PE3967,Introduction to Algorithms - Edition 4,2026-01-29,2026-02-14,2
+Aditya Sharma,2023PE3967,Operating System Concepts - Edition 2,2026-03-03,2026-03-11,0
+Aditya Sharma,2023PE3967,VLSI Design - Edition 1,2026-01-29,2026-02-08,0
+Aditya Sharma,2023PE3967,Computer Networks - Edition 5,2026-01-18,2026-02-05,4
+Arjun Iyer,2022PE6492,Thermodynamics: An Engineering Approach - Edition 4,2026-01-19,2026-01-26,0
+Arjun Iyer,2022PE6492,Introduction to Algorithms - Edition 3,2026-02-09,2026-02-14,0
+Arjun Iyer,2022PE6492,Signals and Systems - Edition 3,2026-01-28,2026-02-15,4
+Arjun Iyer,2022PE6492,Microprocessor Architecture - Edition 5,2026-02-24,2026-03-08,0
+Arjun Joshi,2022PE1444,Microprocessor Architecture - Edition 4,2026-02-27,2026-03-09,0
+Arjun Joshi,2022PE1444,Computer Networks - Edition 4,2026-03-06,2026-03-27,7
+Arjun Joshi,2022PE1444,Operating System Concepts - Edition 2,2026-03-09,2026-03-22,0
+Arjun Joshi,2022PE1444,Web Technologies - Edition 1,2026-01-11,2026-02-03,9
+Aarav Joshi,2023PE2951,Database System Concepts - Edition 3,2026-02-27,2026-03-10,0
+Aarav Joshi,2023PE2951,Operating System Concepts - Edition 4,2026-01-14,2026-01-30,2
+Aarav Joshi,2023PE2951,Theory of Machines - Edition 2,2026-03-13,2026-03-24,0
+Aarav Joshi,2023PE2951,Introduction to Algorithms - Edition 1,2026-03-02,2026-03-24,8
+Aditya Verma,2022PE7889,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-23,2026-02-15,9
+Aditya Verma,2022PE7889,Software Engineering: A Practitioner's Approach - Edition 4,2026-02-16,2026-03-05,3
+Aditya Verma,2022PE7889,Digital Design - Edition 3,2026-01-16,2026-01-29,0
+Aditya Verma,2022PE7889,Operating System Concepts - Edition 4,2026-01-24,2026-02-05,0
+Kiara Patil,2022PE9955,Automotive Mechanics - Edition 2,2026-03-06,2026-03-14,0
+Kiara Patil,2022PE9955,VLSI Design - Edition 1,2026-01-25,2026-02-18,10
+Kiara Patil,2022PE9955,Signals and Systems - Edition 4,2026-01-21,2026-01-31,0
+Kiara Patil,2022PE9955,Web Technologies - Edition 5,2026-03-07,2026-03-28,7
+Ananya Joshi,2023PE2936,Introduction to Algorithms - Edition 4,2026-02-07,2026-03-01,8
+Ananya Joshi,2023PE2936,Signals and Systems - Edition 2,2026-02-04,2026-02-22,4
+Ananya Joshi,2023PE2936,Web Technologies - Edition 5,2026-03-04,2026-03-29,11
+Ananya Joshi,2023PE2936,Higher Engineering Mathematics - Edition 3,2026-01-25,2026-02-05,0
+Sanya Nair,2022PE9965,Higher Engineering Mathematics - Edition 2,2026-02-03,2026-02-14,0
+Sanya Nair,2022PE9965,Web Technologies - Edition 2,2026-01-29,2026-02-15,3
+Sanya Nair,2022PE9965,Higher Engineering Mathematics - Edition 4,2026-02-08,2026-02-28,6
+Sanya Nair,2022PE9965,Microprocessor Architecture - Edition 4,2026-01-18,2026-01-24,0
+Rohan Patil,2022PE9449,Digital Design - Edition 2,2026-03-08,2026-04-02,11
+Rohan Patil,2022PE9449,Thermodynamics: An Engineering Approach - Edition 4,2026-02-14,2026-03-03,3
+Rohan Patil,2022PE9449,Digital Design - Edition 5,2026-02-17,2026-02-25,0
+Rohan Patil,2022PE9449,Software Engineering: A Practitioner's Approach - Edition 2,2026-03-16,2026-04-02,3
+Aditya Kulkarni,2023PE6885,Computer Networks - Edition 3,2026-02-01,2026-02-08,0
+Aditya Kulkarni,2023PE6885,Digital Design - Edition 1,2026-01-22,2026-01-28,0
+Aditya Kulkarni,2023PE6885,Database System Concepts - Edition 3,2026-02-11,2026-02-28,3
+Aditya Kulkarni,2023PE6885,Web Technologies - Edition 4,2026-03-09,2026-03-22,0
+Tanvi Sharma,2023PE4851,Signals and Systems - Edition 3,2026-01-19,2026-01-25,0
+Tanvi Sharma,2023PE4851,Artificial Intelligence: A Modern Approach - Edition 4,2026-03-03,2026-03-13,0
+Tanvi Sharma,2023PE4851,Database System Concepts - Edition 3,2026-01-13,2026-01-26,0
+Tanvi Sharma,2023PE4851,Automotive Mechanics - Edition 5,2026-01-13,2026-01-19,0
+Vihaan Iyer,2022PE7344,Theory of Machines - Edition 4,2026-03-02,2026-03-09,0
+Vihaan Iyer,2022PE7344,Digital Design - Edition 3,2026-01-28,2026-02-04,0
+Vihaan Iyer,2022PE7344,Introduction to Algorithms - Edition 1,2026-02-06,2026-02-11,0
+Vihaan Iyer,2022PE7344,Software Engineering: A Practitioner's Approach - Edition 2,2026-03-11,2026-03-29,4
+Arjun Kulkarni,2023PE2796,Digital Design - Edition 4,2026-02-07,2026-02-21,0
+Arjun Kulkarni,2023PE2796,VLSI Design - Edition 2,2026-03-02,2026-03-17,1
+Arjun Kulkarni,2023PE2796,Digital Design - Edition 3,2026-01-09,2026-01-27,4
+Arjun Kulkarni,2023PE2796,Introduction to Algorithms - Edition 1,2026-01-10,2026-01-18,0
+Arjun Iyer,2023PE2308,Microprocessor Architecture - Edition 1,2026-02-18,2026-02-23,0
+Arjun Iyer,2023PE2308,Operating System Concepts - Edition 3,2026-01-20,2026-02-02,0
+Arjun Iyer,2023PE2308,Digital Design - Edition 2,2026-03-13,2026-04-05,9
+Arjun Iyer,2023PE2308,Signals and Systems - Edition 5,2026-03-07,2026-03-21,0
+Aarav Iyer,2022PE5670,Automotive Mechanics - Edition 1,2026-01-17,2026-01-26,0
+Aarav Iyer,2022PE5670,VLSI Design - Edition 1,2026-03-02,2026-03-24,8
+Aarav Iyer,2022PE5670,VLSI Design - Edition 4,2026-03-13,2026-03-19,0
+Aarav Iyer,2022PE5670,Higher Engineering Mathematics - Edition 1,2026-02-20,2026-03-02,0
+Aditya Nair,2023PE7039,Computer Networks - Edition 4,2026-02-06,2026-02-18,0
+Aditya Nair,2023PE7039,Higher Engineering Mathematics - Edition 4,2026-03-12,2026-03-29,3
+Aditya Nair,2023PE7039,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-14,2026-03-07,7
+Aditya Nair,2023PE7039,VLSI Design - Edition 3,2026-02-25,2026-03-18,7
+Arjun Nair,2022PE8614,Operating System Concepts - Edition 3,2026-02-05,2026-02-23,4
+Arjun Nair,2022PE8614,Web Technologies - Edition 4,2026-03-14,2026-04-03,6
+Arjun Nair,2022PE8614,Operating System Concepts - Edition 2,2026-03-05,2026-03-25,6
+Arjun Nair,2022PE8614,Microprocessor Architecture - Edition 4,2026-02-28,2026-03-09,0
+Arjun Sharma,2023PE5083,Database System Concepts - Edition 3,2026-03-08,2026-03-25,3
+Arjun Sharma,2023PE5083,VLSI Design - Edition 2,2026-02-23,2026-03-16,7
+Arjun Sharma,2023PE5083,Software Engineering: A Practitioner's Approach - Edition 1,2026-02-19,2026-03-15,10
+Arjun Sharma,2023PE5083,Theory of Machines - Edition 4,2026-02-08,2026-02-21,0
+Kiara Kulkarni,2022PE1014,Web Technologies - Edition 5,2026-01-06,2026-01-22,2
+Kiara Kulkarni,2022PE1014,Higher Engineering Mathematics - Edition 1,2026-03-16,2026-03-25,0
+Kiara Kulkarni,2022PE1014,Digital Design - Edition 4,2026-01-20,2026-01-28,0
+Kiara Kulkarni,2022PE1014,Web Technologies - Edition 1,2026-02-06,2026-02-14,0
+Arjun Verma,2022PE9624,Digital Design - Edition 4,2026-03-05,2026-03-26,7
+Arjun Verma,2022PE9624,VLSI Design - Edition 1,2026-01-20,2026-02-14,11
+Arjun Verma,2022PE9624,Digital Design - Edition 2,2026-01-23,2026-02-01,0
+Arjun Verma,2022PE9624,Signals and Systems - Edition 2,2026-02-17,2026-02-22,0
+Ananya Sharma,2023PE5914,Artificial Intelligence: A Modern Approach - Edition 4,2026-03-09,2026-03-30,7
+Ananya Sharma,2023PE5914,Thermodynamics: An Engineering Approach - Edition 3,2026-01-19,2026-01-28,0
+Ananya Sharma,2023PE5914,Web Technologies - Edition 5,2026-01-24,2026-02-03,0
+Ananya Sharma,2023PE5914,Computer Networks - Edition 2,2026-02-14,2026-03-04,4
+Arjun Patil,2023PE2411,Web Technologies - Edition 5,2026-02-02,2026-02-25,9
+Arjun Patil,2023PE2411,Artificial Intelligence: A Modern Approach - Edition 5,2026-02-01,2026-02-26,11
+Arjun Patil,2023PE2411,Microprocessor Architecture - Edition 4,2026-02-12,2026-03-04,6
+Arjun Patil,2023PE2411,Digital Design - Edition 4,2026-01-23,2026-02-02,0
+Tanvi Kulkarni,2022PE7355,Operating System Concepts - Edition 1,2026-02-25,2026-03-08,0
+Tanvi Kulkarni,2022PE7355,VLSI Design - Edition 4,2026-03-01,2026-03-20,5
+Tanvi Kulkarni,2022PE7355,Operating System Concepts - Edition 3,2026-02-02,2026-02-14,0
+Tanvi Kulkarni,2022PE7355,Theory of Machines - Edition 5,2026-02-06,2026-03-01,9
+Kiara Deshmukh,2023PE1111,Introduction to Algorithms - Edition 5,2026-03-10,2026-03-19,0
+Kiara Deshmukh,2023PE1111,Higher Engineering Mathematics - Edition 5,2026-01-09,2026-01-14,0
+Kiara Deshmukh,2023PE1111,Web Technologies - Edition 5,2026-01-17,2026-01-28,0
+Kiara Deshmukh,2023PE1111,Web Technologies - Edition 5,2026-01-13,2026-01-24,0
+Aditya Iyer,2023PE6844,Signals and Systems - Edition 4,2026-03-16,2026-03-23,0
+Aditya Iyer,2023PE6844,Web Technologies - Edition 3,2026-01-22,2026-02-11,6
+Aditya Iyer,2023PE6844,Computer Networks - Edition 3,2026-02-14,2026-03-03,3
+Aditya Iyer,2023PE6844,Higher Engineering Mathematics - Edition 3,2026-01-07,2026-01-12,0
+Kiara Nair,2022PE3186,Artificial Intelligence: A Modern Approach - Edition 5,2026-01-15,2026-01-29,0
+Kiara Nair,2022PE3186,Theory of Machines - Edition 1,2026-01-20,2026-01-27,0
+Kiara Nair,2022PE3186,Signals and Systems - Edition 5,2026-01-07,2026-01-17,0
+Kiara Nair,2022PE3186,Database System Concepts - Edition 1,2026-01-25,2026-02-05,0
+Vihaan Sharma,2023PE7411,Automotive Mechanics - Edition 5,2026-02-15,2026-02-20,0
+Vihaan Sharma,2023PE7411,VLSI Design - Edition 1,2026-02-25,2026-03-17,6
+Vihaan Sharma,2023PE7411,Digital Design - Edition 3,2026-02-15,2026-03-07,6
+Vihaan Sharma,2023PE7411,VLSI Design - Edition 4,2026-02-14,2026-03-05,5
+Ananya Patil,2022PE1198,Theory of Machines - Edition 3,2026-01-29,2026-02-11,0
+Ananya Patil,2022PE1198,Signals and Systems - Edition 3,2026-02-17,2026-02-28,0
+Ananya Patil,2022PE1198,Automotive Mechanics - Edition 1,2026-02-27,2026-03-20,7
+Ananya Patil,2022PE1198,Computer Networks - Edition 2,2026-02-23,2026-03-05,0
+Arjun Joshi,2022PE6408,VLSI Design - Edition 1,2026-03-05,2026-03-22,3
+Arjun Joshi,2022PE6408,VLSI Design - Edition 5,2026-02-04,2026-02-28,10
+Arjun Joshi,2022PE6408,Higher Engineering Mathematics - Edition 4,2026-01-10,2026-01-30,6
+Arjun Joshi,2022PE6408,Introduction to Algorithms - Edition 1,2026-03-01,2026-03-17,2
+Vihaan Nair,2022PE2180,Automotive Mechanics - Edition 4,2026-03-10,2026-03-26,2
+Vihaan Nair,2022PE2180,Database System Concepts - Edition 1,2026-02-18,2026-02-23,0
+Vihaan Nair,2022PE2180,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-08,2026-01-20,0
+Vihaan Nair,2022PE2180,Operating System Concepts - Edition 5,2026-02-08,2026-02-25,3
+Sanya Deshmukh,2023PE7261,Database System Concepts - Edition 2,2026-02-26,2026-03-17,5
+Sanya Deshmukh,2023PE7261,Software Engineering: A Practitioner's Approach - Edition 1,2026-02-19,2026-03-04,0
+Sanya Deshmukh,2023PE7261,Introduction to Algorithms - Edition 3,2026-01-09,2026-01-17,0
+Sanya Deshmukh,2023PE7261,Operating System Concepts - Edition 3,2026-03-09,2026-03-27,4
+Vihaan Patil,2023PE6482,Digital Design - Edition 4,2026-01-17,2026-02-08,8
+Vihaan Patil,2023PE6482,Artificial Intelligence: A Modern Approach - Edition 4,2026-02-13,2026-02-25,0
+Vihaan Patil,2023PE6482,Web Technologies - Edition 5,2026-02-01,2026-02-22,7
+Vihaan Patil,2023PE6482,Signals and Systems - Edition 3,2026-03-09,2026-03-18,0
+Kiara Joshi,2023PE5712,Software Engineering: A Practitioner's Approach - Edition 3,2026-03-05,2026-03-27,8
+Kiara Joshi,2023PE5712,Introduction to Algorithms - Edition 2,2026-02-08,2026-03-02,8
+Kiara Joshi,2023PE5712,VLSI Design - Edition 1,2026-03-04,2026-03-18,0
+Kiara Joshi,2023PE5712,Artificial Intelligence: A Modern Approach - Edition 5,2026-01-21,2026-02-07,3
+Vihaan Sharma,2023PE2899,Operating System Concepts - Edition 2,2026-01-29,2026-02-22,10
+Vihaan Sharma,2023PE2899,Artificial Intelligence: A Modern Approach - Edition 4,2026-03-01,2026-03-25,10
+Vihaan Sharma,2023PE2899,Operating System Concepts - Edition 2,2026-02-20,2026-02-25,0
+Vihaan Sharma,2023PE2899,Web Technologies - Edition 5,2026-01-18,2026-02-03,2
+Sanya Joshi,2023PE1698,Web Technologies - Edition 5,2026-01-20,2026-01-31,0
+Sanya Joshi,2023PE1698,VLSI Design - Edition 3,2026-02-17,2026-03-08,5
+Sanya Joshi,2023PE1698,Software Engineering: A Practitioner's Approach - Edition 3,2026-01-25,2026-02-12,4
+Sanya Joshi,2023PE1698,Web Technologies - Edition 3,2026-01-17,2026-01-28,0
+Aarav Sharma,2023PE4835,Web Technologies - Edition 1,2026-02-19,2026-02-27,0
+Aarav Sharma,2023PE4835,Automotive Mechanics - Edition 2,2026-02-19,2026-02-28,0
+Aarav Sharma,2023PE4835,Thermodynamics: An Engineering Approach - Edition 2,2026-03-05,2026-03-25,6
+Aarav Sharma,2023PE4835,Software Engineering: A Practitioner's Approach - Edition 5,2026-02-10,2026-02-15,0
+Vihaan Iyer,2022PE7915,Computer Networks - Edition 3,2026-03-08,2026-03-24,2
+Vihaan Iyer,2022PE7915,Microprocessor Architecture - Edition 1,2026-01-06,2026-01-24,4
+Vihaan Iyer,2022PE7915,Software Engineering: A Practitioner's Approach - Edition 2,2026-03-05,2026-03-20,1
+Vihaan Iyer,2022PE7915,Thermodynamics: An Engineering Approach - Edition 5,2026-02-25,2026-03-22,11
+Isha Kulkarni,2022PE5829,Computer Networks - Edition 2,2026-02-23,2026-02-28,0
+Isha Kulkarni,2022PE5829,Signals and Systems - Edition 2,2026-01-16,2026-02-05,6
+Isha Kulkarni,2022PE5829,VLSI Design - Edition 1,2026-03-06,2026-03-11,0
+Isha Kulkarni,2022PE5829,Theory of Machines - Edition 1,2026-01-08,2026-01-19,0
+Vihaan Patil,2023PE7612,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-24,2026-02-04,0
+Vihaan Patil,2023PE7612,Operating System Concepts - Edition 4,2026-02-18,2026-03-07,3
+Vihaan Patil,2023PE7612,VLSI Design - Edition 2,2026-02-06,2026-02-24,4
+Vihaan Patil,2023PE7612,Web Technologies - Edition 3,2026-01-07,2026-01-17,0
+Kiara Sharma,2022PE6681,Automotive Mechanics - Edition 1,2026-03-01,2026-03-11,0
+Kiara Sharma,2022PE6681,Theory of Machines - Edition 3,2026-01-11,2026-01-21,0
+Kiara Sharma,2022PE6681,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-07,2026-02-12,0
+Kiara Sharma,2022PE6681,Automotive Mechanics - Edition 3,2026-02-21,2026-03-05,0
+Sanya Kulkarni,2022PE1521,Software Engineering: A Practitioner's Approach - Edition 1,2026-02-19,2026-03-16,11
+Sanya Kulkarni,2022PE1521,Operating System Concepts - Edition 2,2026-02-25,2026-03-17,6
+Sanya Kulkarni,2022PE1521,Software Engineering: A Practitioner's Approach - Edition 4,2026-01-05,2026-01-29,10
+Sanya Kulkarni,2022PE1521,VLSI Design - Edition 4,2026-02-21,2026-02-26,0
+Vihaan Sharma,2022PE4204,Thermodynamics: An Engineering Approach - Edition 2,2026-02-07,2026-02-25,4
+Vihaan Sharma,2022PE4204,Operating System Concepts - Edition 5,2026-02-24,2026-03-21,11
+Vihaan Sharma,2022PE4204,Operating System Concepts - Edition 3,2026-02-01,2026-02-24,9
+Vihaan Sharma,2022PE4204,Thermodynamics: An Engineering Approach - Edition 4,2026-02-05,2026-02-10,0
+Isha Verma,2022PE7018,VLSI Design - Edition 2,2026-03-09,2026-03-26,3
+Isha Verma,2022PE7018,Artificial Intelligence: A Modern Approach - Edition 5,2026-03-16,2026-03-24,0
+Isha Verma,2022PE7018,Automotive Mechanics - Edition 1,2026-02-26,2026-03-12,0
+Isha Verma,2022PE7018,Computer Networks - Edition 5,2026-03-10,2026-03-23,0
+Isha Patil,2023PE4618,Automotive Mechanics - Edition 4,2026-02-20,2026-03-11,5
+Isha Patil,2023PE4618,Database System Concepts - Edition 2,2026-01-20,2026-02-11,8
+Isha Patil,2023PE4618,Digital Design - Edition 5,2026-02-03,2026-02-16,0
+Isha Patil,2023PE4618,Software Engineering: A Practitioner's Approach - Edition 5,2026-03-04,2026-03-21,3
+Isha Verma,2022PE8957,Digital Design - Edition 4,2026-02-28,2026-03-20,6
+Isha Verma,2022PE8957,Database System Concepts - Edition 3,2026-02-15,2026-02-21,0
+Isha Verma,2022PE8957,Theory of Machines - Edition 5,2026-02-02,2026-02-17,1
+Isha Verma,2022PE8957,Digital Design - Edition 5,2026-02-23,2026-03-13,4
+Vihaan Joshi,2022PE4795,Artificial Intelligence: A Modern Approach - Edition 2,2026-01-29,2026-02-21,9
+Vihaan Joshi,2022PE4795,Automotive Mechanics - Edition 4,2026-03-10,2026-04-02,9
+Vihaan Joshi,2022PE4795,Introduction to Algorithms - Edition 4,2026-02-24,2026-03-19,9
+Vihaan Joshi,2022PE4795,Higher Engineering Mathematics - Edition 3,2026-01-30,2026-02-13,0
+Isha Deshmukh,2023PE4238,Database System Concepts - Edition 3,2026-01-31,2026-02-25,11
+Isha Deshmukh,2023PE4238,Higher Engineering Mathematics - Edition 2,2026-02-20,2026-02-28,0
+Isha Deshmukh,2023PE4238,Database System Concepts - Edition 2,2026-02-16,2026-02-22,0
+Isha Deshmukh,2023PE4238,Digital Design - Edition 3,2026-02-07,2026-02-18,0
+Arjun Nair,2023PE7822,Thermodynamics: An Engineering Approach - Edition 5,2026-01-08,2026-01-25,3
+Arjun Nair,2023PE7822,Digital Design - Edition 5,2026-02-14,2026-03-02,2
+Arjun Nair,2023PE7822,Theory of Machines - Edition 2,2026-02-18,2026-03-08,4
+Arjun Nair,2023PE7822,Thermodynamics: An Engineering Approach - Edition 2,2026-01-07,2026-01-20,0
+Arjun Kulkarni,2023PE5964,Automotive Mechanics - Edition 4,2026-03-07,2026-03-21,0
+Arjun Kulkarni,2023PE5964,Computer Networks - Edition 1,2026-03-12,2026-03-30,4
+Arjun Kulkarni,2023PE5964,VLSI Design - Edition 4,2026-01-09,2026-01-26,3
+Arjun Kulkarni,2023PE5964,Higher Engineering Mathematics - Edition 4,2026-01-13,2026-01-25,0
+Aarav Joshi,2023PE8683,Operating System Concepts - Edition 4,2026-01-18,2026-01-26,0
+Aarav Joshi,2023PE8683,Operating System Concepts - Edition 3,2026-01-09,2026-02-02,10
+Aarav Joshi,2023PE8683,Signals and Systems - Edition 2,2026-02-24,2026-03-19,9
+Aarav Joshi,2023PE8683,Microprocessor Architecture - Edition 1,2026-02-22,2026-03-02,0
+Vihaan Joshi,2023PE3896,Microprocessor Architecture - Edition 1,2026-03-13,2026-04-05,9
+Vihaan Joshi,2023PE3896,Web Technologies - Edition 2,2026-02-16,2026-02-27,0
+Vihaan Joshi,2023PE3896,Signals and Systems - Edition 5,2026-02-20,2026-03-15,9
+Vihaan Joshi,2023PE3896,Introduction to Algorithms - Edition 4,2026-02-05,2026-02-12,0
+Kiara Kulkarni,2023PE4268,Automotive Mechanics - Edition 5,2026-02-03,2026-02-24,7
+Kiara Kulkarni,2023PE4268,Introduction to Algorithms - Edition 4,2026-01-30,2026-02-04,0
+Kiara Kulkarni,2023PE4268,Signals and Systems - Edition 2,2026-01-15,2026-01-29,0
+Kiara Kulkarni,2023PE4268,Artificial Intelligence: A Modern Approach - Edition 2,2026-01-13,2026-01-18,0
+Aditya Sharma,2023PE2177,Digital Design - Edition 4,2026-03-04,2026-03-14,0
+Aditya Sharma,2023PE2177,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-10,2026-03-28,4
+Aditya Sharma,2023PE2177,Theory of Machines - Edition 4,2026-02-28,2026-03-23,9
+Aditya Sharma,2023PE2177,Automotive Mechanics - Edition 1,2026-02-26,2026-03-06,0
+Tanvi Patil,2023PE4718,Automotive Mechanics - Edition 3,2026-03-02,2026-03-17,1
+Tanvi Patil,2023PE4718,Database System Concepts - Edition 5,2026-02-06,2026-02-23,3
+Tanvi Patil,2023PE4718,Digital Design - Edition 1,2026-03-05,2026-03-27,8
+Tanvi Patil,2023PE4718,Introduction to Algorithms - Edition 5,2026-01-15,2026-01-27,0
+Vihaan Patil,2022PE3935,Higher Engineering Mathematics - Edition 3,2026-01-06,2026-01-30,10
+Vihaan Patil,2022PE3935,Thermodynamics: An Engineering Approach - Edition 5,2026-01-20,2026-01-31,0
+Vihaan Patil,2022PE3935,Computer Networks - Edition 3,2026-03-10,2026-03-24,0
+Vihaan Patil,2022PE3935,VLSI Design - Edition 3,2026-01-06,2026-01-25,5
+Arjun Patil,2022PE2323,Artificial Intelligence: A Modern Approach - Edition 3,2026-01-22,2026-02-14,9
+Arjun Patil,2022PE2323,Computer Networks - Edition 2,2026-03-14,2026-03-25,0
+Arjun Patil,2022PE2323,Microprocessor Architecture - Edition 4,2026-03-07,2026-03-13,0
+Arjun Patil,2022PE2323,Computer Networks - Edition 4,2026-01-21,2026-02-01,0
+Isha Verma,2023PE7237,Operating System Concepts - Edition 1,2026-02-13,2026-03-10,11
+Isha Verma,2023PE7237,Artificial Intelligence: A Modern Approach - Edition 1,2026-02-10,2026-02-15,0
+Isha Verma,2023PE7237,Database System Concepts - Edition 1,2026-03-13,2026-03-22,0
+Isha Verma,2023PE7237,Theory of Machines - Edition 5,2026-02-24,2026-03-16,6
+Aditya Patil,2023PE6684,Database System Concepts - Edition 2,2026-01-25,2026-02-06,0
+Aditya Patil,2023PE6684,Automotive Mechanics - Edition 3,2026-01-30,2026-02-10,0
+Aditya Patil,2023PE6684,Thermodynamics: An Engineering Approach - Edition 2,2026-03-01,2026-03-24,9
+Aditya Patil,2023PE6684,Operating System Concepts - Edition 4,2026-03-06,2026-03-22,2
+Rohan Kulkarni,2023PE4025,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-08,2026-02-24,2
+Rohan Kulkarni,2023PE4025,Operating System Concepts - Edition 3,2026-02-23,2026-03-18,9
+Rohan Kulkarni,2023PE4025,Digital Design - Edition 4,2026-01-10,2026-01-30,6
+Rohan Kulkarni,2023PE4025,Automotive Mechanics - Edition 2,2026-01-12,2026-01-24,0
+Tanvi Sharma,2022PE3570,Computer Networks - Edition 5,2026-02-16,2026-02-28,0
+Tanvi Sharma,2022PE3570,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-04,2026-03-29,11
+Tanvi Sharma,2022PE3570,VLSI Design - Edition 2,2026-01-15,2026-01-30,1
+Tanvi Sharma,2022PE3570,Theory of Machines - Edition 3,2026-01-10,2026-01-24,0
+Arjun Kulkarni,2022PE8647,Software Engineering: A Practitioner's Approach - Edition 3,2026-01-23,2026-01-28,0
+Arjun Kulkarni,2022PE8647,Introduction to Algorithms - Edition 5,2026-02-04,2026-02-11,0
+Arjun Kulkarni,2022PE8647,Artificial Intelligence: A Modern Approach - Edition 5,2026-03-16,2026-04-09,10
+Arjun Kulkarni,2022PE8647,VLSI Design - Edition 2,2026-03-16,2026-04-09,10
+Vihaan Nair,2023PE6517,Digital Design - Edition 5,2026-01-27,2026-02-14,4
+Vihaan Nair,2023PE6517,Web Technologies - Edition 5,2026-01-17,2026-02-11,11
+Vihaan Nair,2023PE6517,Web Technologies - Edition 4,2026-03-03,2026-03-10,0
+Vihaan Nair,2023PE6517,Digital Design - Edition 3,2026-02-04,2026-02-15,0
+Isha Iyer,2023PE6525,Artificial Intelligence: A Modern Approach - Edition 5,2026-03-06,2026-03-23,3
+Isha Iyer,2023PE6525,Database System Concepts - Edition 4,2026-01-15,2026-01-28,0
+Isha Iyer,2023PE6525,Higher Engineering Mathematics - Edition 5,2026-03-03,2026-03-15,0
+Isha Iyer,2023PE6525,Automotive Mechanics - Edition 3,2026-03-13,2026-04-05,9
+Ananya Kulkarni,2022PE7190,Theory of Machines - Edition 5,2026-02-15,2026-03-07,6
+Ananya Kulkarni,2022PE7190,Theory of Machines - Edition 2,2026-01-17,2026-01-22,0
+Ananya Kulkarni,2022PE7190,Digital Design - Edition 1,2026-01-14,2026-01-31,3
+Ananya Kulkarni,2022PE7190,Introduction to Algorithms - Edition 5,2026-01-06,2026-01-14,0
+Tanvi Iyer,2023PE1547,Digital Design - Edition 4,2026-01-12,2026-01-28,2
+Tanvi Iyer,2023PE1547,VLSI Design - Edition 1,2026-03-09,2026-03-25,2
+Tanvi Iyer,2023PE1547,Artificial Intelligence: A Modern Approach - Edition 3,2026-03-14,2026-03-21,0
+Tanvi Iyer,2023PE1547,VLSI Design - Edition 2,2026-02-02,2026-02-18,2
+Ananya Patil,2023PE3893,Computer Networks - Edition 4,2026-02-17,2026-03-06,3
+Ananya Patil,2023PE3893,Digital Design - Edition 3,2026-01-20,2026-02-09,6
+Ananya Patil,2023PE3893,Higher Engineering Mathematics - Edition 2,2026-03-16,2026-03-22,0
+Ananya Patil,2023PE3893,VLSI Design - Edition 3,2026-02-25,2026-03-07,0
+Aarav Nair,2023PE5477,Introduction to Algorithms - Edition 2,2026-02-26,2026-03-08,0
+Aarav Nair,2023PE5477,Database System Concepts - Edition 1,2026-01-09,2026-02-03,11
+Aarav Nair,2023PE5477,Database System Concepts - Edition 3,2026-02-26,2026-03-03,0
+Aarav Nair,2023PE5477,Computer Networks - Edition 1,2026-03-07,2026-03-20,0
+Aarav Patil,2023PE4014,VLSI Design - Edition 3,2026-02-26,2026-03-14,2
+Aarav Patil,2023PE4014,Automotive Mechanics - Edition 2,2026-02-06,2026-02-24,4
+Aarav Patil,2023PE4014,Operating System Concepts - Edition 3,2026-01-13,2026-01-30,3
+Aarav Patil,2023PE4014,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-07,2026-01-22,1
+Kiara Joshi,2023PE3390,Software Engineering: A Practitioner's Approach - Edition 2,2026-03-15,2026-03-22,0
+Kiara Joshi,2023PE3390,VLSI Design - Edition 2,2026-01-26,2026-02-04,0
+Kiara Joshi,2023PE3390,Software Engineering: A Practitioner's Approach - Edition 4,2026-03-06,2026-03-12,0
+Kiara Joshi,2023PE3390,Artificial Intelligence: A Modern Approach - Edition 5,2026-01-07,2026-01-16,0
+Isha Deshmukh,2023PE3601,Operating System Concepts - Edition 5,2026-01-29,2026-02-19,7
+Isha Deshmukh,2023PE3601,Signals and Systems - Edition 3,2026-03-10,2026-03-28,4
+Isha Deshmukh,2023PE3601,Software Engineering: A Practitioner's Approach - Edition 5,2026-01-17,2026-01-23,0
+Isha Deshmukh,2023PE3601,Higher Engineering Mathematics - Edition 1,2026-03-13,2026-03-30,3
+Aditya Deshmukh,2023PE1398,Computer Networks - Edition 4,2026-02-17,2026-03-14,11
+Aditya Deshmukh,2023PE1398,Web Technologies - Edition 2,2026-03-15,2026-04-05,7
+Aditya Deshmukh,2023PE1398,Software Engineering: A Practitioner's Approach - Edition 5,2026-02-23,2026-03-14,5
+Aditya Deshmukh,2023PE1398,VLSI Design - Edition 5,2026-03-15,2026-03-24,0
+Tanvi Kulkarni,2023PE4987,Theory of Machines - Edition 1,2026-02-14,2026-02-24,0
+Tanvi Kulkarni,2023PE4987,Automotive Mechanics - Edition 5,2026-03-06,2026-03-19,0
+Tanvi Kulkarni,2023PE4987,Operating System Concepts - Edition 4,2026-03-13,2026-03-28,1
+Tanvi Kulkarni,2023PE4987,Web Technologies - Edition 2,2026-03-03,2026-03-14,0
+Arjun Iyer,2022PE1640,Software Engineering: A Practitioner's Approach - Edition 2,2026-01-11,2026-01-25,0
+Arjun Iyer,2022PE1640,Web Technologies - Edition 3,2026-01-07,2026-01-22,1
+Arjun Iyer,2022PE1640,Artificial Intelligence: A Modern Approach - Edition 4,2026-01-08,2026-01-26,4
+Arjun Iyer,2022PE1640,Database System Concepts - Edition 1,2026-01-13,2026-01-21,0
+Sanya Joshi,2022PE1120,Signals and Systems - Edition 2,2026-01-16,2026-02-07,8
+Sanya Joshi,2022PE1120,Microprocessor Architecture - Edition 2,2026-03-03,2026-03-17,0
+Sanya Joshi,2022PE1120,Theory of Machines - Edition 5,2026-02-02,2026-02-08,0
+Sanya Joshi,2022PE1120,Database System Concepts - Edition 3,2026-01-21,2026-02-12,8
+Aditya Patil,2022PE4964,Computer Networks - Edition 3,2026-02-25,2026-03-06,0
+Aditya Patil,2022PE4964,Digital Design - Edition 2,2026-03-01,2026-03-07,0
+Aditya Patil,2022PE4964,Digital Design - Edition 2,2026-02-16,2026-02-24,0
+Aditya Patil,2022PE4964,VLSI Design - Edition 1,2026-03-15,2026-04-01,3
+Rohan Nair,2023PE1348,Higher Engineering Mathematics - Edition 4,2026-02-09,2026-02-23,0
+Rohan Nair,2023PE1348,Automotive Mechanics - Edition 2,2026-01-24,2026-02-17,10
+Rohan Nair,2023PE1348,Database System Concepts - Edition 1,2026-03-11,2026-03-23,0
+Rohan Nair,2023PE1348,Higher Engineering Mathematics - Edition 5,2026-03-13,2026-03-28,1
+Kiara Sharma,2022PE9106,Computer Networks - Edition 1,2026-01-10,2026-01-30,6
+Kiara Sharma,2022PE9106,Operating System Concepts - Edition 5,2026-01-21,2026-02-07,3
+Kiara Sharma,2022PE9106,Signals and Systems - Edition 4,2026-03-13,2026-03-27,0
+Kiara Sharma,2022PE9106,Digital Design - Edition 4,2026-02-11,2026-03-08,11
+Kiara Kulkarni,2022PE3652,VLSI Design - Edition 1,2026-03-12,2026-03-19,0
+Kiara Kulkarni,2022PE3652,Signals and Systems - Edition 5,2026-01-10,2026-01-16,0
+Kiara Kulkarni,2022PE3652,Automotive Mechanics - Edition 5,2026-02-21,2026-03-03,0
+Kiara Kulkarni,2022PE3652,Introduction to Algorithms - Edition 5,2026-01-22,2026-01-31,0
+Aditya Iyer,2023PE7836,Web Technologies - Edition 1,2026-02-14,2026-02-19,0
+Aditya Iyer,2023PE7836,Microprocessor Architecture - Edition 4,2026-02-26,2026-03-09,0
+Aditya Iyer,2023PE7836,Signals and Systems - Edition 2,2026-01-23,2026-02-02,0
+Aditya Iyer,2023PE7836,Microprocessor Architecture - Edition 1,2026-02-13,2026-03-08,9
+Vihaan Verma,2023PE3728,VLSI Design - Edition 4,2026-02-21,2026-03-15,8
+Vihaan Verma,2023PE3728,Web Technologies - Edition 5,2026-01-14,2026-02-02,5
+Vihaan Verma,2023PE3728,VLSI Design - Edition 2,2026-01-06,2026-01-21,1
+Vihaan Verma,2023PE3728,Operating System Concepts - Edition 3,2026-03-02,2026-03-23,7
+Isha Kulkarni,2022PE1615,Introduction to Algorithms - Edition 2,2026-01-08,2026-01-19,0
+Isha Kulkarni,2022PE1615,Higher Engineering Mathematics - Edition 3,2026-02-01,2026-02-25,10
+Isha Kulkarni,2022PE1615,Thermodynamics: An Engineering Approach - Edition 4,2026-01-12,2026-01-17,0
+Isha Kulkarni,2022PE1615,VLSI Design - Edition 3,2026-01-23,2026-02-01,0
+Sanya Deshmukh,2023PE5613,Automotive Mechanics - Edition 1,2026-01-16,2026-02-08,9
+Sanya Deshmukh,2023PE5613,Operating System Concepts - Edition 3,2026-02-18,2026-03-10,6
+Sanya Deshmukh,2023PE5613,Automotive Mechanics - Edition 2,2026-02-27,2026-03-23,10
+Sanya Deshmukh,2023PE5613,VLSI Design - Edition 2,2026-01-29,2026-02-18,6
+Isha Kulkarni,2023PE2800,VLSI Design - Edition 4,2026-01-06,2026-01-13,0
+Isha Kulkarni,2023PE2800,Signals and Systems - Edition 1,2026-02-19,2026-03-08,3
+Isha Kulkarni,2023PE2800,Operating System Concepts - Edition 4,2026-02-12,2026-02-23,0
+Isha Kulkarni,2023PE2800,Artificial Intelligence: A Modern Approach - Edition 2,2026-02-27,2026-03-16,3
+Aarav Verma,2023PE7436,Thermodynamics: An Engineering Approach - Edition 3,2026-02-07,2026-02-17,0
+Aarav Verma,2023PE7436,VLSI Design - Edition 4,2026-03-06,2026-03-28,8
+Aarav Verma,2023PE7436,Theory of Machines - Edition 1,2026-03-15,2026-04-03,5
+Aarav Verma,2023PE7436,Digital Design - Edition 3,2026-03-15,2026-04-08,10
+Sanya Verma,2022PE9852,Artificial Intelligence: A Modern Approach - Edition 3,2026-03-15,2026-04-05,7
+Sanya Verma,2022PE9852,Signals and Systems - Edition 3,2026-01-21,2026-02-03,0
+Sanya Verma,2022PE9852,Introduction to Algorithms - Edition 3,2026-01-25,2026-02-16,8
+Sanya Verma,2022PE9852,VLSI Design - Edition 1,2026-03-10,2026-04-01,8
+Ananya Verma,2023PE9399,Signals and Systems - Edition 5,2026-02-11,2026-02-27,2
+Ananya Verma,2023PE9399,Computer Networks - Edition 1,2026-02-25,2026-03-08,0
+Ananya Verma,2023PE9399,Computer Networks - Edition 3,2026-02-19,2026-03-11,6
+Ananya Verma,2023PE9399,Computer Networks - Edition 5,2026-02-16,2026-03-12,10
+Vihaan Verma,2023PE5357,Theory of Machines - Edition 1,2026-01-27,2026-02-18,8
+Vihaan Verma,2023PE5357,Operating System Concepts - Edition 1,2026-01-22,2026-02-01,0
+Vihaan Verma,2023PE5357,Digital Design - Edition 4,2026-02-07,2026-02-17,0
+Vihaan Verma,2023PE5357,Artificial Intelligence: A Modern Approach - Edition 1,2026-02-15,2026-03-09,8
+Rohan Deshmukh,2023PE3463,Higher Engineering Mathematics - Edition 3,2026-03-14,2026-03-27,0
+Rohan Deshmukh,2023PE3463,Artificial Intelligence: A Modern Approach - Edition 4,2026-02-11,2026-03-04,7
+Rohan Deshmukh,2023PE3463,Operating System Concepts - Edition 5,2026-02-02,2026-02-17,1
+Rohan Deshmukh,2023PE3463,Artificial Intelligence: A Modern Approach - Edition 3,2026-01-17,2026-01-31,0
+Kiara Joshi,2022PE5746,Artificial Intelligence: A Modern Approach - Edition 5,2026-01-05,2026-01-28,9
+Kiara Joshi,2022PE5746,Introduction to Algorithms - Edition 5,2026-01-16,2026-01-27,0
+Kiara Joshi,2022PE5746,Computer Networks - Edition 1,2026-01-15,2026-02-06,8
+Kiara Joshi,2022PE5746,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-16,2026-03-24,0
+Kiara Deshmukh,2022PE9294,Thermodynamics: An Engineering Approach - Edition 1,2026-01-22,2026-02-08,3
+Kiara Deshmukh,2022PE9294,Signals and Systems - Edition 4,2026-02-11,2026-03-03,6
+Kiara Deshmukh,2022PE9294,Computer Networks - Edition 5,2026-01-07,2026-01-25,4
+Kiara Deshmukh,2022PE9294,Web Technologies - Edition 4,2026-03-12,2026-03-20,0
+Aarav Sharma,2023PE3480,Thermodynamics: An Engineering Approach - Edition 5,2026-01-30,2026-02-18,5
+Aarav Sharma,2023PE3480,Microprocessor Architecture - Edition 4,2026-02-21,2026-03-07,0
+Aarav Sharma,2023PE3480,Software Engineering: A Practitioner's Approach - Edition 3,2026-01-15,2026-02-07,9
+Aarav Sharma,2023PE3480,Introduction to Algorithms - Edition 2,2026-02-22,2026-03-10,2
+Tanvi Verma,2023PE7752,Artificial Intelligence: A Modern Approach - Edition 3,2026-01-20,2026-02-04,1
+Tanvi Verma,2023PE7752,Digital Design - Edition 1,2026-03-05,2026-03-24,5
+Tanvi Verma,2023PE7752,Web Technologies - Edition 5,2026-01-23,2026-02-14,8
+Tanvi Verma,2023PE7752,Digital Design - Edition 5,2026-02-06,2026-03-01,9
+Rohan Kulkarni,2022PE9427,Digital Design - Edition 5,2026-03-14,2026-03-31,3
+Rohan Kulkarni,2022PE9427,Theory of Machines - Edition 4,2026-02-04,2026-02-10,0
+Rohan Kulkarni,2022PE9427,Higher Engineering Mathematics - Edition 4,2026-01-26,2026-02-16,7
+Rohan Kulkarni,2022PE9427,Thermodynamics: An Engineering Approach - Edition 5,2026-01-18,2026-02-03,2
+Aditya Nair,2022PE4155,Higher Engineering Mathematics - Edition 1,2026-01-13,2026-01-31,4
+Aditya Nair,2022PE4155,Higher Engineering Mathematics - Edition 5,2026-02-22,2026-03-15,7
+Aditya Nair,2022PE4155,Database System Concepts - Edition 1,2026-03-12,2026-04-03,8
+Aditya Nair,2022PE4155,VLSI Design - Edition 2,2026-02-16,2026-03-02,0
+Aditya Verma,2023PE3409,Operating System Concepts - Edition 2,2026-03-08,2026-03-25,3
+Aditya Verma,2023PE3409,Web Technologies - Edition 2,2026-01-15,2026-02-05,7
+Aditya Verma,2023PE3409,Artificial Intelligence: A Modern Approach - Edition 1,2026-03-05,2026-03-15,0
+Aditya Verma,2023PE3409,Introduction to Algorithms - Edition 1,2026-02-20,2026-03-15,9
+Tanvi Deshmukh,2023PE9215,Automotive Mechanics - Edition 4,2026-03-03,2026-03-15,0
+Tanvi Deshmukh,2023PE9215,Automotive Mechanics - Edition 4,2026-01-28,2026-02-05,0
+Tanvi Deshmukh,2023PE9215,Artificial Intelligence: A Modern Approach - Edition 1,2026-01-20,2026-02-03,0
+Tanvi Deshmukh,2023PE9215,Digital Design - Edition 2,2026-02-25,2026-03-09,0
+Aditya Patil,2022PE3454,Thermodynamics: An Engineering Approach - Edition 3,2026-02-21,2026-03-02,0
+Aditya Patil,2022PE3454,Software Engineering: A Practitioner's Approach - Edition 5,2026-03-14,2026-04-07,10
+Aditya Patil,2022PE3454,Operating System Concepts - Edition 5,2026-03-01,2026-03-19,4
+Aditya Patil,2022PE3454,Microprocessor Architecture - Edition 5,2026-03-13,2026-03-28,1
+Tanvi Kulkarni,2023PE1620,Thermodynamics: An Engineering Approach - Edition 5,2026-01-07,2026-01-20,0
+Tanvi Kulkarni,2023PE1620,Computer Networks - Edition 3,2026-02-21,2026-03-17,10
+Tanvi Kulkarni,2023PE1620,Web Technologies - Edition 4,2026-03-05,2026-03-14,0
+Tanvi Kulkarni,2023PE1620,Database System Concepts - Edition 1,2026-01-17,2026-01-23,0
+Ananya Verma,2023PE5662,Microprocessor Architecture - Edition 2,2026-02-16,2026-02-25,0
+Ananya Verma,2023PE5662,Operating System Concepts - Edition 4,2026-02-15,2026-03-05,4
+Ananya Verma,2023PE5662,Digital Design - Edition 5,2026-02-06,2026-02-18,0
+Ananya Verma,2023PE5662,Digital Design - Edition 5,2026-02-25,2026-03-11,0
+Tanvi Nair,2023PE9583,Web Technologies - Edition 2,2026-03-01,2026-03-13,0
+Tanvi Nair,2023PE9583,Software Engineering: A Practitioner's Approach - Edition 5,2026-03-16,2026-03-28,0
+Tanvi Nair,2023PE9583,Microprocessor Architecture - Edition 4,2026-01-27,2026-02-01,0
+Tanvi Nair,2023PE9583,VLSI Design - Edition 5,2026-02-24,2026-03-09,0
+Vihaan Kulkarni,2023PE7004,Web Technologies - Edition 2,2026-02-17,2026-02-26,0
+Vihaan Kulkarni,2023PE7004,VLSI Design - Edition 4,2026-03-02,2026-03-15,0
+Vihaan Kulkarni,2023PE7004,Database System Concepts - Edition 2,2026-02-03,2026-02-08,0
+Vihaan Kulkarni,2023PE7004,Higher Engineering Mathematics - Edition 3,2026-01-10,2026-01-22,0
+Ananya Joshi,2023PE4827,Software Engineering: A Practitioner's Approach - Edition 4,2026-02-10,2026-02-21,0
+Ananya Joshi,2023PE4827,Web Technologies - Edition 1,2026-01-23,2026-02-03,0
+Ananya Joshi,2023PE4827,VLSI Design - Edition 4,2026-01-15,2026-02-06,8
+Ananya Joshi,2023PE4827,Thermodynamics: An Engineering Approach - Edition 3,2026-03-09,2026-03-25,2
+Vihaan Patil,2023PE4954,Artificial Intelligence: A Modern Approach - Edition 2,2026-03-06,2026-03-15,0
+Vihaan Patil,2023PE4954,Theory of Machines - Edition 5,2026-03-08,2026-03-17,0
+Vihaan Patil,2023PE4954,Introduction to Algorithms - Edition 1,2026-02-20,2026-03-16,10
+Vihaan Patil,2023PE4954,Web Technologies - Edition 1,2026-02-03,2026-02-24,7
+Kiara Iyer,2023PE6141,Web Technologies - Edition 2,2026-01-09,2026-01-16,0
+Kiara Iyer,2023PE6141,Higher Engineering Mathematics - Edition 3,2026-01-27,2026-02-14,4
+Kiara Iyer,2023PE6141,Database System Concepts - Edition 4,2026-02-22,2026-03-02,0
+Kiara Iyer,2023PE6141,Signals and Systems - Edition 5,2026-02-05,2026-02-11,0
+Isha Joshi,2022PE2716,Higher Engineering Mathematics - Edition 2,2026-02-12,2026-03-05,7
+Isha Joshi,2022PE2716,Introduction to Algorithms - Edition 2,2026-02-06,2026-03-03,11
+Isha Joshi,2022PE2716,Operating System Concepts - Edition 4,2026-02-11,2026-03-07,10
+Isha Joshi,2022PE2716,Signals and Systems - Edition 1,2026-01-11,2026-01-17,0
+Sanya Deshmukh,2023PE8547,Thermodynamics: An Engineering Approach - Edition 1,2026-01-21,2026-01-27,0
+Sanya Deshmukh,2023PE8547,Introduction to Algorithms - Edition 4,2026-02-04,2026-02-11,0
+Sanya Deshmukh,2023PE8547,Automotive Mechanics - Edition 4,2026-02-16,2026-03-04,2
+Sanya Deshmukh,2023PE8547,Theory of Machines - Edition 4,2026-01-08,2026-01-14,0
+Isha Verma,2023PE5584,Introduction to Algorithms - Edition 4,2026-01-24,2026-02-05,0
+Isha Verma,2023PE5584,Software Engineering: A Practitioner's Approach - Edition 5,2026-01-30,2026-02-21,8
+Isha Verma,2023PE5584,Microprocessor Architecture - Edition 3,2026-01-28,2026-02-20,9
+Isha Verma,2023PE5584,Higher Engineering Mathematics - Edition 5,2026-02-21,2026-03-14,7
+Aditya Kulkarni,2023PE9261,Database System Concepts - Edition 4,2026-01-14,2026-02-02,5
+Aditya Kulkarni,2023PE9261,Microprocessor Architecture - Edition 4,2026-03-03,2026-03-23,6
+Aditya Kulkarni,2023PE9261,Microprocessor Architecture - Edition 2,2026-01-24,2026-02-01,0
+Aditya Kulkarni,2023PE9261,Digital Design - Edition 3,2026-01-29,2026-02-08,0
+Isha Nair,2022PE2632,Higher Engineering Mathematics - Edition 2,2026-03-04,2026-03-10,0
+Isha Nair,2022PE2632,Signals and Systems - Edition 2,2026-02-16,2026-03-07,5
+Isha Nair,2022PE2632,VLSI Design - Edition 2,2026-02-26,2026-03-06,0
+Isha Nair,2022PE2632,Software Engineering: A Practitioner's Approach - Edition 4,2026-03-08,2026-03-29,7
+Aditya Verma,2023PE2468,Web Technologies - Edition 1,2026-02-03,2026-02-24,7
+Aditya Verma,2023PE2468,Introduction to Algorithms - Edition 5,2026-02-10,2026-02-19,0
+Aditya Verma,2023PE2468,Software Engineering: A Practitioner's Approach - Edition 4,2026-03-07,2026-03-19,0
+Aditya Verma,2023PE2468,Web Technologies - Edition 1,2026-02-07,2026-03-01,8
+Sanya Verma,2022PE2955,Higher Engineering Mathematics - Edition 2,2026-02-27,2026-03-09,0
+Sanya Verma,2022PE2955,Digital Design - Edition 5,2026-01-09,2026-01-18,0
+Sanya Verma,2022PE2955,Theory of Machines - Edition 3,2026-02-25,2026-03-21,10
+Sanya Verma,2022PE2955,Signals and Systems - Edition 1,2026-01-12,2026-01-20,0
+Aditya Verma,2022PE5602,Microprocessor Architecture - Edition 3,2026-01-12,2026-01-19,0
+Aditya Verma,2022PE5602,Computer Networks - Edition 2,2026-02-22,2026-03-15,7
+Aditya Verma,2022PE5602,Web Technologies - Edition 1,2026-02-10,2026-02-26,2
+Aditya Verma,2022PE5602,Signals and Systems - Edition 4,2026-03-11,2026-04-05,11
+Arjun Sharma,2023PE9636,Artificial Intelligence: A Modern Approach - Edition 3,2026-03-02,2026-03-19,3
+Arjun Sharma,2023PE9636,Software Engineering: A Practitioner's Approach - Edition 3,2026-01-23,2026-02-09,3
+Arjun Sharma,2023PE9636,Theory of Machines - Edition 2,2026-01-18,2026-01-29,0
+Arjun Sharma,2023PE9636,Higher Engineering Mathematics - Edition 3,2026-01-24,2026-02-06,0
+Sanya Patil,2022PE8007,Software Engineering: A Practitioner's Approach - Edition 1,2026-01-22,2026-01-28,0
+Sanya Patil,2022PE8007,VLSI Design - Edition 1,2026-02-11,2026-02-22,0
+Sanya Patil,2022PE8007,Artificial Intelligence: A Modern Approach - Edition 5,2026-03-03,2026-03-10,0
+Sanya Patil,2022PE8007,Thermodynamics: An Engineering Approach - Edition 3,2026-01-06,2026-01-27,7
+Arjun Sharma,2022PE7783,Automotive Mechanics - Edition 4,2026-02-06,2026-02-13,0
+Arjun Sharma,2022PE7783,Thermodynamics: An Engineering Approach - Edition 4,2026-01-17,2026-02-10,10
+Arjun Sharma,2022PE7783,Introduction to Algorithms - Edition 1,2026-01-18,2026-02-10,9
+Arjun Sharma,2022PE7783,VLSI Design - Edition 5,2026-01-08,2026-01-18,0
+Aarav Kulkarni,2022PE9169,Artificial Intelligence: A Modern Approach - Edition 3,2026-02-21,2026-03-13,6
+Aarav Kulkarni,2022PE9169,Operating System Concepts - Edition 1,2026-01-19,2026-02-07,5
+Aarav Kulkarni,2022PE9169,Automotive Mechanics - Edition 1,2026-01-28,2026-02-13,2
+Aarav Kulkarni,2022PE9169,Web Technologies - Edition 4,2026-01-27,2026-02-09,0
+Aditya Patil,2022PE9480,Thermodynamics: An Engineering Approach - Edition 4,2026-02-05,2026-02-26,7
+Aditya Patil,2022PE9480,Signals and Systems - Edition 4,2026-03-13,2026-03-19,0
+Aditya Patil,2022PE9480,Database System Concepts - Edition 3,2026-01-26,2026-02-11,2
+Aditya Patil,2022PE9480,Digital Design - Edition 1,2026-02-01,2026-02-14,0
+Sanya Deshmukh,2022PE8437,Digital Design - Edition 4,2026-02-27,2026-03-15,2
+Sanya Deshmukh,2022PE8437,Signals and Systems - Edition 2,2026-03-12,2026-03-27,1
+Sanya Deshmukh,2022PE8437,Artificial Intelligence: A Modern Approach - Edition 5,2026-03-15,2026-04-09,11
+Sanya Deshmukh,2022PE8437,Digital Design - Edition 1,2026-02-14,2026-03-11,11
+Rohan Iyer,2022PE9253,Computer Networks - Edition 3,2026-01-23,2026-02-12,6
+Rohan Iyer,2022PE9253,Theory of Machines - Edition 1,2026-01-25,2026-02-09,1
+Rohan Iyer,2022PE9253,VLSI Design - Edition 3,2026-02-16,2026-03-03,1
+Rohan Iyer,2022PE9253,Signals and Systems - Edition 4,2026-03-07,2026-03-20,0
+Arjun Joshi,2022PE2443,Operating System Concepts - Edition 2,2026-02-06,2026-02-21,1
+Arjun Joshi,2022PE2443,Signals and Systems - Edition 4,2026-03-03,2026-03-16,0
+Arjun Joshi,2022PE2443,VLSI Design - Edition 5,2026-01-23,2026-02-05,0
+Arjun Joshi,2022PE2443,Web Technologies - Edition 3,2026-01-16,2026-01-28,0
+Aarav Verma,2023PE1969,Web Technologies - Edition 5,2026-01-15,2026-02-05,7
+Aarav Verma,2023PE1969,Web Technologies - Edition 5,2026-01-06,2026-01-11,0
+Aarav Verma,2023PE1969,Automotive Mechanics - Edition 1,2026-02-02,2026-02-17,1
+Aarav Verma,2023PE1969,Thermodynamics: An Engineering Approach - Edition 2,2026-02-27,2026-03-18,5
+Ananya Joshi,2022PE4452,Database System Concepts - Edition 5,2026-01-30,2026-02-11,0
+Ananya Joshi,2022PE4452,Software Engineering: A Practitioner's Approach - Edition 2,2026-03-03,2026-03-20,3
+Ananya Joshi,2022PE4452,Software Engineering: A Practitioner's Approach - Edition 1,2026-02-14,2026-02-24,0
+Ananya Joshi,2022PE4452,Microprocessor Architecture - Edition 3,2026-01-24,2026-02-10,3
+Aditya Kulkarni,2022PE4324,Operating System Concepts - Edition 1,2026-01-11,2026-01-21,0
+Aditya Kulkarni,2022PE4324,Artificial Intelligence: A Modern Approach - Edition 3,2026-03-07,2026-03-31,10
+Aditya Kulkarni,2022PE4324,Signals and Systems - Edition 5,2026-02-24,2026-03-02,0
+Aditya Kulkarni,2022PE4324,Computer Networks - Edition 5,2026-02-06,2026-02-15,0
+Ananya Patil,2023PE5636,Computer Networks - Edition 1,2026-03-09,2026-03-25,2
+Ananya Patil,2023PE5636,Database System Concepts - Edition 3,2026-03-15,2026-04-07,9
+Ananya Patil,2023PE5636,Thermodynamics: An Engineering Approach - Edition 2,2026-02-25,2026-03-11,0
+Ananya Patil,2023PE5636,Microprocessor Architecture - Edition 2,2026-03-11,2026-04-04,10
