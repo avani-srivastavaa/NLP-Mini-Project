@@ -1,0 +1,801 @@
+Student Name,Admission No.,Book Name,Date of Issue,Date of Return,Days Due
+Sanya Mehta,2022PE6850,Introduction to Algorithms,2026-01-03,2026-01-22,5
+Sanya Mehta,2022PE6850,Microprocessors,2026-02-17,2026-02-25,0
+Sanya Mehta,2022PE6850,Introduction to Algorithms,2026-01-19,2026-02-03,1
+Sanya Mehta,2022PE6850,Web Technologies,2026-02-18,2026-03-14,10
+Ananya Iyer,2022PE7680,Signals and Systems,2026-01-29,2026-02-19,7
+Ananya Iyer,2022PE7680,Signals and Systems,2026-02-16,2026-03-08,6
+Ananya Iyer,2022PE7680,IC Engines,2026-02-06,2026-02-27,7
+Ananya Iyer,2022PE7680,Thermodynamics,2026-02-20,2026-02-25,0
+Sanya Mehta,2023PE7157,Web Technologies,2026-01-30,2026-02-15,2
+Sanya Mehta,2023PE7157,IC Engines,2026-02-28,2026-03-14,0
+Sanya Mehta,2023PE7157,Machine Learning,2026-02-08,2026-02-16,0
+Sanya Mehta,2023PE7157,Web Technologies,2026-02-04,2026-02-26,8
+Ananya Iyer,2023PE8496,Machine Learning,2026-02-02,2026-02-16,0
+Ananya Iyer,2023PE8496,Thermodynamics,2026-02-05,2026-02-21,2
+Ananya Iyer,2023PE8496,Web Technologies,2026-02-05,2026-02-15,0
+Ananya Iyer,2023PE8496,IC Engines,2026-01-01,2026-01-23,8
+Arjun Nair,2023PE1956,Signals and Systems,2026-01-17,2026-02-05,5
+Arjun Nair,2023PE1956,IC Engines,2026-02-20,2026-03-04,0
+Arjun Nair,2023PE1956,Machine Learning,2026-01-27,2026-02-21,11
+Arjun Nair,2023PE1956,Machine Learning,2026-02-01,2026-02-19,4
+Vihaan Patil,2022PE7572,Thermodynamics,2026-02-24,2026-03-02,0
+Vihaan Patil,2022PE7572,Thermodynamics,2026-02-25,2026-03-18,7
+Vihaan Patil,2022PE7572,Thermodynamics,2026-01-21,2026-02-03,0
+Vihaan Patil,2022PE7572,Machine Learning,2026-01-17,2026-02-04,4
+Kiara Joshi,2023PE2691,IC Engines,2026-02-08,2026-03-03,9
+Kiara Joshi,2023PE2691,Microprocessors,2026-01-02,2026-01-15,0
+Kiara Joshi,2023PE2691,Machine Learning,2026-01-03,2026-01-25,8
+Kiara Joshi,2023PE2691,Signals and Systems,2026-02-19,2026-02-26,0
+Aarav Sharma,2022PE7248,Signals and Systems,2026-02-21,2026-03-08,1
+Aarav Sharma,2022PE7248,Microprocessors,2026-01-31,2026-02-19,5
+Aarav Sharma,2022PE7248,Web Technologies,2026-01-06,2026-01-27,7
+Aarav Sharma,2022PE7248,Machine Learning,2026-01-21,2026-02-08,4
+Aarav Sharma,2023PE8629,Machine Learning,2026-02-14,2026-03-04,4
+Aarav Sharma,2023PE8629,Thermodynamics,2026-01-27,2026-02-09,0
+Aarav Sharma,2023PE8629,Signals and Systems,2026-01-18,2026-02-01,0
+Aarav Sharma,2023PE8629,Machine Learning,2026-01-30,2026-02-19,6
+Kiara Joshi,2023PE1597,Microprocessors,2026-01-20,2026-02-05,2
+Kiara Joshi,2023PE1597,IC Engines,2026-01-16,2026-02-08,9
+Kiara Joshi,2023PE1597,Machine Learning,2026-01-03,2026-01-23,6
+Kiara Joshi,2023PE1597,Introduction to Algorithms,2026-01-29,2026-02-14,2
+Kiara Joshi,2022PE2487,Introduction to Algorithms,2026-01-19,2026-02-13,11
+Kiara Joshi,2022PE2487,Microprocessors,2026-02-10,2026-02-27,3
+Kiara Joshi,2022PE2487,Thermodynamics,2026-01-20,2026-02-14,11
+Kiara Joshi,2022PE2487,Signals and Systems,2026-02-27,2026-03-21,8
+Ananya Iyer,2022PE3979,Machine Learning,2026-02-11,2026-03-08,11
+Ananya Iyer,2022PE3979,Signals and Systems,2026-01-31,2026-02-08,0
+Ananya Iyer,2022PE3979,Web Technologies,2026-01-25,2026-02-12,4
+Ananya Iyer,2022PE3979,Signals and Systems,2026-01-30,2026-02-15,2
+Ananya Iyer,2023PE8513,Web Technologies,2026-01-20,2026-01-25,0
+Ananya Iyer,2023PE8513,Thermodynamics,2026-02-24,2026-03-03,0
+Ananya Iyer,2023PE8513,Microprocessors,2026-01-01,2026-01-13,0
+Ananya Iyer,2023PE8513,Introduction to Algorithms,2026-01-12,2026-02-04,9
+Sanya Mehta,2022PE7282,Thermodynamics,2026-01-04,2026-01-20,2
+Sanya Mehta,2022PE7282,Web Technologies,2026-01-01,2026-01-19,4
+Sanya Mehta,2022PE7282,Introduction to Algorithms,2026-01-12,2026-02-05,10
+Sanya Mehta,2022PE7282,Introduction to Algorithms,2026-02-02,2026-02-07,0
+Kiara Joshi,2023PE9636,Signals and Systems,2026-02-04,2026-02-10,0
+Kiara Joshi,2023PE9636,Machine Learning,2026-02-27,2026-03-22,9
+Kiara Joshi,2023PE9636,Thermodynamics,2026-01-01,2026-01-13,0
+Kiara Joshi,2023PE9636,Microprocessors,2026-02-14,2026-03-04,4
+Ananya Iyer,2022PE9998,Introduction to Algorithms,2026-01-15,2026-02-09,11
+Ananya Iyer,2022PE9998,IC Engines,2026-01-12,2026-01-25,0
+Ananya Iyer,2022PE9998,Microprocessors,2026-02-10,2026-02-21,0
+Ananya Iyer,2022PE9998,IC Engines,2026-02-12,2026-02-18,0
+Arjun Nair,2022PE7564,Web Technologies,2026-02-27,2026-03-13,0
+Arjun Nair,2022PE7564,Machine Learning,2026-03-02,2026-03-16,0
+Arjun Nair,2022PE7564,IC Engines,2026-01-19,2026-01-31,0
+Arjun Nair,2022PE7564,Signals and Systems,2026-02-08,2026-02-28,6
+Vihaan Patil,2022PE7318,IC Engines,2026-01-09,2026-02-02,10
+Vihaan Patil,2022PE7318,Thermodynamics,2026-01-09,2026-01-29,6
+Vihaan Patil,2022PE7318,Signals and Systems,2026-02-13,2026-02-20,0
+Vihaan Patil,2022PE7318,Machine Learning,2026-03-02,2026-03-27,11
+Rohan Verma,2023PE9408,Signals and Systems,2026-02-05,2026-02-20,1
+Rohan Verma,2023PE9408,Thermodynamics,2026-01-21,2026-02-08,4
+Rohan Verma,2023PE9408,Introduction to Algorithms,2026-02-04,2026-02-13,0
+Rohan Verma,2023PE9408,Machine Learning,2026-01-25,2026-02-16,8
+Sanya Mehta,2022PE9819,Microprocessors,2026-02-13,2026-02-24,0
+Sanya Mehta,2022PE9819,Introduction to Algorithms,2026-03-01,2026-03-17,2
+Sanya Mehta,2022PE9819,Thermodynamics,2026-01-12,2026-01-24,0
+Sanya Mehta,2022PE9819,Thermodynamics,2026-01-24,2026-02-03,0
+Vihaan Patil,2023PE9442,Thermodynamics,2026-02-22,2026-03-04,0
+Vihaan Patil,2023PE9442,Web Technologies,2026-01-28,2026-02-14,3
+Vihaan Patil,2023PE9442,Machine Learning,2026-01-03,2026-01-21,4
+Vihaan Patil,2023PE9442,Thermodynamics,2026-02-07,2026-02-16,0
+Vihaan Patil,2022PE5345,Web Technologies,2026-01-09,2026-01-24,1
+Vihaan Patil,2022PE5345,Thermodynamics,2026-03-01,2026-03-19,4
+Vihaan Patil,2022PE5345,Thermodynamics,2026-01-13,2026-01-19,0
+Vihaan Patil,2022PE5345,Introduction to Algorithms,2026-02-08,2026-02-17,0
+Aarav Sharma,2022PE5976,Microprocessors,2026-01-21,2026-01-26,0
+Aarav Sharma,2022PE5976,Signals and Systems,2026-03-02,2026-03-27,11
+Aarav Sharma,2022PE5976,Web Technologies,2026-02-20,2026-03-15,9
+Aarav Sharma,2022PE5976,IC Engines,2026-02-21,2026-03-07,0
+Sanya Mehta,2023PE3148,Introduction to Algorithms,2026-02-11,2026-02-24,0
+Sanya Mehta,2023PE3148,IC Engines,2026-02-28,2026-03-12,0
+Sanya Mehta,2023PE3148,Microprocessors,2026-03-01,2026-03-23,8
+Sanya Mehta,2023PE3148,Introduction to Algorithms,2026-01-05,2026-01-27,8
+Ananya Iyer,2023PE8169,IC Engines,2026-01-14,2026-01-31,3
+Ananya Iyer,2023PE8169,Signals and Systems,2026-01-26,2026-02-13,4
+Ananya Iyer,2023PE8169,Web Technologies,2026-01-24,2026-02-07,0
+Ananya Iyer,2023PE8169,Introduction to Algorithms,2026-01-07,2026-02-01,11
+Isha Deshmukh,2022PE6498,IC Engines,2026-01-29,2026-02-09,0
+Isha Deshmukh,2022PE6498,Web Technologies,2026-01-09,2026-01-17,0
+Isha Deshmukh,2022PE6498,Microprocessors,2026-01-22,2026-02-08,3
+Isha Deshmukh,2022PE6498,Web Technologies,2026-02-20,2026-03-02,0
+Isha Deshmukh,2023PE2107,IC Engines,2026-01-15,2026-02-08,10
+Isha Deshmukh,2023PE2107,Introduction to Algorithms,2026-01-12,2026-01-25,0
+Isha Deshmukh,2023PE2107,Introduction to Algorithms,2026-01-20,2026-02-04,1
+Isha Deshmukh,2023PE2107,Machine Learning,2026-01-02,2026-01-20,4
+Arjun Nair,2023PE5085,Microprocessors,2026-01-18,2026-01-31,0
+Arjun Nair,2023PE5085,IC Engines,2026-01-16,2026-01-31,1
+Arjun Nair,2023PE5085,Thermodynamics,2026-02-03,2026-02-24,7
+Arjun Nair,2023PE5085,Introduction to Algorithms,2026-01-30,2026-02-21,8
+Arjun Nair,2023PE9819,Microprocessors,2026-02-04,2026-02-22,4
+Arjun Nair,2023PE9819,Microprocessors,2026-02-19,2026-03-02,0
+Arjun Nair,2023PE9819,Web Technologies,2026-02-25,2026-03-06,0
+Arjun Nair,2023PE9819,Thermodynamics,2026-02-21,2026-03-18,11
+Ananya Iyer,2022PE4607,Machine Learning,2026-02-21,2026-03-06,0
+Ananya Iyer,2022PE4607,Signals and Systems,2026-02-08,2026-03-02,8
+Ananya Iyer,2022PE4607,Signals and Systems,2026-01-25,2026-02-04,0
+Ananya Iyer,2022PE4607,Web Technologies,2026-02-15,2026-03-11,10
+Aarav Sharma,2022PE7388,Introduction to Algorithms,2026-02-24,2026-03-20,10
+Aarav Sharma,2022PE7388,Introduction to Algorithms,2026-01-22,2026-02-13,8
+Aarav Sharma,2022PE7388,Machine Learning,2026-01-27,2026-02-17,7
+Aarav Sharma,2022PE7388,Signals and Systems,2026-01-23,2026-02-08,2
+Aarav Sharma,2022PE4177,Thermodynamics,2026-02-25,2026-03-13,2
+Aarav Sharma,2022PE4177,Introduction to Algorithms,2026-01-23,2026-02-02,0
+Aarav Sharma,2022PE4177,Thermodynamics,2026-01-30,2026-02-09,0
+Aarav Sharma,2022PE4177,IC Engines,2026-01-26,2026-02-08,0
+Arjun Nair,2022PE1341,Thermodynamics,2026-01-14,2026-01-21,0
+Arjun Nair,2022PE1341,Microprocessors,2026-01-14,2026-01-30,2
+Arjun Nair,2022PE1341,Signals and Systems,2026-02-07,2026-03-02,9
+Arjun Nair,2022PE1341,IC Engines,2026-03-01,2026-03-08,0
+Kiara Joshi,2022PE5601,Web Technologies,2026-02-12,2026-02-25,0
+Kiara Joshi,2022PE5601,Signals and Systems,2026-01-30,2026-02-24,11
+Kiara Joshi,2022PE5601,Web Technologies,2026-02-23,2026-03-05,0
+Kiara Joshi,2022PE5601,IC Engines,2026-02-16,2026-02-23,0
+Vihaan Patil,2023PE5615,Introduction to Algorithms,2026-02-12,2026-02-19,0
+Vihaan Patil,2023PE5615,Microprocessors,2026-02-20,2026-03-10,4
+Vihaan Patil,2023PE5615,Machine Learning,2026-02-05,2026-02-13,0
+Vihaan Patil,2023PE5615,Signals and Systems,2026-01-11,2026-01-18,0
+Vihaan Patil,2022PE1597,IC Engines,2026-01-07,2026-01-20,0
+Vihaan Patil,2022PE1597,IC Engines,2026-02-18,2026-03-07,3
+Vihaan Patil,2022PE1597,Thermodynamics,2026-01-14,2026-02-04,7
+Vihaan Patil,2022PE1597,Web Technologies,2026-02-04,2026-02-16,0
+Sanya Mehta,2022PE8175,Machine Learning,2026-01-24,2026-02-05,0
+Sanya Mehta,2022PE8175,Web Technologies,2026-01-12,2026-02-03,8
+Sanya Mehta,2022PE8175,Web Technologies,2026-01-25,2026-02-13,5
+Sanya Mehta,2022PE8175,Signals and Systems,2026-03-02,2026-03-26,10
+Kiara Joshi,2023PE2034,Signals and Systems,2026-01-14,2026-02-07,10
+Kiara Joshi,2023PE2034,Microprocessors,2026-02-02,2026-02-18,2
+Kiara Joshi,2023PE2034,Signals and Systems,2026-01-11,2026-01-24,0
+Kiara Joshi,2023PE2034,Introduction to Algorithms,2026-02-12,2026-02-22,0
+Arjun Nair,2023PE1392,Web Technologies,2026-02-17,2026-03-08,5
+Arjun Nair,2023PE1392,IC Engines,2026-01-23,2026-02-03,0
+Arjun Nair,2023PE1392,Introduction to Algorithms,2026-01-29,2026-02-21,9
+Arjun Nair,2023PE1392,Machine Learning,2026-02-15,2026-03-06,5
+Ananya Iyer,2022PE7490,IC Engines,2026-02-27,2026-03-14,1
+Ananya Iyer,2022PE7490,Microprocessors,2026-01-19,2026-02-05,3
+Ananya Iyer,2022PE7490,Microprocessors,2026-01-01,2026-01-10,0
+Ananya Iyer,2022PE7490,Thermodynamics,2026-01-30,2026-02-05,0
+Kiara Joshi,2022PE4230,Web Technologies,2026-01-13,2026-01-28,1
+Kiara Joshi,2022PE4230,Signals and Systems,2026-01-18,2026-02-11,10
+Kiara Joshi,2022PE4230,Thermodynamics,2026-02-09,2026-02-15,0
+Kiara Joshi,2022PE4230,Microprocessors,2026-01-29,2026-02-05,0
+Kiara Joshi,2023PE6600,Introduction to Algorithms,2026-01-09,2026-02-03,11
+Kiara Joshi,2023PE6600,Web Technologies,2026-02-02,2026-02-17,1
+Kiara Joshi,2023PE6600,Web Technologies,2026-01-18,2026-02-09,8
+Kiara Joshi,2023PE6600,Machine Learning,2026-01-03,2026-01-23,6
+Kiara Joshi,2023PE3463,Thermodynamics,2026-01-26,2026-02-05,0
+Kiara Joshi,2023PE3463,Machine Learning,2026-02-05,2026-02-10,0
+Kiara Joshi,2023PE3463,IC Engines,2026-03-02,2026-03-12,0
+Kiara Joshi,2023PE3463,Microprocessors,2026-01-06,2026-01-21,1
+Sanya Mehta,2022PE2611,Introduction to Algorithms,2026-02-24,2026-03-06,0
+Sanya Mehta,2022PE2611,Signals and Systems,2026-01-15,2026-01-24,0
+Sanya Mehta,2022PE2611,Signals and Systems,2026-03-01,2026-03-22,7
+Sanya Mehta,2022PE2611,Web Technologies,2026-02-02,2026-02-15,0
+Rohan Verma,2023PE8556,Introduction to Algorithms,2026-01-02,2026-01-23,7
+Rohan Verma,2023PE8556,Web Technologies,2026-02-17,2026-03-05,2
+Rohan Verma,2023PE8556,Microprocessors,2026-02-26,2026-03-19,7
+Rohan Verma,2023PE8556,Machine Learning,2026-02-08,2026-02-14,0
+Aarav Sharma,2022PE3331,IC Engines,2026-03-02,2026-03-19,3
+Aarav Sharma,2022PE3331,Thermodynamics,2026-01-19,2026-02-02,0
+Aarav Sharma,2022PE3331,Machine Learning,2026-01-25,2026-02-13,5
+Aarav Sharma,2022PE3331,Introduction to Algorithms,2026-02-06,2026-02-15,0
+Vihaan Patil,2022PE2042,Microprocessors,2026-01-02,2026-01-20,4
+Vihaan Patil,2022PE2042,Microprocessors,2026-01-15,2026-01-21,0
+Vihaan Patil,2022PE2042,Machine Learning,2026-02-12,2026-03-09,11
+Vihaan Patil,2022PE2042,Introduction to Algorithms,2026-02-18,2026-03-14,10
+Ananya Iyer,2022PE6549,Introduction to Algorithms,2026-02-11,2026-02-27,2
+Ananya Iyer,2022PE6549,Introduction to Algorithms,2026-02-15,2026-03-03,2
+Ananya Iyer,2022PE6549,IC Engines,2026-02-22,2026-03-06,0
+Ananya Iyer,2022PE6549,Thermodynamics,2026-01-06,2026-01-26,6
+Vihaan Patil,2023PE3792,Thermodynamics,2026-02-18,2026-03-02,0
+Vihaan Patil,2023PE3792,Machine Learning,2026-01-22,2026-02-16,11
+Vihaan Patil,2023PE3792,Microprocessors,2026-02-05,2026-02-10,0
+Vihaan Patil,2023PE3792,Introduction to Algorithms,2026-01-08,2026-02-01,10
+Isha Deshmukh,2023PE9341,Web Technologies,2026-02-17,2026-03-06,3
+Isha Deshmukh,2023PE9341,Introduction to Algorithms,2026-02-27,2026-03-24,11
+Isha Deshmukh,2023PE9341,Introduction to Algorithms,2026-01-02,2026-01-18,2
+Isha Deshmukh,2023PE9341,Introduction to Algorithms,2026-02-11,2026-02-20,0
+Ananya Iyer,2022PE1112,Web Technologies,2026-01-06,2026-01-29,9
+Ananya Iyer,2022PE1112,Microprocessors,2026-02-14,2026-03-05,5
+Ananya Iyer,2022PE1112,Machine Learning,2026-02-02,2026-02-09,0
+Ananya Iyer,2022PE1112,Introduction to Algorithms,2026-02-26,2026-03-11,0
+Aarav Sharma,2022PE2434,Signals and Systems,2026-02-13,2026-02-24,0
+Aarav Sharma,2022PE2434,Microprocessors,2026-02-08,2026-03-02,8
+Aarav Sharma,2022PE2434,Signals and Systems,2026-01-06,2026-01-22,2
+Aarav Sharma,2022PE2434,Signals and Systems,2026-01-24,2026-02-18,11
+Ananya Iyer,2023PE5844,Signals and Systems,2026-03-01,2026-03-23,8
+Ananya Iyer,2023PE5844,Thermodynamics,2026-01-29,2026-02-16,4
+Ananya Iyer,2023PE5844,Web Technologies,2026-03-02,2026-03-18,2
+Ananya Iyer,2023PE5844,IC Engines,2026-01-12,2026-01-24,0
+Rohan Verma,2022PE1894,IC Engines,2026-03-01,2026-03-07,0
+Rohan Verma,2022PE1894,Microprocessors,2026-02-25,2026-03-03,0
+Rohan Verma,2022PE1894,IC Engines,2026-02-08,2026-03-01,7
+Rohan Verma,2022PE1894,Introduction to Algorithms,2026-01-20,2026-02-11,8
+Kiara Joshi,2022PE9119,Web Technologies,2026-01-21,2026-02-09,5
+Kiara Joshi,2022PE9119,Thermodynamics,2026-02-21,2026-03-02,0
+Kiara Joshi,2022PE9119,Signals and Systems,2026-02-13,2026-03-04,5
+Kiara Joshi,2022PE9119,Machine Learning,2026-01-03,2026-01-23,6
+Isha Deshmukh,2022PE2263,Machine Learning,2026-01-27,2026-02-20,10
+Isha Deshmukh,2022PE2263,Microprocessors,2026-01-13,2026-01-27,0
+Isha Deshmukh,2022PE2263,Microprocessors,2026-01-28,2026-02-05,0
+Isha Deshmukh,2022PE2263,Microprocessors,2026-02-24,2026-03-07,0
+Sanya Mehta,2022PE8639,Introduction to Algorithms,2026-01-04,2026-01-19,1
+Sanya Mehta,2022PE8639,Signals and Systems,2026-02-14,2026-02-26,0
+Sanya Mehta,2022PE8639,Microprocessors,2026-02-02,2026-02-13,0
+Sanya Mehta,2022PE8639,Signals and Systems,2026-02-05,2026-02-24,5
+Isha Deshmukh,2023PE1480,IC Engines,2026-01-04,2026-01-16,0
+Isha Deshmukh,2023PE1480,Microprocessors,2026-01-26,2026-02-09,0
+Isha Deshmukh,2023PE1480,Machine Learning,2026-02-17,2026-03-11,8
+Isha Deshmukh,2023PE1480,Microprocessors,2026-02-27,2026-03-22,9
+Isha Deshmukh,2022PE6528,Signals and Systems,2026-02-28,2026-03-10,0
+Isha Deshmukh,2022PE6528,Introduction to Algorithms,2026-02-17,2026-03-03,0
+Isha Deshmukh,2022PE6528,Web Technologies,2026-01-25,2026-02-14,6
+Isha Deshmukh,2022PE6528,Machine Learning,2026-01-10,2026-01-18,0
+Rohan Verma,2023PE1526,Thermodynamics,2026-01-25,2026-02-13,5
+Rohan Verma,2023PE1526,Thermodynamics,2026-01-24,2026-02-18,11
+Rohan Verma,2023PE1526,Thermodynamics,2026-02-27,2026-03-23,10
+Rohan Verma,2023PE1526,Web Technologies,2026-01-05,2026-01-19,0
+Ananya Iyer,2022PE2422,Signals and Systems,2026-01-15,2026-02-02,4
+Ananya Iyer,2022PE2422,Thermodynamics,2026-02-16,2026-03-09,7
+Ananya Iyer,2022PE2422,Introduction to Algorithms,2026-02-17,2026-03-07,4
+Ananya Iyer,2022PE2422,Thermodynamics,2026-01-11,2026-01-16,0
+Sanya Mehta,2023PE5135,Web Technologies,2026-02-04,2026-02-19,1
+Sanya Mehta,2023PE5135,Signals and Systems,2026-02-17,2026-02-23,0
+Sanya Mehta,2023PE5135,Machine Learning,2026-02-07,2026-02-21,0
+Sanya Mehta,2023PE5135,Thermodynamics,2026-02-09,2026-02-14,0
+Vihaan Patil,2023PE7962,Signals and Systems,2026-01-05,2026-01-13,0
+Vihaan Patil,2023PE7962,Thermodynamics,2026-01-21,2026-02-12,8
+Vihaan Patil,2023PE7962,Introduction to Algorithms,2026-02-17,2026-02-26,0
+Vihaan Patil,2023PE7962,Signals and Systems,2026-01-22,2026-02-09,4
+Isha Deshmukh,2023PE6892,Microprocessors,2026-01-04,2026-01-26,8
+Isha Deshmukh,2023PE6892,Thermodynamics,2026-01-20,2026-01-30,0
+Isha Deshmukh,2023PE6892,Introduction to Algorithms,2026-01-14,2026-01-30,2
+Isha Deshmukh,2023PE6892,Signals and Systems,2026-02-23,2026-03-09,0
+Sanya Mehta,2022PE7928,Web Technologies,2026-01-13,2026-02-01,5
+Sanya Mehta,2022PE7928,Web Technologies,2026-01-18,2026-02-06,5
+Sanya Mehta,2022PE7928,Microprocessors,2026-02-11,2026-03-05,8
+Sanya Mehta,2022PE7928,Web Technologies,2026-02-13,2026-02-21,0
+Kiara Joshi,2022PE8161,IC Engines,2026-02-15,2026-03-11,10
+Kiara Joshi,2022PE8161,Microprocessors,2026-02-24,2026-03-11,1
+Kiara Joshi,2022PE8161,Web Technologies,2026-01-02,2026-01-11,0
+Kiara Joshi,2022PE8161,Machine Learning,2026-02-13,2026-02-28,1
+Sanya Mehta,2022PE2689,Thermodynamics,2026-02-23,2026-03-08,0
+Sanya Mehta,2022PE2689,Microprocessors,2026-01-12,2026-01-28,2
+Sanya Mehta,2022PE2689,Signals and Systems,2026-02-09,2026-03-04,9
+Sanya Mehta,2022PE2689,Thermodynamics,2026-02-09,2026-02-25,2
+Vihaan Patil,2023PE8213,Thermodynamics,2026-01-20,2026-01-27,0
+Vihaan Patil,2023PE8213,Machine Learning,2026-02-12,2026-03-05,7
+Vihaan Patil,2023PE8213,Thermodynamics,2026-02-25,2026-03-13,2
+Vihaan Patil,2023PE8213,Thermodynamics,2026-02-06,2026-03-03,11
+Kiara Joshi,2023PE6389,Microprocessors,2026-01-20,2026-02-08,5
+Kiara Joshi,2023PE6389,Machine Learning,2026-02-02,2026-02-16,0
+Kiara Joshi,2023PE6389,Thermodynamics,2026-01-31,2026-02-24,10
+Kiara Joshi,2023PE6389,IC Engines,2026-01-22,2026-02-02,0
+Kiara Joshi,2022PE9758,Microprocessors,2026-02-02,2026-02-26,10
+Kiara Joshi,2022PE9758,Thermodynamics,2026-01-20,2026-02-10,7
+Kiara Joshi,2022PE9758,Introduction to Algorithms,2026-01-07,2026-01-15,0
+Kiara Joshi,2022PE9758,Thermodynamics,2026-02-23,2026-03-14,5
+Vihaan Patil,2022PE8109,Signals and Systems,2026-02-03,2026-02-26,9
+Vihaan Patil,2022PE8109,Microprocessors,2026-03-02,2026-03-18,2
+Vihaan Patil,2022PE8109,Thermodynamics,2026-01-05,2026-01-19,0
+Vihaan Patil,2022PE8109,Web Technologies,2026-02-18,2026-02-25,0
+Ananya Iyer,2022PE8867,Web Technologies,2026-01-10,2026-01-22,0
+Ananya Iyer,2022PE8867,Thermodynamics,2026-01-04,2026-01-16,0
+Ananya Iyer,2022PE8867,Web Technologies,2026-02-02,2026-02-09,0
+Ananya Iyer,2022PE8867,IC Engines,2026-01-21,2026-01-31,0
+Ananya Iyer,2023PE1090,Thermodynamics,2026-02-09,2026-02-26,3
+Ananya Iyer,2023PE1090,Web Technologies,2026-01-12,2026-01-26,0
+Ananya Iyer,2023PE1090,Microprocessors,2026-01-21,2026-02-14,10
+Ananya Iyer,2023PE1090,Microprocessors,2026-01-15,2026-02-04,6
+Aarav Sharma,2022PE7035,Thermodynamics,2026-02-20,2026-03-11,5
+Aarav Sharma,2022PE7035,Web Technologies,2026-02-11,2026-02-22,0
+Aarav Sharma,2022PE7035,Web Technologies,2026-02-17,2026-02-28,0
+Aarav Sharma,2022PE7035,Introduction to Algorithms,2026-02-13,2026-02-23,0
+Aarav Sharma,2023PE4754,Web Technologies,2026-01-07,2026-01-26,5
+Aarav Sharma,2023PE4754,Web Technologies,2026-01-12,2026-02-02,7
+Aarav Sharma,2023PE4754,Microprocessors,2026-02-16,2026-03-04,2
+Aarav Sharma,2023PE4754,Web Technologies,2026-01-24,2026-02-15,8
+Kiara Joshi,2023PE7121,Thermodynamics,2026-02-03,2026-02-15,0
+Kiara Joshi,2023PE7121,Introduction to Algorithms,2026-01-28,2026-02-08,0
+Kiara Joshi,2023PE7121,Introduction to Algorithms,2026-01-16,2026-02-03,4
+Kiara Joshi,2023PE7121,IC Engines,2026-02-09,2026-02-21,0
+Isha Deshmukh,2022PE7922,Signals and Systems,2026-01-28,2026-02-19,8
+Isha Deshmukh,2022PE7922,Microprocessors,2026-01-27,2026-02-01,0
+Isha Deshmukh,2022PE7922,Thermodynamics,2026-02-27,2026-03-04,0
+Isha Deshmukh,2022PE7922,Thermodynamics,2026-01-05,2026-01-28,9
+Vihaan Patil,2023PE5044,IC Engines,2026-02-15,2026-02-25,0
+Vihaan Patil,2023PE5044,Introduction to Algorithms,2026-02-08,2026-02-14,0
+Vihaan Patil,2023PE5044,IC Engines,2026-01-12,2026-01-20,0
+Vihaan Patil,2023PE5044,Introduction to Algorithms,2026-02-12,2026-03-09,11
+Vihaan Patil,2022PE1022,Signals and Systems,2026-01-14,2026-02-04,7
+Vihaan Patil,2022PE1022,Thermodynamics,2026-01-12,2026-02-04,9
+Vihaan Patil,2022PE1022,IC Engines,2026-02-20,2026-02-27,0
+Vihaan Patil,2022PE1022,IC Engines,2026-01-05,2026-01-22,3
+Rohan Verma,2022PE3307,Signals and Systems,2026-03-02,2026-03-08,0
+Rohan Verma,2022PE3307,Introduction to Algorithms,2026-01-16,2026-01-24,0
+Rohan Verma,2022PE3307,Introduction to Algorithms,2026-01-09,2026-01-22,0
+Rohan Verma,2022PE3307,Signals and Systems,2026-02-08,2026-02-24,2
+Isha Deshmukh,2022PE3404,Thermodynamics,2026-02-01,2026-02-25,10
+Isha Deshmukh,2022PE3404,Signals and Systems,2026-01-18,2026-01-23,0
+Isha Deshmukh,2022PE3404,Machine Learning,2026-02-28,2026-03-25,11
+Isha Deshmukh,2022PE3404,Web Technologies,2026-01-26,2026-02-20,11
+Kiara Joshi,2023PE7620,Microprocessors,2026-02-14,2026-03-10,10
+Kiara Joshi,2023PE7620,Thermodynamics,2026-02-09,2026-03-04,9
+Kiara Joshi,2023PE7620,Microprocessors,2026-02-08,2026-02-18,0
+Kiara Joshi,2023PE7620,Web Technologies,2026-01-01,2026-01-07,0
+Aarav Sharma,2023PE3356,IC Engines,2026-02-02,2026-02-17,1
+Aarav Sharma,2023PE3356,Microprocessors,2026-01-29,2026-02-13,1
+Aarav Sharma,2023PE3356,Thermodynamics,2026-02-23,2026-03-13,4
+Aarav Sharma,2023PE3356,Web Technologies,2026-01-25,2026-02-12,4
+Kiara Joshi,2022PE8571,Signals and Systems,2026-02-08,2026-02-28,6
+Kiara Joshi,2022PE8571,Web Technologies,2026-02-13,2026-02-26,0
+Kiara Joshi,2022PE8571,Introduction to Algorithms,2026-02-22,2026-03-10,2
+Kiara Joshi,2022PE8571,Signals and Systems,2026-01-31,2026-02-11,0
+Vihaan Patil,2022PE8474,Web Technologies,2026-01-22,2026-01-31,0
+Vihaan Patil,2022PE8474,Web Technologies,2026-02-12,2026-03-08,10
+Vihaan Patil,2022PE8474,IC Engines,2026-01-24,2026-01-30,0
+Vihaan Patil,2022PE8474,Introduction to Algorithms,2026-01-25,2026-02-11,3
+Ananya Iyer,2023PE1120,Web Technologies,2026-01-17,2026-01-28,0
+Ananya Iyer,2023PE1120,Signals and Systems,2026-01-17,2026-01-29,0
+Ananya Iyer,2023PE1120,Signals and Systems,2026-02-07,2026-02-22,1
+Ananya Iyer,2023PE1120,Microprocessors,2026-01-21,2026-02-04,0
+Ananya Iyer,2023PE8919,IC Engines,2026-01-26,2026-02-09,0
+Ananya Iyer,2023PE8919,Web Technologies,2026-01-11,2026-01-19,0
+Ananya Iyer,2023PE8919,Thermodynamics,2026-01-20,2026-02-10,7
+Ananya Iyer,2023PE8919,Thermodynamics,2026-02-05,2026-02-19,0
+Aarav Sharma,2022PE1133,Microprocessors,2026-01-04,2026-01-27,9
+Aarav Sharma,2022PE1133,Thermodynamics,2026-01-21,2026-01-30,0
+Aarav Sharma,2022PE1133,Signals and Systems,2026-02-11,2026-02-20,0
+Aarav Sharma,2022PE1133,Signals and Systems,2026-02-08,2026-03-03,9
+Vihaan Patil,2022PE4836,Web Technologies,2026-01-10,2026-01-30,6
+Vihaan Patil,2022PE4836,IC Engines,2026-02-15,2026-03-05,4
+Vihaan Patil,2022PE4836,Thermodynamics,2026-02-01,2026-02-15,0
+Vihaan Patil,2022PE4836,Web Technologies,2026-02-23,2026-02-28,0
+Aarav Sharma,2022PE1563,IC Engines,2026-01-18,2026-01-26,0
+Aarav Sharma,2022PE1563,Signals and Systems,2026-01-25,2026-02-11,3
+Aarav Sharma,2022PE1563,Web Technologies,2026-02-28,2026-03-07,0
+Aarav Sharma,2022PE1563,Microprocessors,2026-01-27,2026-02-16,6
+Isha Deshmukh,2023PE6053,Thermodynamics,2026-03-02,2026-03-11,0
+Isha Deshmukh,2023PE6053,Web Technologies,2026-02-17,2026-02-24,0
+Isha Deshmukh,2023PE6053,Machine Learning,2026-01-29,2026-02-08,0
+Isha Deshmukh,2023PE6053,Machine Learning,2026-02-09,2026-02-15,0
+Vihaan Patil,2022PE9880,Signals and Systems,2026-02-09,2026-03-05,10
+Vihaan Patil,2022PE9880,Machine Learning,2026-02-06,2026-02-16,0
+Vihaan Patil,2022PE9880,IC Engines,2026-01-02,2026-01-20,4
+Vihaan Patil,2022PE9880,IC Engines,2026-01-20,2026-02-06,3
+Arjun Nair,2023PE4467,Microprocessors,2026-01-18,2026-02-05,4
+Arjun Nair,2023PE4467,IC Engines,2026-01-08,2026-01-25,3
+Arjun Nair,2023PE4467,Signals and Systems,2026-01-03,2026-01-19,2
+Arjun Nair,2023PE4467,Thermodynamics,2026-02-18,2026-03-09,5
+Sanya Mehta,2022PE8864,Microprocessors,2026-01-15,2026-02-08,10
+Sanya Mehta,2022PE8864,IC Engines,2026-02-28,2026-03-06,0
+Sanya Mehta,2022PE8864,IC Engines,2026-02-23,2026-03-02,0
+Sanya Mehta,2022PE8864,Microprocessors,2026-02-21,2026-03-01,0
+Isha Deshmukh,2022PE6188,Machine Learning,2026-01-01,2026-01-16,1
+Isha Deshmukh,2022PE6188,Machine Learning,2026-01-02,2026-01-13,0
+Isha Deshmukh,2022PE6188,Signals and Systems,2026-01-11,2026-01-21,0
+Isha Deshmukh,2022PE6188,Microprocessors,2026-02-02,2026-02-21,5
+Vihaan Patil,2022PE1483,Web Technologies,2026-02-25,2026-03-12,1
+Vihaan Patil,2022PE1483,Thermodynamics,2026-02-27,2026-03-12,0
+Vihaan Patil,2022PE1483,Introduction to Algorithms,2026-02-17,2026-02-28,0
+Vihaan Patil,2022PE1483,Machine Learning,2026-01-19,2026-02-13,11
+Sanya Mehta,2023PE1318,Machine Learning,2026-02-22,2026-03-14,6
+Sanya Mehta,2023PE1318,Machine Learning,2026-02-18,2026-02-24,0
+Sanya Mehta,2023PE1318,Machine Learning,2026-01-23,2026-02-04,0
+Sanya Mehta,2023PE1318,IC Engines,2026-01-20,2026-02-10,7
+Aarav Sharma,2023PE4272,Machine Learning,2026-01-02,2026-01-21,5
+Aarav Sharma,2023PE4272,Microprocessors,2026-02-21,2026-03-13,6
+Aarav Sharma,2023PE4272,Signals and Systems,2026-02-23,2026-03-13,4
+Aarav Sharma,2023PE4272,Signals and Systems,2026-02-02,2026-02-25,9
+Ananya Iyer,2022PE3634,Machine Learning,2026-02-17,2026-03-07,4
+Ananya Iyer,2022PE3634,Introduction to Algorithms,2026-02-06,2026-02-27,7
+Ananya Iyer,2022PE3634,Thermodynamics,2026-02-14,2026-03-01,1
+Ananya Iyer,2022PE3634,Thermodynamics,2026-01-11,2026-02-01,7
+Sanya Mehta,2023PE8705,Web Technologies,2026-01-13,2026-01-23,0
+Sanya Mehta,2023PE8705,Machine Learning,2026-01-19,2026-02-10,8
+Sanya Mehta,2023PE8705,IC Engines,2026-01-11,2026-01-29,4
+Sanya Mehta,2023PE8705,Web Technologies,2026-01-21,2026-01-31,0
+Rohan Verma,2022PE2166,Machine Learning,2026-01-16,2026-02-06,7
+Rohan Verma,2022PE2166,Machine Learning,2026-02-14,2026-02-19,0
+Rohan Verma,2022PE2166,Web Technologies,2026-01-21,2026-01-29,0
+Rohan Verma,2022PE2166,IC Engines,2026-01-28,2026-02-09,0
+Ananya Iyer,2023PE8153,IC Engines,2026-02-06,2026-03-01,9
+Ananya Iyer,2023PE8153,Thermodynamics,2026-01-29,2026-02-21,9
+Ananya Iyer,2023PE8153,Introduction to Algorithms,2026-02-07,2026-02-27,6
+Ananya Iyer,2023PE8153,Introduction to Algorithms,2026-01-03,2026-01-28,11
+Arjun Nair,2022PE4217,Machine Learning,2026-02-05,2026-02-25,6
+Arjun Nair,2022PE4217,IC Engines,2026-03-01,2026-03-14,0
+Arjun Nair,2022PE4217,Introduction to Algorithms,2026-02-23,2026-03-06,0
+Arjun Nair,2022PE4217,Web Technologies,2026-01-18,2026-01-24,0
+Ananya Iyer,2023PE2215,IC Engines,2026-02-04,2026-02-13,0
+Ananya Iyer,2023PE2215,Microprocessors,2026-01-24,2026-02-06,0
+Ananya Iyer,2023PE2215,Machine Learning,2026-02-01,2026-02-11,0
+Ananya Iyer,2023PE2215,Machine Learning,2026-01-21,2026-01-27,0
+Ananya Iyer,2022PE3577,Signals and Systems,2026-01-10,2026-01-22,0
+Ananya Iyer,2022PE3577,Machine Learning,2026-01-24,2026-02-15,8
+Ananya Iyer,2022PE3577,Introduction to Algorithms,2026-02-22,2026-03-17,9
+Ananya Iyer,2022PE3577,Web Technologies,2026-02-03,2026-02-11,0
+Aarav Sharma,2022PE3357,Machine Learning,2026-01-08,2026-01-13,0
+Aarav Sharma,2022PE3357,Signals and Systems,2026-02-27,2026-03-14,1
+Aarav Sharma,2022PE3357,IC Engines,2026-01-25,2026-02-05,0
+Aarav Sharma,2022PE3357,Machine Learning,2026-02-06,2026-03-03,11
+Vihaan Patil,2023PE4964,Machine Learning,2026-01-10,2026-01-26,2
+Vihaan Patil,2023PE4964,Introduction to Algorithms,2026-02-28,2026-03-20,6
+Vihaan Patil,2023PE4964,Microprocessors,2026-01-09,2026-01-17,0
+Vihaan Patil,2023PE4964,IC Engines,2026-01-02,2026-01-18,2
+Arjun Nair,2023PE5824,Signals and Systems,2026-02-19,2026-03-14,9
+Arjun Nair,2023PE5824,Introduction to Algorithms,2026-03-01,2026-03-07,0
+Arjun Nair,2023PE5824,Signals and Systems,2026-02-05,2026-02-26,7
+Arjun Nair,2023PE5824,Signals and Systems,2026-02-12,2026-03-02,4
+Isha Deshmukh,2022PE5120,Introduction to Algorithms,2026-01-06,2026-01-23,3
+Isha Deshmukh,2022PE5120,Machine Learning,2026-03-01,2026-03-20,5
+Isha Deshmukh,2022PE5120,Signals and Systems,2026-01-08,2026-01-23,1
+Isha Deshmukh,2022PE5120,Introduction to Algorithms,2026-01-08,2026-01-14,0
+Rohan Verma,2023PE2405,IC Engines,2026-02-03,2026-02-11,0
+Rohan Verma,2023PE2405,Thermodynamics,2026-02-13,2026-03-03,4
+Rohan Verma,2023PE2405,IC Engines,2026-02-19,2026-03-12,7
+Rohan Verma,2023PE2405,Machine Learning,2026-02-12,2026-03-02,4
+Rohan Verma,2023PE3711,Introduction to Algorithms,2026-01-25,2026-02-17,9
+Rohan Verma,2023PE3711,Thermodynamics,2026-02-13,2026-02-26,0
+Rohan Verma,2023PE3711,Web Technologies,2026-02-03,2026-02-18,1
+Rohan Verma,2023PE3711,Web Technologies,2026-01-23,2026-02-12,6
+Arjun Nair,2023PE9671,Machine Learning,2026-01-09,2026-02-01,9
+Arjun Nair,2023PE9671,Thermodynamics,2026-02-07,2026-02-19,0
+Arjun Nair,2023PE9671,Microprocessors,2026-01-31,2026-02-11,0
+Arjun Nair,2023PE9671,Thermodynamics,2026-01-21,2026-02-02,0
+Rohan Verma,2022PE8182,Web Technologies,2026-02-07,2026-02-24,3
+Rohan Verma,2022PE8182,Web Technologies,2026-02-08,2026-03-02,8
+Rohan Verma,2022PE8182,Web Technologies,2026-02-06,2026-02-14,0
+Rohan Verma,2022PE8182,IC Engines,2026-02-14,2026-03-08,8
+Sanya Mehta,2022PE2352,Thermodynamics,2026-02-10,2026-02-25,1
+Sanya Mehta,2022PE2352,Thermodynamics,2026-01-16,2026-02-02,3
+Sanya Mehta,2022PE2352,Web Technologies,2026-01-10,2026-01-19,0
+Sanya Mehta,2022PE2352,Web Technologies,2026-02-06,2026-02-20,0
+Ananya Iyer,2023PE3413,Signals and Systems,2026-02-27,2026-03-06,0
+Ananya Iyer,2023PE3413,IC Engines,2026-01-09,2026-01-18,0
+Ananya Iyer,2023PE3413,Microprocessors,2026-02-25,2026-03-17,6
+Ananya Iyer,2023PE3413,IC Engines,2026-02-28,2026-03-14,0
+Vihaan Patil,2022PE3522,Thermodynamics,2026-02-14,2026-02-23,0
+Vihaan Patil,2022PE3522,Thermodynamics,2026-02-16,2026-03-13,11
+Vihaan Patil,2022PE3522,Thermodynamics,2026-02-13,2026-02-21,0
+Vihaan Patil,2022PE3522,Machine Learning,2026-01-03,2026-01-19,2
+Ananya Iyer,2022PE2339,Machine Learning,2026-02-20,2026-03-01,0
+Ananya Iyer,2022PE2339,Microprocessors,2026-02-02,2026-02-11,0
+Ananya Iyer,2022PE2339,Machine Learning,2026-02-19,2026-03-08,3
+Ananya Iyer,2022PE2339,Signals and Systems,2026-03-01,2026-03-19,4
+Kiara Joshi,2022PE8383,Thermodynamics,2026-02-05,2026-02-17,0
+Kiara Joshi,2022PE8383,Signals and Systems,2026-01-27,2026-02-10,0
+Kiara Joshi,2022PE8383,Introduction to Algorithms,2026-02-15,2026-03-04,3
+Kiara Joshi,2022PE8383,Introduction to Algorithms,2026-02-27,2026-03-05,0
+Aarav Sharma,2022PE9160,Introduction to Algorithms,2026-01-31,2026-02-09,0
+Aarav Sharma,2022PE9160,Web Technologies,2026-02-08,2026-03-05,11
+Aarav Sharma,2022PE9160,Web Technologies,2026-03-02,2026-03-11,0
+Aarav Sharma,2022PE9160,Microprocessors,2026-01-14,2026-02-07,10
+Kiara Joshi,2023PE7318,Signals and Systems,2026-02-04,2026-02-22,4
+Kiara Joshi,2023PE7318,Introduction to Algorithms,2026-02-14,2026-02-21,0
+Kiara Joshi,2023PE7318,Microprocessors,2026-01-24,2026-02-07,0
+Kiara Joshi,2023PE7318,Thermodynamics,2026-01-16,2026-02-07,8
+Ananya Iyer,2022PE4645,Thermodynamics,2026-02-19,2026-03-10,5
+Ananya Iyer,2022PE4645,Signals and Systems,2026-02-28,2026-03-22,8
+Ananya Iyer,2022PE4645,Signals and Systems,2026-01-11,2026-02-05,11
+Ananya Iyer,2022PE4645,Introduction to Algorithms,2026-01-04,2026-01-19,1
+Isha Deshmukh,2023PE5310,Introduction to Algorithms,2026-02-18,2026-02-28,0
+Isha Deshmukh,2023PE5310,Introduction to Algorithms,2026-01-07,2026-01-24,3
+Isha Deshmukh,2023PE5310,Thermodynamics,2026-01-26,2026-02-13,4
+Isha Deshmukh,2023PE5310,Machine Learning,2026-01-13,2026-01-25,0
+Isha Deshmukh,2022PE3994,Microprocessors,2026-01-03,2026-01-19,2
+Isha Deshmukh,2022PE3994,Thermodynamics,2026-03-02,2026-03-13,0
+Isha Deshmukh,2022PE3994,Web Technologies,2026-02-23,2026-03-10,1
+Isha Deshmukh,2022PE3994,Microprocessors,2026-02-03,2026-02-11,0
+Kiara Joshi,2023PE8116,IC Engines,2026-02-01,2026-02-09,0
+Kiara Joshi,2023PE8116,Microprocessors,2026-01-18,2026-02-09,8
+Kiara Joshi,2023PE8116,Web Technologies,2026-01-20,2026-02-13,10
+Kiara Joshi,2023PE8116,Machine Learning,2026-01-23,2026-02-14,8
+Rohan Verma,2023PE2237,Thermodynamics,2026-01-17,2026-02-04,4
+Rohan Verma,2023PE2237,Web Technologies,2026-02-07,2026-03-01,8
+Rohan Verma,2023PE2237,Machine Learning,2026-01-25,2026-01-30,0
+Rohan Verma,2023PE2237,Microprocessors,2026-01-15,2026-02-09,11
+Vihaan Patil,2023PE8978,Machine Learning,2026-02-03,2026-02-25,8
+Vihaan Patil,2023PE8978,Introduction to Algorithms,2026-01-06,2026-01-12,0
+Vihaan Patil,2023PE8978,Thermodynamics,2026-03-02,2026-03-17,1
+Vihaan Patil,2023PE8978,Signals and Systems,2026-01-09,2026-01-16,0
+Sanya Mehta,2023PE8455,Microprocessors,2026-01-14,2026-01-31,3
+Sanya Mehta,2023PE8455,Thermodynamics,2026-01-28,2026-02-10,0
+Sanya Mehta,2023PE8455,Thermodynamics,2026-01-16,2026-02-10,11
+Sanya Mehta,2023PE8455,Introduction to Algorithms,2026-01-30,2026-02-19,6
+Aarav Sharma,2023PE8990,Introduction to Algorithms,2026-01-23,2026-02-04,0
+Aarav Sharma,2023PE8990,Signals and Systems,2026-01-24,2026-02-09,2
+Aarav Sharma,2023PE8990,Machine Learning,2026-02-16,2026-02-27,0
+Aarav Sharma,2023PE8990,Thermodynamics,2026-01-26,2026-01-31,0
+Arjun Nair,2023PE8490,Microprocessors,2026-02-04,2026-02-24,6
+Arjun Nair,2023PE8490,IC Engines,2026-02-27,2026-03-17,4
+Arjun Nair,2023PE8490,IC Engines,2026-01-05,2026-01-14,0
+Arjun Nair,2023PE8490,Thermodynamics,2026-02-02,2026-02-16,0
+Vihaan Patil,2022PE4627,Web Technologies,2026-01-31,2026-02-19,5
+Vihaan Patil,2022PE4627,Microprocessors,2026-02-12,2026-02-25,0
+Vihaan Patil,2022PE4627,Introduction to Algorithms,2026-01-08,2026-01-14,0
+Vihaan Patil,2022PE4627,Signals and Systems,2026-02-20,2026-03-17,11
+Aarav Sharma,2023PE2425,Signals and Systems,2026-02-06,2026-02-14,0
+Aarav Sharma,2023PE2425,Thermodynamics,2026-02-19,2026-03-11,6
+Aarav Sharma,2023PE2425,Thermodynamics,2026-03-01,2026-03-24,9
+Aarav Sharma,2023PE2425,Signals and Systems,2026-01-04,2026-01-28,10
+Sanya Mehta,2022PE6368,Thermodynamics,2026-01-11,2026-01-21,0
+Sanya Mehta,2022PE6368,Web Technologies,2026-01-02,2026-01-26,10
+Sanya Mehta,2022PE6368,Signals and Systems,2026-02-05,2026-02-15,0
+Sanya Mehta,2022PE6368,IC Engines,2026-02-21,2026-03-01,0
+Arjun Nair,2022PE1684,Microprocessors,2026-02-24,2026-03-03,0
+Arjun Nair,2022PE1684,Microprocessors,2026-01-10,2026-01-22,0
+Arjun Nair,2022PE1684,Microprocessors,2026-02-15,2026-03-11,10
+Arjun Nair,2022PE1684,Signals and Systems,2026-01-15,2026-01-23,0
+Rohan Verma,2022PE3244,Machine Learning,2026-02-11,2026-02-17,0
+Rohan Verma,2022PE3244,Web Technologies,2026-01-31,2026-02-21,7
+Rohan Verma,2022PE3244,Machine Learning,2026-02-17,2026-03-04,1
+Rohan Verma,2022PE3244,Machine Learning,2026-01-25,2026-02-02,0
+Arjun Nair,2022PE8805,Introduction to Algorithms,2026-02-23,2026-03-14,5
+Arjun Nair,2022PE8805,Web Technologies,2026-01-30,2026-02-08,0
+Arjun Nair,2022PE8805,IC Engines,2026-02-27,2026-03-10,0
+Arjun Nair,2022PE8805,Thermodynamics,2026-01-11,2026-01-30,5
+Rohan Verma,2022PE1040,Machine Learning,2026-01-16,2026-01-25,0
+Rohan Verma,2022PE1040,Microprocessors,2026-01-31,2026-02-23,9
+Rohan Verma,2022PE1040,Introduction to Algorithms,2026-02-23,2026-03-15,6
+Rohan Verma,2022PE1040,Signals and Systems,2026-02-09,2026-02-22,0
+Ananya Iyer,2023PE4291,Microprocessors,2026-02-14,2026-03-11,11
+Ananya Iyer,2023PE4291,IC Engines,2026-01-06,2026-01-31,11
+Ananya Iyer,2023PE4291,Web Technologies,2026-02-03,2026-02-20,3
+Ananya Iyer,2023PE4291,IC Engines,2026-02-09,2026-02-18,0
+Rohan Verma,2022PE1158,Microprocessors,2026-01-25,2026-02-11,3
+Rohan Verma,2022PE1158,Machine Learning,2026-01-13,2026-02-04,8
+Rohan Verma,2022PE1158,Microprocessors,2026-01-29,2026-02-23,11
+Rohan Verma,2022PE1158,Signals and Systems,2026-01-16,2026-02-04,5
+Rohan Verma,2022PE3940,IC Engines,2026-01-16,2026-01-24,0
+Rohan Verma,2022PE3940,Microprocessors,2026-02-05,2026-02-27,8
+Rohan Verma,2022PE3940,IC Engines,2026-01-27,2026-02-17,7
+Rohan Verma,2022PE3940,Microprocessors,2026-01-17,2026-02-08,8
+Kiara Joshi,2023PE2852,Introduction to Algorithms,2026-01-19,2026-02-02,0
+Kiara Joshi,2023PE2852,Introduction to Algorithms,2026-02-14,2026-02-25,0
+Kiara Joshi,2023PE2852,Web Technologies,2026-01-31,2026-02-25,11
+Kiara Joshi,2023PE2852,IC Engines,2026-02-25,2026-03-12,1
+Kiara Joshi,2022PE8324,Signals and Systems,2026-02-26,2026-03-23,11
+Kiara Joshi,2022PE8324,Microprocessors,2026-02-11,2026-02-23,0
+Kiara Joshi,2022PE8324,Microprocessors,2026-02-13,2026-03-01,2
+Kiara Joshi,2022PE8324,Machine Learning,2026-02-24,2026-03-03,0
+Ananya Iyer,2022PE5838,Introduction to Algorithms,2026-02-10,2026-03-03,7
+Ananya Iyer,2022PE5838,Signals and Systems,2026-01-18,2026-02-02,1
+Ananya Iyer,2022PE5838,Thermodynamics,2026-02-16,2026-02-27,0
+Ananya Iyer,2022PE5838,Introduction to Algorithms,2026-01-20,2026-02-03,0
+Sanya Mehta,2022PE8266,Introduction to Algorithms,2026-02-12,2026-02-21,0
+Sanya Mehta,2022PE8266,Introduction to Algorithms,2026-03-01,2026-03-23,8
+Sanya Mehta,2022PE8266,Microprocessors,2026-01-16,2026-02-10,11
+Sanya Mehta,2022PE8266,Machine Learning,2026-02-02,2026-02-13,0
+Aarav Sharma,2022PE8772,Microprocessors,2026-02-13,2026-03-08,9
+Aarav Sharma,2022PE8772,Signals and Systems,2026-02-02,2026-02-10,0
+Aarav Sharma,2022PE8772,Introduction to Algorithms,2026-01-14,2026-02-04,7
+Aarav Sharma,2022PE8772,IC Engines,2026-01-12,2026-01-30,4
+Rohan Verma,2022PE9571,Machine Learning,2026-01-17,2026-02-05,5
+Rohan Verma,2022PE9571,Microprocessors,2026-02-24,2026-03-11,1
+Rohan Verma,2022PE9571,Web Technologies,2026-03-01,2026-03-24,9
+Rohan Verma,2022PE9571,Machine Learning,2026-02-10,2026-02-16,0
+Aarav Sharma,2022PE8110,Web Technologies,2026-01-15,2026-01-20,0
+Aarav Sharma,2022PE8110,Microprocessors,2026-01-15,2026-01-28,0
+Aarav Sharma,2022PE8110,Thermodynamics,2026-02-11,2026-03-06,9
+Aarav Sharma,2022PE8110,Microprocessors,2026-02-15,2026-02-28,0
+Isha Deshmukh,2023PE7390,Microprocessors,2026-02-18,2026-03-09,5
+Isha Deshmukh,2023PE7390,Signals and Systems,2026-01-23,2026-02-15,9
+Isha Deshmukh,2023PE7390,IC Engines,2026-01-30,2026-02-19,6
+Isha Deshmukh,2023PE7390,Signals and Systems,2026-01-02,2026-01-22,6
+Kiara Joshi,2022PE1576,Web Technologies,2026-02-25,2026-03-02,0
+Kiara Joshi,2022PE1576,Machine Learning,2026-01-27,2026-02-21,11
+Kiara Joshi,2022PE1576,Signals and Systems,2026-02-26,2026-03-15,3
+Kiara Joshi,2022PE1576,Machine Learning,2026-02-13,2026-03-02,3
+Kiara Joshi,2023PE6676,IC Engines,2026-01-17,2026-01-29,0
+Kiara Joshi,2023PE6676,IC Engines,2026-02-26,2026-03-18,6
+Kiara Joshi,2023PE6676,Web Technologies,2026-01-30,2026-02-15,2
+Kiara Joshi,2023PE6676,Machine Learning,2026-03-01,2026-03-26,11
+Rohan Verma,2023PE9479,Web Technologies,2026-02-02,2026-02-15,0
+Rohan Verma,2023PE9479,Signals and Systems,2026-01-13,2026-01-21,0
+Rohan Verma,2023PE9479,Introduction to Algorithms,2026-02-23,2026-03-07,0
+Rohan Verma,2023PE9479,Introduction to Algorithms,2026-02-20,2026-03-06,0
+Kiara Joshi,2022PE6116,Introduction to Algorithms,2026-02-28,2026-03-21,7
+Kiara Joshi,2022PE6116,IC Engines,2026-02-26,2026-03-08,0
+Kiara Joshi,2022PE6116,Web Technologies,2026-02-02,2026-02-15,0
+Kiara Joshi,2022PE6116,Introduction to Algorithms,2026-01-12,2026-01-31,5
+Vihaan Patil,2023PE4293,Microprocessors,2026-02-18,2026-03-11,7
+Vihaan Patil,2023PE4293,IC Engines,2026-02-03,2026-02-24,7
+Vihaan Patil,2023PE4293,Introduction to Algorithms,2026-01-22,2026-01-28,0
+Vihaan Patil,2023PE4293,IC Engines,2026-02-05,2026-02-14,0
+Ananya Iyer,2022PE3075,IC Engines,2026-02-12,2026-03-06,8
+Ananya Iyer,2022PE3075,Microprocessors,2026-01-23,2026-02-13,7
+Ananya Iyer,2022PE3075,Thermodynamics,2026-01-19,2026-02-07,5
+Ananya Iyer,2022PE3075,Thermodynamics,2026-02-18,2026-02-26,0
+Isha Deshmukh,2023PE7765,Microprocessors,2026-01-12,2026-02-02,7
+Isha Deshmukh,2023PE7765,Signals and Systems,2026-01-22,2026-02-15,10
+Isha Deshmukh,2023PE7765,Introduction to Algorithms,2026-02-14,2026-03-05,5
+Isha Deshmukh,2023PE7765,Web Technologies,2026-01-23,2026-01-30,0
+Rohan Verma,2023PE6392,Microprocessors,2026-02-05,2026-02-22,3
+Rohan Verma,2023PE6392,Signals and Systems,2026-01-06,2026-01-11,0
+Rohan Verma,2023PE6392,Signals and Systems,2026-02-03,2026-02-23,6
+Rohan Verma,2023PE6392,Web Technologies,2026-02-02,2026-02-25,9
+Isha Deshmukh,2023PE4207,Thermodynamics,2026-01-15,2026-01-28,0
+Isha Deshmukh,2023PE4207,Introduction to Algorithms,2026-01-09,2026-01-22,0
+Isha Deshmukh,2023PE4207,Web Technologies,2026-02-02,2026-02-27,11
+Isha Deshmukh,2023PE4207,Machine Learning,2026-01-10,2026-01-20,0
+Ananya Iyer,2023PE8592,Microprocessors,2026-02-11,2026-03-03,6
+Ananya Iyer,2023PE8592,IC Engines,2026-01-30,2026-02-09,0
+Ananya Iyer,2023PE8592,Web Technologies,2026-01-04,2026-01-24,6
+Ananya Iyer,2023PE8592,Signals and Systems,2026-01-15,2026-02-02,4
+Aarav Sharma,2022PE8076,Thermodynamics,2026-02-19,2026-03-11,6
+Aarav Sharma,2022PE8076,Microprocessors,2026-02-12,2026-02-20,0
+Aarav Sharma,2022PE8076,IC Engines,2026-01-15,2026-01-24,0
+Aarav Sharma,2022PE8076,Microprocessors,2026-02-05,2026-02-16,0
+Kiara Joshi,2022PE7641,Signals and Systems,2026-01-24,2026-02-11,4
+Kiara Joshi,2022PE7641,Signals and Systems,2026-01-31,2026-02-25,11
+Kiara Joshi,2022PE7641,IC Engines,2026-02-23,2026-03-18,9
+Kiara Joshi,2022PE7641,Thermodynamics,2026-02-02,2026-02-17,1
+Vihaan Patil,2023PE4381,IC Engines,2026-02-26,2026-03-18,6
+Vihaan Patil,2023PE4381,Signals and Systems,2026-02-25,2026-03-04,0
+Vihaan Patil,2023PE4381,IC Engines,2026-02-16,2026-03-10,8
+Vihaan Patil,2023PE4381,IC Engines,2026-02-08,2026-02-13,0
+Vihaan Patil,2023PE2257,Microprocessors,2026-03-01,2026-03-09,0
+Vihaan Patil,2023PE2257,Web Technologies,2026-01-06,2026-01-25,5
+Vihaan Patil,2023PE2257,Signals and Systems,2026-02-01,2026-02-16,1
+Vihaan Patil,2023PE2257,Signals and Systems,2026-01-14,2026-02-05,8
+Sanya Mehta,2022PE7805,Introduction to Algorithms,2026-02-19,2026-03-10,5
+Sanya Mehta,2022PE7805,Microprocessors,2026-02-16,2026-02-27,0
+Sanya Mehta,2022PE7805,Thermodynamics,2026-01-08,2026-01-13,0
+Sanya Mehta,2022PE7805,Thermodynamics,2026-02-22,2026-03-06,0
+Ananya Iyer,2023PE2339,Introduction to Algorithms,2026-03-02,2026-03-08,0
+Ananya Iyer,2023PE2339,Signals and Systems,2026-02-07,2026-02-26,5
+Ananya Iyer,2023PE2339,Thermodynamics,2026-01-02,2026-01-08,0
+Ananya Iyer,2023PE2339,IC Engines,2026-01-13,2026-01-18,0
+Isha Deshmukh,2022PE2767,IC Engines,2026-01-16,2026-01-24,0
+Isha Deshmukh,2022PE2767,Thermodynamics,2026-02-02,2026-02-08,0
+Isha Deshmukh,2022PE2767,Introduction to Algorithms,2026-02-15,2026-03-11,10
+Isha Deshmukh,2022PE2767,Microprocessors,2026-01-27,2026-02-20,10
+Arjun Nair,2023PE5363,Microprocessors,2026-01-07,2026-01-13,0
+Arjun Nair,2023PE5363,Introduction to Algorithms,2026-02-05,2026-02-27,8
+Arjun Nair,2023PE5363,Machine Learning,2026-01-02,2026-01-16,0
+Arjun Nair,2023PE5363,Thermodynamics,2026-01-02,2026-01-15,0
+Sanya Mehta,2022PE6271,Thermodynamics,2026-02-13,2026-02-24,0
+Sanya Mehta,2022PE6271,Signals and Systems,2026-01-07,2026-01-28,7
+Sanya Mehta,2022PE6271,Thermodynamics,2026-02-15,2026-03-10,9
+Sanya Mehta,2022PE6271,Introduction to Algorithms,2026-01-31,2026-02-14,0
+Isha Deshmukh,2022PE7968,Microprocessors,2026-01-14,2026-02-06,9
+Isha Deshmukh,2022PE7968,IC Engines,2026-02-01,2026-02-11,0
+Isha Deshmukh,2022PE7968,Introduction to Algorithms,2026-01-07,2026-01-13,0
+Isha Deshmukh,2022PE7968,Machine Learning,2026-02-12,2026-02-28,2
+Vihaan Patil,2022PE6069,Introduction to Algorithms,2026-02-26,2026-03-23,11
+Vihaan Patil,2022PE6069,Microprocessors,2026-01-15,2026-02-06,8
+Vihaan Patil,2022PE6069,Machine Learning,2026-02-23,2026-03-04,0
+Vihaan Patil,2022PE6069,Signals and Systems,2026-02-16,2026-02-25,0
+Vihaan Patil,2023PE9097,Thermodynamics,2026-01-29,2026-02-21,9
+Vihaan Patil,2023PE9097,Thermodynamics,2026-02-21,2026-03-15,8
+Vihaan Patil,2023PE9097,Thermodynamics,2026-01-27,2026-02-06,0
+Vihaan Patil,2023PE9097,Introduction to Algorithms,2026-01-26,2026-02-13,4
+Rohan Verma,2022PE3609,Thermodynamics,2026-01-15,2026-02-04,6
+Rohan Verma,2022PE3609,Machine Learning,2026-01-24,2026-02-07,0
+Rohan Verma,2022PE3609,Machine Learning,2026-01-19,2026-02-02,0
+Rohan Verma,2022PE3609,Machine Learning,2026-02-25,2026-03-13,2
+Aarav Sharma,2023PE7114,Thermodynamics,2026-02-20,2026-03-06,0
+Aarav Sharma,2023PE7114,Signals and Systems,2026-01-29,2026-02-21,9
+Aarav Sharma,2023PE7114,Signals and Systems,2026-02-14,2026-02-23,0
+Aarav Sharma,2023PE7114,Microprocessors,2026-01-23,2026-01-28,0
+Rohan Verma,2023PE3677,Thermodynamics,2026-02-21,2026-03-06,0
+Rohan Verma,2023PE3677,Thermodynamics,2026-01-08,2026-01-27,5
+Rohan Verma,2023PE3677,Web Technologies,2026-03-01,2026-03-06,0
+Rohan Verma,2023PE3677,Microprocessors,2026-02-09,2026-02-24,1
+Ananya Iyer,2022PE1152,Machine Learning,2026-02-24,2026-03-02,0
+Ananya Iyer,2022PE1152,Microprocessors,2026-02-22,2026-03-10,2
+Ananya Iyer,2022PE1152,Signals and Systems,2026-01-08,2026-01-18,0
+Ananya Iyer,2022PE1152,Web Technologies,2026-01-09,2026-01-31,8
+Arjun Nair,2023PE5026,Microprocessors,2026-02-14,2026-02-21,0
+Arjun Nair,2023PE5026,Thermodynamics,2026-02-18,2026-03-04,0
+Arjun Nair,2023PE5026,Signals and Systems,2026-01-22,2026-02-15,10
+Arjun Nair,2023PE5026,IC Engines,2026-02-21,2026-03-15,8
+Vihaan Patil,2022PE7596,Machine Learning,2026-02-14,2026-03-05,5
+Vihaan Patil,2022PE7596,Signals and Systems,2026-02-15,2026-02-20,0
+Vihaan Patil,2022PE7596,IC Engines,2026-01-29,2026-02-18,6
+Vihaan Patil,2022PE7596,Web Technologies,2026-01-16,2026-01-23,0
+Rohan Verma,2023PE7172,Machine Learning,2026-02-21,2026-03-13,6
+Rohan Verma,2023PE7172,Web Technologies,2026-02-04,2026-02-17,0
+Rohan Verma,2023PE7172,Web Technologies,2026-01-21,2026-02-09,5
+Rohan Verma,2023PE7172,Machine Learning,2026-02-17,2026-02-26,0
+Aarav Sharma,2023PE1613,Microprocessors,2026-01-06,2026-01-17,0
+Aarav Sharma,2023PE1613,Signals and Systems,2026-01-08,2026-01-14,0
+Aarav Sharma,2023PE1613,Introduction to Algorithms,2026-02-10,2026-03-06,10
+Aarav Sharma,2023PE1613,Signals and Systems,2026-02-06,2026-03-03,11
+Isha Deshmukh,2023PE9519,Machine Learning,2026-02-20,2026-03-17,11
+Isha Deshmukh,2023PE9519,Web Technologies,2026-02-19,2026-02-24,0
+Isha Deshmukh,2023PE9519,Introduction to Algorithms,2026-02-05,2026-03-02,11
+Isha Deshmukh,2023PE9519,Signals and Systems,2026-02-20,2026-03-09,3
+Arjun Nair,2023PE7156,Web Technologies,2026-02-01,2026-02-06,0
+Arjun Nair,2023PE7156,IC Engines,2026-02-10,2026-02-27,3
+Arjun Nair,2023PE7156,Thermodynamics,2026-02-07,2026-03-01,8
+Arjun Nair,2023PE7156,Web Technologies,2026-01-09,2026-01-23,0
+Sanya Mehta,2022PE1161,Introduction to Algorithms,2026-01-15,2026-01-20,0
+Sanya Mehta,2022PE1161,Introduction to Algorithms,2026-02-15,2026-03-04,3
+Sanya Mehta,2022PE1161,Web Technologies,2026-01-11,2026-01-27,2
+Sanya Mehta,2022PE1161,Microprocessors,2026-01-22,2026-02-01,0
+Ananya Iyer,2023PE1110,Signals and Systems,2026-02-21,2026-02-28,0
+Ananya Iyer,2023PE1110,Thermodynamics,2026-02-12,2026-03-02,4
+Ananya Iyer,2023PE1110,Introduction to Algorithms,2026-01-07,2026-01-18,0
+Ananya Iyer,2023PE1110,Thermodynamics,2026-01-26,2026-02-13,4
+Aarav Sharma,2023PE3412,Introduction to Algorithms,2026-02-10,2026-02-17,0
+Aarav Sharma,2023PE3412,Machine Learning,2026-02-20,2026-03-17,11
+Aarav Sharma,2023PE3412,Thermodynamics,2026-02-15,2026-03-05,4
+Aarav Sharma,2023PE3412,Web Technologies,2026-02-23,2026-03-12,3
+Ananya Iyer,2023PE3825,Microprocessors,2026-02-25,2026-03-17,6
+Ananya Iyer,2023PE3825,Web Technologies,2026-01-26,2026-02-18,9
+Ananya Iyer,2023PE3825,Thermodynamics,2026-01-08,2026-01-22,0
+Ananya Iyer,2023PE3825,Signals and Systems,2026-01-06,2026-01-15,0
+Kiara Joshi,2023PE7282,Introduction to Algorithms,2026-02-28,2026-03-11,0
+Kiara Joshi,2023PE7282,Web Technologies,2026-02-02,2026-02-07,0
+Kiara Joshi,2023PE7282,Web Technologies,2026-01-19,2026-01-24,0
+Kiara Joshi,2023PE7282,Signals and Systems,2026-01-07,2026-01-15,0
+Ananya Iyer,2022PE7102,Thermodynamics,2026-02-08,2026-02-27,5
+Ananya Iyer,2022PE7102,Introduction to Algorithms,2026-03-02,2026-03-11,0
+Ananya Iyer,2022PE7102,Microprocessors,2026-02-11,2026-02-17,0
+Ananya Iyer,2022PE7102,Thermodynamics,2026-01-08,2026-01-16,0
+Ananya Iyer,2022PE4495,Machine Learning,2026-02-09,2026-02-14,0
+Ananya Iyer,2022PE4495,Machine Learning,2026-01-31,2026-02-17,3
+Ananya Iyer,2022PE4495,Introduction to Algorithms,2026-01-02,2026-01-14,0
+Ananya Iyer,2022PE4495,Introduction to Algorithms,2026-02-25,2026-03-02,0
+Rohan Verma,2022PE5826,Machine Learning,2026-02-05,2026-02-10,0
+Rohan Verma,2022PE5826,Introduction to Algorithms,2026-02-17,2026-03-11,8
+Rohan Verma,2022PE5826,Microprocessors,2026-01-17,2026-01-29,0
+Rohan Verma,2022PE5826,IC Engines,2026-01-14,2026-02-01,4
+Rohan Verma,2023PE6771,Web Technologies,2026-03-02,2026-03-23,7
+Rohan Verma,2023PE6771,Web Technologies,2026-02-19,2026-02-28,0
+Rohan Verma,2023PE6771,Machine Learning,2026-01-14,2026-01-27,0
+Rohan Verma,2023PE6771,Machine Learning,2026-02-19,2026-03-06,1
+Rohan Verma,2022PE7916,IC Engines,2026-02-20,2026-02-28,0
+Rohan Verma,2022PE7916,IC Engines,2026-02-23,2026-03-07,0
+Rohan Verma,2022PE7916,Signals and Systems,2026-01-19,2026-01-29,0
+Rohan Verma,2022PE7916,Thermodynamics,2026-03-01,2026-03-14,0
+Arjun Nair,2022PE8162,IC Engines,2026-02-28,2026-03-05,0
+Arjun Nair,2022PE8162,Microprocessors,2026-02-11,2026-03-06,9
+Arjun Nair,2022PE8162,Thermodynamics,2026-02-18,2026-03-11,7
+Arjun Nair,2022PE8162,Machine Learning,2026-02-05,2026-02-18,0
+Aarav Sharma,2023PE6452,Introduction to Algorithms,2026-02-22,2026-03-09,1
+Aarav Sharma,2023PE6452,Thermodynamics,2026-01-25,2026-02-05,0
+Aarav Sharma,2023PE6452,Machine Learning,2026-03-02,2026-03-13,0
+Aarav Sharma,2023PE6452,Introduction to Algorithms,2026-02-03,2026-02-08,0
+Ananya Iyer,2022PE3496,Introduction to Algorithms,2026-01-29,2026-02-18,6
+Ananya Iyer,2022PE3496,Microprocessors,2026-02-06,2026-02-23,3
+Ananya Iyer,2022PE3496,Signals and Systems,2026-01-28,2026-02-19,8
+Ananya Iyer,2022PE3496,Machine Learning,2026-02-02,2026-02-07,0
+Rohan Verma,2022PE4127,Microprocessors,2026-01-29,2026-02-19,7
+Rohan Verma,2022PE4127,Introduction to Algorithms,2026-01-28,2026-02-14,3
+Rohan Verma,2022PE4127,IC Engines,2026-01-25,2026-02-08,0
+Rohan Verma,2022PE4127,Machine Learning,2026-01-13,2026-02-05,9
+Ananya Iyer,2023PE5987,Signals and Systems,2026-02-13,2026-02-28,1
+Ananya Iyer,2023PE5987,Machine Learning,2026-02-17,2026-03-06,3
+Ananya Iyer,2023PE5987,Signals and Systems,2026-01-12,2026-01-26,0
+Ananya Iyer,2023PE5987,Web Technologies,2026-02-07,2026-02-14,0
+Sanya Mehta,2022PE2665,Thermodynamics,2026-02-26,2026-03-04,0
+Sanya Mehta,2022PE2665,Signals and Systems,2026-01-17,2026-01-31,0
+Sanya Mehta,2022PE2665,Machine Learning,2026-02-05,2026-02-24,5
+Sanya Mehta,2022PE2665,Thermodynamics,2026-02-26,2026-03-10,0
+Kiara Joshi,2022PE9140,Thermodynamics,2026-01-11,2026-01-21,0
+Kiara Joshi,2022PE9140,Thermodynamics,2026-02-05,2026-02-19,0
+Kiara Joshi,2022PE9140,Signals and Systems,2026-02-28,2026-03-14,0
+Kiara Joshi,2022PE9140,Machine Learning,2026-01-20,2026-02-03,0
+Rohan Verma,2023PE3047,Microprocessors,2026-01-18,2026-01-30,0
+Rohan Verma,2023PE3047,Machine Learning,2026-02-08,2026-02-28,6
+Rohan Verma,2023PE3047,Web Technologies,2026-01-02,2026-01-09,0
+Rohan Verma,2023PE3047,Introduction to Algorithms,2026-03-01,2026-03-12,0
+Sanya Mehta,2023PE4358,Machine Learning,2026-02-07,2026-02-28,7
+Sanya Mehta,2023PE4358,IC Engines,2026-01-18,2026-02-12,11
+Sanya Mehta,2023PE4358,Microprocessors,2026-02-11,2026-03-04,7
+Sanya Mehta,2023PE4358,Microprocessors,2026-02-06,2026-03-03,11
+Rohan Verma,2023PE7200,Introduction to Algorithms,2026-01-09,2026-01-28,5
+Rohan Verma,2023PE7200,Microprocessors,2026-01-31,2026-02-05,0
+Rohan Verma,2023PE7200,IC Engines,2026-01-31,2026-02-07,0
+Rohan Verma,2023PE7200,Signals and Systems,2026-01-30,2026-02-22,9
+Kiara Joshi,2023PE7895,Microprocessors,2026-01-09,2026-01-27,4
+Kiara Joshi,2023PE7895,Web Technologies,2026-02-28,2026-03-17,3
+Kiara Joshi,2023PE7895,Machine Learning,2026-02-27,2026-03-14,1
+Kiara Joshi,2023PE7895,Web Technologies,2026-01-24,2026-02-07,0
