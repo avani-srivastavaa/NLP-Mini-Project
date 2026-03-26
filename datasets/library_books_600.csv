@@ -1,0 +1,601 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+FI-001,Graphics Fundamentals by Galvin (Ed 1),Galvin,First Year,5,5
+FI-002,Graphics Fundamentals by Galvin (Ed 2),Galvin,First Year,12,11
+FI-003,Chemistry Fundamentals by Galvin (Ed 1),Galvin,First Year,8,8
+FI-004,Math Fundamentals by Balanis (Ed 5),Balanis,First Year,9,9
+FI-005,Electrical Fundamentals by Balanis (Ed 1),Balanis,First Year,11,11
+FI-006,Math Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,First Year,10,10
+FI-007,C Programming Fundamentals by Balanis (Ed 4),Balanis,First Year,7,7
+FI-008,Graphics Fundamentals by V. Ganesan (Ed 2),V. Ganesan,First Year,8,8
+FI-009,Electrical Fundamentals by Pressman (Ed 3),Pressman,First Year,12,12
+FI-010,C Programming Fundamentals by V. Ganesan (Ed 3),V. Ganesan,First Year,11,9
+FI-011,Math Fundamentals by Yunus Cengel (Ed 1),Yunus Cengel,First Year,7,7
+FI-012,Physics Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,First Year,10,9
+FI-013,Chemistry Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,First Year,10,10
+FI-014,Electrical Fundamentals by Pressman (Ed 1),Pressman,First Year,8,8
+FI-015,Mechanics Fundamentals by Cormen (Ed 5),Cormen,First Year,5,5
+FI-016,C Programming Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,First Year,9,8
+FI-017,C Programming Fundamentals by V. Ganesan (Ed 3),V. Ganesan,First Year,12,10
+FI-018,Chemistry Fundamentals by Galvin (Ed 3),Galvin,First Year,12,11
+FI-019,Chemistry Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,First Year,7,6
+FI-020,Physics Fundamentals by Pressman (Ed 1),Pressman,First Year,11,11
+FI-021,Electrical Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,First Year,5,4
+FI-022,C Programming Fundamentals by V. Ganesan (Ed 5),V. Ganesan,First Year,12,11
+FI-023,Mechanics Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,First Year,6,5
+FI-024,Physics Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,First Year,9,9
+FI-025,Graphics Fundamentals by V. Ganesan (Ed 5),V. Ganesan,First Year,6,6
+FI-026,Chemistry Fundamentals by Tanenbaum (Ed 3),Tanenbaum,First Year,5,5
+FI-027,Chemistry Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,First Year,7,7
+FI-028,Electrical Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,First Year,11,11
+FI-029,Physics Fundamentals by Balanis (Ed 2),Balanis,First Year,11,11
+FI-030,Graphics Fundamentals by Tanenbaum (Ed 4),Tanenbaum,First Year,8,8
+FI-031,Electrical Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,First Year,9,9
+FI-032,Electrical Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,First Year,5,5
+FI-033,Physics Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,First Year,9,9
+FI-034,Math Fundamentals by Tanenbaum (Ed 4),Tanenbaum,First Year,6,6
+FI-035,Chemistry Fundamentals by Balanis (Ed 4),Balanis,First Year,12,12
+FI-036,Physics Fundamentals by V. Ganesan (Ed 4),V. Ganesan,First Year,7,7
+FI-037,Graphics Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,First Year,9,9
+FI-038,Physics Fundamentals by Pressman (Ed 5),Pressman,First Year,9,9
+FI-039,C Programming Fundamentals by Pressman (Ed 3),Pressman,First Year,12,11
+FI-040,Math Fundamentals by Pressman (Ed 4),Pressman,First Year,11,11
+FI-041,Graphics Fundamentals by Cormen (Ed 2),Cormen,First Year,8,8
+FI-042,Math Fundamentals by Haykin (Ed 1),Haykin,First Year,8,8
+FI-043,Graphics Fundamentals by Tanenbaum (Ed 2),Tanenbaum,First Year,7,7
+FI-044,C Programming Fundamentals by Pressman (Ed 3),Pressman,First Year,8,7
+FI-045,Chemistry Fundamentals by Pressman (Ed 2),Pressman,First Year,10,8
+FI-046,Electrical Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,First Year,5,3
+FI-047,Graphics Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,First Year,9,9
+FI-048,Electrical Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,First Year,11,10
+FI-049,Graphics Fundamentals by Tanenbaum (Ed 2),Tanenbaum,First Year,12,12
+FI-050,Math Fundamentals by Pressman (Ed 2),Pressman,First Year,9,8
+FI-051,Electrical Fundamentals by Cormen (Ed 1),Cormen,First Year,10,10
+FI-052,Electrical Fundamentals by Galvin (Ed 5),Galvin,First Year,10,10
+FI-053,Electrical Fundamentals by Tanenbaum (Ed 4),Tanenbaum,First Year,5,5
+FI-054,Graphics Fundamentals by Pressman (Ed 3),Pressman,First Year,8,8
+FI-055,Electrical Fundamentals by Cormen (Ed 3),Cormen,First Year,6,5
+FI-056,C Programming Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,First Year,5,5
+FI-057,Mechanics Fundamentals by Tanenbaum (Ed 2),Tanenbaum,First Year,8,8
+FI-058,Chemistry Fundamentals by V. Ganesan (Ed 2),V. Ganesan,First Year,9,9
+FI-059,Physics Fundamentals by S.S. Rattan (Ed 5),S.S. Rattan,First Year,9,9
+FI-060,C Programming Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,First Year,8,8
+FI-061,Chemistry Fundamentals by Tanenbaum (Ed 2),Tanenbaum,First Year,5,5
+FI-062,Physics Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,First Year,6,6
+FI-063,Graphics Fundamentals by Pressman (Ed 5),Pressman,First Year,12,11
+FI-064,Chemistry Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,First Year,9,9
+FI-065,Graphics Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,First Year,10,10
+FI-066,Mechanics Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,First Year,9,9
+FI-067,Graphics Fundamentals by Haykin (Ed 2),Haykin,First Year,8,8
+FI-068,Math Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,First Year,7,7
+FI-069,Math Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,First Year,6,6
+FI-070,Math Fundamentals by Yunus Cengel (Ed 4),Yunus Cengel,First Year,8,7
+FI-071,Mechanics Fundamentals by Tanenbaum (Ed 2),Tanenbaum,First Year,11,11
+FI-072,Chemistry Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,First Year,11,11
+FI-073,C Programming Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,First Year,9,9
+FI-074,Electrical Fundamentals by Haykin (Ed 5),Haykin,First Year,12,12
+FI-075,Chemistry Fundamentals by V. Ganesan (Ed 5),V. Ganesan,First Year,8,7
+FI-076,Physics Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,First Year,6,5
+FI-077,C Programming Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,First Year,6,6
+FI-078,C Programming Fundamentals by Tanenbaum (Ed 1),Tanenbaum,First Year,6,6
+FI-079,Graphics Fundamentals by Galvin (Ed 1),Galvin,First Year,9,9
+FI-080,Graphics Fundamentals by Balanis (Ed 1),Balanis,First Year,9,8
+FI-081,Electrical Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,First Year,5,4
+FI-082,Mechanics Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,First Year,8,7
+FI-083,Graphics Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,First Year,9,8
+FI-084,Electrical Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,First Year,9,9
+FI-085,Math Fundamentals by V. Ganesan (Ed 5),V. Ganesan,First Year,12,12
+FI-086,Math Fundamentals by Haykin (Ed 5),Haykin,First Year,11,11
+FI-087,Electrical Fundamentals by V. Ganesan (Ed 3),V. Ganesan,First Year,11,10
+FI-088,Chemistry Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,First Year,9,9
+FI-089,Chemistry Fundamentals by Balanis (Ed 4),Balanis,First Year,9,9
+FI-090,Electrical Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,First Year,5,5
+FI-091,Math Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,First Year,9,9
+FI-092,C Programming Fundamentals by Balanis (Ed 4),Balanis,First Year,11,11
+FI-093,Chemistry Fundamentals by Galvin (Ed 1),Galvin,First Year,9,9
+FI-094,Graphics Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,First Year,7,7
+FI-095,Graphics Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,First Year,5,5
+FI-096,Chemistry Fundamentals by Cormen (Ed 3),Cormen,First Year,8,8
+FI-097,Mechanics Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,First Year,8,8
+FI-098,Graphics Fundamentals by M. Morris Mano (Ed 3),M. Morris Mano,First Year,8,8
+FI-099,Mechanics Fundamentals by Pressman (Ed 2),Pressman,First Year,8,8
+FI-100,Graphics Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,First Year,10,10
+CS-001,Algorithms Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,CS,10,9
+CS-002,Networks Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,CS,12,11
+CS-003,OS Fundamentals by Balanis (Ed 1),Balanis,CS,10,9
+CS-004,Theory of Computation Fundamentals by Haykin (Ed 4),Haykin,CS,8,8
+CS-005,Networks Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,CS,11,11
+CS-006,Compiler Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,CS,8,8
+CS-007,Algorithms Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,CS,10,10
+CS-008,Algorithms Fundamentals by Balanis (Ed 3),Balanis,CS,11,11
+CS-009,Algorithms Fundamentals by Haykin (Ed 4),Haykin,CS,6,5
+CS-010,AI Fundamentals by Pressman (Ed 4),Pressman,CS,8,8
+CS-011,Theory of Computation Fundamentals by Haykin (Ed 1),Haykin,CS,8,8
+CS-012,DBMS Fundamentals by Cormen (Ed 3),Cormen,CS,9,9
+CS-013,DBMS Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,CS,10,10
+CS-014,Algorithms Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,CS,7,7
+CS-015,Networks Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,CS,9,9
+CS-016,Theory of Computation Fundamentals by Galvin (Ed 1),Galvin,CS,6,5
+CS-017,Networks Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,CS,8,8
+CS-018,AI Fundamentals by Balanis (Ed 2),Balanis,CS,12,11
+CS-019,Compiler Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,CS,11,8
+CS-020,OS Fundamentals by Galvin (Ed 2),Galvin,CS,6,6
+CS-021,Networks Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,CS,8,8
+CS-022,Networks Fundamentals by Cormen (Ed 5),Cormen,CS,8,7
+CS-023,OS Fundamentals by V. Ganesan (Ed 5),V. Ganesan,CS,9,9
+CS-024,DBMS Fundamentals by Galvin (Ed 2),Galvin,CS,6,6
+CS-025,Networks Fundamentals by Galvin (Ed 2),Galvin,CS,7,7
+CS-026,Networks Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,CS,9,9
+CS-027,AI Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,CS,9,9
+CS-028,Theory of Computation Fundamentals by Galvin (Ed 4),Galvin,CS,6,5
+CS-029,Compiler Fundamentals by Tanenbaum (Ed 2),Tanenbaum,CS,12,12
+CS-030,DBMS Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,CS,6,4
+CS-031,OS Fundamentals by Cormen (Ed 1),Cormen,CS,11,11
+CS-032,Compiler Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,CS,11,11
+CS-033,DBMS Fundamentals by Cormen (Ed 5),Cormen,CS,12,11
+CS-034,Algorithms Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,CS,8,8
+CS-035,Theory of Computation Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,CS,7,7
+CS-036,Networks Fundamentals by Balanis (Ed 4),Balanis,CS,12,12
+CS-037,AI Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,CS,7,6
+CS-038,AI Fundamentals by Galvin (Ed 5),Galvin,CS,5,4
+CS-039,Networks Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,CS,10,9
+CS-040,DBMS Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,CS,9,9
+CS-041,OS Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,CS,11,10
+CS-042,Networks Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,CS,8,8
+CS-043,Algorithms Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,CS,8,8
+CS-044,Theory of Computation Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,CS,8,8
+CS-045,Compiler Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,CS,12,11
+CS-046,Algorithms Fundamentals by Pressman (Ed 1),Pressman,CS,7,7
+CS-047,OS Fundamentals by Cormen (Ed 2),Cormen,CS,6,5
+CS-048,Networks Fundamentals by V. Ganesan (Ed 2),V. Ganesan,CS,11,11
+CS-049,Compiler Fundamentals by Galvin (Ed 1),Galvin,CS,9,9
+CS-050,AI Fundamentals by S.S. Rattan (Ed 5),S.S. Rattan,CS,8,8
+CS-051,Compiler Fundamentals by Haykin (Ed 5),Haykin,CS,6,6
+CS-052,Compiler Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,CS,6,6
+CS-053,OS Fundamentals by Cormen (Ed 3),Cormen,CS,5,5
+CS-054,Theory of Computation Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,CS,11,11
+CS-055,DBMS Fundamentals by Cormen (Ed 5),Cormen,CS,5,4
+CS-056,Theory of Computation Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,CS,10,10
+CS-057,DBMS Fundamentals by Haykin (Ed 2),Haykin,CS,5,4
+CS-058,OS Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,CS,8,8
+CS-059,Algorithms Fundamentals by Pressman (Ed 5),Pressman,CS,7,7
+CS-060,DBMS Fundamentals by Haykin (Ed 3),Haykin,CS,7,7
+CS-061,Theory of Computation Fundamentals by Haykin (Ed 2),Haykin,CS,8,8
+CS-062,AI Fundamentals by Cormen (Ed 4),Cormen,CS,6,6
+CS-063,OS Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,CS,9,9
+CS-064,AI Fundamentals by Ramesh Gaonkar (Ed 4),Ramesh Gaonkar,CS,10,10
+CS-065,Theory of Computation Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,CS,9,9
+CS-066,DBMS Fundamentals by Cormen (Ed 5),Cormen,CS,11,10
+CS-067,OS Fundamentals by Balanis (Ed 1),Balanis,CS,7,6
+CS-068,Algorithms Fundamentals by Galvin (Ed 3),Galvin,CS,8,8
+CS-069,Networks Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,CS,9,8
+CS-070,Algorithms Fundamentals by Galvin (Ed 3),Galvin,CS,8,8
+CS-071,AI Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,CS,12,12
+CS-072,DBMS Fundamentals by M. Morris Mano (Ed 5),M. Morris Mano,CS,9,9
+CS-073,AI Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,CS,8,8
+CS-074,AI Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,CS,8,8
+CS-075,AI Fundamentals by Cormen (Ed 1),Cormen,CS,7,7
+CS-076,OS Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,CS,6,2
+CS-077,Networks Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,CS,8,8
+CS-078,Compiler Fundamentals by Balanis (Ed 2),Balanis,CS,6,5
+CS-079,Networks Fundamentals by Cormen (Ed 3),Cormen,CS,10,10
+CS-080,Networks Fundamentals by Galvin (Ed 4),Galvin,CS,7,6
+CS-081,Networks Fundamentals by Cormen (Ed 4),Cormen,CS,11,10
+CS-082,DBMS Fundamentals by Haykin (Ed 1),Haykin,CS,11,11
+CS-083,Algorithms Fundamentals by Cormen (Ed 2),Cormen,CS,5,4
+CS-084,Algorithms Fundamentals by Galvin (Ed 5),Galvin,CS,6,6
+CS-085,OS Fundamentals by Tanenbaum (Ed 4),Tanenbaum,CS,11,11
+CS-086,Theory of Computation Fundamentals by Cormen (Ed 4),Cormen,CS,8,7
+CS-087,OS Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,CS,7,7
+CS-088,Networks Fundamentals by Yunus Cengel (Ed 1),Yunus Cengel,CS,5,5
+CS-089,Compiler Fundamentals by Balanis (Ed 2),Balanis,CS,5,4
+CS-090,DBMS Fundamentals by Cormen (Ed 2),Cormen,CS,11,11
+CS-091,Networks Fundamentals by V. Ganesan (Ed 1),V. Ganesan,CS,8,8
+CS-092,OS Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,CS,5,1
+CS-093,Theory of Computation Fundamentals by Tanenbaum (Ed 1),Tanenbaum,CS,11,11
+CS-094,DBMS Fundamentals by V. Ganesan (Ed 2),V. Ganesan,CS,8,7
+CS-095,Compiler Fundamentals by Cormen (Ed 5),Cormen,CS,7,6
+CS-096,Compiler Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,CS,9,8
+CS-097,Compiler Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,CS,9,9
+CS-098,Theory of Computation Fundamentals by Balanis (Ed 2),Balanis,CS,9,9
+CS-099,AI Fundamentals by Tanenbaum (Ed 1),Tanenbaum,CS,11,11
+CS-100,OS Fundamentals by Cormen (Ed 5),Cormen,CS,5,5
+IT-001,Web Tech Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,IT,5,3
+IT-002,Web Tech Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,IT,9,9
+IT-003,Cloud Fundamentals by Galvin (Ed 1),Galvin,IT,7,7
+IT-004,Data Mining Fundamentals by V. Ganesan (Ed 3),V. Ganesan,IT,12,9
+IT-005,Web Tech Fundamentals by Haykin (Ed 5),Haykin,IT,7,6
+IT-006,Big Data Fundamentals by V. Ganesan (Ed 5),V. Ganesan,IT,8,8
+IT-007,Web Tech Fundamentals by V. Ganesan (Ed 5),V. Ganesan,IT,12,11
+IT-008,Data Mining Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,IT,6,6
+IT-009,Cyber Security Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,IT,12,12
+IT-010,Cyber Security Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,8,8
+IT-011,Cloud Fundamentals by Pressman (Ed 4),Pressman,IT,11,10
+IT-012,Data Mining Fundamentals by Tanenbaum (Ed 3),Tanenbaum,IT,12,12
+IT-013,Big Data Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,11,11
+IT-014,Cloud Fundamentals by Pressman (Ed 1),Pressman,IT,12,11
+IT-015,Web Tech Fundamentals by B.S. Grewal (Ed 2),B.S. Grewal,IT,6,5
+IT-016,Data Mining Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,IT,6,6
+IT-017,Big Data Fundamentals by Cormen (Ed 3),Cormen,IT,6,6
+IT-018,Big Data Fundamentals by Pressman (Ed 3),Pressman,IT,6,5
+IT-019,Cyber Security Fundamentals by V. Ganesan (Ed 5),V. Ganesan,IT,10,10
+IT-020,Web Tech Fundamentals by V. Ganesan (Ed 4),V. Ganesan,IT,5,5
+IT-021,Big Data Fundamentals by M. Morris Mano (Ed 5),M. Morris Mano,IT,7,6
+IT-022,Cyber Security Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,IT,8,8
+IT-023,Data Mining Fundamentals by Haykin (Ed 1),Haykin,IT,5,5
+IT-024,Cyber Security Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,IT,8,7
+IT-025,Cyber Security Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,IT,9,7
+IT-026,Big Data Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,IT,12,11
+IT-027,Cyber Security Fundamentals by Tanenbaum (Ed 3),Tanenbaum,IT,5,5
+IT-028,Cloud Fundamentals by Cormen (Ed 5),Cormen,IT,10,9
+IT-029,Web Tech Fundamentals by Cormen (Ed 5),Cormen,IT,9,9
+IT-030,Software Engg Fundamentals by Cormen (Ed 1),Cormen,IT,6,5
+IT-031,Data Mining Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,IT,7,7
+IT-032,Big Data Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,IT,7,7
+IT-033,Data Mining Fundamentals by V. Ganesan (Ed 1),V. Ganesan,IT,5,4
+IT-034,Big Data Fundamentals by V. Ganesan (Ed 3),V. Ganesan,IT,5,5
+IT-035,Software Engg Fundamentals by Ramesh Gaonkar (Ed 4),Ramesh Gaonkar,IT,8,8
+IT-036,Data Mining Fundamentals by V. Ganesan (Ed 3),V. Ganesan,IT,11,8
+IT-037,Software Engg Fundamentals by Pressman (Ed 3),Pressman,IT,8,8
+IT-038,Data Mining Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,IT,5,4
+IT-039,Software Engg Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,IT,5,5
+IT-040,Software Engg Fundamentals by Pressman (Ed 4),Pressman,IT,5,5
+IT-041,Data Mining Fundamentals by Galvin (Ed 4),Galvin,IT,8,7
+IT-042,Software Engg Fundamentals by V. Ganesan (Ed 3),V. Ganesan,IT,9,8
+IT-043,Software Engg Fundamentals by Tanenbaum (Ed 2),Tanenbaum,IT,7,7
+IT-044,Software Engg Fundamentals by Balanis (Ed 5),Balanis,IT,10,8
+IT-045,Data Mining Fundamentals by Haykin (Ed 4),Haykin,IT,7,6
+IT-046,Cloud Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,IT,8,8
+IT-047,Big Data Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,8,8
+IT-048,Cyber Security Fundamentals by Yunus Cengel (Ed 4),Yunus Cengel,IT,12,12
+IT-049,Big Data Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,12,12
+IT-050,Cyber Security Fundamentals by Tanenbaum (Ed 5),Tanenbaum,IT,7,7
+IT-051,Cloud Fundamentals by Pressman (Ed 4),Pressman,IT,5,4
+IT-052,Big Data Fundamentals by Balanis (Ed 2),Balanis,IT,5,5
+IT-053,Cyber Security Fundamentals by Cormen (Ed 1),Cormen,IT,9,8
+IT-054,Cyber Security Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,IT,6,6
+IT-055,Web Tech Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,IT,5,4
+IT-056,Cyber Security Fundamentals by V. Ganesan (Ed 1),V. Ganesan,IT,10,10
+IT-057,Cloud Fundamentals by Tanenbaum (Ed 3),Tanenbaum,IT,11,11
+IT-058,Data Mining Fundamentals by Balanis (Ed 2),Balanis,IT,9,9
+IT-059,Software Engg Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,IT,6,6
+IT-060,Software Engg Fundamentals by Pressman (Ed 2),Pressman,IT,6,6
+IT-061,Cloud Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,11,10
+IT-062,Cyber Security Fundamentals by Haykin (Ed 3),Haykin,IT,12,12
+IT-063,Cyber Security Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,IT,5,5
+IT-064,Big Data Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,IT,6,6
+IT-065,Web Tech Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,IT,10,10
+IT-066,Software Engg Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,IT,11,11
+IT-067,Cyber Security Fundamentals by Galvin (Ed 1),Galvin,IT,6,6
+IT-068,Cyber Security Fundamentals by Galvin (Ed 5),Galvin,IT,12,10
+IT-069,Web Tech Fundamentals by R.K. Rajput (Ed 5),R.K. Rajput,IT,6,6
+IT-070,Web Tech Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,IT,7,7
+IT-071,Software Engg Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,IT,11,11
+IT-072,Software Engg Fundamentals by Cormen (Ed 5),Cormen,IT,11,10
+IT-073,Web Tech Fundamentals by B.S. Grewal (Ed 2),B.S. Grewal,IT,10,9
+IT-074,Software Engg Fundamentals by Balanis (Ed 5),Balanis,IT,7,5
+IT-075,Data Mining Fundamentals by Pressman (Ed 4),Pressman,IT,9,9
+IT-076,Data Mining Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,IT,8,7
+IT-077,Big Data Fundamentals by Tanenbaum (Ed 5),Tanenbaum,IT,6,6
+IT-078,Data Mining Fundamentals by Balanis (Ed 5),Balanis,IT,5,5
+IT-079,Big Data Fundamentals by Yunus Cengel (Ed 4),Yunus Cengel,IT,11,11
+IT-080,Cloud Fundamentals by Cormen (Ed 5),Cormen,IT,10,9
+IT-081,Data Mining Fundamentals by M. Morris Mano (Ed 3),M. Morris Mano,IT,6,5
+IT-082,Big Data Fundamentals by V. Ganesan (Ed 1),V. Ganesan,IT,9,9
+IT-083,Data Mining Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,IT,12,11
+IT-084,Cyber Security Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,IT,5,5
+IT-085,Cyber Security Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,IT,8,8
+IT-086,Big Data Fundamentals by Pressman (Ed 5),Pressman,IT,5,5
+IT-087,Data Mining Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,IT,10,10
+IT-088,Cyber Security Fundamentals by Haykin (Ed 2),Haykin,IT,7,7
+IT-089,Data Mining Fundamentals by V. Ganesan (Ed 4),V. Ganesan,IT,10,9
+IT-090,Web Tech Fundamentals by Tanenbaum (Ed 1),Tanenbaum,IT,9,8
+IT-091,Cyber Security Fundamentals by M. Morris Mano (Ed 3),M. Morris Mano,IT,11,11
+IT-092,Big Data Fundamentals by Cormen (Ed 2),Cormen,IT,10,10
+IT-093,Cyber Security Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,IT,7,7
+IT-094,Big Data Fundamentals by Galvin (Ed 2),Galvin,IT,9,9
+IT-095,Data Mining Fundamentals by Cormen (Ed 2),Cormen,IT,9,8
+IT-096,Cloud Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,IT,11,10
+IT-097,Cloud Fundamentals by V. Ganesan (Ed 4),V. Ganesan,IT,9,9
+IT-098,Software Engg Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,IT,8,7
+IT-099,Data Mining Fundamentals by Galvin (Ed 5),Galvin,IT,6,6
+IT-100,Software Engg Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,IT,10,9
+EC-001,Control Systems Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,ECS,8,7
+EC-002,Logic Design Fundamentals by Pressman (Ed 5),Pressman,ECS,6,6
+EC-003,Microcontrollers Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,ECS,9,9
+EC-004,Embedded Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,ECS,12,12
+EC-005,Logic Design Fundamentals by Balanis (Ed 4),Balanis,ECS,6,4
+EC-006,Control Systems Fundamentals by Cormen (Ed 4),Cormen,ECS,7,7
+EC-007,Embedded Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,ECS,8,7
+EC-008,VLSI Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,ECS,7,6
+EC-009,Control Systems Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,ECS,7,7
+EC-010,Logic Design Fundamentals by Galvin (Ed 1),Galvin,ECS,8,8
+EC-011,Embedded Fundamentals by Tanenbaum (Ed 3),Tanenbaum,ECS,9,9
+EC-012,Control Systems Fundamentals by Cormen (Ed 1),Cormen,ECS,7,6
+EC-013,Embedded Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,ECS,7,7
+EC-014,Control Systems Fundamentals by Galvin (Ed 3),Galvin,ECS,11,11
+EC-015,Control Systems Fundamentals by Pressman (Ed 2),Pressman,ECS,9,9
+EC-016,Embedded Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,ECS,10,9
+EC-017,Logic Design Fundamentals by Pressman (Ed 2),Pressman,ECS,5,5
+EC-018,VLSI Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,ECS,11,11
+EC-019,VLSI Fundamentals by Tanenbaum (Ed 4),Tanenbaum,ECS,8,7
+EC-020,Embedded Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,ECS,9,9
+EC-021,Microcontrollers Fundamentals by Balanis (Ed 4),Balanis,ECS,8,8
+EC-022,Embedded Fundamentals by Galvin (Ed 1),Galvin,ECS,7,7
+EC-023,Logic Design Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,ECS,8,7
+EC-024,Logic Design Fundamentals by Galvin (Ed 4),Galvin,ECS,10,9
+EC-025,VLSI Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,ECS,9,9
+EC-026,Microcontrollers Fundamentals by Cormen (Ed 5),Cormen,ECS,6,6
+EC-027,Embedded Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,ECS,12,10
+EC-028,Microcontrollers Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,ECS,11,11
+EC-029,VLSI Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,ECS,11,10
+EC-030,Logic Design Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,ECS,5,5
+EC-031,Logic Design Fundamentals by Cormen (Ed 1),Cormen,ECS,7,7
+EC-032,Control Systems Fundamentals by Balanis (Ed 4),Balanis,ECS,11,11
+EC-033,VLSI Fundamentals by V. Ganesan (Ed 4),V. Ganesan,ECS,8,8
+EC-034,Control Systems Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,ECS,12,12
+EC-035,Logic Design Fundamentals by Haykin (Ed 2),Haykin,ECS,12,11
+EC-036,Microcontrollers Fundamentals by Haykin (Ed 4),Haykin,ECS,9,9
+EC-037,Logic Design Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,ECS,12,11
+EC-038,VLSI Fundamentals by V. Ganesan (Ed 1),V. Ganesan,ECS,12,12
+EC-039,Logic Design Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,ECS,10,9
+EC-040,Control Systems Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,ECS,6,5
+EC-041,Logic Design Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,ECS,6,6
+EC-042,Control Systems Fundamentals by Galvin (Ed 2),Galvin,ECS,6,5
+EC-043,Embedded Fundamentals by V. Ganesan (Ed 3),V. Ganesan,ECS,11,10
+EC-044,Embedded Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,ECS,11,10
+EC-045,Microcontrollers Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,ECS,8,7
+EC-046,VLSI Fundamentals by V. Ganesan (Ed 5),V. Ganesan,ECS,11,11
+EC-047,VLSI Fundamentals by Galvin (Ed 3),Galvin,ECS,9,8
+EC-048,Logic Design Fundamentals by Pressman (Ed 5),Pressman,ECS,7,7
+EC-049,Logic Design Fundamentals by Pressman (Ed 5),Pressman,ECS,7,7
+EC-050,Logic Design Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,ECS,12,10
+EC-051,Microcontrollers Fundamentals by Galvin (Ed 4),Galvin,ECS,7,7
+EC-052,Logic Design Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,ECS,5,3
+EC-053,Microcontrollers Fundamentals by V. Ganesan (Ed 5),V. Ganesan,ECS,9,9
+EC-054,Embedded Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,ECS,11,11
+EC-055,Microcontrollers Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,ECS,9,9
+EC-056,Control Systems Fundamentals by Galvin (Ed 1),Galvin,ECS,8,8
+EC-057,VLSI Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,ECS,8,8
+EC-058,Microcontrollers Fundamentals by Galvin (Ed 5),Galvin,ECS,9,9
+EC-059,Logic Design Fundamentals by Yunus Cengel (Ed 1),Yunus Cengel,ECS,6,5
+EC-060,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,ECS,10,9
+EC-061,Microcontrollers Fundamentals by Pressman (Ed 4),Pressman,ECS,7,7
+EC-062,Control Systems Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,ECS,5,5
+EC-063,Control Systems Fundamentals by Haykin (Ed 2),Haykin,ECS,9,9
+EC-064,VLSI Fundamentals by Pressman (Ed 1),Pressman,ECS,10,10
+EC-065,Embedded Fundamentals by Balanis (Ed 1),Balanis,ECS,12,12
+EC-066,Logic Design Fundamentals by Cormen (Ed 1),Cormen,ECS,8,8
+EC-067,Microcontrollers Fundamentals by Galvin (Ed 3),Galvin,ECS,5,5
+EC-068,Microcontrollers Fundamentals by R.K. Rajput (Ed 5),R.K. Rajput,ECS,7,6
+EC-069,Embedded Fundamentals by Pressman (Ed 3),Pressman,ECS,7,6
+EC-070,Logic Design Fundamentals by Pressman (Ed 2),Pressman,ECS,10,10
+EC-071,Microcontrollers Fundamentals by V. Ganesan (Ed 1),V. Ganesan,ECS,11,11
+EC-072,Control Systems Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,ECS,6,6
+EC-073,Control Systems Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,ECS,12,12
+EC-074,Logic Design Fundamentals by Galvin (Ed 5),Galvin,ECS,12,11
+EC-075,Logic Design Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,ECS,8,7
+EC-076,Logic Design Fundamentals by Ramesh Gaonkar (Ed 4),Ramesh Gaonkar,ECS,10,10
+EC-077,Embedded Fundamentals by Galvin (Ed 3),Galvin,ECS,7,7
+EC-078,Embedded Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,ECS,6,6
+EC-079,VLSI Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,ECS,5,4
+EC-080,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,ECS,8,7
+EC-081,Control Systems Fundamentals by S.S. Rattan (Ed 5),S.S. Rattan,ECS,10,10
+EC-082,Microcontrollers Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,ECS,6,6
+EC-083,Control Systems Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,ECS,10,9
+EC-084,Control Systems Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,ECS,12,12
+EC-085,Embedded Fundamentals by Cormen (Ed 3),Cormen,ECS,12,11
+EC-086,Embedded Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,ECS,11,10
+EC-087,Control Systems Fundamentals by V. Ganesan (Ed 3),V. Ganesan,ECS,7,6
+EC-088,VLSI Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,ECS,7,6
+EC-089,VLSI Fundamentals by Balanis (Ed 5),Balanis,ECS,10,8
+EC-090,Control Systems Fundamentals by Balanis (Ed 5),Balanis,ECS,7,6
+EC-091,Embedded Fundamentals by Tanenbaum (Ed 1),Tanenbaum,ECS,8,8
+EC-092,Control Systems Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,ECS,10,9
+EC-093,Embedded Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,ECS,6,6
+EC-094,VLSI Fundamentals by Tanenbaum (Ed 2),Tanenbaum,ECS,11,11
+EC-095,VLSI Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,ECS,9,8
+EC-096,Logic Design Fundamentals by Balanis (Ed 1),Balanis,ECS,6,5
+EC-097,Microcontrollers Fundamentals by Haykin (Ed 5),Haykin,ECS,6,6
+EC-098,Microcontrollers Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,ECS,10,9
+EC-099,Microcontrollers Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,ECS,9,9
+EC-100,VLSI Fundamentals by V. Ganesan (Ed 3),V. Ganesan,ECS,8,8
+EX-001,Signals Fundamentals by Tanenbaum (Ed 3),Tanenbaum,EXTC,5,5
+EX-002,Antennas Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,EXTC,6,5
+EX-003,Antennas Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,EXTC,6,5
+EX-004,Fiber Optics Fundamentals by Pressman (Ed 4),Pressman,EXTC,6,6
+EX-005,Signals Fundamentals by Cormen (Ed 4),Cormen,EXTC,7,6
+EX-006,Antennas Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,EXTC,6,6
+EX-007,Radar Fundamentals by Balanis (Ed 2),Balanis,EXTC,9,9
+EX-008,Wireless Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,EXTC,9,9
+EX-009,Radar Fundamentals by Cormen (Ed 4),Cormen,EXTC,10,10
+EX-010,Fiber Optics Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,EXTC,10,10
+EX-011,Satellite Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,EXTC,9,9
+EX-012,Satellite Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,EXTC,8,8
+EX-013,Signals Fundamentals by Cormen (Ed 3),Cormen,EXTC,6,6
+EX-014,Fiber Optics Fundamentals by Tanenbaum (Ed 3),Tanenbaum,EXTC,11,10
+EX-015,Antennas Fundamentals by Cormen (Ed 5),Cormen,EXTC,12,10
+EX-016,Signals Fundamentals by Balanis (Ed 2),Balanis,EXTC,7,7
+EX-017,Wireless Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,EXTC,11,11
+EX-018,Satellite Fundamentals by Pressman (Ed 1),Pressman,EXTC,10,9
+EX-019,Signals Fundamentals by B.S. Grewal (Ed 2),B.S. Grewal,EXTC,6,6
+EX-020,Signals Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,11,11
+EX-021,Signals Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,8,8
+EX-022,Satellite Fundamentals by Galvin (Ed 3),Galvin,EXTC,8,6
+EX-023,Signals Fundamentals by Balanis (Ed 5),Balanis,EXTC,8,7
+EX-024,Radar Fundamentals by V. Ganesan (Ed 1),V. Ganesan,EXTC,6,6
+EX-025,Radar Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,EXTC,5,5
+EX-026,Signals Fundamentals by V. Ganesan (Ed 5),V. Ganesan,EXTC,7,7
+EX-027,Fiber Optics Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,EXTC,6,5
+EX-028,Satellite Fundamentals by Haykin (Ed 5),Haykin,EXTC,6,6
+EX-029,Fiber Optics Fundamentals by Yunus Cengel (Ed 1),Yunus Cengel,EXTC,5,5
+EX-030,Radar Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,EXTC,12,10
+EX-031,Antennas Fundamentals by Pressman (Ed 1),Pressman,EXTC,7,7
+EX-032,Radar Fundamentals by Cormen (Ed 2),Cormen,EXTC,11,11
+EX-033,Wireless Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,6,5
+EX-034,Antennas Fundamentals by Yunus Cengel (Ed 4),Yunus Cengel,EXTC,8,8
+EX-035,Signals Fundamentals by Haykin (Ed 2),Haykin,EXTC,12,12
+EX-036,Wireless Fundamentals by Tanenbaum (Ed 4),Tanenbaum,EXTC,8,7
+EX-037,Fiber Optics Fundamentals by V. Ganesan (Ed 5),V. Ganesan,EXTC,12,12
+EX-038,Radar Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,EXTC,10,10
+EX-039,Fiber Optics Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,EXTC,7,7
+EX-040,Antennas Fundamentals by Tanenbaum (Ed 3),Tanenbaum,EXTC,5,5
+EX-041,Antennas Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,EXTC,8,8
+EX-042,Satellite Fundamentals by Pressman (Ed 1),Pressman,EXTC,5,4
+EX-043,Satellite Fundamentals by V. Ganesan (Ed 4),V. Ganesan,EXTC,5,5
+EX-044,Fiber Optics Fundamentals by Tanenbaum (Ed 4),Tanenbaum,EXTC,12,12
+EX-045,Antennas Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,EXTC,12,11
+EX-046,Antennas Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,EXTC,9,7
+EX-047,Radar Fundamentals by Galvin (Ed 3),Galvin,EXTC,11,11
+EX-048,Radar Fundamentals by Tanenbaum (Ed 1),Tanenbaum,EXTC,7,7
+EX-049,Wireless Fundamentals by Haykin (Ed 5),Haykin,EXTC,8,6
+EX-050,Wireless Fundamentals by V. Ganesan (Ed 1),V. Ganesan,EXTC,8,8
+EX-051,Radar Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,EXTC,5,5
+EX-052,Wireless Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,EXTC,5,4
+EX-053,Radar Fundamentals by Ramesh Gaonkar (Ed 5),Ramesh Gaonkar,EXTC,7,7
+EX-054,Satellite Fundamentals by V. Ganesan (Ed 5),V. Ganesan,EXTC,6,6
+EX-055,Wireless Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,EXTC,12,11
+EX-056,Satellite Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,EXTC,7,6
+EX-057,Satellite Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,EXTC,7,6
+EX-058,Signals Fundamentals by Tanenbaum (Ed 4),Tanenbaum,EXTC,6,6
+EX-059,Fiber Optics Fundamentals by V. Ganesan (Ed 2),V. Ganesan,EXTC,10,9
+EX-060,Fiber Optics Fundamentals by Pressman (Ed 5),Pressman,EXTC,5,5
+EX-061,Satellite Fundamentals by Cormen (Ed 4),Cormen,EXTC,9,9
+EX-062,Antennas Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,EXTC,5,5
+EX-063,Antennas Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,EXTC,8,7
+EX-064,Satellite Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,EXTC,5,5
+EX-065,Fiber Optics Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,EXTC,10,10
+EX-066,Signals Fundamentals by Erwin Kreyszig (Ed 2),Erwin Kreyszig,EXTC,10,9
+EX-067,Signals Fundamentals by Balanis (Ed 5),Balanis,EXTC,9,8
+EX-068,Wireless Fundamentals by Tanenbaum (Ed 1),Tanenbaum,EXTC,12,12
+EX-069,Signals Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,EXTC,6,5
+EX-070,Antennas Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,9,9
+EX-071,Satellite Fundamentals by Cormen (Ed 1),Cormen,EXTC,6,6
+EX-072,Wireless Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,EXTC,8,7
+EX-073,Fiber Optics Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,9,9
+EX-074,Wireless Fundamentals by R.K. Rajput (Ed 4),R.K. Rajput,EXTC,11,11
+EX-075,Wireless Fundamentals by V. Ganesan (Ed 2),V. Ganesan,EXTC,5,5
+EX-076,Wireless Fundamentals by Galvin (Ed 4),Galvin,EXTC,12,12
+EX-077,Wireless Fundamentals by Balanis (Ed 5),Balanis,EXTC,12,12
+EX-078,Satellite Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,EXTC,8,7
+EX-079,Fiber Optics Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,EXTC,7,7
+EX-080,Antennas Fundamentals by Cormen (Ed 5),Cormen,EXTC,11,9
+EX-081,Antennas Fundamentals by Cormen (Ed 4),Cormen,EXTC,8,8
+EX-082,Antennas Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,EXTC,8,6
+EX-083,Antennas Fundamentals by Yunus Cengel (Ed 5),Yunus Cengel,EXTC,11,11
+EX-084,Fiber Optics Fundamentals by Balanis (Ed 3),Balanis,EXTC,12,12
+EX-085,Antennas Fundamentals by M. Morris Mano (Ed 3),M. Morris Mano,EXTC,7,7
+EX-086,Fiber Optics Fundamentals by B.S. Grewal (Ed 2),B.S. Grewal,EXTC,11,10
+EX-087,Wireless Fundamentals by Balanis (Ed 3),Balanis,EXTC,9,8
+EX-088,Signals Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,EXTC,12,12
+EX-089,Signals Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,EXTC,10,10
+EX-090,Signals Fundamentals by Tanenbaum (Ed 1),Tanenbaum,EXTC,7,7
+EX-091,Fiber Optics Fundamentals by Yunus Cengel (Ed 4),Yunus Cengel,EXTC,7,7
+EX-092,Satellite Fundamentals by Cormen (Ed 1),Cormen,EXTC,6,6
+EX-093,Signals Fundamentals by Pressman (Ed 5),Pressman,EXTC,6,6
+EX-094,Radar Fundamentals by V. Ganesan (Ed 3),V. Ganesan,EXTC,9,9
+EX-095,Radar Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,EXTC,12,12
+EX-096,Fiber Optics Fundamentals by Balanis (Ed 5),Balanis,EXTC,10,10
+EX-097,Radar Fundamentals by Cormen (Ed 1),Cormen,EXTC,6,6
+EX-098,Fiber Optics Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,EXTC,7,7
+EX-099,Fiber Optics Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,EXTC,8,8
+EX-100,Satellite Fundamentals by B.S. Grewal (Ed 2),B.S. Grewal,EXTC,10,10
+ME-001,CAD Fundamentals by Pressman (Ed 5),Pressman,MECH,5,5
+ME-002,SOM Fundamentals by Haykin (Ed 4),Haykin,MECH,9,8
+ME-003,CAD Fundamentals by Pressman (Ed 2),Pressman,MECH,5,4
+ME-004,CAD Fundamentals by R.K. Rajput (Ed 1),R.K. Rajput,MECH,8,6
+ME-005,CAD Fundamentals by Tanenbaum (Ed 1),Tanenbaum,MECH,12,12
+ME-006,CAD Fundamentals by Cormen (Ed 3),Cormen,MECH,9,9
+ME-007,SOM Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,MECH,5,5
+ME-008,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,MECH,10,10
+ME-009,Fluid Mechanics Fundamentals by Balanis (Ed 5),Balanis,MECH,11,10
+ME-010,SOM Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,MECH,8,6
+ME-011,SOM Fundamentals by Galvin (Ed 3),Galvin,MECH,7,6
+ME-012,DOM Fundamentals by Haykin (Ed 3),Haykin,MECH,8,7
+ME-013,Thermodynamics Fundamentals by Tanenbaum (Ed 5),Tanenbaum,MECH,11,11
+ME-014,DOM Fundamentals by Cormen (Ed 2),Cormen,MECH,7,6
+ME-015,Thermodynamics Fundamentals by Galvin (Ed 4),Galvin,MECH,7,7
+ME-016,SOM Fundamentals by Ramesh Gaonkar (Ed 2),Ramesh Gaonkar,MECH,9,8
+ME-017,CAD Fundamentals by Balanis (Ed 1),Balanis,MECH,12,12
+ME-018,Fluid Mechanics Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,MECH,12,12
+ME-019,DOM Fundamentals by Cormen (Ed 1),Cormen,MECH,12,10
+ME-020,Thermodynamics Fundamentals by Galvin (Ed 4),Galvin,MECH,12,12
+ME-021,DOM Fundamentals by Haykin (Ed 4),Haykin,MECH,9,9
+ME-022,DOM Fundamentals by Pressman (Ed 4),Pressman,MECH,5,5
+ME-023,Thermodynamics Fundamentals by Balanis (Ed 5),Balanis,MECH,10,9
+ME-024,DOM Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,MECH,5,5
+ME-025,CAD Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,MECH,11,11
+ME-026,Heat Transfer Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,MECH,6,6
+ME-027,SOM Fundamentals by Cormen (Ed 5),Cormen,MECH,11,9
+ME-028,Thermodynamics Fundamentals by M. Morris Mano (Ed 2),M. Morris Mano,MECH,9,9
+ME-029,Thermodynamics Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,MECH,9,9
+ME-030,Thermodynamics Fundamentals by M. Morris Mano (Ed 4),M. Morris Mano,MECH,9,9
+ME-031,DOM Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,MECH,5,4
+ME-032,CAD Fundamentals by Galvin (Ed 2),Galvin,MECH,9,9
+ME-033,Fluid Mechanics Fundamentals by Pressman (Ed 4),Pressman,MECH,11,10
+ME-034,Fluid Mechanics Fundamentals by Haykin (Ed 2),Haykin,MECH,12,12
+ME-035,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,MECH,6,6
+ME-036,SOM Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,MECH,10,10
+ME-037,Fluid Mechanics Fundamentals by R.K. Rajput (Ed 5),R.K. Rajput,MECH,12,12
+ME-038,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 5),Erwin Kreyszig,MECH,12,11
+ME-039,SOM Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,MECH,7,5
+ME-040,Fluid Mechanics Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,MECH,5,5
+ME-041,SOM Fundamentals by Cormen (Ed 3),Cormen,MECH,6,5
+ME-042,Heat Transfer Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,MECH,6,6
+ME-043,Fluid Mechanics Fundamentals by Galvin (Ed 1),Galvin,MECH,9,7
+ME-044,SOM Fundamentals by Ramesh Gaonkar (Ed 1),Ramesh Gaonkar,MECH,10,10
+ME-045,SOM Fundamentals by Balanis (Ed 1),Balanis,MECH,8,8
+ME-046,CAD Fundamentals by Pressman (Ed 2),Pressman,MECH,5,4
+ME-047,Thermodynamics Fundamentals by Ramesh Gaonkar (Ed 3),Ramesh Gaonkar,MECH,5,4
+ME-048,Heat Transfer Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,MECH,7,7
+ME-049,SOM Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,MECH,7,6
+ME-050,Thermodynamics Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,MECH,12,12
+AU-001,Chassis Fundamentals by Cormen (Ed 1),Cormen,AUTO,11,11
+AU-002,Chassis Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,AUTO,8,7
+AU-003,Transmission Fundamentals by M. Morris Mano (Ed 5),M. Morris Mano,AUTO,8,8
+AU-004,Chassis Fundamentals by M. Morris Mano (Ed 1),M. Morris Mano,AUTO,9,8
+AU-005,IC Engines Fundamentals by V. Ganesan (Ed 1),V. Ganesan,AUTO,11,11
+AU-006,EV Tech Fundamentals by V. Ganesan (Ed 1),V. Ganesan,AUTO,7,7
+AU-007,IC Engines Fundamentals by Haykin (Ed 3),Haykin,AUTO,12,11
+AU-008,IC Engines Fundamentals by Ramesh Gaonkar (Ed 4),Ramesh Gaonkar,AUTO,8,8
+AU-009,EV Tech Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,AUTO,9,6
+AU-010,EV Tech Fundamentals by S.S. Rattan (Ed 3),S.S. Rattan,AUTO,12,12
+AU-011,EV Tech Fundamentals by R.K. Rajput (Ed 3),R.K. Rajput,AUTO,9,6
+AU-012,Chassis Fundamentals by Erwin Kreyszig (Ed 4),Erwin Kreyszig,AUTO,7,6
+AU-013,Chassis Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,AUTO,8,7
+AU-014,EV Tech Fundamentals by Haykin (Ed 4),Haykin,AUTO,7,6
+AU-015,Transmission Fundamentals by Cormen (Ed 2),Cormen,AUTO,7,6
+AU-016,EV Tech Fundamentals by S.S. Rattan (Ed 2),S.S. Rattan,AUTO,7,5
+AU-017,IC Engines Fundamentals by Yunus Cengel (Ed 3),Yunus Cengel,AUTO,7,6
+AU-018,EV Tech Fundamentals by V. Ganesan (Ed 4),V. Ganesan,AUTO,5,5
+AU-019,Chassis Fundamentals by Pressman (Ed 5),Pressman,AUTO,6,6
+AU-020,Vehicle Dynamics Fundamentals by V. Ganesan (Ed 3),V. Ganesan,AUTO,9,9
+AU-021,EV Tech Fundamentals by Erwin Kreyszig (Ed 3),Erwin Kreyszig,AUTO,8,8
+AU-022,Vehicle Dynamics Fundamentals by Cormen (Ed 4),Cormen,AUTO,10,9
+AU-023,IC Engines Fundamentals by V. Ganesan (Ed 2),V. Ganesan,AUTO,9,8
+AU-024,Transmission Fundamentals by R.K. Rajput (Ed 2),R.K. Rajput,AUTO,11,11
+AU-025,Vehicle Dynamics Fundamentals by M. Morris Mano (Ed 3),M. Morris Mano,AUTO,5,5
+AU-026,Vehicle Dynamics Fundamentals by M. Morris Mano (Ed 5),M. Morris Mano,AUTO,6,6
+AU-027,Vehicle Dynamics Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,AUTO,6,5
+AU-028,EV Tech Fundamentals by Tanenbaum (Ed 5),Tanenbaum,AUTO,9,9
+AU-029,Transmission Fundamentals by Balanis (Ed 1),Balanis,AUTO,6,6
+AU-030,IC Engines Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,AUTO,8,8
+AU-031,EV Tech Fundamentals by Yunus Cengel (Ed 2),Yunus Cengel,AUTO,7,7
+AU-032,EV Tech Fundamentals by Pressman (Ed 5),Pressman,AUTO,10,10
+AU-033,Vehicle Dynamics Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,AUTO,7,7
+AU-034,EV Tech Fundamentals by V. Ganesan (Ed 3),V. Ganesan,AUTO,6,6
+AU-035,Transmission Fundamentals by Erwin Kreyszig (Ed 1),Erwin Kreyszig,AUTO,7,7
+AU-036,EV Tech Fundamentals by S.S. Rattan (Ed 1),S.S. Rattan,AUTO,12,12
+AU-037,IC Engines Fundamentals by Galvin (Ed 1),Galvin,AUTO,12,12
+AU-038,Transmission Fundamentals by B.S. Grewal (Ed 5),B.S. Grewal,AUTO,8,8
+AU-039,Vehicle Dynamics Fundamentals by S.S. Rattan (Ed 4),S.S. Rattan,AUTO,10,10
+AU-040,Vehicle Dynamics Fundamentals by Galvin (Ed 1),Galvin,AUTO,9,9
+AU-041,IC Engines Fundamentals by B.S. Grewal (Ed 3),B.S. Grewal,AUTO,12,12
+AU-042,Chassis Fundamentals by Haykin (Ed 4),Haykin,AUTO,12,12
+AU-043,Transmission Fundamentals by Cormen (Ed 5),Cormen,AUTO,10,10
+AU-044,IC Engines Fundamentals by Galvin (Ed 4),Galvin,AUTO,8,7
+AU-045,Vehicle Dynamics Fundamentals by Galvin (Ed 4),Galvin,AUTO,7,7
+AU-046,Transmission Fundamentals by Haykin (Ed 5),Haykin,AUTO,9,8
+AU-047,Chassis Fundamentals by B.S. Grewal (Ed 1),B.S. Grewal,AUTO,7,6
+AU-048,Transmission Fundamentals by Haykin (Ed 1),Haykin,AUTO,6,6
+AU-049,Vehicle Dynamics Fundamentals by M. Morris Mano (Ed 5),M. Morris Mano,AUTO,8,8
+AU-050,Vehicle Dynamics Fundamentals by B.S. Grewal (Ed 4),B.S. Grewal,AUTO,8,8
