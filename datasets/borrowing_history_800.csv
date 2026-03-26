@@ -1,801 +1,801 @@
-Student Name,Admission No,Book Name,Date of Issue,Date of Return,Days Due
-Sanya Iyer,2024PE7367,Networks Fundamentals by Yunus Cengel (Ed 1),2026-03-02,2026-03-26,10
-Tanvi Deshmukh,2024PE6279,Signals Fundamentals by R.K. Rajput (Ed 3),2026-03-01,2026-03-18,3
-Rohan Nair,2023PE7536,Logic Design Fundamentals by Balanis (Ed 1),2026-03-03,2026-03-28,11
-Ananya Sharma,2023PE6691,Software Engg Fundamentals by Cormen (Ed 5),2026-03-21,2026-04-13,9
-Ananya Sharma,2023PE1590,SOM Fundamentals by Balanis (Ed 1),2026-03-15,2026-03-26,0
-Arjun Sharma,2023PE3508,Thermodynamics Fundamentals by M. Morris Mano (Ed 2),2026-02-18,2026-02-25,0
-Sanya Kulkarni,2024PE3370,AI Fundamentals by Galvin (Ed 5),2026-02-22,2026-03-15,7
-Ananya Iyer,2023PE1898,SOM Fundamentals by S.S. Rattan (Ed 1),2026-01-30,2026-02-19,6
-Zaid Gupta,2024PE3113,Data Mining Fundamentals by Balanis (Ed 2),2026-01-27,2026-02-20,10
-Arjun Mehta,2023PE9485,Embedded Fundamentals by Pressman (Ed 3),2026-02-18,2026-03-01,0
-Sanya Deshmukh,2023PE9422,Chemistry Fundamentals by Galvin (Ed 1),2026-01-29,2026-02-08,0
-Sanya Deshmukh,2023PE9422,C Programming Fundamentals by V. Ganesan (Ed 3),2026-03-12,2026-03-29,3
-Isha Joshi,2024PE1480,SOM Fundamentals by Haykin (Ed 4),2026-03-04,2026-03-21,3
-Sanya Sharma,2024PE9088,SOM Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-13,2026-04-06,10
-Vihaan Kulkarni,2023PE5057,AI Fundamentals by Ramesh Gaonkar (Ed 4),2026-02-14,2026-03-05,5
-Isha Kulkarni,2024PE8033,Satellite Fundamentals by Pressman (Ed 1),2026-01-25,2026-02-14,6
-Isha Patil,2023PE9520,VLSI Fundamentals by V. Ganesan (Ed 1),2026-02-05,2026-02-16,0
-Arjun Deshmukh,2023PE9873,IC Engines Fundamentals by B.S. Grewal (Ed 3),2026-02-23,2026-03-05,0
-Kiara Sharma,2024PE4451,Antennas Fundamentals by Erwin Kreyszig (Ed 3),2026-03-19,2026-04-04,2
-Zaid Patil,2024PE5024,C Programming Fundamentals by V. Ganesan (Ed 3),2026-01-27,2026-02-14,4
-Zaid Patil,2024PE5024,Wireless Fundamentals by S.S. Rattan (Ed 1),2026-03-14,2026-04-07,10
-Sanya Verma,2024PE8035,AI Fundamentals by Erwin Kreyszig (Ed 1),2026-02-24,2026-03-15,5
-Isha Kulkarni,2024PE9241,DBMS Fundamentals by Cormen (Ed 3),2026-01-26,2026-02-15,6
-Arjun Kulkarni,2024PE6940,Data Mining Fundamentals by R.K. Rajput (Ed 2),2026-03-25,2026-04-09,1
-Aditya Iyer,2023PE5338,Wireless Fundamentals by Ramesh Gaonkar (Ed 1),2026-03-10,2026-03-28,4
-Ananya Sharma,2024PE9110,OS Fundamentals by V. Ganesan (Ed 5),2026-02-26,2026-03-09,0
-Aarav Gupta,2023PE2475,Compiler Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-22,2026-04-08,3
-Meera Patil,2024PE6618,DBMS Fundamentals by Haykin (Ed 2),2026-03-06,2026-03-27,7
-Isha Mehta,2023PE3918,Data Mining Fundamentals by Pressman (Ed 4),2026-02-27,2026-03-06,0
-Kiara Mehta,2023PE6967,Graphics Fundamentals by M. Morris Mano (Ed 2),2026-01-26,2026-02-15,6
-Kiara Mehta,2023PE1632,Wireless Fundamentals by M. Morris Mano (Ed 1),2026-02-11,2026-02-26,1
-Meera Iyer,2024PE7197,SOM Fundamentals by Cormen (Ed 5),2026-03-15,2026-03-28,0
-Tanvi Patil,2024PE9903,Chemistry Fundamentals by Cormen (Ed 3),2026-02-12,2026-03-04,6
-Sanya Joshi,2023PE3245,C Programming Fundamentals by Pressman (Ed 3),2026-03-07,2026-04-01,11
-Isha Gupta,2023PE7396,Chemistry Fundamentals by Erwin Kreyszig (Ed 5),2026-02-05,2026-02-17,0
-Kiara Nair,2023PE2150,Software Engg Fundamentals by R.K. Rajput (Ed 4),2026-02-23,2026-03-01,0
-Arjun Iyer,2023PE8277,Wireless Fundamentals by M. Morris Mano (Ed 1),2026-03-22,2026-04-13,8
-Kiara Mehta,2023PE1632,Control Systems Fundamentals by R.K. Rajput (Ed 3),2026-03-25,2026-04-11,3
-Kiara Deshmukh,2024PE1976,Embedded Fundamentals by Galvin (Ed 3),2026-02-02,2026-02-11,0
-Ananya Deshmukh,2023PE5537,Algorithms Fundamentals by Cormen (Ed 2),2026-03-11,2026-03-18,0
-Zaid Nair,2024PE4348,Logic Design Fundamentals by Yunus Cengel (Ed 2),2026-03-23,2026-04-17,11
-Aditya Kulkarni,2023PE4115,Fluid Mechanics Fundamentals by Pressman (Ed 4),2026-02-02,2026-02-26,10
-Kiara Mehta,2023PE6643,Web Tech Fundamentals by Erwin Kreyszig (Ed 5),2026-03-03,2026-03-24,7
-Vihaan Mehta,2024PE3959,IC Engines Fundamentals by Galvin (Ed 1),2026-02-22,2026-03-11,3
-Aarav Patil,2024PE5680,Compiler Fundamentals by S.S. Rattan (Ed 3),2026-03-22,2026-04-16,11
-Aarav Patil,2024PE7114,Web Tech Fundamentals by Erwin Kreyszig (Ed 2),2026-03-19,2026-04-06,4
-Tanvi Joshi,2023PE3326,Radar Fundamentals by V. Ganesan (Ed 3),2026-01-30,2026-02-19,6
-Vihaan Sharma,2023PE3775,Graphics Fundamentals by Cormen (Ed 2),2026-02-06,2026-02-28,8
-Aarav Sharma,2023PE2360,Software Engg Fundamentals by Tanenbaum (Ed 2),2026-01-27,2026-02-05,0
-Isha Joshi,2023PE7131,C Programming Fundamentals by Balanis (Ed 4),2026-02-17,2026-03-06,3
-Zaid Joshi,2023PE1759,Mechanics Fundamentals by Pressman (Ed 2),2026-02-28,2026-03-23,9
-Meera Mehta,2023PE5166,AI Fundamentals by S.S. Rattan (Ed 1),2026-02-03,2026-02-27,10
-Tanvi Gupta,2024PE8617,Cyber Security Fundamentals by V. Ganesan (Ed 5),2026-02-09,2026-02-19,0
-Zaid Iyer,2023PE5163,Embedded Fundamentals by M. Morris Mano (Ed 1),2026-03-25,2026-04-09,1
-Meera Iyer,2023PE8931,Graphics Fundamentals by M. Morris Mano (Ed 2),2026-03-08,2026-03-23,1
-Tanvi Sharma,2024PE8888,Signals Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-18,2026-03-01,0
-Sanya Joshi,2024PE2835,Theory of Computation Fundamentals by B.S. Grewal (Ed 4),2026-02-02,2026-02-23,7
-Zaid Kulkarni,2024PE5014,DBMS Fundamentals by B.S. Grewal (Ed 3),2026-03-10,2026-03-19,0
-Aditya Mehta,2023PE7654,Fluid Mechanics Fundamentals by R.K. Rajput (Ed 5),2026-01-26,2026-02-12,3
-Vihaan Nair,2023PE3385,Embedded Fundamentals by M. Morris Mano (Ed 4),2026-02-05,2026-02-20,1
-Arjun Nair,2023PE4863,Data Mining Fundamentals by Galvin (Ed 5),2026-02-23,2026-03-10,1
-Sanya Deshmukh,2024PE4974,DOM Fundamentals by Yunus Cengel (Ed 3),2026-02-22,2026-03-01,0
-Tanvi Kulkarni,2023PE6031,VLSI Fundamentals by Tanenbaum (Ed 4),2026-03-18,2026-03-24,0
-Aditya Gupta,2023PE1140,Graphics Fundamentals by Galvin (Ed 2),2026-03-13,2026-04-01,5
-Aarav Iyer,2023PE1407,DOM Fundamentals by Cormen (Ed 2),2026-03-21,2026-04-09,5
-Aditya Patil,2023PE7440,Vehicle Dynamics Fundamentals by Erwin Kreyszig (Ed 1),2026-03-20,2026-03-30,0
-Kiara Joshi,2023PE5265,Embedded Fundamentals by Erwin Kreyszig (Ed 4),2026-02-05,2026-02-16,0
-Isha Joshi,2024PE1480,VLSI Fundamentals by Erwin Kreyszig (Ed 4),2026-03-13,2026-04-01,5
-Vihaan Deshmukh,2024PE9394,Algorithms Fundamentals by Cormen (Ed 2),2026-03-05,2026-03-16,0
-Meera Iyer,2024PE5097,SOM Fundamentals by Haykin (Ed 4),2026-03-08,2026-03-27,5
-Kiara Deshmukh,2024PE1976,Networks Fundamentals by M. Morris Mano (Ed 4),2026-02-25,2026-03-18,7
-Zaid Patil,2023PE9647,VLSI Fundamentals by M. Morris Mano (Ed 2),2026-03-06,2026-03-29,9
-Isha Verma,2023PE8707,Chemistry Fundamentals by Yunus Cengel (Ed 2),2026-03-14,2026-03-30,2
-Aditya Mehta,2023PE2693,EV Tech Fundamentals by Yunus Cengel (Ed 2),2026-02-09,2026-02-25,2
-Kiara Mehta,2023PE1632,VLSI Fundamentals by Galvin (Ed 3),2026-03-22,2026-04-16,11
-Isha Joshi,2023PE7131,SOM Fundamentals by Erwin Kreyszig (Ed 4),2026-01-30,2026-02-09,0
-Ananya Nair,2024PE8937,Physics Fundamentals by Pressman (Ed 1),2026-03-15,2026-03-21,0
-Ananya Sharma,2023PE8024,Cyber Security Fundamentals by R.K. Rajput (Ed 1),2026-01-29,2026-02-09,0
-Zaid Mehta,2024PE7954,Electrical Fundamentals by Erwin Kreyszig (Ed 2),2026-01-27,2026-02-10,0
-Sanya Mehta,2023PE5256,OS Fundamentals by Tanenbaum (Ed 4),2026-01-27,2026-02-10,0
-Aditya Nair,2023PE5732,DBMS Fundamentals by B.S. Grewal (Ed 1),2026-02-09,2026-02-25,2
-Rohan Iyer,2023PE7370,Software Engg Fundamentals by Cormen (Ed 1),2026-01-29,2026-02-10,0
-Aditya Mehta,2023PE2693,Cyber Security Fundamentals by R.K. Rajput (Ed 4),2026-02-26,2026-03-17,5
-Aditya Deshmukh,2024PE2959,OS Fundamentals by Balanis (Ed 1),2026-03-21,2026-04-07,3
-Isha Kulkarni,2024PE3429,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-03-05,2026-03-29,10
-Zaid Gupta,2023PE2593,Web Tech Fundamentals by Erwin Kreyszig (Ed 2),2026-02-26,2026-03-18,6
-Vihaan Patil,2024PE1317,Transmission Fundamentals by Cormen (Ed 2),2026-03-18,2026-04-06,5
-Rohan Nair,2023PE2934,OS Fundamentals by Ramesh Gaonkar (Ed 5),2026-02-15,2026-02-25,0
-Isha Joshi,2024PE9550,Radar Fundamentals by S.S. Rattan (Ed 2),2026-03-12,2026-03-24,0
-Vihaan Nair,2024PE4976,Logic Design Fundamentals by Erwin Kreyszig (Ed 2),2026-03-20,2026-04-04,1
-Tanvi Deshmukh,2023PE5499,OS Fundamentals by Balanis (Ed 1),2026-03-02,2026-03-13,0
-Isha Joshi,2024PE8227,C Programming Fundamentals by S.S. Rattan (Ed 2),2026-02-08,2026-02-14,0
-Aarav Patil,2023PE9607,DBMS Fundamentals by B.S. Grewal (Ed 3),2026-02-07,2026-02-18,0
-Vihaan Nair,2024PE4976,Chemistry Fundamentals by Tanenbaum (Ed 3),2026-02-03,2026-02-20,3
-Isha Sharma,2023PE1492,VLSI Fundamentals by R.K. Rajput (Ed 4),2026-03-05,2026-03-23,4
-Aditya Mehta,2023PE4306,AI Fundamentals by Yunus Cengel (Ed 3),2026-02-04,2026-02-20,2
-Vihaan Patil,2024PE1317,C Programming Fundamentals by Balanis (Ed 4),2026-03-13,2026-03-21,0
-Vihaan Mehta,2024PE3959,DBMS Fundamentals by Cormen (Ed 5),2026-02-02,2026-02-25,9
-Zaid Nair,2024PE2237,Data Mining Fundamentals by Galvin (Ed 5),2026-03-08,2026-03-25,3
-Meera Iyer,2024PE2717,Microcontrollers Fundamentals by Galvin (Ed 5),2026-02-16,2026-02-24,0
-Arjun Iyer,2023PE8277,Cyber Security Fundamentals by R.K. Rajput (Ed 4),2026-03-15,2026-03-28,0
-Isha Kulkarni,2024PE3429,Chemistry Fundamentals by V. Ganesan (Ed 5),2026-03-18,2026-04-08,7
-Aarav Patil,2024PE5680,AI Fundamentals by S.S. Rattan (Ed 2),2026-01-28,2026-02-18,7
-Aarav Joshi,2023PE5586,Cyber Security Fundamentals by M. Morris Mano (Ed 3),2026-02-03,2026-02-19,2
-Ananya Verma,2023PE3698,OS Fundamentals by Cormen (Ed 5),2026-02-03,2026-02-21,4
-Aditya Patil,2024PE1758,Microcontrollers Fundamentals by Ramesh Gaonkar (Ed 2),2026-02-27,2026-03-23,10
-Kiara Iyer,2024PE2151,Networks Fundamentals by Balanis (Ed 4),2026-02-15,2026-03-10,9
-Arjun Gupta,2024PE1346,C Programming Fundamentals by Erwin Kreyszig (Ed 4),2026-03-16,2026-04-02,3
-Aditya Gupta,2024PE9707,Algorithms Fundamentals by Pressman (Ed 5),2026-02-20,2026-03-13,7
-Sanya Kulkarni,2024PE4959,Software Engg Fundamentals by Ramesh Gaonkar (Ed 4),2026-03-03,2026-03-10,0
-Aditya Nair,2023PE5732,Cloud Fundamentals by V. Ganesan (Ed 4),2026-03-12,2026-03-21,0
-Vihaan Mehta,2024PE3959,Networks Fundamentals by Cormen (Ed 3),2026-02-09,2026-03-04,9
-Arjun Sharma,2023PE8319,Cloud Fundamentals by Galvin (Ed 1),2026-01-28,2026-02-09,0
-Sanya Deshmukh,2023PE7151,Signals Fundamentals by Cormen (Ed 3),2026-02-24,2026-03-09,0
-Tanvi Mehta,2023PE2415,Software Engg Fundamentals by S.S. Rattan (Ed 2),2026-02-05,2026-02-20,1
-Arjun Mehta,2023PE9743,C Programming Fundamentals by V. Ganesan (Ed 3),2026-03-19,2026-04-11,9
-Aarav Patil,2023PE9202,Physics Fundamentals by Balanis (Ed 2),2026-03-06,2026-03-24,4
-Sanya Patil,2023PE8905,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 5),2026-03-11,2026-03-29,4
-Vihaan Mehta,2024PE6488,Chemistry Fundamentals by Galvin (Ed 3),2026-02-14,2026-02-25,0
-Aarav Deshmukh,2024PE4720,Thermodynamics Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-24,2026-04-05,0
-Isha Verma,2024PE4987,OS Fundamentals by Cormen (Ed 2),2026-02-27,2026-03-09,0
-Kiara Verma,2024PE8114,OS Fundamentals by Cormen (Ed 1),2026-02-04,2026-02-24,6
-Ananya Sharma,2024PE9451,Logic Design Fundamentals by Galvin (Ed 4),2026-02-22,2026-03-19,11
-Meera Sharma,2023PE5660,SOM Fundamentals by Cormen (Ed 5),2026-02-14,2026-02-20,0
-Meera Patil,2024PE1407,Chassis Fundamentals by Erwin Kreyszig (Ed 4),2026-03-23,2026-04-10,4
-Vihaan Sharma,2023PE3775,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 4),2026-03-11,2026-03-17,0
-Arjun Gupta,2024PE1346,Data Mining Fundamentals by Galvin (Ed 4),2026-03-12,2026-04-02,7
-Zaid Mehta,2023PE3641,Logic Design Fundamentals by Pressman (Ed 5),2026-02-12,2026-02-28,2
-Kiara Nair,2023PE2150,Big Data Fundamentals by Ramesh Gaonkar (Ed 1),2026-01-26,2026-02-12,3
-Zaid Nair,2023PE6274,Wireless Fundamentals by Balanis (Ed 3),2026-03-15,2026-03-23,0
-Ananya Sharma,2023PE8024,Chemistry Fundamentals by V. Ganesan (Ed 5),2026-02-16,2026-03-13,11
-Sanya Gupta,2023PE2991,Signals Fundamentals by Haykin (Ed 2),2026-02-27,2026-03-17,4
-Ananya Sharma,2023PE1590,Thermodynamics Fundamentals by M. Morris Mano (Ed 2),2026-03-02,2026-03-24,8
-Meera Sharma,2023PE2543,Chassis Fundamentals by Haykin (Ed 4),2026-02-10,2026-02-17,0
-Meera Iyer,2024PE7197,Logic Design Fundamentals by Erwin Kreyszig (Ed 4),2026-03-16,2026-04-03,4
-Isha Joshi,2023PE7131,Software Engg Fundamentals by V. Ganesan (Ed 3),2026-03-25,2026-04-01,0
-Kiara Joshi,2023PE5265,SOM Fundamentals by S.S. Rattan (Ed 4),2026-01-28,2026-02-10,0
-Meera Sharma,2023PE2543,DOM Fundamentals by Yunus Cengel (Ed 3),2026-02-05,2026-02-20,1
-Ananya Patil,2024PE6426,Theory of Computation Fundamentals by Galvin (Ed 4),2026-03-07,2026-03-30,9
-Aditya Joshi,2024PE5937,Embedded Fundamentals by Cormen (Ed 3),2026-03-09,2026-04-01,9
-Meera Patil,2024PE1407,Compiler Fundamentals by R.K. Rajput (Ed 1),2026-03-23,2026-04-06,0
-Meera Nair,2024PE8111,EV Tech Fundamentals by Pressman (Ed 5),2026-02-22,2026-03-09,1
-Vihaan Patil,2023PE2404,Data Mining Fundamentals by V. Ganesan (Ed 3),2026-03-24,2026-04-12,5
-Tanvi Deshmukh,2024PE6279,Embedded Fundamentals by Yunus Cengel (Ed 2),2026-02-26,2026-03-10,0
-Kiara Deshmukh,2023PE5359,Embedded Fundamentals by V. Ganesan (Ed 3),2026-03-23,2026-03-28,0
-Aditya Gupta,2024PE9707,Control Systems Fundamentals by Cormen (Ed 4),2026-02-28,2026-03-14,0
-Sanya Verma,2024PE8035,Graphics Fundamentals by S.S. Rattan (Ed 3),2026-02-13,2026-02-23,0
-Aarav Gupta,2024PE2197,Web Tech Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-13,2026-03-28,1
-Meera Iyer,2024PE2717,Cloud Fundamentals by Galvin (Ed 1),2026-02-17,2026-03-12,9
-Isha Joshi,2024PE3107,Microcontrollers Fundamentals by M. Morris Mano (Ed 1),2026-01-31,2026-02-14,0
-Zaid Mehta,2023PE3641,Math Fundamentals by Yunus Cengel (Ed 2),2026-02-06,2026-02-17,0
-Arjun Gupta,2024PE1346,Satellite Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-25,2026-04-11,3
-Isha Verma,2024PE2758,Antennas Fundamentals by B.S. Grewal (Ed 1),2026-03-13,2026-03-21,0
-Sanya Verma,2024PE4744,Big Data Fundamentals by V. Ganesan (Ed 5),2026-02-27,2026-03-20,7
-Aarav Nair,2024PE6080,Control Systems Fundamentals by Erwin Kreyszig (Ed 2),2026-03-25,2026-04-12,4
-Vihaan Kulkarni,2023PE5057,AI Fundamentals by Galvin (Ed 5),2026-03-21,2026-03-28,0
-Ananya Iyer,2023PE1898,Algorithms Fundamentals by Galvin (Ed 3),2026-02-12,2026-02-23,0
-Kiara Verma,2024PE8114,Big Data Fundamentals by Pressman (Ed 3),2026-03-08,2026-03-26,4
-Zaid Iyer,2023PE7560,Satellite Fundamentals by V. Ganesan (Ed 4),2026-02-26,2026-03-13,1
-Meera Verma,2023PE1092,C Programming Fundamentals by Pressman (Ed 3),2026-02-22,2026-03-19,11
-Meera Kulkarni,2024PE1444,DBMS Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-06,2026-03-25,5
-Isha Sharma,2023PE4819,Web Tech Fundamentals by Haykin (Ed 5),2026-03-15,2026-03-28,0
-Vihaan Gupta,2024PE5981,Electrical Fundamentals by R.K. Rajput (Ed 4),2026-02-12,2026-02-28,2
-Aditya Mehta,2023PE7654,Logic Design Fundamentals by M. Morris Mano (Ed 1),2026-02-24,2026-03-18,8
-Sanya Gupta,2024PE6453,Math Fundamentals by S.S. Rattan (Ed 2),2026-02-18,2026-02-25,0
-Aarav Patil,2024PE5680,DBMS Fundamentals by Cormen (Ed 2),2026-03-01,2026-03-06,0
-Isha Joshi,2024PE9550,Electrical Fundamentals by M. Morris Mano (Ed 4),2026-03-12,2026-04-03,8
-Kiara Sharma,2024PE5187,Math Fundamentals by Haykin (Ed 5),2026-03-03,2026-03-13,0
-Zaid Nair,2023PE3418,Embedded Fundamentals by M. Morris Mano (Ed 1),2026-03-16,2026-03-28,0
-Isha Kulkarni,2024PE3429,Wireless Fundamentals by V. Ganesan (Ed 1),2026-02-10,2026-02-24,0
-Rohan Nair,2023PE2934,Signals Fundamentals by Tanenbaum (Ed 1),2026-03-09,2026-03-19,0
-Vihaan Gupta,2024PE3598,Networks Fundamentals by M. Morris Mano (Ed 4),2026-02-05,2026-02-15,0
-Vihaan Gupta,2024PE8882,Cyber Security Fundamentals by Cormen (Ed 1),2026-03-01,2026-03-11,0
-Meera Iyer,2023PE4445,C Programming Fundamentals by S.S. Rattan (Ed 2),2026-03-04,2026-03-20,2
-Tanvi Kulkarni,2023PE2905,Networks Fundamentals by Erwin Kreyszig (Ed 3),2026-03-15,2026-04-04,6
-Aarav Kulkarni,2023PE5085,Theory of Computation Fundamentals by Galvin (Ed 1),2026-03-18,2026-03-29,0
-Meera Mehta,2023PE3145,AI Fundamentals by Cormen (Ed 4),2026-02-18,2026-03-06,2
-Vihaan Iyer,2023PE7141,Wireless Fundamentals by R.K. Rajput (Ed 4),2026-01-29,2026-02-08,0
-Kiara Sharma,2024PE4451,C Programming Fundamentals by V. Ganesan (Ed 5),2026-02-08,2026-02-21,0
-Kiara Gupta,2024PE9197,Microcontrollers Fundamentals by R.K. Rajput (Ed 2),2026-02-13,2026-02-22,0
-Meera Mehta,2023PE5166,Math Fundamentals by Pressman (Ed 2),2026-03-06,2026-03-27,7
-Kiara Sharma,2024PE1614,Cyber Security Fundamentals by Yunus Cengel (Ed 4),2026-01-26,2026-02-05,0
-Vihaan Nair,2023PE3385,IC Engines Fundamentals by Galvin (Ed 1),2026-01-29,2026-02-18,6
-Zaid Verma,2023PE8077,Fluid Mechanics Fundamentals by R.K. Rajput (Ed 5),2026-02-03,2026-02-09,0
-Sanya Iyer,2023PE4965,Web Tech Fundamentals by Cormen (Ed 5),2026-02-26,2026-03-21,9
-Sanya Verma,2024PE4744,Software Engg Fundamentals by V. Ganesan (Ed 3),2026-02-05,2026-02-28,9
-Aarav Iyer,2023PE1407,VLSI Fundamentals by Tanenbaum (Ed 4),2026-03-12,2026-04-05,10
-Tanvi Iyer,2023PE9761,AI Fundamentals by S.S. Rattan (Ed 5),2026-03-01,2026-03-16,1
-Zaid Nair,2023PE8273,CAD Fundamentals by Pressman (Ed 2),2026-03-22,2026-04-02,0
-Rohan Nair,2024PE2388,Cloud Fundamentals by Cormen (Ed 5),2026-03-19,2026-04-10,8
-Rohan Nair,2023PE7536,AI Fundamentals by Balanis (Ed 2),2026-03-16,2026-04-02,3
-Zaid Nair,2023PE3418,Math Fundamentals by Yunus Cengel (Ed 2),2026-02-20,2026-02-28,0
-Vihaan Patil,2023PE2404,C Programming Fundamentals by S.S. Rattan (Ed 3),2026-02-03,2026-02-19,2
-Aarav Gupta,2024PE3903,Signals Fundamentals by Balanis (Ed 5),2026-03-18,2026-04-06,5
-Rohan Verma,2024PE1473,VLSI Fundamentals by V. Ganesan (Ed 3),2026-02-14,2026-03-03,3
-Isha Kulkarni,2023PE2679,OS Fundamentals by Balanis (Ed 1),2026-02-19,2026-03-08,3
-Zaid Gupta,2024PE3113,OS Fundamentals by Balanis (Ed 1),2026-01-26,2026-02-16,7
-Sanya Gupta,2023PE2991,DBMS Fundamentals by Cormen (Ed 5),2026-02-17,2026-02-23,0
-Sanya Joshi,2023PE8497,Math Fundamentals by Haykin (Ed 1),2026-01-31,2026-02-18,4
-Zaid Iyer,2023PE7560,Antennas Fundamentals by Cormen (Ed 5),2026-03-11,2026-03-17,0
-Vihaan Sharma,2023PE3775,C Programming Fundamentals by Pressman (Ed 3),2026-02-18,2026-03-07,3
-Sanya Joshi,2024PE7888,Fluid Mechanics Fundamentals by S.S. Rattan (Ed 2),2026-02-05,2026-02-13,0
-Isha Joshi,2024PE1480,Data Mining Fundamentals by V. Ganesan (Ed 4),2026-03-24,2026-04-03,0
-Tanvi Joshi,2023PE1029,Vehicle Dynamics Fundamentals by Galvin (Ed 4),2026-03-01,2026-03-07,0
-Zaid Gupta,2024PE3113,Algorithms Fundamentals by Yunus Cengel (Ed 3),2026-01-26,2026-02-07,0
-Aarav Patil,2023PE9202,Satellite Fundamentals by Cormen (Ed 1),2026-01-29,2026-02-20,8
-Aarav Patil,2023PE9202,Fiber Optics Fundamentals by Pressman (Ed 5),2026-02-12,2026-03-03,5
-Vihaan Mehta,2023PE5851,Wireless Fundamentals by Yunus Cengel (Ed 2),2026-02-07,2026-02-27,6
-Meera Iyer,2023PE4445,Electrical Fundamentals by Erwin Kreyszig (Ed 2),2026-03-13,2026-03-21,0
-Vihaan Mehta,2024PE6488,Antennas Fundamentals by Ramesh Gaonkar (Ed 1),2026-03-06,2026-03-12,0
-Rohan Kulkarni,2023PE4741,DBMS Fundamentals by Cormen (Ed 2),2026-01-27,2026-02-10,0
-Sanya Nair,2023PE6855,Compiler Fundamentals by Haykin (Ed 5),2026-03-14,2026-03-26,0
-Rohan Gupta,2024PE8042,Control Systems Fundamentals by Balanis (Ed 4),2026-03-06,2026-03-26,6
-Kiara Mehta,2023PE1632,VLSI Fundamentals by Pressman (Ed 1),2026-03-05,2026-03-26,7
-Isha Gupta,2024PE6069,Fiber Optics Fundamentals by R.K. Rajput (Ed 4),2026-02-21,2026-02-28,0
-Meera Iyer,2024PE7197,Wireless Fundamentals by R.K. Rajput (Ed 1),2026-01-30,2026-02-07,0
-Sanya Joshi,2023PE3245,Fluid Mechanics Fundamentals by Pressman (Ed 4),2026-02-24,2026-03-03,0
-Isha Verma,2024PE2758,EV Tech Fundamentals by Haykin (Ed 4),2026-03-11,2026-03-31,6
-Aditya Sharma,2023PE4125,Big Data Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-23,2026-03-28,0
-Ananya Iyer,2023PE5765,AI Fundamentals by Cormen (Ed 4),2026-02-21,2026-03-08,1
-Zaid Nair,2024PE4348,Cyber Security Fundamentals by Tanenbaum (Ed 3),2026-01-30,2026-02-14,1
-Tanvi Deshmukh,2024PE6279,IC Engines Fundamentals by Haykin (Ed 3),2026-03-19,2026-04-11,9
-Arjun Gupta,2024PE1346,Antennas Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-03,2026-02-26,9
-Isha Verma,2024PE2758,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-02-22,2026-03-11,3
-Aarav Nair,2024PE6080,Web Tech Fundamentals by Erwin Kreyszig (Ed 2),2026-02-04,2026-02-14,0
-Zaid Iyer,2024PE3398,Data Mining Fundamentals by B.S. Grewal (Ed 1),2026-02-02,2026-02-14,0
-Tanvi Gupta,2023PE3686,Signals Fundamentals by R.K. Rajput (Ed 1),2026-02-19,2026-03-16,11
-Aditya Joshi,2023PE8493,Cyber Security Fundamentals by V. Ganesan (Ed 5),2026-02-27,2026-03-11,0
-Isha Mehta,2024PE2880,Web Tech Fundamentals by V. Ganesan (Ed 4),2026-01-31,2026-02-07,0
-Kiara Iyer,2024PE2151,Electrical Fundamentals by Balanis (Ed 1),2026-02-10,2026-02-25,1
-Zaid Iyer,2023PE5163,Antennas Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-27,2026-03-08,0
-Tanvi Gupta,2023PE3686,EV Tech Fundamentals by V. Ganesan (Ed 1),2026-02-21,2026-03-01,0
-Ananya Deshmukh,2024PE2048,Chemistry Fundamentals by Pressman (Ed 2),2026-02-16,2026-03-07,5
-Arjun Mehta,2023PE9743,C Programming Fundamentals by V. Ganesan (Ed 5),2026-02-06,2026-03-03,11
-Zaid Deshmukh,2024PE1324,Microcontrollers Fundamentals by M. Morris Mano (Ed 4),2026-03-25,2026-04-03,0
-Aarav Sharma,2023PE2360,Data Mining Fundamentals by Cormen (Ed 2),2026-03-25,2026-03-30,0
-Aarav Patil,2024PE7114,Radar Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-10,2026-03-19,0
-Aarav Iyer,2023PE1407,Antennas Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-21,2026-04-14,10
-Zaid Kulkarni,2024PE1157,Chemistry Fundamentals by Erwin Kreyszig (Ed 5),2026-03-01,2026-03-24,9
-Ananya Nair,2024PE8937,Antennas Fundamentals by Yunus Cengel (Ed 3),2026-03-18,2026-04-11,10
-Rohan Joshi,2024PE3547,Fluid Mechanics Fundamentals by Pressman (Ed 4),2026-03-16,2026-03-29,0
-Aarav Mehta,2024PE2399,Signals Fundamentals by Erwin Kreyszig (Ed 2),2026-03-15,2026-04-02,4
-Ananya Deshmukh,2023PE5537,Chassis Fundamentals by Pressman (Ed 5),2026-03-04,2026-03-24,6
-Ananya Patil,2023PE1278,Chemistry Fundamentals by Galvin (Ed 3),2026-03-20,2026-04-02,0
-Vihaan Iyer,2023PE7141,Fiber Optics Fundamentals by Balanis (Ed 3),2026-03-14,2026-03-26,0
-Isha Gupta,2024PE3845,Networks Fundamentals by Galvin (Ed 2),2026-02-18,2026-03-09,5
-Tanvi Deshmukh,2023PE5499,VLSI Fundamentals by Balanis (Ed 5),2026-02-01,2026-02-19,4
-Aarav Mehta,2024PE7547,Math Fundamentals by Balanis (Ed 5),2026-02-23,2026-03-15,6
-Sanya Kulkarni,2023PE9457,DBMS Fundamentals by Cormen (Ed 5),2026-03-25,2026-04-08,0
-Tanvi Patil,2024PE9246,VLSI Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-25,2026-04-16,8
-Kiara Deshmukh,2024PE1976,Cyber Security Fundamentals by Galvin (Ed 5),2026-03-24,2026-03-31,0
-Aditya Gupta,2023PE1140,Fluid Mechanics Fundamentals by Balanis (Ed 5),2026-03-08,2026-03-25,3
-Vihaan Mehta,2024PE3959,Data Mining Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-12,2026-03-25,0
-Meera Mehta,2024PE6530,Chemistry Fundamentals by Balanis (Ed 4),2026-01-26,2026-02-03,0
-Meera Nair,2023PE5687,Embedded Fundamentals by Erwin Kreyszig (Ed 1),2026-02-28,2026-03-08,0
-Arjun Verma,2024PE7671,C Programming Fundamentals by Ramesh Gaonkar (Ed 5),2026-02-04,2026-02-23,5
-Isha Verma,2024PE2758,AI Fundamentals by S.S. Rattan (Ed 4),2026-03-09,2026-03-17,0
-Tanvi Joshi,2023PE1029,Data Mining Fundamentals by B.S. Grewal (Ed 1),2026-02-14,2026-03-04,4
-Tanvi Joshi,2023PE1029,DOM Fundamentals by Haykin (Ed 3),2026-03-25,2026-03-31,0
-Aditya Mehta,2023PE2693,Transmission Fundamentals by Haykin (Ed 5),2026-02-09,2026-02-24,1
-Isha Sharma,2023PE4819,Compiler Fundamentals by Cormen (Ed 5),2026-03-24,2026-04-07,0
-Kiara Sharma,2024PE5187,Transmission Fundamentals by Balanis (Ed 1),2026-02-26,2026-03-15,3
-Sanya Joshi,2024PE2835,Fiber Optics Fundamentals by Balanis (Ed 5),2026-03-05,2026-03-13,0
-Tanvi Patil,2024PE9903,Signals Fundamentals by Erwin Kreyszig (Ed 2),2026-02-18,2026-02-23,0
-Vihaan Mehta,2024PE8770,Physics Fundamentals by M. Morris Mano (Ed 1),2026-02-08,2026-02-16,0
-Aarav Mehta,2024PE2399,Logic Design Fundamentals by Balanis (Ed 1),2026-02-04,2026-02-20,2
-Kiara Sharma,2024PE6726,Signals Fundamentals by Tanenbaum (Ed 4),2026-01-31,2026-02-25,11
-Tanvi Verma,2024PE5973,Theory of Computation Fundamentals by Haykin (Ed 4),2026-02-07,2026-02-16,0
-Vihaan Gupta,2024PE8882,Logic Design Fundamentals by Balanis (Ed 4),2026-03-09,2026-03-30,7
-Isha Kulkarni,2024PE9060,Compiler Fundamentals by Balanis (Ed 2),2026-02-13,2026-02-19,0
-Zaid Deshmukh,2024PE1324,Microcontrollers Fundamentals by Galvin (Ed 4),2026-03-15,2026-03-25,0
-Zaid Patil,2024PE5986,Control Systems Fundamentals by Balanis (Ed 5),2026-02-28,2026-03-22,8
-Ananya Sharma,2023PE1590,Data Mining Fundamentals by Erwin Kreyszig (Ed 5),2026-03-05,2026-03-29,10
-Kiara Mehta,2023PE6967,SOM Fundamentals by Balanis (Ed 1),2026-03-12,2026-03-24,0
-Zaid Joshi,2024PE3543,Radar Fundamentals by Cormen (Ed 2),2026-02-18,2026-03-14,10
-Sanya Joshi,2024PE7888,Software Engg Fundamentals by B.S. Grewal (Ed 5),2026-01-29,2026-02-19,7
-Zaid Patil,2024PE5024,SOM Fundamentals by Cormen (Ed 5),2026-02-16,2026-03-01,0
-Aarav Gupta,2024PE2362,Embedded Fundamentals by Yunus Cengel (Ed 3),2026-03-15,2026-04-05,7
-Isha Nair,2024PE6693,DBMS Fundamentals by Haykin (Ed 1),2026-02-20,2026-02-25,0
-Arjun Mehta,2024PE3968,IC Engines Fundamentals by V. Ganesan (Ed 2),2026-02-17,2026-02-27,0
-Vihaan Kulkarni,2023PE8134,Algorithms Fundamentals by Yunus Cengel (Ed 3),2026-03-21,2026-04-12,8
-Aarav Mehta,2024PE7547,VLSI Fundamentals by V. Ganesan (Ed 5),2026-02-23,2026-03-10,1
-Isha Verma,2024PE2758,Logic Design Fundamentals by Balanis (Ed 1),2026-03-15,2026-03-24,0
-Zaid Kulkarni,2023PE3540,OS Fundamentals by V. Ganesan (Ed 5),2026-03-12,2026-03-23,0
-Vihaan Gupta,2024PE5981,Physics Fundamentals by B.S. Grewal (Ed 4),2026-03-11,2026-03-28,3
-Ananya Deshmukh,2024PE2048,Graphics Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-10,2026-02-19,0
-Meera Nair,2024PE8111,OS Fundamentals by Tanenbaum (Ed 4),2026-01-29,2026-02-20,8
-Meera Sharma,2023PE7419,VLSI Fundamentals by Balanis (Ed 5),2026-03-18,2026-04-09,8
-Sanya Sharma,2024PE9088,Networks Fundamentals by R.K. Rajput (Ed 4),2026-03-13,2026-03-19,0
-Zaid Iyer,2023PE7560,Control Systems Fundamentals by Galvin (Ed 1),2026-01-30,2026-02-09,0
-Vihaan Verma,2023PE5175,Wireless Fundamentals by Balanis (Ed 5),2026-02-02,2026-02-15,0
-Arjun Gupta,2023PE6445,Physics Fundamentals by Erwin Kreyszig (Ed 4),2026-02-22,2026-03-12,4
-Zaid Nair,2023PE8273,Compiler Fundamentals by Galvin (Ed 1),2026-02-22,2026-03-18,10
-Rohan Nair,2023PE2934,Antennas Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-06,2026-02-18,0
-Vihaan Kulkarni,2023PE7013,Cloud Fundamentals by V. Ganesan (Ed 4),2026-03-02,2026-03-24,8
-Meera Kulkarni,2023PE1268,EV Tech Fundamentals by V. Ganesan (Ed 4),2026-02-26,2026-03-10,0
-Aditya Mehta,2023PE4306,Physics Fundamentals by Pressman (Ed 5),2026-02-11,2026-02-28,3
-Zaid Kulkarni,2024PE5014,Chemistry Fundamentals by Galvin (Ed 1),2026-03-10,2026-03-17,0
-Aditya Kulkarni,2023PE4115,Web Tech Fundamentals by Erwin Kreyszig (Ed 3),2026-02-13,2026-02-26,0
-Aarav Nair,2024PE6080,Control Systems Fundamentals by Cormen (Ed 1),2026-03-18,2026-04-11,10
-Isha Joshi,2023PE7131,Web Tech Fundamentals by Erwin Kreyszig (Ed 2),2026-03-21,2026-03-27,0
-Arjun Mehta,2024PE3968,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),2026-01-26,2026-02-08,0
-Isha Gupta,2023PE2228,Cyber Security Fundamentals by R.K. Rajput (Ed 1),2026-02-01,2026-02-20,5
-Sanya Deshmukh,2023PE7151,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-02-07,2026-02-22,1
-Ananya Sharma,2024PE9110,SOM Fundamentals by S.S. Rattan (Ed 1),2026-03-17,2026-03-27,0
-Isha Gupta,2023PE7396,SOM Fundamentals by Galvin (Ed 3),2026-03-03,2026-03-28,11
-Tanvi Sharma,2024PE8888,Chemistry Fundamentals by Galvin (Ed 3),2026-01-28,2026-02-21,10
-Sanya Sharma,2024PE9088,Logic Design Fundamentals by Haykin (Ed 2),2026-03-25,2026-03-31,0
-Tanvi Kulkarni,2023PE6031,Graphics Fundamentals by Balanis (Ed 1),2026-03-25,2026-04-08,0
-Kiara Gupta,2024PE9443,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-03-19,2026-04-03,1
-Aditya Patil,2023PE2850,DBMS Fundamentals by B.S. Grewal (Ed 1),2026-03-06,2026-03-21,1
-Kiara Patil,2024PE2111,Antennas Fundamentals by Cormen (Ed 4),2026-03-02,2026-03-20,4
-Isha Joshi,2023PE2488,Microcontrollers Fundamentals by Yunus Cengel (Ed 3),2026-03-04,2026-03-19,1
-Isha Nair,2024PE9273,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-25,2026-03-22,11
-Aditya Iyer,2023PE5338,Vehicle Dynamics Fundamentals by M. Morris Mano (Ed 5),2026-02-27,2026-03-23,10
-Arjun Sharma,2024PE6458,AI Fundamentals by Erwin Kreyszig (Ed 1),2026-03-09,2026-03-22,0
-Arjun Mehta,2024PE3968,EV Tech Fundamentals by V. Ganesan (Ed 4),2026-02-26,2026-03-16,4
-Meera Patil,2024PE1407,DOM Fundamentals by Cormen (Ed 1),2026-03-22,2026-04-03,0
-Aditya Kulkarni,2023PE4115,Data Mining Fundamentals by Pressman (Ed 4),2026-03-05,2026-03-15,0
-Ananya Sharma,2024PE3771,Fluid Mechanics Fundamentals by Galvin (Ed 1),2026-03-20,2026-04-12,9
-Kiara Patil,2024PE2111,OS Fundamentals by Cormen (Ed 1),2026-02-21,2026-03-11,4
-Arjun Sharma,2023PE3508,Heat Transfer Fundamentals by S.S. Rattan (Ed 2),2026-02-21,2026-03-04,0
-Isha Gupta,2024PE4471,Signals Fundamentals by Cormen (Ed 4),2026-02-04,2026-02-10,0
-Ananya Nair,2024PE4369,Electrical Fundamentals by Cormen (Ed 1),2026-02-02,2026-02-24,8
-Meera Nair,2024PE4843,Chassis Fundamentals by M. Morris Mano (Ed 1),2026-03-17,2026-04-06,6
-Arjun Mehta,2023PE9743,Graphics Fundamentals by Cormen (Ed 2),2026-01-27,2026-02-18,8
-Vihaan Gupta,2024PE8882,Networks Fundamentals by Cormen (Ed 5),2026-03-23,2026-04-09,3
-Rohan Deshmukh,2023PE9639,Satellite Fundamentals by B.S. Grewal (Ed 2),2026-03-03,2026-03-17,0
-Ananya Sharma,2023PE8024,Physics Fundamentals by V. Ganesan (Ed 4),2026-02-09,2026-02-15,0
-Arjun Kulkarni,2024PE8083,Compiler Fundamentals by R.K. Rajput (Ed 1),2026-03-22,2026-04-04,0
-Zaid Kulkarni,2023PE3540,Electrical Fundamentals by V. Ganesan (Ed 3),2026-03-23,2026-04-04,0
-Meera Nair,2024PE8111,Physics Fundamentals by S.S. Rattan (Ed 5),2026-02-22,2026-03-08,0
-Isha Kulkarni,2023PE2679,Signals Fundamentals by Yunus Cengel (Ed 3),2026-03-05,2026-03-21,2
-Kiara Deshmukh,2024PE2209,C Programming Fundamentals by V. Ganesan (Ed 5),2026-03-11,2026-04-04,10
-Ananya Nair,2023PE9082,Satellite Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-10,2026-03-15,0
-Kiara Sharma,2024PE1714,Algorithms Fundamentals by Pressman (Ed 5),2026-02-20,2026-03-07,1
-Aarav Gupta,2024PE2362,Microcontrollers Fundamentals by M. Morris Mano (Ed 1),2026-03-15,2026-04-02,4
-Kiara Deshmukh,2023PE5359,Wireless Fundamentals by V. Ganesan (Ed 1),2026-01-29,2026-02-22,10
-Aditya Deshmukh,2023PE7305,Satellite Fundamentals by Galvin (Ed 3),2026-03-18,2026-04-08,7
-Isha Verma,2024PE4987,C Programming Fundamentals by Balanis (Ed 4),2026-02-10,2026-02-25,1
-Zaid Deshmukh,2023PE4325,Fiber Optics Fundamentals by Pressman (Ed 4),2026-01-28,2026-02-21,10
-Vihaan Patil,2023PE2404,SOM Fundamentals by Ramesh Gaonkar (Ed 1),2026-01-25,2026-02-11,3
-Zaid Kulkarni,2024PE1157,Embedded Fundamentals by Yunus Cengel (Ed 2),2026-02-03,2026-02-27,10
-Isha Kulkarni,2023PE2679,Graphics Fundamentals by V. Ganesan (Ed 5),2026-03-07,2026-03-12,0
-Isha Sharma,2023PE1826,Logic Design Fundamentals by Cormen (Ed 1),2026-03-07,2026-03-15,0
-Ananya Iyer,2023PE1898,EV Tech Fundamentals by Erwin Kreyszig (Ed 3),2026-02-06,2026-02-20,0
-Arjun Sharma,2024PE6458,Wireless Fundamentals by V. Ganesan (Ed 1),2026-02-17,2026-02-26,0
-Zaid Sharma,2024PE5374,Cyber Security Fundamentals by Erwin Kreyszig (Ed 2),2026-01-31,2026-02-23,9
-Arjun Mehta,2024PE3968,Software Engg Fundamentals by S.S. Rattan (Ed 2),2026-01-26,2026-02-20,11
-Zaid Nair,2024PE4348,Embedded Fundamentals by Cormen (Ed 3),2026-03-04,2026-03-25,7
-Ananya Nair,2023PE9082,Satellite Fundamentals by V. Ganesan (Ed 4),2026-03-07,2026-03-20,0
-Ananya Kulkarni,2023PE2124,Physics Fundamentals by R.K. Rajput (Ed 2),2026-02-08,2026-02-17,0
-Zaid Nair,2024PE2237,OS Fundamentals by Erwin Kreyszig (Ed 1),2026-03-12,2026-04-06,11
-Ananya Nair,2024PE8937,Mechanics Fundamentals by Pressman (Ed 2),2026-02-03,2026-02-15,0
-Zaid Nair,2024PE2237,Control Systems Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-26,2026-03-23,11
-Rohan Kulkarni,2023PE2883,Logic Design Fundamentals by Balanis (Ed 1),2026-02-25,2026-03-02,0
-Meera Kulkarni,2024PE1392,Math Fundamentals by S.S. Rattan (Ed 2),2026-03-06,2026-03-20,0
-Vihaan Mehta,2023PE5851,Wireless Fundamentals by Erwin Kreyszig (Ed 5),2026-02-10,2026-03-01,5
-Sanya Joshi,2023PE3245,Mechanics Fundamentals by B.S. Grewal (Ed 3),2026-02-02,2026-02-23,7
-Isha Nair,2024PE9385,Wireless Fundamentals by Balanis (Ed 5),2026-03-01,2026-03-14,0
-Arjun Verma,2024PE7671,Microcontrollers Fundamentals by M. Morris Mano (Ed 4),2026-02-27,2026-03-08,0
-Kiara Nair,2023PE5611,Data Mining Fundamentals by M. Morris Mano (Ed 3),2026-03-19,2026-03-31,0
-Isha Gupta,2024PE4471,OS Fundamentals by R.K. Rajput (Ed 1),2026-03-19,2026-04-01,0
-Meera Kulkarni,2024PE1444,Cyber Security Fundamentals by R.K. Rajput (Ed 2),2026-02-14,2026-03-04,4
-Sanya Verma,2024PE9102,DOM Fundamentals by R.K. Rajput (Ed 3),2026-02-13,2026-02-25,0
-Sanya Deshmukh,2024PE6168,Logic Design Fundamentals by Pressman (Ed 5),2026-02-19,2026-03-01,0
-Zaid Sharma,2023PE2589,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-03-19,2026-04-07,5
-Isha Sharma,2023PE1492,Chemistry Fundamentals by Erwin Kreyszig (Ed 4),2026-02-17,2026-02-28,0
-Zaid Joshi,2023PE1759,CAD Fundamentals by R.K. Rajput (Ed 1),2026-03-09,2026-03-31,8
-Aditya Deshmukh,2024PE8296,SOM Fundamentals by Cormen (Ed 3),2026-03-19,2026-04-04,2
-Arjun Deshmukh,2024PE2459,Radar Fundamentals by Tanenbaum (Ed 1),2026-02-27,2026-03-17,4
-Aarav Mehta,2024PE7547,Graphics Fundamentals by M. Morris Mano (Ed 2),2026-03-02,2026-03-20,4
-Sanya Verma,2024PE9102,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-03-01,2026-03-12,0
-Rohan Nair,2024PE2388,Cyber Security Fundamentals by Galvin (Ed 5),2026-03-12,2026-04-04,9
-Tanvi Deshmukh,2023PE5499,EV Tech Fundamentals by S.S. Rattan (Ed 1),2026-02-27,2026-03-11,0
-Sanya Verma,2023PE2291,Chemistry Fundamentals by Pressman (Ed 2),2026-03-25,2026-03-31,0
-Arjun Mehta,2024PE3968,Antennas Fundamentals by B.S. Grewal (Ed 3),2026-03-15,2026-04-04,6
-Vihaan Gupta,2024PE8882,Mechanics Fundamentals by Tanenbaum (Ed 2),2026-02-13,2026-02-19,0
-Kiara Sharma,2024PE4451,Electrical Fundamentals by R.K. Rajput (Ed 4),2026-02-14,2026-03-03,3
-Aditya Deshmukh,2024PE8601,Heat Transfer Fundamentals by S.S. Rattan (Ed 2),2026-02-22,2026-03-08,0
-Meera Kulkarni,2023PE4381,Fiber Optics Fundamentals by Balanis (Ed 5),2026-01-31,2026-02-15,1
-Ananya Sharma,2024PE9451,Logic Design Fundamentals by Yunus Cengel (Ed 2),2026-02-14,2026-02-27,0
-Ananya Iyer,2023PE1898,Chemistry Fundamentals by Pressman (Ed 2),2026-03-18,2026-04-02,1
-Kiara Mehta,2023PE6643,Web Tech Fundamentals by B.S. Grewal (Ed 2),2026-01-27,2026-02-04,0
-Meera Iyer,2024PE5097,OS Fundamentals by Cormen (Ed 2),2026-03-12,2026-04-02,7
-Kiara Mehta,2023PE6967,Wireless Fundamentals by Haykin (Ed 5),2026-03-08,2026-03-31,9
-Sanya Joshi,2023PE8497,Fiber Optics Fundamentals by Balanis (Ed 3),2026-03-06,2026-03-14,0
-Isha Joshi,2024PE9550,Web Tech Fundamentals by V. Ganesan (Ed 4),2026-01-25,2026-02-01,0
-Meera Joshi,2023PE4961,Math Fundamentals by Yunus Cengel (Ed 4),2026-03-22,2026-04-01,0
-Isha Joshi,2023PE7131,Fiber Optics Fundamentals by Pressman (Ed 5),2026-01-28,2026-02-20,9
-Isha Joshi,2023PE7131,Control Systems Fundamentals by R.K. Rajput (Ed 4),2026-03-07,2026-03-16,0
-Arjun Deshmukh,2024PE2459,Logic Design Fundamentals by Galvin (Ed 4),2026-03-08,2026-03-30,8
-Sanya Verma,2024PE7235,Microcontrollers Fundamentals by Cormen (Ed 5),2026-02-14,2026-02-25,0
-Tanvi Sharma,2023PE8109,Satellite Fundamentals by Cormen (Ed 1),2026-03-02,2026-03-20,4
-Tanvi Sharma,2024PE1156,Compiler Fundamentals by Balanis (Ed 2),2026-02-23,2026-03-03,0
-Sanya Patil,2023PE8905,Compiler Fundamentals by R.K. Rajput (Ed 1),2026-03-24,2026-04-03,0
-Aditya Joshi,2023PE8493,Fiber Optics Fundamentals by V. Ganesan (Ed 5),2026-03-03,2026-03-21,4
-Arjun Nair,2023PE4863,SOM Fundamentals by Cormen (Ed 3),2026-02-28,2026-03-05,0
-Kiara Sharma,2024PE1614,Embedded Fundamentals by Pressman (Ed 3),2026-03-22,2026-04-13,8
-Aditya Sharma,2023PE4125,Networks Fundamentals by M. Morris Mano (Ed 1),2026-03-25,2026-04-19,11
-Ananya Iyer,2023PE1898,Vehicle Dynamics Fundamentals by Erwin Kreyszig (Ed 1),2026-03-04,2026-03-19,1
-Sanya Joshi,2023PE6434,Signals Fundamentals by Tanenbaum (Ed 1),2026-02-27,2026-03-08,0
-Vihaan Nair,2024PE4976,OS Fundamentals by Balanis (Ed 1),2026-02-12,2026-02-19,0
-Zaid Mehta,2024PE7595,Graphics Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-09,2026-03-02,7
-Isha Verma,2024PE4987,VLSI Fundamentals by Yunus Cengel (Ed 5),2026-03-11,2026-03-30,5
-Arjun Gupta,2024PE1346,Microcontrollers Fundamentals by Cormen (Ed 5),2026-02-26,2026-03-04,0
-Meera Kulkarni,2023PE4381,Wireless Fundamentals by Haykin (Ed 5),2026-01-30,2026-02-16,3
-Rohan Verma,2024PE1473,Chemistry Fundamentals by V. Ganesan (Ed 5),2026-02-25,2026-03-07,0
-Kiara Nair,2023PE2378,Radar Fundamentals by Yunus Cengel (Ed 5),2026-02-12,2026-02-21,0
-Aarav Nair,2024PE6080,Logic Design Fundamentals by Balanis (Ed 4),2026-03-23,2026-04-05,0
-Isha Kulkarni,2024PE9060,Satellite Fundamentals by Pressman (Ed 1),2026-01-26,2026-02-05,0
-Tanvi Kulkarni,2023PE2905,VLSI Fundamentals by Yunus Cengel (Ed 2),2026-03-01,2026-03-17,2
-Sanya Joshi,2024PE7888,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-02-13,2026-02-18,0
-Zaid Nair,2023PE6274,Fiber Optics Fundamentals by Erwin Kreyszig (Ed 4),2026-03-19,2026-04-04,2
-Kiara Verma,2023PE5162,SOM Fundamentals by Cormen (Ed 5),2026-03-16,2026-04-06,7
-Zaid Deshmukh,2023PE8051,Networks Fundamentals by B.S. Grewal (Ed 4),2026-02-22,2026-03-18,10
-Sanya Joshi,2023PE3245,Mechanics Fundamentals by M. Morris Mano (Ed 1),2026-02-15,2026-03-02,1
-Aarav Patil,2024PE7114,EV Tech Fundamentals by Haykin (Ed 4),2026-03-11,2026-03-24,0
-Vihaan Kulkarni,2023PE8134,Algorithms Fundamentals by Haykin (Ed 4),2026-03-17,2026-03-31,0
-Aarav Deshmukh,2024PE8856,Cyber Security Fundamentals by M. Morris Mano (Ed 3),2026-02-24,2026-03-09,0
-Zaid Kulkarni,2023PE3540,Control Systems Fundamentals by Galvin (Ed 3),2026-02-20,2026-03-13,7
-Isha Verma,2024PE2758,C Programming Fundamentals by Pressman (Ed 3),2026-02-15,2026-03-12,11
-Sanya Gupta,2023PE2991,IC Engines Fundamentals by B.S. Grewal (Ed 3),2026-02-17,2026-03-10,7
-Meera Mehta,2023PE3145,Antennas Fundamentals by Yunus Cengel (Ed 4),2026-01-28,2026-02-08,0
-Isha Sharma,2023PE4819,IC Engines Fundamentals by Galvin (Ed 1),2026-01-27,2026-02-08,0
-Sanya Kulkarni,2023PE4973,Mechanics Fundamentals by B.S. Grewal (Ed 3),2026-02-16,2026-03-08,6
-Vihaan Kulkarni,2023PE7013,EV Tech Fundamentals by V. Ganesan (Ed 3),2026-01-26,2026-02-09,0
-Kiara Patil,2024PE2111,Physics Fundamentals by M. Morris Mano (Ed 1),2026-02-18,2026-03-10,6
-Kiara Gupta,2024PE9197,Physics Fundamentals by B.S. Grewal (Ed 4),2026-02-10,2026-03-07,11
-Aditya Deshmukh,2024PE2959,Control Systems Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-02,2026-02-14,0
-Isha Kulkarni,2023PE6558,Logic Design Fundamentals by S.S. Rattan (Ed 4),2026-03-23,2026-04-16,10
-Rohan Verma,2024PE1473,Logic Design Fundamentals by Haykin (Ed 2),2026-02-24,2026-03-21,11
-Rohan Mehta,2023PE9256,Chassis Fundamentals by B.S. Grewal (Ed 4),2026-03-23,2026-04-06,0
-Sanya Verma,2024PE4744,Logic Design Fundamentals by Cormen (Ed 1),2026-02-13,2026-02-28,1
-Meera Verma,2023PE8600,Web Tech Fundamentals by B.S. Grewal (Ed 2),2026-01-31,2026-02-21,7
-Meera Mehta,2023PE5166,EV Tech Fundamentals by Haykin (Ed 4),2026-02-11,2026-02-22,0
-Sanya Gupta,2024PE6453,VLSI Fundamentals by V. Ganesan (Ed 1),2026-02-18,2026-03-15,11
-Vihaan Nair,2024PE1178,Satellite Fundamentals by Pressman (Ed 1),2026-03-18,2026-03-28,0
-Meera Verma,2024PE9486,Radar Fundamentals by Tanenbaum (Ed 1),2026-01-29,2026-02-06,0
-Arjun Sharma,2023PE3508,Chassis Fundamentals by M. Morris Mano (Ed 1),2026-02-03,2026-02-21,4
-Kiara Nair,2023PE2150,Compiler Fundamentals by Cormen (Ed 5),2026-02-10,2026-02-19,0
-Meera Nair,2023PE7787,Electrical Fundamentals by R.K. Rajput (Ed 1),2026-03-13,2026-04-02,6
-Aditya Patil,2023PE7440,Chassis Fundamentals by Haykin (Ed 4),2026-03-17,2026-03-24,0
-Kiara Deshmukh,2024PE2209,Satellite Fundamentals by V. Ganesan (Ed 5),2026-02-06,2026-02-15,0
-Rohan Sharma,2024PE5922,Cloud Fundamentals by V. Ganesan (Ed 4),2026-02-16,2026-02-27,0
-Sanya Kulkarni,2023PE4973,Vehicle Dynamics Fundamentals by Erwin Kreyszig (Ed 1),2026-02-17,2026-03-03,0
-Vihaan Mehta,2024PE3959,VLSI Fundamentals by Yunus Cengel (Ed 5),2026-02-06,2026-02-20,0
-Zaid Kulkarni,2024PE5014,Logic Design Fundamentals by Pressman (Ed 5),2026-03-01,2026-03-22,7
-Zaid Gupta,2024PE7840,IC Engines Fundamentals by V. Ganesan (Ed 2),2026-03-07,2026-03-28,7
-Aditya Iyer,2023PE6453,Electrical Fundamentals by Cormen (Ed 3),2026-03-05,2026-03-27,8
-Arjun Nair,2023PE4863,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 4),2026-03-05,2026-03-11,0
-Aarav Iyer,2023PE3421,Big Data Fundamentals by Pressman (Ed 3),2026-03-25,2026-04-10,2
-Sanya Deshmukh,2023PE9422,OS Fundamentals by Erwin Kreyszig (Ed 1),2026-03-21,2026-04-13,9
-Zaid Joshi,2024PE3543,VLSI Fundamentals by Balanis (Ed 5),2026-03-20,2026-04-02,0
-Isha Verma,2024PE2758,Networks Fundamentals by Cormen (Ed 4),2026-03-25,2026-04-09,1
-Tanvi Sharma,2023PE8109,Wireless Fundamentals by Erwin Kreyszig (Ed 5),2026-02-23,2026-03-13,4
-Sanya Verma,2024PE7235,Logic Design Fundamentals by Pressman (Ed 5),2026-02-09,2026-03-05,10
-Sanya Kulkarni,2024PE4959,AI Fundamentals by Galvin (Ed 5),2026-03-09,2026-03-22,0
-Sanya Kulkarni,2024PE3370,Chassis Fundamentals by B.S. Grewal (Ed 1),2026-03-21,2026-03-28,0
-Meera Nair,2024PE8111,VLSI Fundamentals by R.K. Rajput (Ed 3),2026-02-23,2026-03-20,11
-Sanya Verma,2024PE8035,Data Mining Fundamentals by Ramesh Gaonkar (Ed 2),2026-01-27,2026-02-14,4
-Aarav Patil,2023PE9607,Radar Fundamentals by Tanenbaum (Ed 1),2026-03-02,2026-03-12,0
-Rohan Nair,2023PE2934,Electrical Fundamentals by M. Morris Mano (Ed 4),2026-03-15,2026-04-09,11
-Kiara Gupta,2024PE9197,Microcontrollers Fundamentals by M. Morris Mano (Ed 1),2026-02-18,2026-03-05,1
-Isha Kulkarni,2023PE2679,Vehicle Dynamics Fundamentals by Galvin (Ed 4),2026-02-19,2026-03-10,5
-Arjun Gupta,2023PE6445,C Programming Fundamentals by Balanis (Ed 4),2026-02-09,2026-02-24,1
-Kiara Patil,2024PE5307,Chemistry Fundamentals by V. Ganesan (Ed 5),2026-02-05,2026-02-17,0
-Meera Nair,2024PE4843,DBMS Fundamentals by V. Ganesan (Ed 2),2026-03-22,2026-04-03,0
-Isha Joshi,2024PE9550,AI Fundamentals by S.S. Rattan (Ed 4),2026-03-21,2026-03-30,0
-Aditya Mehta,2023PE7654,Chassis Fundamentals by B.S. Grewal (Ed 4),2026-02-21,2026-03-18,11
-Meera Verma,2024PE9486,Networks Fundamentals by M. Morris Mano (Ed 4),2026-02-25,2026-03-18,7
-Aarav Patil,2024PE7114,Web Tech Fundamentals by B.S. Grewal (Ed 2),2026-02-08,2026-02-20,0
-Sanya Kulkarni,2024PE3370,OS Fundamentals by Cormen (Ed 1),2026-02-13,2026-02-25,0
-Arjun Gupta,2024PE1346,Embedded Fundamentals by Erwin Kreyszig (Ed 1),2026-03-13,2026-03-28,1
-Ananya Nair,2023PE9082,CAD Fundamentals by Cormen (Ed 3),2026-02-26,2026-03-16,4
-Zaid Patil,2023PE9647,Physics Fundamentals by Erwin Kreyszig (Ed 3),2026-03-15,2026-04-03,5
-Aarav Patil,2024PE7114,Mechanics Fundamentals by S.S. Rattan (Ed 1),2026-03-24,2026-04-12,5
-Zaid Mehta,2024PE7595,Transmission Fundamentals by M. Morris Mano (Ed 5),2026-03-04,2026-03-22,4
-Aarav Kulkarni,2023PE5085,Control Systems Fundamentals by Balanis (Ed 5),2026-03-22,2026-03-28,0
-Ananya Sharma,2023PE8024,Graphics Fundamentals by Pressman (Ed 5),2026-02-12,2026-02-17,0
-Kiara Mehta,2023PE1632,Networks Fundamentals by R.K. Rajput (Ed 2),2026-02-25,2026-03-03,0
-Vihaan Mehta,2023PE5851,Data Mining Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-04,2026-02-21,3
-Meera Sharma,2023PE2543,Theory of Computation Fundamentals by B.S. Grewal (Ed 4),2026-02-07,2026-02-17,0
-Vihaan Nair,2024PE1178,Big Data Fundamentals by Cormen (Ed 3),2026-03-15,2026-03-25,0
-Arjun Deshmukh,2024PE2459,Chemistry Fundamentals by V. Ganesan (Ed 5),2026-02-11,2026-02-17,0
-Sanya Joshi,2023PE8497,Electrical Fundamentals by Haykin (Ed 5),2026-03-07,2026-03-16,0
-Tanvi Sharma,2023PE8109,Software Engg Fundamentals by Balanis (Ed 5),2026-02-03,2026-02-14,0
-Rohan Nair,2023PE2934,Wireless Fundamentals by Galvin (Ed 4),2026-02-04,2026-02-26,8
-Meera Iyer,2023PE8931,Data Mining Fundamentals by R.K. Rajput (Ed 2),2026-02-03,2026-02-21,4
-Isha Gupta,2024PE4471,Cyber Security Fundamentals by Cormen (Ed 1),2026-03-16,2026-03-29,0
-Zaid Deshmukh,2023PE8051,EV Tech Fundamentals by V. Ganesan (Ed 3),2026-01-25,2026-02-04,0
-Aarav Deshmukh,2024PE4720,Logic Design Fundamentals by Erwin Kreyszig (Ed 1),2026-03-21,2026-03-28,0
-Aarav Patil,2024PE7114,Antennas Fundamentals by Cormen (Ed 5),2026-03-09,2026-04-01,9
-Aarav Patil,2024PE7114,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-01-29,2026-02-04,0
-Rohan Sharma,2024PE8381,C Programming Fundamentals by V. Ganesan (Ed 3),2026-02-24,2026-03-11,1
-Meera Kulkarni,2023PE6390,Embedded Fundamentals by M. Morris Mano (Ed 4),2026-02-03,2026-02-22,5
-Kiara Gupta,2024PE9197,Wireless Fundamentals by Tanenbaum (Ed 4),2026-03-22,2026-03-27,0
-Kiara Iyer,2024PE4784,Fiber Optics Fundamentals by B.S. Grewal (Ed 2),2026-03-21,2026-04-15,11
-Aditya Patil,2023PE8467,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-02-01,2026-02-11,0
-Meera Deshmukh,2023PE9273,Logic Design Fundamentals by Yunus Cengel (Ed 2),2026-03-13,2026-03-27,0
-Zaid Gupta,2024PE3113,Data Mining Fundamentals by Haykin (Ed 4),2026-03-25,2026-04-18,10
-Meera Mehta,2023PE5166,Radar Fundamentals by Ramesh Gaonkar (Ed 5),2026-02-11,2026-03-06,9
-Aditya Joshi,2023PE8493,IC Engines Fundamentals by Galvin (Ed 1),2026-02-21,2026-03-14,7
-Sanya Nair,2023PE2642,Physics Fundamentals by Balanis (Ed 2),2026-03-20,2026-03-26,0
-Isha Mehta,2024PE2880,Big Data Fundamentals by Tanenbaum (Ed 5),2026-02-12,2026-02-18,0
-Arjun Nair,2023PE4863,OS Fundamentals by Erwin Kreyszig (Ed 1),2026-03-22,2026-04-15,10
-Isha Joshi,2024PE9550,EV Tech Fundamentals by V. Ganesan (Ed 4),2026-02-11,2026-03-01,4
-Vihaan Kulkarni,2024PE2311,EV Tech Fundamentals by V. Ganesan (Ed 4),2026-03-01,2026-03-08,0
-Isha Gupta,2024PE4471,Fluid Mechanics Fundamentals by Galvin (Ed 1),2026-03-16,2026-03-30,0
-Zaid Patil,2024PE5024,Compiler Fundamentals by Haykin (Ed 5),2026-01-25,2026-01-31,0
-Zaid Iyer,2024PE3398,Satellite Fundamentals by V. Ganesan (Ed 5),2026-02-03,2026-02-28,11
-Zaid Sharma,2024PE4995,Logic Design Fundamentals by Cormen (Ed 1),2026-02-28,2026-03-15,1
-Tanvi Gupta,2024PE8617,Compiler Fundamentals by Yunus Cengel (Ed 5),2026-02-04,2026-02-28,10
-Meera Deshmukh,2023PE9273,Data Mining Fundamentals by Pressman (Ed 4),2026-02-28,2026-03-10,0
-Aarav Deshmukh,2024PE4720,AI Fundamentals by Yunus Cengel (Ed 3),2026-01-30,2026-02-18,5
-Zaid Patil,2024PE5024,Software Engg Fundamentals by Cormen (Ed 1),2026-03-01,2026-03-11,0
-Sanya Patil,2023PE8905,Networks Fundamentals by Galvin (Ed 2),2026-02-09,2026-02-18,0
-Zaid Gupta,2024PE7840,Antennas Fundamentals by Yunus Cengel (Ed 3),2026-03-22,2026-04-07,2
-Zaid Patil,2023PE9647,Cloud Fundamentals by Pressman (Ed 1),2026-02-18,2026-02-25,0
-Rohan Sharma,2024PE5922,Electrical Fundamentals by Tanenbaum (Ed 4),2026-02-09,2026-02-19,0
-Aarav Patil,2024PE5680,Theory of Computation Fundamentals by B.S. Grewal (Ed 5),2026-02-11,2026-02-19,0
-Rohan Verma,2024PE1473,Logic Design Fundamentals by Erwin Kreyszig (Ed 4),2026-02-22,2026-02-28,0
-Zaid Sharma,2024PE4995,Embedded Fundamentals by Cormen (Ed 3),2026-02-16,2026-02-21,0
-Tanvi Verma,2024PE5973,Heat Transfer Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-26,2026-03-11,0
-Vihaan Gupta,2024PE8882,Data Mining Fundamentals by V. Ganesan (Ed 3),2026-03-19,2026-04-12,10
-Ananya Sharma,2023PE1590,Control Systems Fundamentals by Galvin (Ed 2),2026-03-18,2026-04-07,6
-Aditya Deshmukh,2024PE8601,Physics Fundamentals by R.K. Rajput (Ed 2),2026-02-06,2026-02-17,0
-Meera Nair,2024PE8111,Math Fundamentals by Yunus Cengel (Ed 2),2026-02-14,2026-03-08,8
-Arjun Kulkarni,2024PE8083,Fluid Mechanics Fundamentals by Balanis (Ed 5),2026-01-29,2026-02-17,5
-Aarav Deshmukh,2024PE8856,Heat Transfer Fundamentals by R.K. Rajput (Ed 2),2026-03-06,2026-03-15,0
-Sanya Iyer,2023PE4965,Big Data Fundamentals by Ramesh Gaonkar (Ed 2),2026-03-03,2026-03-11,0
-Tanvi Mehta,2023PE2415,Heat Transfer Fundamentals by Ramesh Gaonkar (Ed 1),2026-01-27,2026-02-13,3
-Sanya Joshi,2024PE2835,OS Fundamentals by V. Ganesan (Ed 5),2026-02-06,2026-03-03,11
-Arjun Sharma,2024PE6458,Data Mining Fundamentals by Cormen (Ed 2),2026-03-16,2026-03-23,0
-Tanvi Patil,2024PE9246,OS Fundamentals by Erwin Kreyszig (Ed 1),2026-03-16,2026-04-03,4
-Aditya Mehta,2023PE4306,Physics Fundamentals by B.S. Grewal (Ed 4),2026-02-01,2026-02-11,0
-Rohan Gupta,2024PE8042,Cloud Fundamentals by Cormen (Ed 5),2026-03-03,2026-03-18,1
-Aditya Mehta,2023PE4306,Graphics Fundamentals by V. Ganesan (Ed 2),2026-01-30,2026-02-08,0
-Meera Nair,2024PE1110,IC Engines Fundamentals by Yunus Cengel (Ed 3),2026-02-28,2026-03-24,10
-Meera Kulkarni,2023PE6390,Algorithms Fundamentals by Pressman (Ed 1),2026-02-28,2026-03-15,1
-Zaid Nair,2023PE3418,Thermodynamics Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-26,2026-03-11,0
-Isha Kulkarni,2024PE9060,Networks Fundamentals by Galvin (Ed 2),2026-03-05,2026-03-14,0
-Kiara Sharma,2024PE1614,Radar Fundamentals by Balanis (Ed 2),2026-02-14,2026-03-10,10
-Isha Joshi,2023PE2488,Theory of Computation Fundamentals by Balanis (Ed 2),2026-02-10,2026-03-05,9
-Isha Nair,2024PE9385,Signals Fundamentals by R.K. Rajput (Ed 3),2026-02-23,2026-03-20,11
-Sanya Kulkarni,2024PE4959,Data Mining Fundamentals by V. Ganesan (Ed 1),2026-03-18,2026-04-07,6
-Vihaan Mehta,2024PE3959,Compiler Fundamentals by Ramesh Gaonkar (Ed 5),2026-02-09,2026-02-25,2
-Sanya Nair,2023PE2642,Networks Fundamentals by Galvin (Ed 2),2026-02-06,2026-02-27,7
-Ananya Sharma,2024PE9110,Chemistry Fundamentals by Erwin Kreyszig (Ed 4),2026-02-23,2026-03-10,1
-Zaid Gupta,2023PE2593,CAD Fundamentals by Galvin (Ed 2),2026-02-01,2026-02-25,10
-Zaid Patil,2024PE5024,Chemistry Fundamentals by V. Ganesan (Ed 2),2026-02-01,2026-02-12,0
-Isha Joshi,2024PE9550,Graphics Fundamentals by Pressman (Ed 5),2026-03-14,2026-03-27,0
-Meera Patil,2024PE1407,Fiber Optics Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-07,2026-03-02,9
-Vihaan Kulkarni,2023PE8134,Chassis Fundamentals by Pressman (Ed 5),2026-02-23,2026-02-28,0
-Zaid Sharma,2023PE2589,Cloud Fundamentals by Ramesh Gaonkar (Ed 1),2026-03-25,2026-04-02,0
-Arjun Nair,2024PE3892,AI Fundamentals by S.S. Rattan (Ed 4),2026-03-08,2026-03-24,2
-Meera Nair,2023PE5687,Wireless Fundamentals by Galvin (Ed 4),2026-02-04,2026-02-25,7
-Kiara Verma,2024PE8114,Data Mining Fundamentals by V. Ganesan (Ed 3),2026-03-08,2026-03-29,7
-Kiara Patil,2024PE5307,Cyber Security Fundamentals by Galvin (Ed 5),2026-02-19,2026-02-24,0
-Kiara Deshmukh,2024PE2209,Data Mining Fundamentals by Ramesh Gaonkar (Ed 2),2026-02-19,2026-03-12,7
-Meera Sharma,2024PE3250,Electrical Fundamentals by R.K. Rajput (Ed 1),2026-01-29,2026-02-05,0
-Aarav Mehta,2024PE7547,Wireless Fundamentals by Yunus Cengel (Ed 2),2026-02-06,2026-02-15,0
-Meera Kulkarni,2023PE4381,EV Tech Fundamentals by R.K. Rajput (Ed 3),2026-02-12,2026-02-28,2
-Aarav Deshmukh,2024PE8856,Radar Fundamentals by V. Ganesan (Ed 3),2026-02-02,2026-02-19,3
-Isha Verma,2023PE8707,Web Tech Fundamentals by B.S. Grewal (Ed 2),2026-03-12,2026-03-27,1
-Arjun Iyer,2023PE8277,Electrical Fundamentals by Pressman (Ed 3),2026-02-25,2026-03-04,0
-Isha Gupta,2024PE3845,IC Engines Fundamentals by Galvin (Ed 4),2026-03-12,2026-03-27,1
-Sanya Mehta,2023PE5256,DBMS Fundamentals by Haykin (Ed 1),2026-02-24,2026-03-18,8
-Zaid Iyer,2023PE5163,IC Engines Fundamentals by Yunus Cengel (Ed 3),2026-03-15,2026-04-06,8
-Sanya Iyer,2023PE4965,AI Fundamentals by Galvin (Ed 5),2026-03-08,2026-03-24,2
-Kiara Sharma,2024PE1614,Compiler Fundamentals by Galvin (Ed 1),2026-03-14,2026-03-23,0
-Meera Kulkarni,2023PE6390,Wireless Fundamentals by Galvin (Ed 4),2026-02-08,2026-02-18,0
-Arjun Kulkarni,2024PE6940,IC Engines Fundamentals by Galvin (Ed 4),2026-01-27,2026-02-13,3
-Tanvi Kulkarni,2023PE2905,Antennas Fundamentals by Tanenbaum (Ed 3),2026-02-15,2026-03-08,7
-Sanya Joshi,2023PE8497,C Programming Fundamentals by Tanenbaum (Ed 1),2026-03-15,2026-03-22,0
-Zaid Verma,2023PE8077,Antennas Fundamentals by Tanenbaum (Ed 3),2026-02-23,2026-03-03,0
-Kiara Deshmukh,2023PE5359,Chassis Fundamentals by Haykin (Ed 4),2026-02-22,2026-03-01,0
-Meera Kulkarni,2024PE1392,SOM Fundamentals by Haykin (Ed 4),2026-02-16,2026-03-05,3
-Ananya Nair,2023PE9082,Math Fundamentals by Tanenbaum (Ed 4),2026-03-05,2026-03-22,3
-Arjun Nair,2023PE4863,Fiber Optics Fundamentals by V. Ganesan (Ed 2),2026-03-13,2026-04-06,10
-Isha Kulkarni,2024PE4721,DBMS Fundamentals by M. Morris Mano (Ed 5),2026-03-02,2026-03-21,5
-Zaid Nair,2023PE3418,Microcontrollers Fundamentals by R.K. Rajput (Ed 5),2026-03-18,2026-03-31,0
-Tanvi Sharma,2024PE8888,Vehicle Dynamics Fundamentals by Cormen (Ed 4),2026-03-08,2026-03-31,9
-Arjun Mehta,2023PE9743,Chemistry Fundamentals by Cormen (Ed 3),2026-03-06,2026-03-20,0
-Rohan Deshmukh,2023PE9639,Cloud Fundamentals by Pressman (Ed 4),2026-03-17,2026-04-08,8
-Arjun Gupta,2024PE1346,C Programming Fundamentals by Ramesh Gaonkar (Ed 5),2026-02-12,2026-03-05,7
-Rohan Verma,2024PE4992,IC Engines Fundamentals by V. Ganesan (Ed 2),2026-02-23,2026-03-05,0
-Zaid Iyer,2024PE3398,Big Data Fundamentals by Tanenbaum (Ed 5),2026-01-31,2026-02-13,0
-Sanya Verma,2024PE7235,VLSI Fundamentals by Yunus Cengel (Ed 5),2026-02-25,2026-03-07,0
-Aditya Mehta,2023PE7901,Software Engg Fundamentals by Cormen (Ed 1),2026-03-14,2026-04-04,7
-Zaid Verma,2023PE8077,Thermodynamics Fundamentals by Tanenbaum (Ed 5),2026-02-23,2026-03-16,7
-Isha Verma,2024PE4987,Satellite Fundamentals by Pressman (Ed 1),2026-01-28,2026-02-18,7
-Vihaan Verma,2023PE5175,Wireless Fundamentals by R.K. Rajput (Ed 1),2026-03-05,2026-03-14,0
-Meera Verma,2023PE1092,Graphics Fundamentals by Cormen (Ed 2),2026-01-30,2026-02-11,0
-Meera Kulkarni,2024PE1444,Electrical Fundamentals by Cormen (Ed 3),2026-02-19,2026-03-06,1
-Aarav Deshmukh,2024PE4720,Theory of Computation Fundamentals by Galvin (Ed 1),2026-03-01,2026-03-19,4
-Zaid Nair,2023PE6274,VLSI Fundamentals by Balanis (Ed 5),2026-02-27,2026-03-09,0
-Meera Iyer,2024PE2717,DOM Fundamentals by Yunus Cengel (Ed 3),2026-02-16,2026-03-04,2
-Aditya Nair,2024PE6285,Signals Fundamentals by Cormen (Ed 4),2026-02-17,2026-02-23,0
-Vihaan Mehta,2023PE4906,Logic Design Fundamentals by Haykin (Ed 2),2026-02-01,2026-02-07,0
-Sanya Gupta,2023PE4502,Web Tech Fundamentals by V. Ganesan (Ed 5),2026-01-31,2026-02-22,8
-Meera Mehta,2023PE5166,Microcontrollers Fundamentals by Ramesh Gaonkar (Ed 2),2026-02-06,2026-02-25,5
-Meera Patil,2023PE8388,VLSI Fundamentals by M. Morris Mano (Ed 2),2026-02-20,2026-02-25,0
-Aarav Joshi,2023PE5586,Antennas Fundamentals by Cormen (Ed 5),2026-03-16,2026-04-07,8
-Kiara Kulkarni,2023PE5471,DBMS Fundamentals by Haykin (Ed 2),2026-01-30,2026-02-11,0
-Vihaan Gupta,2024PE5981,Graphics Fundamentals by Pressman (Ed 5),2026-01-28,2026-02-12,1
-Aarav Patil,2023PE9607,Transmission Fundamentals by Balanis (Ed 1),2026-02-01,2026-02-22,7
-Aarav Deshmukh,2024PE5308,AI Fundamentals by S.S. Rattan (Ed 2),2026-03-14,2026-03-19,0
-Zaid Patil,2023PE9647,Electrical Fundamentals by R.K. Rajput (Ed 4),2026-03-12,2026-03-29,3
-Kiara Sharma,2024PE4451,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-03,2026-02-28,11
-Sanya Verma,2024PE4744,Signals Fundamentals by Cormen (Ed 4),2026-03-24,2026-04-04,0
-Isha Joshi,2024PE1480,DBMS Fundamentals by B.S. Grewal (Ed 3),2026-01-29,2026-02-09,0
-Meera Kulkarni,2023PE4381,Transmission Fundamentals by M. Morris Mano (Ed 5),2026-03-17,2026-03-22,0
-Kiara Verma,2024PE8114,Electrical Fundamentals by Balanis (Ed 1),2026-02-27,2026-03-12,0
-Vihaan Mehta,2024PE3959,Theory of Computation Fundamentals by Cormen (Ed 4),2026-03-25,2026-04-09,1
-Sanya Deshmukh,2023PE9422,Vehicle Dynamics Fundamentals by V. Ganesan (Ed 3),2026-03-10,2026-03-23,0
-Rohan Gupta,2024PE8042,Satellite Fundamentals by Yunus Cengel (Ed 3),2026-03-20,2026-04-07,4
-Rohan Verma,2024PE4992,Theory of Computation Fundamentals by B.S. Grewal (Ed 5),2026-02-25,2026-03-13,2
-Zaid Mehta,2024PE7954,EV Tech Fundamentals by S.S. Rattan (Ed 2),2026-03-06,2026-03-27,7
-Ananya Sharma,2024PE3771,Cyber Security Fundamentals by V. Ganesan (Ed 1),2026-03-19,2026-03-26,0
-Isha Sharma,2023PE9320,Physics Fundamentals by S.S. Rattan (Ed 5),2026-02-16,2026-02-25,0
-Meera Iyer,2024PE5097,Logic Design Fundamentals by Pressman (Ed 5),2026-03-02,2026-03-26,10
-Aarav Iyer,2023PE1407,Software Engg Fundamentals by Balanis (Ed 5),2026-02-24,2026-03-05,0
-Zaid Kulkarni,2024PE5014,Theory of Computation Fundamentals by Cormen (Ed 4),2026-01-29,2026-02-12,0
-Aditya Mehta,2023PE7901,Data Mining Fundamentals by M. Morris Mano (Ed 3),2026-03-13,2026-03-18,0
-Zaid Nair,2024PE2237,Big Data Fundamentals by V. Ganesan (Ed 3),2026-02-14,2026-03-07,7
-Ananya Sharma,2023PE8024,Antennas Fundamentals by Erwin Kreyszig (Ed 1),2026-02-20,2026-03-11,5
-Aditya Mehta,2023PE2693,Networks Fundamentals by Cormen (Ed 4),2026-01-31,2026-02-18,4
-Arjun Mehta,2023PE9485,Logic Design Fundamentals by Pressman (Ed 5),2026-02-05,2026-02-13,0
-Sanya Verma,2023PE2291,Data Mining Fundamentals by R.K. Rajput (Ed 1),2026-01-26,2026-02-07,0
-Aarav Kulkarni,2024PE4685,C Programming Fundamentals by Pressman (Ed 3),2026-03-11,2026-03-22,0
-Aarav Iyer,2023PE3421,Big Data Fundamentals by M. Morris Mano (Ed 5),2026-03-19,2026-04-08,6
-Tanvi Deshmukh,2024PE6279,Chassis Fundamentals by Erwin Kreyszig (Ed 4),2026-03-16,2026-03-24,0
-Vihaan Gupta,2024PE5981,Microcontrollers Fundamentals by R.K. Rajput (Ed 4),2026-03-06,2026-03-22,2
-Vihaan Iyer,2023PE7141,Thermodynamics Fundamentals by M. Morris Mano (Ed 2),2026-01-27,2026-02-15,5
-Kiara Sharma,2024PE1614,Signals Fundamentals by Cormen (Ed 3),2026-02-23,2026-03-18,9
-Vihaan Mehta,2023PE5851,Cyber Security Fundamentals by V. Ganesan (Ed 1),2026-02-23,2026-03-17,8
-Aditya Patil,2023PE2850,IC Engines Fundamentals by V. Ganesan (Ed 1),2026-01-31,2026-02-23,9
-Aarav Patil,2023PE9202,Signals Fundamentals by Yunus Cengel (Ed 3),2026-03-22,2026-04-12,7
-Tanvi Patil,2024PE9903,Chemistry Fundamentals by Pressman (Ed 2),2026-03-02,2026-03-22,6
-Aarav Gupta,2024PE2362,Big Data Fundamentals by Galvin (Ed 2),2026-02-03,2026-02-23,6
-Aditya Joshi,2023PE8493,DBMS Fundamentals by Cormen (Ed 5),2026-03-08,2026-03-16,0
-Zaid Iyer,2023PE5163,Cloud Fundamentals by Pressman (Ed 4),2026-02-02,2026-02-20,4
-Aarav Sharma,2023PE2360,Software Engg Fundamentals by Balanis (Ed 5),2026-03-25,2026-03-31,0
-Ananya Sharma,2023PE1590,Mechanics Fundamentals by Pressman (Ed 2),2026-02-11,2026-02-27,2
-Kiara Gupta,2024PE9443,Graphics Fundamentals by M. Morris Mano (Ed 2),2026-02-27,2026-03-19,6
-Isha Sharma,2023PE1826,Chemistry Fundamentals by V. Ganesan (Ed 2),2026-03-17,2026-03-25,0
-Ananya Patil,2023PE1278,Chemistry Fundamentals by B.S. Grewal (Ed 3),2026-01-29,2026-02-12,0
-Aarav Gupta,2024PE3903,Physics Fundamentals by R.K. Rajput (Ed 2),2026-02-21,2026-03-06,0
-Isha Kulkarni,2023PE6558,Fiber Optics Fundamentals by V. Ganesan (Ed 2),2026-02-12,2026-02-27,1
-Aditya Kulkarni,2023PE4115,Graphics Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-13,2026-02-18,0
-Aditya Nair,2024PE6285,VLSI Fundamentals by Erwin Kreyszig (Ed 4),2026-02-10,2026-03-06,10
-Rohan Deshmukh,2023PE9182,Fiber Optics Fundamentals by V. Ganesan (Ed 2),2026-02-02,2026-02-16,0
-Sanya Verma,2023PE2291,Logic Design Fundamentals by Yunus Cengel (Ed 2),2026-02-05,2026-02-20,1
-Tanvi Iyer,2023PE9761,Graphics Fundamentals by Haykin (Ed 2),2026-02-25,2026-03-20,9
-Vihaan Deshmukh,2024PE9394,CAD Fundamentals by R.K. Rajput (Ed 1),2026-03-16,2026-04-06,7
-Zaid Gupta,2024PE3113,Electrical Fundamentals by V. Ganesan (Ed 3),2026-02-10,2026-02-15,0
-Meera Mehta,2023PE5166,Algorithms Fundamentals by Pressman (Ed 1),2026-01-25,2026-02-05,0
-Vihaan Nair,2024PE4976,Radar Fundamentals by Yunus Cengel (Ed 5),2026-03-05,2026-03-29,10
-Sanya Deshmukh,2024PE4974,Satellite Fundamentals by Galvin (Ed 3),2026-03-10,2026-03-29,5
-Kiara Sharma,2024PE1714,Data Mining Fundamentals by M. Morris Mano (Ed 3),2026-02-25,2026-03-11,0
-Sanya Verma,2024PE9102,Logic Design Fundamentals by Yunus Cengel (Ed 1),2026-03-14,2026-04-04,7
-Vihaan Verma,2023PE5175,DOM Fundamentals by Cormen (Ed 2),2026-02-16,2026-02-22,0
-Ananya Mehta,2024PE9379,Graphics Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-01,2026-02-16,1
-Meera Iyer,2024PE5097,EV Tech Fundamentals by V. Ganesan (Ed 3),2026-02-20,2026-03-01,0
-Rohan Verma,2024PE1473,Chemistry Fundamentals by Galvin (Ed 1),2026-02-22,2026-03-01,0
-Meera Iyer,2024PE5097,Math Fundamentals by S.S. Rattan (Ed 2),2026-02-24,2026-03-12,2
-Meera Kulkarni,2024PE1392,OS Fundamentals by R.K. Rajput (Ed 1),2026-02-07,2026-02-20,0
-Meera Joshi,2023PE4961,Fluid Mechanics Fundamentals by Balanis (Ed 5),2026-01-27,2026-02-08,0
-Aditya Deshmukh,2024PE8296,Chemistry Fundamentals by Erwin Kreyszig (Ed 5),2026-01-31,2026-02-13,0
-Isha Sharma,2023PE9320,VLSI Fundamentals by Galvin (Ed 3),2026-03-08,2026-03-16,0
-Zaid Joshi,2024PE3543,Chemistry Fundamentals by Balanis (Ed 4),2026-02-28,2026-03-24,10
-Aditya Mehta,2023PE4306,Antennas Fundamentals by M. Morris Mano (Ed 1),2026-02-03,2026-02-17,0
-Aditya Kulkarni,2023PE8267,Cyber Security Fundamentals by Yunus Cengel (Ed 4),2026-03-09,2026-03-14,0
-Isha Nair,2024PE9273,Electrical Fundamentals by Cormen (Ed 3),2026-03-03,2026-03-24,7
-Meera Nair,2024PE1110,Microcontrollers Fundamentals by Yunus Cengel (Ed 3),2026-02-07,2026-03-01,8
-Zaid Iyer,2023PE7560,C Programming Fundamentals by Pressman (Ed 3),2026-02-21,2026-03-06,0
-Zaid Sharma,2023PE3171,Fluid Mechanics Fundamentals by Galvin (Ed 1),2026-02-21,2026-03-17,10
-Sanya Joshi,2023PE3245,AI Fundamentals by S.S. Rattan (Ed 5),2026-02-05,2026-02-24,5
-Aarav Patil,2023PE9607,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-03-11,2026-03-30,5
-Isha Nair,2024PE6693,DBMS Fundamentals by Haykin (Ed 3),2026-02-07,2026-02-23,2
-Sanya Iyer,2023PE5955,Theory of Computation Fundamentals by Haykin (Ed 2),2026-02-12,2026-02-19,0
-Sanya Patil,2023PE3135,Wireless Fundamentals by Yunus Cengel (Ed 2),2026-03-19,2026-04-11,9
-Arjun Deshmukh,2023PE1417,Chassis Fundamentals by Cormen (Ed 1),2026-03-13,2026-03-20,0
-Ananya Sharma,2024PE9110,Fluid Mechanics Fundamentals by Pressman (Ed 4),2026-02-06,2026-02-26,6
-Zaid Deshmukh,2023PE8051,Chemistry Fundamentals by Tanenbaum (Ed 2),2026-02-09,2026-02-28,5
-Vihaan Sharma,2023PE3775,Math Fundamentals by Yunus Cengel (Ed 1),2026-03-03,2026-03-26,9
-Vihaan Gupta,2024PE3598,Algorithms Fundamentals by M. Morris Mano (Ed 4),2026-02-07,2026-02-23,2
-Zaid Nair,2023PE6274,SOM Fundamentals by S.S. Rattan (Ed 2),2026-03-18,2026-03-31,0
-Zaid Sharma,2023PE3171,VLSI Fundamentals by Galvin (Ed 3),2026-01-29,2026-02-08,0
-Meera Nair,2024PE4843,Thermodynamics Fundamentals by Erwin Kreyszig (Ed 1),2026-02-28,2026-03-19,5
-Tanvi Sharma,2024PE1156,Control Systems Fundamentals by Cormen (Ed 4),2026-03-03,2026-03-20,3
-Tanvi Gupta,2024PE8617,DBMS Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-15,2026-04-03,5
-Tanvi Kulkarni,2023PE3455,Transmission Fundamentals by R.K. Rajput (Ed 2),2026-02-18,2026-02-25,0
-Tanvi Joshi,2023PE1029,Chemistry Fundamentals by Erwin Kreyszig (Ed 1),2026-02-20,2026-03-04,0
-Aditya Sharma,2023PE4125,Data Mining Fundamentals by Haykin (Ed 1),2026-02-17,2026-03-03,0
-Rohan Nair,2023PE7536,Radar Fundamentals by M. Morris Mano (Ed 2),2026-02-01,2026-02-07,0
-Sanya Nair,2023PE2642,Graphics Fundamentals by Erwin Kreyszig (Ed 3),2026-03-07,2026-03-31,10
-Isha Kulkarni,2023PE2679,Web Tech Fundamentals by Tanenbaum (Ed 1),2026-03-10,2026-03-16,0
-Ananya Nair,2024PE8937,Radar Fundamentals by Yunus Cengel (Ed 5),2026-03-21,2026-04-06,2
-Meera Sharma,2023PE5660,Data Mining Fundamentals by Haykin (Ed 1),2026-01-30,2026-02-21,8
-Rohan Gupta,2024PE8042,Embedded Fundamentals by Pressman (Ed 3),2026-02-13,2026-02-23,0
-Zaid Iyer,2023PE7560,Antennas Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-11,2026-03-26,1
-Ananya Kulkarni,2023PE2124,Web Tech Fundamentals by V. Ganesan (Ed 5),2026-03-11,2026-04-05,11
-Meera Verma,2023PE1092,Fiber Optics Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-02,2026-02-11,0
-Aarav Mehta,2024PE7547,Networks Fundamentals by Galvin (Ed 4),2026-03-20,2026-04-13,10
-Aarav Deshmukh,2024PE5308,AI Fundamentals by S.S. Rattan (Ed 5),2026-02-15,2026-03-05,4
-Isha Kulkarni,2024PE3429,Web Tech Fundamentals by B.S. Grewal (Ed 2),2026-02-19,2026-03-03,0
-Meera Nair,2024PE8111,DOM Fundamentals by Yunus Cengel (Ed 3),2026-03-22,2026-04-12,7
-Aditya Deshmukh,2023PE7305,Software Engg Fundamentals by Balanis (Ed 5),2026-03-14,2026-04-05,8
-Zaid Gupta,2024PE2035,Mechanics Fundamentals by B.S. Grewal (Ed 3),2026-03-19,2026-04-10,8
-Aditya Gupta,2024PE9707,Logic Design Fundamentals by Pressman (Ed 2),2026-02-04,2026-02-28,10
-Isha Gupta,2024PE3845,Compiler Fundamentals by Balanis (Ed 2),2026-03-18,2026-04-04,3
-Meera Verma,2023PE1092,Web Tech Fundamentals by Tanenbaum (Ed 1),2026-03-19,2026-04-12,10
-Aditya Deshmukh,2024PE2959,Embedded Fundamentals by Yunus Cengel (Ed 2),2026-03-24,2026-03-29,0
-Vihaan Nair,2024PE1178,Compiler Fundamentals by Balanis (Ed 2),2026-02-26,2026-03-11,0
-Sanya Joshi,2023PE3245,Microcontrollers Fundamentals by Balanis (Ed 4),2026-02-12,2026-03-08,10
-Sanya Deshmukh,2023PE9422,Logic Design Fundamentals by Erwin Kreyszig (Ed 4),2026-03-24,2026-04-02,0
-Sanya Iyer,2024PE7367,DOM Fundamentals by Cormen (Ed 1),2026-03-18,2026-03-30,0
-Aditya Mehta,2023PE4306,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-08,2026-03-28,6
-Rohan Nair,2024PE2388,Graphics Fundamentals by Tanenbaum (Ed 2),2026-02-04,2026-02-21,3
-Isha Verma,2024PE4987,Embedded Fundamentals by Tanenbaum (Ed 3),2026-02-07,2026-03-04,11
-Meera Kulkarni,2023PE4381,Math Fundamentals by Pressman (Ed 4),2026-02-10,2026-03-04,8
-Meera Nair,2024PE4843,Cyber Security Fundamentals by R.K. Rajput (Ed 1),2026-01-28,2026-02-14,3
-Kiara Sharma,2024PE5187,Wireless Fundamentals by Haykin (Ed 5),2026-03-18,2026-03-30,0
-Isha Verma,2024PE4987,EV Tech Fundamentals by S.S. Rattan (Ed 1),2026-02-28,2026-03-08,0
-Arjun Gupta,2023PE6445,Electrical Fundamentals by R.K. Rajput (Ed 4),2026-02-17,2026-03-12,9
-Kiara Verma,2023PE5162,Embedded Fundamentals by Yunus Cengel (Ed 2),2026-03-14,2026-03-21,0
-Aarav Mehta,2024PE7547,Logic Design Fundamentals by Galvin (Ed 5),2026-01-26,2026-02-10,1
-Arjun Gupta,2023PE6445,Radar Fundamentals by Balanis (Ed 2),2026-02-13,2026-03-10,11
-Meera Kulkarni,2023PE6390,Wireless Fundamentals by Balanis (Ed 3),2026-03-16,2026-04-04,5
-Vihaan Verma,2023PE5175,SOM Fundamentals by S.S. Rattan (Ed 1),2026-03-22,2026-04-11,6
-Meera Nair,2024PE8111,Wireless Fundamentals by Tanenbaum (Ed 4),2026-01-30,2026-02-15,2
-Arjun Verma,2024PE7671,DBMS Fundamentals by Ramesh Gaonkar (Ed 3),2026-03-09,2026-03-27,4
-Zaid Nair,2023PE3418,Graphics Fundamentals by Balanis (Ed 1),2026-02-25,2026-03-15,4
-Meera Verma,2024PE9486,Thermodynamics Fundamentals by Balanis (Ed 5),2026-03-19,2026-04-10,8
-Aarav Deshmukh,2024PE8856,Cloud Fundamentals by Pressman (Ed 1),2026-03-20,2026-04-09,6
-Tanvi Sharma,2023PE8109,Chassis Fundamentals by B.S. Grewal (Ed 1),2026-01-27,2026-02-12,2
-Isha Gupta,2024PE6069,Big Data Fundamentals by V. Ganesan (Ed 1),2026-02-03,2026-02-20,3
-Aarav Mehta,2023PE9241,Chemistry Fundamentals by Erwin Kreyszig (Ed 1),2026-03-05,2026-03-14,0
-Aditya Sharma,2024PE3266,Math Fundamentals by Yunus Cengel (Ed 4),2026-01-29,2026-02-08,0
-Aarav Patil,2024PE7114,Antennas Fundamentals by B.S. Grewal (Ed 1),2026-03-20,2026-04-10,7
-Ananya Sharma,2023PE8024,SOM Fundamentals by Haykin (Ed 4),2026-01-31,2026-02-09,0
-Zaid Deshmukh,2024PE1324,Networks Fundamentals by R.K. Rajput (Ed 4),2026-01-28,2026-02-05,0
-Vihaan Verma,2023PE5175,Cloud Fundamentals by Ramesh Gaonkar (Ed 5),2026-01-29,2026-02-21,9
-Tanvi Joshi,2023PE3326,Fiber Optics Fundamentals by Tanenbaum (Ed 3),2026-03-08,2026-03-28,6
-Zaid Kulkarni,2024PE1157,Chemistry Fundamentals by Balanis (Ed 4),2026-02-04,2026-02-21,3
-Arjun Verma,2024PE3091,Control Systems Fundamentals by B.S. Grewal (Ed 3),2026-03-12,2026-03-28,2
-Arjun Joshi,2024PE4677,Networks Fundamentals by Galvin (Ed 4),2026-02-06,2026-03-01,9
-Meera Iyer,2023PE4445,Signals Fundamentals by Balanis (Ed 5),2026-02-24,2026-03-06,0
-Aditya Mehta,2023PE7901,Cloud Fundamentals by Cormen (Ed 5),2026-02-06,2026-02-12,0
-Aarav Deshmukh,2024PE4720,AI Fundamentals by Ramesh Gaonkar (Ed 4),2026-03-16,2026-03-25,0
-Aarav Mehta,2023PE5030,Fluid Mechanics Fundamentals by Balanis (Ed 5),2026-03-25,2026-04-11,3
-Ananya Sharma,2023PE1590,Embedded Fundamentals by Erwin Kreyszig (Ed 1),2026-01-27,2026-02-04,0
-Isha Kulkarni,2023PE6558,Software Engg Fundamentals by S.S. Rattan (Ed 2),2026-03-10,2026-04-01,8
-Rohan Sharma,2024PE5922,Cyber Security Fundamentals by M. Morris Mano (Ed 2),2026-03-18,2026-04-01,0
-Tanvi Sharma,2023PE8109,Fiber Optics Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-27,2026-03-11,0
-Aditya Deshmukh,2024PE8296,Algorithms Fundamentals by Pressman (Ed 5),2026-02-01,2026-02-15,0
-Meera Patil,2024PE6618,Data Mining Fundamentals by V. Ganesan (Ed 4),2026-02-16,2026-02-28,0
-Vihaan Sharma,2023PE3775,Data Mining Fundamentals by B.S. Grewal (Ed 1),2026-03-13,2026-03-21,0
-Meera Nair,2023PE5687,Physics Fundamentals by Erwin Kreyszig (Ed 4),2026-01-27,2026-02-04,0
-Aditya Iyer,2023PE8855,Wireless Fundamentals by M. Morris Mano (Ed 1),2026-02-09,2026-03-05,10
-Isha Verma,2024PE2758,Big Data Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-06,2026-02-12,0
-Aditya Kulkarni,2023PE8267,CAD Fundamentals by R.K. Rajput (Ed 3),2026-02-06,2026-02-26,6
-Rohan Kulkarni,2023PE4741,Software Engg Fundamentals by Erwin Kreyszig (Ed 3),2026-03-12,2026-03-20,0
-Aarav Gupta,2023PE2475,Embedded Fundamentals by Yunus Cengel (Ed 3),2026-02-04,2026-02-21,3
-Aarav Kulkarni,2023PE5085,IC Engines Fundamentals by V. Ganesan (Ed 1),2026-01-29,2026-02-15,3
-Kiara Kulkarni,2023PE5471,Signals Fundamentals by R.K. Rajput (Ed 3),2026-02-13,2026-03-10,11
-Ananya Kulkarni,2023PE2124,Graphics Fundamentals by V. Ganesan (Ed 5),2026-03-16,2026-03-23,0
-Vihaan Patil,2023PE2404,EV Tech Fundamentals by S.S. Rattan (Ed 1),2026-02-05,2026-03-02,11
-Aarav Patil,2023PE9202,Big Data Fundamentals by V. Ganesan (Ed 1),2026-03-06,2026-03-21,1
-Aarav Gupta,2024PE2197,SOM Fundamentals by Cormen (Ed 3),2026-02-12,2026-03-04,6
-Isha Nair,2024PE9385,AI Fundamentals by Ramesh Gaonkar (Ed 4),2026-03-07,2026-03-20,0
-Rohan Nair,2023PE7536,Transmission Fundamentals by Haykin (Ed 5),2026-03-25,2026-04-07,0
-Aditya Mehta,2023PE7654,Chemistry Fundamentals by Balanis (Ed 4),2026-02-06,2026-02-20,0
-Meera Nair,2023PE5687,Embedded Fundamentals by Cormen (Ed 3),2026-02-14,2026-03-01,1
-Ananya Deshmukh,2024PE2048,Cloud Fundamentals by Ramesh Gaonkar (Ed 1),2026-02-20,2026-03-13,7
-Ananya Sharma,2023PE4170,VLSI Fundamentals by R.K. Rajput (Ed 4),2026-02-20,2026-03-13,7
-Aarav Joshi,2023PE5586,Networks Fundamentals by Erwin Kreyszig (Ed 2),2026-02-13,2026-02-24,0
-Rohan Mehta,2023PE8522,Control Systems Fundamentals by Ramesh Gaonkar (Ed 3),2026-02-23,2026-03-10,1
-Meera Kulkarni,2023PE4381,Satellite Fundamentals by R.K. Rajput (Ed 3),2026-02-10,2026-02-15,0
-Tanvi Sharma,2024PE8888,Microcontrollers Fundamentals by Haykin (Ed 4),2026-03-11,2026-03-17,0
-Zaid Iyer,2024PE3398,Satellite Fundamentals by Haykin (Ed 5),2026-03-16,2026-03-22,0
-Kiara Sharma,2024PE6726,Satellite Fundamentals by Ramesh Gaonkar (Ed 5),2026-03-03,2026-03-23,6
-Zaid Kulkarni,2023PE3540,Web Tech Fundamentals by Cormen (Ed 5),2026-03-11,2026-03-18,0
-Ananya Patil,2023PE1278,Fluid Mechanics Fundamentals by Erwin Kreyszig (Ed 4),2026-02-26,2026-03-15,3
-Aarav Deshmukh,2024PE8856,Control Systems Fundamentals by V. Ganesan (Ed 3),2026-03-19,2026-04-13,11
-Kiara Kulkarni,2023PE5471,OS Fundamentals by R.K. Rajput (Ed 1),2026-01-29,2026-02-06,0
-Meera Verma,2023PE1092,EV Tech Fundamentals by S.S. Rattan (Ed 2),2026-03-14,2026-04-04,7
-Sanya Patil,2023PE3135,Wireless Fundamentals by Balanis (Ed 3),2026-02-23,2026-03-06,0
-Tanvi Kulkarni,2023PE5412,Mechanics Fundamentals by B.S. Grewal (Ed 3),2026-03-10,2026-03-21,0
-Rohan Mehta,2023PE5558,Satellite Fundamentals by R.K. Rajput (Ed 3),2026-03-22,2026-04-05,0
-Kiara Iyer,2024PE4784,Heat Transfer Fundamentals by S.S. Rattan (Ed 2),2026-02-18,2026-02-27,0
-Aarav Kulkarni,2024PE4685,Logic Design Fundamentals by Galvin (Ed 5),2026-03-17,2026-03-31,0
-Vihaan Nair,2024PE4976,Microcontrollers Fundamentals by Haykin (Ed 4),2026-02-11,2026-03-08,11
-Kiara Deshmukh,2023PE5359,Data Mining Fundamentals by V. Ganesan (Ed 1),2026-02-28,2026-03-23,9
-Ananya Sharma,2024PE9451,Satellite Fundamentals by R.K. Rajput (Ed 3),2026-03-11,2026-03-17,0
-Arjun Kulkarni,2024PE8083,Fluid Mechanics Fundamentals by R.K. Rajput (Ed 2),2026-02-14,2026-02-19,0
-Ananya Patil,2023PE1278,Algorithms Fundamentals by Cormen (Ed 2),2026-03-10,2026-03-31,7
-Vihaan Iyer,2023PE7141,Math Fundamentals by Yunus Cengel (Ed 2),2026-01-26,2026-02-10,1
+Name,Admission_Number,Book_ID,Book_Title,Issue_Date,Return_Date,Days_Due
+Rohan Gupta 43,2024PE9460,CS087,Discrete Mathematics (Ed 11),2026-02-01,2026-02-07,0
+Vihaan Gupta 97,2024PE6636,CS020,Artificial Intelligence: A Modern Approach (Ed 3),2026-02-19,2026-03-20,15
+Ananya Joshi,2023PE6150,IT007,Software Engineering (Ed 2),2026-03-17,2026-04-07,7
+Aarav Joshi 69,2023PE7730,FI018,Advanced Engineering Mathematics (Ed 3),2026-02-01,2026-02-13,0
+Kiara Mehta,2022PE1141,IT094,Cryptography and Network Security (Ed 16),2026-02-20,2026-03-22,16
+Ishaan Nair 89,2022PE3804,AU046,Internal Combustion Engines (Ed 12),2026-02-15,2026-03-08,7
+Isha Sharma,2022PE5499,AU014,Internal Combustion Engines (Ed 4),2026-02-24,2026-03-01,0
+Arjun Deshmukh 24,2024PE5995,IT067,Software Engineering (Ed 12),2026-02-13,2026-03-04,5
+Aditya Joshi,2024PE8755,EC083,VLSI Design (Ed 14),2026-02-09,2026-03-11,16
+Diya Kulkarni 52,2022PE5213,EC032,Microprocessor Architecture (Ed 6),2026-03-05,2026-03-25,6
+Rohan Mehta 56,2024PE1090,CS093,Database System Concepts (Ed 12),2026-03-06,2026-03-27,7
+Kiara Nair 32,2024PE6653,EC092,Microprocessor Architecture (Ed 16),2026-03-17,2026-03-30,0
+Kiara Gupta,2024PE7088,FI083,Engineering Physics (Ed 11),2026-02-26,2026-03-22,10
+Vihaan Gupta,2022PE5333,IT066,The Complete Reference Java (Ed 11),2026-02-04,2026-03-05,15
+Arjun Gupta,2023PE6637,EC037,Digital Design (Ed 7),2026-03-13,2026-04-02,6
+Aarav Sharma 21,2023PE8370,EC096,Control Systems Engineering (Ed 16),2026-02-02,2026-02-22,6
+Tanvi Deshmukh 41,2022PE2358,ME018,Theory of Machines (Ed 4),2026-01-30,2026-02-23,10
+Vihaan Nair,2023PE8074,EX027,Antenna Theory (Ed 5),2026-02-02,2026-02-09,0
+Sanya Joshi,2024PE5913,IT031,Software Engineering (Ed 6),2026-02-01,2026-02-20,5
+Tanvi Mehta,2022PE5334,CS058,Operating System Concepts (Ed 8),2026-02-22,2026-03-10,2
+Vihaan Verma 69,2023PE6649,CS031,Discrete Mathematics (Ed 4),2026-02-12,2026-03-11,13
+Ananya Iyer,2022PE5931,EX070,Microwave Engineering (Ed 12),2026-02-28,2026-03-23,9
+Diya Sharma 81,2024PE9764,FI098,Advanced Engineering Mathematics (Ed 13),2026-03-02,2026-03-08,0
+Tanvi Deshmukh 25,2024PE6524,ME049,Strength of Materials (Ed 10),2026-02-12,2026-03-03,5
+Aditya Nair,2023PE8918,CS051,Computer Networks (Ed 7),2026-03-09,2026-03-27,4
+Aarav Iyer,2024PE1030,EC025,Digital Design (Ed 5),2026-03-04,2026-03-18,0
+Ishaan Nair 89,2022PE3804,IT024,The Complete Reference Java (Ed 4),2026-02-26,2026-03-27,15
+Aarav Mehta,2024PE1934,EX059,Optical Fiber Communications (Ed 10),2026-02-16,2026-02-24,0
+Isha Sharma,2022PE5499,IT007,Software Engineering (Ed 2),2026-03-17,2026-03-23,0
+Arjun Deshmukh,2024PE5958,EX082,Microwave Engineering (Ed 14),2026-02-07,2026-02-18,0
+Aditya Joshi 3,2023PE8364,ME033,Theory of Machines (Ed 7),2026-03-01,2026-03-13,0
+Kiara Kulkarni 28,2023PE8187,FI096,Engineering Graphics (Ed 12),2026-02-27,2026-03-29,16
+Vihaan Verma 69,2023PE6649,IT094,Cryptography and Network Security (Ed 16),2026-03-04,2026-03-31,13
+Rohan Deshmukh,2022PE5607,EX086,Digital Communications (Ed 15),2026-02-16,2026-03-05,3
+Vihaan Mehta 27,2023PE9640,CS052,Artificial Intelligence: A Modern Approach (Ed 7),2026-03-02,2026-03-24,8
+Aarav Joshi 3,2023PE1952,AU033,Automotive Mechanics (Ed 9),2026-02-28,2026-03-07,0
+Diya Gupta 61,2024PE6356,CS004,Artificial Intelligence: A Modern Approach (Ed 1),2026-02-26,2026-03-17,5
+Arjun Patil,2024PE3894,FI041,Higher Engineering Mathematics (Ed 6),2026-03-08,2026-03-29,7
+Arjun Iyer,2022PE5160,IT015,Web Technologies (Ed 3),2026-02-18,2026-03-04,0
+Diya Mehta 50,2024PE1666,EC012,Control Systems Engineering (Ed 2),2026-03-19,2026-04-12,10
+Tanvi Mehta 2,2023PE8436,AU041,Automotive Mechanics (Ed 11),2026-02-12,2026-02-28,2
+Diya Kulkarni 93,2023PE6595,FI032,Engineering Graphics (Ed 4),2026-02-04,2026-02-12,0
+Vihaan Verma 69,2023PE6649,IT082,Cryptography and Network Security (Ed 14),2026-03-02,2026-03-20,4
+Isha Patil,2023PE3208,IT049,Software Engineering (Ed 9),2026-03-08,2026-03-19,0
+Ishaan Deshmukh 2,2024PE9291,CS002,Operating System Concepts (Ed 1),2026-02-06,2026-03-03,11
+Tanvi Kulkarni 34,2023PE8564,CS008,Speech and Language Processing (Ed 1),2026-03-16,2026-03-30,0
+Sanya Sharma,2023PE2446,EX078,Wireless Communications (Ed 13),2026-02-05,2026-03-07,16
+Kiara Deshmukh,2024PE9834,FI069,Engineering Mechanics (Ed 9),2026-02-08,2026-03-08,14
+Aarav Patil 14,2024PE3666,AU039,Vehicle Dynamics (Ed 10),2026-01-26,2026-02-09,0
+Arjun Patil,2024PE3894,CS090,Operating System Concepts (Ed 12),2026-03-03,2026-03-31,14
+Ishaan Deshmukh 21,2024PE7519,CS089,Introduction to Algorithms (Ed 12),2026-02-06,2026-03-05,13
+Tanvi Joshi,2024PE4954,CS054,Compilers: Principles (Ed 7),2026-01-31,2026-03-01,15
+Ishaan Nair,2024PE9817,EX036,Wireless Communications (Ed 6),2026-03-04,2026-03-26,8
+Tanvi Patil 12,2022PE3542,EC010,Embedded Systems (Ed 2),2026-03-03,2026-03-26,9
+Diya Mehta 41,2023PE1482,FI021,Engineering Mechanics (Ed 3),2026-02-21,2026-03-14,7
+Isha Patil,2023PE3208,CS063,Discrete Mathematics (Ed 8),2026-03-01,2026-03-12,0
+Tanvi Patil,2024PE5622,EX043,Principles of Communication Systems (Ed 8),2026-03-14,2026-03-23,0
+Aditya Gupta,2024PE4098,IT009,Web Technologies (Ed 2),2026-01-31,2026-02-25,11
+Ishaan Verma 8,2023PE1338,IT069,Web Technologies (Ed 12),2026-01-27,2026-02-20,10
+Aditya Kulkarni 66,2024PE7300,EX049,Principles of Communication Systems (Ed 9),2026-03-07,2026-03-30,9
+Vihaan Deshmukh 20,2024PE9335,FI036,Applied Chemistry (Ed 5),2026-03-15,2026-03-29,0
+Aditya Kulkarni 66,2024PE7300,ME030,Heat and Mass Transfer (Ed 6),2026-02-12,2026-03-12,14
+Diya Kulkarni 52,2022PE5213,ME035,Heat and Mass Transfer (Ed 7),2026-03-02,2026-03-25,9
+Tanvi Nair 77,2022PE8417,FI052,Applied Chemistry (Ed 7),2026-02-10,2026-02-23,0
+Sanya Mehta 17,2022PE7829,AU007,Vehicle Dynamics (Ed 2),2026-02-07,2026-03-05,12
+Ananya Kulkarni 58,2022PE6909,EC051,Signals and Systems (Ed 9),2026-02-06,2026-03-08,16
+Rohan Mehta,2022PE3378,FI036,Applied Chemistry (Ed 5),2026-02-15,2026-03-15,14
+Ananya Patil,2022PE6915,FI001,Higher Engineering Mathematics (Ed 1),2026-03-13,2026-04-08,12
+Aarav Kulkarni 93,2023PE4999,IT052,Cryptography and Network Security (Ed 9),2026-02-15,2026-02-27,0
+Aditya Sharma 19,2023PE9780,EC046,Embedded Systems (Ed 8),2026-02-16,2026-03-14,12
+Ananya Iyer 32,2022PE9858,EX029,Optical Fiber Communications (Ed 5),2026-02-27,2026-03-09,0
+Isha Mehta 32,2022PE3243,FI079,Programming in ANSI C (Ed 10),2026-02-03,2026-03-03,14
+Ananya Sharma 15,2023PE4062,EX097,Principles of Communication Systems (Ed 17),2026-02-05,2026-03-03,12
+Aarav Mehta,2024PE1934,EX086,Digital Communications (Ed 15),2026-03-10,2026-04-07,14
+Ishaan Verma,2024PE6830,IT085,Software Engineering (Ed 15),2026-03-18,2026-03-30,0
+Sanya Mehta 17,2022PE7829,FI051,Engineering Physics (Ed 7),2026-01-30,2026-02-22,9
+Isha Deshmukh,2024PE3081,EX095,Optical Fiber Communications (Ed 16),2026-03-16,2026-04-03,4
+Kiara Patil 26,2022PE7093,FI058,Advanced Engineering Mathematics (Ed 8),2026-02-26,2026-03-07,0
+Diya Patil 2,2023PE8033,FI063,Programming in ANSI C (Ed 8),2026-03-09,2026-03-30,7
+Vihaan Gupta,2022PE5333,IT054,The Complete Reference Java (Ed 9),2026-02-17,2026-03-05,2
+Diya Mehta 14,2024PE7183,CS005,Database System Concepts (Ed 1),2026-02-24,2026-03-20,10
+Rohan Mehta 30,2023PE2219,ME015,Heat and Mass Transfer (Ed 3),2026-02-15,2026-03-17,16
+Aarav Kulkarni 63,2024PE1018,EC081,Signals and Systems (Ed 14),2026-03-12,2026-03-19,0
+Tanvi Mehta,2022PE5334,FI096,Engineering Graphics (Ed 12),2026-03-15,2026-03-25,0
+Aditya Verma,2022PE7949,EX040,Microwave Engineering (Ed 7),2026-02-18,2026-02-23,0
+Vihaan Nair 34,2024PE8116,EX020,Digital Communications (Ed 4),2026-02-28,2026-03-17,3
+Diya Gupta 81,2024PE8935,EC043,Digital Design (Ed 8),2026-03-01,2026-03-12,0
+Vihaan Joshi 58,2023PE7336,EX080,Digital Communications (Ed 14),2026-03-20,2026-04-03,0
+Arjun Gupta 32,2024PE3537,FI035,Engineering Physics (Ed 5),2026-02-06,2026-03-08,16
+Ananya Joshi,2023PE6150,EC071,VLSI Design (Ed 12),2026-02-14,2026-03-13,13
+Aditya Nair 73,2024PE8203,AU050,Internal Combustion Engines (Ed 13),2026-03-06,2026-03-16,0
+Rohan Mehta 30,2023PE2219,EC047,VLSI Design (Ed 8),2026-03-11,2026-03-16,0
+Rohan Verma 15,2022PE7221,AU015,Vehicle Dynamics (Ed 4),2026-03-06,2026-04-03,14
+Kiara Sharma 78,2022PE5220,EC047,VLSI Design (Ed 8),2026-02-12,2026-02-25,0
+Diya Nair 60,2024PE3901,IT039,Web Technologies (Ed 7),2026-02-12,2026-02-19,0
+Isha Joshi 42,2022PE9995,IT090,The Complete Reference Java (Ed 15),2026-02-12,2026-03-07,9
+Aditya Nair,2023PE8918,FI060,Applied Chemistry (Ed 8),2026-03-13,2026-04-09,13
+Diya Kulkarni 58,2024PE9288,IT033,Web Technologies (Ed 6),2026-02-26,2026-03-12,0
+Rohan Iyer 96,2023PE4856,IT059,Big Data Analytics (Ed 10),2026-02-02,2026-02-15,0
+Ananya Deshmukh,2024PE3816,EC059,VLSI Design (Ed 10),2026-02-07,2026-02-12,0
+Rohan Sharma,2022PE2385,AU044,Automobile Engineering (Ed 11),2026-03-10,2026-03-19,0
+Ananya Verma,2024PE6005,EC025,Digital Design (Ed 5),2026-02-22,2026-03-13,5
+Rohan Joshi,2023PE6992,CS082,Operating System Concepts (Ed 11),2026-02-04,2026-02-13,0
+Isha Joshi,2024PE8564,CS011,Computer Networks (Ed 2),2026-02-20,2026-03-03,0
+Kiara Iyer 31,2023PE4525,EC033,Signals and Systems (Ed 6),2026-02-28,2026-03-10,0
+Kiara Iyer 31,2023PE4525,FI038,Basic Electrical Engineering (Ed 5),2026-03-18,2026-04-09,8
+Kiara Mehta 98,2022PE5690,EC012,Control Systems Engineering (Ed 2),2026-03-09,2026-03-18,0
+Aditya Deshmukh,2023PE2386,AU001,Automotive Mechanics (Ed 1),2026-01-27,2026-02-25,15
+Aarav Deshmukh,2024PE3765,EC086,Microprocessor Architecture (Ed 15),2026-02-20,2026-03-12,6
+Tanvi Kulkarni,2024PE5694,EX036,Wireless Communications (Ed 6),2026-02-13,2026-03-01,2
+Aditya Patil,2023PE5605,CS081,Introduction to Algorithms (Ed 11),2026-02-24,2026-03-03,0
+Ananya Deshmukh 82,2023PE6332,ME005,Heat and Mass Transfer (Ed 1),2026-03-15,2026-03-22,0
+Arjun Verma,2023PE9379,EC018,Control Systems Engineering (Ed 3),2026-01-29,2026-02-24,12
+Ananya Joshi 77,2024PE5032,AU032,Automobile Engineering (Ed 8),2026-02-20,2026-03-08,2
+Kiara Verma,2023PE7115,FI004,Applied Chemistry (Ed 1),2026-01-25,2026-02-03,0
+Rohan Sharma,2022PE2385,FI072,Engineering Graphics (Ed 9),2026-03-17,2026-03-25,0
+Sanya Mehta 17,2022PE7829,EX095,Optical Fiber Communications (Ed 16),2026-02-14,2026-02-27,0
+Rohan Sharma 87,2024PE1567,IT061,Software Engineering (Ed 11),2026-01-29,2026-02-18,6
+Aditya Sharma 78,2024PE2224,IT087,Web Technologies (Ed 15),2026-03-03,2026-04-02,16
+Diya Mehta 41,2023PE1482,FI032,Engineering Graphics (Ed 4),2026-03-17,2026-03-31,0
+Rohan Patil 83,2022PE8007,EX018,Wireless Communications (Ed 3),2026-03-01,2026-03-23,8
+Isha Mehta 32,2022PE3243,CS041,Introduction to Algorithms (Ed 6),2026-03-06,2026-03-22,2
+Tanvi Nair 16,2022PE5319,EX077,Optical Fiber Communications (Ed 13),2026-02-10,2026-02-26,2
+Rohan Joshi,2023PE6992,EX011,Optical Fiber Communications (Ed 2),2026-01-25,2026-02-10,2
+Diya Deshmukh,2023PE2382,EX078,Wireless Communications (Ed 13),2026-03-10,2026-04-09,16
+Isha Verma,2024PE5786,IT049,Software Engineering (Ed 9),2026-03-11,2026-04-07,13
+Tanvi Kulkarni 49,2023PE3069,EC087,Signals and Systems (Ed 15),2026-02-17,2026-02-23,0
+Diya Nair 60,2024PE3901,EX051,Antenna Theory (Ed 9),2026-02-26,2026-03-08,0
+Diya Iyer,2024PE6608,CS021,Database System Concepts (Ed 3),2026-02-26,2026-03-10,0
+Rohan Sharma 32,2023PE4496,EX045,Antenna Theory (Ed 8),2026-03-19,2026-04-05,3
+Vihaan Gupta 97,2024PE6636,EX045,Antenna Theory (Ed 8),2026-02-21,2026-03-10,3
+Isha Iyer,2023PE2125,IT054,The Complete Reference Java (Ed 9),2026-03-02,2026-03-25,9
+Isha Sharma,2022PE5499,EC099,Signals and Systems (Ed 17),2026-02-28,2026-03-18,4
+Ishaan Sharma 96,2023PE8796,ME005,Heat and Mass Transfer (Ed 1),2026-03-07,2026-03-21,0
+Diya Patil 24,2022PE9083,CS028,Artificial Intelligence: A Modern Approach (Ed 4),2026-03-15,2026-04-05,7
+Rohan Mehta,2022PE3378,EX074,Digital Communications (Ed 13),2026-02-13,2026-02-26,0
+Aarav Kulkarni,2023PE3838,IT066,The Complete Reference Java (Ed 11),2026-02-20,2026-03-21,15
+Diya Sharma,2023PE2390,IT042,The Complete Reference Java (Ed 7),2026-02-13,2026-02-19,0
+Ishaan Nair 89,2022PE3804,AU040,Automobile Engineering (Ed 10),2026-01-27,2026-02-10,0
+Aditya Mehta,2022PE1842,FI068,Applied Chemistry (Ed 9),2026-03-21,2026-04-18,14
+Tanvi Nair,2022PE6147,EC070,Embedded Systems (Ed 12),2026-02-07,2026-03-01,8
+Diya Joshi,2023PE6234,EC057,Signals and Systems (Ed 10),2026-02-18,2026-03-20,16
+Isha Deshmukh 14,2023PE8998,FI038,Basic Electrical Engineering (Ed 5),2026-03-18,2026-04-08,7
+Isha Deshmukh 12,2022PE7619,IT009,Web Technologies (Ed 2),2026-02-18,2026-03-17,13
+Aditya Joshi,2024PE8755,EC073,Digital Design (Ed 13),2026-03-02,2026-03-10,0
+Kiara Joshi,2024PE1004,EC081,Signals and Systems (Ed 14),2026-01-31,2026-02-26,12
+Ishaan Joshi 82,2024PE1205,FI043,Engineering Physics (Ed 6),2026-02-18,2026-03-20,16
+Diya Gupta 81,2024PE8935,FI047,Programming in ANSI C (Ed 6),2026-03-09,2026-04-07,15
+Aarav Deshmukh 88,2022PE8462,FI079,Programming in ANSI C (Ed 10),2026-02-18,2026-02-26,0
+Aarav Kulkarni 54,2022PE7814,EC080,Microprocessor Architecture (Ed 14),2026-02-10,2026-03-09,13
+Aarav Gupta,2024PE3779,FI094,Basic Electrical Engineering (Ed 12),2026-02-27,2026-03-12,0
+Aditya Kulkarni,2024PE5084,EC034,Embedded Systems (Ed 6),2026-02-12,2026-02-24,0
+Vihaan Verma,2024PE6948,IT045,Web Technologies (Ed 8),2026-02-11,2026-02-27,2
+Rohan Iyer,2023PE8528,EC093,Signals and Systems (Ed 16),2026-02-21,2026-03-22,15
+Vihaan Mehta 27,2023PE9640,EX081,Antenna Theory (Ed 14),2026-02-03,2026-02-18,1
+Diya Mehta 50,2024PE1666,FI009,Higher Engineering Mathematics (Ed 2),2026-01-25,2026-02-14,6
+Diya Kulkarni,2023PE9521,IT089,Big Data Analytics (Ed 15),2026-02-10,2026-03-05,9
+Tanvi Gupta,2024PE6792,FI091,Engineering Physics (Ed 12),2026-01-31,2026-03-01,15
+Kiara Gupta,2024PE7088,FI029,Engineering Mechanics (Ed 4),2026-02-10,2026-02-22,0
+Diya Nair 44,2022PE5739,IT047,Big Data Analytics (Ed 8),2026-02-16,2026-03-10,8
+Diya Kulkarni 52,2022PE5213,EX100,Microwave Engineering (Ed 17),2026-02-11,2026-02-16,0
+Rohan Mehta 56,2024PE1090,EC015,Signals and Systems (Ed 3),2026-03-19,2026-03-27,0
+Isha Verma,2024PE5786,CS041,Introduction to Algorithms (Ed 6),2026-03-15,2026-03-24,0
+Ishaan Nair 89,2022PE3804,CS053,Database System Concepts (Ed 7),2026-03-15,2026-04-02,4
+Vihaan Mehta 52,2024PE7288,EC090,Control Systems Engineering (Ed 15),2026-02-28,2026-03-28,14
+Ananya Joshi 77,2024PE5032,ME040,Heat and Mass Transfer (Ed 8),2026-02-09,2026-03-09,14
+Aarav Verma,2024PE4373,CS022,Compilers: Principles (Ed 3),2026-02-24,2026-03-12,2
+Isha Mehta 46,2024PE5456,IT056,Cloud Computing (Ed 10),2026-02-25,2026-03-18,7
+Ishaan Verma,2024PE6830,EX017,Optical Fiber Communications (Ed 3),2026-03-18,2026-04-07,6
+Ananya Verma 34,2023PE9669,CS047,Discrete Mathematics (Ed 6),2026-02-05,2026-02-10,0
+Aarav Patil 58,2022PE9317,EX048,Wireless Communications (Ed 8),2026-03-19,2026-04-05,3
+Aarav Patil 58,2022PE9317,EX019,Principles of Communication Systems (Ed 4),2026-02-16,2026-03-16,14
+Rohan Joshi 95,2022PE6438,EC060,Control Systems Engineering (Ed 10),2026-03-01,2026-03-21,6
+Isha Verma 93,2023PE5021,IT017,Big Data Analytics (Ed 3),2026-03-02,2026-03-26,10
+Arjun Deshmukh 24,2024PE5995,CS063,Discrete Mathematics (Ed 8),2026-03-05,2026-03-13,0
+Aditya Mehta,2022PE1842,FI008,Engineering Graphics (Ed 1),2026-03-09,2026-03-17,0
+Ananya Iyer,2022PE5931,IT010,Cryptography and Network Security (Ed 2),2026-03-18,2026-04-07,6
+Tanvi Patil 12,2022PE3542,IT048,The Complete Reference Java (Ed 8),2026-01-25,2026-02-13,5
+Vihaan Deshmukh,2024PE6337,EX094,Microwave Engineering (Ed 16),2026-02-07,2026-03-03,10
+Ishaan Iyer,2024PE1641,EX018,Wireless Communications (Ed 3),2026-02-18,2026-03-15,11
+Isha Iyer 7,2024PE1557,IT028,Cryptography and Network Security (Ed 5),2026-02-24,2026-03-26,16
+Aditya Joshi,2024PE8755,EX050,Digital Communications (Ed 9),2026-02-03,2026-02-18,1
+Ishaan Joshi,2022PE7711,AU005,Automotive Mechanics (Ed 2),2026-02-15,2026-03-09,8
+Arjun Deshmukh,2024PE5958,AU035,Vehicle Dynamics (Ed 9),2026-03-15,2026-04-13,15
+Tanvi Iyer,2023PE4668,EX004,Microwave Engineering (Ed 1),2026-02-28,2026-03-09,0
+Tanvi Deshmukh,2023PE5983,IT047,Big Data Analytics (Ed 8),2026-02-16,2026-03-06,4
+Diya Sharma,2023PE2390,CS063,Discrete Mathematics (Ed 8),2026-03-16,2026-03-31,1
+Arjun Gupta 32,2024PE3537,EC011,VLSI Design (Ed 2),2026-02-19,2026-03-10,5
+Ananya Iyer 32,2022PE9858,IT014,Cloud Computing (Ed 3),2026-02-07,2026-02-16,0
+Ishaan Deshmukh 3,2023PE3008,CS068,Artificial Intelligence: A Modern Approach (Ed 9),2026-03-20,2026-04-11,8
+Sanya Patil,2024PE8788,CS072,Speech and Language Processing (Ed 9),2026-03-18,2026-04-02,1
+Rohan Joshi 95,2022PE6438,EC052,Embedded Systems (Ed 9),2026-03-13,2026-04-03,7
+Diya Joshi,2023PE6234,AU012,Automobile Engineering (Ed 3),2026-02-13,2026-03-06,7
+Aditya Gupta,2024PE4098,ME028,Theory of Machines (Ed 6),2026-02-11,2026-03-02,5
+Aditya Mehta 88,2022PE2960,IT068,Cloud Computing (Ed 12),2026-02-24,2026-03-22,12
+Aditya Sharma 66,2023PE8974,ME044,Strength of Materials (Ed 9),2026-02-21,2026-03-06,0
+Diya Nair 60,2024PE3901,CS076,Artificial Intelligence: A Modern Approach (Ed 10),2026-02-20,2026-02-25,0
+Aditya Kulkarni,2024PE5084,CS018,Operating System Concepts (Ed 3),2026-03-06,2026-03-22,2
+Aarav Sharma 83,2023PE1183,ME011,Thermodynamics: An Engineering Approach (Ed 3),2026-02-04,2026-02-17,0
+Vihaan Deshmukh,2024PE6337,IT029,Big Data Analytics (Ed 5),2026-03-05,2026-03-12,0
+Kiara Patil,2022PE8522,CS014,Compilers: Principles (Ed 2),2026-02-05,2026-02-18,0
+Vihaan Deshmukh,2024PE6337,CS016,Speech and Language Processing (Ed 2),2026-02-06,2026-02-13,0
+Vihaan Gupta 97,2024PE6636,CS079,Discrete Mathematics (Ed 10),2026-03-08,2026-03-25,3
+Isha Deshmukh 14,2023PE8998,FI045,Engineering Mechanics (Ed 6),2026-02-01,2026-02-24,9
+Rohan Gupta 43,2024PE9460,EC057,Signals and Systems (Ed 10),2026-02-17,2026-02-26,0
+Arjun Joshi 67,2023PE4483,ME040,Heat and Mass Transfer (Ed 8),2026-03-14,2026-04-12,15
+Rohan Joshi,2023PE6992,FI085,Engineering Mechanics (Ed 11),2026-03-10,2026-04-06,13
+Aditya Mehta 88,2022PE2960,ME007,Fluid Mechanics (Ed 2),2026-02-09,2026-03-06,11
+Aditya Deshmukh 82,2023PE4908,EC066,Control Systems Engineering (Ed 11),2026-02-27,2026-03-10,0
+Tanvi Iyer,2023PE4668,IT079,Software Engineering (Ed 14),2026-02-06,2026-02-21,1
+Arjun Verma,2023PE9379,IT030,The Complete Reference Java (Ed 5),2026-02-23,2026-03-17,8
+Rohan Kulkarni,2022PE5131,EX077,Optical Fiber Communications (Ed 13),2026-02-16,2026-03-10,8
+Arjun Iyer 16,2022PE8576,IT097,Software Engineering (Ed 17),2026-03-19,2026-03-30,0
+Ananya Patil,2022PE6915,IT027,Web Technologies (Ed 5),2026-02-10,2026-02-18,0
+Vihaan Kulkarni,2022PE2154,CS077,Database System Concepts (Ed 10),2026-02-05,2026-02-15,0
+Sanya Deshmukh,2024PE5035,FI084,Applied Chemistry (Ed 11),2026-02-19,2026-03-04,0
+Rohan Patil 83,2022PE8007,CS042,Operating System Concepts (Ed 6),2026-03-18,2026-04-15,14
+Diya Mehta 60,2023PE8454,EC045,Signals and Systems (Ed 8),2026-03-12,2026-03-30,4
+Diya Joshi,2023PE6234,IT087,Web Technologies (Ed 15),2026-02-18,2026-02-25,0
+Aarav Sharma 72,2024PE4772,CS031,Discrete Mathematics (Ed 4),2026-03-05,2026-03-30,11
+Sanya Mehta 17,2022PE7829,FI040,Engineering Graphics (Ed 5),2026-02-28,2026-03-15,1
+Isha Joshi,2024PE8564,ME035,Heat and Mass Transfer (Ed 7),2026-01-27,2026-02-08,0
+Rohan Patil 83,2022PE8007,IT038,Cloud Computing (Ed 7),2026-03-09,2026-03-17,0
+Tanvi Deshmukh,2023PE5983,CS082,Operating System Concepts (Ed 11),2026-03-17,2026-03-31,0
+Tanvi Deshmukh,2023PE5983,FI040,Engineering Graphics (Ed 5),2026-03-14,2026-03-29,1
+Arjun Sharma,2023PE7484,CS003,Computer Networks (Ed 1),2026-03-20,2026-04-19,16
+Aditya Sharma 78,2024PE2224,EX062,Digital Communications (Ed 11),2026-02-08,2026-03-05,11
+Aditya Mehta 47,2022PE7511,EX049,Principles of Communication Systems (Ed 9),2026-02-18,2026-03-19,15
+Rohan Deshmukh 81,2024PE2984,EC027,Signals and Systems (Ed 5),2026-02-27,2026-03-13,0
+Rohan Kulkarni,2022PE5131,EC025,Digital Design (Ed 5),2026-03-10,2026-03-19,0
+Ishaan Deshmukh 3,2023PE3008,AU006,Internal Combustion Engines (Ed 2),2026-03-21,2026-04-09,5
+Aditya Kulkarni,2024PE5084,EX085,Principles of Communication Systems (Ed 15),2026-02-10,2026-02-22,0
+Aditya Kulkarni,2024PE5084,FI067,Engineering Physics (Ed 9),2026-02-09,2026-03-05,10
+Tanvi Gupta 50,2024PE8089,FI021,Engineering Mechanics (Ed 3),2026-02-06,2026-02-25,5
+Tanvi Deshmukh 84,2024PE2868,IT038,Cloud Computing (Ed 7),2026-02-22,2026-03-10,2
+Sanya Mehta 3,2024PE8646,CS080,Speech and Language Processing (Ed 10),2026-03-05,2026-03-11,0
+Aarav Patil 58,2022PE9317,FI003,Engineering Physics (Ed 1),2026-03-01,2026-03-20,5
+Diya Gupta 81,2024PE8935,EC026,Microprocessor Architecture (Ed 5),2026-02-24,2026-03-19,9
+Vihaan Deshmukh 20,2024PE9335,EX066,Wireless Communications (Ed 11),2026-02-07,2026-03-04,11
+Vihaan Verma 22,2023PE2205,EX032,Digital Communications (Ed 6),2026-01-28,2026-02-05,0
+Aditya Iyer,2023PE2132,EX005,Optical Fiber Communications (Ed 1),2026-03-14,2026-04-06,9
+Diya Nair 60,2024PE3901,EC047,VLSI Design (Ed 8),2026-01-26,2026-02-23,14
+Kiara Nair 32,2024PE6653,EC083,VLSI Design (Ed 14),2026-02-24,2026-03-07,0
+Aditya Kulkarni,2024PE5084,IT049,Software Engineering (Ed 9),2026-03-13,2026-04-06,10
+Kiara Deshmukh,2024PE9834,ME012,Fluid Mechanics (Ed 3),2026-03-10,2026-04-04,11
+Kiara Patil 26,2022PE7093,IT025,Software Engineering (Ed 5),2026-03-20,2026-04-16,13
+Diya Verma,2022PE3973,IT084,The Complete Reference Java (Ed 14),2026-03-08,2026-03-23,1
+Rohan Iyer 75,2024PE2151,ME031,Thermodynamics: An Engineering Approach (Ed 7),2026-01-30,2026-02-17,4
+Vihaan Mehta,2022PE6055,ME016,Thermodynamics: An Engineering Approach (Ed 4),2026-02-13,2026-02-18,0
+Ishaan Sharma,2022PE9576,CS075,Computer Networks (Ed 10),2026-02-04,2026-02-19,1
+Aarav Deshmukh,2024PE3765,AU013,Automotive Mechanics (Ed 4),2026-02-07,2026-02-21,0
+Rohan Sharma 44,2023PE5978,AU022,Internal Combustion Engines (Ed 6),2026-03-17,2026-04-15,15
+Aditya Sharma,2024PE3317,EC017,VLSI Design (Ed 3),2026-01-29,2026-02-07,0
+Ishaan Mehta,2023PE9656,ME021,Thermodynamics: An Engineering Approach (Ed 5),2026-01-26,2026-02-13,4
+Diya Kulkarni 93,2023PE6595,ME050,Heat and Mass Transfer (Ed 10),2026-02-12,2026-02-23,0
+Rohan Patil 83,2022PE8007,IT092,Cloud Computing (Ed 16),2026-02-10,2026-03-02,6
+Aditya Kulkarni,2024PE5084,EX044,Digital Communications (Ed 8),2026-02-03,2026-02-18,1
+Tanvi Deshmukh 84,2024PE2868,CS037,Database System Concepts (Ed 5),2026-01-31,2026-02-15,1
+Isha Kulkarni,2024PE4211,FI011,Engineering Physics (Ed 2),2026-03-06,2026-03-22,2
+Kiara Patil 26,2022PE7093,FI016,Engineering Graphics (Ed 2),2026-02-07,2026-02-15,0
+Vihaan Mehta 52,2024PE7288,ME003,Theory of Machines (Ed 1),2026-02-20,2026-03-10,4
+Isha Sharma 78,2022PE5831,AU020,Automobile Engineering (Ed 5),2026-02-27,2026-03-10,0
+Diya Verma 88,2022PE2283,EC095,VLSI Design (Ed 16),2026-02-17,2026-03-14,11
+Aditya Verma,2022PE7949,CS056,Speech and Language Processing (Ed 7),2026-01-26,2026-02-22,13
+Aarav Kulkarni 54,2022PE7814,FI024,Engineering Graphics (Ed 3),2026-03-19,2026-03-30,0
+Tanvi Verma,2024PE1453,FI066,Advanced Engineering Mathematics (Ed 9),2026-02-26,2026-03-11,0
+Isha Mehta 46,2024PE5456,IT096,The Complete Reference Java (Ed 16),2026-03-06,2026-04-02,13
+Sanya Patil,2024PE8788,IT008,Cloud Computing (Ed 2),2026-03-18,2026-04-10,9
+Diya Mehta 60,2023PE8454,EX010,Microwave Engineering (Ed 2),2026-03-10,2026-04-05,12
+Ishaan Mehta 26,2023PE1227,FI048,Engineering Graphics (Ed 6),2026-02-02,2026-02-26,10
+Vihaan Verma,2024PE6948,CS080,Speech and Language Processing (Ed 10),2026-03-13,2026-04-09,13
+Diya Mehta 41,2023PE1482,EX076,Microwave Engineering (Ed 13),2026-02-24,2026-03-06,0
+Diya Patil 24,2022PE9083,EC053,VLSI Design (Ed 9),2026-02-16,2026-03-11,9
+Tanvi Patil 12,2022PE3542,EC013,Digital Design (Ed 3),2026-03-15,2026-03-31,2
+Arjun Deshmukh 93,2024PE5724,ME001,Thermodynamics: An Engineering Approach (Ed 1),2026-03-21,2026-04-16,12
+Tanvi Gupta,2024PE6792,CS061,Database System Concepts (Ed 8),2026-02-02,2026-02-24,8
+Ishaan Mehta,2023PE9656,IT014,Cloud Computing (Ed 3),2026-01-26,2026-02-13,4
+Ananya Sharma,2024PE2846,EC002,Microprocessor Architecture (Ed 1),2026-03-18,2026-04-03,2
+Aditya Kulkarni 66,2024PE7300,EC023,VLSI Design (Ed 4),2026-02-22,2026-03-05,0
+Ananya Iyer,2022PE5931,FI084,Applied Chemistry (Ed 11),2026-02-06,2026-03-06,14
+Arjun Iyer 16,2022PE8576,EX023,Optical Fiber Communications (Ed 4),2026-03-06,2026-03-12,0
+Diya Mehta 50,2024PE1666,FI004,Applied Chemistry (Ed 1),2026-02-22,2026-03-08,0
+Ishaan Gupta 8,2024PE2131,ME023,Theory of Machines (Ed 5),2026-02-11,2026-03-13,16
+Aditya Patil,2023PE5605,IT002,Cloud Computing (Ed 1),2026-03-15,2026-03-29,0
+Vihaan Mehta 52,2024PE7288,IT091,Software Engineering (Ed 16),2026-03-19,2026-03-29,0
+Isha Deshmukh 14,2023PE8998,EC069,Signals and Systems (Ed 12),2026-02-25,2026-03-26,15
+Isha Iyer 7,2024PE1557,EC077,VLSI Design (Ed 13),2026-01-26,2026-02-16,7
+Ananya Verma,2024PE6005,CS062,Compilers: Principles (Ed 8),2026-03-06,2026-03-24,4
+Kiara Nair 32,2024PE6653,EX079,Principles of Communication Systems (Ed 14),2026-03-14,2026-03-26,0
+Diya Mehta 41,2023PE1482,AU002,Internal Combustion Engines (Ed 1),2026-01-27,2026-02-06,0
+Sanya Joshi 65,2024PE3813,AU022,Internal Combustion Engines (Ed 6),2026-01-25,2026-02-13,5
+Diya Patil 2,2023PE8033,EC065,VLSI Design (Ed 11),2026-03-15,2026-03-21,0
+Aditya Iyer 92,2024PE5394,CS056,Speech and Language Processing (Ed 7),2026-01-25,2026-02-11,3
+Sanya Mehta 3,2024PE8646,FI053,Engineering Mechanics (Ed 7),2026-02-21,2026-03-09,2
+Kiara Nair 90,2023PE9426,EC096,Control Systems Engineering (Ed 16),2026-03-13,2026-03-29,2
+Vihaan Verma 69,2023PE6649,ME021,Thermodynamics: An Engineering Approach (Ed 5),2026-02-06,2026-03-07,15
+Aarav Deshmukh,2024PE3765,FI073,Higher Engineering Mathematics (Ed 10),2026-02-23,2026-03-14,5
+Tanvi Patil 12,2022PE3542,EX023,Optical Fiber Communications (Ed 4),2026-01-26,2026-02-23,14
+Sanya Nair 49,2023PE5362,ME038,Theory of Machines (Ed 8),2026-03-02,2026-03-18,2
+Ananya Sharma,2024PE2846,EX021,Antenna Theory (Ed 4),2026-02-20,2026-03-08,2
+Ananya Joshi 85,2022PE5260,FI067,Engineering Physics (Ed 9),2026-01-29,2026-02-05,0
+Ishaan Deshmukh 2,2024PE9291,AU040,Automobile Engineering (Ed 10),2026-03-05,2026-03-10,0
+Isha Verma 47,2022PE9213,IT051,Web Technologies (Ed 9),2026-02-12,2026-03-08,10
+Aarav Mehta 10,2024PE9563,EC092,Microprocessor Architecture (Ed 16),2026-02-11,2026-02-26,1
+Diya Nair,2024PE6094,FI058,Advanced Engineering Mathematics (Ed 8),2026-03-21,2026-04-03,0
+Tanvi Patil,2024PE5622,ME034,Strength of Materials (Ed 7),2026-02-27,2026-03-15,2
+Tanvi Verma 54,2024PE6896,ME044,Strength of Materials (Ed 9),2026-02-22,2026-03-18,10
+Isha Joshi,2024PE8564,IT078,The Complete Reference Java (Ed 13),2026-02-28,2026-03-14,0
+Aditya Gupta 36,2024PE9803,CS083,Computer Networks (Ed 11),2026-03-09,2026-04-06,14
+Isha Joshi 42,2022PE9995,FI051,Engineering Physics (Ed 7),2026-02-21,2026-03-21,14
+Sanya Iyer,2024PE5192,EC019,Digital Design (Ed 4),2026-02-28,2026-03-18,4
+Ishaan Mehta 26,2023PE1227,FI043,Engineering Physics (Ed 6),2026-03-02,2026-03-12,0
+Tanvi Joshi,2024PE4954,FI038,Basic Electrical Engineering (Ed 5),2026-02-27,2026-03-07,0
+Sanya Mehta 17,2022PE7829,EC067,Digital Design (Ed 12),2026-01-28,2026-02-27,16
+Tanvi Nair,2022PE6147,EX062,Digital Communications (Ed 11),2026-03-21,2026-04-02,0
+Vihaan Mehta 75,2022PE6418,EX065,Optical Fiber Communications (Ed 11),2026-03-03,2026-03-25,8
+Aditya Iyer,2023PE2132,EX044,Digital Communications (Ed 8),2026-03-21,2026-04-07,3
+Kiara Joshi,2024PE1004,CS037,Database System Concepts (Ed 5),2026-02-05,2026-02-28,9
+Vihaan Deshmukh 76,2024PE4244,FI097,Higher Engineering Mathematics (Ed 13),2026-03-12,2026-03-18,0
+Aditya Deshmukh 82,2023PE4908,CS023,Discrete Mathematics (Ed 3),2026-03-03,2026-03-27,10
+Vihaan Joshi 93,2023PE5195,EX044,Digital Communications (Ed 8),2026-02-12,2026-02-26,0
+Ishaan Patil,2024PE5475,EC026,Microprocessor Architecture (Ed 5),2026-01-29,2026-02-19,7
+Arjun Gupta,2023PE6637,AU044,Automobile Engineering (Ed 11),2026-03-12,2026-04-01,6
+Sanya Kulkarni 43,2023PE9237,CS025,Introduction to Algorithms (Ed 4),2026-02-14,2026-03-14,14
+Vihaan Joshi 58,2023PE7336,IT079,Software Engineering (Ed 14),2026-02-23,2026-03-11,2
+Diya Joshi 81,2023PE2116,ME039,Strength of Materials (Ed 8),2026-02-03,2026-02-28,11
+Diya Verma 88,2022PE2283,CS045,Database System Concepts (Ed 6),2026-02-22,2026-03-19,11
+Rohan Kulkarni,2022PE5131,IT008,Cloud Computing (Ed 2),2026-02-03,2026-02-19,2
+Ananya Mehta,2024PE3040,CS010,Operating System Concepts (Ed 2),2026-02-11,2026-02-24,0
+Isha Mehta 46,2024PE5456,IT057,Web Technologies (Ed 10),2026-03-21,2026-04-10,6
+Ishaan Iyer 74,2023PE8111,ME035,Heat and Mass Transfer (Ed 7),2026-02-12,2026-02-24,0
+Aarav Sharma 81,2023PE3004,AU002,Internal Combustion Engines (Ed 1),2026-02-10,2026-02-26,2
+Ishaan Patil 84,2024PE4199,EC036,Control Systems Engineering (Ed 6),2026-01-28,2026-02-14,3
+Diya Verma 88,2022PE2283,CS044,Artificial Intelligence: A Modern Approach (Ed 6),2026-02-07,2026-02-22,1
+Ishaan Iyer 74,2023PE8111,EX008,Digital Communications (Ed 2),2026-03-04,2026-03-26,8
+Ananya Sharma,2024PE2846,FI050,Advanced Engineering Mathematics (Ed 7),2026-01-27,2026-02-25,15
+Ishaan Nair,2024PE9817,EX055,Principles of Communication Systems (Ed 10),2026-02-21,2026-03-02,0
+Aditya Patil,2023PE5605,CS048,Speech and Language Processing (Ed 6),2026-03-13,2026-04-06,10
+Kiara Patil 40,2023PE8873,CS083,Computer Networks (Ed 11),2026-02-16,2026-02-27,0
+Ananya Sharma 15,2023PE4062,ME028,Theory of Machines (Ed 6),2026-02-06,2026-03-03,11
+Diya Patil,2023PE6317,ME012,Fluid Mechanics (Ed 3),2026-01-31,2026-02-23,9
+Tanvi Patil 12,2022PE3542,FI033,Higher Engineering Mathematics (Ed 5),2026-03-20,2026-04-17,14
+Arjun Verma,2023PE9379,EC087,Signals and Systems (Ed 15),2026-03-06,2026-04-04,15
+Ishaan Deshmukh 21,2024PE7519,FI064,Engineering Graphics (Ed 8),2026-02-22,2026-03-20,12
+Aarav Verma,2024PE4373,CS007,Discrete Mathematics (Ed 1),2026-01-31,2026-02-11,0
+Rohan Sharma 53,2023PE4324,ME030,Heat and Mass Transfer (Ed 6),2026-03-14,2026-04-08,11
+Rohan Mehta,2022PE3378,IT095,Big Data Analytics (Ed 16),2026-02-13,2026-03-13,14
+Ishaan Deshmukh 21,2024PE7519,FI082,Advanced Engineering Mathematics (Ed 11),2026-03-02,2026-03-14,0
+Diya Nair 44,2022PE5739,EX099,Antenna Theory (Ed 17),2026-01-26,2026-02-06,0
+Tanvi Patil,2024PE5622,FI040,Engineering Graphics (Ed 5),2026-03-05,2026-04-03,15
+Ananya Kulkarni 58,2022PE6909,EC001,Digital Design (Ed 1),2026-02-13,2026-02-20,0
+Isha Nair,2022PE2006,ME005,Heat and Mass Transfer (Ed 1),2026-03-09,2026-03-18,0
+Aditya Joshi 3,2023PE8364,FI064,Engineering Graphics (Ed 8),2026-01-31,2026-02-17,3
+Isha Nair,2022PE2006,AU017,Automotive Mechanics (Ed 5),2026-03-18,2026-04-03,2
+Ananya Deshmukh 82,2023PE6332,IT027,Web Technologies (Ed 5),2026-03-13,2026-04-03,7
+Arjun Deshmukh 24,2024PE5995,IT099,Web Technologies (Ed 17),2026-01-31,2026-03-01,15
+Arjun Deshmukh 93,2024PE5724,IT028,Cryptography and Network Security (Ed 5),2026-01-27,2026-02-16,6
+Ananya Sharma,2024PE2846,EX083,Optical Fiber Communications (Ed 14),2026-02-08,2026-02-27,5
+Ishaan Gupta 8,2024PE2131,IT097,Software Engineering (Ed 17),2026-02-02,2026-02-28,12
+Arjun Mehta 54,2022PE6368,EC048,Control Systems Engineering (Ed 8),2026-03-03,2026-03-18,1
+Ishaan Joshi 82,2024PE1205,CS065,Introduction to Algorithms (Ed 9),2026-02-04,2026-02-15,0
+Aarav Sharma 21,2023PE8370,EX059,Optical Fiber Communications (Ed 10),2026-02-09,2026-03-04,9
+Kiara Nair 32,2024PE6653,FI073,Higher Engineering Mathematics (Ed 10),2026-03-02,2026-03-24,8
+Aditya Mehta 88,2022PE2960,CS019,Computer Networks (Ed 3),2026-02-13,2026-02-28,1
+Tanvi Joshi 85,2022PE5551,IT056,Cloud Computing (Ed 10),2026-03-13,2026-03-24,0
+Isha Verma 62,2023PE9850,CS055,Discrete Mathematics (Ed 7),2026-02-27,2026-03-25,12
+Ananya Patil,2022PE6915,IT005,Big Data Analytics (Ed 1),2026-02-15,2026-02-25,0
+Aarav Deshmukh 33,2023PE6002,CS090,Operating System Concepts (Ed 12),2026-03-13,2026-04-10,14
+Aditya Deshmukh 82,2023PE4908,IT061,Software Engineering (Ed 11),2026-02-23,2026-03-15,6
+Sanya Mehta 17,2022PE7829,FI001,Higher Engineering Mathematics (Ed 1),2026-02-01,2026-02-18,3
+Aditya Sharma 78,2024PE2224,IT002,Cloud Computing (Ed 1),2026-02-16,2026-02-27,0
+Diya Sharma 81,2024PE9764,CS065,Introduction to Algorithms (Ed 9),2026-03-10,2026-04-01,8
+Sanya Patil,2024PE8788,IT051,Web Technologies (Ed 9),2026-01-26,2026-02-06,0
+Aditya Patil 40,2024PE4021,EC066,Control Systems Engineering (Ed 11),2026-02-08,2026-02-18,0
+Diya Joshi,2023PE6234,IT063,Web Technologies (Ed 11),2026-03-12,2026-04-11,16
+Kiara Sharma 78,2022PE5220,EC015,Signals and Systems (Ed 3),2026-02-26,2026-03-24,12
+Vihaan Mehta 75,2022PE6418,AU026,Internal Combustion Engines (Ed 7),2026-03-13,2026-04-11,15
+Arjun Joshi,2023PE1978,EX019,Principles of Communication Systems (Ed 4),2026-03-20,2026-04-02,0
+Aditya Iyer 92,2024PE5394,EC067,Digital Design (Ed 12),2026-03-04,2026-03-15,0
+Diya Kulkarni 58,2024PE9288,FI061,Engineering Mechanics (Ed 8),2026-02-26,2026-03-16,4
+Ananya Patil 54,2023PE8646,EX008,Digital Communications (Ed 2),2026-02-25,2026-03-25,14
+Ananya Mehta,2024PE3040,IT003,Web Technologies (Ed 1),2026-03-04,2026-03-22,4
+Kiara Sharma 90,2022PE7324,EC008,Microprocessor Architecture (Ed 2),2026-03-16,2026-03-24,0
+Rohan Sharma 87,2024PE1567,EC065,VLSI Design (Ed 11),2026-02-13,2026-03-11,12
+Kiara Deshmukh,2024PE9834,AU025,Automotive Mechanics (Ed 7),2026-03-10,2026-04-03,10
+Aditya Sharma 19,2023PE9780,IT058,Cryptography and Network Security (Ed 10),2026-02-12,2026-03-13,15
+Aarav Deshmukh 33,2023PE6002,EX008,Digital Communications (Ed 2),2026-02-16,2026-02-22,0
+Sanya Iyer,2024PE5192,IT087,Web Technologies (Ed 15),2026-02-04,2026-02-09,0
+Aditya Gupta,2024PE4098,CS070,Compilers: Principles (Ed 9),2026-03-09,2026-03-29,6
+Ananya Verma 72,2022PE1999,AU029,Automotive Mechanics (Ed 8),2026-01-28,2026-02-05,0
+Diya Kulkarni 93,2023PE6595,FI029,Engineering Mechanics (Ed 4),2026-03-08,2026-03-26,4
+Aditya Gupta 34,2023PE6062,AU015,Vehicle Dynamics (Ed 4),2026-03-14,2026-04-07,10
+Rohan Mehta 30,2023PE2219,FI084,Applied Chemistry (Ed 11),2026-02-06,2026-03-07,15
+Isha Mehta,2023PE3075,IT023,Big Data Analytics (Ed 4),2026-03-10,2026-03-30,6
+Tanvi Verma,2024PE1453,FI028,Applied Chemistry (Ed 4),2026-02-16,2026-02-21,0
+Sanya Sharma,2023PE2446,FI007,Programming in ANSI C (Ed 1),2026-03-17,2026-03-27,0
+Kiara Nair,2022PE1609,FI081,Higher Engineering Mathematics (Ed 11),2026-02-18,2026-03-08,4
+Isha Deshmukh 12,2022PE7619,IT084,The Complete Reference Java (Ed 14),2026-02-10,2026-03-01,5
+Aditya Nair 73,2024PE8203,CS014,Compilers: Principles (Ed 2),2026-03-14,2026-03-31,3
+Diya Deshmukh,2023PE2382,FI039,Programming in ANSI C (Ed 5),2026-03-18,2026-03-30,0
+Tanvi Deshmukh 84,2024PE2868,CS014,Compilers: Principles (Ed 2),2026-03-15,2026-03-25,0
+Vihaan Deshmukh 76,2024PE4244,EC097,Digital Design (Ed 17),2026-01-25,2026-02-22,14
+Kiara Joshi,2024PE1004,FI011,Engineering Physics (Ed 2),2026-02-20,2026-03-21,15
+Aarav Patil 58,2022PE9317,IT015,Web Technologies (Ed 3),2026-03-18,2026-03-28,0
+Diya Kulkarni,2023PE9521,CS040,Speech and Language Processing (Ed 5),2026-02-23,2026-03-10,1
+Ananya Mehta,2024PE3040,EC028,Embedded Systems (Ed 5),2026-01-28,2026-02-07,0
+Aarav Patil 14,2024PE3666,AU006,Internal Combustion Engines (Ed 2),2026-02-06,2026-02-27,7
+Diya Kulkarni 93,2023PE6595,ME037,Fluid Mechanics (Ed 8),2026-02-19,2026-03-12,7
+Aarav Joshi,2022PE5609,FI048,Engineering Graphics (Ed 6),2026-02-22,2026-03-07,0
+Ishaan Verma 30,2024PE5447,ME042,Fluid Mechanics (Ed 9),2026-01-30,2026-02-15,2
+Tanvi Patil 2,2023PE8861,EX084,Wireless Communications (Ed 14),2026-01-29,2026-02-11,0
+Aarav Deshmukh 33,2023PE6002,IT067,Software Engineering (Ed 12),2026-02-08,2026-03-09,15
+Ishaan Nair 61,2022PE7006,FI095,Programming in ANSI C (Ed 12),2026-03-17,2026-03-23,0
+Sanya Gupta 32,2022PE1877,AU011,Vehicle Dynamics (Ed 3),2026-03-16,2026-03-30,0
+Ishaan Verma 30,2024PE5447,FI084,Applied Chemistry (Ed 11),2026-02-18,2026-03-07,3
+Isha Mehta 32,2022PE3243,FI053,Engineering Mechanics (Ed 7),2026-03-09,2026-03-31,8
+Aditya Patil,2023PE5605,EX100,Microwave Engineering (Ed 17),2026-03-16,2026-03-30,0
+Rohan Sharma 32,2023PE4496,AU003,Vehicle Dynamics (Ed 1),2026-02-28,2026-03-17,3
+Tanvi Verma 95,2023PE2520,IT093,Web Technologies (Ed 16),2026-03-17,2026-03-22,0
+Rohan Iyer 11,2023PE4126,ME032,Fluid Mechanics (Ed 7),2026-02-06,2026-02-25,5
+Ananya Joshi 85,2022PE5260,IT098,Cloud Computing (Ed 17),2026-02-03,2026-02-27,10
+Rohan Iyer 11,2023PE4126,AU041,Automotive Mechanics (Ed 11),2026-03-12,2026-03-21,0
+Aditya Patil 40,2024PE4021,IT008,Cloud Computing (Ed 2),2026-02-14,2026-03-09,9
+Rohan Sharma 87,2024PE1567,AU001,Automotive Mechanics (Ed 1),2026-02-20,2026-03-10,4
+Rohan Deshmukh 67,2023PE4515,FI004,Applied Chemistry (Ed 1),2026-02-03,2026-02-21,4
+Ananya Verma 34,2023PE9669,FI016,Engineering Graphics (Ed 2),2026-02-06,2026-02-20,0
+Tanvi Sharma,2024PE5060,ME037,Fluid Mechanics (Ed 8),2026-03-17,2026-04-05,5
+Ananya Verma 72,2022PE1999,IT011,Big Data Analytics (Ed 2),2026-02-04,2026-02-10,0
+Aditya Deshmukh 4,2024PE7575,IT089,Big Data Analytics (Ed 15),2026-02-20,2026-03-15,9
+Vihaan Iyer,2022PE4417,IT061,Software Engineering (Ed 11),2026-02-19,2026-03-20,15
+Kiara Patil,2022PE8522,FI045,Engineering Mechanics (Ed 6),2026-02-15,2026-03-02,1
+Tanvi Nair 77,2022PE8417,ME042,Fluid Mechanics (Ed 9),2026-03-15,2026-04-04,6
+Rohan Iyer 11,2023PE4126,EC030,Control Systems Engineering (Ed 5),2026-03-16,2026-04-08,9
+Diya Sharma 81,2024PE9764,EC062,Microprocessor Architecture (Ed 11),2026-03-05,2026-03-19,0
+Diya Patil,2023PE6317,IT020,Cloud Computing (Ed 4),2026-02-04,2026-02-19,1
+Tanvi Patil 92,2023PE4080,CS065,Introduction to Algorithms (Ed 9),2026-02-26,2026-03-14,2
+Ananya Verma 34,2023PE9669,IT017,Big Data Analytics (Ed 3),2026-03-02,2026-03-30,14
+Ishaan Iyer 74,2023PE8111,EC037,Digital Design (Ed 7),2026-03-05,2026-03-24,5
+Arjun Patil 36,2022PE3425,IT096,The Complete Reference Java (Ed 16),2026-03-16,2026-03-23,0
+Arjun Deshmukh 93,2024PE5724,ME002,Fluid Mechanics (Ed 1),2026-02-07,2026-02-15,0
+Ishaan Nair,2024PE9817,EC082,Embedded Systems (Ed 14),2026-01-31,2026-02-20,6
+Vihaan Verma 22,2023PE2205,ME035,Heat and Mass Transfer (Ed 7),2026-02-25,2026-03-25,14
+Diya Mehta 14,2024PE7183,ME005,Heat and Mass Transfer (Ed 1),2026-02-21,2026-02-26,0
+Isha Kulkarni,2024PE4211,AU003,Vehicle Dynamics (Ed 1),2026-02-03,2026-02-27,10
+Aarav Joshi 3,2023PE1952,IT033,Web Technologies (Ed 6),2026-02-19,2026-03-11,6
+Vihaan Deshmukh,2024PE6337,CS037,Database System Concepts (Ed 5),2026-03-05,2026-03-11,0
+Vihaan Gupta,2022PE5333,FI084,Applied Chemistry (Ed 11),2026-02-12,2026-03-13,15
+Isha Deshmukh 12,2022PE7619,FI014,Basic Electrical Engineering (Ed 2),2026-02-18,2026-03-16,12
+Sanya Mehta 3,2024PE8646,EC074,Microprocessor Architecture (Ed 13),2026-03-10,2026-03-22,0
+Vihaan Joshi 93,2023PE5195,EX019,Principles of Communication Systems (Ed 4),2026-03-02,2026-03-16,0
+Isha Sharma,2022PE5499,IT018,The Complete Reference Java (Ed 3),2026-03-12,2026-03-24,0
+Rohan Deshmukh,2022PE5607,EX050,Digital Communications (Ed 9),2026-03-21,2026-03-27,0
+Arjun Iyer 16,2022PE8576,EC097,Digital Design (Ed 17),2026-01-30,2026-02-04,0
+Tanvi Verma,2024PE1453,FI057,Higher Engineering Mathematics (Ed 8),2026-02-25,2026-03-17,6
+Rohan Sharma 53,2023PE4324,CS008,Speech and Language Processing (Ed 1),2026-03-13,2026-03-26,0
+Aditya Deshmukh,2023PE2386,EX067,Principles of Communication Systems (Ed 12),2026-03-03,2026-03-26,9
+Ishaan Nair,2024PE9817,ME048,Theory of Machines (Ed 10),2026-01-26,2026-02-14,5
+Tanvi Nair 16,2022PE5319,EX060,Wireless Communications (Ed 10),2026-01-30,2026-02-16,3
+Aarav Mehta,2024PE1934,EC067,Digital Design (Ed 12),2026-02-19,2026-03-08,3
+Kiara Gupta,2024PE7088,ME010,Heat and Mass Transfer (Ed 2),2026-03-06,2026-03-23,3
+Ishaan Deshmukh 2,2024PE9291,CS030,Compilers: Principles (Ed 4),2026-03-19,2026-03-26,0
+Ishaan Mehta 31,2024PE8440,EX050,Digital Communications (Ed 9),2026-02-27,2026-03-24,11
+Vihaan Mehta 52,2024PE7288,IT044,Cloud Computing (Ed 8),2026-02-13,2026-02-20,0
+Vihaan Patil 59,2022PE5180,FI069,Engineering Mechanics (Ed 9),2026-03-12,2026-03-23,0
+Sanya Iyer 74,2024PE2556,IT036,The Complete Reference Java (Ed 6),2026-01-25,2026-02-09,1
+Rohan Verma 15,2022PE7221,CS097,Introduction to Algorithms (Ed 13),2026-02-15,2026-02-28,0
+Vihaan Nair 34,2024PE8116,EC056,Microprocessor Architecture (Ed 10),2026-01-30,2026-02-13,0
+Ananya Sharma 15,2023PE4062,EC063,Signals and Systems (Ed 11),2026-02-10,2026-03-08,12
+Vihaan Mehta 27,2023PE9640,AU047,Vehicle Dynamics (Ed 12),2026-02-14,2026-03-04,4
+Aarav Gupta,2024PE3779,IT006,The Complete Reference Java (Ed 1),2026-02-02,2026-02-11,0
+Kiara Patil,2022PE8522,AU042,Internal Combustion Engines (Ed 11),2026-02-06,2026-03-03,11
+Diya Iyer,2024PE6608,EX068,Digital Communications (Ed 12),2026-03-12,2026-03-20,0
+Arjun Joshi 67,2023PE4483,IT064,Cryptography and Network Security (Ed 11),2026-01-29,2026-02-27,15
+Rohan Patil 52,2024PE8848,EX054,Wireless Communications (Ed 9),2026-02-11,2026-03-04,7
+Arjun Deshmukh 24,2024PE5995,CS026,Operating System Concepts (Ed 4),2026-02-26,2026-03-15,3
+Kiara Deshmukh,2024PE9834,FI001,Higher Engineering Mathematics (Ed 1),2026-03-20,2026-04-19,16
+Ishaan Patil,2024PE5475,IT032,Cloud Computing (Ed 6),2026-03-03,2026-03-21,4
+Aditya Nair 73,2024PE8203,CS028,Artificial Intelligence: A Modern Approach (Ed 4),2026-03-03,2026-03-24,7
+Tanvi Joshi 99,2023PE9633,IT058,Cryptography and Network Security (Ed 10),2026-02-24,2026-03-02,0
+Kiara Gupta,2024PE7088,FI059,Engineering Physics (Ed 8),2026-01-31,2026-02-07,0
+Ishaan Gupta 8,2024PE2131,ME048,Theory of Machines (Ed 10),2026-03-20,2026-03-30,0
+Rohan Sharma,2022PE2385,IT032,Cloud Computing (Ed 6),2026-01-31,2026-02-10,0
+Aarav Nair 12,2023PE6834,EX009,Antenna Theory (Ed 2),2026-02-21,2026-03-03,0
+Ishaan Iyer 74,2023PE8111,CS089,Introduction to Algorithms (Ed 12),2026-02-02,2026-02-14,0
+Kiara Joshi,2024PE1004,EX046,Microwave Engineering (Ed 8),2026-02-24,2026-03-07,0
+Aditya Sharma 19,2023PE9780,EX068,Digital Communications (Ed 12),2026-03-09,2026-03-28,5
+Aarav Deshmukh,2024PE3765,ME036,Thermodynamics: An Engineering Approach (Ed 8),2026-02-27,2026-03-29,16
+Rohan Joshi,2023PE6992,CS005,Database System Concepts (Ed 1),2026-03-20,2026-03-26,0
+Arjun Iyer 16,2022PE8576,EX081,Antenna Theory (Ed 14),2026-03-09,2026-03-25,2
+Vihaan Iyer,2022PE4417,AU042,Internal Combustion Engines (Ed 11),2026-01-30,2026-02-20,7
+Ishaan Nair 61,2022PE7006,EC043,Digital Design (Ed 8),2026-02-26,2026-03-12,0
+Vihaan Gupta 97,2024PE6636,FI029,Engineering Mechanics (Ed 4),2026-02-27,2026-03-25,12
+Ananya Gupta,2024PE6771,IT099,Web Technologies (Ed 17),2026-03-11,2026-03-27,2
+Rohan Deshmukh,2022PE5607,IT003,Web Technologies (Ed 1),2026-03-06,2026-03-14,0
+Aditya Sharma,2024PE3317,CS095,Discrete Mathematics (Ed 12),2026-03-09,2026-03-15,0
+Kiara Gupta,2024PE7088,AU006,Internal Combustion Engines (Ed 2),2026-02-19,2026-02-25,0
+Vihaan Kulkarni,2022PE2154,EX036,Wireless Communications (Ed 6),2026-02-02,2026-03-03,15
+Ishaan Sharma,2022PE9576,IT035,Big Data Analytics (Ed 6),2026-01-28,2026-02-16,5
+Aditya Joshi 3,2023PE8364,EX083,Optical Fiber Communications (Ed 14),2026-03-14,2026-04-07,10
+Ananya Verma 72,2022PE1999,FI097,Higher Engineering Mathematics (Ed 13),2026-01-30,2026-02-16,3
+Kiara Iyer,2024PE4898,EC057,Signals and Systems (Ed 10),2026-02-22,2026-03-11,3
+Aditya Sharma 66,2023PE8974,FI011,Engineering Physics (Ed 2),2026-01-29,2026-02-21,9
+Isha Mehta 32,2022PE3243,FI097,Higher Engineering Mathematics (Ed 13),2026-02-21,2026-03-12,5
+Aditya Gupta 96,2023PE4569,FI081,Higher Engineering Mathematics (Ed 11),2026-01-26,2026-02-16,7
+Isha Iyer 7,2024PE1557,ME020,Heat and Mass Transfer (Ed 4),2026-02-23,2026-02-28,0
+Rohan Deshmukh 81,2024PE2984,EC002,Microprocessor Architecture (Ed 1),2026-01-26,2026-02-19,10
+Sanya Joshi,2024PE5913,IT053,Big Data Analytics (Ed 9),2026-03-02,2026-03-22,6
+Rohan Mehta 30,2023PE2219,EC086,Microprocessor Architecture (Ed 15),2026-03-11,2026-03-23,0
+Diya Verma 88,2022PE2283,EX066,Wireless Communications (Ed 11),2026-01-26,2026-02-05,0
+Aarav Deshmukh 33,2023PE6002,EX059,Optical Fiber Communications (Ed 10),2026-03-12,2026-03-17,0
+Tanvi Joshi,2024PE4954,IT023,Big Data Analytics (Ed 4),2026-03-21,2026-04-12,8
+Rohan Nair,2023PE8963,FI056,Engineering Graphics (Ed 7),2026-02-28,2026-03-20,6
+Aditya Patil 63,2023PE4695,EC020,Microprocessor Architecture (Ed 4),2026-02-20,2026-03-06,0
+Aarav Joshi 3,2023PE1952,EX001,Principles of Communication Systems (Ed 1),2026-02-19,2026-03-15,10
+Tanvi Joshi 99,2023PE9633,IT006,The Complete Reference Java (Ed 1),2026-03-09,2026-03-25,2
+Arjun Kulkarni,2022PE7400,EC086,Microprocessor Architecture (Ed 15),2026-03-10,2026-03-17,0
+Aarav Kulkarni,2023PE3838,EX005,Optical Fiber Communications (Ed 1),2026-03-19,2026-04-14,12
+Diya Mehta 14,2024PE7183,FI027,Engineering Physics (Ed 4),2026-02-18,2026-03-11,7
+Diya Gupta 61,2024PE6356,AU010,Internal Combustion Engines (Ed 3),2026-02-05,2026-02-17,0
+Ishaan Verma 8,2023PE1338,EC059,VLSI Design (Ed 10),2026-03-02,2026-03-24,8
+Aditya Patil 40,2024PE4021,FI059,Engineering Physics (Ed 8),2026-02-26,2026-03-14,2
+Kiara Gupta,2024PE7088,EC090,Control Systems Engineering (Ed 15),2026-02-04,2026-02-23,5
+Vihaan Sharma,2023PE2818,IT084,The Complete Reference Java (Ed 14),2026-03-20,2026-03-26,0
+Aarav Kulkarni 63,2024PE1018,EC083,VLSI Design (Ed 14),2026-03-11,2026-03-22,0
+Tanvi Iyer,2023PE4668,CS057,Introduction to Algorithms (Ed 8),2026-02-20,2026-03-16,10
+Arjun Verma,2023PE9379,CS079,Discrete Mathematics (Ed 10),2026-03-20,2026-04-11,8
+Vihaan Sharma,2023PE2818,AU001,Automotive Mechanics (Ed 1),2026-03-18,2026-03-26,0
+Ishaan Verma 8,2023PE1338,IT093,Web Technologies (Ed 16),2026-02-17,2026-02-28,0
+Rohan Iyer 96,2023PE4856,IT082,Cryptography and Network Security (Ed 14),2026-03-18,2026-03-24,0
+Aditya Sharma 66,2023PE8974,CS041,Introduction to Algorithms (Ed 6),2026-03-14,2026-03-30,2
+Ishaan Sharma,2022PE9576,CS071,Discrete Mathematics (Ed 9),2026-03-11,2026-03-17,0
+Sanya Sharma,2023PE2446,FI050,Advanced Engineering Mathematics (Ed 7),2026-03-13,2026-03-18,0
+Aarav Mehta,2024PE1934,EC022,Embedded Systems (Ed 4),2026-01-27,2026-02-16,6
+Rohan Mehta 30,2023PE2219,EC058,Embedded Systems (Ed 10),2026-02-09,2026-02-15,0
+Rohan Iyer,2023PE8528,EC031,Digital Design (Ed 6),2026-03-17,2026-04-06,6
+Ishaan Deshmukh 21,2024PE7519,EX002,Digital Communications (Ed 1),2026-02-09,2026-02-20,0
+Vihaan Deshmukh,2024PE6337,EX026,Digital Communications (Ed 5),2026-02-11,2026-03-07,10
+Ananya Kulkarni 58,2022PE6909,IT064,Cryptography and Network Security (Ed 11),2026-03-11,2026-03-20,0
+Diya Gupta,2024PE7855,FI081,Higher Engineering Mathematics (Ed 11),2026-02-19,2026-03-15,10
+Ananya Sharma,2024PE2846,EX053,Optical Fiber Communications (Ed 9),2026-03-07,2026-03-12,0
+Arjun Deshmukh,2024PE5958,IT002,Cloud Computing (Ed 1),2026-03-20,2026-04-02,0
+Aditya Iyer,2023PE2132,ME021,Thermodynamics: An Engineering Approach (Ed 5),2026-03-02,2026-03-17,1
+Sanya Kulkarni,2024PE9699,AU006,Internal Combustion Engines (Ed 2),2026-02-15,2026-03-12,11
+Ananya Patil,2022PE6915,FI036,Applied Chemistry (Ed 5),2026-03-20,2026-04-06,3
+Rohan Patil 52,2024PE8848,EC094,Embedded Systems (Ed 16),2026-02-18,2026-02-28,0
+Aarav Joshi,2022PE5609,EX009,Antenna Theory (Ed 2),2026-03-11,2026-04-03,9
+Tanvi Mehta,2022PE5334,EC015,Signals and Systems (Ed 3),2026-02-27,2026-03-19,6
+Ishaan Patil 84,2024PE4199,EX008,Digital Communications (Ed 2),2026-03-15,2026-03-27,0
+Isha Verma 47,2022PE9213,FI063,Programming in ANSI C (Ed 8),2026-01-26,2026-02-22,13
+Aditya Deshmukh,2023PE2386,AU027,Vehicle Dynamics (Ed 7),2026-02-17,2026-03-07,4
+Rohan Sharma 44,2023PE5978,AU036,Automobile Engineering (Ed 9),2026-03-10,2026-04-02,9
+Kiara Sharma 78,2022PE5220,EX028,Microwave Engineering (Ed 5),2026-02-26,2026-03-09,0
+Arjun Iyer 89,2023PE2157,EX048,Wireless Communications (Ed 8),2026-03-08,2026-03-15,0
+Ananya Mehta,2024PE3040,FI042,Advanced Engineering Mathematics (Ed 6),2026-02-13,2026-03-08,9
+Vihaan Deshmukh 20,2024PE9335,EX063,Antenna Theory (Ed 11),2026-03-16,2026-04-09,10
+Ananya Iyer,2022PE5931,IT070,Cryptography and Network Security (Ed 12),2026-02-14,2026-03-06,6
+Diya Mehta 50,2024PE1666,FI034,Advanced Engineering Mathematics (Ed 5),2026-03-01,2026-03-29,14
+Ananya Verma 72,2022PE1999,EX093,Antenna Theory (Ed 16),2026-03-16,2026-03-24,0
+Rohan Verma,2024PE2383,FI076,Applied Chemistry (Ed 10),2026-02-01,2026-03-01,14
+Sanya Joshi 65,2024PE3813,FI010,Advanced Engineering Mathematics (Ed 2),2026-02-13,2026-02-21,0
+Isha Mehta,2023PE3075,FI087,Programming in ANSI C (Ed 11),2026-02-05,2026-02-11,0
+Rohan Iyer 96,2023PE4856,IT048,The Complete Reference Java (Ed 8),2026-03-11,2026-03-29,4
+Sanya Kulkarni,2024PE9699,IT031,Software Engineering (Ed 6),2026-03-11,2026-04-05,11
+Vihaan Mehta 27,2023PE9640,IT007,Software Engineering (Ed 2),2026-03-10,2026-03-24,0
+Ishaan Deshmukh,2023PE2197,CS041,Introduction to Algorithms (Ed 6),2026-03-06,2026-03-27,7
+Ananya Mehta,2024PE3040,CS014,Compilers: Principles (Ed 2),2026-02-20,2026-03-16,10
+Kiara Gupta,2024PE7088,EC001,Digital Design (Ed 1),2026-03-19,2026-03-30,0
+Aarav Patil 58,2022PE9317,FI086,Basic Electrical Engineering (Ed 11),2026-02-02,2026-02-20,4
+Tanvi Verma 54,2024PE6896,CS064,Speech and Language Processing (Ed 8),2026-03-09,2026-03-31,8
+Arjun Verma,2023PE9379,EC076,Embedded Systems (Ed 13),2026-03-08,2026-03-13,0
+Arjun Iyer 16,2022PE8576,FI031,Programming in ANSI C (Ed 4),2026-02-05,2026-02-17,0
+Vihaan Nair,2023PE8074,EX001,Principles of Communication Systems (Ed 1),2026-02-26,2026-03-25,13
+Aditya Deshmukh 4,2024PE7575,ME011,Thermodynamics: An Engineering Approach (Ed 3),2026-02-19,2026-03-06,1
+Ishaan Deshmukh,2023PE2197,IT027,Web Technologies (Ed 5),2026-02-23,2026-03-15,6
+Tanvi Kulkarni 34,2023PE8564,AU024,Automobile Engineering (Ed 6),2026-03-21,2026-03-30,0
+Vihaan Verma 22,2023PE2205,FI032,Engineering Graphics (Ed 4),2026-02-26,2026-03-15,3
+Aarav Verma 15,2024PE2440,AU030,Internal Combustion Engines (Ed 8),2026-02-20,2026-03-13,7
+Ishaan Verma 82,2022PE5185,CS030,Compilers: Principles (Ed 4),2026-02-24,2026-03-04,0
+Kiara Sharma 78,2022PE5220,AU020,Automobile Engineering (Ed 5),2026-01-27,2026-02-12,2
+Tanvi Kulkarni 34,2023PE8564,CS082,Operating System Concepts (Ed 11),2026-03-07,2026-03-24,3
+Diya Kulkarni,2023PE9521,ME024,Strength of Materials (Ed 5),2026-02-10,2026-03-01,5
+Rohan Joshi 44,2022PE8171,IT081,Web Technologies (Ed 14),2026-02-13,2026-03-04,5
+Kiara Deshmukh,2024PE9834,FI059,Engineering Physics (Ed 8),2026-01-27,2026-02-06,0
+Sanya Verma,2022PE9810,IT097,Software Engineering (Ed 17),2026-01-25,2026-02-15,7
+Tanvi Nair 77,2022PE8417,FI082,Advanced Engineering Mathematics (Ed 11),2026-02-12,2026-02-17,0
+Vihaan Deshmukh,2024PE6337,ME016,Thermodynamics: An Engineering Approach (Ed 4),2026-02-17,2026-03-12,9
+Diya Gupta 81,2024PE8935,EX003,Antenna Theory (Ed 1),2026-02-01,2026-02-09,0
+Aditya Deshmukh 82,2023PE4908,EX100,Microwave Engineering (Ed 17),2026-02-23,2026-03-02,0
+Arjun Iyer,2022PE5160,ME040,Heat and Mass Transfer (Ed 8),2026-03-01,2026-03-24,9
+Vihaan Deshmukh 20,2024PE9335,ME031,Thermodynamics: An Engineering Approach (Ed 7),2026-03-15,2026-03-21,0
+Sanya Patil,2024PE8788,IT034,Cryptography and Network Security (Ed 6),2026-02-23,2026-03-15,6
+Isha Deshmukh 14,2023PE8998,EC006,Control Systems Engineering (Ed 1),2026-02-23,2026-03-07,0
+Aarav Sharma 72,2024PE4772,CS041,Introduction to Algorithms (Ed 6),2026-02-12,2026-02-23,0
+Rohan Verma,2024PE2383,EC043,Digital Design (Ed 8),2026-01-28,2026-02-20,9
+Diya Joshi,2023PE6234,ME003,Theory of Machines (Ed 1),2026-01-30,2026-02-13,0
+Ishaan Mehta 31,2024PE8440,EC080,Microprocessor Architecture (Ed 14),2026-02-12,2026-03-07,9
+Sanya Mehta 17,2022PE7829,EC091,Digital Design (Ed 16),2026-02-10,2026-03-10,14
+Tanvi Mehta 2,2023PE8436,AU015,Vehicle Dynamics (Ed 4),2026-02-02,2026-02-15,0
+Diya Verma 88,2022PE2283,FI097,Higher Engineering Mathematics (Ed 13),2026-03-16,2026-04-13,14
+Rohan Deshmukh,2022PE5607,IT037,Software Engineering (Ed 7),2026-01-26,2026-02-08,0
+Arjun Joshi,2023PE1978,CS099,Computer Networks (Ed 13),2026-02-15,2026-02-25,0
+Aarav Kulkarni 54,2022PE7814,FI017,Higher Engineering Mathematics (Ed 3),2026-03-08,2026-03-26,4
+Vihaan Joshi 38,2024PE1105,IT046,Cryptography and Network Security (Ed 8),2026-02-26,2026-03-03,0
+Vihaan Joshi 38,2024PE1105,IT009,Web Technologies (Ed 2),2026-03-01,2026-03-09,0
+Sanya Gupta,2024PE6130,EX038,Digital Communications (Ed 7),2026-02-06,2026-02-25,5
+Diya Nair 44,2022PE5739,EC004,Embedded Systems (Ed 1),2026-03-17,2026-04-15,15
+Ishaan Nair 61,2022PE7006,EC027,Signals and Systems (Ed 5),2026-03-21,2026-04-17,13
+Diya Kulkarni,2023PE9521,EX097,Principles of Communication Systems (Ed 17),2026-02-25,2026-03-10,0
+Tanvi Verma 95,2023PE2520,EX012,Wireless Communications (Ed 2),2026-02-26,2026-03-17,5
+Rohan Sharma 44,2023PE5978,FI073,Higher Engineering Mathematics (Ed 10),2026-01-29,2026-02-27,15
+Sanya Sharma,2023PE2446,IT081,Web Technologies (Ed 14),2026-02-08,2026-03-07,13
+Arjun Patil,2024PE3894,IT054,The Complete Reference Java (Ed 9),2026-02-03,2026-02-17,0
+Aditya Joshi,2024PE8755,IT055,Software Engineering (Ed 10),2026-03-11,2026-03-23,0
+Aditya Sharma 68,2023PE2128,ME048,Theory of Machines (Ed 10),2026-02-22,2026-03-10,2
+Ananya Patil,2022PE6915,ME007,Fluid Mechanics (Ed 2),2026-02-07,2026-03-05,12
+Aditya Iyer 92,2024PE5394,CS004,Artificial Intelligence: A Modern Approach (Ed 1),2026-02-05,2026-02-21,2
+Ishaan Iyer 74,2023PE8111,EC068,Microprocessor Architecture (Ed 12),2026-02-09,2026-03-04,9
+Ishaan Verma 30,2024PE5447,CS071,Discrete Mathematics (Ed 9),2026-01-26,2026-01-31,0
+Ananya Iyer 16,2023PE4935,ME044,Strength of Materials (Ed 9),2026-01-29,2026-02-08,0
+Aditya Iyer,2023PE2132,IT100,Cryptography and Network Security (Ed 17),2026-02-03,2026-02-18,1
+Kiara Joshi,2024PE1004,EX014,Digital Communications (Ed 3),2026-02-27,2026-03-28,15
+Aarav Joshi 69,2023PE7730,ME026,Thermodynamics: An Engineering Approach (Ed 6),2026-03-07,2026-03-24,3
+Vihaan Verma 22,2023PE2205,ME006,Thermodynamics: An Engineering Approach (Ed 2),2026-02-10,2026-03-04,8
+Aarav Nair 12,2023PE6834,IT036,The Complete Reference Java (Ed 6),2026-03-09,2026-04-07,15
+Diya Nair 44,2022PE5739,EC077,VLSI Design (Ed 13),2026-03-09,2026-03-17,0
+Aarav Kulkarni,2023PE3838,AU007,Vehicle Dynamics (Ed 2),2026-01-26,2026-02-05,0
+Tanvi Patil,2024PE5622,EC066,Control Systems Engineering (Ed 11),2026-02-03,2026-02-08,0
+Rohan Deshmukh 81,2024PE2984,IT053,Big Data Analytics (Ed 9),2026-02-15,2026-03-09,8
+Aditya Gupta 96,2023PE4569,FI066,Advanced Engineering Mathematics (Ed 9),2026-02-03,2026-02-17,0
+Rohan Deshmukh 67,2023PE4515,IT097,Software Engineering (Ed 17),2026-02-02,2026-02-18,2
+Kiara Deshmukh 61,2023PE4535,EC035,VLSI Design (Ed 6),2026-02-05,2026-02-20,1
+Rohan Mehta,2022PE3378,CS071,Discrete Mathematics (Ed 9),2026-02-10,2026-03-02,6
+Sanya Nair 49,2023PE5362,CS053,Database System Concepts (Ed 7),2026-03-19,2026-04-11,9
+Ishaan Verma 8,2023PE1338,FI075,Engineering Physics (Ed 10),2026-03-12,2026-04-11,16
+Tanvi Patil 2,2023PE8861,EC073,Digital Design (Ed 13),2026-02-07,2026-02-21,0
+Sanya Sharma,2023PE2446,CS018,Operating System Concepts (Ed 3),2026-02-23,2026-02-28,0
+Aditya Gupta 34,2023PE6062,ME045,Heat and Mass Transfer (Ed 9),2026-02-26,2026-03-13,1
+Vihaan Deshmukh 76,2024PE4244,AU037,Automotive Mechanics (Ed 10),2026-02-18,2026-02-25,0
+Vihaan Nair 34,2024PE8116,IT087,Web Technologies (Ed 15),2026-03-01,2026-03-31,16
+Aditya Joshi,2024PE8755,EX013,Principles of Communication Systems (Ed 3),2026-02-06,2026-02-12,0
+Tanvi Patil 92,2023PE4080,ME009,Strength of Materials (Ed 2),2026-02-10,2026-02-25,1
+Aditya Patil 63,2023PE4695,ME031,Thermodynamics: An Engineering Approach (Ed 7),2026-03-16,2026-04-09,10
+Vihaan Verma,2024PE6948,FI096,Engineering Graphics (Ed 12),2026-02-26,2026-03-13,1
+Kiara Mehta,2022PE1141,FI070,Basic Electrical Engineering (Ed 9),2026-03-03,2026-03-26,9
+Isha Kulkarni,2024PE4211,AU011,Vehicle Dynamics (Ed 3),2026-02-23,2026-03-25,16
+Aditya Mehta,2022PE1842,FI061,Engineering Mechanics (Ed 8),2026-02-25,2026-03-04,0
+Arjun Iyer,2022PE5160,EC019,Digital Design (Ed 4),2026-02-12,2026-03-11,13
+Diya Kulkarni 58,2024PE9288,AU045,Automotive Mechanics (Ed 12),2026-02-10,2026-02-16,0
+Isha Patil,2023PE3208,EC089,VLSI Design (Ed 15),2026-02-18,2026-03-15,11
+Aditya Sharma 19,2023PE9780,IT071,Big Data Analytics (Ed 12),2026-01-28,2026-02-26,15
+Tanvi Verma 95,2023PE2520,IT069,Web Technologies (Ed 12),2026-01-27,2026-02-20,10
+Ananya Sharma,2024PE2846,IT067,Software Engineering (Ed 12),2026-03-13,2026-04-01,5
+Sanya Nair 49,2023PE5362,CS039,Discrete Mathematics (Ed 5),2026-01-30,2026-02-12,0
+Rohan Iyer 96,2023PE4856,EX096,Wireless Communications (Ed 16),2026-02-01,2026-03-01,14
+Aditya Iyer,2023PE2132,IT067,Software Engineering (Ed 12),2026-02-07,2026-03-04,11
+Arjun Sharma,2023PE7484,CS056,Speech and Language Processing (Ed 7),2026-02-18,2026-03-01,0
+Kiara Kulkarni,2024PE4134,IT002,Cloud Computing (Ed 1),2026-03-16,2026-04-05,6
+Ishaan Deshmukh,2023PE2197,CS050,Operating System Concepts (Ed 7),2026-02-06,2026-03-04,12
+Ananya Verma 72,2022PE1999,CS099,Computer Networks (Ed 13),2026-03-08,2026-04-03,12
+Ananya Kulkarni 58,2022PE6909,CS020,Artificial Intelligence: A Modern Approach (Ed 3),2026-01-29,2026-02-24,12
+Kiara Iyer,2024PE4898,EC014,Microprocessor Architecture (Ed 3),2026-02-25,2026-03-21,10
+Diya Deshmukh,2023PE2382,ME011,Thermodynamics: An Engineering Approach (Ed 3),2026-02-04,2026-02-21,3
+Ishaan Joshi 82,2024PE1205,FI099,Engineering Physics (Ed 13),2026-02-03,2026-02-12,0
+Tanvi Kulkarni 49,2023PE3069,ME022,Fluid Mechanics (Ed 5),2026-02-14,2026-02-27,0
+Aditya Mehta,2022PE1842,CS078,Compilers: Principles (Ed 10),2026-02-03,2026-02-15,0
+Ishaan Kulkarni,2024PE8304,EX051,Antenna Theory (Ed 9),2026-01-25,2026-01-30,0
+Diya Sharma 81,2024PE9764,CS088,Speech and Language Processing (Ed 11),2026-02-07,2026-02-13,0
+Diya Mehta 50,2024PE1666,FI021,Engineering Mechanics (Ed 3),2026-03-08,2026-04-05,14
+Arjun Mehta,2024PE8435,ME046,Thermodynamics: An Engineering Approach (Ed 10),2026-01-27,2026-02-23,13
+Arjun Joshi,2023PE1978,FI068,Applied Chemistry (Ed 9),2026-02-19,2026-03-18,13
+Vihaan Verma 22,2023PE2205,IT025,Software Engineering (Ed 5),2026-03-09,2026-03-31,8
+Rohan Deshmukh,2022PE5607,CS049,Introduction to Algorithms (Ed 7),2026-02-06,2026-03-05,13
+Rohan Joshi,2023PE6992,FI006,Basic Electrical Engineering (Ed 1),2026-02-19,2026-03-16,11
+Arjun Deshmukh 24,2024PE5995,EX025,Principles of Communication Systems (Ed 5),2026-03-18,2026-04-11,10
+Tanvi Kulkarni 34,2023PE8564,FI057,Higher Engineering Mathematics (Ed 8),2026-03-04,2026-03-31,13
+Vihaan Nair 34,2024PE8116,EX060,Wireless Communications (Ed 10),2026-03-19,2026-04-08,6
+Tanvi Patil 12,2022PE3542,FI008,Engineering Graphics (Ed 1),2026-02-22,2026-03-24,16
+Diya Mehta 60,2023PE8454,CS088,Speech and Language Processing (Ed 11),2026-02-08,2026-02-25,3
+Rohan Gupta 43,2024PE9460,EC030,Control Systems Engineering (Ed 5),2026-02-11,2026-03-02,5
+Ananya Patil,2022PE6915,ME020,Heat and Mass Transfer (Ed 4),2026-02-10,2026-03-07,11
+Aarav Nair,2024PE9881,IT066,The Complete Reference Java (Ed 11),2026-02-27,2026-03-06,0
+Ananya Nair 68,2022PE4864,IT032,Cloud Computing (Ed 6),2026-02-17,2026-02-25,0
+Ishaan Verma 82,2022PE5185,IT027,Web Technologies (Ed 5),2026-03-20,2026-04-18,15
+Arjun Kulkarni 64,2023PE2681,ME026,Thermodynamics: An Engineering Approach (Ed 6),2026-01-31,2026-03-02,16
+Aarav Joshi,2022PE5609,AU012,Automobile Engineering (Ed 3),2026-03-18,2026-03-30,0
+Vihaan Verma,2024PE6948,IT055,Software Engineering (Ed 10),2026-02-16,2026-02-25,0
+Isha Sharma,2022PE5499,FI077,Engineering Mechanics (Ed 10),2026-03-05,2026-03-22,3
+Rohan Mehta 73,2022PE2636,FI062,Basic Electrical Engineering (Ed 8),2026-02-18,2026-03-15,11
+Sanya Deshmukh,2024PE5035,FI074,Advanced Engineering Mathematics (Ed 10),2026-02-17,2026-02-26,0
+Kiara Mehta,2022PE1141,EC069,Signals and Systems (Ed 12),2026-03-03,2026-03-19,2
+Diya Nair 44,2022PE5739,FI034,Advanced Engineering Mathematics (Ed 5),2026-01-27,2026-02-26,16
+Ishaan Nair 61,2022PE7006,IT094,Cryptography and Network Security (Ed 16),2026-02-13,2026-02-22,0
+Vihaan Joshi 93,2023PE5195,FI095,Programming in ANSI C (Ed 12),2026-02-23,2026-03-06,0
+Rohan Patil,2022PE7622,EX073,Principles of Communication Systems (Ed 13),2026-03-16,2026-04-01,2
+Kiara Sharma 90,2022PE7324,FI050,Advanced Engineering Mathematics (Ed 7),2026-02-20,2026-03-07,1
+Kiara Patil 26,2022PE7093,CS016,Speech and Language Processing (Ed 2),2026-03-17,2026-04-07,7
+Aarav Patil 58,2022PE9317,FI082,Advanced Engineering Mathematics (Ed 11),2026-03-18,2026-04-15,14
+Rohan Nair,2023PE8963,ME013,Theory of Machines (Ed 3),2026-02-27,2026-03-05,0
+Rohan Verma 15,2022PE7221,FI095,Programming in ANSI C (Ed 12),2026-02-14,2026-02-28,0
+Ishaan Deshmukh 21,2024PE7519,FI076,Applied Chemistry (Ed 10),2026-03-13,2026-03-18,0
+Vihaan Joshi,2024PE7272,EX072,Wireless Communications (Ed 12),2026-02-10,2026-03-03,7
+Aarav Mehta 10,2024PE9563,EC031,Digital Design (Ed 6),2026-02-14,2026-02-25,0
+Aditya Kulkarni 66,2024PE7300,CS003,Computer Networks (Ed 1),2026-03-08,2026-03-30,8
+Sanya Kulkarni 43,2023PE9237,EX031,Principles of Communication Systems (Ed 6),2026-03-09,2026-03-24,1
+Ananya Joshi 85,2022PE5260,AU037,Automotive Mechanics (Ed 10),2026-03-04,2026-04-02,15
+Diya Nair 44,2022PE5739,AU011,Vehicle Dynamics (Ed 3),2026-02-27,2026-03-29,16
+Ishaan Gupta,2024PE2675,AU014,Internal Combustion Engines (Ed 4),2026-03-13,2026-03-21,0
+Ishaan Patil 84,2024PE4199,CS079,Discrete Mathematics (Ed 10),2026-03-08,2026-03-16,0
+Aditya Deshmukh 82,2023PE4908,CS089,Introduction to Algorithms (Ed 12),2026-01-26,2026-02-10,1
+Arjun Kulkarni,2022PE7400,IT002,Cloud Computing (Ed 1),2026-02-12,2026-02-19,0
+Aarav Joshi 3,2023PE1952,FI035,Engineering Physics (Ed 5),2026-02-03,2026-02-11,0
+Rohan Sharma 32,2023PE4496,EX028,Microwave Engineering (Ed 5),2026-03-02,2026-03-23,7
+Tanvi Joshi 85,2022PE5551,IT082,Cryptography and Network Security (Ed 14),2026-03-11,2026-03-23,0
+Arjun Patil 36,2022PE3425,CS051,Computer Networks (Ed 7),2026-02-06,2026-03-06,14
+Rohan Patil 52,2024PE8848,EC014,Microprocessor Architecture (Ed 3),2026-03-18,2026-04-15,14
+Aditya Nair 73,2024PE8203,FI029,Engineering Mechanics (Ed 4),2026-03-15,2026-03-27,0
+Rohan Patil,2022PE7622,EX028,Microwave Engineering (Ed 5),2026-03-21,2026-04-16,12
+Sanya Nair 49,2023PE5362,CS046,Compilers: Principles (Ed 6),2026-02-07,2026-02-15,0
+Sanya Gupta,2024PE6130,ME037,Fluid Mechanics (Ed 8),2026-03-04,2026-03-20,2
+Kiara Patil,2022PE8522,EX028,Microwave Engineering (Ed 5),2026-02-21,2026-03-08,1
+Kiara Mehta,2022PE1141,EX078,Wireless Communications (Ed 13),2026-03-02,2026-03-07,0
+Arjun Mehta,2024PE8435,IT079,Software Engineering (Ed 14),2026-03-17,2026-03-31,0
+Vihaan Mehta 27,2023PE9640,EC014,Microprocessor Architecture (Ed 3),2026-01-25,2026-02-24,16
+Ishaan Joshi 82,2024PE1205,CS098,Operating System Concepts (Ed 13),2026-03-10,2026-03-23,0
+Isha Mehta 32,2022PE3243,EC016,Embedded Systems (Ed 3),2026-03-14,2026-03-24,0
+Isha Deshmukh 14,2023PE8998,FI091,Engineering Physics (Ed 12),2026-01-31,2026-02-24,10
+Arjun Patil 36,2022PE3425,FI052,Applied Chemistry (Ed 7),2026-02-04,2026-02-27,9
+Arjun Sharma,2023PE7484,EC085,Digital Design (Ed 15),2026-03-20,2026-04-18,15
+Isha Joshi 42,2022PE9995,FI019,Engineering Physics (Ed 3),2026-03-03,2026-03-09,0
+Rohan Joshi,2023PE6992,IT011,Big Data Analytics (Ed 2),2026-02-21,2026-03-08,1
+Aditya Patil 40,2024PE4021,IT015,Web Technologies (Ed 3),2026-03-18,2026-04-13,12
+Kiara Nair,2022PE1609,CS093,Database System Concepts (Ed 12),2026-02-20,2026-02-27,0
+Kiara Deshmukh,2024PE9834,CS005,Database System Concepts (Ed 1),2026-02-13,2026-02-25,0
+Rohan Sharma,2022PE2385,ME038,Theory of Machines (Ed 8),2026-01-27,2026-02-23,13
+Tanvi Verma,2024PE1453,FI094,Basic Electrical Engineering (Ed 12),2026-03-20,2026-04-11,8
+Arjun Joshi 67,2023PE4483,CS005,Database System Concepts (Ed 1),2026-03-06,2026-03-31,11
+Diya Iyer,2024PE6608,IT059,Big Data Analytics (Ed 10),2026-02-24,2026-03-07,0
+Kiara Deshmukh,2024PE9834,EX030,Wireless Communications (Ed 5),2026-03-14,2026-03-19,0
+Isha Nair,2022PE2006,FI082,Advanced Engineering Mathematics (Ed 11),2026-01-29,2026-02-22,10
+Rohan Sharma 44,2023PE5978,EC054,Control Systems Engineering (Ed 9),2026-03-09,2026-03-15,0
+Vihaan Deshmukh,2024PE6337,FI024,Engineering Graphics (Ed 3),2026-02-19,2026-03-12,7
+Arjun Gupta,2023PE6637,IT080,Cloud Computing (Ed 14),2026-03-10,2026-04-07,14
+Kiara Sharma,2022PE9620,FI010,Advanced Engineering Mathematics (Ed 2),2026-02-11,2026-02-16,0
+Rohan Gupta 43,2024PE9460,ME043,Theory of Machines (Ed 9),2026-03-07,2026-04-06,16
+Ananya Deshmukh 82,2023PE6332,EC030,Control Systems Engineering (Ed 5),2026-02-05,2026-02-19,0
+Sanya Gupta,2024PE6130,EC086,Microprocessor Architecture (Ed 15),2026-03-14,2026-03-29,1
+Tanvi Iyer,2023PE4668,FI095,Programming in ANSI C (Ed 12),2026-02-03,2026-03-05,16
+Diya Gupta 81,2024PE8935,EX071,Optical Fiber Communications (Ed 12),2026-02-11,2026-02-17,0
+Ananya Sharma,2024PE2846,EX006,Wireless Communications (Ed 1),2026-01-27,2026-02-19,9
+Aarav Deshmukh 33,2023PE6002,CS018,Operating System Concepts (Ed 3),2026-03-19,2026-04-12,10
+Diya Kulkarni,2023PE9521,IT083,Big Data Analytics (Ed 14),2026-02-04,2026-02-16,0
+Kiara Patil 40,2023PE8873,IT016,Cryptography and Network Security (Ed 3),2026-03-16,2026-04-11,12
+Aditya Sharma 78,2024PE2224,AU016,Automobile Engineering (Ed 4),2026-02-02,2026-02-28,12
+Sanya Mehta 17,2022PE7829,IT022,Cryptography and Network Security (Ed 4),2026-03-06,2026-03-22,2
+Ishaan Nair 89,2022PE3804,EX041,Optical Fiber Communications (Ed 7),2026-02-24,2026-03-15,5
+Diya Patil,2023PE6317,CS026,Operating System Concepts (Ed 4),2026-01-27,2026-02-17,7
+Rohan Sharma 87,2024PE1567,EC053,VLSI Design (Ed 9),2026-03-06,2026-03-18,0
+Arjun Joshi 67,2023PE4483,EC009,Signals and Systems (Ed 2),2026-03-08,2026-03-25,3
+Diya Kulkarni 52,2022PE5213,FI034,Advanced Engineering Mathematics (Ed 5),2026-03-16,2026-04-02,3
+Sanya Gupta 41,2023PE2789,AU042,Internal Combustion Engines (Ed 11),2026-03-18,2026-04-13,12
+Vihaan Verma 22,2023PE2205,ME037,Fluid Mechanics (Ed 8),2026-02-21,2026-03-17,10
+Aditya Gupta 36,2024PE9803,EX052,Microwave Engineering (Ed 9),2026-02-16,2026-02-28,0
+Tanvi Verma 54,2024PE6896,EX017,Optical Fiber Communications (Ed 3),2026-03-16,2026-03-24,0
+Ishaan Deshmukh 3,2023PE3008,CS030,Compilers: Principles (Ed 4),2026-02-14,2026-03-10,10
+Aarav Sharma 81,2023PE3004,EC062,Microprocessor Architecture (Ed 11),2026-03-18,2026-04-15,14
+Vihaan Sharma,2023PE2818,EC009,Signals and Systems (Ed 2),2026-02-14,2026-03-02,2
+Kiara Nair 90,2023PE9426,EX003,Antenna Theory (Ed 1),2026-01-27,2026-02-05,0
+Ananya Verma 72,2022PE1999,EX028,Microwave Engineering (Ed 5),2026-03-13,2026-04-02,6
+Tanvi Nair 16,2022PE5319,EC015,Signals and Systems (Ed 3),2026-02-25,2026-03-19,8
+Arjun Gupta 32,2024PE3537,CS057,Introduction to Algorithms (Ed 8),2026-02-25,2026-03-16,5
+Ishaan Deshmukh 21,2024PE7519,EX019,Principles of Communication Systems (Ed 4),2026-03-17,2026-03-28,0
+Aarav Mehta,2024PE1934,EC008,Microprocessor Architecture (Ed 2),2026-02-19,2026-02-27,0
+Arjun Deshmukh 93,2024PE5724,IT065,Big Data Analytics (Ed 11),2026-03-10,2026-04-06,13
+Sanya Gupta,2024PE6130,CS081,Introduction to Algorithms (Ed 11),2026-02-26,2026-03-03,0
+Aditya Patil 40,2024PE4021,FI060,Applied Chemistry (Ed 8),2026-02-24,2026-03-23,13
+Kiara Kulkarni 33,2024PE1077,EX019,Principles of Communication Systems (Ed 4),2026-02-06,2026-03-02,10
+Ananya Iyer,2022PE5931,EX035,Optical Fiber Communications (Ed 6),2026-03-17,2026-03-31,0
+Aarav Sharma 83,2023PE1183,IT098,Cloud Computing (Ed 17),2026-01-27,2026-02-24,14
+Aarav Iyer,2024PE1030,FI092,Applied Chemistry (Ed 12),2026-02-15,2026-03-03,2
+Isha Sharma 78,2022PE5831,CS048,Speech and Language Processing (Ed 6),2026-02-23,2026-03-24,15
+Vihaan Deshmukh 76,2024PE4244,EX033,Antenna Theory (Ed 6),2026-03-19,2026-04-16,14
+Tanvi Mehta 9,2022PE5059,ME019,Strength of Materials (Ed 4),2026-01-28,2026-02-14,3
+Isha Gupta 32,2022PE8342,CS093,Database System Concepts (Ed 12),2026-03-06,2026-03-20,0
+Rohan Iyer 11,2023PE4126,EX099,Antenna Theory (Ed 17),2026-03-11,2026-04-03,9
+Ananya Deshmukh 82,2023PE6332,EC035,VLSI Design (Ed 6),2026-02-23,2026-03-10,1
+Aarav Patil 58,2022PE9317,IT039,Web Technologies (Ed 7),2026-02-07,2026-02-14,0
+Arjun Mehta,2024PE8435,ME008,Theory of Machines (Ed 2),2026-03-12,2026-03-24,0
+Ishaan Sharma 96,2023PE8796,IT007,Software Engineering (Ed 2),2026-03-07,2026-03-21,0
+Sanya Kulkarni 43,2023PE9237,EC028,Embedded Systems (Ed 5),2026-02-06,2026-03-01,9
+Rohan Patil 52,2024PE8848,IT051,Web Technologies (Ed 9),2026-01-29,2026-02-12,0
+Arjun Iyer 16,2022PE8576,EX025,Principles of Communication Systems (Ed 5),2026-02-18,2026-02-28,0
+Ishaan Patil,2024PE5475,CS024,Speech and Language Processing (Ed 3),2026-02-18,2026-03-11,7
+Diya Mehta 60,2023PE8454,EC060,Control Systems Engineering (Ed 10),2026-02-09,2026-02-23,0
+Aarav Patil 58,2022PE9317,AU021,Automotive Mechanics (Ed 6),2026-02-04,2026-03-04,14
+Aditya Mehta 47,2022PE7511,ME040,Heat and Mass Transfer (Ed 8),2026-03-04,2026-03-24,6
+Vihaan Sharma,2023PE2818,IT030,The Complete Reference Java (Ed 5),2026-01-29,2026-02-09,0
+Rohan Sharma,2022PE2385,FI097,Higher Engineering Mathematics (Ed 13),2026-02-28,2026-03-18,4
+Kiara Kulkarni 28,2023PE8187,FI042,Advanced Engineering Mathematics (Ed 6),2026-02-23,2026-03-19,10
+Ishaan Deshmukh 3,2023PE3008,CS099,Computer Networks (Ed 13),2026-03-10,2026-03-15,0
+Rohan Deshmukh 61,2022PE6459,CS051,Computer Networks (Ed 7),2026-02-23,2026-03-11,2
