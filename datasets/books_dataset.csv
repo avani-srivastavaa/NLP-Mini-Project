@@ -1,0 +1,601 @@
+Book_ID,Title,Total_Copies,Available_Copies
+BK001,Operating Systems - Vol 8,13,6
+BK002,Microprocessors - Vol 1,14,13
+BK003,Operating Systems - Vol 4,8,5
+BK004,Thermodynamics - Vol 2,12,10
+BK005,Data Structures - Vol 4,14,14
+BK006,Data Structures - Vol 5,13,10
+BK007,Microprocessors - Vol 1,11,10
+BK008,Microprocessors - Vol 5,14,10
+BK009,Microprocessors - Vol 7,5,2
+BK010,Operating Systems - Vol 5,13,11
+BK011,Engineering Math - Vol 1,8,7
+BK012,Operating Systems - Vol 8,7,0
+BK013,Microprocessors - Vol 3,10,8
+BK014,Engineering Math - Vol 7,13,10
+BK015,Microprocessors - Vol 8,12,11
+BK016,Engineering Math - Vol 3,14,12
+BK017,Engineering Math - Vol 1,9,8
+BK018,Microprocessors - Vol 1,15,14
+BK019,Thermodynamics - Vol 8,8,7
+BK020,Engineering Math - Vol 10,8,3
+BK021,Thermodynamics - Vol 5,9,6
+BK022,Operating Systems - Vol 6,8,6
+BK023,Operating Systems - Vol 3,5,4
+BK024,Data Structures - Vol 4,11,11
+BK025,Thermodynamics - Vol 8,9,8
+BK026,Operating Systems - Vol 6,13,11
+BK027,Microprocessors - Vol 2,12,11
+BK028,Data Structures - Vol 6,6,3
+BK029,Thermodynamics - Vol 9,15,14
+BK030,Data Structures - Vol 3,10,8
+BK031,Operating Systems - Vol 5,9,7
+BK032,Engineering Math - Vol 4,9,9
+BK033,Microprocessors - Vol 10,7,7
+BK034,Thermodynamics - Vol 7,13,13
+BK035,Microprocessors - Vol 1,10,9
+BK036,Engineering Math - Vol 5,14,9
+BK037,Data Structures - Vol 8,5,3
+BK038,Microprocessors - Vol 2,12,11
+BK039,Thermodynamics - Vol 5,6,3
+BK040,Thermodynamics - Vol 7,14,14
+BK041,Operating Systems - Vol 2,6,3
+BK042,Thermodynamics - Vol 4,12,12
+BK043,Microprocessors - Vol 9,13,13
+BK044,Thermodynamics - Vol 2,12,10
+BK045,Operating Systems - Vol 7,11,10
+BK046,Microprocessors - Vol 4,9,8
+BK047,Data Structures - Vol 10,12,12
+BK048,Thermodynamics - Vol 5,10,7
+BK049,Microprocessors - Vol 10,15,15
+BK050,Operating Systems - Vol 3,14,13
+BK051,Operating Systems - Vol 2,13,10
+BK052,Operating Systems - Vol 3,11,10
+BK053,Data Structures - Vol 4,9,9
+BK054,Engineering Math - Vol 6,6,6
+BK055,Data Structures - Vol 4,8,8
+BK056,Engineering Math - Vol 7,5,2
+BK057,Thermodynamics - Vol 8,14,13
+BK058,Microprocessors - Vol 5,5,1
+BK059,Engineering Math - Vol 9,10,7
+BK060,Operating Systems - Vol 4,12,9
+BK061,Operating Systems - Vol 3,11,10
+BK062,Thermodynamics - Vol 8,6,5
+BK063,Microprocessors - Vol 2,15,14
+BK064,Operating Systems - Vol 7,11,10
+BK065,Operating Systems - Vol 6,12,10
+BK066,Thermodynamics - Vol 1,12,9
+BK067,Thermodynamics - Vol 1,5,2
+BK068,Engineering Math - Vol 9,5,2
+BK069,Microprocessors - Vol 5,10,6
+BK070,Microprocessors - Vol 3,9,7
+BK071,Operating Systems - Vol 9,14,14
+BK072,Data Structures - Vol 8,5,3
+BK073,Microprocessors - Vol 8,13,12
+BK074,Thermodynamics - Vol 2,12,10
+BK075,Operating Systems - Vol 4,15,12
+BK076,Operating Systems - Vol 8,14,7
+BK077,Data Structures - Vol 6,5,2
+BK078,Engineering Math - Vol 10,9,4
+BK079,Microprocessors - Vol 6,9,7
+BK080,Thermodynamics - Vol 5,11,8
+BK081,Engineering Math - Vol 8,12,9
+BK082,Data Structures - Vol 4,15,15
+BK083,Operating Systems - Vol 3,10,9
+BK084,Engineering Math - Vol 7,12,9
+BK085,Microprocessors - Vol 5,12,8
+BK086,Operating Systems - Vol 4,9,6
+BK087,Microprocessors - Vol 6,10,8
+BK088,Microprocessors - Vol 4,15,14
+BK089,Operating Systems - Vol 10,8,6
+BK090,Operating Systems - Vol 10,6,4
+BK091,Microprocessors - Vol 7,13,10
+BK092,Operating Systems - Vol 6,10,8
+BK093,Engineering Math - Vol 9,5,2
+BK094,Operating Systems - Vol 2,8,5
+BK095,Thermodynamics - Vol 8,5,4
+BK096,Engineering Math - Vol 9,6,3
+BK097,Engineering Math - Vol 5,7,2
+BK098,Engineering Math - Vol 7,15,12
+BK099,Engineering Math - Vol 7,11,8
+BK100,Operating Systems - Vol 6,14,12
+BK101,Data Structures - Vol 6,9,6
+BK102,Thermodynamics - Vol 7,8,8
+BK103,Operating Systems - Vol 9,15,15
+BK104,Operating Systems - Vol 6,14,12
+BK105,Operating Systems - Vol 1,11,11
+BK106,Engineering Math - Vol 5,11,6
+BK107,Operating Systems - Vol 9,7,7
+BK108,Engineering Math - Vol 2,10,9
+BK109,Microprocessors - Vol 10,7,7
+BK110,Microprocessors - Vol 8,8,7
+BK111,Engineering Math - Vol 1,6,5
+BK112,Data Structures - Vol 2,14,13
+BK113,Microprocessors - Vol 9,8,8
+BK114,Engineering Math - Vol 4,10,10
+BK115,Microprocessors - Vol 3,8,6
+BK116,Engineering Math - Vol 10,12,7
+BK117,Engineering Math - Vol 9,8,5
+BK118,Engineering Math - Vol 5,14,9
+BK119,Microprocessors - Vol 10,5,5
+BK120,Microprocessors - Vol 5,12,8
+BK121,Thermodynamics - Vol 1,10,7
+BK122,Engineering Math - Vol 10,10,5
+BK123,Microprocessors - Vol 10,8,8
+BK124,Engineering Math - Vol 2,14,13
+BK125,Thermodynamics - Vol 9,5,4
+BK126,Thermodynamics - Vol 10,10,7
+BK127,Data Structures - Vol 5,7,4
+BK128,Operating Systems - Vol 8,5,0
+BK129,Engineering Math - Vol 7,8,5
+BK130,Microprocessors - Vol 4,8,7
+BK131,Microprocessors - Vol 10,5,5
+BK132,Operating Systems - Vol 5,7,5
+BK133,Microprocessors - Vol 9,11,11
+BK134,Microprocessors - Vol 10,6,6
+BK135,Microprocessors - Vol 9,14,14
+BK136,Engineering Math - Vol 1,13,12
+BK137,Thermodynamics - Vol 4,10,10
+BK138,Microprocessors - Vol 9,7,7
+BK139,Thermodynamics - Vol 4,12,12
+BK140,Microprocessors - Vol 3,14,12
+BK141,Data Structures - Vol 5,12,9
+BK142,Data Structures - Vol 7,5,1
+BK143,Data Structures - Vol 1,5,4
+BK144,Microprocessors - Vol 6,15,13
+BK145,Microprocessors - Vol 1,10,9
+BK146,Microprocessors - Vol 1,9,8
+BK147,Engineering Math - Vol 3,14,12
+BK148,Data Structures - Vol 6,9,6
+BK149,Data Structures - Vol 10,15,15
+BK150,Thermodynamics - Vol 3,11,11
+BK151,Engineering Math - Vol 10,5,0
+BK152,Thermodynamics - Vol 5,8,5
+BK153,Thermodynamics - Vol 7,8,8
+BK154,Engineering Math - Vol 4,5,5
+BK155,Operating Systems - Vol 1,14,14
+BK156,Data Structures - Vol 7,12,8
+BK157,Operating Systems - Vol 3,8,7
+BK158,Operating Systems - Vol 3,8,7
+BK159,Thermodynamics - Vol 4,14,14
+BK160,Thermodynamics - Vol 10,5,2
+BK161,Engineering Math - Vol 7,6,3
+BK162,Operating Systems - Vol 3,6,5
+BK163,Thermodynamics - Vol 9,9,8
+BK164,Data Structures - Vol 2,6,5
+BK165,Engineering Math - Vol 4,11,11
+BK166,Data Structures - Vol 6,15,12
+BK167,Microprocessors - Vol 9,6,6
+BK168,Microprocessors - Vol 7,15,12
+BK169,Thermodynamics - Vol 9,13,12
+BK170,Data Structures - Vol 9,14,14
+BK171,Operating Systems - Vol 10,8,6
+BK172,Data Structures - Vol 4,9,9
+BK173,Microprocessors - Vol 9,11,11
+BK174,Microprocessors - Vol 3,9,7
+BK175,Thermodynamics - Vol 6,8,7
+BK176,Operating Systems - Vol 8,10,3
+BK177,Thermodynamics - Vol 10,10,7
+BK178,Engineering Math - Vol 1,5,4
+BK179,Operating Systems - Vol 6,13,11
+BK180,Operating Systems - Vol 7,7,6
+BK181,Thermodynamics - Vol 9,8,7
+BK182,Engineering Math - Vol 4,12,12
+BK183,Engineering Math - Vol 2,14,13
+BK184,Data Structures - Vol 8,11,9
+BK185,Data Structures - Vol 9,14,14
+BK186,Thermodynamics - Vol 3,9,9
+BK187,Engineering Math - Vol 9,5,2
+BK188,Data Structures - Vol 6,15,12
+BK189,Microprocessors - Vol 9,6,6
+BK190,Operating Systems - Vol 10,12,10
+BK191,Engineering Math - Vol 6,10,10
+BK192,Thermodynamics - Vol 3,15,15
+BK193,Operating Systems - Vol 6,14,12
+BK194,Engineering Math - Vol 3,11,9
+BK195,Microprocessors - Vol 7,11,8
+BK196,Data Structures - Vol 6,5,2
+BK197,Data Structures - Vol 8,7,5
+BK198,Thermodynamics - Vol 10,6,3
+BK199,Data Structures - Vol 5,14,11
+BK200,Thermodynamics - Vol 3,12,12
+BK201,Data Structures - Vol 7,6,2
+BK202,Microprocessors - Vol 3,5,3
+BK203,Engineering Math - Vol 4,15,15
+BK204,Thermodynamics - Vol 6,9,8
+BK205,Operating Systems - Vol 5,15,13
+BK206,Thermodynamics - Vol 4,7,7
+BK207,Data Structures - Vol 5,15,12
+BK208,Engineering Math - Vol 6,9,9
+BK209,Engineering Math - Vol 10,6,1
+BK210,Operating Systems - Vol 8,13,6
+BK211,Microprocessors - Vol 6,5,3
+BK212,Operating Systems - Vol 6,10,8
+BK213,Microprocessors - Vol 1,11,10
+BK214,Microprocessors - Vol 6,15,13
+BK215,Microprocessors - Vol 5,10,6
+BK216,Operating Systems - Vol 6,5,3
+BK217,Data Structures - Vol 6,9,6
+BK218,Microprocessors - Vol 5,13,9
+BK219,Operating Systems - Vol 10,8,6
+BK220,Data Structures - Vol 5,8,5
+BK221,Operating Systems - Vol 2,11,8
+BK222,Data Structures - Vol 3,12,10
+BK223,Thermodynamics - Vol 7,11,11
+BK224,Microprocessors - Vol 4,13,12
+BK225,Operating Systems - Vol 4,14,11
+BK226,Microprocessors - Vol 10,9,9
+BK227,Operating Systems - Vol 9,10,10
+BK228,Operating Systems - Vol 2,7,4
+BK229,Thermodynamics - Vol 10,6,3
+BK230,Operating Systems - Vol 3,12,11
+BK231,Microprocessors - Vol 6,13,11
+BK232,Thermodynamics - Vol 9,12,11
+BK233,Microprocessors - Vol 7,12,9
+BK234,Thermodynamics - Vol 9,12,11
+BK235,Thermodynamics - Vol 2,14,12
+BK236,Thermodynamics - Vol 8,5,4
+BK237,Data Structures - Vol 6,7,4
+BK238,Engineering Math - Vol 8,7,4
+BK239,Operating Systems - Vol 10,9,7
+BK240,Data Structures - Vol 7,11,7
+BK241,Operating Systems - Vol 1,8,8
+BK242,Microprocessors - Vol 7,6,3
+BK243,Microprocessors - Vol 7,14,11
+BK244,Engineering Math - Vol 3,10,8
+BK245,Thermodynamics - Vol 9,14,13
+BK246,Microprocessors - Vol 2,14,13
+BK247,Data Structures - Vol 5,15,12
+BK248,Operating Systems - Vol 7,12,11
+BK249,Operating Systems - Vol 8,11,4
+BK250,Engineering Math - Vol 7,10,7
+BK251,Data Structures - Vol 10,11,11
+BK252,Microprocessors - Vol 2,15,14
+BK253,Thermodynamics - Vol 7,12,12
+BK254,Engineering Math - Vol 8,15,12
+BK255,Microprocessors - Vol 2,8,7
+BK256,Thermodynamics - Vol 1,15,12
+BK257,Operating Systems - Vol 5,9,7
+BK258,Data Structures - Vol 6,5,2
+BK259,Data Structures - Vol 9,13,13
+BK260,Engineering Math - Vol 5,8,3
+BK261,Microprocessors - Vol 8,11,10
+BK262,Operating Systems - Vol 5,13,11
+BK263,Operating Systems - Vol 8,14,7
+BK264,Microprocessors - Vol 9,9,9
+BK265,Thermodynamics - Vol 5,11,8
+BK266,Data Structures - Vol 4,15,15
+BK267,Operating Systems - Vol 6,12,10
+BK268,Thermodynamics - Vol 1,11,8
+BK269,Microprocessors - Vol 9,6,6
+BK270,Thermodynamics - Vol 6,5,4
+BK271,Engineering Math - Vol 2,9,8
+BK272,Thermodynamics - Vol 10,14,11
+BK273,Engineering Math - Vol 10,10,5
+BK274,Microprocessors - Vol 10,9,9
+BK275,Microprocessors - Vol 9,15,15
+BK276,Microprocessors - Vol 6,7,5
+BK277,Engineering Math - Vol 6,6,6
+BK278,Microprocessors - Vol 7,8,5
+BK279,Thermodynamics - Vol 4,14,14
+BK280,Data Structures - Vol 5,13,10
+BK281,Operating Systems - Vol 1,5,5
+BK282,Engineering Math - Vol 3,12,10
+BK283,Operating Systems - Vol 10,10,8
+BK284,Data Structures - Vol 7,11,7
+BK285,Data Structures - Vol 3,14,12
+BK286,Thermodynamics - Vol 1,13,10
+BK287,Microprocessors - Vol 10,9,9
+BK288,Microprocessors - Vol 4,15,14
+BK289,Operating Systems - Vol 10,13,11
+BK290,Data Structures - Vol 7,13,9
+BK291,Microprocessors - Vol 6,8,6
+BK292,Data Structures - Vol 4,15,15
+BK293,Microprocessors - Vol 4,7,6
+BK294,Operating Systems - Vol 5,9,7
+BK295,Engineering Math - Vol 5,13,8
+BK296,Engineering Math - Vol 10,11,6
+BK297,Engineering Math - Vol 8,9,6
+BK298,Operating Systems - Vol 5,8,6
+BK299,Data Structures - Vol 8,10,8
+BK300,Thermodynamics - Vol 9,13,12
+BK301,Data Structures - Vol 5,9,6
+BK302,Thermodynamics - Vol 4,14,14
+BK303,Thermodynamics - Vol 5,11,8
+BK304,Microprocessors - Vol 7,5,2
+BK305,Data Structures - Vol 2,7,6
+BK306,Thermodynamics - Vol 10,5,2
+BK307,Data Structures - Vol 8,15,13
+BK308,Data Structures - Vol 4,10,10
+BK309,Engineering Math - Vol 3,11,9
+BK310,Microprocessors - Vol 9,11,11
+BK311,Operating Systems - Vol 8,6,0
+BK312,Engineering Math - Vol 7,7,4
+BK313,Engineering Math - Vol 2,13,12
+BK314,Engineering Math - Vol 2,5,4
+BK315,Thermodynamics - Vol 5,14,11
+BK316,Operating Systems - Vol 9,13,13
+BK317,Microprocessors - Vol 9,8,8
+BK318,Thermodynamics - Vol 6,10,9
+BK319,Engineering Math - Vol 4,15,15
+BK320,Operating Systems - Vol 2,13,10
+BK321,Thermodynamics - Vol 1,10,7
+BK322,Thermodynamics - Vol 7,15,15
+BK323,Operating Systems - Vol 10,11,9
+BK324,Engineering Math - Vol 8,10,7
+BK325,Microprocessors - Vol 9,15,15
+BK326,Data Structures - Vol 10,8,8
+BK327,Engineering Math - Vol 8,9,6
+BK328,Operating Systems - Vol 1,6,6
+BK329,Thermodynamics - Vol 7,12,12
+BK330,Engineering Math - Vol 5,9,4
+BK331,Engineering Math - Vol 1,14,13
+BK332,Operating Systems - Vol 3,14,13
+BK333,Operating Systems - Vol 1,5,5
+BK334,Thermodynamics - Vol 7,10,10
+BK335,Operating Systems - Vol 1,6,6
+BK336,Thermodynamics - Vol 5,14,11
+BK337,Operating Systems - Vol 6,5,3
+BK338,Operating Systems - Vol 3,13,12
+BK339,Microprocessors - Vol 10,6,6
+BK340,Thermodynamics - Vol 8,10,9
+BK341,Operating Systems - Vol 7,8,7
+BK342,Thermodynamics - Vol 3,14,14
+BK343,Engineering Math - Vol 10,12,7
+BK344,Engineering Math - Vol 7,11,8
+BK345,Engineering Math - Vol 7,12,9
+BK346,Operating Systems - Vol 8,13,6
+BK347,Data Structures - Vol 3,7,5
+BK348,Operating Systems - Vol 2,10,7
+BK349,Operating Systems - Vol 1,12,12
+BK350,Engineering Math - Vol 1,13,12
+BK351,Data Structures - Vol 7,5,1
+BK352,Thermodynamics - Vol 5,15,12
+BK353,Engineering Math - Vol 10,14,9
+BK354,Microprocessors - Vol 9,11,11
+BK355,Operating Systems - Vol 3,12,11
+BK356,Operating Systems - Vol 8,15,8
+BK357,Data Structures - Vol 8,6,4
+BK358,Microprocessors - Vol 5,10,6
+BK359,Microprocessors - Vol 4,11,10
+BK360,Operating Systems - Vol 10,15,13
+BK361,Thermodynamics - Vol 8,11,10
+BK362,Thermodynamics - Vol 3,9,9
+BK363,Operating Systems - Vol 8,12,5
+BK364,Engineering Math - Vol 3,8,6
+BK365,Microprocessors - Vol 2,8,7
+BK366,Microprocessors - Vol 10,14,14
+BK367,Data Structures - Vol 1,9,8
+BK368,Microprocessors - Vol 3,12,10
+BK369,Operating Systems - Vol 1,5,5
+BK370,Operating Systems - Vol 7,9,8
+BK371,Engineering Math - Vol 5,9,4
+BK372,Operating Systems - Vol 4,9,6
+BK373,Microprocessors - Vol 4,8,7
+BK374,Thermodynamics - Vol 2,15,13
+BK375,Data Structures - Vol 8,11,9
+BK376,Thermodynamics - Vol 7,11,11
+BK377,Thermodynamics - Vol 10,5,2
+BK378,Engineering Math - Vol 8,7,4
+BK379,Engineering Math - Vol 3,13,11
+BK380,Thermodynamics - Vol 5,9,6
+BK381,Engineering Math - Vol 4,14,14
+BK382,Microprocessors - Vol 3,7,5
+BK383,Operating Systems - Vol 2,11,8
+BK384,Engineering Math - Vol 1,11,10
+BK385,Data Structures - Vol 8,14,12
+BK386,Microprocessors - Vol 8,6,5
+BK387,Data Structures - Vol 3,9,7
+BK388,Microprocessors - Vol 4,8,7
+BK389,Microprocessors - Vol 3,7,5
+BK390,Thermodynamics - Vol 3,12,12
+BK391,Microprocessors - Vol 8,11,10
+BK392,Engineering Math - Vol 9,10,7
+BK393,Thermodynamics - Vol 9,15,14
+BK394,Engineering Math - Vol 10,8,3
+BK395,Operating Systems - Vol 7,9,8
+BK396,Thermodynamics - Vol 1,10,7
+BK397,Operating Systems - Vol 8,10,3
+BK398,Microprocessors - Vol 6,7,5
+BK399,Microprocessors - Vol 3,13,11
+BK400,Engineering Math - Vol 8,9,6
+BK401,Data Structures - Vol 10,5,5
+BK402,Operating Systems - Vol 7,11,10
+BK403,Data Structures - Vol 8,6,4
+BK404,Thermodynamics - Vol 6,14,13
+BK405,Thermodynamics - Vol 3,12,12
+BK406,Thermodynamics - Vol 6,12,11
+BK407,Engineering Math - Vol 5,9,4
+BK408,Data Structures - Vol 5,14,11
+BK409,Data Structures - Vol 6,10,7
+BK410,Operating Systems - Vol 3,14,13
+BK411,Thermodynamics - Vol 8,14,13
+BK412,Operating Systems - Vol 5,5,3
+BK413,Data Structures - Vol 7,14,10
+BK414,Data Structures - Vol 4,8,8
+BK415,Engineering Math - Vol 4,14,14
+BK416,Microprocessors - Vol 9,14,14
+BK417,Engineering Math - Vol 4,6,6
+BK418,Operating Systems - Vol 1,6,6
+BK419,Thermodynamics - Vol 8,8,7
+BK420,Data Structures - Vol 6,14,11
+BK421,Microprocessors - Vol 1,14,13
+BK422,Thermodynamics - Vol 1,12,9
+BK423,Engineering Math - Vol 10,11,6
+BK424,Microprocessors - Vol 5,9,5
+BK425,Microprocessors - Vol 7,14,11
+BK426,Microprocessors - Vol 7,6,3
+BK427,Operating Systems - Vol 10,14,12
+BK428,Engineering Math - Vol 2,5,4
+BK429,Engineering Math - Vol 9,8,5
+BK430,Microprocessors - Vol 5,11,7
+BK431,Engineering Math - Vol 9,10,7
+BK432,Operating Systems - Vol 7,6,5
+BK433,Operating Systems - Vol 6,8,6
+BK434,Operating Systems - Vol 4,10,7
+BK435,Microprocessors - Vol 9,7,7
+BK436,Operating Systems - Vol 10,5,3
+BK437,Data Structures - Vol 9,15,15
+BK438,Microprocessors - Vol 2,7,6
+BK439,Operating Systems - Vol 10,5,3
+BK440,Operating Systems - Vol 6,5,3
+BK441,Operating Systems - Vol 8,7,0
+BK442,Operating Systems - Vol 3,8,7
+BK443,Engineering Math - Vol 3,7,5
+BK444,Engineering Math - Vol 5,13,8
+BK445,Engineering Math - Vol 4,14,14
+BK446,Operating Systems - Vol 5,14,12
+BK447,Data Structures - Vol 5,6,3
+BK448,Engineering Math - Vol 8,12,9
+BK449,Engineering Math - Vol 3,6,4
+BK450,Data Structures - Vol 1,11,10
+BK451,Thermodynamics - Vol 1,6,3
+BK452,Operating Systems - Vol 8,12,5
+BK453,Thermodynamics - Vol 6,8,7
+BK454,Thermodynamics - Vol 10,14,11
+BK455,Operating Systems - Vol 4,13,10
+BK456,Microprocessors - Vol 4,6,5
+BK457,Microprocessors - Vol 10,14,14
+BK458,Data Structures - Vol 10,7,7
+BK459,Operating Systems - Vol 3,15,14
+BK460,Operating Systems - Vol 2,15,12
+BK461,Engineering Math - Vol 6,7,7
+BK462,Engineering Math - Vol 2,13,12
+BK463,Engineering Math - Vol 8,7,4
+BK464,Microprocessors - Vol 4,6,5
+BK465,Data Structures - Vol 7,6,2
+BK466,Operating Systems - Vol 3,12,11
+BK467,Engineering Math - Vol 10,5,0
+BK468,Thermodynamics - Vol 2,8,6
+BK469,Microprocessors - Vol 3,10,8
+BK470,Operating Systems - Vol 6,7,5
+BK471,Data Structures - Vol 7,15,11
+BK472,Data Structures - Vol 6,13,10
+BK473,Microprocessors - Vol 10,13,13
+BK474,Thermodynamics - Vol 6,15,14
+BK475,Engineering Math - Vol 10,9,4
+BK476,Engineering Math - Vol 8,9,6
+BK477,Data Structures - Vol 5,9,6
+BK478,Thermodynamics - Vol 10,15,12
+BK479,Data Structures - Vol 10,13,13
+BK480,Thermodynamics - Vol 2,12,10
+BK481,Operating Systems - Vol 2,6,3
+BK482,Thermodynamics - Vol 3,8,8
+BK483,Engineering Math - Vol 6,11,11
+BK484,Thermodynamics - Vol 1,14,11
+BK485,Operating Systems - Vol 3,10,9
+BK486,Engineering Math - Vol 4,15,15
+BK487,Operating Systems - Vol 7,8,7
+BK488,Microprocessors - Vol 5,8,4
+BK489,Operating Systems - Vol 2,8,5
+BK490,Thermodynamics - Vol 2,10,8
+BK491,Thermodynamics - Vol 8,7,6
+BK492,Engineering Math - Vol 3,12,10
+BK493,Data Structures - Vol 4,9,9
+BK494,Data Structures - Vol 1,6,5
+BK495,Microprocessors - Vol 3,5,3
+BK496,Thermodynamics - Vol 5,11,8
+BK497,Operating Systems - Vol 9,8,8
+BK498,Data Structures - Vol 6,5,2
+BK499,Engineering Math - Vol 4,15,15
+BK500,Microprocessors - Vol 7,6,3
+BK501,Thermodynamics - Vol 4,9,9
+BK502,Engineering Math - Vol 4,5,5
+BK503,Microprocessors - Vol 1,12,11
+BK504,Microprocessors - Vol 7,10,7
+BK505,Operating Systems - Vol 2,7,4
+BK506,Data Structures - Vol 1,7,6
+BK507,Data Structures - Vol 4,14,14
+BK508,Microprocessors - Vol 4,15,14
+BK509,Microprocessors - Vol 2,12,11
+BK510,Engineering Math - Vol 5,6,1
+BK511,Operating Systems - Vol 9,8,8
+BK512,Data Structures - Vol 1,5,4
+BK513,Thermodynamics - Vol 6,10,9
+BK514,Engineering Math - Vol 2,5,4
+BK515,Operating Systems - Vol 10,6,4
+BK516,Operating Systems - Vol 8,11,4
+BK517,Data Structures - Vol 2,8,7
+BK518,Operating Systems - Vol 6,7,5
+BK519,Operating Systems - Vol 1,10,10
+BK520,Data Structures - Vol 1,7,6
+BK521,Data Structures - Vol 5,11,8
+BK522,Data Structures - Vol 3,7,5
+BK523,Microprocessors - Vol 5,15,11
+BK524,Engineering Math - Vol 5,9,4
+BK525,Engineering Math - Vol 1,11,10
+BK526,Engineering Math - Vol 6,9,9
+BK527,Engineering Math - Vol 9,5,2
+BK528,Microprocessors - Vol 9,11,11
+BK529,Microprocessors - Vol 6,8,6
+BK530,Operating Systems - Vol 6,12,10
+BK531,Operating Systems - Vol 10,5,3
+BK532,Engineering Math - Vol 5,10,5
+BK533,Operating Systems - Vol 10,10,8
+BK534,Engineering Math - Vol 4,14,14
+BK535,Microprocessors - Vol 3,13,11
+BK536,Engineering Math - Vol 3,7,5
+BK537,Data Structures - Vol 8,5,3
+BK538,Operating Systems - Vol 5,7,5
+BK539,Microprocessors - Vol 1,15,14
+BK540,Operating Systems - Vol 1,15,15
+BK541,Operating Systems - Vol 9,5,5
+BK542,Data Structures - Vol 4,13,13
+BK543,Engineering Math - Vol 7,15,12
+BK544,Operating Systems - Vol 1,15,15
+BK545,Thermodynamics - Vol 8,13,12
+BK546,Microprocessors - Vol 1,10,9
+BK547,Data Structures - Vol 5,6,3
+BK548,Engineering Math - Vol 9,12,9
+BK549,Data Structures - Vol 6,11,8
+BK550,Data Structures - Vol 7,9,5
+BK551,Engineering Math - Vol 1,8,7
+BK552,Thermodynamics - Vol 8,8,7
+BK553,Thermodynamics - Vol 8,14,13
+BK554,Thermodynamics - Vol 7,13,13
+BK555,Data Structures - Vol 5,10,7
+BK556,Data Structures - Vol 1,9,8
+BK557,Microprocessors - Vol 9,10,10
+BK558,Microprocessors - Vol 1,8,7
+BK559,Microprocessors - Vol 1,13,12
+BK560,Microprocessors - Vol 5,10,6
+BK561,Microprocessors - Vol 10,6,6
+BK562,Operating Systems - Vol 4,7,4
+BK563,Thermodynamics - Vol 6,8,7
+BK564,Engineering Math - Vol 6,15,15
+BK565,Data Structures - Vol 6,12,9
+BK566,Engineering Math - Vol 5,7,2
+BK567,Thermodynamics - Vol 5,12,9
+BK568,Microprocessors - Vol 5,13,9
+BK569,Data Structures - Vol 6,5,2
+BK570,Thermodynamics - Vol 7,12,12
+BK571,Engineering Math - Vol 8,8,5
+BK572,Microprocessors - Vol 9,8,8
+BK573,Operating Systems - Vol 10,7,5
+BK574,Thermodynamics - Vol 7,15,15
+BK575,Operating Systems - Vol 8,5,0
+BK576,Engineering Math - Vol 3,5,3
+BK577,Thermodynamics - Vol 4,14,14
+BK578,Data Structures - Vol 10,15,15
+BK579,Operating Systems - Vol 7,6,5
+BK580,Operating Systems - Vol 10,12,10
+BK581,Engineering Math - Vol 7,13,10
+BK582,Microprocessors - Vol 1,6,5
+BK583,Thermodynamics - Vol 1,9,6
+BK584,Engineering Math - Vol 6,6,6
+BK585,Operating Systems - Vol 10,6,4
+BK586,Data Structures - Vol 2,5,4
+BK587,Thermodynamics - Vol 7,11,11
+BK588,Engineering Math - Vol 1,8,7
+BK589,Microprocessors - Vol 1,15,14
+BK590,Microprocessors - Vol 9,6,6
+BK591,Engineering Math - Vol 5,10,5
+BK592,Data Structures - Vol 6,6,3
+BK593,Data Structures - Vol 6,8,5
+BK594,Operating Systems - Vol 7,5,4
+BK595,Microprocessors - Vol 3,15,13
+BK596,Thermodynamics - Vol 2,5,3
+BK597,Thermodynamics - Vol 5,9,6
+BK598,Microprocessors - Vol 3,14,12
+BK599,Thermodynamics - Vol 2,11,9
+BK600,Operating Systems - Vol 9,7,7
