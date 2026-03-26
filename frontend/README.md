@@ -1,7 +1,7 @@
 
-  # Admin and Student Portal
+  # Library Management System UI
 
-  This is a code bundle for Admin and Student Portal. The original project is available at https://www.figma.com/design/qpBoj3AfRKxIY1Z9FJdSgf/Admin-and-Student-Portal.
+  This is a code bundle for Library Management System UI. The original project is available at https://www.figma.com/design/0l1cQnYIvJO6DC3aEdNDwa/Library-Management-System-UI.
 
   ## Running the code
 
