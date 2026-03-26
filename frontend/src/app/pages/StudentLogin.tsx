@@ -5,6 +5,8 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Checkbox } from '../components/ui/checkbox';
+import { loginUser } from '../data/api';
+import { signInWithGoogle } from '../data/firebase';
 
 export default function StudentLogin() {
   const navigate = useNavigate();
@@ -16,6 +18,28 @@ export default function StudentLogin() {
     e.preventDefault();
     // Mock login - navigate to student dashboard
     navigate('/student/dashboard');
+  };
+  
+  const handleGoogleLogin = async () => {
+    try {
+      const firebaseUser = await signInWithGoogle();
+      const idToken = await firebaseUser.getIdToken();
+      const data = await loginUser(idToken);
+      localStorage.setItem("libra_user", JSON.stringify({
+        email: data.email,
+        name: data.name,
+        role: data.role,
+      }));
+      if (data.role === "student") {
+        navigate("/student/dashboard");
+      } else if (data.role === "librarian") {
+        alert("Use Admin panel to login")
+      } else {
+        alert("Your account does not have permission to access this app.");
+      }
+    } catch (e: any) {
+      console.log(e.message ?? "Login failed. Make sure you're using your MES account.");
+    }
   };
 
   return (
@@ -110,6 +134,7 @@ export default function StudentLogin() {
 
           {/* Google Login */}
           <Button 
+            onClick={handleGoogleLogin}
             variant="outline" 
             className="w-full rounded-lg"
             type="button"
