@@ -1,7 +1,5 @@
 pandas
 google-genai
-kagglehub
-kaggle
 sentence-transformers
 scikit-learn
 numpy
