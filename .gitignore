@@ -1,4 +1,28 @@
-node_modules
-dist
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+nlp_venv/
+.env/
 .env
-.vscode
+
+# Logs
+*.log
+
+# JSON secrets
+*.json
+
+# Credentials folder
+credentials/
+
+# Node.js
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# Environment files in any folder
+**/.env
+**/.env.*
