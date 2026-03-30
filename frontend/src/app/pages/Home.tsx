@@ -1,6 +1,164 @@
+import { useState, useRef } from 'react';
 import { Link } from 'react-router';
-import { Book, Search, Users, MessageCircle, ArrowRight, BookOpen, Clock, Shield } from 'lucide-react';
+import {
+  Book, Search, Users, MessageCircle, ArrowRight, BookOpen,
+  Clock, Shield, ChevronLeft, ChevronRight, Star, BookMarked
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '../components/ui/button';
+
+const features = [
+  {
+    icon: Search,
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    title: 'Book Search',
+    description: 'Advanced search with filters by title, author, category, and availability.',
+  },
+  {
+    icon: Clock,
+    iconBg: 'bg-green-100',
+    iconColor: 'text-green-600',
+    title: 'Borrow & Return Tracking',
+    description: 'Real-time tracking of borrowed books with due date reminders.',
+  },
+  {
+    icon: MessageCircle,
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    title: 'AI Chatbot Assistance',
+    description: 'Get instant help and book recommendations from our AI assistant.',
+  },
+  {
+    icon: Shield,
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    title: 'Admin Management',
+    description: 'Comprehensive dashboard for managing books, users, and records.',
+  },
+  {
+    icon: Star,
+    iconBg: 'bg-yellow-100',
+    iconColor: 'text-yellow-600',
+    title: 'Ratings & Reviews',
+    description: 'Students can rate and review books to guide others in their reading journey.',
+  },
+  {
+    icon: BookMarked,
+    iconBg: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    title: 'Fine Management',
+    description: 'Automatic fine calculation and tracking for overdue book returns.',
+  },
+];
+
+function FeatureCarousel() {
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  // Number of cards visible at once (3 on desktop)
+  const visibleCount = 3;
+  const totalSlides = Math.ceil(features.length / visibleCount); // 2 slides
+
+  const paginate = (newDirection: number) => {
+    const next = page + newDirection;
+    if (next < 0 || next >= totalSlides) return;
+    setPage([next, newDirection]);
+  };
+
+  const startIndex = page * visibleCount;
+  const visibleFeatures = features.slice(startIndex, startIndex + visibleCount);
+
+  const variants = {
+    enter: (dir: number) => ({
+      x: dir > 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir: number) => ({
+      x: dir > 0 ? '-100%' : '100%',
+      opacity: 0,
+    }),
+  };
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
+        <p className="text-lg text-gray-600">
+          Everything you need for efficient library management
+        </p>
+      </div>
+
+      <div className="relative">
+        {/* Prev Button */}
+        <button
+          onClick={() => paginate(-1)}
+          disabled={page === 0}
+          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center hover:bg-amber-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+        >
+          <ChevronLeft className="w-5 h-5 text-gray-700" />
+        </button>
+
+        {/* Cards Viewport */}
+        <div className="overflow-hidden rounded-xl">
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="grid md:grid-cols-3 gap-6"
+            >
+              {visibleFeatures.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <div
+                    key={feature.title}
+                    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-50"
+                  >
+                    <div className={`w-12 h-12 ${feature.iconBg} rounded-lg flex items-center justify-center mb-4`}>
+                      <Icon className={`w-6 h-6 ${feature.iconColor}`} />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-gray-900">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={() => paginate(1)}
+          disabled={page >= totalSlides - 1}
+          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center hover:bg-amber-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+        >
+          <ChevronRight className="w-5 h-5 text-gray-700" />
+        </button>
+      </div>
+
+      {/* Dot Indicators */}
+      <div className="flex justify-center gap-2 mt-8">
+        {Array.from({ length: totalSlides }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setPage([i, i > page ? 1 : -1])}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              i === page ? 'bg-amber-500 w-6' : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -60,7 +218,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">About Our Library</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A modern digital library management system designed to provide seamless access to knowledge 
+              A modern digital library management system designed to provide seamless access to knowledge
               and efficient book management for students, faculty, and administrators.
             </p>
           </div>
@@ -87,7 +245,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">5,000+ Users</h3>
+              <h3 className="text-xl font-semibold mb-2">Active Users</h3>
               <p className="text-gray-600">
                 Serving students, faculty, and researchers community-wide
               </p>
@@ -96,60 +254,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
-            <p className="text-lg text-gray-600">
-              Everything you need for efficient library management
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Search className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Book Search</h3>
-              <p className="text-gray-600 text-sm">
-                Advanced search with filters by title, author, category, and availability
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Borrow & Return Tracking</h3>
-              <p className="text-gray-600 text-sm">
-                Real-time tracking of borrowed books with due date reminders
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <MessageCircle className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI Chatbot Assistance</h3>
-              <p className="text-gray-600 text-sm">
-                Get instant help and book recommendations from our AI assistant
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-orange-600" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Admin Management System</h3>
-              <p className="text-gray-600 text-sm">
-                Comprehensive dashboard for managing books, users, and records
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Features Section — Sliding Carousel */}
+      <section className="py-16 overflow-hidden">
+        <FeatureCarousel />
       </section>
 
       {/* Footer */}
       <footer className="bg-white text-gray-800 py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Book className="w-6 h-6 text-blue-600" />
@@ -165,15 +278,6 @@ export default function Home() {
                 <li>Email: library@university.edu</li>
                 <li>Phone: (555) 123-4567</li>
                 <li>Hours: Mon-Fri, 8AM - 8PM</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-gray-900">Quick Links</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">Support</a></li>
               </ul>
             </div>
           </div>
