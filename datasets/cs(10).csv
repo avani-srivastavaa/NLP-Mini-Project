@@ -1,0 +1,53 @@
+﻿Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+CS001,Introduction to Algorithms,"Cormen, Leiserson",CS,24,24
+CS002,Operating System Concepts,"Silberschatz, Galvin",CS,22,22
+CS003,Computer Networks,Tanenbaum,CS,10,8
+CS004,Artificial Intelligence: A Modern Approach,"Russell, Norvig",CS,17,17
+CS005,Database System Concepts,"Korth, Sudarshan",CS,22,21
+CS006,Compilers: Principles,"Aho, Ullman",CS,22,22
+CS007,Discrete Mathematics,Kenneth Rosen,CS,14,14
+CS008,Speech and Language Processing,"Jurafsky, Martin",CS,20,19
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
