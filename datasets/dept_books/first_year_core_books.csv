@@ -1,0 +1,11 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-FY1,Engineering Physics,Gaur & Gupta,First Year Core,30,29
+B-FY2,Engineering Chemistry,Jain & Jain,First Year Core,30,29
+B-FY3,Engineering Mathematics Vol 1,B.S. Grewal,First Year Core,30,30
+B-FY4,Basic Electrical Engineering,V.K. Mehta,First Year Core,30,28
+B-FY5,Programming in C,Balagurusamy,First Year Core,30,30
+B-FY6,Engineering Graphics,N.D. Bhatt,First Year Core,30,30
+B-FY7,Mechanics for Engineers,Beer & Johnston,First Year Core,30,30
+B-FY8,Environmental Studies,Erach Bharucha,First Year Core,30,30
+B-FY9,Communication Skills,Sanjay Kumar,First Year Core,30,29
+B-FY10,Workshop Practice,Hajra Choudhury,First Year Core,30,30

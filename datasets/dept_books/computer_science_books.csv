@@ -1,0 +1,51 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-1000,Introduction to Algorithms,Cormen,Computer Science,8,7
+B-1001,Computer Networks,Tanenbaum,Computer Science,6,6
+B-1002,Operating System Concepts,Silberschatz,Computer Science,7,7
+B-1003,Database System Concepts,Korth,Computer Science,9,9
+B-1004,The C Programming Language,Kernighan,Computer Science,11,11
+B-1005,"Compilers: Principles, Techniques, and Tools",Aho,Computer Science,7,7
+B-1006,Artificial Intelligence: A Modern Approach,Russell,Computer Science,11,8
+B-1007,Discrete Mathematics and Its Applications,Rosen,Computer Science,10,10
+B-1008,Computer Architecture: A Quantitative Approach,Hennessy,Computer Science,13,13
+B-1009,Introduction to the Theory of Computation,Sipser,Computer Science,9,7
+B-1010,Clean Code,Robert C. Martin,Computer Science,8,8
+B-1011,Design Patterns,Gamma,Computer Science,8,8
+B-1012,Structure and Interpretation of Computer Programs,Abelson,Computer Science,14,14
+B-1013,The Pragmatic Programmer,Hunt,Computer Science,9,8
+B-1014,Computer Graphics: Principles and Practice,Foley,Computer Science,8,8
+B-1015,Data Structures and Algorithm Analysis in C++,Weiss,Computer Science,10,9
+B-1016,Modern Operating Systems,Tanenbaum,Computer Science,9,8
+B-1017,Distributed Systems,van Steen,Computer Science,6,5
+B-1018,Cryptography and Network Security,Stallings,Computer Science,14,14
+B-1019,Software Engineering: A Practitioner's Approach,Pressman,Computer Science,5,4
+B-1020,Deep Learning,Goodfellow,Computer Science,5,5
+B-1021,Machine Learning,Tom Mitchell,Computer Science,11,11
+B-1022,Digital Design,Morris Mano,Computer Science,8,8
+B-1023,Python Crash Course,Matthes,Computer Science,10,9
+B-1024,Java: The Complete Reference,Schildt,Computer Science,15,15
+B-1025,Programming Pearls,Bentley,Computer Science,12,11
+B-1026,The Art of Computer Programming,Knuth,Computer Science,9,8
+B-1027,Code Complete,McConnell,Computer Science,7,6
+B-1028,Effective C++,Scott Meyers,Computer Science,14,14
+B-1029,Head First Design Patterns,Freeman,Computer Science,7,7
+B-1030,Introduction to Data Mining,Tan,Computer Science,5,5
+B-1031,Computer Organization and Design,Patterson,Computer Science,13,12
+B-1032,"Automata Theory, Languages, and Computation",Hopcroft,Computer Science,13,12
+B-1033,Big Data: A Revolution,Mayer-Schonberger,Computer Science,10,7
+B-1034,Cloud Computing,Marinescu,Computer Science,15,15
+B-1035,Internet of Things,Raj Kamal,Computer Science,14,14
+B-1036,Blockchain Basics,Drescher,Computer Science,9,9
+B-1037,Cybersecurity for Beginners,Meeuwisse,Computer Science,15,14
+B-1038,Data Science from Scratch,Grus,Computer Science,11,9
+B-1039,The Mythical Man-Month,Brooks,Computer Science,13,12
+B-1040,Working Effectively with Legacy Code,Feathers,Computer Science,10,9
+B-1041,Refactoring,Fowler,Computer Science,14,14
+B-1042,Pattern Recognition and Machine Learning,Bishop,Computer Science,9,9
+B-1043,Hands-On Machine Learning,Geron,Computer Science,6,6
+B-1044,Natural Language Processing with Python,Bird,Computer Science,5,4
+B-1045,Reinforcement Learning,Sutton,Computer Science,13,13
+B-1046,Digital Image Processing,Gonzalez,Computer Science,9,9
+B-1047,Real-Time Systems,Liu,Computer Science,13,13
+B-1048,Embedded Systems,Raj Kamal,Computer Science,9,9
+B-1049,Introduction to Parallel Computing,Grama,Computer Science,7,7

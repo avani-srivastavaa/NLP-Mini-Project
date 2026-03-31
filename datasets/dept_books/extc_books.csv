@@ -1,0 +1,51 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-1150,Principles of Communication Systems,Taub and Schilling,EXTC,10,10
+B-1151,Digital Communications,John Proakis,EXTC,13,13
+B-1152,Antennas and Wave Propagation,John Kraus,EXTC,13,13
+B-1153,Microwave Engineering,David Pozar,EXTC,7,7
+B-1154,Signals and Systems,Alan Oppenheim,EXTC,8,7
+B-1155,Optical Fiber Communications,Gerd Keiser,EXTC,8,8
+B-1156,Mobile Cellular Telecommunications,William Lee,EXTC,7,6
+B-1157,Wireless Communications,Andreas Molisch,EXTC,7,5
+B-1158,Satellite Communications,Timothy Pratt,EXTC,14,13
+B-1159,Radar Systems,Merrill Skolnik,EXTC,13,11
+B-1160,Digital Signal Processing,Sanjit Mitra,EXTC,12,11
+B-1161,Communication Networks,Alberto Leon-Garcia,EXTC,15,15
+B-1162,Broadband Communications,Robert Newman,EXTC,11,11
+B-1163,Error Correction Coding,Todd Moon,EXTC,15,15
+B-1164,Spread Spectrum Communications,Simon,EXTC,6,5
+B-1165,Multi-Carrier Communications,Ye Li,EXTC,10,8
+B-1166,Ad Hoc Wireless Networks,Murthy,EXTC,5,3
+B-1167,Cognitive Radio Networks,Wyglinski,EXTC,6,6
+B-1168,Next Generation Networks,Johnson,EXTC,10,9
+B-1169,Information Theory,Thomas Cover,EXTC,10,9
+B-1170,Wavelet Transforms,Raghuveer Rao,EXTC,12,11
+B-1171,Adaptive Signal Processing,Haykin,EXTC,13,10
+B-1172,Kalman Filtering,Grewal,EXTC,5,4
+B-1173,Array Signal Processing,Johnson,EXTC,11,11
+B-1174,MIMO Wireless Communications,Biglieri,EXTC,15,14
+B-1175,LTE,The UMTS Long Term Evolution,EXTC,14,14
+B-1176,5G Mobile and Wireless Communications,Osseiran,EXTC,15,14
+B-1177,Software Defined Radio,Arslan,EXTC,12,11
+B-1178,Global Positioning System,Misra,EXTC,9,9
+B-1179,Remote Sensing,Campbell,EXTC,14,14
+B-1180,Speech Processing,Rabiner,EXTC,7,7
+B-1181,Audio Engineering,Rumsey,EXTC,11,10
+B-1182,Television Engineering,Gulati,EXTC,9,7
+B-1183,Video Processing,Tekalp,EXTC,13,11
+B-1184,Medical Electronics,Khandpur,EXTC,10,9
+B-1185,Bio-Medical Instrumentation,Cromwell,EXTC,7,7
+B-1186,Neural Networks and Learning Machines,Haykin,EXTC,13,12
+B-1187,Fuzzy Logic with Engineering Applications,Ross,EXTC,6,6
+B-1188,Genetic Algorithms,Goldberg,EXTC,5,5
+B-1189,Electromagnetic Compatibility,Ott,EXTC,15,15
+B-1190,High Frequency Electronics,Hagen,EXTC,5,5
+B-1191,Radio Frequency Integrated Circuits,Lee,EXTC,13,13
+B-1192,Mixed-Signal Circuit Design,Baker,EXTC,5,5
+B-1193,Low-Power VLSI Design,Yeo,EXTC,6,5
+B-1194,Analog Filter Design,Van Valkenburg,EXTC,11,11
+B-1195,Operational Amplifiers,Franco,EXTC,15,15
+B-1196,Switching Theory and Logic Design,Kohavi,EXTC,6,5
+B-1197,Reliability Engineering,Balagurusamy,EXTC,9,8
+B-1198,Engineering Electromagnetics,William Hayt,EXTC,7,5
+B-1199,Transmission Lines and Networks,Umesh Sinha,EXTC,6,5

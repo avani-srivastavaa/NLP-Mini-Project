@@ -1,0 +1,51 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-1250,Automotive Mechanics,William Crouse,Automobile,7,6
+B-1251,The Motor Vehicle,"Newton, Steeds & Garrett",Automobile,7,7
+B-1252,Automotive Chassis,P.M. Heldt,Automobile,7,7
+B-1253,Automotive Engines,A.K. Babu,Automobile,10,10
+B-1254,Automotive Electrical and Electronics,Tom Denton,Automobile,5,5
+B-1255,Vehicle Dynamics,Reza Jazar,Automobile,13,12
+B-1256,Advanced Engine Technology,Heinz Heisler,Automobile,15,15
+B-1257,Automobile Electrical and Electronic Systems,Tom Denton,Automobile,6,6
+B-1258,Automotive Transmissions,Harald Naunheimer,Automobile,11,10
+B-1259,Hybrid and Electric Vehicles,Iqbal Husain,Automobile,14,13
+B-1260,Fuel Cell Vehicles,James Larminie,Automobile,15,12
+B-1261,Automotive Aerodynamics,Joseph Katz,Automobile,6,3
+B-1262,Racing Car Design,Terry Katayama,Automobile,10,10
+B-1263,Tire and Vehicle Dynamics,Hans Pacejka,Automobile,15,15
+B-1264,Vehicle Crashworthiness,Du Bois,Automobile,15,14
+B-1265,Automotive Safety,Ulrich Seiffert,Automobile,15,14
+B-1266,Light and Heavy Vehicle Technology,Malcolm Nunney,Automobile,10,9
+B-1267,Automotive Control Systems,Kiencke,Automobile,11,9
+B-1268,Embedded Systems in Automotive,Nicolas Navet,Automobile,5,5
+B-1269,CAN Bus Design,Steve Corrigan,Automobile,9,8
+B-1270,Automotive Ethernet,Coltman,Automobile,7,7
+B-1271,Alternative Fuels for Transportation,Arumugam Ramasamy,Automobile,7,7
+B-1272,Biofuels,Mousdale,Automobile,15,15
+B-1273,Hydrogen Energy,Veziroglu,Automobile,13,13
+B-1274,Automotive Engines,Ganesan,Automobile,5,5
+B-1275,Two and Three Wheeler Technology,Panchal,Automobile,8,6
+B-1276,Tractor Mechanics,Liljedahl,Automobile,7,7
+B-1277,Earth Moving Machinery,Jagman Singh,Automobile,12,11
+B-1278,Garage Practice,Kirpal Singh,Automobile,10,10
+B-1279,Automotive Body Engineering,J. Pawlowski,Automobile,15,13
+B-1280,Materials for Automobile Bodies,Geoffrey Davies,Automobile,11,10
+B-1281,Automotive Paints and Coatings,Streitberger,Automobile,5,4
+B-1282,Manufacturing Automotive Components,R.K. Jain,Automobile,8,7
+B-1283,Modern Automotive Technology,James Duffy,Automobile,5,4
+B-1284,Automobile Engineering Vol 1,Kirpal Singh,Automobile,8,8
+B-1285,Automobile Engineering Vol 2,Kirpal Singh,Automobile,15,11
+B-1286,Auto Repair for Dummies,Deanna Sclar,Automobile,14,13
+B-1287,How Your Car Works,Julian Happian-Smith,Automobile,6,6
+B-1288,Race Car Engineering,Maurice Olley,Automobile,14,14
+B-1289,Autonomous Vehicles,Lipson,Automobile,9,9
+B-1290,Connected Cars,Dietmayer,Automobile,10,10
+B-1291,Automotive Cyber Security,Kersten,Automobile,11,9
+B-1292,Machine Learning for Automotive,Hanselmann,Automobile,12,11
+B-1293,Deep Learning in Transportation,Wang,Automobile,15,15
+B-1294,Telematics,Shuman,Automobile,6,5
+B-1295,Diagnostics of Automotive Engines,K.C. Giri,Automobile,5,5
+B-1296,Automobile Pollution and Control,B.P. Pundir,Automobile,14,14
+B-1297,"Noise, Vibration and Harshness",Wang,Automobile,14,13
+B-1298,Automotive Sensors,Fleming,Automobile,7,5
+B-1299,Automotive Air Conditioning,Boylestad,Automobile,6,6

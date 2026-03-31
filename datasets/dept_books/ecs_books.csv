@@ -1,0 +1,51 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-1100,"Embedded Systems: Architecture, Programming and Design",Raj Kamal,ECS,6,5
+B-1101,Digital Logic and Computer Design,Morris Mano,ECS,6,6
+B-1102,Microprocessors and Interfacing,Douglas Hall,ECS,10,9
+B-1103,VLSI Technology,S.M. Sze,ECS,15,14
+B-1104,Computer System Architecture,Morris Mano,ECS,7,6
+B-1105,CMOS VLSI Design,Neil Weste,ECS,10,7
+B-1106,Real-Time Embedded Systems,Xiaocong Fan,ECS,15,15
+B-1107,ARM System Developer's Guide,Sloss,ECS,6,6
+B-1108,Digital Signal Processing,Proakis,ECS,15,14
+B-1109,Introduction to Embedded Systems,Shibu K V,ECS,11,10
+B-1110,The 8051 Microcontroller,Mazidi,ECS,13,12
+B-1111,FPGA Prototyping by Verilog Examples,Chu,ECS,12,12
+B-1112,Digital Integrated Circuits,Rabaey,ECS,14,12
+B-1113,Control Systems Engineering,Norman Nise,ECS,14,11
+B-1114,Signals and Systems,Oppenheim,ECS,14,14
+B-1115,Electronic Devices and Circuit Theory,Boylestad,ECS,13,13
+B-1116,Linear Integrated Circuits,Roy Choudhury,ECS,7,7
+B-1117,Microelectronic Circuits,Sedra/Smith,ECS,12,12
+B-1118,Power Electronics,Rashid,ECS,12,10
+B-1119,Electric Machines,Nagrath & Kothari,ECS,8,7
+B-1120,Circuit Theory,A. Chakrabarti,ECS,8,7
+B-1121,Electromagnetic Field Theory,Sadiku,ECS,5,4
+B-1122,Modern Digital and Analog Communication Systems,Lathi,ECS,12,12
+B-1123,Information Theory and Coding,Muralidhar Kulkarni,ECS,5,4
+B-1124,Fiber Optic Communication,Keiser,ECS,8,8
+B-1125,Satellite Communication,Pratt,ECS,6,6
+B-1126,Wireless Communications,Rappaport,ECS,9,7
+B-1127,Antenna and Wave Propagation,Prasad,ECS,13,13
+B-1128,Radar Systems,Skolnik,ECS,6,6
+B-1129,Optical Networks,Ramaswami,ECS,10,9
+B-1130,Broadband Communication,Balaji Prasad,ECS,8,7
+B-1131,Sensors and Transducers,Patranabis,ECS,12,12
+B-1132,Industrial Instrumentation,Eckman,ECS,5,3
+B-1133,Process Control,Stephanopoulos,ECS,9,9
+B-1134,Robotics and Control,Mittal,ECS,15,15
+B-1135,Mechatronics,Bolton,ECS,12,12
+B-1136,PLC and Industrial Automation,Madhuchhanda Mitra,ECS,14,14
+B-1137,Internet of Things: A Hands-On Approach,Bahga,ECS,8,7
+B-1138,Embedded C,Pont,ECS,11,11
+B-1139,RTOS Concepts,Li,ECS,14,14
+B-1140,Designing Embedded Systems with Arduino,Tian,ECS,8,8
+B-1141,Raspberry Pi Cookbook,Monk,ECS,5,5
+B-1142,Digital Systems Design using VHDL,Roth,ECS,13,12
+B-1143,Verilog HDL,Samir Palnitkar,ECS,10,8
+B-1144,Electronic Instrumentation,Kalsi,ECS,7,7
+B-1145,Network Analysis,Van Valkenburg,ECS,14,13
+B-1146,Solid State Electronic Devices,Streetman,ECS,15,14
+B-1147,Semiconductor Physics and Devices,Neamen,ECS,6,6
+B-1148,"Pulse, Digital and Switching Waveforms",Millman,ECS,14,14
+B-1149,Hardware Security,Bhunia,ECS,5,5

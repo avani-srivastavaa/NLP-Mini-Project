@@ -1,0 +1,51 @@
+Book_ID,Title,Author,Department,Total_Copies,Available_Copies
+B-1050,"Cloud Computing: Concepts, Technology & Architecture",Erl,Information Technology,12,12
+B-1051,Web Technologies,Achyut Godbole,Information Technology,15,15
+B-1052,Information Storage and Management,EMC Education Services,Information Technology,14,14
+B-1053,Data Analytics with R,Seema Acharya,Information Technology,13,11
+B-1054,Software Project Management,Bob Hughes,Information Technology,14,13
+B-1055,Mobile Computing,Asoke K Talukder,Information Technology,11,10
+B-1056,Electronic Commerce,Bharat Bhaskar,Information Technology,15,14
+B-1057,Supply Chain Management,Chopra,Information Technology,6,5
+B-1058,Information Security: Principles and Practice,Stamp,Information Technology,15,11
+B-1059,Service Oriented Architecture,Thomas Erl,Information Technology,8,8
+B-1060,Management Information Systems,Laudon,Information Technology,8,8
+B-1061,Hadoop: The Definitive Guide,Tom White,Information Technology,13,12
+B-1062,Data Warehousing Fundamentals,Ponniah,Information Technology,15,12
+B-1063,Network Security Essentials,Stallings,Information Technology,12,12
+B-1064,Introduction to Information Retrieval,Manning,Information Technology,11,11
+B-1065,Social Media Mining,Zafarani,Information Technology,10,9
+B-1066,The Lean Startup,Eric Ries,Information Technology,11,10
+B-1067,Business Intelligence,Sharda,Information Technology,11,11
+B-1068,Agile Software Development,Robert Martin,Information Technology,7,6
+B-1069,User Story Mapping,Jeff Patton,Information Technology,8,7
+B-1070,Learning Web Design,Robbins,Information Technology,15,15
+B-1071,PHP and MySQL Web Development,Welling,Information Technology,15,14
+B-1072,Node.js Design Patterns,Casciaro,Information Technology,9,9
+B-1073,High Performance Browser Networking,Grigorik,Information Technology,10,10
+B-1074,The DevOps Handbook,Kim,Information Technology,15,15
+B-1075,Site Reliability Engineering,Beyer,Information Technology,15,13
+B-1076,Infrastructure as Code,Morris,Information Technology,7,7
+B-1077,Continuous Delivery,Humble,Information Technology,5,4
+B-1078,Docker Deep Dive,Nigel Poulton,Information Technology,14,13
+B-1079,Kubernetes Up and Running,Hightower,Information Technology,6,6
+B-1080,Software Architecture in Practice,Bass,Information Technology,6,6
+B-1081,Building Microservices,Newman,Information Technology,12,12
+B-1082,Enterprise Integration Patterns,Hohpe,Information Technology,10,10
+B-1083,Domain-Driven Design,Evans,Information Technology,9,8
+B-1084,SQL Performance Explained,Winand,Information Technology,7,6
+B-1085,Database Internals,Petrov,Information Technology,11,11
+B-1086,Streaming Systems,Akidau,Information Technology,15,13
+B-1087,Designing Data-Intensive Applications,Kleppmann,Information Technology,8,8
+B-1088,Data Mesh,Dehghani,Information Technology,7,6
+B-1089,Web Scalability for Startup Engineers,Esham,Information Technology,9,9
+B-1090,Cracking the Coding Interview,McDowell,Information Technology,15,15
+B-1091,Soft Skills,Sonmez,Information Technology,8,6
+B-1092,The Phoenix Project,Kim,Information Technology,12,12
+B-1093,The Unicorn Project,Kim,Information Technology,5,5
+B-1094,Accelerate,Forsgren,Information Technology,8,7
+B-1095,Test Driven Development,Beck,Information Technology,7,7
+B-1096,Extreme Programming Explained,Beck,Information Technology,7,7
+B-1097,Scrum: The Art of Doing Twice the Work,Sutherland,Information Technology,14,14
+B-1098,Talking to Humans,Constable,Information Technology,13,11
+B-1099,The Mom Test,Fitzpatrick,Information Technology,14,12
