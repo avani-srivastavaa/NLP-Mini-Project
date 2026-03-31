@@ -30,7 +30,7 @@ import { mockBooks, mockBorrowRecords } from '../data/mockData';
 
 // ─── Student profile data ────────────────────────────────────────────────────
 const studentProfile = {
-  name: 'Dhiraj Amin',
+  name: 'abhishek m',
   admissionNo: 'ADM-2024-0012',
   email: 'amindhiraj@mes.ac.in',
   department: 'Computer Science',
