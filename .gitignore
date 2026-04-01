@@ -15,6 +15,7 @@ nlp_venv/
 
 # Credentials folder
 credentials/
+venv/
 
 # Node.js
 node_modules/

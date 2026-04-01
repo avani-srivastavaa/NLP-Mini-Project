@@ -1,0 +1,201 @@
+Name,Admission_Number,Book_ID,Book_Title,Issue_Date,Return_Date,Days_Due,Due_Date,Overdue
+Aaryan Kulkarni,2023PE1066,B-1077,Continuous Delivery,2026-02-03,2026-02-06,5,2026-02-08,0
+Myra Choudhury,2023PE1091,B-1055,Mobile Computing,2026-01-20,2026-01-30,0,2026-01-20,1
+Ishaan Sharma,2023PE1209,B-1223,Non-Destructive Testing,2026-01-05,2026-01-25,6,2026-01-11,1
+John Deshmukh,2025PE1269,B-1260,Fuel Cell Vehicles,2026-03-04,2026-03-16,0,2026-03-04,1
+Isha Patel,2023PE1198,B-1186,Neural Networks and Learning Machines,2026-03-14,2026-03-14,0,2026-03-14,0
+Sai Gadhavi,2025PE1082,B-1078,Docker Deep Dive,2026-03-15,2026-03-17,5,2026-03-20,0
+Emily Khan,2023PE1137,B-1143,Verilog HDL,2026-01-13,2026-01-13,0,2026-01-13,0
+Kevin Malhotra,2024PE1026,B-1009,Introduction to the Theory of Computation,2026-03-16,2026-03-29,0,2026-03-16,1
+Myra Sharma,2026PE1015,B-1016,Modern Operating Systems,2026-02-04,2026-02-13,0,2026-02-04,1
+Kyra Patel,2026PE1102,B-1105,CMOS VLSI Design,2026-01-07,2026-01-18,0,2026-01-07,1
+Isha Reddy,2024PE1163,B-1176,5G Mobile and Wireless Communications,2026-01-31,2026-01-31,0,2026-01-31,0
+Priya D'Souza,2024PE1288,B-1285,Automobile Engineering Vol 2,2026-03-09,2026-03-20,0,2026-03-09,1
+Diya Nair,2024PE1279,B-1265,Automotive Safety,2026-01-04,2026-01-29,11,2026-01-15,1
+Aaryan Kulkarni,2025PE1273,B-1279,Automotive Body Engineering,2026-03-09,2026-03-09,7,2026-03-16,0
+Ishaan Joshi,2024PE1263,B-1291,Automotive Cyber Security,2026-02-23,2026-03-02,8,2026-03-03,0
+Myra Deshmukh,2023PE1190,B-1159,Radar Systems,2026-02-14,2026-02-17,8,2026-02-22,0
+Rohan Patel,2023PE1202,B-1229,Computational Fluid Dynamics,2026-02-24,2026-02-24,0,2026-02-24,0
+Zara Singh,2024PE1079,B-1099,The Mom Test,2026-03-04,2026-03-29,11,2026-03-15,1
+Emily Khan,2023PE1137,B-1129,Optical Networks,2026-02-09,2026-02-18,0,2026-02-09,1
+Sarah Choudhury,2023PE1135,B-1105,CMOS VLSI Design,2026-02-04,2026-02-04,0,2026-02-04,0
+Vihaan Menon,2024PE1221,B-1216,CAD/CAM,2026-01-04,2026-01-18,0,2026-01-04,1
+Meera Reddy,2024PE1257,B-1261,Automotive Aerodynamics,2026-02-14,2026-02-19,7,2026-02-21,0
+Kabir Patel,2024PE1122,B-1146,Solid State Electronic Devices,2026-01-22,2026-01-23,1,2026-01-23,0
+Meera Mehta,2023PE1018,B-1031,Computer Organization and Design,2026-03-14,2026-03-17,7,2026-03-21,0
+Kyra Kulkarni,2026PE1110,B-1119,Electric Machines,2026-01-30,2026-02-19,6,2026-02-05,1
+Priya Das,2025PE1072,B-1054,Software Project Management,2026-02-09,2026-02-15,0,2026-02-09,1
+Aaryan D'Souza,2026PE1225,B-1201,Fluid Mechanics,2026-03-05,2026-03-07,11,2026-03-16,0
+Kabir Choudhury,2023PE1262,B-1280,Materials for Automobile Bodies,2026-03-05,2026-03-28,9,2026-03-14,1
+Priya Deshmukh,2023PE1017,B-1033,Big Data: A Revolution,2026-02-11,2026-02-28,3,2026-02-14,1
+Reyansh Khan,2024PE1025,B-1023,Python Crash Course,2026-02-22,2026-02-22,0,2026-02-22,0
+Vihaan Patel,2025PE1131,B-1132,Industrial Instrumentation,2026-02-22,2026-03-17,9,2026-03-03,1
+Zara Verma,2025PE1056,B-1056,Electronic Commerce,2026-03-08,2026-03-16,11,2026-03-19,0
+Ishaan Joshi,2024PE1263,B-1267,Automotive Control Systems,2026-02-08,2026-02-10,10,2026-02-18,0
+Saira Joshi,2024PE1127,B-1110,The 8051 Microcontroller,2026-02-14,2026-02-24,0,2026-02-14,1
+Meera Reddy,2024PE1047,B-1019,Software Engineering: A Practitioner's Approach,2026-03-06,2026-03-19,0,2026-03-06,1
+Emily Khan,2023PE1137,B-1104,Computer System Architecture,2026-01-26,2026-02-20,11,2026-02-06,1
+Aaryan Nair,2025PE1069,B-1075,Site Reliability Engineering,2026-02-15,2026-02-23,10,2026-02-25,0
+Aditya D'Souza,2024PE1024,B-1040,Working Effectively with Legacy Code,2026-02-25,2026-02-26,11,2026-03-08,0
+Aaryan Gadhavi,2023PE1061,B-1091,Soft Skills,2026-01-28,2026-02-17,6,2026-02-03,1
+Priya D'Souza,2024PE1193,B-1170,Wavelet Transforms,2026-02-12,2026-03-05,7,2026-02-19,1
+Aditya D'Souza,2024PE1024,B-1000,Introduction to Algorithms,2026-01-30,2026-01-30,0,2026-01-30,0
+Arjun Sharma,2023PE1223,B-1202,Heat and Mass Transfer,2026-03-13,2026-03-25,0,2026-03-13,1
+Sahil Verma,2026PE1090,B-1068,Agile Software Development,2026-01-22,2026-01-25,3,2026-01-25,0
+Isha Reddy,2024PE1163,B-1183,Video Processing,2026-01-04,2026-01-10,0,2026-01-04,1
+Sarah Sharma,2025PE1299,B-1264,Vehicle Crashworthiness,2026-03-06,2026-03-06,0,2026-03-06,0
+Arjun Deshmukh,2026PE1159,B-FY1,Engineering Physics,2026-03-18,2026-03-23,0,2026-03-18,1
+Meera Reddy,2024PE1047,B-1033,Big Data: A Revolution,2026-02-12,2026-02-17,6,2026-02-18,0
+Aarav Reddy,2023PE1036,B-1038,Data Science from Scratch,2026-01-23,2026-02-06,0,2026-01-23,1
+Aaryan Kulkarni,2023PE1066,B-1058,Information Security: Principles and Practice,2026-01-06,2026-01-19,0,2026-01-06,1
+Myra Malhotra,2025PE1005,B-1009,Introduction to the Theory of Computation,2026-03-06,2026-03-06,0,2026-03-06,0
+Rohan Iyer,2023PE1115,B-1108,Digital Signal Processing,2026-03-08,2026-03-13,0,2026-03-08,1
+Priya Bose,2024PE1233,B-1207,Engineering Mechanics,2026-03-04,2026-03-09,0,2026-03-04,1
+Priya Bose,2024PE1233,B-1210,Internal Combustion Engines,2026-02-26,2026-03-20,8,2026-03-06,1
+Ishani Deshmukh,2025PE1255,B-1282,Manufacturing Automotive Components,2026-02-17,2026-03-03,0,2026-02-17,1
+Sarah D'Souza,2023PE1206,B-1226,Solid Mechanics,2026-01-19,2026-02-12,10,2026-01-29,1
+Arjun Das,2024PE1195,B-1174,MIMO Wireless Communications,2026-03-05,2026-03-24,5,2026-03-10,1
+Isha Verma,2026PE1010,B-FY2,Engineering Chemistry,2026-01-02,2026-01-03,6,2026-01-08,0
+Ishaan Deshmukh,2024PE1181,B-1156,Mobile Cellular Telecommunications,2026-02-13,2026-02-14,11,2026-02-24,0
+Advait Bose,2023PE1035,B-1032,"Automata Theory, Languages, and Computation",2026-01-23,2026-01-23,0,2026-01-23,0
+Anaya Mehta,2025PE1173,B-1171,Adaptive Signal Processing,2026-03-01,2026-03-06,5,2026-03-06,0
+Priya Gupta,2024PE1191,B-1172,Kalman Filtering,2026-01-05,2026-01-07,5,2026-01-10,0
+Diya Gupta,2023PE1074,B-1058,Information Security: Principles and Practice,2026-03-10,2026-03-13,3,2026-03-13,0
+Zara Nair,2023PE1051,B-1062,Data Warehousing Fundamentals,2026-01-04,2026-01-15,0,2026-01-04,1
+Sarah Menon,2025PE1030,B-1037,Cybersecurity for Beginners,2026-03-08,2026-03-16,11,2026-03-19,0
+Aavya Malhotra,2023PE1174,B-1157,Wireless Communications,2026-03-09,2026-03-12,5,2026-03-14,0
+Vihaan Choudhury,2023PE1126,B-1112,Digital Integrated Circuits,2026-01-10,2026-01-25,1,2026-01-11,1
+Kevin Gadhavi,2025PE1157,B-1165,Multi-Carrier Communications,2026-03-01,2026-03-01,7,2026-03-08,0
+Anaya Joshi,2026PE1270,B-1291,Automotive Cyber Security,2026-02-22,2026-03-19,11,2026-03-05,1
+Sarah Nair,2025PE1271,B-1277,Earth Moving Machinery,2026-01-22,2026-01-22,0,2026-01-22,0
+Ishaan Gadhavi,2024PE1063,B-1098,Talking to Humans,2026-03-12,2026-03-22,0,2026-03-12,1
+Kyra Patel,2026PE1102,B-1100,"Embedded Systems: Architecture, Programming and Design",2026-01-24,2026-02-13,6,2026-01-30,1
+Vihaan Singh,2023PE1162,B-1182,Television Engineering,2026-01-21,2026-01-21,0,2026-01-21,0
+Diya Gupta,2023PE1074,B-1062,Data Warehousing Fundamentals,2026-02-17,2026-02-17,0,2026-02-17,0
+Ishani Patel,2025PE1099,B-1094,Accelerate,2026-02-02,2026-02-25,9,2026-02-11,1
+Kabir Choudhury,2023PE1262,B-1260,Fuel Cell Vehicles,2026-02-24,2026-03-04,0,2026-02-24,1
+Rohan D'Souza,2026PE1164,B-1181,Audio Engineering,2026-01-26,2026-02-06,0,2026-01-26,1
+Reyansh Khan,2025PE1109,B-1132,Industrial Instrumentation,2026-01-13,2026-02-06,10,2026-01-23,1
+Vihaan Patel,2025PE1131,B-1113,Control Systems Engineering,2026-03-04,2026-03-04,2,2026-03-06,0
+Ishani Menon,2023PE1077,B-1053,Data Analytics with R,2026-01-03,2026-01-03,0,2026-01-03,0
+Diya Bose,2024PE1034,B-1044,Natural Language Processing with Python,2026-01-18,2026-01-23,5,2026-01-23,0
+Myra Das,2025PE1171,B-1166,Ad Hoc Wireless Networks,2026-01-14,2026-01-28,0,2026-01-14,1
+Aavya Khan,2023PE1215,B-1231,Optimization for Engineering Design,2026-02-04,2026-02-25,7,2026-02-11,1
+John Khan,2026PE1095,B-1069,User Story Mapping,2026-03-17,2026-03-17,0,2026-03-17,0
+Sarah Choudhury,2023PE1135,B-1130,Broadband Communication,2026-02-28,2026-02-28,0,2026-02-28,0
+Diya Nair,2024PE1279,B-1260,Fuel Cell Vehicles,2026-02-22,2026-02-26,7,2026-03-01,0
+Kevin Reddy,2023PE1064,B-1088,Data Mesh,2026-02-26,2026-02-27,1,2026-02-27,0
+Ishaan Deshmukh,2025PE1111,B-1112,Digital Integrated Circuits,2026-01-07,2026-01-29,8,2026-01-15,1
+Rohan Malhotra,2026PE1259,B-1285,Automobile Engineering Vol 2,2026-03-01,2026-03-13,0,2026-03-01,1
+Zara Kulkarni,2023PE1211,B-1241,Project Management,2026-03-09,2026-03-15,0,2026-03-09,1
+Aavya Reddy,2023PE1097,B-1062,Data Warehousing Fundamentals,2026-01-07,2026-01-14,0,2026-01-07,1
+Aarav Mehta,2023PE1100,B-1126,Wireless Communications,2026-02-09,2026-02-12,7,2026-02-16,0
+Reyansh Deshmukh,2026PE1059,B-1058,Information Security: Principles and Practice,2026-01-01,2026-01-07,0,2026-01-01,1
+Saira Joshi,2024PE1127,B-1143,Verilog HDL,2026-02-15,2026-03-03,2,2026-02-17,1
+Kabir Choudhury,2024PE1049,B-1025,Programming Pearls,2026-01-20,2026-02-12,9,2026-01-29,1
+Arjun Deshmukh,2026PE1159,B-1164,Spread Spectrum Communications,2026-03-13,2026-03-20,0,2026-03-13,1
+Aaryan Bose,2026PE1296,B-FY9,Communication Skills,2026-01-25,2026-02-02,0,2026-01-25,1
+Sarah Patel,2024PE1114,B-1109,Introduction to Embedded Systems,2026-01-06,2026-01-29,9,2026-01-15,1
+Rohan Mehta,2026PE1165,B-1160,Digital Signal Processing,2026-02-06,2026-03-03,11,2026-02-17,1
+Myra Deshmukh,2023PE1190,B-1169,Information Theory,2026-03-01,2026-03-01,0,2026-03-01,0
+Advait Gadhavi,2023PE1278,B-1285,Automobile Engineering Vol 2,2026-03-21,2026-03-23,2,2026-03-23,0
+Sahil Verma,2026PE1090,B-1061,Hadoop: The Definitive Guide,2026-01-04,2026-01-06,11,2026-01-15,0
+Anaya Iyer,2026PE1156,B-1198,Engineering Electromagnetics,2026-02-12,2026-02-20,0,2026-02-12,1
+Ishani Patel,2025PE1099,B-1057,Supply Chain Management,2026-01-22,2026-01-22,4,2026-01-26,0
+Aaryan D'Souza,2026PE1225,B-1235,Solar Energy,2026-01-08,2026-01-14,0,2026-01-08,1
+Priya Gupta,2024PE1191,B-1171,Adaptive Signal Processing,2026-02-20,2026-03-01,0,2026-02-20,1
+Vihaan Choudhury,2026PE1145,B-1105,CMOS VLSI Design,2026-01-17,2026-01-17,0,2026-01-17,0
+Aaryan Choudhury,2026PE1101,B-1121,Electromagnetic Field Theory,2026-02-12,2026-02-28,2,2026-02-14,1
+Kabir D'Souza,2025PE1033,B-1026,The Art of Computer Programming,2026-02-08,2026-02-24,2,2026-02-10,1
+Kabir Verma,2024PE1266,B-1258,Automotive Transmissions,2026-01-06,2026-01-06,0,2026-01-06,0
+Ishaan Malhotra,2024PE1261,B-1255,Vehicle Dynamics,2026-03-15,2026-03-22,7,2026-03-22,0
+Priya D'Souza,2024PE1193,B-1154,Signals and Systems,2026-02-25,2026-02-25,0,2026-02-25,0
+Diya Reddy,2025PE1297,B-1283,Modern Automotive Technology,2026-03-17,2026-03-17,0,2026-03-17,0
+Sarah Gupta,2025PE1235,B-1225,Machine Design,2026-03-22,2026-03-29,0,2026-03-22,1
+Meera Sharma,2023PE1276,B-1279,Automotive Body Engineering,2026-03-18,2026-04-06,5,2026-03-23,1
+Vihaan Reddy,2023PE1053,B-1053,Data Analytics with R,2026-02-23,2026-03-17,8,2026-03-03,1
+Emily D'Souza,2023PE1282,B-1275,Two and Three Wheeler Technology,2026-03-18,2026-03-30,0,2026-03-18,1
+Advait Das,2023PE1267,B-1285,Automobile Engineering Vol 2,2026-03-14,2026-04-03,6,2026-03-20,1
+Aarav Choudhury,2026PE1265,B-1261,Automotive Aerodynamics,2026-02-21,2026-02-21,1,2026-02-22,0
+Myra Deshmukh,2023PE1190,B-1159,Radar Systems,2026-03-13,2026-03-19,0,2026-03-13,1
+Myra Mehta,2026PE1022,B-1027,Code Complete,2026-01-10,2026-01-28,4,2026-01-14,1
+Arjun Verma,2023PE1292,B-1267,Automotive Control Systems,2026-02-11,2026-03-08,11,2026-02-22,1
+Meera Patel,2026PE1218,B-1244,Entrepreneurship,2026-03-13,2026-03-29,2,2026-03-15,1
+Sahil Khan,2026PE1134,B-1113,Control Systems Engineering,2026-01-10,2026-01-10,0,2026-01-10,0
+Rohan Iyer,2023PE1130,B-1120,Circuit Theory,2026-03-04,2026-03-04,0,2026-03-04,0
+Vihaan Menon,2024PE1221,B-1230,Finite Element Analysis,2026-03-11,2026-03-14,5,2026-03-16,0
+Sai Gadhavi,2025PE1082,B-1099,The Mom Test,2026-01-22,2026-02-03,0,2026-01-22,1
+Myra Singh,2023PE1055,B-1058,Information Security: Principles and Practice,2026-03-05,2026-03-24,5,2026-03-10,1
+Ishaan Sharma,2023PE1209,B-1226,Solid Mechanics,2026-03-09,2026-03-30,7,2026-03-16,1
+Diya Reddy,2025PE1297,B-1294,Telematics,2026-02-28,2026-03-02,6,2026-03-06,0
+Emily Patel,2025PE1280,B-1298,Automotive Sensors,2026-03-09,2026-04-03,11,2026-03-20,1
+Myra Gupta,2025PE1243,B-1209,Refrigeration and Air Conditioning,2026-01-19,2026-02-03,1,2026-01-20,1
+Rohan Sharma,2025PE1009,B-1013,The Pragmatic Programmer,2026-02-23,2026-02-25,8,2026-03-03,0
+Kevin Gupta,2023PE1186,B-1197,Reliability Engineering,2026-02-16,2026-02-20,4,2026-02-20,0
+Priya Verma,2024PE1237,B-1241,Project Management,2026-01-30,2026-01-30,0,2026-01-30,0
+Kabir Mehta,2025PE1189,B-1177,Software Defined Radio,2026-03-22,2026-04-05,0,2026-03-22,1
+Rohan Malhotra,2025PE1228,B-1216,CAD/CAM,2026-03-02,2026-03-02,0,2026-03-02,0
+Sahil D'Souza,2025PE1256,B-1298,Automotive Sensors,2026-01-11,2026-01-24,0,2026-01-11,1
+Sarah Iyer,2024PE1028,B-1033,Big Data: A Revolution,2026-03-22,2026-04-06,1,2026-03-23,1
+Sarah Gupta,2026PE1258,B-1286,Auto Repair for Dummies,2026-02-09,2026-02-09,1,2026-02-10,0
+Arjun Malhotra,2025PE1012,B-1017,Distributed Systems,2026-02-25,2026-03-21,10,2026-03-07,1
+Priya Choudhury,2023PE1119,B-1103,VLSI Technology,2026-01-25,2026-02-05,0,2026-01-25,1
+Sarah Singh,2025PE1178,B-1199,Transmission Lines and Networks,2026-03-02,2026-03-02,0,2026-03-02,0
+Sai Bose,2025PE1201,B-1209,Refrigeration and Air Conditioning,2026-01-11,2026-01-24,0,2026-01-11,1
+Priya Choudhury,2023PE1119,B-1123,Information Theory and Coding,2026-03-11,2026-03-11,0,2026-03-11,0
+Kyra Khan,2025PE1208,B-1220,Quality Control,2026-03-04,2026-03-04,0,2026-03-04,0
+Sahil Malhotra,2024PE1298,B-1266,Light and Heavy Vehicle Technology,2026-01-31,2026-01-31,0,2026-01-31,0
+Kyra Joshi,2025PE1239,B-1200,Thermodynamics: An Engineering Approach,2026-01-28,2026-02-04,0,2026-01-28,1
+Saanvi Gadhavi,2024PE1285,B-1292,Machine Learning for Automotive,2026-03-18,2026-03-27,0,2026-03-18,1
+Saira Sharma,2025PE1287,B-1275,Two and Three Wheeler Technology,2026-02-01,2026-02-02,2,2026-02-03,0
+Arjun Gupta,2025PE1000,B-1006,Artificial Intelligence: A Modern Approach,2026-02-06,2026-02-06,0,2026-02-06,0
+Priya Khan,2025PE1054,B-1066,The Lean Startup,2026-01-04,2026-01-19,1,2026-01-05,1
+Aaryan Kulkarni,2023PE1066,B-1065,Social Media Mining,2026-03-13,2026-03-13,0,2026-03-13,0
+Rohan Iyer,2023PE1130,B-1126,Wireless Communications,2026-03-08,2026-03-15,8,2026-03-16,0
+Ishaan Verma,2025PE1147,B-1102,Microprocessors and Interfacing,2026-03-08,2026-03-30,8,2026-03-16,1
+Sai Bose,2026PE1246,B-1234,Nano-Materials,2026-03-15,2026-03-27,0,2026-03-15,1
+Ishaan Gadhavi,2024PE1063,B-1091,Soft Skills,2026-03-08,2026-03-09,8,2026-03-16,0
+Anaya Bose,2023PE1058,B-1071,PHP and MySQL Web Development,2026-02-22,2026-03-08,0,2026-02-22,1
+Aarav Reddy,2023PE1036,B-1006,Artificial Intelligence: A Modern Approach,2026-03-17,2026-03-26,0,2026-03-17,1
+Sarah Patel,2024PE1114,B-1118,Power Electronics,2026-02-03,2026-02-03,3,2026-02-06,0
+Priya Reddy,2025PE1083,B-1098,Talking to Humans,2026-01-21,2026-02-09,5,2026-01-26,1
+Priya Sharma,2025PE1175,B-1158,Satellite Communications,2026-02-10,2026-02-10,8,2026-02-18,0
+Emily Nair,2025PE1192,B-1182,Television Engineering,2026-03-15,2026-03-21,0,2026-03-15,1
+Emily Das,2023PE1183,B-1193,Low-Power VLSI Design,2026-01-28,2026-02-11,0,2026-01-28,1
+Sai Iyer,2023PE1182,B-1171,Adaptive Signal Processing,2026-01-07,2026-01-28,7,2026-01-14,1
+Zara Bose,2026PE1052,B-1075,Site Reliability Engineering,2026-01-27,2026-01-30,7,2026-02-03,0
+Vihaan Singh,2023PE1162,B-1165,Multi-Carrier Communications,2026-02-07,2026-02-17,0,2026-02-07,1
+Priya Singh,2025PE1136,B-1145,Network Analysis,2026-02-22,2026-02-22,11,2026-03-05,0
+Advait Gupta,2025PE1076,B-1083,Domain-Driven Design,2026-01-08,2026-01-08,0,2026-01-08,0
+Vihaan Gupta,2024PE1295,B-1281,Automotive Paints and Coatings,2026-02-24,2026-02-28,8,2026-03-04,0
+Sarah Nair,2025PE1271,B-1250,Automotive Mechanics,2026-01-01,2026-01-21,6,2026-01-07,1
+Reyansh Khan,2025PE1109,B-1118,Power Electronics,2026-01-07,2026-01-28,7,2026-01-14,1
+Diya Sharma,2026PE1086,B-1084,SQL Performance Explained,2026-01-21,2026-01-21,2,2026-01-23,0
+Ishani Gadhavi,2026PE1146,B-FY4,Basic Electrical Engineering,2026-03-12,2026-03-19,0,2026-03-12,1
+Vihaan Sharma,2024PE1045,B-1015,Data Structures and Algorithm Analysis in C++,2026-03-05,2026-03-05,0,2026-03-05,0
+Priya D'Souza,2024PE1193,B-1166,Ad Hoc Wireless Networks,2026-03-02,2026-03-20,4,2026-03-06,1
+Sahil Bose,2024PE1106,B-1142,Digital Systems Design using VHDL,2026-02-14,2026-02-16,5,2026-02-19,0
+Myra Choudhury,2023PE1091,B-1086,Streaming Systems,2026-03-14,2026-03-23,0,2026-03-14,1
+Sai Gupta,2026PE1141,B-1113,Control Systems Engineering,2026-02-07,2026-02-10,3,2026-02-10,0
+Rohan Sharma,2025PE1009,B-1039,The Mythical Man-Month,2026-01-07,2026-01-21,0,2026-01-07,1
+Sai Choudhury,2023PE1011,B-1006,Artificial Intelligence: A Modern Approach,2026-02-04,2026-02-06,7,2026-02-11,0
+Kabir Mehta,2025PE1189,B-1184,Medical Electronics,2026-03-18,2026-03-18,0,2026-03-18,0
+Reyansh Bose,2026PE1212,B-1231,Optimization for Engineering Design,2026-01-27,2026-01-27,0,2026-01-27,0
+Sai Bose,2026PE1246,B-1213,Automobile Engineering,2026-03-22,2026-04-09,4,2026-03-26,1
+Sai Malhotra,2025PE1196,B-1157,Wireless Communications,2026-01-19,2026-02-07,5,2026-01-24,1
+Kabir Choudhury,2023PE1262,B-1297,"Noise, Vibration and Harshness",2026-02-02,2026-02-02,5,2026-02-07,0
+Vihaan Reddy,2026PE1152,B-1196,Switching Theory and Logic Design,2026-02-25,2026-03-02,0,2026-02-25,1
+Kyra Reddy,2026PE1158,B-1183,Video Processing,2026-01-09,2026-01-17,0,2026-01-09,1
+Kabir Choudhury,2023PE1262,B-1259,Hybrid and Electric Vehicles,2026-03-16,2026-04-06,7,2026-03-23,1
+Vihaan Gupta,2024PE1295,B-1261,Automotive Aerodynamics,2026-02-21,2026-03-10,3,2026-02-24,1
+Vihaan Menon,2025PE1203,B-1223,Non-Destructive Testing,2026-01-18,2026-01-21,3,2026-01-21,0
+Myra Malhotra,2026PE1242,B-FY4,Basic Electrical Engineering,2026-01-17,2026-01-17,0,2026-01-17,0
+Advait Reddy,2025PE1254,B-1269,CAN Bus Design,2026-02-04,2026-02-21,3,2026-02-07,1
+Priya Das,2025PE1072,B-1086,Streaming Systems,2026-02-04,2026-02-12,0,2026-02-04,1
+Rohan D'Souza,2026PE1164,B-1168,Next Generation Networks,2026-02-12,2026-02-17,0,2026-02-12,1
+Saira Deshmukh,2026PE1184,B-1198,Engineering Electromagnetics,2026-01-08,2026-01-08,9,2026-01-17,0
+Kyra Khan,2025PE1208,B-1246,Organizational Behavior,2026-01-20,2026-01-20,0,2026-01-20,0
+Anaya Mehta,2024PE1205,B-1213,Automobile Engineering,2026-02-11,2026-03-06,9,2026-02-20,1
+Vihaan Menon,2025PE1203,B-1215,Robotics,2026-03-20,2026-04-11,8,2026-03-28,1
+Kevin Malhotra,2024PE1026,B-1038,Data Science from Scratch,2026-02-10,2026-02-18,0,2026-02-10,1
+Ishani Gadhavi,2026PE1146,B-1137,Internet of Things: A Hands-On Approach,2026-01-28,2026-02-05,0,2026-01-28,1
