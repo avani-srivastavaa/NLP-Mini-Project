@@ -26,34 +26,6 @@ AVAILABLE_DEPARTMENTS = [
 # QUERY EXPANSION (improves search for known frequently used keywords)
 # ============================================================================
 # Dictionary of exam/topic keywords that are expanded for better semantic matching
-QUERY_EXPANSIONS = {
-    "jee": "jee engineering entrance iit entrance exam physics chemistry mathematics",
-    "jee mains": "jee mains engineering entrance exam physics chemistry maths",
-    "neet": "neet medical entrance biology physics chemistry",
-    "upsc": "upsc civil services india history geography politics economics",
-    "gate": "gate engineering exam preparation",
-}
-
-
-def expand_query(query):
-    """
-    Expands user query with predefined keywords to improve search results.
-    If the query contains keywords like 'jee', 'neet', etc., appends related terms.
-    
-    Example: "jee" -> "jee jee engineering entrance iit entrance exam..."
-    """
-    q = query.lower()
-    for key in QUERY_EXPANSIONS:
-        if key in q:
-            q += " " + QUERY_EXPANSIONS[key]
-    return q
-
-
-# ============================================================================
-# DEPARTMENT & YEAR SELECTION
-# ============================================================================
-def select_department_and_year():
-    """
     Prompts user to select their department and academic year at startup.
     This ensures embeddings are generated only for relevant books.
     
@@ -67,159 +39,6 @@ def select_department_and_year():
     print("\nPlease select your department:")
     for i, dept in enumerate(AVAILABLE_DEPARTMENTS, 1):
         print(f"{i}. {dept.upper()}")
-    
-    # Get department selection
-    while True:
-        try:
-            dept_choice = int(input("\nEnter department number (1-7): "))
-            if 1 <= dept_choice <= len(AVAILABLE_DEPARTMENTS):
-                selected_department = AVAILABLE_DEPARTMENTS[dept_choice - 1]
-                break
-            else:
-                print(f"Please enter a number between 1 and {len(AVAILABLE_DEPARTMENTS)}")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-    
-    print(f"\n✓ Selected Department: {selected_department.upper()}")
-    
-    # Get year (optional)
-    year = input("Enter your academic year (1/2/3/4) or press Enter to skip: ").strip()
-    if year and year.isdigit():
-        year = int(year)
-    else:
-        year = None
-    
-    return selected_department, year
-
-
-# ============================================================================
-# LOAD DEPARTMENT-SPECIFIC BOOKS
-# ============================================================================
-def get_books_for_department(department):
-    """
-    Loads books from the department-specific CSV file.
-    This is called AFTER user selects their department, ensuring fast data loading.
-    
-    Parameters:
-        department (str): Name of the department (e.g., "cs", "auto", "mech")
-    
-    Returns:
-        list: List of book dictionaries with keys:
-              - title: Book name
-              - author: Author name
-              - price: Book price
-              - rating: Rating count/popularity
-              - release_year: Year of publication
-              - search_blob: Lowercase combined title + author for searching
-    """
-    # Construct the path to the department CSV file
-    base_path = os.path.join(
-        os.path.dirname(__file__),
-        "..",
-        "datasets",
-        "department_books"
-    )
-    csv_path = os.path.join(base_path, f"{department}_books.csv")
-    
-    # Check if file exists
-    if not os.path.exists(csv_path):
-        print(f"✗ Error: CSV file not found at {csv_path}")
-        return []
-    
-    print(f"\n📚 Loading books from department: {department.upper()}")
-    print(f"   Reading from: {csv_path}")
-    
-    # Read the CSV file
-    df = pd.read_csv(csv_path)
-    print(f"   Total books in {department} dataset: {len(df)}")
-    
-    books = []
-    
-    # Process each row in the CSV
-    for _, row in df.iterrows():
-        # Extract title (using "Title" column from department CSV)
-        title = str(row.get("Title", "Unknown"))
-        author = str(row.get("Author", "Unknown"))
-        
-        # Extract available copies (as popularity metric)
-        available_copies = int(row.get("Available_Copies", 0))
-        total_copies = int(row.get("Total_Copies", 0))
-        
-        # Use available copies as a proxy for popularity/rating
-        rating_value = available_copies if available_copies > 0 else total_copies
-        
-        # Set release year to current year if not available
-        year = 2026
-        
-        # Create a searchable text blob combining title and author (lowercase for matching)
-        search_blob = f"{title} {author}".lower()
-        
-        # Store book information
-        books.append({
-            "title": title,
-            "author": author,
-            "price": "N/A",  # No price info in this CSV
-            "rating": rating_value,
-            "release_year": year,
-            "search_blob": search_blob
-        })
-    
-    return books
-
-
-# ============================================================================
-# EMBEDDING MODEL INITIALIZATION (called AFTER department selection)
-# ============================================================================
-def initialize_embeddings(books):
-    """
-    Loads the embedding model and generates semantic embeddings for books.
-    This function is called AFTER department selection to ensure:
-    1. Fast startup (no embeddings generated until user selects department)
-    2. Efficiency (only embedding relevant books for that department)
-    3. Memory efficiency (smaller embeddings for smaller subsets)
-    
-    Parameters:
-        books (list): List of book dictionaries from get_books_for_department()
-    
-    Returns:
-        tuple: (embedding_model, book_embeddings)
-                - embedding_model: SentenceTransformer instance for encoding new queries
-                - book_embeddings: Precomputed embeddings for all books in the subset
-    """
-    print("\n" + "-"*60)
-    print("INITIALIZING EMBEDDING MODEL FOR SEMANTIC SEARCH")
-    print("-"*60)
-    
-    print("📥 Loading embedding model (all-MiniLM-L6-v2)...")
-    embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-    
-    print(f"🔄 Generating embeddings for {len(books)} books...")
-    book_texts = [b["search_blob"] for b in books]
-    book_embeddings = embedding_model.encode(book_texts, show_progress_bar=True)
-    
-    print("✓ Embeddings generated successfully.")
-    print("-"*60 + "\n")
-    
-    return embedding_model, book_embeddings
-
-
-# ============================================================================
-# NLP FILTER ENGINE (semantic search with scoring heuristics)
-# ============================================================================
-def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n=60):
-    """
-    Filters books using semantic similarity and multiple scoring heuristics.
-    
-    Process:
-    1. Expands user query with predefined keywords for better matching
-    2. Encodes expanded query into semantic embedding
-    3. Calculates cosine similarity between query embedding and all book embeddings
-    4. Scores each book based on:
-       - Semantic similarity (85% weight): How contextually relevant is the book?
-       - Popularity (10% weight): How many times has it been rated/reviewed?
-       - Recency (5% weight): How recent is the publication?
-       - Keyword bonus: Does the exact query appear in title/author? (+0.25)
-    5. Returns top N books sorted by combined score
     
     Parameters:
         user_prompt (str): User's search query
@@ -255,69 +74,49 @@ def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n
         
         # Factor 2: Popularity score (10% weight)
         # Books with more ratings/reviews are likely more useful
-        rating = book["rating"]
-        popularity_score = math.log1p(rating)  # log1p handles 0 gracefully
-        
-        # Factor 3: Recency score (5% weight)
-        # Recent books might be more relevant than older ones
-        year = book["release_year"]
-        recency_score = year / 2025 if year else 0  # Normalize to 0-1 range
-        
-        # Factor 4: Exact keyword match bonus
-        # If the user's exact query appears in book title/author, boost score
-        keyword_bonus = 0
-        if query_lower in book["search_blob"]:
-            keyword_bonus += 0.25  # Add 25% bonus for exact match
-        
-        # Combine all factors into final score
-        final_score = (
-            0.85 * similarity_score +       # Semantic relevance
-            0.10 * popularity_score +        # Popularity/rating
-            0.05 * recency_score +           # Recency
-            keyword_bonus                    # Exact match
-        )
-        
-        scored_books.append((final_score, book))
-    
-    # Step 5: Sort books by final score (highest first)
-    scored_books.sort(reverse=True, key=lambda x: x[0])
-    
-    # Extract top N books (return only the book dict, not the score)
-    top_books = [book for _, book in scored_books[:top_n]]
-    
-    return top_books
+        import numpy as np
+        from sklearn.metrics.pairwise import cosine_similarity
 
+        # --- NLP Filtering ---
+        def nlp_filter_books(query, books, embeddings, model, top_n=60):
+            """
+            Filter books using semantic similarity, keyword match, and popularity.
+            Returns top_n books most relevant to the query.
+            """
+            keywords = [
+                "jee", "gate", "core", "reference", "novel", "fiction", "non-fiction", "project", "python", "java", "c++", "mathematics", "mechanics", "electronics", "data", "machine learning", "ai", "artificial intelligence", "network", "database", "cloud", "iot", "robotics", "design", "theory", "practice", "lab", "practical", "exam", "syllabus", "semester", "year", "author", "title", "subject"
+            ]
+            expanded_query = query + " " + " ".join([k for k in keywords if k in query.lower()])
+            query_emb = model.encode([expanded_query])
+            sims = cosine_similarity(query_emb, embeddings)[0]
+            scores = []
+            for i, book in enumerate(books):
+                score = sims[i]
+                score += float(book.get("rating", 0)) * 0.05
+                if "year" in book and book["year"].isdigit():
+                    score += int(book["year"]) * 0.001
+                if any(k in book["search_blob"].lower() for k in keywords if k in query.lower()):
+                    score += 0.1
+                scores.append(score)
+            top_idx = np.argsort(scores)[::-1][:top_n]
+            filtered_books = [books[i] for i in top_idx]
+            return filtered_books
 
-# ============================================================================
-# MODEL RECOMMENDATION (AI-powered book suggestion)
-# ============================================================================
-def model_recommendation(user_prompt, filtered_books):
-    """
-    Uses Google Gemini AI to generate intelligent book recommendations.
-    The AI only sees books from the pre-filtered department dataset.
-    
-    Process:
-    1. Initialize Gemini client with API key
-    2. Format filtered books into a readable context for AI
-    3. Configure Gemini with strict rules (only recommend from provided books)
-    4. Send user prompt and available books to Gemini
-    5. Gemini analyzes and returns recommendations with explanations
-    
-    Parameters:
-        user_prompt (str): User's book search request
-        filtered_books (list): Pre-filtered books to choose recommendations from
-    """
-    # Step 1: Initialize Gemini client (done at function call time to ensure API key is loaded)
-    try:
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            print("✗ Error: GEMINI_API_KEY environment variable not found.")
-            print("   Please set it: $env:GEMINI_API_KEY = 'your-key-here'")
-            print("   Or refer to: https://ai.google.dev/gemini-api/docs/api-key")
-            return
-        
-        client = genai.Client(api_key=api_key)
-        MODEL_ID = "gemini-2.5-flash"
+        # --- AI-Powered Recommendation ---
+        def model_recommendation(user_query, filtered_books, gemini_model):
+            """
+            Use Gemini AI to recommend up to 3 books from filtered_books for the user_query.
+            Gemini is instructed to only recommend from the provided list.
+            """
+            book_list_str = "\n".join([f"{b['title']} by {b['author']}" for b in filtered_books])
+            system_prompt = f"""
+        You are a helpful library assistant. Only recommend books from the list below. Never invent book titles.
+        If the query is unclear, ask for clarification.
+        List of available books:\n{book_list_str}
+        """
+            prompt = f"User query: {user_query}\nRecommend up to 3 books with reasons."
+            response = gemini_model.generate_content([system_prompt, prompt])
+            return response.text.strip()
     except Exception as e:
         print(f"✗ Error initializing Gemini client: {e}")
         return
@@ -402,72 +201,3 @@ def main():
     4. Start interactive chat loop for personalized recommendations
     5. Allow user to change department or exit
     
-    This design ensures:
-    - Fast startup (no heavy computations until user selects department)
-    - Efficient memory usage (only embedding relevant books)
-    - Scalability (works well for large datasets)
-    - Better recommendations (department-specific context)
-    """
-    # Step 1: Get user's department and year preference
-    selected_dept, selected_year = select_department_and_year()
-    
-    # Step 2: Load books ONLY for the selected department
-    BOOKS = get_books_for_department(selected_dept)
-    
-    if not BOOKS:
-        print("✗ No books found for this department. Exiting.")
-        return
-    
-    print(f"\n✓ Dataset loaded successfully: {len(BOOKS)} books available")
-    
-    # Step 3: Initialize embedding model and generate embeddings
-    # This is now AFTER department selection for efficiency
-    embedding_model, book_embeddings = initialize_embeddings(BOOKS)
-    
-    # Step 4: Start the interactive chat loop
-    print("\n" + "="*60)
-    print("BOOK RECOMMENDATION CHATBOT")
-    print("="*60)
-    print("\nCommands:")
-    print("  - Ask for any book or topic to get recommendations")
-    print("  - Type 'change-department' to select a different department")
-    print("  - Type 'exit' or 'quit' to leave\n")
-    
-    while True:
-        user_input = input("📖 What kind of book are you looking for? ").strip()
-        
-        # Allow user to exit
-        if user_input.lower() in ["exit", "quit"]:
-            print("\n👋 Goodbye! Thank you for using the Book Recommendation Chatbot.")
-            break
-        
-        # Allow user to change department
-        if user_input.lower() == "change-department":
-            print("\n🔄 Restarting department selection...")
-            main()
-            return
-        
-        # Skip empty inputs
-        if not user_input:
-            print("⚠️  Please enter a valid search query.")
-            continue
-        
-        # Filter books using NLP and semantic similarity
-        print("\n🔍 Searching and filtering books...")
-        filtered_books = nlp_filter_books(user_input, BOOKS, embedding_model, book_embeddings)
-        
-        if not filtered_books:
-            print("✗ No books found matching your query.")
-            continue
-        
-        print(f"✓ Found {len(filtered_books)} matching books. Generating recommendations...\n")
-        
-        # Get recommendations from Gemini AI
-        model_recommendation(user_input, filtered_books)
-
-
-# ============================================================================
-# START THE CHATBOT
-# ============================================================================
-if __name__ == "__main__":
-    main()
