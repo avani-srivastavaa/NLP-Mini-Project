@@ -1,203 +1,170 @@
-import os
+
+# RECOMMENDATION SEARCH ENGINE
+# =============================
+# This file is the "search engine" of the library chatbot.
+# Responsibilities:
+#   1. Query expansion (add synonyms and related terms)
+#   2. Scoring engine (semantic similarity + popularity + keywords)
+#   3. Return the top N most relevant books
+#
+# This file does NOT handle:
+#   - Embedding creation (that's agent.py's job)
+#   - User interaction or formatting (that's agent.py's job)
+#   - Caching (that's agent.py's job)
+
 import math
-import pandas as pd
-from google import genai
-from google.genai import types
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 # ============================================================================
-# DEPARTMENT SELECTION
+# 1. QUERY EXPANSION
 # ============================================================================
-# List of available departments based on CSV files in datasets/department_books/
-AVAILABLE_DEPARTMENTS = [
-    "auto",
-    "cs",
-    "ecs",
-    "extc",
-    "first year",
-    "it",
-    "mech"
-]
+# Dictionary of exam/topic keywords that are expanded for better semantic matching.
+# When a student searches for "JEE", the engine automatically adds related terms
+# so the AI can find books on Physics, Chemistry, etc.
+
+QUERY_EXPANSIONS = {
+    "jee": "jee engineering entrance iit entrance exam physics chemistry mathematics",
+    "jee mains": "jee mains engineering entrance exam physics chemistry maths",
+    "jee advanced": "jee advanced iit entrance exam physics chemistry mathematics advanced",
+    "neet": "neet medical entrance biology physics chemistry",
+    "upsc": "upsc civil services india history geography politics economics",
+    "gate": "gate engineering exam preparation computer science",
+    "gate cs": "gate computer science algorithms data structures operating systems databases",
+    "cat": "cat mba entrance quantitative aptitude verbal reasoning",
+
+    # Programming & Tech
+    "python": "python programming coding scripting backend data science",
+    "java": "java programming object oriented enterprise application development",
+    "c++": "c++ cpp programming systems low level performance",
+    "c programming": "c programming systems embedded low level",
+    "web": "web development html css javascript frontend backend",
+    "ml": "machine learning artificial intelligence neural networks deep learning",
+    "ai": "artificial intelligence machine learning deep learning neural networks",
+    "data science": "data science statistics machine learning python analysis visualization",
+    "dsa": "data structures algorithms sorting searching trees graphs",
+
+    # Engineering Subjects
+    "dbms": "database management system sql relational normalization",
+    "os": "operating system process scheduling memory management",
+    "cn": "computer networks networking protocols tcp ip",
+    "compiler": "compiler design parsing lexical analysis syntax",
+    "toc": "theory of computation automata formal languages grammar",
+}
+
+
+def expand_query(query):
+    """
+    Expands a user query with related terms for better semantic matching.
+
+    Example:
+        Input:  "recommend me a book for JEE preparation"
+        Output: "recommend me a book for jee preparation jee engineering entrance
+                 iit entrance exam physics chemistry mathematics"
+
+    Args:
+        query (str): The user's original search query.
+
+    Returns:
+        str: The expanded query with additional keywords.
+    """
+    q = query.lower()
+    for key in QUERY_EXPANSIONS:
+        if key in q:
+            q += " " + QUERY_EXPANSIONS[key]
+    return q
 
 
 # ============================================================================
-# QUERY EXPANSION (improves search for known frequently used keywords)
+# 2. SCORING ENGINE
 # ============================================================================
-# Dictionary of exam/topic keywords that are expanded for better semantic matching
-    Prompts user to select their department and academic year at startup.
-    This ensures embeddings are generated only for relevant books.
-    
-    Returns:
-        tuple: (department, year) where department is a string and year is int or None
+def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n=5):
     """
-    print("\n" + "="*60)
-    print("WELCOME TO ENGINEERING COLLEGE BOOK RECOMMENDATION CHATBOT")
-    print("="*60)
-    
-    print("\nPlease select your department:")
-    for i, dept in enumerate(AVAILABLE_DEPARTMENTS, 1):
-        print(f"{i}. {dept.upper()}")
-    
-    Parameters:
-        user_prompt (str): User's search query
-        books (list): List of book dictionaries from get_books_for_department()
-        embedding_model: SentenceTransformer instance
-        book_embeddings: Precomputed embeddings for all books
-        top_n (int): Number of top results to return (default: 60)
-    
+    The core scoring engine. Scores every book using 4 factors:
+
+    1. Semantic Similarity (85%):  How close is the book's meaning to the query?
+    2. Popularity Score   (10%):  How many copies exist (log-scaled)?
+    3. Recency Score       (5%):  Slight preference for newer books.
+    4. Keyword Bonus    (+0.25):  Flat bonus if the exact query appears in the title.
+
+    Args:
+        user_prompt (str):       The topic/query extracted by agent.py.
+        books (list):            List of book dicts from agent.py's cache.
+        embedding_model:         SentenceTransformer model from agent.py's cache.
+        book_embeddings:         Numpy array of precomputed book embeddings.
+        top_n (int):             Number of top results to return.
+
     Returns:
-        list: Top N books scored and sorted by relevance
+        list: Top N book dicts, sorted by relevance score (highest first).
     """
-    # Step 1: Expand the user query with predefined keywords
-    # Example: "jee" becomes "jee jee engineering entrance iit entrance..."
+    if not books or len(books) == 0:
+        return []
+
+    # Step 1: Expand the query with synonyms
     expanded_query = expand_query(user_prompt)
-    
+
     # Step 2: Create embedding for the expanded query
     query_embedding = embedding_model.encode([expanded_query])
-    
+
     # Step 3: Calculate cosine similarity between query and all book embeddings
-    # Returns array of similarity scores between 0 and 1
     similarities = cosine_similarity(query_embedding, book_embeddings)[0]
-    
+
+    # Step 4: Score each book using the multi-factor formula
     scored_books = []
     query_lower = user_prompt.lower()
-    
-    # Step 4: Score each book based on multiple factors
+
     for idx, similarity_score in enumerate(similarities):
         book = books[idx]
-        
-        # Factor 1: Semantic similarity (85% weight)
-        # This is how contextually relevant the book is to the query
-        # similarity_score is already normalized between 0-1
-        
-        # Factor 2: Popularity score (10% weight)
-        # Books with more ratings/reviews are likely more useful
-        import numpy as np
-        from sklearn.metrics.pairwise import cosine_similarity
 
-        # --- NLP Filtering ---
-        def nlp_filter_books(query, books, embeddings, model, top_n=60):
-            """
-            Filter books using semantic similarity, keyword match, and popularity.
-            Returns top_n books most relevant to the query.
-            """
-            keywords = [
-                "jee", "gate", "core", "reference", "novel", "fiction", "non-fiction", "project", "python", "java", "c++", "mathematics", "mechanics", "electronics", "data", "machine learning", "ai", "artificial intelligence", "network", "database", "cloud", "iot", "robotics", "design", "theory", "practice", "lab", "practical", "exam", "syllabus", "semester", "year", "author", "title", "subject"
-            ]
-            expanded_query = query + " " + " ".join([k for k in keywords if k in query.lower()])
-            query_emb = model.encode([expanded_query])
-            sims = cosine_similarity(query_emb, embeddings)[0]
-            scores = []
-            for i, book in enumerate(books):
-                score = sims[i]
-                score += float(book.get("rating", 0)) * 0.05
-                if "year" in book and book["year"].isdigit():
-                    score += int(book["year"]) * 0.001
-                if any(k in book["search_blob"].lower() for k in keywords if k in query.lower()):
-                    score += 0.1
-                scores.append(score)
-            top_idx = np.argsort(scores)[::-1][:top_n]
-            filtered_books = [books[i] for i in top_idx]
-            return filtered_books
+        # Factor 1: Semantic similarity (0 to 1)
+        # Already provided by cosine_similarity
 
-        # --- AI-Powered Recommendation ---
-        def model_recommendation(user_query, filtered_books, gemini_model):
-            """
-            Use Gemini AI to recommend up to 3 books from filtered_books for the user_query.
-            Gemini is instructed to only recommend from the provided list.
-            """
-            book_list_str = "\n".join([f"{b['title']} by {b['author']}" for b in filtered_books])
-            system_prompt = f"""
-        You are a helpful library assistant. Only recommend books from the list below. Never invent book titles.
-        If the query is unclear, ask for clarification.
-        List of available books:\n{book_list_str}
-        """
-            prompt = f"User query: {user_query}\nRecommend up to 3 books with reasons."
-            response = gemini_model.generate_content([system_prompt, prompt])
-            return response.text.strip()
-    except Exception as e:
-        print(f"✗ Error initializing Gemini client: {e}")
-        return
-    
-    # Step 2: Format books into a readable context for Gemini
-    # Include title, author, rating count, and price for each book
-    book_context = "\n".join([
-        f"Title: {b['title']} | Author: {b['author']} | Rating_Count: {b['rating']} | Price: {b['price']}"
-        for b in filtered_books
-    ])
-    
-    # Step 3: Configure Gemini model with strict system instructions
-    # These instructions ensure the AI:
-    # - Only recommends books from the provided list
-    # - Never invents book titles
-    # - Limits recommendations to max 3 books
-    # - Provides clear reasoning
-    config = types.GenerateContentConfig(
-        system_instruction="""You are an AI library assistant for an engineering college.
+        # Factor 2: Popularity (log-scaled to prevent dominance)
+        rating = book["rating"]
+        popularity_score = math.log1p(rating)
 
-CRITICAL RULES:
-1. You MUST only recommend books that appear in the provided dataset.
-2. Never invent or suggest books NOT in the list.
-3. If no book matches the request, reply: "Suitable book not found in library."
+        # Factor 3: Recency
+        year = book["release_year"]
+        recency_score = year / 2026 if year else 0
 
-QUERY HANDLING:
-• Understand user requirements (subject, exam, skill level, etc.)
-• Break complex requests into smaller requirements if needed
+        # Factor 4: Keyword bonus (exact match in title/author)
+        keyword_bonus = 0
+        if query_lower in book["search_blob"]:
+            keyword_bonus += 0.25
 
-RECOMMENDATION RULES:
-1. First try to find ONE book that satisfies ALL requirements.
-2. If different books satisfy different requirements, recommend up to 3 books.
-3. Never recommend more than 3 books.
-
-OUTPUT FORMAT:
-Title:
-Author:
-Reason:
-
-The reason must explain which part of the user's query the book addresses.""",
-        temperature=0.6  # Balanced between creativity and consistency
-    )
-    
-    # Step 4: Prepare the full prompt with user request and available books
-    full_prompt = f"""
-User Request:
-{user_prompt}
-
-Available Books (choose ONLY from these):
-
-{book_context}"""
-    
-    try:
-        # Step 5: Call Gemini API to generate recommendations
-        print("\n🤖 AI is analyzing and recommending books...")
-        response = client.models.generate_content(
-            model=MODEL_ID,
-            contents=full_prompt,
-            config=config
+        # Final weighted score
+        final_score = (
+            0.85 * similarity_score +
+            0.10 * popularity_score +
+            0.05 * recency_score +
+            keyword_bonus
         )
-        
-        print("\n" + "="*60)
-        print("RECOMMENDED BOOKS:")
-        print("="*60)
-        print(response.text)
-        
-    except Exception as e:
-        print(f"✗ Error calling Gemini API: {e}")
+
+        scored_books.append((final_score, book))
+
+    # Sort by score (highest first) and return top N
+    scored_books.sort(reverse=True, key=lambda x: x[0])
+    top_books = [book for _, book in scored_books[:top_n]]
+
+    return top_books
 
 
 # ============================================================================
-# MAIN CHATBOT ORCHESTRATION
+# 3. PUBLIC API (Called by agent.py)
 # ============================================================================
-def main():
+def get_recommendations(topic, books, embedding_model, book_embeddings, top_n=5):
     """
-    Main function that orchestrates the entire chatbot workflow:
-    
-    Workflow:
-    1. Ask user for department and year
-    2. Load books from the department-specific CSV
-    3. Generate embeddings ONLY for those books (efficient!)
-    4. Start interactive chat loop for personalized recommendations
-    5. Allow user to change department or exit
-    
+    The main entry point for the search engine.
+    Called by agent.py when a RECOMMEND intent is detected.
+
+    Args:
+        topic (str):             The topic/query the user wants recommendations for.
+        books (list):            List of book dicts (from agent.py's cache).
+        embedding_model:         SentenceTransformer model (from agent.py's cache).
+        book_embeddings:         Numpy array of embeddings (from agent.py's cache).
+        top_n (int):             Number of top results to return (default: 5).
+
+    Returns:
+        list: Top N book dicts sorted by relevance.
+    """
+    return nlp_filter_books(topic, books, embedding_model, book_embeddings, top_n=top_n)
