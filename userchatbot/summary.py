@@ -1,6 +1,10 @@
 import os
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 def generate_summary(book_name, session=None):
@@ -45,7 +49,7 @@ RULES:
 
     try:
         client = genai.Client(api_key=api_key)
-        MODEL_ID = "gemini-2.5-flash"
+        MODEL_ID = "models/gemini-2.5-flash"
 
         config = types.GenerateContentConfig(
             system_instruction=system_instruction,

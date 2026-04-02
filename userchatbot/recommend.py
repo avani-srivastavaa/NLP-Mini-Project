@@ -95,7 +95,7 @@ def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n
         top_n (int):             Number of top results to return.
 
     Returns:
-        list: Top N book dicts, sorted by relevance score (highest first).
+        list: Top N (score, book_dict) tuples, sorted by relevance score (highest first).
     """
     if not books or len(books) == 0:
         return []
@@ -144,9 +144,8 @@ def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n
 
     # Sort by score (highest first) and return top N
     scored_books.sort(reverse=True, key=lambda x: x[0])
-    top_books = [book for _, book in scored_books[:top_n]]
-
-    return top_books
+    
+    return scored_books[:top_n]
 
 
 # ============================================================================

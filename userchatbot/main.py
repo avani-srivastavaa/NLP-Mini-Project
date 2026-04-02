@@ -4,7 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Any
 from uuid import uuid4
-from userchatbot.agent import gemini_agent
+import agent
+from agent import gemini_agent
 import sys
 
 

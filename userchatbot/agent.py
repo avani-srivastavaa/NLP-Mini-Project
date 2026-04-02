@@ -15,6 +15,10 @@ import pandas as pd
 from google import genai
 from google.genai import types
 from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 # ============================================================================
@@ -242,7 +246,7 @@ Do NOT answer book/borrow/recommendation queries directly - only detect intent a
         return "Error: Gemini API key not configured."
     try:
         client = genai.Client(api_key=api_key)
-        MODEL_ID = "gemini-2.5-flash"
+        MODEL_ID = "models/gemini-2.5-flash"
         config = types.GenerateContentConfig(
             system_instruction=system_instruction,
             temperature=0.3
@@ -254,6 +258,8 @@ Do NOT answer book/borrow/recommendation queries directly - only detect intent a
             config=config
         )
         gemini_intent = response.text.strip()
+        # Debugging: Uncomment to see Gemini's raw thinking
+        # print(f"--- DEBUG: Gemini Response ---\n{gemini_intent}\n--- END DEBUG ---")
         return process_intent(gemini_intent, session, user_message, books, embedding_model, book_embeddings)
     except Exception as e:
         return f"Error: {e}"
@@ -313,50 +319,72 @@ def handle_recommendation(topic, session, books, embedding_model, book_embedding
     """
     try:
         from recommend import get_recommendations
-        top_books = get_recommendations(topic, books, embedding_model, book_embeddings, top_n=5)
+        # Get scored recommendations (Top 5)
+        scored_books = get_recommendations(topic, books, embedding_model, book_embeddings, top_n=5)
+        
+        # Split into Primary and Related based on Threshold
+        primary = []
+        related = []
+        
+        for score, book in scored_books:
+            # Score threshold for "Direct Match"
+            if score > 0.65:
+                primary.append(book)
+            # Score threshold for "Related"
+            elif score > 0.40:
+                related.append(book)
+                
+        # Limit related to max 2 as requested by user
+        related = related[:2]
+
+        # Format into final conversational response
+        return format_recommendations_with_gemini(primary, related, topic, session)
     except ImportError:
         return "Recommendation engine not found. Please ensure recommend.py exists."
     except Exception as e:
         return f"Error getting recommendations: {str(e)}"
 
-    if not top_books:
-        return "Sorry, I couldn't find any recommendations for that topic in your department's library."
 
-    # Format with Gemini for a premium response
-    return format_recommendations_with_gemini(topic, top_books, session)
-
-
-def format_recommendations_with_gemini(topic, top_books, session):
+def format_recommendations_with_gemini(primary_books, related_books, user_topic, session):
     """
-    Takes raw book results and uses Gemini to present them in a
-    friendly, conversational format for the website.
+    Uses Gemini to format two lists of books into a premium conversational response.
     """
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        # Fallback: return a simple formatted list
-        return _simple_format(top_books)
+        # Fallback
+        return _simple_format(primary_books + related_books)
 
-    book_list = "\n".join([
-        f"- {b['title']} by {b['author']} (Copies available: {b['rating']})"
-        for b in top_books
-    ])
+    # Build the book info strings
+    def get_book_text(books_list):
+        return "\n".join([
+            f"- {b['title']} by {b['author']} (Copies: {b['rating']}, Year: {b['release_year']})"
+            for b in books_list
+        ])
 
-    system_instruction = f"""You are a friendly library assistant for {session['department']} department students (Year {session['year']}).
-Format the following book recommendations into a helpful, conversational response.
+    primary_text = get_book_text(primary_books)
+    related_text = get_book_text(related_books)
 
-RULES:
-- Include ALL the books from the list below. Do not skip any.
-- For each book, briefly mention why it might be useful for the topic.
-- Keep it concise but warm and helpful.
-- Do NOT add any books that are not in the list.
-- Use bullet points or numbered list for clarity."""
+    dept = session.get('department', 'Engineering')
+    
+    system_instruction = f"""
+    You are a premium Library Assistant for the {dept} department.
+    A student asked for recommendations on '{user_topic}'.
 
-    prompt = f"""The student asked about: "{topic}"
+    I will provide you with two lists of books:
+    1. DIRECT MATCHES: High confidence results.
+    2. RELATED RESOURCES: Lower confidence but still relevant.
 
-Here are the top recommendations from our library:
-{book_list}
+    YOUR GOAL:
+    1. Write a friendly response in Markdown.
+    2. Present the DIRECT MATCHES first with brief, helpful descriptions for each.
+    3. Then, add a section starting with the header '### These are some related books'.
+    4. List the RELATED RESOURCES under that header (max 2).
+    5. If no related books are provided, omit that section.
+    6. Be helpful, professional, and explain WHY these books matter.
+    7. Use bold titles and bullet points.
+    """
 
-Please present these to the student in a friendly way."""
+    prompt = f"DIRECT MATCHES:\n{primary_text}\n\nRELATED RESOURCES:\n{related_text}"
 
     try:
         client = genai.Client(api_key=api_key)
@@ -365,18 +393,19 @@ Please present these to the student in a friendly way."""
             temperature=0.5
         )
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="models/gemini-2.5-flash",
             contents=prompt,
             config=config
         )
         return response.text.strip()
     except Exception:
-        # Fallback to simple format if Gemini fails
-        return _simple_format(top_books)
+        return _simple_format(primary_books + related_books)
 
 
 def _simple_format(top_books):
     """Fallback formatting when Gemini is unavailable."""
+    if not top_books:
+        return "Sorry, I couldn't find any recommendations for that topic."
     return "📚 Recommended books:\n" + "\n".join([
         f"  • {b['title']} by {b['author']}"
         for b in top_books

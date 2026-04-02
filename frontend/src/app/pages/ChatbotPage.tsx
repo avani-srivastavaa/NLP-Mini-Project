@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { sendChatMessage } from '../data/api';
 import { Link } from 'react-router';
 import {
@@ -134,6 +135,23 @@ export default function ChatbotPage() {
                         </span>
                         <span className="sr-only">Loading...</span>
                       </span>
+                    ) : msg.from === 'bot' ? (
+                      <div className="prose prose-amber max-w-none">
+                        <ReactMarkdown
+                          components={{
+                            p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                            ul: ({ children }) => <ul className="list-disc pl-4 mb-2 space-y-1">{children}</ul>,
+                            ol: ({ children }) => <ol className="list-decimal pl-4 mb-2 space-y-1">{children}</ol>,
+                            li: ({ children }) => <li className="marker:text-amber-600">{children}</li>,
+                            strong: ({ children }) => <strong className="font-bold text-gray-900">{children}</strong>,
+                            h1: ({ children }) => <h1 className="text-xl font-bold mb-2">{children}</h1>,
+                            h2: ({ children }) => <h2 className="text-lg font-bold mb-1">{children}</h2>,
+                            hr: () => <hr className="my-4 border-gray-200" />,
+                          }}
+                        >
+                          {msg.text}
+                        </ReactMarkdown>
+                      </div>
                     ) : (
                       msg.text
                     )}
