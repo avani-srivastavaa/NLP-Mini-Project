@@ -30,12 +30,12 @@ import { mockBooks, mockBorrowRecords } from '../data/mockData';
 
 // ─── Student profile data ────────────────────────────────────────────────────
 const studentProfile = {
-  name: 'Dhiraj Amin',
+  name: 'Dhiru bhai Ambani',
   admissionNo: 'ADM-2024-0012',
-  email: 'amindhiraj@mes.ac.in',
+  email: 'ambanidhiru@mes.ac.in',
   department: 'Computer Science',
   class: 'B.Sc. CS – Year 2',
-  contactNumber: '+91 99606 71063',
+  contactNumber: '+91 9912939482',
 };
 
 // Calculate which profile fields are filled (all 6 fields)
