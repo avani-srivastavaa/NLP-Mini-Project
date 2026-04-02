@@ -30,7 +30,7 @@ import { mockBooks, mockBorrowRecords } from '../data/mockData';
 
 // ─── Student profile data ────────────────────────────────────────────────────
 const studentProfile = {
-  name: 'abhishek m',
+  name: 'Dhiraj Amin',
   admissionNo: 'ADM-2024-0012',
   email: 'amindhiraj@mes.ac.in',
   department: 'Computer Science',
@@ -68,10 +68,10 @@ const initialHistoryRecords: HistoryRecord[] = mockBorrowRecords
 type ChatMsg = { from: 'bot' | 'user'; text: string };
 const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
-  { from: 'user', text: 'Can you recommend some fiction books?' },
+  { from: 'user', text: 'Can you recommend some books?' },
   {
     from: 'bot',
-    text: 'Sure! Based on our collection, I recommend "The Great Gatsby", "1984", and "The Alchemist". Would you like to know their availability?',
+    text: 'Sure! Based on our collection, I recommend "Computer Graphics", "Computer Architecture", and "Data Structures and Algorithms". Would you like to know their availability?',
   },
 ];
 
@@ -99,6 +99,7 @@ export default function StudentDashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
 
   // Chatbot messages state
   const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
@@ -111,7 +112,13 @@ export default function StudentDashboard() {
     // Empty
   }, []);
 
-  const availableBooks = mockBooks.filter((book) => book.available);
+  const departments = ['All Departments', ...Array.from(new Set(mockBooks.map((book) => book.department)))];
+
+  const availableBooks = mockBooks.filter((book) =>
+    book.available &&
+    (selectedDepartment === 'All Departments' || book.department === selectedDepartment) &&
+    book.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const sendChatMessage = () => {
     const trimmed = chatInput.trim();
@@ -195,19 +202,6 @@ export default function StudentDashboard() {
             <div className="flex items-center gap-2">
               <Book className="w-6 h-6 text-amber-600" />
               <span className="font-semibold text-gray-900 hidden sm:block">Smart Library</span>
-            </div>
-          </div>
-
-          <div className="flex-1 max-w-xl mx-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <Input
-                type="text"
-                placeholder="Search for books..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 rounded-lg"
-              />
             </div>
           </div>
 
@@ -356,31 +350,77 @@ export default function StudentDashboard() {
               {/* Available Books */}
               <section>
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Available Books</h2>
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {availableBooks.slice(0, 8).map((book) => (
-                    <div
-                      key={book.id}
-                      className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                    <span>Department:</span>
+                  </div>
+                  {departments.map((department) => (
+                    <button
+                      key={department}
+                      onClick={() => setSelectedDepartment(department)}
+                      className={`rounded-full px-4 py-2 text-sm transition-all border ${
+                        selectedDepartment === department
+                          ? 'bg-amber-600 text-white border-amber-600'
+                          : 'bg-white text-gray-700 border-gray-200 hover:border-amber-300 hover:text-amber-700'
+                      }`}
                     >
-                      <img
-                        src={book.coverUrl}
-                        alt={book.title}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="p-4">
-                        <h3 className="font-semibold text-gray-900 mb-1 line-clamp-1">{book.title}</h3>
-                        <p className="text-sm text-gray-600 mb-1">{book.author}</p>
-                        <Badge variant="outline" className="mb-3 text-xs">{book.category}</Badge>
-                        <Button
-                          disabled={!isProfileComplete}
-                          className="w-full bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                          {isProfileComplete ? 'Borrow' : <><Lock className="w-3.5 h-3.5 mr-1" /> Locked</>}
-                        </Button>
-                      </div>
-                    </div>
+                      {department}
+                    </button>
                   ))}
                 </div>
+
+                <div className="mb-6">
+                  <div className="relative max-w-lg w-full md:w-1/2 lg:w-1/3">
+                    {/* highlighted search box, left-aligned */}
+                    <div className="relative bg-white border border-amber-200 rounded-xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-amber-300">
+                      <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-400" />
+                      <Input
+                        type="text"
+                        placeholder="Search for books..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="pl-12 rounded-lg w-full text-base py-3 bg-transparent border-none"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {availableBooks.length === 0 ? (
+                  <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-sm text-gray-600">
+                    No available books found for {selectedDepartment}.
+                  </div>
+                ) : (
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {availableBooks.slice(0, 12).map((book) => (
+                      <div
+                        key={book.id}
+                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                      >
+                        <div className="bg-gray-50 p-4 flex items-center justify-center">
+                          <img
+                            src={book.coverUrl}
+                            alt={book.title}
+                            className="w-full h-72 object-contain"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <div className="mb-3 flex items-center justify-between gap-2">
+                            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-amber-600">{book.department}</span>
+                          </div>
+                          <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2">{book.title}</h3>
+                          <p className="text-sm text-gray-600 mb-4 line-clamp-2">{book.author}</p>
+                          <Button
+                            disabled={!isProfileComplete}
+                            className="w-full whitespace-nowrap bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isProfileComplete ? 'Borrow' : <><Lock className="w-3.5 h-3.5 mr-1" /> Locked</>}
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </section>
             </div>
           )}
@@ -601,41 +641,89 @@ export default function StudentDashboard() {
 
           {/* ════ ABOUT TAB ════ */}
           {activeTab === 'about' && (
-            <div className="max-w-3xl">
+            <div className="max-w-4xl">
               <h1 className="text-2xl font-bold text-gray-900 mb-6">About Library</h1>
-              <div className="bg-white rounded-xl shadow-md p-6 space-y-6">
+              <div className="bg-white rounded-xl shadow-md p-6 space-y-8">
+                {/* PCE Library Overview */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Our Mission</h2>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">PCE Library</h2>
+                  <p className="text-gray-600 mb-3">
+                    PCE Library is Fully Automated Library with 26,273 plus collections. The collection can be searched from public web OPAC and Rack Index. Checked out books can be monitored through the Book Verification System.
+                  </p>
                   <p className="text-gray-600">
-                    To provide comprehensive access to knowledge and foster a culture of learning
-                    through our extensive collection of books and digital resources.
+                    The patron can see the number of books issued and their due date by the help of Library Web Application. Email alerts will be sent to the patron for all the library transactions and overdue of items in their possession. Number of patrons visiting in the library can be analyzed or summarised by the Student In Out Counter.
                   </p>
                 </div>
+
+                {/* Issue and Return */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Library Hours</h2>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>Monday – Friday: 8:00 AM – 8:00 PM</li>
-                    <li>Saturday: 9:00 AM – 6:00 PM</li>
-                    <li>Sunday: 10:00 AM – 4:00 PM</li>
-                  </ul>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Issue and Return</h2>
+                  <p className="text-gray-600 mb-4">The Issue and Return System for Faculty and Students:</p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="bg-amber-50">
+                          <td className="border border-gray-200 px-4 py-2 font-semibold text-gray-700">Faculty</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Book Borrow Duration</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">1 Semester</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-200 px-4 py-2 font-semibold text-gray-700">Student</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Book Borrow Duration</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">15 Days</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                          <td className="border border-gray-200 px-4 py-2 font-semibold text-gray-700">Student</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Penalty for Late Return (Books)</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Rs. 2/- per unit per day</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-200 px-4 py-2 font-semibold text-gray-700">Student</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Penalty for Late Return (Reference Books)</td>
+                          <td className="border border-gray-200 px-4 py-2 text-gray-600">Rs. 10/- per unit per day</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+
+                {/* Membership Details */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Contact Information</h2>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>Email: library@university.edu</li>
-                    <li>Phone: (555) 123-4567</li>
-                    <li>Location: Main Campus Building, Floor 2</li>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Membership Details</h2>
+                  <p className="text-gray-600 mb-3">For students, faculty and staff of:</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+                    <li><strong>Pillai Campus Colleges</strong> — Against a valid Library Card</li>
+                    <li><strong>Other Colleges</strong> — Against a Reference Letter from their Librarian / Principal</li>
                   </ul>
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-2 text-gray-700">
+                    <p className="font-semibold">Membership Terms:</p>
+                    <ul className="list-disc list-inside space-y-1.5 text-sm">
+                      <li>Only PCE Students Faculty and Staff as registered members are allowed to use the PCE Library.</li>
+                      <li>Members should produce their Library Membership card at the entrance of the Library.</li>
+                    </ul>
+                  </div>
+                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="font-semibold text-gray-700 mb-2">PCE Library Memberships:</p>
+                    <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-600">
+                      <li>IUCEE Indo US Collaboration for Engineering Education</li>
+                    </ul>
+                  </div>
                 </div>
+
+                {/* Contact Us */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Services</h2>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>Book Borrowing &amp; Returns</li>
-                    <li>Digital Resources Access</li>
-                    <li>Study Rooms Reservation</li>
-                    <li>Research Assistance</li>
-                    <li>Inter-library Loans</li>
-                  </ul>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Contact Us</h2>
+                  <div className="space-y-3 text-gray-600">
+                    <p>
+                      <span className="font-semibold text-gray-700">Ask the Librarian:</span> pcelibrary@mes.ac.in
+                    </p>
+                    <p>
+                      <span className="font-semibold text-gray-700">Reception:</span> 022-65748000
+                    </p>
+                    <p>
+                      <span className="font-semibold text-gray-700">Admission Office:</span> 022-65748009, 022-65748010
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
