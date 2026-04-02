@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { sendChatMessage } from '../data/api';
 import { Link } from 'react-router';
 import {
   MessageCircle,
@@ -12,29 +13,37 @@ import { Button } from '../components/ui/button';
 type ChatMsg = { from: 'bot' | 'user'; text: string };
 const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
-  { from: 'user', text: 'Can you recommend some fiction books?' },
-  {
-    from: 'bot',
-    text: 'Sure! Based on our collection, I recommend "The Great Gatsby", "1984", and "The Alchemist". Would you like to know their availability?',
-  },
 ];
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
   const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const sessionId = 'web-session'; // In production, generate or fetch per user
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     const trimmed = input.trim();
-    if (!trimmed) return;
+    if (!trimmed || loading) return;
     setMessages((prev) => [
       ...prev,
       { from: 'user', text: trimmed },
-      {
-        from: 'bot',
-        text: "Thanks for your message! I'll look that up for you right away. Is there anything else I can help with?",
-      },
     ]);
     setInput('');
+    setLoading(true);
+    try {
+      const res = await sendChatMessage(sessionId, trimmed);
+      setMessages((prev) => [
+        ...prev,
+        { from: 'bot', text: res.response },
+      ]);
+    } catch (err: any) {
+      setMessages((prev) => [
+        ...prev,
+        { from: 'bot', text: 'Sorry, there was an error connecting to the chat server.' },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -96,8 +105,13 @@ export default function ChatbotPage() {
             <Button
               onClick={sendMessage}
               className="bg-amber-600 hover:bg-amber-700 text-white rounded-lg px-4 py-3"
+              disabled={loading}
             >
-              <Send className="w-5 h-5" />
+              {loading ? (
+                <span className="animate-pulse">...</span>
+              ) : (
+                <Send className="w-5 h-5" />
+              )}
             </Button>
           </div>
         </div>
