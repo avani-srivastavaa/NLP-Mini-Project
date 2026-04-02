@@ -1,0 +1,20 @@
+# Core web and API
+fastapi
+uvicorn
+
+# Data processing
+pandas
+
+# Google Gemini AI
+google-genai
+
+# Environment variables
+python-dotenv
+
+# NLP and embeddings
+sentence-transformers
+scikit-learn
+
+# For CSV and file handling (already covered by pandas)
+
+# If you use summary.py or review.py, add their dependencies as needed

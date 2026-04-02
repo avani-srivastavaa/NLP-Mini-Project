@@ -1,22 +1,21 @@
 
-# from fastapi import FastAPI, HTTPException
-# from fastapi.middleware.cors import CORSMiddleware
-# from pydantic import BaseModel
-# from typing import Dict, Any
-# from uuid import uuid4
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import Dict, Any
+from uuid import uuid4
 from userchatbot.agent import gemini_agent
 import sys
 
 
-# FASTAPI APP SETUP (Commented out for direct testing)
-# app = FastAPI()
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  # Adjust for production!
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust for production!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 
@@ -44,9 +43,9 @@ user_sessions = {}
 #     username: str
 #     department: str
 #     year: int
-# class ChatRequest(BaseModel):
-#     session_id: str
-#     message: str
+class ChatRequest(BaseModel):
+    session_id: str
+    message: str
 
 
 
@@ -68,9 +67,32 @@ def get_user_session(session_id: str):
 
 
 # CHAT ENDPOINT (Commented out for direct testing)
-# @app.post("/chat")
-# def chat(request: ChatRequest):
-#     ...existing code...
+
+@app.post("/chat")
+def chat(request: ChatRequest):
+    session_id = request.session_id
+    message = request.message
+    # Create session if not exists (for demo)
+    if session_id not in user_sessions:
+        user_sessions[session_id] = {
+            "username": "webuser",
+            "department": "CS",
+            "year": 2,
+            "chat_history": [],
+            "files": DEPARTMENT_FILES["CS"],
+            "borrow_file": BORROW_HISTORY_FILE
+        }
+    session = user_sessions[session_id]
+    session["chat_history"].append({
+        "user": "user",
+        "user_message": message
+    })
+    response = gemini_agent(session, message)
+    session["chat_history"].append({
+        "user": "bot",
+        "user_message": response
+    })
+    return {"response": response}
 
 
 
