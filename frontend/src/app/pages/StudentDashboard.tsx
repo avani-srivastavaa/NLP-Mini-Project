@@ -64,29 +64,21 @@ const initialHistoryRecords: HistoryRecord[] = mockBorrowRecords
   .filter((r) => r.studentId === 'S001')
   .map((r) => ({ ...r, comment: '' }));
 
-// ─── Chatbot messages ─────────────────────────────────────────────────────────
-type ChatMsg = { from: 'bot' | 'user'; text: string };
-const initialMessages: ChatMsg[] = [
-  { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
-  { from: 'user', text: 'Can you recommend some books?' },
-  {
-    from: 'bot',
-    text: 'Sure! Based on our collection, I recommend "Computer Graphics", "Computer Architecture", and "Data Structures and Algorithms". Would you like to know their availability?',
-  },
-];
+// Chatbot logic and UI are now handled in ChatbotPage.tsx only.
 
 // ─── Floating Chatbot Button ──────────────────────────────────────────────────
-function FloatingChatbot({ onOpen }: { onOpen: () => void }) {
+function FloatingChatbot() {
   return (
-    <button
-      onClick={onOpen}
-      className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95"
-      title="Library Assistant"
-    >
-      <MessageCircle className="w-6 h-6" />
-      {/* Ping indicator */}
-      <span className="absolute top-1 right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white" />
-    </button>
+    <Link to="/student/chatbot">
+      <button
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95"
+        title="Library Assistant"
+      >
+        <MessageCircle className="w-6 h-6" />
+        {/* Ping indicator */}
+        <span className="absolute top-1 right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white" />
+      </button>
+    </Link>
   );
 }
 
@@ -101,9 +93,7 @@ export default function StudentDashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
 
-  // Chatbot messages state
-  const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
-  const [chatInput, setChatInput] = useState('');
+  // Chatbot state removed; handled in ChatbotPage.tsx only.
 
   // History state
   const [historyRecords, setHistoryRecords] = useState<HistoryRecord[]>(initialHistoryRecords);
@@ -120,19 +110,7 @@ export default function StudentDashboard() {
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const sendChatMessage = () => {
-    const trimmed = chatInput.trim();
-    if (!trimmed) return;
-    setMessages((prev) => [
-      ...prev,
-      { from: 'user', text: trimmed },
-      {
-        from: 'bot',
-        text: "Thanks for your message! I'll look that up for you right away. Is there anything else I can help with?",
-      },
-    ]);
-    setChatInput('');
-  };
+  // Chatbot sendChatMessage removed; handled in ChatbotPage.tsx only.
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -175,12 +153,11 @@ export default function StudentDashboard() {
 
   const isProfileComplete = profileCompletion === 100;
 
-  // Nav items
+  // Nav items (Chatbot now routes to separate page)
   const navItems = [
     { key: 'dashboard', label: 'Dashboard',       icon: Book },
     { key: 'profile',   label: 'Profile Details', icon: User },
     { key: 'history',   label: 'Book History',    icon: History },
-    { key: 'chatbot',   label: 'Chatbot',         icon: MessageCircle },
     { key: 'about',     label: 'About Library',   icon: Info },
   ];
 
@@ -265,6 +242,19 @@ export default function StudentDashboard() {
                 )}
               </button>
             ))}
+            
+            {/* Chatbot - Routes to separate page */}
+            <Link to="/student/chatbot">
+              <button
+                className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100 ${sidebarCollapsed ? 'justify-center' : 'gap-3'}`}
+                onClick={() => setSidebarOpen(false)}
+              >
+                <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                {!sidebarCollapsed && (
+                  <span className="font-medium whitespace-nowrap">Chatbot</span>
+                )}
+              </button>
+            </Link>
 
             <div className="pt-4 mt-4 border-t border-gray-200">
               <Link to="/">
@@ -585,59 +575,7 @@ export default function StudentDashboard() {
             </div>
           )}
 
-          {/* ════ CHATBOT TAB ════ */}
-          {activeTab === 'chatbot' && (
-            <div className="flex flex-col h-full max-w-4xl">
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Library Assistant</h1>
-              
-              <div className="bg-white rounded-xl shadow-md flex flex-col flex-1 overflow-hidden min-h-[500px]">
-                {/* Messages area */}
-                <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50/50">
-                  {messages.map((msg, i) => (
-                    <div
-                      key={i}
-                      className={`flex gap-3 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      {msg.from === 'bot' && (
-                        <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                          <MessageCircle className="w-4 h-4 text-white" />
-                        </div>
-                      )}
-                      <div
-                        className={`max-w-[75%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-                          msg.from === 'user'
-                            ? 'bg-amber-600 text-white rounded-br-sm'
-                            : 'bg-white border border-gray-100 shadow-sm text-gray-800 rounded-bl-sm'
-                        }`}
-                      >
-                        {msg.text}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Input area */}
-                <div className="bg-white border-t border-gray-100 p-4">
-                  <div className="flex gap-3">
-                    <Input
-                      type="text"
-                      placeholder="Type your message..."
-                      value={chatInput}
-                      onChange={(e) => setChatInput(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && sendChatMessage()}
-                      className="flex-1 rounded-lg px-4 py-3"
-                    />
-                    <Button
-                      onClick={sendChatMessage}
-                      className="bg-amber-600 hover:bg-amber-700 rounded-lg px-5"
-                    >
-                      <Send className="w-5 h-5" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* ════ CHATBOT TAB REMOVED: Now handled in ChatbotPage.tsx only. */}
 
           {/* ════ ABOUT TAB ════ */}
           {activeTab === 'about' && (
@@ -740,7 +678,7 @@ export default function StudentDashboard() {
       )}
 
       {/* ── Floating Chatbot (all pages) ── */}
-      <FloatingChatbot onOpen={() => setActiveTab('chatbot')} />
+      <FloatingChatbot />
     </div>
   );
 }

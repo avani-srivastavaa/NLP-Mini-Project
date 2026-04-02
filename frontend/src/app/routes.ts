@@ -4,6 +4,7 @@ import StudentLogin from './pages/StudentLogin';
 import AdminLogin from './pages/AdminLogin';
 import StudentDashboard from './pages/StudentDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import ChatbotPage from './pages/ChatbotPage';
 
 export const router = createBrowserRouter([
   {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
   {
     path: '/admin/dashboard',
     Component: AdminDashboard,
+  },
+  {
+    path: '/student/chatbot',
+    Component: ChatbotPage,
   },
 ]);
