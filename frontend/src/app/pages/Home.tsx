@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router';
+import { CSSProperties } from 'react';
 import {
   ArrowRight,
   Book,
@@ -67,7 +68,7 @@ function AIChatbotFeatures() {
           className="flex gap-6"
           animate={{ x: ['0%', '-50%'] }}
           transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-          style={{ width: 'max-content' }}
+          style={{ width: 'max-content' } as CSSProperties}
         >
           {loopingFeatures.map((feature, index) => {
             const Icon = feature.icon;
@@ -272,6 +273,14 @@ export default function Home() {
             <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-400">
               A creative digital library space designed to make borrowing, reading, discovery, and administration feel smoother and more inviting.
             </p>
+            <Link to="/developers" className="mt-6 inline-block">
+              <Button
+                variant="outline"
+                className="rounded-full border-slate-300 bg-white/80 px-6 dark:border-slate-700 dark:bg-slate-900/70"
+              >
+                Meet Our Developers
+              </Button>
+            </Link>
           </div>
 
           <div className="rounded-[1.75rem] border border-white/70 bg-white/75 p-6 shadow-[0_18px_40px_-28px_rgba(15,23,42,0.22)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75">
@@ -287,6 +296,20 @@ export default function Home() {
 
         <div className="mx-auto mt-8 max-w-7xl border-t border-slate-200/80 px-4 pt-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:px-6 lg:px-8">
           &copy; 2026 Smart Library System. All rights reserved.
+        </div>
+
+        <div className="mx-auto mt-8 max-w-7xl border-t border-slate-200/80 px-4 pt-8 text-center text-slate-600 dark:border-slate-800 dark:text-slate-400 sm:px-6 lg:px-8">
+          <p className="mt-2 text-sm">
+            Developed as a learning project at{' '}
+            <a
+              href="https://pce.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 font-semibold dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              Pillai College of Engineering
+            </a>
+          </p>
         </div>
       </footer>
     </div>
