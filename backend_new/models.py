@@ -33,3 +33,10 @@ class BorrowRecord(Base):
     student_id = Column(Integer, nullable=False)
     borrow_date = Column(DateTime, default=datetime.utcnow)
     return_date = Column(DateTime, nullable=True)
+
+class SearchLog(Base):
+    __tablename__ = "search_logs"
+    id = Column(Integer, primary_key=True, index=True)
+    query = Column(String(255))
+    top_result_title = Column(String(255)) # Store what the AI found
+    timestamp = Column(DateTime, default=datetime.utcnow)

@@ -1,0 +1,22 @@
+# Core web and API
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy
+
+# Data processing
+pandas
+
+# Google Gemini AI
+google-genai
+
+# Environment variables
+python-dotenv
+
+# NLP and embeddings
+sentence-transformers
+scikit-learn
+
+# Additional dependencies for analytics
+numpy
