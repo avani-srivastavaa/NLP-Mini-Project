@@ -1,8 +1,8 @@
 import { Link } from 'react-router';
-import { Book, Code } from 'lucide-react';
+import { Book, Code, ArrowLeft } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import { Button } from '../components/ui/button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const avaniImage = new URL('../components/assets/developers/avani-srivastava.png', import.meta.url).href;
 const sumitImage = new URL('../components/assets/developers/sumit-roy.png', import.meta.url).href;
@@ -13,6 +13,8 @@ const veenaImage = new URL('../components/assets/developers/veena.png', import.m
 const parthImage = new URL('../components/assets/developers/parth.png', import.meta.url).href;
 const sarthImage = new URL('../components/assets/developers/sarth.png', import.meta.url).href;
 const jayeshImage = new URL('../components/assets/developers/jayesh.png', import.meta.url).href;
+const tajeshreeImage = new URL('../components/assets/developers/tajeshree.png', import.meta.url).href;
+const vishalImage = new URL('../components/assets/developers/vishal.png', import.meta.url).href;
 
 const developers = [
   {
@@ -56,9 +58,21 @@ const developers = [
       { name: 'Avani Srivastava', linkedinUrl: 'https://www.linkedin.com/in/avani-srivastava-1202b22b9/', imageUrl: avaniImage },
     ],
   },
+  {
+    domain: 'Documentation',
+    icon: Book,
+    members: [
+      { name: 'Tajeshree', linkedinUrl: '', imageUrl: undefined },
+      { name: 'Vishal Singh', linkedinUrl: '', imageUrl: undefined },
+    ],
+  },
 ];
 
 export default function Developers() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Navigation Bar */}
@@ -69,8 +83,9 @@ export default function Developers() {
               <Book className="w-8 h-8 text-blue-600" />
               <span className="text-xl font-semibold text-gray-800">Smart Library</span>
             </Link>
-            <Link to="/">
-              <Button variant="outline" className="rounded-lg">
+            <Link to="/" className="group">
+              <Button className="rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200">
+                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
                 Back to Home
               </Button>
             </Link>
