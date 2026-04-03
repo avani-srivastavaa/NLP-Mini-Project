@@ -22,11 +22,13 @@ import {
   Hash,
   GraduationCap,
   BookOpen,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { mockBooks, mockBorrowRecords } from '../data/mockData';
+import { ThemeToggle } from '../components/theme/ThemeToggle';
 
 // ─── Student profile data ────────────────────────────────────────────────────
 const studentProfile = {
@@ -64,21 +66,29 @@ const initialHistoryRecords: HistoryRecord[] = mockBorrowRecords
   .filter((r) => r.studentId === 'S001')
   .map((r) => ({ ...r, comment: '' }));
 
-// Chatbot logic and UI are now handled in ChatbotPage.tsx only.
+// ─── Chatbot messages ─────────────────────────────────────────────────────────
+type ChatMsg = { from: 'bot' | 'user'; text: string };
+const initialMessages: ChatMsg[] = [
+  { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
+  { from: 'user', text: 'Can you recommend some books?' },
+  {
+    from: 'bot',
+    text: 'Sure! Based on our collection, I recommend "Computer Graphics", "Computer Architecture", and "Data Structures and Algorithms". Would you like to know their availability?',
+  },
+];
 
 // ─── Floating Chatbot Button ──────────────────────────────────────────────────
-function FloatingChatbot() {
+function FloatingChatbot({ onOpen }: { onOpen: () => void }) {
   return (
-    <Link to="/student/chatbot">
-      <button
-        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95"
-        title="Library Assistant"
-      >
-        <MessageCircle className="w-6 h-6" />
-        {/* Ping indicator */}
-        <span className="absolute top-1 right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white" />
-      </button>
-    </Link>
+    <button
+      onClick={onOpen}
+      className="fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white shadow-[0_20px_45px_-18px_rgba(37,99,235,0.65)] transition-all hover:scale-105 active:scale-95"
+      title="Library Assistant"
+    >
+      <MessageCircle className="w-6 h-6" />
+      {/* Ping indicator */}
+      <span className="absolute top-1 right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white" />
+    </button>
   );
 }
 
@@ -93,7 +103,9 @@ export default function StudentDashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
 
-  // Chatbot state removed; handled in ChatbotPage.tsx only.
+  // Chatbot messages state
+  const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
+  const [chatInput, setChatInput] = useState('');
 
   // History state
   const [historyRecords, setHistoryRecords] = useState<HistoryRecord[]>(initialHistoryRecords);
@@ -110,7 +122,19 @@ export default function StudentDashboard() {
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Chatbot sendChatMessage removed; handled in ChatbotPage.tsx only.
+  const sendChatMessage = () => {
+    const trimmed = chatInput.trim();
+    if (!trimmed) return;
+    setMessages((prev) => [
+      ...prev,
+      { from: 'user', text: trimmed },
+      {
+        from: 'bot',
+        text: "Thanks for your message! I'll look that up for you right away. Is there anything else I can help with?",
+      },
+    ]);
+    setChatInput('');
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -152,20 +176,24 @@ export default function StudentDashboard() {
   };
 
   const isProfileComplete = profileCompletion === 100;
+  const handleLogout = () => {
+    window.localStorage.removeItem('smart-library-student-auth');
+  };
 
-  // Nav items (Chatbot now routes to separate page)
+  // Nav items
   const navItems = [
     { key: 'dashboard', label: 'Dashboard',       icon: Book },
     { key: 'profile',   label: 'Profile Details', icon: User },
     { key: 'history',   label: 'Book History',    icon: History },
+    { key: 'chatbot',   label: 'Chatbot',         icon: MessageCircle },
     { key: 'about',     label: 'About Library',   icon: Info },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),_transparent_22%),linear-gradient(180deg,_#f8fbff_0%,_#eff6ff_44%,_#f8fafc_100%)] transition-colors dark:bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_22%),linear-gradient(180deg,_#020617_0%,_#0f172a_52%,_#020617_100%)]">
 
       {/* ── Top Bar ───────────────────────────────── */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      <header className="sticky top-0 z-40 border-b border-white/60 bg-white/70 shadow-sm backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/78">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-4">
             <Button
@@ -178,14 +206,15 @@ export default function StudentDashboard() {
             </Button>
             <div className="flex items-center gap-2">
               <Book className="w-6 h-6 text-amber-600" />
-              <span className="font-semibold text-gray-900 hidden sm:block">Smart Library</span>
+              <span className="font-semibold text-gray-900 hidden sm:block dark:text-slate-100">Smart Library</span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <div className="hidden sm:block text-right">
-              <p className="text-sm font-medium text-gray-900">{studentProfile.name}</p>
-              <p className="text-xs text-gray-500">{studentProfile.admissionNo}</p>
+              <p className="text-sm font-medium text-gray-900 dark:text-slate-100">{studentProfile.name}</p>
+              <p className="text-xs text-gray-500 dark:text-slate-400">{studentProfile.admissionNo}</p>
             </div>
             <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
               <User className="w-5 h-5 text-white" />
@@ -200,12 +229,12 @@ export default function StudentDashboard() {
           className={`
             fixed lg:static inset-y-0 left-0 z-30 flex flex-col
             ${sidebarCollapsed ? 'w-20' : 'w-64'}
-            bg-white shadow-lg transform transition-all duration-300 ease-in-out
+            border-r border-white/60 bg-white/72 shadow-lg backdrop-blur-xl transform transition-all duration-300 ease-in-out dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/30
             ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           `}
         >
           {/* Collapse/Expand Toggle (Desktop Only) */}
-          <div className="hidden lg:flex justify-end p-2 border-b border-gray-100">
+          <div className="hidden lg:flex justify-end p-2 border-b border-gray-100 dark:border-slate-800">
             <Button
               variant="ghost"
               size="icon"
@@ -228,12 +257,12 @@ export default function StudentDashboard() {
                   setActiveTab(key);
                   setSidebarOpen(false);
                 }}
-                className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors
+                className={`w-full flex items-center rounded-2xl px-4 py-3 transition-all duration-200
                   ${sidebarCollapsed ? 'justify-center' : 'gap-3'}
                   ${
                   activeTab === key
-                    ? 'bg-amber-50 text-amber-700'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-slate-300 dark:hover:bg-slate-800'
                 }`}
               >
                 <Icon className="w-5 h-5 flex-shrink-0" />
@@ -242,23 +271,10 @@ export default function StudentDashboard() {
                 )}
               </button>
             ))}
-            
-            {/* Chatbot - Routes to separate page */}
-            <Link to="/student/chatbot">
-              <button
-                className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100 ${sidebarCollapsed ? 'justify-center' : 'gap-3'}`}
-                onClick={() => setSidebarOpen(false)}
-              >
-                <MessageCircle className="w-5 h-5 flex-shrink-0" />
-                {!sidebarCollapsed && (
-                  <span className="font-medium whitespace-nowrap">Chatbot</span>
-                )}
-              </button>
-            </Link>
 
             <div className="pt-4 mt-4 border-t border-gray-200">
-              <Link to="/">
-                <button className={`w-full flex items-center px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors ${sidebarCollapsed ? 'justify-center' : 'gap-3'}`}>
+              <Link to="/" onClick={handleLogout}>
+                <button className={`w-full flex items-center px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors dark:hover:bg-red-500/10 ${sidebarCollapsed ? 'justify-center' : 'gap-3'}`}>
                   <LogOut className="w-5 h-5 flex-shrink-0" />
                   {!sidebarCollapsed && (
                     <span className="font-medium whitespace-nowrap">Logout</span>
@@ -270,12 +286,39 @@ export default function StudentDashboard() {
         </aside>
 
         {/* ── Main Content ──────────────────────────── */}
-        <main className="flex-1 p-6 min-w-0 transition-all duration-300 w-full overflow-hidden">
+        <main className="flex-1 min-w-0 w-full overflow-hidden p-6 transition-all duration-300 lg:p-8">
 
           {/* ════ DASHBOARD TAB ════ */}
           {activeTab === 'dashboard' && (
             <div className="space-y-6">
-              <h1 className="text-2xl font-bold text-gray-900">My Dashboard</h1>
+              <section className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.22)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75 dark:shadow-black/30 lg:p-8">
+                <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                  <div>
+                    <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-sky-700 dark:border-sky-500/20 dark:bg-sky-500/10 dark:text-sky-300">
+                      <Sparkles className="size-3.5" />
+                      Student Dashboard
+                    </p>
+                    <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">Welcome back to your library space.</h1>
+                    <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      Track your borrowed books, discover new titles, and use the assistant to move through your reading journey faster.
+                    </p>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                    <div className="rounded-2xl bg-gradient-to-br from-sky-500 to-blue-700 p-4 text-white">
+                      <p className="text-xs uppercase tracking-[0.2em] text-sky-100">Admission No</p>
+                      <p className="mt-2 text-lg font-semibold">{studentProfile.admissionNo}</p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Department</p>
+                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{studentProfile.department}</p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Profile</p>
+                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{profileCompletion}% complete</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
               {/* Profile completion warning */}
               {!isProfileComplete && (
@@ -300,21 +343,21 @@ export default function StudentDashboard() {
 
               {/* Borrowed Books */}
               <section>
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">Borrowed Books</h2>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4 dark:text-slate-100">Borrowed Books</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {historyRecords.map((record) => (
                     <div
                       key={record.id}
-                      className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow"
+                      className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20"
                     >
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="font-semibold text-gray-900">{record.bookName}</h3>
+                        <h3 className="font-semibold text-gray-900 dark:text-slate-100">{record.bookName}</h3>
                         <Badge className={`${getStatusColor(record.status)} flex items-center gap-1`}>
                           {getStatusIcon(record.status)}
                           {record.status}
                         </Badge>
                       </div>
-                      <div className="space-y-2 text-sm text-gray-600">
+                      <div className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
                         <div className="flex justify-between">
                           <span>Issue Date:</span>
                           <span className="font-medium">{record.issueDate}</span>
@@ -339,10 +382,10 @@ export default function StudentDashboard() {
 
               {/* Available Books */}
               <section>
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">Available Books</h2>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4 dark:text-slate-100">Available Books</h2>
 
                 <div className="mb-4 flex flex-wrap items-center gap-3">
-                  <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                  <div className="flex items-center gap-2 text-sm text-gray-700 font-medium dark:text-slate-300">
                     <span>Department:</span>
                   </div>
                   {departments.map((department) => (
@@ -352,7 +395,7 @@ export default function StudentDashboard() {
                       className={`rounded-full px-4 py-2 text-sm transition-all border ${
                         selectedDepartment === department
                           ? 'bg-amber-600 text-white border-amber-600'
-                          : 'bg-white text-gray-700 border-gray-200 hover:border-amber-300 hover:text-amber-700'
+                          : 'bg-white text-gray-700 border-gray-200 hover:border-amber-300 hover:text-amber-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-amber-400 dark:hover:text-amber-300'
                       }`}
                     >
                       {department}
@@ -363,7 +406,7 @@ export default function StudentDashboard() {
                 <div className="mb-6">
                   <div className="relative max-w-lg w-full md:w-1/2 lg:w-1/3">
                     {/* highlighted search box, left-aligned */}
-                    <div className="relative bg-white border border-amber-200 rounded-xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-amber-300">
+                    <div className="relative bg-white border border-amber-200 rounded-xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-amber-300 dark:border-amber-500/30 dark:bg-slate-900">
                       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-400" />
                       <Input
                         type="text"
@@ -377,7 +420,7 @@ export default function StudentDashboard() {
                 </div>
 
                 {availableBooks.length === 0 ? (
-                  <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-sm text-gray-600">
+                  <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-sm text-gray-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">
                     No available books found for {selectedDepartment}.
                   </div>
                 ) : (
@@ -385,9 +428,9 @@ export default function StudentDashboard() {
                     {availableBooks.slice(0, 12).map((book) => (
                       <div
                         key={book.id}
-                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20"
                       >
-                        <div className="bg-gray-50 p-4 flex items-center justify-center">
+                        <div className="bg-gray-50 p-4 flex items-center justify-center dark:bg-slate-800">
                           <img
                             src={book.coverUrl}
                             alt={book.title}
@@ -398,8 +441,8 @@ export default function StudentDashboard() {
                           <div className="mb-3 flex items-center justify-between gap-2">
                             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-amber-600">{book.department}</span>
                           </div>
-                          <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2">{book.title}</h3>
-                          <p className="text-sm text-gray-600 mb-4 line-clamp-2">{book.author}</p>
+                          <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2 dark:text-slate-100">{book.title}</h3>
+                          <p className="text-sm text-gray-600 mb-4 line-clamp-2 dark:text-slate-400">{book.author}</p>
                           <Button
                             disabled={!isProfileComplete}
                             className="w-full whitespace-nowrap bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
@@ -418,25 +461,25 @@ export default function StudentDashboard() {
           {/* ════ PROFILE TAB ════ */}
           {activeTab === 'profile' && (
             <div className="max-w-2xl">
-              <h1 className="text-2xl font-bold text-gray-900 mb-6">Profile Details</h1>
+              <h1 className="text-2xl font-bold text-gray-900 mb-6 dark:text-slate-100">Profile Details</h1>
 
-              <div className="bg-white rounded-2xl shadow-md p-6">
+              <div className="bg-white rounded-2xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                 {/* Avatar + name */}
                 <div className="flex items-center gap-5 mb-6">
                   <div className="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <User className="w-10 h-10 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900">{studentProfile.name}</h2>
-                    <p className="text-sm text-gray-500">{studentProfile.admissionNo}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{studentProfile.department}</p>
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-slate-100">{studentProfile.name}</h2>
+                    <p className="text-sm text-gray-500 dark:text-slate-400">{studentProfile.admissionNo}</p>
+                    <p className="text-xs text-gray-400 mt-0.5 dark:text-slate-500">{studentProfile.department}</p>
                   </div>
                 </div>
 
                 {/* ── Profile Completion Bar ── */}
-                <div className="mb-6 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                <div className="mb-6 bg-gray-50 rounded-xl p-4 border border-gray-100 dark:border-slate-800 dark:bg-slate-800/70">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-gray-700">Profile Completion</span>
+                    <span className="text-sm font-semibold text-gray-700 dark:text-slate-300">Profile Completion</span>
                     <span
                       className={`text-sm font-bold ${
                         profileCompletion === 100 ? 'text-green-600' : 'text-amber-600'
@@ -445,7 +488,7 @@ export default function StudentDashboard() {
                       {profileCompletion}%
                     </span>
                   </div>
-                  <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden dark:bg-slate-700">
                     <div
                       className={`h-full rounded-full transition-all duration-500 ${
                         profileCompletion === 100
@@ -512,11 +555,11 @@ export default function StudentDashboard() {
           {/* ════ BOOK HISTORY TAB ════ */}
           {activeTab === 'history' && (
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-6">Book History</h1>
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <h1 className="text-2xl font-bold text-gray-900 mb-6 dark:text-slate-100">Book History</h1>
+              <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left">
-                    <thead className="bg-amber-50">
+                    <thead className="bg-amber-50 dark:bg-amber-500/10">
                       <tr>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Book Name</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Issue Date</th>
@@ -527,12 +570,12 @@ export default function StudentDashboard() {
                       </tr>
                     </thead>
 
-                    <tbody className="divide-y divide-gray-100">
+                    <tbody className="divide-y divide-gray-100 dark:divide-slate-800">
                       {historyRecords.map((record) => (
-                        <tr key={record.id} className="hover:bg-gray-50 transition-colors">
-                          <td className="px-5 py-4 text-sm font-medium text-gray-900">{record.bookName}</td>
-                          <td className="px-5 py-4 text-sm text-gray-600">{record.issueDate}</td>
-                          <td className="px-5 py-4 text-sm text-gray-600">{record.returnDate}</td>
+                        <tr key={record.id} className="hover:bg-gray-50 transition-colors dark:hover:bg-slate-800/60">
+                          <td className="px-5 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.bookName}</td>
+                          <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.issueDate}</td>
+                          <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.returnDate}</td>
 
                           <td className="px-5 py-4 whitespace-nowrap">
                             <Badge className={`${getStatusColor(record.status)} flex items-center gap-1 w-fit`}>
@@ -552,7 +595,7 @@ export default function StudentDashboard() {
                                   ? 'Write review...'
                                   : 'Return book to review'
                               }
-                              className="text-sm border border-gray-200 rounded-lg p-2.5 w-full min-w-[180px] min-h-[60px] max-h-32 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:bg-gray-50 disabled:text-gray-400"
+                              className="text-sm border border-gray-200 rounded-lg p-2.5 w-full min-w-[180px] min-h-[60px] max-h-32 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:bg-gray-50 disabled:text-gray-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:disabled:bg-slate-800 dark:disabled:text-slate-500"
                             />
                           </td>
 
@@ -575,31 +618,83 @@ export default function StudentDashboard() {
             </div>
           )}
 
-          {/* ════ CHATBOT TAB REMOVED: Now handled in ChatbotPage.tsx only. */}
+          {/* ════ CHATBOT TAB ════ */}
+          {activeTab === 'chatbot' && (
+            <div className="flex flex-col h-full max-w-4xl">
+              <h1 className="text-2xl font-bold text-gray-900 mb-4 dark:text-slate-100">Library Assistant</h1>
+              
+              <div className="bg-white rounded-xl shadow-md flex flex-col flex-1 overflow-hidden min-h-[500px] dark:bg-slate-900 dark:shadow-black/20">
+                {/* Messages area */}
+                <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50/50 dark:bg-slate-950/30">
+                  {messages.map((msg, i) => (
+                    <div
+                      key={i}
+                      className={`flex gap-3 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
+                    >
+                      {msg.from === 'bot' && (
+                        <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <MessageCircle className="w-4 h-4 text-white" />
+                        </div>
+                      )}
+                      <div
+                        className={`max-w-[75%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+                          msg.from === 'user'
+                            ? 'bg-amber-600 text-white rounded-br-sm'
+                            : 'bg-white border border-gray-100 shadow-sm text-gray-800 rounded-bl-sm dark:border-slate-800 dark:bg-slate-800 dark:text-slate-100'
+                        }`}
+                      >
+                        {msg.text}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Input area */}
+                <div className="bg-white border-t border-gray-100 p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <div className="flex gap-3">
+                    <Input
+                      type="text"
+                      placeholder="Type your message..."
+                      value={chatInput}
+                      onChange={(e) => setChatInput(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && sendChatMessage()}
+                      className="flex-1 rounded-lg px-4 py-3"
+                    />
+                    <Button
+                      onClick={sendChatMessage}
+                      className="bg-amber-600 hover:bg-amber-700 rounded-lg px-5"
+                    >
+                      <Send className="w-5 h-5" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* ════ ABOUT TAB ════ */}
           {activeTab === 'about' && (
             <div className="max-w-4xl">
-              <h1 className="text-2xl font-bold text-gray-900 mb-6">About Library</h1>
-              <div className="bg-white rounded-xl shadow-md p-6 space-y-8">
+              <h1 className="text-2xl font-bold text-gray-900 mb-6 dark:text-slate-100">About Library</h1>
+              <div className="bg-white rounded-xl shadow-md p-6 space-y-8 dark:bg-slate-900 dark:shadow-black/20">
                 {/* PCE Library Overview */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">PCE Library</h2>
-                  <p className="text-gray-600 mb-3">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">PCE Library</h2>
+                  <p className="text-gray-600 mb-3 dark:text-slate-300">
                     PCE Library is Fully Automated Library with 26,273 plus collections. The collection can be searched from public web OPAC and Rack Index. Checked out books can be monitored through the Book Verification System.
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-slate-300">
                     The patron can see the number of books issued and their due date by the help of Library Web Application. Email alerts will be sent to the patron for all the library transactions and overdue of items in their possession. Number of patrons visiting in the library can be analyzed or summarised by the Student In Out Counter.
                   </p>
                 </div>
 
                 {/* Issue and Return */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Issue and Return</h2>
-                  <p className="text-gray-600 mb-4">The Issue and Return System for Faculty and Students:</p>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">Issue and Return</h2>
+                  <p className="text-gray-600 mb-4 dark:text-slate-300">The Issue and Return System for Faculty and Students:</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm border-collapse">
-                      <tbody className="divide-y divide-gray-200">
+                      <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
                         <tr className="bg-amber-50">
                           <td className="border border-gray-200 px-4 py-2 font-semibold text-gray-700">Faculty</td>
                           <td className="border border-gray-200 px-4 py-2 text-gray-600">Book Borrow Duration</td>
@@ -627,22 +722,22 @@ export default function StudentDashboard() {
 
                 {/* Membership Details */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Membership Details</h2>
-                  <p className="text-gray-600 mb-3">For students, faculty and staff of:</p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">Membership Details</h2>
+                  <p className="text-gray-600 mb-3 dark:text-slate-300">For students, faculty and staff of:</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4 dark:text-slate-300">
                     <li><strong>Pillai Campus Colleges</strong> — Against a valid Library Card</li>
                     <li><strong>Other Colleges</strong> — Against a Reference Letter from their Librarian / Principal</li>
                   </ul>
-                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-2 text-gray-700">
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-2 text-gray-700 dark:bg-amber-500/10 dark:border-amber-500/30 dark:text-slate-200">
                     <p className="font-semibold">Membership Terms:</p>
                     <ul className="list-disc list-inside space-y-1.5 text-sm">
                       <li>Only PCE Students Faculty and Staff as registered members are allowed to use the PCE Library.</li>
                       <li>Members should produce their Library Membership card at the entrance of the Library.</li>
                     </ul>
                   </div>
-                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <p className="font-semibold text-gray-700 mb-2">PCE Library Memberships:</p>
-                    <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-600">
+                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 dark:bg-blue-500/10 dark:border-blue-500/30">
+                    <p className="font-semibold text-gray-700 mb-2 dark:text-slate-200">PCE Library Memberships:</p>
+                    <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-slate-300">
                       <li>IUCEE Indo US Collaboration for Engineering Education</li>
                     </ul>
                   </div>
@@ -650,8 +745,8 @@ export default function StudentDashboard() {
 
                 {/* Contact Us */}
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Contact Us</h2>
-                  <div className="space-y-3 text-gray-600">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">Contact Us</h2>
+                  <div className="space-y-3 text-gray-600 dark:text-slate-300">
                     <p>
                       <span className="font-semibold text-gray-700">Ask the Librarian:</span> pcelibrary@mes.ac.in
                     </p>
@@ -678,7 +773,7 @@ export default function StudentDashboard() {
       )}
 
       {/* ── Floating Chatbot (all pages) ── */}
-      <FloatingChatbot />
+      <FloatingChatbot onOpen={() => setActiveTab('chatbot')} />
     </div>
   );
 }
@@ -694,14 +789,15 @@ function ProfileField({
   value: string;
 }) {
   return (
-    <div className="flex items-start gap-3 bg-gray-50 rounded-xl p-3.5 border border-gray-100">
-      <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+    <div className="flex items-start gap-3 bg-gray-50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-800 dark:bg-slate-800/70">
+      <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 dark:bg-amber-500/15">
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="text-xs text-gray-500 mb-0.5">{label}</p>
-        <p className="text-sm font-medium text-gray-900 truncate">{value}</p>
+        <p className="text-xs text-gray-500 mb-0.5 dark:text-slate-400">{label}</p>
+        <p className="text-sm font-medium text-gray-900 truncate dark:text-slate-100">{value}</p>
       </div>
     </div>
   );
 }
+
