@@ -70,11 +70,6 @@ const initialHistoryRecords: HistoryRecord[] = mockBorrowRecords
 type ChatMsg = { from: 'bot' | 'user'; text: string };
 const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
-  { from: 'user', text: 'Can you recommend some books?' },
-  {
-    from: 'bot',
-    text: 'Sure! Based on our collection, I recommend "Computer Graphics", "Computer Architecture", and "Data Structures and Algorithms". Would you like to know their availability?',
-  },
 ];
 
 // ─── Floating Chatbot Button ──────────────────────────────────────────────────
@@ -128,10 +123,6 @@ export default function StudentDashboard() {
     setMessages((prev) => [
       ...prev,
       { from: 'user', text: trimmed },
-      {
-        from: 'bot',
-        text: "Thanks for your message! I'll look that up for you right away. Is there anything else I can help with?",
-      },
     ]);
     setChatInput('');
   };
