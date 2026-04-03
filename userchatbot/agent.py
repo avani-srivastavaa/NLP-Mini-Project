@@ -79,7 +79,7 @@ def get_books_for_department(department):
 
 
 # ============================================================================
-# 2. EMBEDDING MANAGEMENT (Persistent Cache + Stale Check)
+# 2. EMBEDDING MANAGEMENT (Persistent Cache + Stale Check) (ADD SQL QUERY FOR EACH DEPARTMENT)
 # ============================================================================
 def _get_csv_path(department):
     """Returns the absolute path to the department's book CSV."""
