@@ -22,10 +22,11 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { mockBooks, mockBorrowRecords, mockStudents } from '../data/mockData';
+import { ThemeToggle } from '../components/theme/ThemeToggle';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
 
@@ -50,11 +51,14 @@ export default function AdminDashboard() {
         return 'bg-gray-100 text-gray-700';
     }
   };
+  const handleLogout = () => {
+    window.localStorage.removeItem('smart-library-admin-auth');
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.16),_transparent_24%),linear-gradient(180deg,_#f8fafc_0%,_#eef2f7_48%,_#f8fafc_100%)] transition-colors dark:bg-[radial-gradient(circle_at_top_right,_rgba(71,85,105,0.20),_transparent_24%),linear-gradient(180deg,_#020617_0%,_#111827_52%,_#020617_100%)]">
       {/* Top Bar */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      <header className="sticky top-0 z-40 border-b border-white/60 bg-white/70 shadow-sm backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/78">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-4">
             <Button
@@ -67,7 +71,7 @@ export default function AdminDashboard() {
             </Button>
             <div className="flex items-center gap-2">
               <Shield className="w-6 h-6 text-gray-800" />
-              <span className="font-semibold text-gray-900 hidden sm:block">Admin Dashboard</span>
+              <span className="font-semibold text-gray-900 hidden sm:block dark:text-slate-100">Admin Dashboard</span>
             </div>
           </div>
 
@@ -87,9 +91,10 @@ export default function AdminDashboard() {
 
           {/* Admin Profile */}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <div className="hidden sm:block text-right">
-              <p className="text-sm font-medium text-gray-900">Admin User</p>
-              <p className="text-xs text-gray-500">Librarian</p>
+              <p className="text-sm font-medium text-gray-900 dark:text-slate-100">Admin User</p>
+              <p className="text-xs text-gray-500 dark:text-slate-400">Librarian</p>
             </div>
             <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
               <Shield className="w-5 h-5 text-white" />
@@ -117,19 +122,19 @@ export default function AdminDashboard() {
         {/* Sidebar */}
         <aside
           className={`
-            fixed lg:static inset-y-0 left-0 z-30
-            w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out
-            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+            fixed inset-y-0 left-0 z-30 lg:top-[73px] lg:bottom-0
+            w-64 border-r border-white/60 bg-white/72 shadow-lg backdrop-blur-xl transform transition-transform duration-200 ease-in-out dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/30
+            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
           `}
         >
           {/* Close Button - visible on desktop */}
-          <div className="hidden lg:flex justify-end p-2 border-b border-gray-200">
+          <div className="hidden lg:flex justify-end p-2 border-b border-gray-200 dark:border-slate-800">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
+              onClick={() => setSidebarOpen(false)}
               className="hover:bg-gray-100"
-              title={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+              title="Close sidebar"
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </Button>
@@ -205,7 +210,7 @@ export default function AdminDashboard() {
             </button>
 
             <div className="pt-4 mt-4 border-t border-gray-200">
-              <Link to="/">
+              <Link to="/" onClick={handleLogout}>
                 <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors">
                   <LogOut className="w-5 h-5" />
                   <span className="font-medium">Logout</span>
@@ -216,91 +221,121 @@ export default function AdminDashboard() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6">
+        <main
+          className={`flex-1 p-6 transition-[margin] duration-200 lg:p-8 ${
+            sidebarOpen ? 'lg:ml-64' : 'lg:ml-0'
+          }`}
+        >
           {activeTab === 'overview' && (
             <div className="space-y-6">
-              <h1 className="text-2xl font-bold text-gray-900">Overview</h1>
+              <section className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.24)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75 dark:shadow-black/30 lg:p-8">
+                <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                  <div>
+                    <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                      Control Center
+                    </p>
+                    <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">Library operations, organized clearly.</h1>
+                    <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      Monitor activity, update records, and manage the collection from a calmer admin surface designed for quick decisions.
+                    </p>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                    <div className="rounded-2xl bg-slate-950 p-4 text-white dark:bg-slate-100 dark:text-slate-950">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-300 dark:text-slate-500">Role</p>
+                      <p className="mt-2 text-lg font-semibold">Librarian</p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Borrowed</p>
+                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{borrowedBooks} active issues</p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Overdue</p>
+                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{overdueBooks} pending action</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
               {/* Stats Cards */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white rounded-xl shadow-md p-6">
+                <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                       <BookOpen className="w-6 h-6 text-blue-600" />
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-1">Total Books</p>
-                  <p className="text-3xl font-bold text-gray-900">{totalBooks}</p>
+                  <p className="text-sm text-gray-600 mb-1 dark:text-slate-400">Total Books</p>
+                  <p className="text-3xl font-bold text-gray-900 dark:text-slate-100">{totalBooks}</p>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-6">
+                <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                       <Clock className="w-6 h-6 text-yellow-600" />
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-1">Borrowed Books</p>
-                  <p className="text-3xl font-bold text-gray-900">{borrowedBooks}</p>
+                  <p className="text-sm text-gray-600 mb-1 dark:text-slate-400">Borrowed Books</p>
+                  <p className="text-3xl font-bold text-gray-900 dark:text-slate-100">{borrowedBooks}</p>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-6">
+                <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                       <Users className="w-6 h-6 text-green-600" />
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-1">Active Students</p>
-                  <p className="text-3xl font-bold text-gray-900">{activeStudents}</p>
+                  <p className="text-sm text-gray-600 mb-1 dark:text-slate-400">Active Students</p>
+                  <p className="text-3xl font-bold text-gray-900 dark:text-slate-100">{activeStudents}</p>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-6">
+                <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
                       <Clock className="w-6 h-6 text-red-600" />
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-1">Overdue Books</p>
-                  <p className="text-3xl font-bold text-gray-900">{overdueBooks}</p>
+                  <p className="text-sm text-gray-600 mb-1 dark:text-slate-400">Overdue Books</p>
+                  <p className="text-3xl font-bold text-gray-900 dark:text-slate-100">{overdueBooks}</p>
                 </div>
               </div>
 
               {/* Recent Activity Feed */}
-              <div className="bg-white rounded-xl shadow-md p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+              <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4 dark:text-slate-100">Recent Activity</h2>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-4 h-4 text-blue-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-900">
+                      <p className="text-sm text-gray-900 dark:text-slate-100">
                         <span className="font-medium">John Doe</span> borrowed{' '}
                         <span className="font-medium">1984</span>
                       </p>
-                      <p className="text-xs text-gray-500">2 hours ago</p>
+                      <p className="text-xs text-gray-500 dark:text-slate-400">2 hours ago</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
                     <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-900">
+                      <p className="text-sm text-gray-900 dark:text-slate-100">
                         <span className="font-medium">Alice Johnson</span> returned{' '}
                         <span className="font-medium">Clean Code</span>
                       </p>
-                      <p className="text-xs text-gray-500">5 hours ago</p>
+                      <p className="text-xs text-gray-500 dark:text-slate-400">5 hours ago</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Plus className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-900">
+                      <p className="text-sm text-gray-900 dark:text-slate-100">
                         New book added: <span className="font-medium">Atomic Habits</span>
                       </p>
-                      <p className="text-xs text-gray-500">1 day ago</p>
+                      <p className="text-xs text-gray-500 dark:text-slate-400">1 day ago</p>
                     </div>
                   </div>
                 </div>
@@ -311,17 +346,17 @@ export default function AdminDashboard() {
           {activeTab === 'books' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gray-900">Books Management</h1>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Books Management</h1>
                 <Button className="bg-blue-600 hover:bg-blue-700 rounded-lg">
                   <Plus className="w-4 h-4 mr-2" />
                   Add New Book
                 </Button>
               </div>
 
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-gray-50 dark:bg-slate-800">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Book ID</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
@@ -331,14 +366,14 @@ export default function AdminDashboard() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
                       {mockBooks.map((book) => (
-                        <tr key={book.id} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900">{book.id}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900">{book.title}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{book.author}</td>
+                        <tr key={book.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{book.id}</td>
+                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{book.title}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{book.author}</td>
                           <td className="px-6 py-4">
-                            <Badge variant="outline">{book.category}</Badge>
+                            <Badge variant="outline">{book.department}</Badge>
                           </td>
                           <td className="px-6 py-4">
                             <Badge className={book.available ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}>
@@ -367,7 +402,7 @@ export default function AdminDashboard() {
           {activeTab === 'records' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gray-900">Borrow Records</h1>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Borrow Records</h1>
                 <div className="flex gap-2">
                   <Button
                     variant={statusFilter === 'all' ? 'default' : 'outline'}
@@ -400,10 +435,10 @@ export default function AdminDashboard() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-gray-50 dark:bg-slate-800">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Student Name</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Book Name</th>
@@ -413,13 +448,13 @@ export default function AdminDashboard() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
                       {filteredRecords.map((record) => (
-                        <tr key={record.id} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900">{record.studentName}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900">{record.bookName}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{record.issueDate}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{record.returnDate}</td>
+                        <tr key={record.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.studentName}</td>
+                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{record.bookName}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.issueDate}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.returnDate}</td>
                           <td className="px-6 py-4">
                             <Badge className={getStatusColor(record.status)}>
                               {record.status}
@@ -443,12 +478,12 @@ export default function AdminDashboard() {
 
           {activeTab === 'students' && (
             <div className="space-y-6">
-              <h1 className="text-2xl font-bold text-gray-900">Student Directory</h1>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Student Directory</h1>
 
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-gray-50 dark:bg-slate-800">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Student ID</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
@@ -457,13 +492,13 @@ export default function AdminDashboard() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
                       {mockStudents.map((student) => (
-                        <tr key={student.id} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900">{student.id}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900">{student.name}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{student.email}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{student.booksBorrowed}</td>
+                        <tr key={student.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{student.id}</td>
+                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{student.name}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.email}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.booksBorrowed}</td>
                           <td className="px-6 py-4">
                             <div className="flex gap-2">
                               <Button variant="outline" size="sm" className="rounded-lg">
@@ -495,3 +530,4 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
