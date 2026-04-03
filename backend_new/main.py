@@ -238,70 +238,165 @@ def search(query: str, db: Session = Depends(get_db)):
 # =========================
 # ANALYTICS API (ENHANCED)
 # =========================
+@app.get("/debug")
+def debug():
+    return {"books_count": len(books_csv), "first_book": books_csv.iloc[0].to_dict() if len(books_csv) > 0 else "No books"}
+
+# =========================
 @app.get("/analytics")
 def get_analytics(db: Session = Depends(get_db)):
-    from datetime import datetime, timedelta
+    try:
+        from datetime import datetime, timedelta
 
-    # 1. Active Users (Total registered students)
-    active_users = db.query(models.Student).count()
+        # Basic data
+        active_users = db.query(models.Student).count()
+        total_books = len(books_csv)
+        currently_borrowed = db.query(models.BorrowRecord).filter(models.BorrowRecord.return_date == None).count()
+        total_borrows = db.query(models.BorrowRecord).count()
 
-    # 2. Total Books Available
-    total_books = len(books_csv)
+        # Overdue Books (14+ days not returned)
+        fourteen_days_ago = datetime.utcnow() - timedelta(days=14)
+        overdue_books = db.query(models.BorrowRecord).filter(
+            models.BorrowRecord.return_date == None,
+            models.BorrowRecord.borrow_date < fourteen_days_ago
+        ).count()
 
-    # 3. Currently Borrowed Books
-    currently_borrowed = db.query(models.BorrowRecord).filter(
-        models.BorrowRecord.return_date == None
-    ).count()
+        # Return Rate (percentage of returned books)
+        returned_books = db.query(models.BorrowRecord).filter(models.BorrowRecord.return_date != None).count()
+        return_rate = round((returned_books / total_borrows * 100), 1) if total_borrows > 0 else 0
 
-    # 4. Total Borrow Transactions (All time)
-    total_borrows = db.query(models.BorrowRecord).count()
+        # Most Borrowed Books
+        most_borrowed = db.query(
+            models.BorrowRecord.book_title,
+            func.count(models.BorrowRecord.id).label('total')
+        ).group_by(models.BorrowRecord.book_title).order_by(desc('total')).limit(10).all()
 
-    # 5. Overdue Books (More than 14 days)
-    overdue_books = db.query(models.BorrowRecord).filter(
-        models.BorrowRecord.return_date == None,
-        models.BorrowRecord.borrow_date < datetime.utcnow() - timedelta(days=14)
-    ).count()
+        # Most Searched Books
+        most_searched = db.query(
+            models.SearchLog.top_result_title,
+            func.count(models.SearchLog.id).label('total')
+        ).group_by(models.SearchLog.top_result_title).order_by(desc('total')).limit(10).all()
 
-    # 6. Most Borrowed Books (Top 10)
-    most_borrowed = db.query(
-        models.BorrowRecord.book_title,
-        func.count(models.BorrowRecord.id).label('total')
-    ).group_by(models.BorrowRecord.book_title).order_by(desc('total')).limit(10).all()
+        # Books Borrowed by Book Department + Students Borrowing per Book Department
+        known_departments = [
+            'Computer Science', 'Information Technology', 'ECS', 'EXTC', 'Automobile', 'Mechanical'
+        ]
+        books_borrowed_by_dept = {d: 0 for d in known_departments}
+        students_borrowing_by_dept = {d: set() for d in known_departments}
 
-    # 7. Most Searched Books (Top 10)
-    most_searched = db.query(
-        models.SearchLog.top_result_title,
-        func.count(models.SearchLog.id).label('total')
-    ).group_by(models.SearchLog.top_result_title).order_by(desc('total')).limit(10).all()
+        borrow_records = db.query(models.BorrowRecord).all()
+        for record in borrow_records:
+            book_id = str(record.book_id).strip()
+            book_row = books_csv[books_csv['Book_ID'] == book_id]
+            if book_row.empty:
+                continue
+            book_dept = str(book_row.iloc[0]['Department']).strip()
+            if book_dept not in books_borrowed_by_dept:
+                # Track unexpected department but avoid polluting main 6
+                books_borrowed_by_dept.setdefault(book_dept, 0)
+                students_borrowing_by_dept.setdefault(book_dept, set())
+            books_borrowed_by_dept[book_dept] = books_borrowed_by_dept.get(book_dept, 0) + 1
+            students_borrowing_by_dept[book_dept].add(record.student_id)
 
-    # 8. Popular Subjects (Department-wise borrows)
-    all_borrows = db.query(models.BorrowRecord.book_id).all()
-    borrowed_ids = [b[0] for b in all_borrows]
-    dept_counts = {}
-    if borrowed_ids:
-        borrowed_books = books_csv[books_csv["Book_ID"].isin(borrowed_ids)]
-        dept_counts = borrowed_books["Department"].value_counts().to_dict()
+        # Borrow/Return Timeline
+        thirty_days_ago = datetime.utcnow() - timedelta(days=30)
+        borrow_timeline_data = db.query(
+            func.date(models.BorrowRecord.borrow_date).label('date'),
+            func.count(models.BorrowRecord.id).label('borrows')
+        ).filter(models.BorrowRecord.borrow_date >= thirty_days_ago).group_by(
+            func.date(models.BorrowRecord.borrow_date)
+        ).order_by(func.date(models.BorrowRecord.borrow_date)).all()
 
-    # 9. Borrow Timeline (Last 30 days with proper date formatting)
-    thirty_days_ago = datetime.utcnow() - timedelta(days=30)
-    timeline_data = db.query(
+        return_timeline_data = db.query(
+            func.date(models.BorrowRecord.return_date).label('date'),
+            func.count(models.BorrowRecord.id).label('returns')
+        ).filter(
+            models.BorrowRecord.return_date >= thirty_days_ago,
+            models.BorrowRecord.return_date != None
+        ).group_by(
+            func.date(models.BorrowRecord.return_date)
+        ).order_by(func.date(models.BorrowRecord.return_date)).all()
+
+        # Fill in missing dates (last 7 days)
+        timeline = []
+        current_date = thirty_days_ago.date()
+        end_date = datetime.utcnow().date()
+        borrow_dict = {str(r[0]): r[1] for r in borrow_timeline_data}
+        return_dict = {str(r[0]): r[1] for r in return_timeline_data}
+
+        while current_date <= end_date:
+            date_str = current_date.strftime('%Y-%m-%d')
+            timeline.append({
+                'date': date_str,
+                'borrows': borrow_dict.get(date_str, 0),
+                'returns': return_dict.get(date_str, 0)
+            })
+            current_date += timedelta(days=1)
+
+        timeline = timeline[-7:] if len(timeline) > 7 else timeline
+
+        return {
+            'active_users': active_users,
+            'total_books': total_books,
+            'currently_borrowed': currently_borrowed,
+            'total_borrows': total_borrows,
+            'overdue_books': overdue_books,
+            'return_rate': return_rate,
+            'most_borrowed': [{'name': m[0], 'value': m[1]} for m in most_borrowed],
+            'most_searched': [{'name': s[0], 'value': s[1]} for s in most_searched],
+            'books_borrowed_by_dept': [{'name': k, 'value': books_borrowed_by_dept[k]} for k in known_departments],
+            'students_borrowing_by_dept': [{'name': k, 'value': len(students_borrowing_by_dept[k])} for k in known_departments],
+            'timeline': timeline
+        }
+
+    except Exception as e:
+        return {
+            'error': str(e),
+            'active_users': 0,
+            'total_books': 0,
+            'currently_borrowed': 0,
+            'total_borrows': 0,
+            'overdue_books': 0,
+            'return_rate': 0,
+            'most_borrowed': [],
+            'most_searched': [],
+            'books_borrowed_by_dept': [],
+            'students_borrowing_by_dept': [],
+            'timeline': []
+        }
+
+    # Borrow timeline
+    borrow_timeline_data = db.query(
         func.date(models.BorrowRecord.borrow_date).label('date'),
         func.count(models.BorrowRecord.id).label('borrows')
     ).filter(models.BorrowRecord.borrow_date >= thirty_days_ago).group_by(
         func.date(models.BorrowRecord.borrow_date)
     ).order_by(func.date(models.BorrowRecord.borrow_date)).all()
 
-    # Fill missing dates with 0 borrows
+    # Return timeline
+    return_timeline_data = db.query(
+        func.date(models.BorrowRecord.return_date).label('date'),
+        func.count(models.BorrowRecord.id).label('returns')
+    ).filter(
+        models.BorrowRecord.return_date >= thirty_days_ago,
+        models.BorrowRecord.return_date != None
+    ).group_by(
+        func.date(models.BorrowRecord.return_date)
+    ).order_by(func.date(models.BorrowRecord.return_date)).all()
+
+    # Fill missing dates with 0 for both borrows and returns
     timeline = []
     current_date = thirty_days_ago.date()
     end_date = datetime.utcnow().date()
 
-    timeline_dict = {str(t[0]): t[1] for t in timeline_data}
+    borrow_dict = {str(t[0]): t[1] for t in borrow_timeline_data}
+    return_dict = {str(t[0]): t[1] for t in return_timeline_data}
 
     while current_date <= end_date:
         date_str = current_date.strftime('%Y-%m-%d')
-        borrows = timeline_dict.get(date_str, 0)
-        timeline.append({"date": date_str, "borrows": borrows})
+        borrows = borrow_dict.get(date_str, 0)
+        returns = return_dict.get(date_str, 0)
+        timeline.append({"date": date_str, "borrows": borrows, "returns": returns})
         current_date += timedelta(days=1)
 
     # Keep only last 7 days for the chart
@@ -340,15 +435,7 @@ def get_analytics(db: Session = Depends(get_db)):
         "most_borrowed": [{"name": b[0], "value": b[1]} for b in most_borrowed],
         "most_searched": [{"name": s[0], "value": s[1]} for s in most_searched],
         "popular_subjects": [{"name": k, "value": v} for k, v in dept_counts.items()],
-        "student_departments": [{"name": d[0], "value": d[1]} for d in dept_students],
-        "timeline": timeline,
-        "recent_activity": [
-            {
-                "book_title": r.book_title,
-                "student_id": r.student_id,
-                "borrow_date": r.borrow_date.strftime('%Y-%m-%d'),
-                "return_date": r.return_date.strftime('%Y-%m-%d') if r.return_date else None,
-                "status": "Returned" if r.return_date else "Borrowed"
-            } for r in recent_activity
-        ]
+        "books_borrowed_by_dept": [{"name": k, "value": v} for k, v in books_borrowed_by_dept.items()],
+        "students_borrowing_by_dept": [{"name": k, "value": v} for k, v in students_borrowing_by_dept.items()],
+        "timeline": timeline
     }
