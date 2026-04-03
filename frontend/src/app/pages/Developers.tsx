@@ -3,6 +3,7 @@ import { Book, Code, ArrowLeft } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import { Button } from '../components/ui/button';
 import { useState, useEffect } from 'react';
+import { ThemeToggle } from '../components/theme/ThemeToggle';
 
 const avaniImage = new URL('../components/assets/developers/avani-srivastava.png', import.meta.url).href;
 const sumitImage = new URL('../components/assets/developers/sumit-roy.png', import.meta.url).href;
@@ -75,21 +76,24 @@ export default function Developers() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm">
+      <nav className="bg-white dark:bg-slate-900 shadow-sm dark:shadow-slate-700/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center gap-2">
-              <Book className="w-8 h-8 text-blue-600" />
-              <span className="text-xl font-semibold text-gray-800">Smart Library</span>
+              <Book className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">Smart Library</span>
             </Link>
-            <Link to="/" className="group">
-              <Button className="rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200">
-                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
-                Back to Home
-              </Button>
-            </Link>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Link to="/" className="group">
+                <Button className="rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200">
+                  <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+                  Back to Home
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -97,10 +101,10 @@ export default function Developers() {
       {/* Header Section */}
       <section className="py-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Meet Our Developers
           </h1>
-          <p className="text-2xl text-gray-600">
+          <p className="text-2xl text-gray-600 dark:text-gray-300">
             The talented team behind Smart Library System
           </p>
         </div>
@@ -117,7 +121,7 @@ export default function Developers() {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white">
                   <IconComponent className="w-6 h-6" />
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
                   {group.domain}
                 </h2>
               </div>
@@ -130,7 +134,7 @@ export default function Developers() {
                   return (
                     <div
                       key={member.name}
-                      className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100 relative"
+                      className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100 dark:border-slate-700 relative"
                     >
                       {/* LinkedIn Icon - Upper Right Corner */}
                       {member.linkedinUrl ? (
@@ -138,12 +142,12 @@ export default function Developers() {
                           href={member.linkedinUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="absolute top-4 right-4 text-blue-600 hover:text-blue-800 transition-colors"
+                          className="absolute top-4 right-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
                         >
                           <FaLinkedin size={32} />
                         </a>
                       ) : (
-                        <div className="absolute top-4 right-4 text-gray-300">
+                        <div className="absolute top-4 right-4 text-gray-300 dark:text-gray-600">
                           <FaLinkedin size={32} />
                         </div>
                       )}
@@ -165,7 +169,7 @@ export default function Developers() {
                       </div>
 
                       {/* Member Name */}
-                      <h3 className="text-2xl font-bold text-gray-900 text-center">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
                         {member.name}
                       </h3>
                     </div>
@@ -178,8 +182,8 @@ export default function Developers() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white text-gray-800 py-12 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+      <footer className="bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-100 py-12 border-t border-gray-200 dark:border-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 dark:text-gray-400">
           <p>&copy; 2026 Smart Library System. All rights reserved.</p>
           <p className="mt-2 text-sm">
             Developed as a learning project at{' '}
@@ -187,7 +191,7 @@ export default function Developers() {
               href="https://pce.ac.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 font-semibold"
+              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-semibold"
             >
               Pillai College of Engineering
             </a>
