@@ -6,7 +6,7 @@ __pycache__/
 nlp_venv/
 .env/
 .env
-
+cache/
 # Logs
 *.log
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
+import ChatbotPage from './ChatbotPage';
 import {
   Book,
   Search,
@@ -611,56 +612,7 @@ export default function StudentDashboard() {
 
           {/* ════ CHATBOT TAB ════ */}
           {activeTab === 'chatbot' && (
-            <div className="flex flex-col h-full max-w-4xl">
-              <h1 className="text-2xl font-bold text-gray-900 mb-4 dark:text-slate-100">Library Assistant</h1>
-              
-              <div className="bg-white rounded-xl shadow-md flex flex-col flex-1 overflow-hidden min-h-[500px] dark:bg-slate-900 dark:shadow-black/20">
-                {/* Messages area */}
-                <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50/50 dark:bg-slate-950/30">
-                  {messages.map((msg, i) => (
-                    <div
-                      key={i}
-                      className={`flex gap-3 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      {msg.from === 'bot' && (
-                        <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                          <MessageCircle className="w-4 h-4 text-white" />
-                        </div>
-                      )}
-                      <div
-                        className={`max-w-[75%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-                          msg.from === 'user'
-                            ? 'bg-amber-600 text-white rounded-br-sm'
-                            : 'bg-white border border-gray-100 shadow-sm text-gray-800 rounded-bl-sm dark:border-slate-800 dark:bg-slate-800 dark:text-slate-100'
-                        }`}
-                      >
-                        {msg.text}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Input area */}
-                <div className="bg-white border-t border-gray-100 p-4 dark:border-slate-800 dark:bg-slate-900">
-                  <div className="flex gap-3">
-                    <Input
-                      type="text"
-                      placeholder="Type your message..."
-                      value={chatInput}
-                      onChange={(e) => setChatInput(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && sendChatMessage()}
-                      className="flex-1 rounded-lg px-4 py-3"
-                    />
-                    <Button
-                      onClick={sendChatMessage}
-                      className="bg-amber-600 hover:bg-amber-700 rounded-lg px-5"
-                    >
-                      <Send className="w-5 h-5" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ChatbotPage />
           )}
 
           {/* ════ ABOUT TAB ════ */}

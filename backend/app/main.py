@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.core.firebase import test_db
 from fastapi.responses import HTMLResponse
-from app.routes import auth,borrow,predict
+from app.routes import auth,borrow,predict,agent
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -22,7 +22,7 @@ firebase = test_db()
 app.include_router(auth.router)
 app.include_router(borrow.router)
 app.include_router(predict.router)
-
+app.include_router(agent.router)
 @app.get("/",response_class=HTMLResponse)
 def chalu_hogaya():
     if firebase:
