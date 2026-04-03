@@ -1,10 +1,10 @@
 Book_ID,Title,Author,Department,Total_Copies,Available_Copies
-B-1250,Automotive Mechanics,William Crouse,Automobile,7,6
+B-1250,Automotive Mechanics,William Crouse,Automobile,7,7
 B-1251,The Motor Vehicle,"Newton, Steeds & Garrett",Automobile,7,7
 B-1252,Automotive Chassis,P.M. Heldt,Automobile,7,7
 B-1253,Automotive Engines,A.K. Babu,Automobile,10,10
 B-1254,Automotive Electrical and Electronics,Tom Denton,Automobile,5,5
-B-1255,Vehicle Dynamics,Reza Jazar,Automobile,13,12
+B-1255,Vehicle Dynamics,Reza Jazar,Automobile,13,13
 B-1256,Advanced Engine Technology,Heinz Heisler,Automobile,15,15
 B-1257,Automobile Electrical and Electronic Systems,Tom Denton,Automobile,6,6
 B-1258,Automotive Transmissions,Harald Naunheimer,Automobile,11,10
