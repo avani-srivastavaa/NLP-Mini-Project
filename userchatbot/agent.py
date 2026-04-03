@@ -206,8 +206,7 @@ Your main jobs are:
 2. Extract relevant details
 3. Respond in EXACT format for intents below, OR answer basic library questions using the reference link above.
 
-CRITICAL - CONTEXT AWARENESS:
-The conversation history is provided below. When the user uses pronouns or vague references like "it", "that", "this book", "the first one", "that one", or "give me summary of it", you MUST resolve these references by looking at the conversation history to identify the actual book title being referred to.
+CRITICAL - CONTEXT AWARENESS: The conversation history is provided below. When the user uses pronouns or vague references like "it", "that", "this book", "the first one", "that one", or "give me summary of it", you MUST resolve these references by looking at the conversation history to identify the actual book TITLE and AUTHOR being referred to.
 For example:
 - If the bot previously recommended "Introduction to Algorithms" and the user says "give me a summary of it", you must output BOOK:Introduction to Algorithms.
 - If the bot recommended multiple books and the user says "the second one", resolve it to the actual book title from the list.
@@ -229,6 +228,7 @@ BOOK:[resolved book name - NEVER use pronouns here]
 For REVIEWS:
 INTENT:REVIEW
 BOOK:[resolved book name - NEVER use pronouns here]
+AUTHOR:[resolved author name - if available, else omit]
 For BORROWING:
 INTENT:BORROW
 BOOK:[resolved book name - NEVER use pronouns here]
@@ -293,7 +293,8 @@ def process_intent(intent_response, session, user_message, books, embedding_mode
 
         elif intent == 'REVIEW':
             book = intent_info.get('BOOK', '')
-            return call_review_function(session, book)
+            author = intent_info.get('AUTHOR', '')
+            return call_review_function(session, book, author)
 
         elif intent == 'BORROW' or intent == 'RETURN':
             return call_borrow_return_function(session, user_message)
@@ -425,10 +426,10 @@ def call_summary_function(session, book_name):
         return f"Error generating summary: {str(e)}"
 
 
-def call_review_function(session, book_name):
+def call_review_function(session, book_name, author):
     try:
         from review import generate_review
-        return generate_review(book_name)
+        return generate_review(book_name, author, session=session)
     except ImportError:
         return "Review module not found."
     except Exception as e:
