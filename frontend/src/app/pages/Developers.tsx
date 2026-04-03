@@ -12,6 +12,7 @@ const adityaImage = new URL('../components/assets/developers/aditya-shinde.png',
 const veenaImage = new URL('../components/assets/developers/veena.png', import.meta.url).href;
 const parthImage = new URL('../components/assets/developers/parth.png', import.meta.url).href;
 const sarthImage = new URL('../components/assets/developers/sarth.png', import.meta.url).href;
+const vedantImage = new URL('../components/assets/developers/vedant.png', import.meta.url).href;
 const jayeshImage = new URL('../components/assets/developers/jayesh.png', import.meta.url).href;
 const tajeshreeImage = new URL('../components/assets/developers/tajeshree.png', import.meta.url).href;
 const vishalImage = new URL('../components/assets/developers/vishal.png', import.meta.url).href;
@@ -31,7 +32,7 @@ const developers = [
     icon: Code,
     members: [
       { name: 'Sarth Patil', linkedinUrl: 'https://www.linkedin.com/in/sarth-patil-993797222?utm_source=share_via&utm_content=profile&utm_medium=member_android', imageUrl: sarthImage },
-      { name: 'Vedant Salve', linkedinUrl: '', imageUrl: undefined },
+      { name: 'Vedant Salve', linkedinUrl: 'https://www.linkedin.com/in/vedant-salve-38b8aa39b', imageUrl: vedantImage },
       { name: 'Parth Patil', linkedinUrl: 'https://www.linkedin.com/in/parth-patil-6210a3310', imageUrl: parthImage },
     ],
   },
