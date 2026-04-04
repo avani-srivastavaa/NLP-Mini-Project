@@ -420,7 +420,7 @@ export default function StudentDashboard() {
                     {availableBooks.slice(0, 12).map((book) => (
                       <div
                         key={book.id}
-                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20"
+                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20 flex h-full flex-col"
                       >
                         <div className="bg-gray-50 p-4 flex items-center justify-center dark:bg-slate-800">
                           <img
@@ -429,15 +429,17 @@ export default function StudentDashboard() {
                             className="w-full h-72 object-contain"
                           />
                         </div>
-                        <div className="p-4">
+                        <div className="p-4 flex flex-col flex-1">
                           <div className="mb-3 flex items-center justify-between gap-2">
                             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-amber-600">{book.department}</span>
                           </div>
-                          <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2 dark:text-slate-100">{book.title}</h3>
-                          <p className="text-sm text-gray-600 mb-4 line-clamp-2 dark:text-slate-400">{book.author}</p>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2 dark:text-slate-100">{book.title}</h3>
+                            <p className="text-sm text-gray-600 mb-4 line-clamp-2 dark:text-slate-400">{book.author}</p>
+                          </div>
                           <Button
                             disabled={!isProfileComplete}
-                            className="w-full whitespace-nowrap bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full whitespace-nowrap bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed mt-auto"
                           >
                             {isProfileComplete ? 'Borrow' : <><Lock className="w-3.5 h-3.5 mr-1" /> Locked</>}
                           </Button>
