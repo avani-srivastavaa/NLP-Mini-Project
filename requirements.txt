@@ -15,6 +15,9 @@ python-dotenv
 sentence-transformers
 scikit-learn
 
+# Database 
+mysql-connector-python
+
 # For CSV and file handling (already covered by pandas)
 
 # If you use summary.py or review.py, add their dependencies as needed
