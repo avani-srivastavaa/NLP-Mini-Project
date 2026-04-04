@@ -75,7 +75,7 @@ function AIChatbotFeatures() {
             return (
               <div
                 key={`${feature.title}-${index}`}
-                className="min-w-[20rem] rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-[0_20px_60px_-24px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-900/85 dark:shadow-black/30 sm:min-w-[24rem]"
+                className="min-w-[20rem] rounded-[1.75rem] border border-white/80 bg-white/80 p-6 backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-900/85 sm:min-w-[24rem]"
               >
                 <div className={`mb-5 flex size-12 items-center justify-center rounded-2xl ${feature.iconBg}`}>
                   <Icon className={`size-6 ${feature.iconColor}`} />
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="relative px-4 pb-20 pt-14 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
+      <section className="relative px-4 pb-10 pt-14 sm:px-6 lg:px-8 lg:pb-16 lg:pt-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/85 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700 shadow-sm dark:border-sky-500/20 dark:bg-slate-900/80 dark:text-sky-200">
@@ -151,18 +151,10 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/student/login">
                 <Button size="lg" className="h-12 rounded-full bg-gradient-to-r from-sky-500 to-blue-700 px-8 text-base text-white shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800">
-                  Explore Library
+                  Explore Library with AI chatbot
                   <ArrowRight className="ml-1 size-5" />
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleAssistantClick}
-                className="h-12 rounded-full border-slate-300 bg-white/80 px-8 text-base dark:border-slate-700 dark:bg-slate-900/70"
-              >
-                Talk to AI Assistant
-              </Button>
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -209,7 +201,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[2rem] border border-white/70 bg-white/75 p-8 shadow-[0_20px_60px_-28px_rgba(15,23,42,0.28)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-700 dark:text-sky-300">About The Library</p>
@@ -231,22 +223,22 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/70 bg-white/75 p-6 shadow-[0_18px_50px_-28px_rgba(15,23,42,0.25)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75">
-              <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300">
+            <div className="rounded-[1.75rem] border border-emerald-100 bg-gradient-to-br from-emerald-500 via-emerald-600 to-cyan-600 p-6 text-white shadow-xl shadow-emerald-500/20">
+              <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-white/15 text-white">
                 <Search className="size-7" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-950 dark:text-slate-100">Faster Discovery</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              <h3 className="text-xl font-semibold">Faster Discovery</h3>
+              <p className="mt-3 text-sm leading-7 text-white/90">
                 Filter and find titles quickly instead of browsing static, tiring lists.
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/70 bg-white/75 p-6 shadow-[0_18px_50px_-28px_rgba(15,23,42,0.25)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/75">
-              <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
+            <div className="rounded-[1.75rem] border border-violet-100 bg-gradient-to-br from-violet-700 via-fuchsia-600 to-purple-500 p-6 text-white shadow-xl shadow-fuchsia-500/20">
+              <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-white/15 text-white">
                 <Users className="size-7" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-950 dark:text-slate-100">Connected Users</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              <h3 className="text-xl font-semibold">Connected Users</h3>
+              <p className="mt-3 text-sm leading-7 text-white/90">
                 Support students, staff, and administrators with one shared, readable system.
               </p>
             </div>
