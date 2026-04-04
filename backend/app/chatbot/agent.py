@@ -30,7 +30,8 @@ EMBEDDING_MODEL = None    # SentenceTransformer instance (loaded once)
 
 # Paths
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
-DATASETS_DIR = os.path.join(os.path.dirname(__file__), "..", "datasets", "dept_books")
+# Point to the root datasets folder (3 levels up from backend/app/chatbot)
+DATASETS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "datasets", "dept_books")
 
 # Department code → CSV filename mapping
 DEPARTMENT_FILE_MAP = {

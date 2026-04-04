@@ -1,7 +1,7 @@
 from fastapi import APIRouter,HTTPException
 from firebase_admin import auth
 from pydantic import BaseModel
-from app.core.firebase import test_db
+from backend.app.core.firebase import test_db
 
 router = APIRouter(prefix="/auth",tags=["Authentication"])
 
