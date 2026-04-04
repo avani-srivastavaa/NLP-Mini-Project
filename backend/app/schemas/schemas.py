@@ -1,20 +1,34 @@
 from pydantic import BaseModel
+from typing import Optional
+from datetime import date, time
 
+# User Schemas
+class UserProfileUpdate(BaseModel):
+    name: Optional[str] = None
+    departement: Optional[str] = None
+    class_name: Optional[str] = None
+    contact_no: Optional[str] = None
+    # email is NOT editable
 
-class StudentCreate(BaseModel):
+class UserLogin(BaseModel):
+    admission_number: str
+    password: str
+
+class UserCreate(BaseModel):
+    admission_number: str
     name: str
-    admission_no: str
-    department: str
+    departement: str
     password: str
 
+class GoogleUserCompleteProfile(BaseModel):
+    admission_number: str
+    name: str
+    departement: str
+    class_name: Optional[str] = None
+    contact_no: Optional[str] = None
+    email: str # Provided by google
 
-class StudentLogin(BaseModel):
-    admission_no: str
-    password: str
-
-
-class BookCreate(BaseModel):
-    id: str   # 🔥 ADD THIS
-    title: str
-    author: str
-    isbn: str
+# Borrowed Books Schema
+class BorrowRequest(BaseModel):
+    admission_number: str
+    book_id: str

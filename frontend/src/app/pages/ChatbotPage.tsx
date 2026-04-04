@@ -14,7 +14,7 @@ const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
 ];
 
-export default function ChatbotPage() {
+export default function ChatbotPage({ user_id, department, name }: { user_id?: string; department?: string; name?: string }) {
   const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ export default function ChatbotPage() {
     setMessages((prev) => [...prev, { from: 'bot', text: '', isLoading: true }]);
 
     try {
-      const res = await sendChatMessage(sessionId, trimmed);
+      const res = await sendChatMessage(sessionId, trimmed, user_id, department);
       setMessages((prev) => {
         const filtered = prev.filter((m) => !m.isLoading);
         return [

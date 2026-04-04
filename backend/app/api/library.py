@@ -1,72 +1,93 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import datetime
-import pandas as pd
-from backend.app.models.models import Student, BorrowRecord, SearchLog
+from backend.app.models.models import User, Book, BorrowedBook
 from backend.app.core.database import get_db
 
 router = APIRouter(tags=["Library"])
 
-# Load CSV
-books_csv = pd.read_csv("backend/data/books-final2.csv")
-books_csv["Book_ID"] = books_csv["Book_ID"].astype(str).str.strip()
+@router.get("/user-borrow-history/{admission_number}")
+def get_user_borrow_history(admission_number: str, db: Session = Depends(get_db)):
+    """
+    Fetches the complete borrowing history for a student from MySQL.
+    """
+    user = db.query(User).filter(User.admission_number == admission_number).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
 
+    history = db.query(BorrowedBook).filter(BorrowedBook.user_id == user.user_id).all()
+    
+    if not history:
+        return {"message": "No borrowing history found", "history": []}
 
-@router.get("/csv-books")
-def get_csv_books():
-    return books_csv.to_dict(orient="records")
+    return history
 
-@router.put("/borrow/{book_id}")
-def borrow(book_id: str, admission_no: str, db: Session = Depends(get_db)):
-    try:
-        student_db = db.query(Student).filter(Student.admission_no == admission_no).first()
-        if not student_db:
-            raise HTTPException(status_code=404, detail="Student not found")
+@router.get("/user-active-borrows/{admission_number}")
+def get_user_active_borrows(admission_number: str, db: Session = Depends(get_db)):
+    """
+    Fetches currently issued books for the dashboard.
+    """
+    user = db.query(User).filter(User.admission_number == admission_number).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
 
-        book_row = books_csv[books_csv["Book_ID"] == book_id.strip()]
-        if book_row.empty:
-            raise HTTPException(status_code=404, detail="Book not found")
+    active = db.query(BorrowedBook).filter(
+        BorrowedBook.user_id == user.user_id,
+        BorrowedBook.status == "issued"
+    ).all()
 
-        book_title = book_row.iloc[0]["Title"]
-        total = int(str(book_row.iloc[0]["Total_Copies"]).strip())
+    if not active:
+        return {"message": "No books borrowed yet", "active_borrows": []}
 
-        borrowed_count = db.query(BorrowRecord).filter(
-            BorrowRecord.book_id == book_id,
-            BorrowRecord.return_date == None
-        ).count()
+    # Enrich with book titles for the dashboard cards
+    results = []
+    for record in active:
+        book = db.query(Book).filter(Book.book_id == record.Book_ID).first()
+        results.append({
+            "issue_id": record.issue_id,
+            "book_id": record.Book_ID,
+            "title": book.title if book else "Unknown",
+            "author": book.author if book else "Unknown",
+            "issue_date": record.b_date,
+            "status": record.status
+        })
 
-        available = total - borrowed_count
-        if available <= 0:
-            raise HTTPException(status_code=400, detail="No copies available")
+    return results
 
-        db.add(BorrowRecord(book_id=book_id, book_title=book_title, student_id=student_db.id))
-        db.commit()
-        return {"message": f"{student_db.name} borrowed {book_title}", "remaining": available - 1}
-    except Exception as e:
-        return {"error": str(e)}
+@router.post("/borrow")
+def borrow_book(admission_number: str, book_id: str, db: Session = Depends(get_db)):
+    """
+    API endpoint for borrowing a book (Syncs with the chatbot logic).
+    """
+    user = db.query(User).filter(User.admission_number == admission_number).first()
+    book = db.query(Book).filter(Book.book_id == book_id).first()
 
-@router.put("/return/{book_id}")
-def return_book(book_id: str, admission_no: str, db: Session = Depends(get_db)):
-    student_db = db.query(Student).filter(Student.admission_no == admission_no).first()
-    if not student_db:
-        raise HTTPException(status_code=404, detail="Student not found")
+    if not user or not book:
+        raise HTTPException(status_code=404, detail="User or Book not found")
 
-    record = db.query(BorrowRecord).filter(
-        BorrowRecord.book_id == book_id,
-        BorrowRecord.student_id == student_db.id,
-        BorrowRecord.return_date == None
+    if book.available_copies <= 0:
+        raise HTTPException(status_code=400, detail="Book out of stock")
+
+    # Check if already issued
+    existing = db.query(BorrowedBook).filter(
+        BorrowedBook.user_id == user.user_id,
+        BorrowedBook.Book_ID == book_id,
+        BorrowedBook.status == "issued"
     ).first()
 
-    if not record:
-        raise HTTPException(status_code=400, detail="No active borrow record")
+    if existing:
+        raise HTTPException(status_code=400, detail="Book already issued to this user")
 
-    record.return_date = datetime.utcnow()
+    # Transaction
+    book.available_copies -= 1
+    new_record = BorrowedBook(
+        user_id=user.user_id,
+        Book_ID=book_id,
+        b_date=datetime.now().date(),
+        b_time=datetime.now().time(),
+        status="issued"
+    )
+    db.add(new_record)
     db.commit()
-    return {"message": f"{student_db.name} returned the book"}
+    return {"message": "Book issued successfully", "book": book.title}
 
-@router.get("/borrow-history")
-def borrow_history(admission_no: str, db: Session = Depends(get_db)):
-    student_db = db.query(Student).filter(Student.admission_no == admission_no).first()
-    if not student_db:
-        return []
-    return db.query(BorrowRecord).filter(BorrowRecord.student_id == student_db.id).all()

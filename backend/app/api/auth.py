@@ -1,31 +1,47 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from backend.app.models.models import Student
-from backend.app.schemas.schemas import StudentCreate, StudentLogin
+from backend.app.models.models import User
+from backend.app.schemas.schemas import UserLogin, UserProfileUpdate
 from backend.app.core.database import get_db
-from backend.app.core.security import hash_password, verify_password
 
-router = APIRouter(tags=["Auth"])
+router = APIRouter(prefix="/auth", tags=["Auth"])
 
-@router.post("/student-register")
-def student_register(student: StudentCreate, db: Session = Depends(get_db)):
-    existing = db.query(Student).filter(Student.admission_no == student.admission_no).first()
-    if existing:
-        raise HTTPException(status_code=400, detail="Student exists")
+@router.post("/login")
+def login(data: UserLogin, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.admission_number == data.admission_number).first()
+    
+    # We use plain text check because the DB currently has dummy plain text passwords
+    if not user or user.password != data.password:
+        raise HTTPException(status_code=400, detail="Invalid admission number or password")
+    
+    return {
+        "message": "Login successful", 
+        "user_id": user.user_id,
+        "admission_number": user.admission_number,
+        "name": user.name,
+        "department": user.departement,
+        "email": user.email
+    }
 
-    new_student = Student(
-        name=student.name,
-        admission_no=student.admission_no,
-        department=student.department,
-        password=hash_password(student.password)
-    )
-    db.add(new_student)
+
+@router.put("/profile/{admission_number}")
+def update_profile(admission_number: str, profile_data: UserProfileUpdate, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.admission_number == admission_number).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    # Update only fields that are provided
+    if profile_data.name is not None:
+        user.name = profile_data.name
+    if profile_data.departement is not None:
+        user.departement = profile_data.departement
+    if profile_data.class_name is not None:
+        user.class_name = profile_data.class_name
+    if profile_data.contact_no is not None:
+        user.contact_no = profile_data.contact_no
+
+    # db.commit() will save the changes directly to MySQL
     db.commit()
-    return {"message": "Registered"}
+    db.refresh(user)
 
-@router.post("/student-login")
-def student_login(data: StudentLogin, db: Session = Depends(get_db)):
-    student = db.query(Student).filter(Student.admission_no == data.admission_no).first()
-    if not student or not verify_password(data.password, student.password):
-        raise HTTPException(status_code=400, detail="Invalid credentials")
-    return {"message": "Login successful"}
+    return {"message": "Profile updated successfully", "user": {"name": user.name, "departement": user.departement, "class": user.class_name, "contact_no": user.contact_no}}

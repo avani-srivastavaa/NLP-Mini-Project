@@ -28,44 +28,23 @@ import {
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
-import { mockBooks, mockBorrowRecords } from '../data/mockData';
+import { mockBooks } from '../data/mockData';
 import { ThemeToggle } from '../components/theme/ThemeToggle';
+import { getUserActiveBorrows, getUserBorrowHistory, updateUserProfile, completeGoogleProfile } from '../data/api';
 
-// ─── Student profile data ────────────────────────────────────────────────────
-const studentProfile = {
-  name: 'Dhiru bhai Ambani',
-  admissionNo: 'ADM-2024-0012',
-  email: 'ambanidhiru@mes.ac.in',
-  department: 'Computer Science',
-  class: 'B.Sc. CS – Year 2',
-  contactNumber: '+91 9912939482',
-};
-
-// Calculate which profile fields are filled (all 6 fields)
-const profileFields = [
-  studentProfile.name,
-  studentProfile.admissionNo,
-  studentProfile.email,
-  studentProfile.department,
-  studentProfile.class,
-  studentProfile.contactNumber,
-];
-const filledFields = profileFields.filter(Boolean).length;
-const profileCompletion = Math.round((filledFields / profileFields.length) * 100);
-
-// ─── History record type with simplified review state ─────────────────────────
+// ─── History record type ──────────────────────────────────────────────────────
 type HistoryRecord = {
-  id: string;
-  bookName: string;
-  issueDate: string;
-  returnDate: string;
+  issue_id: number;
+  book_id: string;
+  book_title: string;
+  item_name?: string; // fallback if book_title is missing
+  b_date: string;
+  b_time: string;
+  r_date: string;
+  r_time: string;
   status: string;
-  comment: string;
+  comment?: string;
 };
-
-const initialHistoryRecords: HistoryRecord[] = mockBorrowRecords
-  .filter((r) => r.studentId === 'S001')
-  .map((r) => ({ ...r, comment: '' }));
 
 // ─── Chatbot messages ─────────────────────────────────────────────────────────
 type ChatMsg = { from: 'bot' | 'user'; text: string };
@@ -88,6 +67,96 @@ function FloatingChatbot({ onOpen }: { onOpen: () => void }) {
   );
 }
 
+// ─── Profile Completion Modal ────────────────────────────────────────────────
+function ProfileCompletionModal({ user, onComplete }: { user: any; onComplete: (data: any) => void }) {
+  const [formData, setFormData] = useState({
+    name: user?.name || '',
+    admission_number: '',
+    department: '',
+    class_name: '',
+    contact_no: ''
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    onComplete(formData);
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 text-left">
+      <div className="w-full max-w-md bg-white rounded-[2rem] shadow-2xl p-8 dark:bg-slate-900 border border-white/20">
+        <div className="mb-6">
+          <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300">
+            <Sparkles className="size-7" />
+          </div>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 text-center">Complete Your Profile</h2>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 text-center">Please provide a few more details to access the full library features.</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Full Name</label>
+            <Input 
+              required 
+              placeholder="John Doe" 
+              value={formData.name} 
+              onChange={e => setFormData({...formData, name: e.target.value})}
+              className="h-11 rounded-xl bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700" 
+            />
+          </div>
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Department</label>
+            <Input 
+              required 
+              placeholder="Computer Science / Mechanical etc." 
+              value={formData.department} 
+              onChange={e => setFormData({...formData, department: e.target.value})}
+              className="h-11 rounded-xl bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700" 
+            />
+          </div>
+          {user?.new_user && (
+            <div className="space-y-1.5">
+              <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Admission Number</label>
+              <Input 
+                required 
+                placeholder="2023PE1250" 
+                value={formData.admission_number} 
+                onChange={e => setFormData({...formData, admission_number: e.target.value})}
+                className="h-11 rounded-xl bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700" 
+              />
+            </div>
+          )}
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Class</label>
+            <Input 
+              required 
+              placeholder="Year 2 / Semester 4" 
+              value={formData.class_name} 
+              onChange={e => setFormData({...formData, class_name: e.target.value})}
+              className="h-11 rounded-xl bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700" 
+            />
+          </div>
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Contact Number</label>
+            <Input 
+              required 
+              placeholder="+91 9876543210" 
+              value={formData.contact_no} 
+              onChange={e => setFormData({...formData, contact_no: e.target.value})}
+              className="h-11 rounded-xl bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700" 
+            />
+          </div>
+
+          <Button type="submit" disabled={loading} className="w-full h-12 mt-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-lg shadow-blue-500/25">
+            {loading ? "Saving Details..." : "Get Started"}
+          </Button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function StudentDashboard() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -99,16 +168,70 @@ export default function StudentDashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
 
+  // User Session
+  const [user, setUser] = useState<any>(() => {
+    const saved = window.localStorage.getItem('smart-library-user');
+    return saved ? JSON.parse(saved) : null;
+  });
+
   // Chatbot messages state
   const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
   const [chatInput, setChatInput] = useState('');
 
-  // History state
-  const [historyRecords, setHistoryRecords] = useState<HistoryRecord[]>(initialHistoryRecords);
+  // Records state
+  const [activeBorrows, setActiveBorrows] = useState<HistoryRecord[]>([]);
+  const [historyRecords, setHistoryRecords] = useState<HistoryRecord[]>([]);
+  const [loadingRecords, setLoadingRecords] = useState(true);
+
+  // Profile Edit state
+  const [isEditing, setIsEditing] = useState(false);
+  const [showCompletionModal, setShowCompletionModal] = useState(user?.new_user === true);
+  const [profileForm, setProfileForm] = useState<any>({
+    name: '',
+    department: '',
+    class_name: '',
+    contact_no: ''
+  });
 
   useEffect(() => {
-    // Empty
-  }, []);
+    if (user && user.admission_number) {
+      loadUserData();
+      // Prep form
+      setProfileForm({
+        name: user.name || '',
+        department: user.department || '',
+        class_name: user.class_name || '',
+        contact_no: user.contact_no || ''
+      });
+    }
+  }, [user]);
+
+  const loadUserData = async () => {
+    setLoadingRecords(true);
+    try {
+      const active = await getUserActiveBorrows(user.admission_number);
+      const history = await getUserBorrowHistory(user.admission_number);
+      setActiveBorrows(active);
+      setHistoryRecords(history);
+    } catch (err) {
+      console.error("Failed to fetch records", err);
+    } finally {
+      setLoadingRecords(false);
+    }
+  };
+
+  // Profile Completion Calculation
+  const profileFields = [
+    user?.name,
+    user?.admission_number,
+    user?.email,
+    user?.department,
+    user?.class_name,
+    user?.contact_no,
+  ];
+  const filledFields = profileFields.filter(Boolean).length;
+  const profileCompletion = Math.round((filledFields / profileFields.length) * 100);
+  const isUserAllProfileFieldsFilled = profileCompletion === 100;
 
   const departments = ['All Departments', ...Array.from(new Set(mockBooks.map((book) => book.department)))];
 
@@ -147,29 +270,57 @@ export default function StudentDashboard() {
   };
 
   // New functions for History Tab
-  const updateComment = (id: string, comment: string) => {
-    setHistoryRecords((prev) =>
-      prev.map((r) => (r.id === id ? { ...r, comment } : r))
-    );
+  const handleSaveProfile = async () => {
+    try {
+      await updateUserProfile(user.admission_number, profileForm);
+      const newUser = { ...user, ...profileForm };
+      setUser(newUser);
+      window.localStorage.setItem('smart-library-user', JSON.stringify(newUser));
+      setIsEditing(false);
+    } catch (err) {
+      alert("Failed to update profile");
+    }
   };
 
-  const handleReturnBook = (id: string) => {
-    setHistoryRecords((prev) =>
-      prev.map((r) =>
-        r.id === id
-          ? {
-              ...r,
-              status: 'returned',
-              returnDate: new Date().toISOString().slice(0, 10),
-            }
-          : r
-      )
-    );
+  const handleProfileComplete = async (data: any) => {
+    try {
+      if (user?.new_user) {
+        // Use the complete profile API for new Google users
+        const payload = {
+          email: user?.email,
+          admission_number: data.admission_number || data.admission_no, // backend expects admission_number
+          name: data.name,
+          departement: data.department, // backend has typo 'departement'
+          class_name: data.class_name,
+          contact_no: data.contact_no
+        };
+        const res = await completeGoogleProfile(payload);
+        const newUser = { ...user, ...data, admission_number: res.admission_number, new_user: false };
+        setUser(newUser);
+        window.localStorage.setItem('smart-library-user', JSON.stringify(newUser));
+        setShowCompletionModal(false);
+        loadUserData();
+      } else {
+        // Standard update
+        await updateUserProfile(user.admission_number, data);
+        const newUser = { ...user, ...data };
+        setUser(newUser);
+        window.localStorage.setItem('smart-library-user', JSON.stringify(newUser));
+        setShowCompletionModal(false);
+      }
+    } catch (err) {
+      alert("Failed to complete profile registration.");
+    }
   };
 
-  const isProfileComplete = profileCompletion === 100;
+  const handleReturnBook = (id: number) => {
+    // In a real app, this would call return API
+    alert("Please visit the library counter to return this book physically.");
+  };
+
   const handleLogout = () => {
     window.localStorage.removeItem('smart-library-student-auth');
+    window.localStorage.removeItem('smart-library-user');
   };
 
   // Nav items
@@ -183,6 +334,11 @@ export default function StudentDashboard() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),_transparent_22%),linear-gradient(180deg,_#f8fbff_0%,_#eff6ff_44%,_#f8fafc_100%)] transition-colors dark:bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_22%),linear-gradient(180deg,_#020617_0%,_#0f172a_52%,_#020617_100%)]">
+
+      {/* Completion Modal for New Users */}
+      {showCompletionModal && (
+        <ProfileCompletionModal user={user} onComplete={handleProfileComplete} />
+      )}
 
       {/* ── Top Bar ───────────────────────────────── */}
       <header className="sticky top-0 z-40 border-b border-white/60 bg-white/70 shadow-sm backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/78">
@@ -205,8 +361,8 @@ export default function StudentDashboard() {
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <div className="hidden sm:block text-right">
-              <p className="text-sm font-medium text-gray-900 dark:text-slate-100">{studentProfile.name}</p>
-              <p className="text-xs text-gray-500 dark:text-slate-400">{studentProfile.admissionNo}</p>
+              <p className="text-sm font-medium text-gray-900 dark:text-slate-100">{user?.name}</p>
+              <p className="text-xs text-gray-500 dark:text-slate-400">{user?.admission_number}</p>
             </div>
             <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
               <User className="w-5 h-5 text-white" />
@@ -298,11 +454,11 @@ export default function StudentDashboard() {
                   <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
                     <div className="rounded-2xl bg-gradient-to-br from-sky-500 to-blue-700 p-4 text-white">
                       <p className="text-xs uppercase tracking-[0.2em] text-sky-100">Admission No</p>
-                      <p className="mt-2 text-lg font-semibold">{studentProfile.admissionNo}</p>
+                      <p className="mt-2 text-lg font-semibold">{user?.admission_number}</p>
                     </div>
                     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
                       <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Department</p>
-                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{studentProfile.department}</p>
+                      <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{user?.department}</p>
                     </div>
                     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70">
                       <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Profile</p>
@@ -313,7 +469,7 @@ export default function StudentDashboard() {
               </section>
 
               {/* Profile completion warning */}
-              {!isProfileComplete && (
+              {!isUserAllProfileFieldsFilled && (
                 <div className="flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 overflow-hidden">
                   <Lock className="w-5 h-5 text-amber-600 flex-shrink-0" />
                   <div className="min-w-0">
@@ -336,40 +492,50 @@ export default function StudentDashboard() {
               {/* Borrowed Books */}
               <section>
                 <h2 className="text-xl font-semibold text-gray-900 mb-4 dark:text-slate-100">Borrowed Books</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {historyRecords.map((record) => (
-                    <div
-                      key={record.id}
-                      className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20"
-                    >
-                      <div className="flex justify-between items-start mb-3">
-                        <h3 className="font-semibold text-gray-900 dark:text-slate-100">{record.bookName}</h3>
-                        <Badge className={`${getStatusColor(record.status)} flex items-center gap-1`}>
-                          {getStatusIcon(record.status)}
-                          {record.status}
-                        </Badge>
-                      </div>
-                      <div className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
-                        <div className="flex justify-between">
-                          <span>Issue Date:</span>
-                          <span className="font-medium">{record.issueDate}</span>
+                {loadingRecords ? (
+                   <div className="h-32 flex items-center justify-center bg-white rounded-xl dark:bg-slate-900">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600"></div>
+                   </div>
+                ) : activeBorrows.length === 0 ? (
+                  <div className="rounded-2xl border border-dashed border-gray-300 bg-white/50 p-8 text-center text-sm text-gray-500 dark:border-slate-700 dark:bg-slate-900/50">
+                    No books borrowed yet.
+                  </div>
+                ) : (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {activeBorrows.map((record) => (
+                      <div
+                        key={record.issue_id}
+                        className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow dark:bg-slate-900 dark:shadow-black/20"
+                      >
+                        <div className="flex justify-between items-start mb-3">
+                          <h3 className="font-semibold text-gray-900 dark:text-slate-100">{record.book_title || record.item_name}</h3>
+                          <Badge className={`${getStatusColor(record.status)} flex items-center gap-1`}>
+                            {getStatusIcon(record.status)}
+                            {record.status}
+                          </Badge>
                         </div>
-                        <div className="flex justify-between">
-                          <span>Return Date:</span>
-                          <span className="font-medium">{record.returnDate}</span>
+                        <div className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+                          <div className="flex justify-between">
+                            <span>Issue Date:</span>
+                            <span className="font-medium">{record.b_date}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Return Date:</span>
+                            <span className="font-medium">{record.r_date}</span>
+                          </div>
                         </div>
+                        {record.status === 'pending' && (
+                          <Button
+                            disabled={!isUserAllProfileFieldsFilled}
+                            className="w-full mt-4 bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isUserAllProfileFieldsFilled ? 'Renew Book' : <><Lock className="w-4 h-4 mr-1" /> Locked</>}
+                          </Button>
+                        )}
                       </div>
-                      {record.status === 'pending' && (
-                        <Button
-                          disabled={!isProfileComplete}
-                          className="w-full mt-4 bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                          {isProfileComplete ? 'Renew Book' : <><Lock className="w-4 h-4 mr-1" /> Locked</>}
-                        </Button>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </section>
 
               {/* Available Books */}
@@ -438,10 +604,10 @@ export default function StudentDashboard() {
                             <p className="text-sm text-gray-600 mb-4 line-clamp-2 dark:text-slate-400">{book.author}</p>
                           </div>
                           <Button
-                            disabled={!isProfileComplete}
+                            disabled={!isUserAllProfileFieldsFilled}
                             className="w-full whitespace-nowrap bg-amber-600 hover:bg-amber-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed mt-auto"
                           >
-                            {isProfileComplete ? 'Borrow' : <><Lock className="w-3.5 h-3.5 mr-1" /> Locked</>}
+                            {isUserAllProfileFieldsFilled ? 'Borrow' : <><Lock className="w-3.5 h-3.5 mr-1" /> Locked</>}
                           </Button>
                         </div>
                       </div>
@@ -464,9 +630,9 @@ export default function StudentDashboard() {
                     <User className="w-10 h-10 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-slate-100">{studentProfile.name}</h2>
-                    <p className="text-sm text-gray-500 dark:text-slate-400">{studentProfile.admissionNo}</p>
-                    <p className="text-xs text-gray-400 mt-0.5 dark:text-slate-500">{studentProfile.department}</p>
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-slate-100">{user?.name}</h2>
+                    <p className="text-sm text-gray-500 dark:text-slate-400">{user?.admission_number}</p>
+                    <p className="text-xs text-gray-400 mt-0.5 dark:text-slate-500">{user?.department}</p>
                   </div>
                 </div>
 
@@ -507,41 +673,71 @@ export default function StudentDashboard() {
 
                 {/* ── Fields Grid ── */}
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <ProfileField
-                    icon={<User className="w-4 h-4 text-amber-600" />}
-                    label="Full Name"
-                    value={studentProfile.name}
-                  />
-                  <ProfileField
-                    icon={<Hash className="w-4 h-4 text-amber-600" />}
-                    label="Admission Number"
-                    value={studentProfile.admissionNo}
-                  />
-                  <ProfileField
-                    icon={<Mail className="w-4 h-4 text-amber-600" />}
-                    label="Email Address"
-                    value={studentProfile.email}
-                  />
-                  <ProfileField
-                    icon={<BookOpen className="w-4 h-4 text-amber-600" />}
-                    label="Department"
-                    value={studentProfile.department}
-                  />
-                  <ProfileField
-                    icon={<GraduationCap className="w-4 h-4 text-amber-600" />}
-                    label="Class"
-                    value={studentProfile.class}
-                  />
-                  <ProfileField
-                    icon={<Phone className="w-4 h-4 text-amber-600" />}
-                    label="Contact Number"
-                    value={studentProfile.contactNumber}
-                  />
+                  {isEditing ? (
+                    <>
+                      <div className="space-y-1">
+                        <label className="text-xs font-medium text-gray-500">Name</label>
+                        <Input value={profileForm.name} onChange={e => setProfileForm({...profileForm, name: e.target.value})} />
+                      </div>
+                      <div className="space-y-1">
+                        <label className="text-xs font-medium text-gray-500">Department</label>
+                        <Input value={profileForm.department} onChange={e => setProfileForm({...profileForm, department: e.target.value})} />
+                      </div>
+                      <div className="space-y-1">
+                        <label className="text-xs font-medium text-gray-500">Class</label>
+                        <Input value={profileForm.class_name} onChange={e => setProfileForm({...profileForm, class_name: e.target.value})} />
+                      </div>
+                      <div className="space-y-1">
+                        <label className="text-xs font-medium text-gray-500">Contact</label>
+                        <Input value={profileForm.contact_no} onChange={e => setProfileForm({...profileForm, contact_no: e.target.value})} />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <ProfileField
+                        icon={<User className="w-4 h-4 text-amber-600" />}
+                        label="Full Name"
+                        value={user?.name}
+                      />
+                      <ProfileField
+                        icon={<Hash className="w-4 h-4 text-amber-600" />}
+                        label="Admission Number"
+                        value={user?.admission_number}
+                      />
+                      <ProfileField
+                        icon={<Mail className="w-4 h-4 text-amber-600" />}
+                        label="Email Address"
+                        value={user?.email}
+                      />
+                      <ProfileField
+                        icon={<BookOpen className="w-4 h-4 text-amber-600" />}
+                        label="Department"
+                        value={user?.department}
+                      />
+                      <ProfileField
+                        icon={<GraduationCap className="w-4 h-4 text-amber-600" />}
+                        label="Class"
+                        value={user?.class_name || 'Not set'}
+                      />
+                      <ProfileField
+                        icon={<Phone className="w-4 h-4 text-amber-600" />}
+                        label="Contact Number"
+                        value={user?.contact_no || 'Not set'}
+                      />
+                    </>
+                  )}
                 </div>
 
-                <Button className="mt-6 bg-amber-600 hover:bg-amber-700 rounded-lg">
-                  Edit Profile
-                </Button>
+                <div className="flex gap-3 mt-6">
+                  {isEditing ? (
+                    <>
+                      <Button onClick={handleSaveProfile} className="bg-green-600 hover:bg-green-700 rounded-lg">Save Changes</Button>
+                      <Button variant="ghost" onClick={() => setIsEditing(false)}>Cancel</Button>
+                    </>
+                  ) : (
+                    <Button onClick={() => setIsEditing(true)} className="bg-amber-600 hover:bg-amber-700 rounded-lg">Edit Profile</Button>
+                  )}
+                </div>
               </div>
             </div>
           )}
@@ -565,46 +761,58 @@ export default function StudentDashboard() {
                     </thead>
 
                     <tbody className="divide-y divide-gray-100 dark:divide-slate-800">
-                      {historyRecords.map((record) => (
-                        <tr key={record.id} className="hover:bg-gray-50 transition-colors dark:hover:bg-slate-800/60">
-                          <td className="px-5 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.bookName}</td>
-                          <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.issueDate}</td>
-                          <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.returnDate}</td>
-
-                          <td className="px-5 py-4 whitespace-nowrap">
-                            <Badge className={`${getStatusColor(record.status)} flex items-center gap-1 w-fit`}>
-                              {getStatusIcon(record.status)}
-                              {record.status}
-                            </Badge>
-                          </td>
-
-                          {/* COMMENT */}
-                          <td className="px-5 py-4 align-top">
-                            <textarea
-                              value={record.comment}
-                              onChange={(e) => updateComment(record.id, e.target.value)}
-                              disabled={record.status !== 'returned'}
-                              placeholder={
-                                record.status === 'returned'
-                                  ? 'Write review...'
-                                  : 'Return book to review'
-                              }
-                              className="text-sm border border-gray-200 rounded-lg p-2.5 w-full min-w-[180px] min-h-[60px] max-h-32 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:bg-gray-50 disabled:text-gray-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:disabled:bg-slate-800 dark:disabled:text-slate-500"
-                            />
-                          </td>
-
-                          {/* RETURN BUTTON */}
-                          <td className="px-5 py-4 whitespace-nowrap">
-                            <Button
-                              onClick={() => handleReturnBook(record.id)}
-                              disabled={record.status === 'returned'}
-                              className="bg-amber-600 hover:bg-amber-700 text-white rounded-lg disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed"
-                            >
-                              {record.status === 'returned' ? 'Returned' : 'Return'}
-                            </Button>
-                          </td>
+                      {loadingRecords ? (
+                        <tr>
+                           <td colSpan={6} className="px-5 py-20 text-center">
+                              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 mx-auto"></div>
+                           </td>
                         </tr>
-                      ))}
+                      ) : historyRecords.length === 0 ? (
+                        <tr>
+                           <td colSpan={6} className="px-5 py-20 text-center text-gray-500">
+                              No borrowing history.
+                           </td>
+                        </tr>
+                      ) : (
+                        historyRecords.map((record) => (
+                          <tr key={record.issue_id} className="hover:bg-gray-50 transition-colors dark:hover:bg-slate-800/60">
+                            <td className="px-5 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.book_title || record.item_name}</td>
+                            <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.b_date}</td>
+                            <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.r_date}</td>
+
+                            <td className="px-5 py-4 whitespace-nowrap">
+                              <Badge className={`${getStatusColor(record.status)} flex items-center gap-1 w-fit`}>
+                                {getStatusIcon(record.status)}
+                                {record.status}
+                              </Badge>
+                            </td>
+
+                            <td className="px-5 py-4 align-top">
+                              <textarea
+                                value={record.comment || ''}
+                                readOnly
+                                disabled={record.status !== 'returned'}
+                                placeholder={
+                                  record.status === 'returned'
+                                    ? 'Visit chat to review...'
+                                    : 'Return book to review'
+                                }
+                                className="text-sm border border-gray-200 rounded-lg p-2.5 w-full min-w-[180px] min-h-[60px] max-h-32 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:bg-gray-50 disabled:text-gray-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:disabled:bg-slate-800 dark:disabled:text-slate-500"
+                              />
+                            </td>
+
+                            <td className="px-5 py-4 whitespace-nowrap">
+                              <Button
+                                onClick={() => handleReturnBook(record.issue_id)}
+                                disabled={record.status === 'returned'}
+                                className="bg-amber-600 hover:bg-amber-700 text-white rounded-lg disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed"
+                              >
+                                {record.status === 'returned' ? 'Returned' : 'Return'}
+                              </Button>
+                            </td>
+                          </tr>
+                        ))
+                      )}
                     </tbody>
                   </table>
                 </div>
@@ -614,7 +822,7 @@ export default function StudentDashboard() {
 
           {/* ════ CHATBOT TAB ════ */}
           {activeTab === 'chatbot' && (
-            <ChatbotPage />
+            <ChatbotPage user_id={user?.admission_number} department={user?.department} name={user?.name} />
           )}
 
           {/* ════ ABOUT TAB ════ */}

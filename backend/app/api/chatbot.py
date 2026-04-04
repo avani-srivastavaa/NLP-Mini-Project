@@ -24,21 +24,35 @@ DEPARTMENT_FILES = {
 BORROW_HISTORY_FILE = "borrowing_history.csv"
 
 
+from sqlalchemy.orm import Session
+from backend.app.core.database import get_db
+from backend.app.models.models import User
+
 @router.post("/chat")
-def chat(request: ChatRequest):
+def chat(request: ChatRequest, db: Session = Depends(get_db)):
     session_id = request.session_id
     message = request.message
     
-    # Create mock session for demo if not exists
+    # Try to resolve session based on session_id (which could be the admission_number for now)
+    user = db.query(User).filter(User.admission_number == session_id).first()
+    
+    # Create or update session in memory
     if session_id not in user_sessions:
-        user_sessions[session_id] = {
-            "username": "webuser",
-            "department": "CS",
-            "year": 2,
-            "chat_history": [],
-            "files": DEPARTMENT_FILES["CS"],
-            "borrow_file": BORROW_HISTORY_FILE
-        }
+        if user:
+            user_sessions[session_id] = {
+                "username": user.name,
+                "department": user.departement or "CS",
+                "year": user.class_name or "Unknown",
+                "chat_history": []
+            }
+        else:
+            # Fallback for demo/testing
+            user_sessions[session_id] = {
+                "username": "Guest",
+                "department": "CS",
+                "year": "Unknown",
+                "chat_history": []
+            }
     
     session = user_sessions[session_id]
     session["chat_history"].append({
@@ -46,7 +60,8 @@ def chat(request: ChatRequest):
         "user_message": message
     })
     
-    response = gemini_agent(session, message)
+    # Pass the database session to the agent for book fetching
+    response = gemini_agent(session, message, db=db)
     
     session["chat_history"].append({
         "user": "bot",
@@ -54,3 +69,4 @@ def chat(request: ChatRequest):
     })
     
     return {"response": response}
+

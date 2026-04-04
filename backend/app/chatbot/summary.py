@@ -1,26 +1,32 @@
-import os
+from sqlalchemy.orm import Session
+from backend.app.models.models import Book
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
 
 
-def generate_summary(book_name, session=None):
+def generate_summary(book_query, db: Session, session=None):
     """
     Generates a concise, academic summary of a book using Google Gemini AI.
-
-    Args:
-        book_name (str): The title of the book to summarize.
-        session (dict, optional): The user session containing department, year,
-                                  and chat_history for contextual summaries.
-
-    Returns:
-        str: A formatted book summary or an error message.
+    Fetches official book details from MySQL if possible.
     """
-    if not book_name or book_name.strip() == "":
+    if not book_query or book_query.strip() == "":
         return "Please specify a book name for the summary."
+
+    # Try to find the book in the database first for better metadata
+    book = db.query(Book).filter(
+        (Book.book_id == book_query) | 
+        (Book.title.ilike(f"%{book_query}%"))
+    ).first()
+
+    if book:
+        display_name = f"{book.title} by {book.author}"
+    else:
+        display_name = book_query
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -44,8 +50,8 @@ SUMMARY FORMAT:
 RULES:
 - Keep the summary concise (under 200 words).
 - Focus on practical value for engineering students.
-- If you are not confident about the book, say so honestly rather than making things up.
-- Do NOT include purchase links or pricing information."""
+- Based on the title/author, provide the most relevant academic summary.
+"""
 
     try:
         client = genai.Client(api_key=api_key)
@@ -56,7 +62,7 @@ RULES:
             temperature=0.4
         )
 
-        prompt = f"Provide a summary of the book: \"{book_name}\""
+        prompt = f"Provide a summary of the book: \"{display_name}\""
 
         response = client.models.generate_content(
             model=MODEL_ID,
@@ -67,9 +73,10 @@ RULES:
         summary_text = response.text.strip()
 
         if not summary_text:
-            return f"Sorry, I couldn't generate a summary for '{book_name}'."
+            return f"Sorry, I couldn't generate a summary for '{display_name}'."
 
-        return f"📖 Summary of '{book_name}':\n\n{summary_text}"
+        return f"📖 Summary of '{display_name}':\n\n{summary_text}"
 
     except Exception as e:
         return f"Error generating summary: {str(e)}"
+

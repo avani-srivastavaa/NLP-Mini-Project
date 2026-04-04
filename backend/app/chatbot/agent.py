@@ -20,6 +20,9 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
+from sqlalchemy.orm import Session
+from backend.app.models.models import Book
+
 
 # ============================================================================
 # GLOBAL CACHES (In-Memory)
@@ -30,62 +33,51 @@ EMBEDDING_MODEL = None    # SentenceTransformer instance (loaded once)
 
 # Paths
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
-# Point to the root datasets folder (3 levels up from backend/app/chatbot)
-DATASETS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "datasets", "dept_books")
 
-# Department code → CSV filename mapping
-DEPARTMENT_FILE_MAP = {
-    "CS": "computer_science_books.csv",
-    "IT": "information_technology_books.csv",
-    "MECH": "mechanical_books.csv",
-    "AUTO": "automobile_books.csv",
-    "ECS": "ecs_books.csv",
-    "EXTC": "extc_books.csv",
-    "FY": "first_year_core_books.csv",
+# Map of display name to database filter name (if different)
+DEPARTMENT_MAP = {
+    "CS": "Computer Science",
+    "IT": "Information Technology",
+    "MECH": "Mechanical",
+    "AUTO": "Automobile",
+    "ECS": "ECS",
+    "EXTC": "EXTC",
+    "FY": "First Year",
 }
 
 
 # ============================================================================
 # 1. BOOK DATA LOADING
 # ============================================================================
-def get_books_for_department(department):
+def get_books_from_db(db: Session, department: str):
     """
-    Reads the department-specific CSV file and returns a list of book
+    Fetches books from the MySQL database and returns a list of book
     dictionaries with standardized fields.
     """
-    filename = DEPARTMENT_FILE_MAP.get(department.upper(), f"{department}_books.csv")
-    csv_path = os.path.join(DATASETS_DIR, filename)
-    if not os.path.exists(csv_path):
-        return []
-
-    df = pd.read_csv(csv_path)
+    dept_filter = DEPARTMENT_MAP.get(department.upper(), department)
+    
+    # Query database
+    db_books = db.query(Book).filter(Book.department == dept_filter).all()
+    
     books = []
-    for _, row in df.iterrows():
-        title = str(row.get("Title", "Unknown"))
-        author = str(row.get("Author", "Unknown"))
-        available_copies = int(row.get("Available_Copies", 0))
-        total_copies = int(row.get("Total_Copies", 0))
-        rating_value = available_copies if available_copies > 0 else total_copies
-        year = 2026
+    for b in db_books:
+        # Map DB fields to what the AI expects
+        title = b.title or "Unknown"
+        author = b.author or "Unknown"
+        
+        # Available copies or Total as fallback
+        rating_value = b.available_copies if b.available_copies is not None else (b.total_copies or 0)
+        
         search_blob = f"{title} {author}".lower()
         books.append({
+            "book_id": b.book_id,
             "title": title,
             "author": author,
-            "price": "N/A",
             "rating": rating_value,
-            "release_year": year,
+            "release_year": 2026,
             "search_blob": search_blob
         })
     return books
-
-
-# ============================================================================
-# 2. EMBEDDING MANAGEMENT (Persistent Cache + Stale Check) (ADD SQL QUERY FOR EACH DEPARTMENT)
-# ============================================================================
-def _get_csv_path(department):
-    """Returns the absolute path to the department's book CSV."""
-    filename = DEPARTMENT_FILE_MAP.get(department.upper(), f"{department}_books.csv")
-    return os.path.join(DATASETS_DIR, filename)
 
 
 def _get_cache_path(department):
@@ -95,23 +87,11 @@ def _get_cache_path(department):
 
 def _is_cache_stale(department):
     """
-    Checks if the cached embeddings are older than the source CSV.
-    Returns True if cache is missing or stale (CSV was updated after cache).
+    Checks if cached embeddings exist. 
+    (For now, we generate fresh if missing. In prod we'd check timestamps or DB counts).
     """
     cache_path = _get_cache_path(department)
-    csv_path = _get_csv_path(department)
-
-    if not os.path.exists(cache_path):
-        return True  # No cache exists, must generate
-
-    if not os.path.exists(csv_path):
-        return False  # No CSV either, nothing to do
-
-    # Compare last-modified timestamps
-    cache_mtime = os.path.getmtime(cache_path)
-    csv_mtime = os.path.getmtime(csv_path)
-
-    return csv_mtime > cache_mtime  # Stale if CSV is newer
+    return not os.path.exists(cache_path)
 
 
 def _load_embedding_model():
@@ -140,20 +120,15 @@ def _generate_and_save_embeddings(department, books):
     return embeddings
 
 
-def ensure_books_and_embeddings(session):
+def ensure_books_and_embeddings(session, db: Session):
     """
     The main "manager" function. Ensures books and embeddings are ready.
-    - Loads books from CSV (cached in memory).
-    - Loads embeddings from .npy cache if fresh, or regenerates if stale.
-
-    Returns:
-        tuple: (books_list, (embedding_model, book_embeddings_array))
     """
     dept = session["department"]
 
-    # Load books into memory cache
+    # Load books into memory cache (or database query)
     if dept not in BOOKS_CACHE:
-        BOOKS_CACHE[dept] = get_books_for_department(dept)
+        BOOKS_CACHE[dept] = get_books_from_db(db, dept)
 
     books = BOOKS_CACHE[dept]
 
@@ -161,7 +136,7 @@ def ensure_books_and_embeddings(session):
     if dept not in EMBEDDINGS_CACHE or _is_cache_stale(dept):
         cache_path = _get_cache_path(dept)
 
-        if not _is_cache_stale(dept) and os.path.exists(cache_path):
+        if os.path.exists(cache_path):
             # Load from disk (fast path)
             embeddings = np.load(cache_path)
             model = _load_embedding_model()
@@ -180,13 +155,13 @@ def ensure_books_and_embeddings(session):
 # ============================================================================
 # 3. GEMINI INTENT DETECTION (with Context Awareness)
 # ============================================================================
-def gemini_agent(session, user_message):
+def gemini_agent(session, user_message, db: Session):
     """
     Uses Google Gemini AI as the main agent chatbot.
     Detects the user's intent and routes to the correct handler.
     """
-    # Ensure books and embeddings are loaded for this department
-    books, (embedding_model, book_embeddings) = ensure_books_and_embeddings(session)
+    # Ensure books and embeddings are loaded for this department using the DB
+    books, (embedding_model, book_embeddings) = ensure_books_and_embeddings(session, db)
 
     def build_chat_context(chat_history=None):
         if chat_history is None:
@@ -261,7 +236,7 @@ Do NOT answer book/borrow/recommendation queries directly - only detect intent a
         gemini_intent = response.text.strip()
         # Debugging: Uncomment to see Gemini's raw thinking
         # print(f"--- DEBUG: Gemini Response ---\n{gemini_intent}\n--- END DEBUG ---")
-        return process_intent(gemini_intent, session, user_message, books, embedding_model, book_embeddings)
+        return process_intent(gemini_intent, session, user_message, books, embedding_model, book_embeddings, db)
     except Exception as e:
         return f"Error: {e}"
 
@@ -269,7 +244,7 @@ Do NOT answer book/borrow/recommendation queries directly - only detect intent a
 # ============================================================================
 # 4. INTENT ROUTING
 # ============================================================================
-def process_intent(intent_response, session, user_message, books, embedding_model, book_embeddings):
+def process_intent(intent_response, session, user_message, books, embedding_model, book_embeddings, db: Session):
     """
     Parses the structured intent from Gemini and routes to the correct handler.
     For RECOMMEND: calls recommend.py's search engine, then formats with Gemini.
@@ -290,15 +265,19 @@ def process_intent(intent_response, session, user_message, books, embedding_mode
 
         elif intent == 'SUMMARY':
             book = intent_info.get('BOOK', '')
-            return call_summary_function(session, book)
+            return call_summary_function(session, book, db)
 
         elif intent == 'REVIEW':
             book = intent_info.get('BOOK', '')
             author = intent_info.get('AUTHOR', '')
-            return call_review_function(session, book, author)
+            return call_review_function(session, book, author, db)
 
         elif intent == 'BORROW' or intent == 'RETURN':
-            return call_borrow_return_function(session, user_message)
+            return call_borrow_return_function(session, user_message, db)
+
+        elif intent == 'LOCATE':
+            book = intent_info.get('BOOK', '')
+            return call_locate_function(session, book, db)
 
         elif intent == 'UNCLEAR':
             return intent_info.get('MESSAGE', 'Please specify your request clearly.')
@@ -417,35 +396,32 @@ def _simple_format(top_books):
 # ============================================================================
 # 6. MODULE CALLERS (Summary, Review, Borrow/Return)
 # ============================================================================
-def call_summary_function(session, book_name):
+def call_summary_function(session, book_name, db: Session):
     try:
-        from summary import generate_summary
-        return generate_summary(book_name, session=session)
+        from backend.app.chatbot.summary import generate_summary
+        return generate_summary(book_name, session=session, db=db)
     except ImportError:
         return "Summary module not found."
-    except Exception as e:
-        return f"Error generating summary: {str(e)}"
 
 
-def call_review_function(session, book_name, author):
+def call_review_function(session, book_name, author, db: Session):
     try:
-        from review import generate_review
-        return generate_review(book_name, author, session=session)
+        from backend.app.chatbot.review import generate_review
+        return generate_review(book_name, author, session=session, db=db)
     except ImportError:
         return "Review module not found."
-    except Exception as e:
-        return f"Error generating review: {str(e)}"
 
 
-def call_borrow_return_function(session, user_message):
-    """
-    Calls borrow/return logic from borrow_or_return.py.
-    This will handle issuing and returning books using CSV data.
-    """
+def call_borrow_return_function(session, user_message, db: Session):
     try:
-        from borrow_or_return import handle_borrow_return
-        return handle_borrow_return(session, user_message)
+        from backend.app.chatbot.borrow_or_return import handle_borrow_return
+        return handle_borrow_return(session, user_message, db=db)
     except ImportError:
-        return "Borrow/Return module not found. Please ensure borrow_or_return.py exists."
-    except Exception as e:
-        return f"Error handling borrow/return: {str(e)}"
+        return "Borrow/Return module not found."
+
+def call_locate_function(session, book_name, db: Session):
+    try:
+        from backend.app.chatbot.locate import handle_locate
+        return handle_locate(book_name, session=session, db=db)
+    except ImportError:
+        return "Locate module not found."

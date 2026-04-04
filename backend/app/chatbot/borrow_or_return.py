@@ -1,37 +1,38 @@
-import os
-import pandas as pd
-from datetime import datetime
+from datetime import datetime, date, time as pytime
+from sqlalchemy.orm import Session
+from backend.app.models.models import Book, BorrowedBook, User
 from google import genai
 from google.genai import types
-
+import os
 
 # MAIN HANDLER
-def handle_borrow_return(session, user_message):
-
+def handle_borrow_return(session, user_message, db: Session):
     try:
-        books_file = session["files"]["books"]
-        borrow_file = session["borrow_file"]
         username = session["username"]
+        dept = session["department"]
+        
+        # 1. Fetch user from DB to get their user_id
+        user = db.query(User).filter(User.name == username).first()
+        if not user:
+             return f"Error: User '{username}' not found in database."
 
-        books_df = pd.read_csv(books_file)
-        history_df = pd.read_csv(borrow_file)
-
-        # Prepare dataset for Gemini
+        # 2. Fetch books (only from user's department for context)
+        db_books = db.query(Book).filter(Book.department.ilike(f"%{dept}%")).all()
         books_text = "\n".join([
-            f"{row['Book_ID']} | {row['Title']} | Available: {row['Available_Copies']}"
-            for _, row in books_df.iterrows()
+            f"{b.book_id} | {b.title} | Available: {b.available_copies}"
+            for b in db_books
         ])
 
-        user_history = history_df[
-            (history_df["Name"] == username) &
-            (history_df["Return_Date"].isna() | (history_df["Return_Date"] == ""))
-        ]
-
+        # 3. Fetch user's current borrowings
+        active_borrows = db.query(BorrowedBook).filter(
+            BorrowedBook.user_id == user.user_id,
+            BorrowedBook.status == "issued"
+        ).all()
+        
         history_text = "\n".join([
-            f"{row['Book_ID']} | {row['Book_Title']}"
-            for _, row in user_history.iterrows()
+            f"{b.Book_ID}"
+            for b in active_borrows
         ]) or "None"
-
 
         # GEMINI PROMPT
         system_instruction = f"""
@@ -40,33 +41,27 @@ You are a STRICT library transaction engine.
 IMPORTANT RULES:
 - You MUST ONLY choose Book_ID from the provided dataset
 - DO NOT invent Book_IDs
-- DO NOT modify titles
 - If unsure, return ERROR
 
 Available Books:
 {books_text}
 
-User Borrowed Books:
+User Borrowed Books (Currently Issued):
 {history_text}
 
 User Request:
 {user_message}
 
 Respond ONLY in format:
-
 ACTION:BORROW or RETURN
 BOOK_ID:[exact id from list]
 
 OR
-
 ACTION:ERROR
 MESSAGE:[reason]
-
-NO extra text.
 """
 
         client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents="Process",
@@ -77,24 +72,20 @@ NO extra text.
         )
 
         decision = response.text.strip()
-
-        return execute_transaction(decision, session, books_df, history_df, books_file, borrow_file)
+        return execute_transaction(decision, user.user_id, db)
 
     except Exception as e:
         return f"Error: {str(e)}"
 
 
-# EXECUTION (STRICT VALIDATION)
-def execute_transaction(decision, session, books_df, history_df, books_file, borrow_file):
-
+# EXECUTION (DB TRANSACTION)
+def execute_transaction(decision, user_id, db: Session):
     try:
-        lines = decision.split("\n")
         data = {}
-
-        for line in lines:
+        for line in decision.split("\n"):
             if ":" in line:
                 key, value = line.split(":", 1)
-                data[key.strip()] = value.strip()
+                data[key.strip().upper()] = value.strip()
 
         action = data.get("ACTION")
         book_id = data.get("BOOK_ID")
@@ -102,94 +93,73 @@ def execute_transaction(decision, session, books_df, history_df, books_file, bor
         if action == "ERROR":
             return data.get("MESSAGE", "Invalid request.")
 
-
-        # HARD VALIDATION
-        if book_id not in books_df["Book_ID"].values:
+        # Validate Book exists
+        book = db.query(Book).filter(Book.book_id == book_id).first()
+        if not book:
             return "Invalid book selection. Please try again."
 
-        book_row = books_df[books_df["Book_ID"] == book_id].iloc[0]
-        book_title = book_row["Title"]
-
         if action == "BORROW":
-            return execute_borrow(session, book_id, book_title, books_df, history_df, books_file, borrow_file)
-
+            return execute_borrow(user_id, book, db)
         elif action == "RETURN":
-            return execute_return(session, book_id, book_title, books_df, history_df, books_file, borrow_file)
-
+            return execute_return(user_id, book, db)
         else:
-            return "Unknown action."
+            return "Unknown action detected."
 
     except Exception as e:
         return f"Execution error: {str(e)}"
 
 
-# BORROW EXECUTION
-def execute_borrow(session, book_id, book_title, books_df, history_df, books_file, borrow_file):
+def execute_borrow(user_id, book, db: Session):
+    # Check if already borrowed
+    already_borrowed = db.query(BorrowedBook).filter(
+        BorrowedBook.user_id == user_id,
+        BorrowedBook.Book_ID == book.book_id,
+        BorrowedBook.status == "issued"
+    ).first()
 
-    username = session["username"]
+    if already_borrowed:
+        return f"You already have '{book.title}' issued."
 
-    # Prevent duplicate borrow
-    already_borrowed = history_df[
-        (history_df["Name"] == username) &
-        (history_df["Book_ID"] == book_id) &
-        (history_df["Return_Date"].isna() | (history_df["Return_Date"] == ""))
-    ]
+    if book.available_copies <= 0:
+        return f"Sorry, '{book.title}' is currently out of stock."
 
-    if not already_borrowed.empty:
-        return f"You already borrowed '{book_title}'."
+    # Update counts
+    book.available_copies -= 1
 
-    book_idx = books_df[books_df["Book_ID"] == book_id].index[0]
-
-    if books_df.loc[book_idx, "Available_Copies"] <= 0:
-        return f"'{book_title}' is not available."
-
-    # Update
-    books_df.loc[book_idx, "Available_Copies"] -= 1
-
-    new_entry = {
-        "Name": username,
-        "Admission_Number": "N/A",
-        "Book_ID": book_id,
-        "Book_Title": book_title,
-        "Issue_Date": datetime.now().strftime("%Y-%m-%d"),
-        "Return_Date": "",
-        "Days_Due": 7
-    }
-
-    history_df = pd.concat([history_df, pd.DataFrame([new_entry])], ignore_index=True)
-
-    # SAVE (disabled for now)
-    # books_df.to_csv(books_file, index=False)
-    # history_df.to_csv(borrow_file, index=False)
-    # TODO: Update in DB/CSV
-
-    return f"Borrow successful: '{book_title}'"
+    # Create record
+    now = datetime.now()
+    new_borrow = BorrowedBook(
+        user_id=user_id,
+        Book_ID=book.book_id,
+        b_date=now.date(),
+        b_time=now.time(),
+        status="issued"
+    )
+    
+    db.add(new_borrow)
+    db.commit()
+    return f"✅ Successfully borrowed: **{book.title}** (ID: {book.book_id}). Please collect it from Rack {book.rack_no}, Shelf {book.shelf_no}."
 
 
-# RETURN EXECUTION
-def execute_return(session, book_id, book_title, books_df, history_df, books_file, borrow_file):
+def execute_return(user_id, book, db: Session):
+    # Find active record
+    record = db.query(BorrowedBook).filter(
+        BorrowedBook.user_id == user_id,
+        BorrowedBook.Book_ID == book.book_id,
+        BorrowedBook.status == "issued"
+    ).first()
 
-    username = session["username"]
+    if not record:
+        return f"You don't have an active borrowing record for '{book.title}'."
 
-    active = history_df[
-        (history_df["Name"] == username) &
-        (history_df["Book_ID"] == book_id) &
-        (history_df["Return_Date"].isna() | (history_df["Return_Date"] == ""))
-    ]
+    # Update record
+    now = datetime.now()
+    record.r_date = now.date()
+    record.r_time = now.time()
+    record.status = "returned"
 
-    if active.empty:
-        return f"You have not borrowed '{book_title}'."
+    # Update book count
+    book.available_copies += 1
 
-    record_idx = active.index[0]
-
-    history_df.loc[record_idx, "Return_Date"] = datetime.now().strftime("%Y-%m-%d")
-
-    book_idx = books_df[books_df["Book_ID"] == book_id].index[0]
-    books_df.loc[book_idx, "Available_Copies"] += 1
-
-    # SAVE (disabled)
-    # books_df.to_csv(books_file, index=False)
-    # history_df.to_csv(borrow_file, index=False)
-    # TODO: Update in DB/CSV
-
-    return f"Return successful: '{book_title}'"
+    db.commit()
+    return f"✅ Successfully returned: **{book.title}**. Thank you!"

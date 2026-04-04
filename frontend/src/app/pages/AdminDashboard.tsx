@@ -53,7 +53,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const response = await fetch("http://localhost:8000/analytics");
+        const response = await fetch("http://localhost:8001/analytics");
         const json = await response.json();
         setAnalyticsData(json);
       } catch (error) {

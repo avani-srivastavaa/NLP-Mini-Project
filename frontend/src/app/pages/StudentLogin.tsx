@@ -6,6 +6,8 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Checkbox } from '../components/ui/checkbox';
 import { ThemeToggle } from '../components/theme/ThemeToggle';
+import { manualLogin, loginWithGoogle } from '../data/api';
+import { AlertCircle } from 'lucide-react';
 
 const highlights = [
   'Discover books with a calmer search experience',
@@ -18,12 +20,61 @@ export default function StudentLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.localStorage.setItem('smart-library-student-auth', 'true');
-    window.localStorage.removeItem('smart-library-admin-auth');
-    navigate('/student/dashboard');
+    setError(null);
+    setLoading(true);
+    try {
+      // The backend expects admission_number, but the label says Email / Username.
+      // We use the 'email' state as the admission_number.
+      const userData = await manualLogin(email, password);
+      
+      window.localStorage.setItem('smart-library-student-auth', 'true');
+      window.localStorage.setItem('smart-library-user', JSON.stringify(userData));
+      window.localStorage.removeItem('smart-library-admin-auth');
+      navigate('/student/dashboard');
+    } catch (err: any) {
+      setError(err.message || 'Login failed. Please check your credentials.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      // In a real app, you'd get this from Firebase:
+      // const result = await signInWithPopup(auth, provider);
+      // const idToken = await result.user.getIdToken();
+      const mockIdToken = "dummy_google_token"; 
+      
+      const res = await loginWithGoogle(mockIdToken);
+      
+      if (res.new_user) {
+        // User needs to complete profile
+        const tempUser = { 
+          email: res.email, 
+          name: res.name, 
+          new_user: true,
+          admission_number: null // Will be set in dashboard
+        };
+        window.localStorage.setItem('smart-library-user', JSON.stringify(tempUser));
+      } else {
+        // Existing user
+        window.localStorage.setItem('smart-library-user', JSON.stringify(res));
+      }
+      
+      window.localStorage.setItem('smart-library-student-auth', 'true');
+      navigate('/student/dashboard');
+    } catch (err: any) {
+      setError(err.message || "Google Login failed.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -91,6 +142,13 @@ export default function StudentLogin() {
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Access your books, history, and library assistant.</p>
           </div>
 
+          {error && (
+            <div className="mb-6 flex items-center gap-3 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-400">
+              <AlertCircle className="size-4 shrink-0" />
+              <p>{error}</p>
+            </div>
+          )}
+
           <form onSubmit={handleLogin} className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="email">Email / Username</Label>
@@ -134,8 +192,12 @@ export default function StudentLogin() {
               </a>
             </div>
 
-            <Button type="submit" className="h-12 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800">
-              Enter Dashboard
+            <Button 
+                type="submit" 
+                disabled={loading}
+                className="h-12 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800 disabled:opacity-70"
+            >
+              {loading ? 'Entering...' : 'Enter Dashboard'}
               <ArrowRight className="size-4" />
             </Button>
           </form>
@@ -149,7 +211,12 @@ export default function StudentLogin() {
             </div>
           </div>
 
-          <Button variant="outline" className="h-12 w-full rounded-2xl border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-950" type="button">
+          <Button 
+            variant="outline" 
+            className="h-12 w-full rounded-2xl border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-950" 
+            type="button"
+            onClick={handleGoogleLogin}
+          >
             Login with Google
           </Button>
 
