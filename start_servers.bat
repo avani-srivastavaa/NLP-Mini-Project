@@ -4,7 +4,7 @@ echo.
 
 echo 📊 Starting Backend Server...
 :: Using relative paths so it works anywhere
-start "Backend" cmd /k "cd /d "%~dp0" && call nlp_venv\Scripts\activate.bat && python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload"
+start "Backend" cmd /k "cd /d "%~dp0" && call nlp_venv\Scripts\activate.bat && python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir backend"
 
 timeout /t 3 /nobreak > nul
 
