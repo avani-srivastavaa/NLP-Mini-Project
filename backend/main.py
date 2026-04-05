@@ -9,9 +9,14 @@ from backend.app.api.library import router as library_router
 from backend.app.api.analytics import router as analytics_router
 from backend.app.api.chatbot import router as chatbot_router
 from backend.app.services.prediction import router as prediction_router
+from backend.app.api.sockets import router as sockets_router
 
 # Create Database tables
 Base.metadata.create_all(bind=engine)
+
+# Initialize Firebase
+from backend.app.core.firebase import test_db
+test_db()
 
 app = FastAPI(title="Library Management System & AI Chatbot", version="1.0")
 
@@ -35,3 +40,4 @@ app.include_router(library_router)
 app.include_router(analytics_router)
 app.include_router(chatbot_router)
 app.include_router(prediction_router)
+app.include_router(sockets_router)

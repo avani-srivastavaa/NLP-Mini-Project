@@ -1,8 +1,8 @@
-const BASE_URL = "http://127.0.0.1:8001";
+const BASE_URL = "http://127.0.0.1:8000";
 
 // Google Firebase Login
 export async function loginWithGoogle(idToken: string) {
-  const res = await fetch(`${BASE_URL}/auth/google-login`, { // Updated path for clarity
+  const res = await fetch(`${BASE_URL}/auth/google/login`, { 
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ id_token: idToken }),
@@ -58,6 +58,41 @@ export async function getUserBorrowHistory(admission_number: string) {
   return data.history || data;
 }
 
+// Get All Books from Catalog
+export async function getBooks() {
+  const res = await fetch(`${BASE_URL}/books`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+// Complete Google Profile (Dashboard Step 2)
+export async function completeGoogleProfile(payload: any) {
+  const res = await fetch(`${BASE_URL}/auth/google/complete-profile`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Profile completion failed");
+  }
+  return res.json();
+}
+
+// Create Credentials (Login Step 1)
+export async function createGoogleCredentials(payload: { email: string, name: string, admission_number: string, password: string }) {
+  const res = await fetch(`${BASE_URL}/auth/google/create-credentials`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Failed to create credentials");
+  }
+  return res.json();
+}
+
 export async function sendChatMessage(sessionId: string, message: string, userId?: string, department?: string) {
   const url = `${BASE_URL}/chat`;
   const payload = { session_id: sessionId, message, user_id: userId, department: department };
@@ -80,4 +115,16 @@ export async function sendChatMessage(sessionId: string, message: string, userId
   return res.json(); // { response: string }
 }
 
-
+// Submit a Book Review
+export async function submitReview(book_id: string, user_id: string, review: string) {
+  const res = await fetch(`${BASE_URL}/review`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ book_id, user_id, review }),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Failed to submit review");
+  }
+  return res.json();
+}

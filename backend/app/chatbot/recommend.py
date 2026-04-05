@@ -45,6 +45,7 @@ QUERY_EXPANSIONS = {
     "dsa": "data structures algorithms sorting searching trees graphs",
 
     # Engineering Subjects
+    "nlp": "natural language processing nlp text mining text analysis",
     "dbms": "database management system sql relational normalization",
     "os": "operating system process scheduling memory management",
     "cn": "computer networks networking protocols tcp ip",
@@ -123,9 +124,7 @@ def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n
         rating = book["rating"]
         popularity_score = math.log1p(rating)
 
-        # Factor 3: Recency
-        year = book["release_year"]
-        recency_score = year / 2026 if year else 0
+        # Factor 3 completely removed.
 
         # Factor 4: Keyword bonus (exact match in title/author)
         keyword_bonus = 0
@@ -134,9 +133,8 @@ def nlp_filter_books(user_prompt, books, embedding_model, book_embeddings, top_n
 
         # Final weighted score
         final_score = (
-            0.85 * similarity_score +
-            0.10 * popularity_score +
-            0.05 * recency_score +
+            0.98 * similarity_score +
+            0.02 * popularity_score +
             keyword_bonus
         )
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import {
   Shield,
@@ -50,10 +50,46 @@ export default function AdminDashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
 
+  // WebSocket & Borrow Requests State
+  const ws = useRef<WebSocket | null>(null);
+  const [pendingRequests, setPendingRequests] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Connect WebSocket
+    const socket = new WebSocket(`ws://localhost:8000/ws/borrow/admin/admin`);
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.type === 'borrow_request_admin' || data.type === 'return_request_admin') {
+        setPendingRequests((prev) => [...prev, data]);
+      }
+    };
+    ws.current = socket;
+
+    return () => {
+      if (ws.current) ws.current.close();
+    };
+  }, []);
+
+  const handleApproveRequest = (req: any, approved: boolean) => {
+    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+      const isReturn = req.type === 'return_request_admin';
+      ws.current.send(JSON.stringify({
+        type: isReturn ? "return_response" : "borrow_response",
+        request_id: req.request_id,
+        student_id: req.student_id,
+        book_id: req.book_id,
+        issue_id: req.issue_id,
+        approved: approved
+      }));
+      // Remove from queue
+      setPendingRequests(prev => prev.filter(p => p.request_id !== req.request_id));
+    }
+  };
+
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const response = await fetch("http://localhost:8001/analytics");
+        const response = await fetch("http://localhost:8000/analytics");
         const json = await response.json();
         setAnalyticsData(json);
       } catch (error) {
@@ -181,6 +217,30 @@ export default function AdminDashboard() {
           </div>
         </div>
       </header>
+
+      {/* Floating Request Notifications */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 max-w-sm w-full">
+        {pendingRequests.map(req => (
+          <div key={req.request_id} className="bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] border border-slate-100 p-5 dark:bg-slate-900 dark:border-slate-800 animate-in slide-in-from-right-8">
+            <div className="flex items-start gap-3 mb-3">
+              <div className={`mt-1 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${req.type === 'return_request_admin' ? 'bg-emerald-100 text-emerald-600 dark:bg-emerald-500/20' : 'bg-amber-100 text-amber-600 dark:bg-amber-500/20'}`}>
+                <Book className="w-4 h-4" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white">{req.type === 'return_request_admin' ? 'Return Request' : 'Borrow Request'}</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                  <strong className="text-slate-800 dark:text-slate-200">{req.student_name}</strong> ({req.student_id}) {req.type === 'return_request_admin' ? 'wants to return' : 'requested to borrow'}: <br/><strong className="text-slate-800 dark:text-slate-200">{req.book_title}</strong>.
+                </p>
+                <p className="text-xs text-slate-400 mt-1">{req.timestamp}</p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <Button onClick={() => handleApproveRequest(req, true)} className="flex-1 bg-green-600 hover:bg-green-700 text-white rounded-lg">Approve</Button>
+              <Button onClick={() => handleApproveRequest(req, false)} variant="outline" className="flex-1 rounded-lg border-red-200 text-red-600 hover:bg-red-50 dark:border-red-900 dark:text-red-400 dark:hover:bg-red-900/30">Reject</Button>
+            </div>
+          </div>
+        ))}
+      </div>
 
       <div className="flex">
         {/* Open Sidebar Button - visible when sidebar is closed on desktop */}
@@ -697,7 +757,7 @@ export default function AdminDashboard() {
                   </div>
                   <p className="text-3xl font-bold mt-1 text-indigo-600">
                     {analyticsData.timeline?.length ?
-                      Math.round(analyticsData.timeline.reduce((sum, day) => sum + day.borrows, 0) / analyticsData.timeline.length) : 0
+                      Math.round(analyticsData.timeline.reduce((sum: number, day: any) => sum + day.borrows, 0) / analyticsData.timeline.length) : 0
                     }
                   </p>
                   <p className="text-xs text-gray-400 mt-1">Borrows per day</p>

@@ -6,7 +6,8 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Checkbox } from '../components/ui/checkbox';
 import { ThemeToggle } from '../components/theme/ThemeToggle';
-import { manualLogin, loginWithGoogle } from '../data/api';
+import { manualLogin, loginWithGoogle, createGoogleCredentials } from '../data/api';
+import { signInWithGoogle } from '../data/firebase';
 import { AlertCircle } from 'lucide-react';
 
 const highlights = [
@@ -23,13 +24,16 @@ export default function StudentLogin() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const [pendingGoogleUser, setPendingGoogleUser] = useState<any>(null);
+  const [newAdm, setNewAdm] = useState('');
+  const [newPass, setNewPass] = useState('');
+  const [newConfirm, setNewConfirm] = useState('');
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
     try {
-      // The backend expects admission_number, but the label says Email / Username.
-      // We use the 'email' state as the admission_number.
       const userData = await manualLogin(email, password);
       
       window.localStorage.setItem('smart-library-student-auth', 'true');
@@ -47,24 +51,15 @@ export default function StudentLogin() {
     setLoading(true);
     setError(null);
     try {
-      // In a real app, you'd get this from Firebase:
-      // const result = await signInWithPopup(auth, provider);
-      // const idToken = await result.user.getIdToken();
-      const mockIdToken = "dummy_google_token"; 
+      const gUser = await signInWithGoogle();
+      const idToken = await gUser.getIdToken();
       
-      const res = await loginWithGoogle(mockIdToken);
+      const res = await loginWithGoogle(idToken);
       
       if (res.new_user) {
-        // User needs to complete profile
-        const tempUser = { 
-          email: res.email, 
-          name: res.name, 
-          new_user: true,
-          admission_number: null // Will be set in dashboard
-        };
-        window.localStorage.setItem('smart-library-user', JSON.stringify(tempUser));
+        setPendingGoogleUser({ email: res.email, name: res.name });
+        return; // Don't navigate yet, show credential creation form
       } else {
-        // Existing user
         window.localStorage.setItem('smart-library-user', JSON.stringify(res));
       }
       
@@ -72,6 +67,31 @@ export default function StudentLogin() {
       navigate('/student/dashboard');
     } catch (err: any) {
       setError(err.message || "Google Login failed.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCreateCredentials = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    if (newPass !== newConfirm) {
+      setError("Passwords do not match.");
+      return;
+    }
+    setLoading(true);
+    try {
+      const res = await createGoogleCredentials({
+        email: pendingGoogleUser.email,
+        name: pendingGoogleUser.name,
+        admission_number: newAdm,
+        password: newPass
+      });
+      window.localStorage.setItem('smart-library-user', JSON.stringify(res));
+      window.localStorage.setItem('smart-library-student-auth', 'true');
+      navigate('/student/dashboard');
+    } catch (err: any) {
+      setError(err.message || "Failed to finalize account.");
     } finally {
       setLoading(false);
     }
@@ -149,76 +169,136 @@ export default function StudentLogin() {
             </div>
           )}
 
-          <form onSubmit={handleLogin} className="space-y-5">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email / Username</Label>
-              <Input
-                id="email"
-                type="text"
-                placeholder="Enter your email or username"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
-                required
-              />
-            </div>
+          {!pendingGoogleUser ? (
+            <>
+              <form onSubmit={handleLogin} className="space-y-5">
+                <div className="space-y-2">
+                  <Label htmlFor="email">Admission Number</Label>
+                  <Input
+                    id="email"
+                    type="text"
+                    placeholder="e.g. 2023PE1250"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
+                    required
+                  />
+                </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
-                required
-              />
-            </div>
+                <div className="space-y-2">
+                  <Label htmlFor="password">Password</Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
+                    required
+                  />
+                </div>
 
-            <div className="flex items-center justify-between gap-4 text-sm">
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="remember"
-                  checked={rememberMe}
-                  onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                />
-                <label htmlFor="remember" className="cursor-pointer text-slate-700 dark:text-slate-300">
-                  Remember me
-                </label>
+                <div className="flex items-center justify-between gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox
+                      id="remember"
+                      checked={rememberMe}
+                      onCheckedChange={(checked) => setRememberMe(checked as boolean)}
+                    />
+                    <label htmlFor="remember" className="cursor-pointer text-slate-700 dark:text-slate-300">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="#" className="font-medium text-sky-700 hover:underline dark:text-sky-300">
+                    Forgot password?
+                  </a>
+                </div>
+
+                <Button 
+                    type="submit" 
+                    disabled={loading}
+                    className="h-12 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800 disabled:opacity-70"
+                >
+                  {loading ? 'Entering...' : 'Enter Dashboard'}
+                  <ArrowRight className="size-4" />
+                </Button>
+              </form>
+
+              <div className="relative my-7">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200 dark:border-slate-700" />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-white px-3 text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 dark:bg-slate-900">or continue</span>
+                </div>
               </div>
-              <a href="#" className="font-medium text-sky-700 hover:underline dark:text-sky-300">
-                Forgot password?
-              </a>
-            </div>
 
-            <Button 
-                type="submit" 
-                disabled={loading}
-                className="h-12 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800 disabled:opacity-70"
-            >
-              {loading ? 'Entering...' : 'Enter Dashboard'}
-              <ArrowRight className="size-4" />
-            </Button>
-          </form>
+              <Button 
+                variant="outline" 
+                className="h-12 w-full rounded-2xl border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-950" 
+                type="button"
+                onClick={handleGoogleLogin}
+              >
+                Login with Google
+              </Button>
+            </>
+          ) : (
+            <form onSubmit={handleCreateCredentials} className="space-y-5">
+              <div className="rounded-xl bg-blue-50 dark:bg-blue-900/20 p-4 border border-blue-100 dark:border-blue-800/30 mb-4">
+                <p className="text-sm text-blue-800 dark:text-blue-300">
+                  Welcome <strong>{pendingGoogleUser.name}</strong>! Since this is your first time using Google Login, please link your Admission Number and create a backup password.
+                </p>
+              </div>
 
-          <div className="relative my-7">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-200 dark:border-slate-700" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-white px-3 text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 dark:bg-slate-900">or continue</span>
-            </div>
-          </div>
+              <div className="space-y-2">
+                <Label htmlFor="newAdm">Admission Number</Label>
+                <Input
+                  id="newAdm"
+                  type="text"
+                  placeholder="e.g. 2023PE1250"
+                  value={newAdm}
+                  onChange={(e) => setNewAdm(e.target.value)}
+                  className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
+                  required
+                />
+              </div>
 
-          <Button 
-            variant="outline" 
-            className="h-12 w-full rounded-2xl border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-950" 
-            type="button"
-            onClick={handleGoogleLogin}
-          >
-            Login with Google
-          </Button>
+              <div className="space-y-2">
+                <Label htmlFor="newPass">Create Password</Label>
+                <Input
+                  id="newPass"
+                  type="password"
+                  placeholder="Enter a secure password"
+                  value={newPass}
+                  onChange={(e) => setNewPass(e.target.value)}
+                  className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="newConfirm">Confirm Password</Label>
+                <Input
+                  id="newConfirm"
+                  type="password"
+                  placeholder="Re-enter password"
+                  value={newConfirm}
+                  onChange={(e) => setNewConfirm(e.target.value)}
+                  className="h-12 rounded-2xl border-slate-200 bg-white/80 px-4 dark:border-slate-700 dark:bg-slate-950"
+                  required
+                />
+              </div>
+
+              <Button 
+                  type="submit" 
+                  disabled={loading}
+                  className="h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-green-700 disabled:opacity-70 mt-4"
+              >
+                {loading ? 'Creating Account...' : 'Continue to Dashboard'}
+                <ArrowRight className="size-4" />
+              </Button>
+            </form>
+          )}
 
           <div className="mt-8 text-center">
             <Link to="/" className="text-sm font-medium text-slate-500 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">

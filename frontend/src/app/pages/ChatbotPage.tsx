@@ -14,7 +14,17 @@ const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
 ];
 
-export default function ChatbotPage({ user_id, department, name }: { user_id?: string; department?: string; name?: string }) {
+export default function ChatbotPage({ 
+  user_id, 
+  department, 
+  name,
+  initBorrow
+}: { 
+  user_id?: string; 
+  department?: string; 
+  name?: string;
+  initBorrow?: (book_id: string, title: string) => void;
+}) {
   const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -101,23 +111,44 @@ export default function ChatbotPage({ user_id, department, name }: { user_id?: s
                       <span className="w-2 h-2 rounded-full bg-amber-500 animate-bounce [animation-delay:300ms]" />
                     </div>
                   ) : msg.from === 'bot' ? (
-                    <div className="prose prose-sm prose-amber max-w-none">
-                      <ReactMarkdown
-                        components={{
-                          p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-                          ul: ({ children }) => <ul className="list-disc pl-4 mb-2 space-y-1">{children}</ul>,
-                          ol: ({ children }) => <ol className="list-decimal pl-4 mb-2 space-y-1">{children}</ol>,
-                          li: ({ children }) => <li className="marker:text-amber-600">{children}</li>,
-                          strong: ({ children }) => <strong className="font-semibold text-gray-900">{children}</strong>,
-                          h1: ({ children }) => <h1 className="text-lg font-bold mb-2">{children}</h1>,
-                          h2: ({ children }) => <h2 className="text-base font-bold mb-1">{children}</h2>,
-                          h3: ({ children }) => <h3 className="text-sm font-bold mb-1">{children}</h3>,
-                          hr: () => <hr className="my-3 border-gray-200" />,
-                        }}
-                      >
-                        {msg.text}
-                      </ReactMarkdown>
-                    </div>
+                    msg.text.trim().startsWith('__ACTION_BORROW__') ? (
+                      (() => {
+                        const [, bookId, title, author] = msg.text.trim().split('|');
+                        return (
+                          <div className="flex flex-col gap-2 p-1">
+                            <h3 className="font-semibold text-slate-800">Borrow Confirmation</h3>
+                            <div className="bg-white rounded border border-gray-200 p-3 mb-2 text-slate-700">
+                              <p className="text-sm font-bold">{title}</p>
+                              <p className="text-xs text-slate-500">Author: {author}</p>
+                            </div>
+                            <Button
+                              onClick={() => initBorrow && initBorrow(bookId, title)}
+                              className="w-full bg-slate-900 hover:bg-slate-800 text-white rounded-lg h-9"
+                            >
+                              Confirm Borrow
+                            </Button>
+                          </div>
+                        );
+                      })()
+                    ) : (
+                      <div className="prose prose-sm prose-amber max-w-none">
+                        <ReactMarkdown
+                          components={{
+                            p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                            ul: ({ children }) => <ul className="list-disc pl-4 mb-2 space-y-1">{children}</ul>,
+                            ol: ({ children }) => <ol className="list-decimal pl-4 mb-2 space-y-1">{children}</ol>,
+                            li: ({ children }) => <li className="marker:text-amber-600">{children}</li>,
+                            strong: ({ children }) => <strong className="font-semibold text-gray-900">{children}</strong>,
+                            h1: ({ children }) => <h1 className="text-lg font-bold mb-2">{children}</h1>,
+                            h2: ({ children }) => <h2 className="text-base font-bold mb-1">{children}</h2>,
+                            h3: ({ children }) => <h3 className="text-sm font-bold mb-1">{children}</h3>,
+                            hr: () => <hr className="my-3 border-gray-200" />,
+                          }}
+                        >
+                          {msg.text}
+                        </ReactMarkdown>
+                      </div>
+                    )
                   ) : (
                     msg.text
                   )}

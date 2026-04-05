@@ -16,7 +16,7 @@ class User(Base):
     password = Column(String(255), nullable=False)
     name = Column(String(255), nullable=False)
     admission_number = Column(String(50), unique=True, nullable=False)
-    departement = Column(String(100))
+    department = Column(String(100))
     email = Column(String(100), unique=True)
     class_name = Column("class", String(50)) # 'class' is a reserved keyword in python
     contact_no = Column(String(20))
@@ -47,6 +47,7 @@ class BorrowedBook(Base):
     r_date = Column(Date, nullable=True)
     r_time = Column(Time, nullable=True)
     status = Column(String(10))
+    or_date = Column(Date, nullable=True)
 
 class Review(Base):
     __tablename__ = "review"

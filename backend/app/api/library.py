@@ -1,10 +1,19 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import datetime
-from backend.app.models.models import User, Book, BorrowedBook
+from pydantic import BaseModel
+from backend.app.models.models import User, Book, BorrowedBook, Review
 from backend.app.core.database import get_db
 
 router = APIRouter(tags=["Library"])
+
+@router.get("/books")
+def get_all_books(db: Session = Depends(get_db)):
+    """
+    Fetches the complete catalog of books from MySQL.
+    """
+    books = db.query(Book).all()
+    return books
 
 @router.get("/user-borrow-history/{admission_number}")
 def get_user_borrow_history(admission_number: str, db: Session = Depends(get_db)):
@@ -20,7 +29,28 @@ def get_user_borrow_history(admission_number: str, db: Session = Depends(get_db)
     if not history:
         return {"message": "No borrowing history found", "history": []}
 
-    return history
+    results = []
+    for record in history:
+        book = db.query(Book).filter(Book.book_id == record.Book_ID).first()
+        
+        # Check if user already reviewed this exact book
+        existing_review = db.query(Review).filter(
+            Review.book_id == record.Book_ID,
+            Review.user_id == user.user_id
+        ).first()
+        
+        results.append({
+            "issue_id": record.issue_id,
+            "book_id": record.Book_ID,
+            "book_title": book.title if book else record.Book_ID,
+            "author": book.author if book else "Unknown",
+            "b_date": record.b_date.strftime("%Y-%m-%d") if record.b_date else None,
+            "r_date": record.r_date.strftime("%Y-%m-%d") if record.r_date else None,
+            "status": record.status,
+            "has_reviewed": bool(existing_review)
+        })
+
+    return results
 
 @router.get("/user-active-borrows/{admission_number}")
 def get_user_active_borrows(admission_number: str, db: Session = Depends(get_db)):
@@ -46,9 +76,10 @@ def get_user_active_borrows(admission_number: str, db: Session = Depends(get_db)
         results.append({
             "issue_id": record.issue_id,
             "book_id": record.Book_ID,
-            "title": book.title if book else "Unknown",
+            "book_title": book.title if book else record.Book_ID,
             "author": book.author if book else "Unknown",
-            "issue_date": record.b_date,
+            "b_date": record.b_date.strftime("%Y-%m-%d") if record.b_date else None,
+            "r_date": record.r_date.strftime("%Y-%m-%d") if record.r_date else None,
             "status": record.status
         })
 
@@ -91,3 +122,23 @@ def borrow_book(admission_number: str, book_id: str, db: Session = Depends(get_d
     db.commit()
     return {"message": "Book issued successfully", "book": book.title}
 
+
+class ReviewCreate(BaseModel):
+    book_id: str
+    user_id: str
+    review: str
+
+@router.post("/review")
+def add_review(payload: ReviewCreate, db: Session = Depends(get_db)):
+    """
+    Submits a user review for a specific book to the MySQL database.
+    """
+    new_review = Review(
+        book_id=payload.book_id,
+        user_id=payload.user_id,
+        review=payload.review
+    )
+    db.add(new_review)
+    db.commit()
+    
+    return {"message": "Review submitted successfully!"}

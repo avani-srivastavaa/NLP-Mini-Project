@@ -6,7 +6,7 @@ from google.genai import types
 import os
 
 # MAIN HANDLER
-def handle_borrow_return(session, user_message, db: Session):
+def handle_borrow_return(session, user_message, resolved_book, db: Session):
     try:
         username = session["username"]
         dept = session["department"]
@@ -50,7 +50,7 @@ User Borrowed Books (Currently Issued):
 {history_text}
 
 User Request:
-{user_message}
+{user_message} (User is referring to: {resolved_book})
 
 Respond ONLY in format:
 ACTION:BORROW or RETURN
@@ -123,22 +123,9 @@ def execute_borrow(user_id, book, db: Session):
     if book.available_copies <= 0:
         return f"Sorry, '{book.title}' is currently out of stock."
 
-    # Update counts
-    book.available_copies -= 1
-
-    # Create record
-    now = datetime.now()
-    new_borrow = BorrowedBook(
-        user_id=user_id,
-        Book_ID=book.book_id,
-        b_date=now.date(),
-        b_time=now.time(),
-        status="issued"
-    )
-    
-    db.add(new_borrow)
-    db.commit()
-    return f"✅ Successfully borrowed: **{book.title}** (ID: {book.book_id}). Please collect it from Rack {book.rack_no}, Shelf {book.shelf_no}."
+    # Instead of direct DB insertion, pass intent up to WebSockets!
+    author = book.author if book.author else "Unknown"
+    return f"__ACTION_BORROW__|{book.book_id}|{book.title}|{author}"
 
 
 def execute_return(user_id, book, db: Session):

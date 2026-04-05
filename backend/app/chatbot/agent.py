@@ -74,7 +74,6 @@ def get_books_from_db(db: Session, department: str):
             "title": title,
             "author": author,
             "rating": rating_value,
-            "release_year": 2026,
             "search_blob": search_blob
         })
     return books
@@ -181,12 +180,14 @@ Your main jobs are:
 1. Understand what the user wants
 2. Extract relevant details
 3. Respond in EXACT format for intents below, OR answer basic library questions using the reference link above.
+4. If the user says a basic greeting like "hi", "hello", or "hey", respond with a warm, friendly greeting using their name and explicitly offer to help them find, review, borrow, or return books.
+5. STRICT OFF-TOPIC RULE: If the user asks anything completely unrelated to books, library catalogs, studies, or casual greetings, you MUST strictly reply: "I can't help you with that. I am here purely as your library assistant!" Do not answer their off-topic question.
 
-CRITICAL - CONTEXT AWARENESS: The conversation history is provided below. When the user uses pronouns or vague references like "it", "that", "this book", "the first one", "that one", or "give me summary of it", you MUST resolve these references by looking at the conversation history to identify the actual book TITLE and AUTHOR being referred to.
+CRITICAL - CONTEXT AWARENESS: The conversation history is provided below. When the user uses pronouns or vague references like "it", "that", "this", "this book", "the first one", "that one", or "give me summary of it", you MUST resolve these references by looking at the conversation history to identify the actual book TITLE and AUTHOR being referred to.
 For example:
-- If the bot previously recommended "Introduction to Algorithms" and the user says "give me a summary of it", you must output BOOK:Introduction to Algorithms.
+- If the bot previously recommended "Introduction to Algorithms" and the user says "review of this", you must output BOOK:Introduction to Algorithms.
 - If the bot recommended multiple books and the user says "the second one", resolve it to the actual book title from the list.
-NEVER output vague references like BOOK:it or BOOK:that. Always resolve to the real book title.
+NEVER output vague references like BOOK:it or BOOK:that or BOOK:this. Always resolve to the real book title. If you fail to resolve, output UNCLEAR.
 
 Supported intents:
 - RECOMMEND
@@ -197,7 +198,7 @@ Supported intents:
 - UNCLEAR
 For RECOMMENDATIONS:
 INTENT:RECOMMEND
-TOPIC:[what book/topic they want]
+TOPIC:[The user's direct query PLUS 2-3 famous global real-world textbook titles that cover this topic. E.g. 'POS Tagging - Speech and Language Processing, Natural Language Processing with Python']
 For SUMMARIES:
 INTENT:SUMMARY
 BOOK:[resolved book name - NEVER use pronouns here]
@@ -273,7 +274,8 @@ def process_intent(intent_response, session, user_message, books, embedding_mode
             return call_review_function(session, book, author, db)
 
         elif intent == 'BORROW' or intent == 'RETURN':
-            return call_borrow_return_function(session, user_message, db)
+            book = intent_info.get('BOOK', '')
+            return call_borrow_return_function(session, user_message, book, db)
 
         elif intent == 'LOCATE':
             book = intent_info.get('BOOK', '')
@@ -299,7 +301,7 @@ def handle_recommendation(topic, session, books, embedding_model, book_embedding
     2. Uses Gemini to format the raw results into a premium, conversational response.
     """
     try:
-        from recommend import get_recommendations
+        from backend.app.chatbot.recommend import get_recommendations
         # Get scored recommendations (Top 5)
         scored_books = get_recommendations(topic, books, embedding_model, book_embeddings, top_n=5)
         
@@ -309,10 +311,10 @@ def handle_recommendation(topic, session, books, embedding_model, book_embedding
         
         for score, book in scored_books:
             # Score threshold for "Direct Match"
-            if score > 0.65:
+            if score > 0.52:
                 primary.append(book)
             # Score threshold for "Related"
-            elif score > 0.40:
+            elif score > 0.35:
                 related.append(book)
                 
         # Limit related to max 2 as requested by user
@@ -338,7 +340,7 @@ def format_recommendations_with_gemini(primary_books, related_books, user_topic,
     # Build the book info strings
     def get_book_text(books_list):
         return "\n".join([
-            f"- {b['title']} by {b['author']} (Copies: {b['rating']}, Year: {b['release_year']})"
+            f"- {b['title']} by {b['author']} (Available Copies: {b['rating']})"
             for b in books_list
         ])
 
@@ -412,10 +414,10 @@ def call_review_function(session, book_name, author, db: Session):
         return "Review module not found."
 
 
-def call_borrow_return_function(session, user_message, db: Session):
+def call_borrow_return_function(session, user_message, resolved_book, db: Session):
     try:
         from backend.app.chatbot.borrow_or_return import handle_borrow_return
-        return handle_borrow_return(session, user_message, db=db)
+        return handle_borrow_return(session, user_message, resolved_book, db=db)
     except ImportError:
         return "Borrow/Return module not found."
 

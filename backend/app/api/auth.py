@@ -19,8 +19,10 @@ def login(data: UserLogin, db: Session = Depends(get_db)):
         "user_id": user.user_id,
         "admission_number": user.admission_number,
         "name": user.name,
-        "department": user.departement,
-        "email": user.email
+        "department": user.department,
+        "email": user.email,
+        "class_name": user.class_name,
+        "contact_no": user.contact_no
     }
 
 
@@ -33,8 +35,8 @@ def update_profile(admission_number: str, profile_data: UserProfileUpdate, db: S
     # Update only fields that are provided
     if profile_data.name is not None:
         user.name = profile_data.name
-    if profile_data.departement is not None:
-        user.departement = profile_data.departement
+    if profile_data.department is not None:
+        user.department = profile_data.department
     if profile_data.class_name is not None:
         user.class_name = profile_data.class_name
     if profile_data.contact_no is not None:
@@ -44,4 +46,4 @@ def update_profile(admission_number: str, profile_data: UserProfileUpdate, db: S
     db.commit()
     db.refresh(user)
 
-    return {"message": "Profile updated successfully", "user": {"name": user.name, "departement": user.departement, "class": user.class_name, "contact_no": user.contact_no}}
+    return {"message": "Profile updated successfully", "user": {"name": user.name, "department": user.department, "class": user.class_name, "contact_no": user.contact_no}}
