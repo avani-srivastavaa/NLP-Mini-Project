@@ -115,6 +115,20 @@ export async function sendChatMessage(sessionId: string, message: string, userId
   return res.json(); // { response: string }
 }
 
+export async function initChatbot(sessionId: string, userId: string, department: string) {
+  const url = `${BASE_URL}/chat/init`;
+  const payload = { session_id: sessionId, user_id: userId, department: department };
+  
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  
+  if (!res.ok) return { status: "error" };
+  return res.json();
+}
+
 // Submit a Book Review
 export async function submitReview(book_id: string, user_id: string, review: string) {
   const res = await fetch(`${BASE_URL}/review`, {
@@ -128,3 +142,72 @@ export async function submitReview(book_id: string, user_id: string, review: str
   }
   return res.json();
 }
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// ADMIN API FUNCTIONS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export async function getAdminBorrowRecords() {
+  const res = await fetch(`${BASE_URL}/admin/borrow-records`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function getAdminStudents() {
+  const res = await fetch(`${BASE_URL}/admin/students`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function getStudentBorrowDetails(userId: string) {
+  const res = await fetch(`${BASE_URL}/admin/student/${userId}/borrows`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function addBook(bookData: {
+  title: string;
+  author: string;
+  department: string;
+  total_copies: number;
+  available_copies?: number;
+  column_dept?: string;
+  shelf_no?: string;
+  rack_no?: string;
+}) {
+  const res = await fetch(`${BASE_URL}/admin/books`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(bookData),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Failed to add book");
+  }
+  return res.json();
+}
+
+export async function updateBookCopies(bookId: string, totalCopies: number) {
+  const res = await fetch(`${BASE_URL}/admin/books/${bookId}/copies`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ total_copies: totalCopies }),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Failed to update copies");
+  }
+  return res.json();
+}
+
+export async function deleteBook(bookId: string) {
+  const res = await fetch(`${BASE_URL}/admin/books/${bookId}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Failed to delete book");
+  }
+  return res.json();
+}
+

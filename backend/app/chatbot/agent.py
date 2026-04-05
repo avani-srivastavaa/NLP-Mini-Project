@@ -17,8 +17,9 @@ from google.genai import types
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file (explicit path so it works from any cwd)
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '.env')
+load_dotenv(_env_path, override=True)
 
 from sqlalchemy.orm import Session
 from backend.app.models.models import Book
@@ -185,7 +186,8 @@ Your main jobs are:
 
 CRITICAL - CONTEXT AWARENESS & PERSISTENCE: The conversation history is provided below. 
 1. RESOLVING PRONOUNS: When the user uses pronouns like "it", "that", "this", "the first one", or "this book", you MUST resolve these to the actual BOOK TITLE or AUTHOR mentioned previously.
-2. PERSISTENCE: If the user previously asked for a summary, review, or location and then just provides a book title (e.g. "it's the Algorithms book"), you should continue with that same intent.
+2. PRIORITY: If the previous response was a list of recommendations, "this book" or "it" ALWAYS refers to the FIRST and MOST RELEVANT book in the "Direct Matches" section. DO NOT pick books from the "Related Resources" section unless the user explicitly mentions them (e.g., "tell me about the related one").
+3. PERSISTENCE: If the user previously asked for a summary, review, or location and then just provides a book title (e.g. "it's the Algorithms book"), you should continue with that same intent.
 NEVER output vague references like BOOK:it or BOOK:that. Always resolve to the real title. If you fail to resolve, output UNCLEAR.
 
 Supported intents:

@@ -8,11 +8,9 @@ def handle_locate(book_query, db: Session, session=None):
     if not book_query or book_query.strip() == "":
         return "Which book would you like to locate?"
 
-    # Find the book by ID or Title
-    book = db.query(Book).filter(
-        (Book.book_id == book_query) | 
-        (Book.title.ilike(f"%{book_query}%"))
-    ).first()
+    # Find the book by ID or Title (Robust Search)
+    from backend.app.chatbot.utils import find_book
+    book = find_book(db, book_query)
 
     if not book:
         return f"I couldn't find any information on where **{book_query}** is located. Are you sure it's in our catalog?"

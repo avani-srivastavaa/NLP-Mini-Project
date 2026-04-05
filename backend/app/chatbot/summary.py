@@ -5,8 +5,9 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file (explicit path so it works from any cwd)
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '.env')
+load_dotenv(_env_path, override=True)
 
 
 def generate_summary(book_query, db: Session, session=None):
@@ -17,11 +18,9 @@ def generate_summary(book_query, db: Session, session=None):
     if not book_query or book_query.strip() == "":
         return "Please specify a book name for the summary."
 
-    # Try to find the book in the database first for better metadata
-    book = db.query(Book).filter(
-        (Book.book_id == book_query) | 
-        (Book.title.ilike(f"%{book_query}%"))
-    ).first()
+    # Try to find the book in the database first for better metadata (Robust Search)
+    from backend.app.chatbot.utils import find_book
+    book = find_book(db, book_query)
 
     if book:
         display_name = f"{book.title} by {book.author}"

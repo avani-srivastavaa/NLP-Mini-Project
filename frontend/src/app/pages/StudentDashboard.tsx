@@ -26,13 +26,15 @@ import {
   GraduationCap,
   BookOpen,
   Sparkles,
+  Bell,
+  ExternalLink,
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { mockBooks } from '../data/mockData';
 import { ThemeToggle } from '../components/theme/ThemeToggle';
-import { getUserActiveBorrows, getUserBorrowHistory, updateUserProfile, completeGoogleProfile, getBooks, submitReview } from '../data/api';
+import { getUserActiveBorrows, getUserBorrowHistory, updateUserProfile, completeGoogleProfile, getBooks, submitReview, sendChatMessage, initChatbot } from '../data/api';
 
 // ─── History record type ──────────────────────────────────────────────────────
 type HistoryRecord = {
@@ -51,7 +53,7 @@ type HistoryRecord = {
 };
 
 // ─── Chatbot messages ─────────────────────────────────────────────────────────
-type ChatMsg = { from: 'bot' | 'user'; text: string };
+import { type ChatMsg } from './ChatbotPage';
 const initialMessages: ChatMsg[] = [
   { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
 ];
@@ -171,26 +173,23 @@ function ProfileCompletionModal({ user, onComplete }: { user: any; onComplete: (
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function StudentDashboard() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [user, setUser] = useState<any>(() => {
+    const saved = window.localStorage.getItem('smart-library-user');
+    return saved ? JSON.parse(saved) : null;
+  });
+  const [activeTab, setActiveTab] = useState('home');
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  // Sidebar State
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // Chatbot Persistent State
+  const [chatMessages, setChatMessages] = useState<ChatMsg[]>(initialMessages);
+  const [chatLoading, setChatLoading] = useState(false);
+  const [chatbotInitialized, setChatbotInitialized] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
-
-  // User Session
-  const [user, setUser] = useState<any>(() => {
-    const saved = window.localStorage.getItem('smart-library-user');
-    return saved ? JSON.parse(saved) : null;
-  });
-
-  // Chatbot messages state
-  const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
-  const [chatInput, setChatInput] = useState('');
 
   // Records state
   const [activeBorrows, setActiveBorrows] = useState<HistoryRecord[]>([]);
@@ -225,6 +224,11 @@ export default function StudentDashboard() {
   const [reviewText, setReviewText] = useState('');
   const [submittingReview, setSubmittingReview] = useState(false);
   const [submittedReviews, setSubmittedReviews] = useState<Set<string>>(new Set());
+
+  // Bell Notification State
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [notifAutoOpened, setNotifAutoOpened] = useState(false);
+  const notifRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (user && user.admission_number) {
@@ -267,6 +271,31 @@ export default function StudentDashboard() {
       }
     }
   }, [user]);
+
+  // Auto-open notification bell if user has overdue books
+  useEffect(() => {
+    if (!loadingRecords && !notifAutoOpened && historyRecords.length > 0) {
+      const hasOverdue = historyRecords.some(r => {
+        if (r.status === 'returned' || !r.r_date) return false;
+        return new Date() > new Date(r.r_date);
+      });
+      if (hasOverdue) {
+        setShowNotifications(true);
+        setNotifAutoOpened(true);
+      }
+    }
+  }, [loadingRecords, historyRecords, notifAutoOpened]);
+
+  // Close notification dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
+        setShowNotifications(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const loadUserData = async () => {
     setLoadingRecords(true);
@@ -314,16 +343,6 @@ export default function StudentDashboard() {
     const titleMatch = book.title ? book.title.toLowerCase().includes(searchQuery.toLowerCase()) : false;
     return book.available && matchesDept && titleMatch;
   });
-
-  const sendChatMessage = () => {
-    const trimmed = chatInput.trim();
-    if (!trimmed) return;
-    setMessages((prev) => [
-      ...prev,
-      { from: 'user', text: trimmed },
-    ]);
-    setChatInput('');
-  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -422,6 +441,59 @@ export default function StudentDashboard() {
       alert("Failed to submit review: " + e.message);
     } finally {
       setSubmittingReview(false);
+    }
+  };
+
+  // ─── Eager Chatbot Initialization ──────────────────────────────────────────
+  useEffect(() => {
+    if (user && user.admission_number && !chatbotInitialized) {
+      const startInit = async () => {
+        try {
+          await initChatbot(user.admission_number, user.user_id, user.department);
+          setChatbotInitialized(true);
+          console.log("Chatbot initialized eagerly.");
+        } catch (err) {
+          console.error("Failed to eagerly initialize chatbot:", err);
+        }
+      };
+      startInit();
+    }
+  }, [user, chatbotInitialized]);
+
+  const handleChatSendMessage = async (text: string) => {
+    if (!text.trim() || chatLoading) return;
+
+    const sessionId = user?.admission_number || 'web-session';
+    
+    // 1. Add user message
+    setChatMessages((prev) => [...prev, { from: 'user', text: text.trim() }]);
+    setChatLoading(true);
+    
+    // 2. Add loading placeholder
+    setChatMessages((prev) => [...prev, { from: 'bot', text: '', isLoading: true }]);
+
+    try {
+      const res = await sendChatMessage(sessionId, text.trim(), user?.user_id?.toString(), user?.department);
+      setChatMessages((prev) => {
+        const filtered = prev.filter((m) => !m.isLoading);
+        return [
+          ...filtered,
+          {
+            from: 'bot',
+            text:
+              res && typeof res.response === 'string' && res.response.trim()
+                ? res.response
+                : 'Error: No response from server.',
+          },
+        ];
+      });
+    } catch {
+      setChatMessages((prev) => {
+        const filtered = prev.filter((m) => !m.isLoading);
+        return [...filtered, { from: 'bot', text: 'Error: Could not fetch answer from FastAPI.' }];
+      });
+    } finally {
+      setChatLoading(false);
     }
   };
 
@@ -606,6 +678,76 @@ export default function StudentDashboard() {
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
+
+            {/* Bell Notification */}
+            <div className="relative" ref={notifRef}>
+              <button
+                onClick={() => setShowNotifications(!showNotifications)}
+                className="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <Bell className="w-5 h-5 text-gray-600 dark:text-slate-300" />
+                {(() => {
+                  const overdueBooks = historyRecords.filter(r => {
+                    if (r.status === 'returned') return false;
+                    if (!r.r_date) return false;
+                    return new Date() > new Date(r.r_date);
+                  });
+                  const hasNotif = activeBorrows.length > 0 || overdueBooks.length > 0;
+                  return hasNotif ? (
+                    <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-slate-950" />
+                  ) : null;
+                })()}
+              </button>
+
+              {showNotifications && (
+                <div className="absolute right-0 top-full mt-2 w-80 max-h-96 overflow-y-auto bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 dark:bg-slate-900 dark:border-slate-800 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="p-4 border-b border-gray-100 dark:border-slate-800">
+                    <h3 className="font-semibold text-gray-900 dark:text-slate-100">Notifications</h3>
+                  </div>
+                  <div className="divide-y divide-gray-50 dark:divide-slate-800">
+                    {/* Overdue notifications */}
+                    {historyRecords.filter(r => {
+                      if (r.status === 'returned') return false;
+                      if (!r.r_date) return false;
+                      return new Date() > new Date(r.r_date);
+                    }).map(r => {
+                      const days = Math.ceil((new Date().getTime() - new Date(r.r_date).getTime()) / (1000 * 60 * 60 * 24));
+                      return (
+                        <div key={`overdue-${r.issue_id}`} className="p-3 flex gap-3 bg-red-50/50 dark:bg-red-500/5">
+                          <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <AlertTriangle className="w-4 h-4 text-red-600" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-red-700 dark:text-red-400">Overdue — {days} day{days > 1 ? 's' : ''}</p>
+                            <p className="text-xs text-red-600/80 dark:text-red-400/70 mt-0.5">{r.book_title || r.item_name}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+
+                    {/* Active borrow notifications */}
+                    {activeBorrows.map(r => (
+                      <div key={`borrow-${r.issue_id}`} className="p-3 flex gap-3">
+                        <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Book className="w-4 h-4 text-blue-600" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-800 dark:text-slate-200">Book Borrowed</p>
+                          <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5">{r.book_title} — Due: {r.r_date || 'N/A'}</p>
+                        </div>
+                      </div>
+                    ))}
+
+                    {activeBorrows.length === 0 && historyRecords.filter(r => r.status !== 'returned' && r.r_date && new Date() > new Date(r.r_date)).length === 0 && (
+                      <div className="p-6 text-center text-sm text-gray-400 dark:text-slate-500">
+                        No notifications
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="hidden sm:block text-right">
               <p className="text-sm font-medium text-gray-900 dark:text-slate-100">{user?.name}</p>
               <p className="text-xs text-gray-500 dark:text-slate-400">{user?.admission_number}</p>
@@ -1065,6 +1207,7 @@ export default function StudentDashboard() {
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Book Name</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Issue Date</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Return Date</th>
+                        <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Days Overdue</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Review</th>
                         <th className="px-5 py-3 text-xs font-semibold text-gray-600 uppercase tracking-wider">Return</th>
@@ -1074,13 +1217,13 @@ export default function StudentDashboard() {
                     <tbody className="divide-y divide-gray-100 dark:divide-slate-800">
                       {loadingRecords ? (
                         <tr>
-                          <td colSpan={6} className="px-5 py-20 text-center">
+                          <td colSpan={7} className="px-5 py-20 text-center">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 mx-auto"></div>
                           </td>
                         </tr>
                       ) : historyRecords.length === 0 ? (
                         <tr>
-                          <td colSpan={6} className="px-5 py-20 text-center text-gray-500">
+                          <td colSpan={7} className="px-5 py-20 text-center text-gray-500">
                             No borrowing history.
                           </td>
                         </tr>
@@ -1090,6 +1233,19 @@ export default function StudentDashboard() {
                             <td className="px-5 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.book_title || record.item_name}</td>
                             <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.b_date}</td>
                             <td className="px-5 py-4 text-sm text-gray-600 dark:text-slate-400">{record.r_date}</td>
+
+                            {/* Days Overdue Column */}
+                            <td className="px-5 py-4 text-sm whitespace-nowrap">
+                              {(() => {
+                                if (record.status === 'returned' || !record.r_date) return <span className="text-gray-400">-</span>;
+                                const diff = Math.ceil((new Date().getTime() - new Date(record.r_date).getTime()) / (1000 * 60 * 60 * 24));
+                                return diff > 0 ? (
+                                  <span className="font-semibold text-red-600 dark:text-red-400">{diff} day{diff > 1 ? 's' : ''}</span>
+                                ) : (
+                                  <span className="text-gray-400">-</span>
+                                );
+                              })()}
+                            </td>
 
                             <td className="px-5 py-4 whitespace-nowrap">
                               <Badge className={`${getStatusColor(record.status)} flex items-center gap-1 w-fit`}>
@@ -1141,7 +1297,15 @@ export default function StudentDashboard() {
 
           {/* ════ CHATBOT TAB ════ */}
           {activeTab === 'chatbot' && (
-            <ChatbotPage user_id={user?.admission_number} department={user?.department} name={user?.name} initBorrow={initBorrow} />
+            <ChatbotPage 
+              user_id={user?.admission_number} 
+              department={user?.department} 
+              name={user?.name} 
+              initBorrow={initBorrow} 
+              messages={chatMessages}
+              loading={chatLoading}
+              onSendMessage={handleChatSendMessage}
+            />
           )}
 
           {/* ════ ABOUT TAB ════ */}
@@ -1215,6 +1379,23 @@ export default function StudentDashboard() {
                   </div>
                 </div>
 
+                {/* Fine Payment Gateway */}
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">Fine Payment Gateway</h2>
+                  <p className="text-gray-600 mb-4 dark:text-slate-300">
+                    Pay your library fines online through the official Razorpay payment portal.
+                  </p>
+                  <a
+                    href="https://pages.razorpay.com/pce-library-misc2022"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-700 text-white font-semibold text-base shadow-lg shadow-blue-500/25 hover:from-sky-600 hover:to-blue-800 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    Pay Fine Online
+                  </a>
+                </div>
+
                 {/* Contact Us */}
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">Contact Us</h2>
@@ -1244,8 +1425,8 @@ export default function StudentDashboard() {
         />
       )}
 
-      {/* ── Floating Chatbot (all pages) ── */}
-      <FloatingChatbot onOpen={() => setActiveTab('chatbot')} />
+      {/* ── Floating Chatbot (hidden on chatbot tab) ── */}
+      {activeTab !== 'chatbot' && <FloatingChatbot onOpen={() => setActiveTab('chatbot')} />}
     </div>
   );
 }

@@ -8,62 +8,34 @@ import {
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
-type ChatMsg = { from: 'bot' | 'user'; text: string; isLoading?: boolean };
-
-const initialMessages: ChatMsg[] = [
-  { from: 'bot', text: "Hello! I'm your library assistant. How can I help you today?" },
-];
+export type ChatMsg = { from: 'bot' | 'user'; text: string; isLoading?: boolean };
 
 export default function ChatbotPage({ 
   user_id, 
   department, 
   name,
-  initBorrow
+  initBorrow,
+  messages,
+  loading,
+  onSendMessage
 }: { 
   user_id?: string; 
   department?: string; 
   name?: string;
   initBorrow?: (book_id: string, title: string) => void;
+  messages: ChatMsg[];
+  loading: boolean;
+  onSendMessage: (text: string) => void;
 }) {
-  const [messages, setMessages] = useState<ChatMsg[]>(initialMessages);
   const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
   const [copyIndex, setCopyIndex] = useState<number | null>(null);
-  const sessionId = user_id || 'web-session';
   const chatEndRef = useRef<HTMLDivElement | null>(null);
 
-  const sendMessage = async () => {
+  const handleSend = () => {
     const trimmed = input.trim();
     if (!trimmed || loading) return;
-
-    setMessages((prev) => [...prev, { from: 'user', text: trimmed }]);
+    onSendMessage(trimmed);
     setInput('');
-    setLoading(true);
-    setMessages((prev) => [...prev, { from: 'bot', text: '', isLoading: true }]);
-
-    try {
-      const res = await sendChatMessage(sessionId, trimmed, user_id, department);
-      setMessages((prev) => {
-        const filtered = prev.filter((m) => !m.isLoading);
-        return [
-          ...filtered,
-          {
-            from: 'bot',
-            text:
-              res && typeof res.response === 'string' && res.response.trim()
-                ? res.response
-                : 'Error: No response from server.',
-          },
-        ];
-      });
-    } catch {
-      setMessages((prev) => {
-        const filtered = prev.filter((m) => !m.isLoading);
-        return [...filtered, { from: 'bot', text: 'Error: Could not fetch answer from FastAPI.' }];
-      });
-    } finally {
-      setLoading(false);
-    }
   };
 
   useEffect(() => {
@@ -179,7 +151,7 @@ export default function ChatbotPage({
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
-                sendMessage();
+                handleSend();
               }
             }}
             placeholder="Type a message..."
@@ -187,7 +159,7 @@ export default function ChatbotPage({
             disabled={loading}
           />
           <Button
-            onClick={sendMessage}
+            onClick={handleSend}
             className="bg-amber-600 hover:bg-amber-700 text-white rounded-xl px-5"
             disabled={loading}
           >

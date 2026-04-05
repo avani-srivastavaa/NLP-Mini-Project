@@ -4,7 +4,7 @@ import { ArrowRight, Book, ShieldCheck, Sparkles, UserRound } from 'lucide-react
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
-import { Checkbox } from '../components/ui/checkbox';
+
 import { ThemeToggle } from '../components/theme/ThemeToggle';
 import { manualLogin, loginWithGoogle, createGoogleCredentials } from '../data/api';
 import { signInWithGoogle } from '../data/firebase';
@@ -20,7 +20,7 @@ export default function StudentLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -198,17 +198,7 @@ export default function StudentLogin() {
                   />
                 </div>
 
-                <div className="flex items-center justify-between gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="remember"
-                      checked={rememberMe}
-                      onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                    />
-                    <label htmlFor="remember" className="cursor-pointer text-slate-700 dark:text-slate-300">
-                      Remember me
-                    </label>
-                  </div>
+                <div className="flex items-center justify-end text-sm">
                   <a href="#" className="font-medium text-sky-700 hover:underline dark:text-sky-300">
                     Forgot password?
                   </a>

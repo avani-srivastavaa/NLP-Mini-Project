@@ -5,7 +5,9 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# Load environment variables from .env file (explicit path so it works from any cwd)
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '.env')
+load_dotenv(_env_path, override=True)
 
 def generate_review(query_text, author="", db: Session = None, session=None):
     """
@@ -17,11 +19,9 @@ def generate_review(query_text, author="", db: Session = None, session=None):
     if db is None:
         return "Database session not provided."
 
-    # 1. Find the book
-    book = db.query(Book).filter(
-        (Book.book_id == query_text) | 
-        (Book.title.ilike(f"%{query_text}%"))
-    ).first()
+    # 1. Find the book (Robust Search)
+    from backend.app.chatbot.utils import find_book
+    book = find_book(db, query_text)
 
     if not book:
         return f"Sorry, I couldn't find any records for '{query_text}'."

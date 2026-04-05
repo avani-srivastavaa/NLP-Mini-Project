@@ -1,7 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from datetime import datetime
+from sqlalchemy import func
+from datetime import datetime, date
 from pydantic import BaseModel
+from typing import Optional
+import random
 from backend.app.models.models import User, Book, BorrowedBook, Review
 from backend.app.core.database import get_db
 
@@ -24,7 +27,7 @@ def get_user_borrow_history(admission_number: str, db: Session = Depends(get_db)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
-    history = db.query(BorrowedBook).filter(BorrowedBook.user_id == user.user_id).all()
+    history = db.query(BorrowedBook).filter(BorrowedBook.user_id == user.user_id).order_by(BorrowedBook.issue_id.desc()).all()
     
     if not history:
         return {"message": "No borrowing history found", "history": []}
@@ -64,7 +67,7 @@ def get_user_active_borrows(admission_number: str, db: Session = Depends(get_db)
     active = db.query(BorrowedBook).filter(
         BorrowedBook.user_id == user.user_id,
         BorrowedBook.status == "issued"
-    ).all()
+    ).order_by(BorrowedBook.issue_id.desc()).all()
 
     if not active:
         return {"message": "No books borrowed yet", "active_borrows": []}
@@ -142,3 +145,190 @@ def add_review(payload: ReviewCreate, db: Session = Depends(get_db)):
     db.commit()
     
     return {"message": "Review submitted successfully!"}
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ADMIN ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+@router.get("/admin/borrow-records")
+def get_all_borrow_records(db: Session = Depends(get_db)):
+    """
+    Returns all borrow records with student names and book titles for the admin dashboard.
+    Computes overdue status dynamically.
+    """
+    records = db.query(BorrowedBook).order_by(BorrowedBook.b_date.desc()).all()
+    results = []
+    today = date.today()
+
+    for record in records:
+        book = db.query(Book).filter(Book.book_id == record.Book_ID).first()
+        user = db.query(User).filter(User.user_id == record.user_id).first()
+
+        # Compute display status
+        display_status = record.status or "issued"
+        overdue_days = 0
+        if record.status == "issued" and record.r_date:
+            diff = (today - record.r_date).days
+            if diff > 0:
+                display_status = f"overdue"
+                overdue_days = diff
+        elif record.status == "returned":
+            display_status = "returned"
+
+        results.append({
+            "issue_id": record.issue_id,
+            "user_id": record.user_id,
+            "student_name": user.name if user else record.user_id,
+            "student_id": user.admission_number if user else record.user_id,
+            "book_id": record.Book_ID,
+            "book_title": book.title if book else record.Book_ID,
+            "b_date": record.b_date.strftime("%Y-%m-%d") if record.b_date else None,
+            "b_time": record.b_time.strftime("%H:%M") if record.b_time else None,
+            "r_date": record.r_date.strftime("%Y-%m-%d") if record.r_date else None,
+            "r_time": record.r_time.strftime("%H:%M") if record.r_time else None,
+            "status": display_status,
+            "overdue_days": overdue_days,
+            "or_date": record.or_date.strftime("%Y-%m-%d") if record.or_date else None,
+        })
+
+    return results
+
+
+@router.get("/admin/students")
+def get_all_students(db: Session = Depends(get_db)):
+    """
+    Returns all students with their active borrow counts for the admin student directory.
+    """
+    students = db.query(User).all()
+    results = []
+
+    for student in students:
+        borrow_count = db.query(BorrowedBook).filter(
+            BorrowedBook.user_id == student.user_id,
+            BorrowedBook.status == "issued"
+        ).count()
+
+        results.append({
+            "user_id": student.user_id,
+            "admission_number": student.admission_number,
+            "name": student.name,
+            "email": student.email,
+            "department": student.department,
+            "class_name": student.class_name,
+            "contact_no": student.contact_no,
+            "books_borrowed": borrow_count,
+        })
+
+    return results
+
+
+@router.get("/admin/student/{user_id}/borrows")
+def get_student_borrow_details(user_id: str, db: Session = Depends(get_db)):
+    """
+    Returns detailed borrow history for a specific student (for View Details modal).
+    """
+    borrows = db.query(BorrowedBook).filter(BorrowedBook.user_id == user_id).order_by(BorrowedBook.b_date.desc()).all()
+    results = []
+    for record in borrows:
+        book = db.query(Book).filter(Book.book_id == record.Book_ID).first()
+        results.append({
+            "issue_id": record.issue_id,
+            "book_id": record.Book_ID,
+            "book_title": book.title if book else record.Book_ID,
+            "b_date": record.b_date.strftime("%Y-%m-%d") if record.b_date else None,
+            "b_time": record.b_time.strftime("%H:%M:%S") if record.b_time else None,
+            "r_date": record.r_date.strftime("%Y-%m-%d") if record.r_date else None,
+            "r_time": record.r_time.strftime("%H:%M:%S") if record.r_time else None,
+            "status": record.status,
+        })
+    return results
+
+
+class BookCreate(BaseModel):
+    title: str
+    author: str
+    department: str
+    total_copies: int
+    available_copies: Optional[int] = None
+    column_dept: Optional[str] = None
+    shelf_no: Optional[str] = None
+    rack_no: Optional[str] = None
+
+
+@router.post("/admin/books")
+def add_book(payload: BookCreate, db: Session = Depends(get_db)):
+    """
+    Adds a new book with an auto-generated book_id (B-XXX format).
+    """
+    # Auto-generate a unique book_id in B-XXX format
+    existing_ids = set(
+        row[0] for row in db.query(Book.book_id).all()
+    )
+    for _ in range(1000):
+        rand_num = random.randint(100, 999)
+        candidate = f"B-{rand_num}"
+        if candidate not in existing_ids:
+            break
+    else:
+        raise HTTPException(status_code=500, detail="Could not generate a unique book ID")
+
+    new_book = Book(
+        book_id=candidate,
+        title=payload.title,
+        author=payload.author,
+        department=payload.department,
+        total_copies=payload.total_copies,
+        available_copies=payload.available_copies if payload.available_copies is not None else payload.total_copies,
+        column_dept=payload.column_dept or payload.department,
+        shelf_no=payload.shelf_no,
+        rack_no=payload.rack_no,
+    )
+    db.add(new_book)
+    db.commit()
+    db.refresh(new_book)
+
+    return {"message": "Book added successfully", "book_id": candidate, "title": new_book.title}
+
+
+class BookCopiesUpdate(BaseModel):
+    total_copies: int
+
+
+@router.put("/admin/books/{book_id}/copies")
+def update_book_copies(book_id: str, payload: BookCopiesUpdate, db: Session = Depends(get_db)):
+    """
+    Updates total_copies and auto-adjusts available_copies proportionally.
+    E.g. total 5->6 means available 2->3 (diff added to available).
+    """
+    book = db.query(Book).filter(Book.book_id == book_id).first()
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    diff = payload.total_copies - book.total_copies
+    book.total_copies = payload.total_copies
+    book.available_copies = max(0, book.available_copies + diff)
+    db.commit()
+    db.refresh(book)
+
+    return {
+        "message": "Copies updated",
+        "book_id": book_id,
+        "total_copies": book.total_copies,
+        "available_copies": book.available_copies,
+    }
+
+
+@router.delete("/admin/books/{book_id}")
+def delete_book(book_id: str, db: Session = Depends(get_db)):
+    """
+    Deletes a book from the catalog.
+    """
+    book = db.query(Book).filter(Book.book_id == book_id).first()
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    db.delete(book)
+    db.commit()
+    return {"message": "Book deleted successfully", "book_id": book_id}
+

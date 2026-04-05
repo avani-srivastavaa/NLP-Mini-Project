@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router';
+import { getAdminBorrowRecords, getAdminStudents, getStudentBorrowDetails, addBook, updateBookCopies, deleteBook, getBooks } from '../data/api';
 import {
   Shield,
   LayoutDashboard,
@@ -105,12 +106,27 @@ const getDemoAnalyticsData = () => ({
 });
 
 export default function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState('analytics');
+  const [activeTab, setActiveTab] = useState('overview');
   const [analyticsData, setAnalyticsData] = useState<any>(getDemoAnalyticsData());
   const [recentActivities, setRecentActivities] = useState<any[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+
+  // Database-backed state
+  const [dbBooks, setDbBooks] = useState<any[]>([]);
+  const [dbBorrowRecords, setDbBorrowRecords] = useState<any[]>([]);
+  const [dbStudents, setDbStudents] = useState<any[]>([]);
+  const [bookSearchQuery, setBookSearchQuery] = useState('');
+
+  // Modal state
+  const [showAddBookModal, setShowAddBookModal] = useState(false);
+  const [editingBook, setEditingBook] = useState<any>(null);
+  const [editCopiesValue, setEditCopiesValue] = useState(0);
+  const [viewingStudent, setViewingStudent] = useState<any>(null);
+  const [studentBorrows, setStudentBorrows] = useState<any[]>([]);
+  const [addBookForm, setAddBookForm] = useState({ title: '', author: '', department: '', total_copies: 1, column_dept: '', shelf_no: '', rack_no: '' });
 
   // WebSocket & Borrow Requests State
   const ws = useRef<WebSocket | null>(null);
@@ -143,8 +159,11 @@ export default function AdminDashboard() {
         issue_id: req.issue_id,
         approved: approved
       }));
-      // Remove from queue
+      // Remove from queue and refresh data
       setPendingRequests(prev => prev.filter(p => p.request_id !== req.request_id));
+      // Re-fetch recent activity after approve/reject
+      setTimeout(fetchRecentActivity, 500);
+      setTimeout(loadAllData, 1000);
     }
   };
 
@@ -163,45 +182,108 @@ export default function AdminDashboard() {
     fetchAnalytics();
   }, []);
 
-  useEffect(() => {
-    const fetchRecentActivity = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/recent-activity?limit=6");
-        const json = await response.json();
-        if (json.success && json.activities) {
-          setRecentActivities(json.activities);
-        }
-      } catch (error) {
-        console.error("Error loading recent activity:", error);
-        setRecentActivities([]);
+  const fetchRecentActivity = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/recent-activity?limit=6");
+      const json = await response.json();
+      if (json.success && json.activities) {
+        setRecentActivities(json.activities);
       }
-    };
+    } catch (error) {
+      console.error("Error loading recent activity:", error);
+      setRecentActivities([]);
+    }
+  };
+
+  useEffect(() => {
     fetchRecentActivity();
-    // Refresh every 30 seconds
     const interval = setInterval(fetchRecentActivity, 30000);
     return () => clearInterval(interval);
   }, []);
 
-  const totalBooks = mockBooks.length;
-  const borrowedBooks = mockBooks.filter(book => !book.available).length;
-  const activeStudents = mockStudents.length;
-  const overdueBooks = mockBorrowRecords.filter(record => record.status === 'overdue').length;
+  // Load all database-backed data
+  const loadAllData = async () => {
+    try {
+      const [books, records, students] = await Promise.all([
+        getBooks(),
+        getAdminBorrowRecords(),
+        getAdminStudents(),
+      ]);
+      setDbBooks(books);
+      setDbBorrowRecords(records);
+      setDbStudents(students);
+    } catch (err) {
+      console.error('Failed to load admin data', err);
+    }
+  };
 
-  const filteredRecords = statusFilter === 'all' 
-    ? mockBorrowRecords 
-    : mockBorrowRecords.filter(record => record.status === statusFilter);
+  useEffect(() => { loadAllData(); }, []);
+
+  // Computed stats from API data
+  const totalBooks = analyticsData?.total_books || dbBooks.length;
+  const borrowedBooks = analyticsData?.currently_borrowed || 0;
+  const activeStudents = analyticsData?.active_users || dbStudents.length;
+  const overdueBooks = analyticsData?.overdue_books || 0;
+
+  const filteredRecords = statusFilter === 'all'
+    ? dbBorrowRecords
+    : dbBorrowRecords.filter((r: any) => r.status === statusFilter || (statusFilter === 'issued' && r.status === 'issued') || (statusFilter === 'overdue' && r.overdue_days > 0));
+
+  const filteredBooks = bookSearchQuery
+    ? dbBooks.filter((b: any) =>
+        (b.title || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+        (b.author || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+        (b.book_id || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+        (b.department || '').toLowerCase().includes(bookSearchQuery.toLowerCase())
+      )
+    : dbBooks;
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'returned':
         return 'bg-green-100 text-green-700';
-      case 'pending':
+      case 'issued':
         return 'bg-yellow-100 text-yellow-700';
       case 'overdue':
         return 'bg-red-100 text-red-700';
       default:
         return 'bg-gray-100 text-gray-700';
     }
+  };
+
+  // Book management handlers
+  const handleDeleteBook = async (bookId: string) => {
+    if (!confirm('Are you sure you want to delete this book?')) return;
+    try {
+      await deleteBook(bookId);
+      loadAllData();
+    } catch (err: any) { alert(err.message); }
+  };
+
+  const handleEditCopies = async () => {
+    if (!editingBook) return;
+    try {
+      await updateBookCopies(editingBook.book_id, editCopiesValue);
+      setEditingBook(null);
+      loadAllData();
+    } catch (err: any) { alert(err.message); }
+  };
+
+  const handleAddBook = async () => {
+    try {
+      await addBook({ ...addBookForm });
+      setShowAddBookModal(false);
+      setAddBookForm({ title: '', author: '', department: '', total_copies: 1, column_dept: '', shelf_no: '', rack_no: '' });
+      loadAllData();
+    } catch (err: any) { alert(err.message); }
+  };
+
+  const handleViewStudentDetails = async (student: any) => {
+    setViewingStudent(student);
+    try {
+      const borrows = await getStudentBorrowDetails(student.user_id);
+      setStudentBorrows(borrows);
+    } catch { setStudentBorrows([]); }
   };
   const handleLogout = () => {
     window.localStorage.removeItem('smart-library-admin-auth');
@@ -266,131 +348,55 @@ export default function AdminDashboard() {
       </div>
 
       <div className="flex">
-        {/* Open Sidebar Button - visible when sidebar is closed on desktop */}
-        {!sidebarOpen && (
-          <div className="hidden lg:block fixed left-0 top-20 z-20">
-            <Button
-              variant="default"
-              size="icon"
-              onClick={() => setSidebarOpen(true)}
-              className="rounded-r-lg rounded-l-none bg-gray-800 hover:bg-gray-900 shadow-lg"
-              title="Open sidebar"
-            >
-              <ChevronRight className="w-5 h-5 text-white" />
-            </Button>
-          </div>
-        )}
-
-        {/* Sidebar */}
+        {/* Sidebar — collapsible like student dashboard */}
         <aside
           className={`
             fixed inset-y-0 left-0 z-30 lg:top-[73px] lg:bottom-0
-            w-64 border-r border-white/60 bg-white/72 shadow-lg backdrop-blur-xl transform transition-transform duration-200 ease-in-out dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/30
-            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+            border-r border-white/60 bg-white/72 shadow-lg backdrop-blur-xl transition-all duration-200 ease-in-out dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/30
+            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+            ${sidebarCollapsed ? 'w-[72px]' : 'w-64'}
           `}
         >
-          {/* Close Button - visible on desktop */}
+          {/* Collapse toggle — desktop only */}
           <div className="hidden lg:flex justify-end p-2 border-b border-gray-200 dark:border-slate-800">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setSidebarOpen(false)}
+              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
               className="hover:bg-gray-100"
-              title="Close sidebar"
+              title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600" />
+              {sidebarCollapsed ? <ChevronRight className="w-5 h-5 text-gray-600" /> : <ChevronLeft className="w-5 h-5 text-gray-600" />}
             </Button>
           </div>
 
-          <nav className="p-4 space-y-2 mt-16 lg:mt-0">
-            <button
-              onClick={() => {
-                setActiveTab('overview');
-                setSidebarOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                ${activeTab === 'overview'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-                }
-              `}
-            >
-              <LayoutDashboard className="w-5 h-5" />
-              <span className="font-medium">Overview</span>
-            </button>
+          <nav className="p-2 space-y-1 mt-16 lg:mt-0">
+            {[
+              { id: 'overview', icon: LayoutDashboard, label: 'Overview' },
+              { id: 'analytics', icon: BarChart2, label: 'Analytics' },
+              { id: 'books', icon: BookOpen, label: 'Books Management' },
+              { id: 'records', icon: Clock, label: 'Borrow Records' },
+              { id: 'students', icon: Users, label: 'Student Directory' },
+            ].map(item => (
+              <button
+                key={item.id}
+                onClick={() => { setActiveTab(item.id); setSidebarOpen(false); }}
+                className={`
+                  w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
+                  ${activeTab === item.id ? 'bg-gray-800 text-white dark:bg-slate-200 dark:text-slate-900' : 'text-gray-700 hover:bg-gray-100 dark:text-slate-300 dark:hover:bg-slate-800'}
+                `}
+                title={sidebarCollapsed ? item.label : undefined}
+              >
+                <item.icon className="w-5 h-5 flex-shrink-0" />
+                {!sidebarCollapsed && <span className="font-medium">{item.label}</span>}
+              </button>
+            ))}
 
-            <button
-              onClick={() => {
-                setActiveTab('books');
-                setSidebarOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                ${activeTab === 'books'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-                }
-              `}
-            >
-              <BookOpen className="w-5 h-5" />
-              <span className="font-medium">Books Management</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setActiveTab('records');
-                setSidebarOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                ${activeTab === 'records'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-                }
-              `}
-            >
-              <Clock className="w-5 h-5" />
-              <span className="font-medium">Borrow Records</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setActiveTab('students');
-                setSidebarOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                ${activeTab === 'students'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-                }
-              `}
-            >
-              <Users className="w-5 h-5" />
-              <span className="font-medium">Student Directory</span>
-            </button>
-
-            {/* NEW ANALYTICS BUTTON */}
-            <button
-              onClick={() => {
-                setActiveTab('analytics');
-                setSidebarOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                ${activeTab === 'analytics' ? 'bg-gray-800 text-white' : 'text-gray-700 hover:bg-gray-100'}
-              `}
-            >
-              <BarChart2 className="w-5 h-5" />
-              <span className="font-medium">Analytics</span>
-            </button>
-
-            <div className="pt-4 mt-4 border-t border-gray-200">
+            <div className="pt-4 mt-4 border-t border-gray-200 dark:border-slate-700">
               <Link to="/" onClick={handleLogout}>
-                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors">
-                  <LogOut className="w-5 h-5" />
-                  <span className="font-medium">Logout</span>
+                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors dark:text-red-400 dark:hover:bg-red-500/10" title={sidebarCollapsed ? 'Logout' : undefined}>
+                  <LogOut className="w-5 h-5 flex-shrink-0" />
+                  {!sidebarCollapsed && <span className="font-medium">Logout</span>}
                 </button>
               </Link>
             </div>
@@ -400,7 +406,7 @@ export default function AdminDashboard() {
         {/* Main Content */}
         <main
           className={`flex-1 p-6 transition-[margin] duration-200 lg:p-8 ${
-            sidebarOpen ? 'lg:ml-64' : 'lg:ml-0'
+            sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-64'
           }`}
         >
           {activeTab === 'overview' && (
@@ -517,12 +523,24 @@ export default function AdminDashboard() {
 
           {activeTab === 'books' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Books Management</h1>
-                <Button className="bg-blue-600 hover:bg-blue-700 rounded-lg">
+                <Button onClick={() => setShowAddBookModal(true)} className="bg-blue-600 hover:bg-blue-700 rounded-lg">
                   <Plus className="w-4 h-4 mr-2" />
                   Add New Book
                 </Button>
+              </div>
+
+              {/* Search Bar */}
+              <div className="relative max-w-md">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search by title, author, ID, or department..."
+                  value={bookSearchQuery}
+                  onChange={e => setBookSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-400 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100"
+                />
               </div>
 
               <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
@@ -530,34 +548,34 @@ export default function AdminDashboard() {
                   <table className="w-full">
                     <thead className="bg-gray-50 dark:bg-slate-800">
                       <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Book ID</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Author</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Category</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Availability</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase whitespace-nowrap w-24">Book ID</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase w-full">Title</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase whitespace-nowrap">Author</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase whitespace-nowrap">Department</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase whitespace-nowrap">Availability</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase whitespace-nowrap">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
-                      {mockBooks.map((book) => (
-                        <tr key={book.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{book.id}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{book.title}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{book.author}</td>
-                          <td className="px-6 py-4">
-                            <Badge variant="outline">{book.department}</Badge>
-                          </td>
-                          <td className="px-6 py-4">
-                            <Badge className={book.available ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}>
-                              {book.available ? 'Available' : 'Borrowed'}
+                      {filteredBooks.length === 0 ? (
+                        <tr><td colSpan={6} className="px-6 py-12 text-center text-gray-400">No books found</td></tr>
+                      ) : filteredBooks.map((book: any) => (
+                        <tr key={book.book_id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-4 py-4 text-sm font-medium text-gray-900 dark:text-slate-100 whitespace-nowrap">{book.book_id}</td>
+                          <td className="px-4 py-4 text-sm text-gray-900 dark:text-slate-100 font-medium">{book.title}</td>
+                          <td className="px-4 py-4 text-sm text-gray-600 dark:text-slate-400 whitespace-nowrap">{book.author}</td>
+                          <td className="px-4 py-4 whitespace-nowrap"><Badge variant="outline" className="font-normal">{book.department}</Badge></td>
+                          <td className="px-4 py-4">
+                            <Badge className={book.available_copies > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}>
+                              {book.available_copies} / {book.total_copies}
                             </Badge>
                           </td>
-                          <td className="px-6 py-4">
+                          <td className="px-4 py-4">
                             <div className="flex gap-2">
-                              <Button variant="ghost" size="icon" className="text-blue-600 hover:text-blue-700">
+                              <Button variant="ghost" size="icon" className="text-blue-600 hover:text-blue-700" onClick={() => { setEditingBook(book); setEditCopiesValue(book.total_copies); }}>
                                 <Edit className="w-4 h-4" />
                               </Button>
-                              <Button variant="ghost" size="icon" className="text-red-600 hover:text-red-700">
+                              <Button variant="ghost" size="icon" className="text-red-600 hover:text-red-700" onClick={() => handleDeleteBook(book.book_id)}>
                                 <Trash2 className="w-4 h-4" />
                               </Button>
                             </div>
@@ -568,42 +586,57 @@ export default function AdminDashboard() {
                   </table>
                 </div>
               </div>
+
+              {/* Add Book Modal */}
+              {showAddBookModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                  <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-lg mx-4 dark:bg-slate-900 dark:border dark:border-slate-800">
+                    <h2 className="text-xl font-bold mb-4 dark:text-slate-100">Add New Book</h2>
+                    <p className="text-xs text-gray-400 mb-4">Book ID will be auto-generated (B-XXX)</p>
+                    <div className="grid gap-3">
+                      <input placeholder="Title *" value={addBookForm.title} onChange={e => setAddBookForm({...addBookForm, title: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Author *" value={addBookForm.author} onChange={e => setAddBookForm({...addBookForm, author: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Department *" value={addBookForm.department} onChange={e => setAddBookForm({...addBookForm, department: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Total Copies" type="number" min={1} value={addBookForm.total_copies} onChange={e => setAddBookForm({...addBookForm, total_copies: parseInt(e.target.value) || 1})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Shelf No." value={addBookForm.shelf_no} onChange={e => setAddBookForm({...addBookForm, shelf_no: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Rack No." value={addBookForm.rack_no} onChange={e => setAddBookForm({...addBookForm, rack_no: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                    </div>
+                    <div className="flex gap-3 mt-6 justify-end">
+                      <Button variant="ghost" onClick={() => setShowAddBookModal(false)}>Cancel</Button>
+                      <Button onClick={handleAddBook} disabled={!addBookForm.title || !addBookForm.author || !addBookForm.department} className="bg-blue-600 hover:bg-blue-700 rounded-lg">Add Book</Button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Edit Copies Modal */}
+              {editingBook && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                  <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm mx-4 dark:bg-slate-900 dark:border dark:border-slate-800">
+                    <h2 className="text-xl font-bold mb-2 dark:text-slate-100">Edit Copies</h2>
+                    <p className="text-sm text-gray-500 mb-4 dark:text-slate-400">{editingBook.title}</p>
+                    <p className="text-xs text-gray-400 mb-2">Current: {editingBook.total_copies} total, {editingBook.available_copies} available</p>
+                    <label className="text-sm font-medium text-gray-700 dark:text-slate-300">New Total Copies</label>
+                    <input type="number" min={0} value={editCopiesValue} onChange={e => setEditCopiesValue(parseInt(e.target.value) || 0)} className="w-full mt-1 px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                    <p className="text-xs text-gray-400 mt-1">Available copies will auto-adjust proportionally.</p>
+                    <div className="flex gap-3 mt-5 justify-end">
+                      <Button variant="ghost" onClick={() => setEditingBook(null)}>Cancel</Button>
+                      <Button onClick={handleEditCopies} className="bg-blue-600 hover:bg-blue-700 rounded-lg">Save</Button>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
           {activeTab === 'records' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Borrow Records</h1>
-                <div className="flex gap-2">
-                  <Button
-                    variant={statusFilter === 'all' ? 'default' : 'outline'}
-                    onClick={() => setStatusFilter('all')}
-                    className="rounded-lg"
-                  >
-                    All
-                  </Button>
-                  <Button
-                    variant={statusFilter === 'pending' ? 'default' : 'outline'}
-                    onClick={() => setStatusFilter('pending')}
-                    className="rounded-lg"
-                  >
-                    Pending
-                  </Button>
-                  <Button
-                    variant={statusFilter === 'overdue' ? 'default' : 'outline'}
-                    onClick={() => setStatusFilter('overdue')}
-                    className="rounded-lg"
-                  >
-                    Overdue
-                  </Button>
-                  <Button
-                    variant={statusFilter === 'returned' ? 'default' : 'outline'}
-                    onClick={() => setStatusFilter('returned')}
-                    className="rounded-lg"
-                  >
-                    Returned
-                  </Button>
+                <div className="flex gap-2 flex-wrap">
+                  {['all', 'issued', 'overdue', 'returned'].map(f => (
+                    <Button key={f} variant={statusFilter === f ? 'default' : 'outline'} onClick={() => setStatusFilter(f)} className="rounded-lg capitalize">{f}</Button>
+                  ))}
                 </div>
               </div>
 
@@ -617,27 +650,21 @@ export default function AdminDashboard() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date Issued</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Return Date</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
-                      {filteredRecords.map((record) => (
-                        <tr key={record.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.studentName}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{record.bookName}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.issueDate}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.returnDate}</td>
+                      {filteredRecords.length === 0 ? (
+                        <tr><td colSpan={5} className="px-6 py-12 text-center text-gray-400">No records found</td></tr>
+                      ) : filteredRecords.map((record: any) => (
+                        <tr key={record.issue_id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{record.student_name}</td>
+                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{record.book_title}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.b_date}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{record.r_date || '-'}</td>
                           <td className="px-6 py-4">
                             <Badge className={getStatusColor(record.status)}>
-                              {record.status}
+                              {record.status === 'overdue' ? `Overdue — ${record.overdue_days} day${record.overdue_days > 1 ? 's' : ''}` : record.status}
                             </Badge>
-                          </td>
-                          <td className="px-6 py-4">
-                            {record.status !== 'returned' && (
-                              <Button size="sm" className="bg-green-600 hover:bg-green-700 rounded-lg">
-                                Mark as Returned
-                              </Button>
-                            )}
                           </td>
                         </tr>
                       ))}
@@ -657,29 +684,28 @@ export default function AdminDashboard() {
                   <table className="w-full">
                     <thead className="bg-gray-50 dark:bg-slate-800">
                       <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Student ID</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Admission No.</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Department</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Books Borrowed</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
-                      {mockStudents.map((student) => (
-                        <tr key={student.id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{student.id}</td>
+                      {dbStudents.length === 0 ? (
+                        <tr><td colSpan={6} className="px-6 py-12 text-center text-gray-400">No students found</td></tr>
+                      ) : dbStudents.map((student: any) => (
+                        <tr key={student.user_id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{student.admission_number}</td>
                           <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{student.name}</td>
                           <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.email}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.booksBorrowed}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.department || '-'}</td>
+                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.books_borrowed}</td>
                           <td className="px-6 py-4">
-                            <div className="flex gap-2">
-                              <Button variant="outline" size="sm" className="rounded-lg">
-                                View Details
-                              </Button>
-                              <Button variant="ghost" size="icon" className="text-red-600 hover:text-red-700">
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
-                            </div>
+                            <Button variant="outline" size="sm" className="rounded-lg" onClick={() => handleViewStudentDetails(student)}>
+                              View Details
+                            </Button>
                           </td>
                         </tr>
                       ))}
@@ -687,6 +713,46 @@ export default function AdminDashboard() {
                   </table>
                 </div>
               </div>
+
+              {/* Student Details Modal */}
+              {viewingStudent && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                  <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-2xl mx-4 max-h-[80vh] overflow-y-auto dark:bg-slate-900 dark:border dark:border-slate-800">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h2 className="text-xl font-bold dark:text-slate-100">{viewingStudent.name}</h2>
+                        <p className="text-sm text-gray-500 dark:text-slate-400">{viewingStudent.admission_number} · {viewingStudent.department || 'N/A'}</p>
+                      </div>
+                      <Button variant="ghost" size="icon" onClick={() => setViewingStudent(null)}><X className="w-5 h-5" /></Button>
+                    </div>
+                    <h3 className="font-semibold text-gray-700 mb-3 dark:text-slate-300">Borrow History</h3>
+                    {studentBorrows.length === 0 ? (
+                      <p className="text-sm text-gray-400 py-4">No borrow history</p>
+                    ) : (
+                      <table className="w-full text-sm">
+                        <thead className="bg-gray-50 dark:bg-slate-800">
+                          <tr>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Book Title</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Issue Date</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Issue Time</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100 dark:divide-slate-800">
+                          {studentBorrows.map((b: any) => (
+                            <tr key={b.issue_id}>
+                              <td className="px-4 py-2 text-gray-900 dark:text-slate-100">{b.book_title}</td>
+                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">{b.b_date}</td>
+                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">{b.b_time || '-'}</td>
+                              <td className="px-4 py-2"><Badge className={getStatusColor(b.status)}>{b.status}</Badge></td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

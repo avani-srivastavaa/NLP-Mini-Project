@@ -13,6 +13,11 @@ user_sessions: Dict[str, Any] = {}
 class ChatRequest(BaseModel):
     session_id: str
     message: str
+
+class InitRequest(BaseModel):
+    session_id: str
+    user_id: str
+    department: str
     
 # Mock Department Files Mapping for the agent
 DEPARTMENT_FILES = {
@@ -71,4 +76,41 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     })
     
     return {"response": response}
+
+@router.post("/chat/init")
+def init_chatbot(request: InitRequest, db: Session = Depends(get_db)):
+    session_id = request.session_id
+    
+    # Try to resolve session based on session_id
+    user = db.query(User).filter(User.admission_number == session_id).first()
+    
+    if session_id not in user_sessions:
+        if user:
+            user_sessions[session_id] = {
+                "user_id": user.user_id,
+                "username": user.name,
+                "department": user.department or "CS",
+                "year": user.class_name or "Unknown",
+                "chat_history": []
+            }
+        else:
+            user_sessions[session_id] = {
+                "user_id": request.user_id,
+                "username": "User",
+                "department": request.department or "CS",
+                "year": "Unknown",
+                "chat_history": []
+            }
+
+    session = user_sessions[session_id]
+    
+    # Eagerly call gemini_agent with an empty message to trigger embedding generation
+    # But we modify gemini_agent or ensure_books_and_embeddings to handle this.
+    # For now, we just ensure the session is ready. 
+    # The actual embedding generation happens inside gemini_agent.
+    # To truly pre-generate, we'll call a dedicated helper if needed.
+    from backend.app.chatbot.agent import ensure_books_and_embeddings
+    ensure_books_and_embeddings(session, db)
+    
+    return {"status": "initialized", "session_id": session_id}
 
