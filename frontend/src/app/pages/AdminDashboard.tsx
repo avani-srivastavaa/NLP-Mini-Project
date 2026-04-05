@@ -43,9 +43,71 @@ import { ThemeToggle } from '../components/theme/ThemeToggle';
 
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
 
+const getDemoAnalyticsData = () => ({
+  active_users: 152,
+  total_books: 178,
+  currently_borrowed: 27,
+  overdue_books: 9,
+  return_rate: 88,
+  total_borrows: 200,
+  timeline: [
+    { date: '2026-02-10', borrows: 2, returns: 3 },
+    { date: '2026-02-11', borrows: 3, returns: 1 },
+    { date: '2026-02-12', borrows: 5, returns: 4 },
+    { date: '2026-02-13', borrows: 1, returns: 2 },
+    { date: '2026-02-14', borrows: 4, returns: 1 },
+    { date: '2026-02-15', borrows: 2, returns: 1 },
+    { date: '2026-02-16', borrows: 1, returns: 1 },
+    { date: '2026-02-17', borrows: 2, returns: 6 },
+    { date: '2026-02-18', borrows: 0, returns: 2 },
+    { date: '2026-02-19', borrows: 0, returns: 2 },
+    { date: '2026-02-20', borrows: 1, returns: 3 },
+    { date: '2026-02-21', borrows: 2, returns: 2 },
+    { date: '2026-02-22', borrows: 6, returns: 2 },
+    { date: '2026-02-23', borrows: 3, returns: 1 },
+    { date: '2026-02-24', borrows: 3, returns: 3 }
+  ],
+  books_borrowed_by_dept: [
+    { name: 'Computer Science', value: 52 },
+    { name: 'Information Technology', value: 46 },
+    { name: 'ECS', value: 38 },
+    { name: 'EXTC', value: 42 },
+    { name: 'Mechanical', value: 35 },
+    { name: 'Automobile', value: 40 }
+  ],
+  most_borrowed: [
+    { name: 'Introduction to Algorithms', value: 8 },
+    { name: 'Artificial Intelligence', value: 5 },
+    { name: 'CMOS VLSI Design', value: 6 },
+    { name: 'Data Science from Scratch', value: 3 },
+    { name: 'Wireless Communications', value: 7 },
+    { name: 'Digital Signal Processing', value: 2 },
+    { name: 'Automotive Sensors', value: 4 },
+    { name: 'Fuel Cell Vehicles', value: 1 },
+    { name: 'CAD/CAM', value: 5 },
+    { name: 'Automobile Engineering Vol 2', value: 3 }
+  ],
+  students_borrowing_by_dept: [
+    { name: 'Computer Science', value: 28 },
+    { name: 'Information Technology', value: 25 },
+    { name: 'ECS', value: 20 },
+    { name: 'EXTC', value: 22 },
+    { name: 'Mechanical', value: 18 },
+    { name: 'Automobile', value: 21 }
+  ],
+  most_searched: [
+    { name: 'Machine Learning', value: 45 },
+    { name: 'Artificial Intelligence', value: 38 },
+    { name: 'Data Science', value: 34 },
+    { name: 'Web Development', value: 29 },
+    { name: 'Cyber Security', value: 25 }
+  ]
+});
+
 export default function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [analyticsData, setAnalyticsData] = useState<any>(null);
+  const [activeTab, setActiveTab] = useState('analytics');
+  const [analyticsData, setAnalyticsData] = useState<any>(getDemoAnalyticsData());
+  const [recentActivities, setRecentActivities] = useState<any[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
@@ -94,55 +156,30 @@ export default function AdminDashboard() {
         setAnalyticsData(json);
       } catch (error) {
         console.error("Error loading analytics:", error);
-        // Set demo data if backend fails
-        setAnalyticsData({
-          active_users: 300,
-          total_books: 310,
-          currently_borrowed: 45,
-          overdue_books: 3,
-          return_rate: 95,
-          total_borrows: 245,
-          timeline: [
-            { date: "2024-01-01", borrows: 12, returns: 10 },
-            { date: "2024-01-02", borrows: 15, returns: 13 },
-            { date: "2024-01-03", borrows: 8, returns: 12 },
-            { date: "2024-01-04", borrows: 18, returns: 15 },
-            { date: "2024-01-05", borrows: 22, returns: 18 },
-            { date: "2024-01-06", borrows: 14, returns: 16 },
-            { date: "2024-01-07", borrows: 19, returns: 14 }
-          ],
-          books_borrowed_by_dept: [
-            { name: "Computer Science", value: 85 },
-            { name: "Information Technology", value: 72 },
-            { name: "Electronics", value: 45 },
-            { name: "Mechanical", value: 38 },
-            { name: "Civil", value: 25 }
-          ],
-          most_borrowed: [
-            { name: "Introduction to Algorithms", value: 12 },
-            { name: "Data Structures and Algorithms", value: 10 },
-            { name: "Database Management Systems", value: 8 },
-            { name: "Operating Systems", value: 7 },
-            { name: "Computer Networks", value: 6 }
-          ],
-          students_borrowing_by_dept: [
-            { name: "Computer Science", value: 45 },
-            { name: "Information Technology", value: 38 },
-            { name: "Electronics", value: 32 },
-            { name: "Mechanical", value: 28 },
-            { name: "Civil", value: 22 }
-          ],
-          most_searched: [
-            { name: "Machine Learning", value: 45 },
-            { name: "Artificial Intelligence", value: 38 },
-            { name: "Data Science", value: 32 },
-            { name: "Web Development", value: 28 },
-            { name: "Cyber Security", value: 25 }
-          ]
-        });
+        // Set demo data if backend fails — use same structure as getDemoAnalyticsData
+        setAnalyticsData(getDemoAnalyticsData());
       }
     };
     fetchAnalytics();
+  }, []);
+
+  useEffect(() => {
+    const fetchRecentActivity = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/recent-activity?limit=6");
+        const json = await response.json();
+        if (json.success && json.activities) {
+          setRecentActivities(json.activities);
+        }
+      } catch (error) {
+        console.error("Error loading recent activity:", error);
+        setRecentActivities([]);
+      }
+    };
+    fetchRecentActivity();
+    // Refresh every 30 seconds
+    const interval = setInterval(fetchRecentActivity, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const totalBooks = mockBooks.length;
@@ -187,20 +224,6 @@ export default function AdminDashboard() {
             <div className="flex items-center gap-2">
               <Shield className="w-6 h-6 text-gray-800" />
               <span className="font-semibold text-gray-900 hidden sm:block dark:text-slate-100">Admin Dashboard</span>
-            </div>
-          </div>
-
-          {/* Search Bar */}
-          <div className="flex-1 max-w-xl mx-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <Input
-                type="text"
-                placeholder="Search books, students..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 rounded-lg"
-              />
             </div>
           </div>
 
@@ -457,41 +480,36 @@ export default function AdminDashboard() {
               <div className="bg-white rounded-xl shadow-md p-6 dark:bg-slate-900 dark:shadow-black/20">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4 dark:text-slate-100">Recent Activity</h2>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-4 h-4 text-blue-600" />
+                  {recentActivities.length > 0 ? (
+                    recentActivities.map((activity: any, index: number) => (
+                      <div key={index} className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                          activity.type === 'borrow' 
+                            ? 'bg-blue-100' 
+                            : activity.type === 'return' 
+                            ? 'bg-green-100'
+                            : 'bg-purple-100'
+                        }`}>
+                          {activity.type === 'borrow' && <BookOpen className="w-4 h-4 text-blue-600" />}
+                          {activity.type === 'return' && <CheckCircle className="w-4 h-4 text-green-600" />}
+                          {activity.type !== 'borrow' && activity.type !== 'return' && <Plus className="w-4 h-4 text-purple-600" />}
+                        </div>
+                        <div>
+                          <p className="text-sm text-gray-900 dark:text-slate-100">
+                            <span className="font-medium">{activity.student_name}</span> {activity.type === 'return' ? 'returned' : 'borrowed'} {' '}
+                            <span className="font-medium">{activity.book_title}</span>
+                          </p>
+                          <p className="text-xs text-gray-500 dark:text-slate-400">
+                            {activity.date ? new Date(activity.date).toLocaleDateString() : 'N/A'}
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg dark:bg-slate-800/70">
+                      <p className="text-sm text-gray-500 dark:text-slate-400">No recent activities</p>
                     </div>
-                    <div>
-                      <p className="text-sm text-gray-900 dark:text-slate-100">
-                        <span className="font-medium">John Doe</span> borrowed{' '}
-                        <span className="font-medium">1984</span>
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-slate-400">2 hours ago</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-900 dark:text-slate-100">
-                        <span className="font-medium">Alice Johnson</span> returned{' '}
-                        <span className="font-medium">Clean Code</span>
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-slate-400">5 hours ago</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
-                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Plus className="w-4 h-4 text-purple-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-900 dark:text-slate-100">
-                        New book added: <span className="font-medium">Atomic Habits</span>
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-slate-400">1 day ago</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -682,7 +700,11 @@ export default function AdminDashboard() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.location.reload()}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.location.reload();
+                    }}
                     className="flex items-center gap-2"
                   >
                     <RefreshCw className="w-4 h-4" />
@@ -770,11 +792,11 @@ export default function AdminDashboard() {
                 {/* Borrow & Return Timeline with Dual Lines */}
                 <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 dark:bg-slate-900 dark:border-slate-800">
                   <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-blue-500" /> Borrow & Return Trends (Last 7 Days)
+                    <TrendingUp className="w-5 h-5 text-blue-500" /> Borrow & Return Trends (Last 15 Days)
                   </h3>
                   <div className="h-72">
                     <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={analyticsData.timeline || []}>
+                      <ComposedChart data={analyticsData.timeline || []} margin={{ left: 0, right: 0, top: 0, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                         <XAxis
                           dataKey="date"
@@ -782,6 +804,8 @@ export default function AdminDashboard() {
                           fontSize={12}
                           tickLine={false}
                           axisLine={false}
+                          interval="preserveStartEnd"
+                          minTickGap={24}
                           tickFormatter={(value) => new Date(value).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                         />
                         <YAxis stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
@@ -794,13 +818,14 @@ export default function AdminDashboard() {
                           }}
                           labelFormatter={(value) => new Date(value).toLocaleDateString()}
                         />
-                        <Line
+                        <Legend verticalAlign="top" height={36} wrapperStyle={{ paddingBottom: 10 }} />
+                        <Area
                           type="monotone"
                           dataKey="borrows"
+                          fill="#3b82f6"
                           stroke="#3b82f6"
-                          strokeWidth={3}
-                          dot={{ r: 4 }}
-                          activeDot={{ r: 6 }}
+                          fillOpacity={0.18}
+                          strokeWidth={2}
                           name="Borrows"
                         />
                         <Line
@@ -812,7 +837,7 @@ export default function AdminDashboard() {
                           activeDot={{ r: 6 }}
                           name="Returns"
                         />
-                      </LineChart>
+                      </ComposedChart>
                     </ResponsiveContainer>
                   </div>
                 </div>
@@ -857,50 +882,71 @@ export default function AdminDashboard() {
                   </h3>
                   <div className="h-72">
                     <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={analyticsData.most_borrowed || []} layout="vertical" margin={{ left: 20, right: 20, top: 20, bottom: 20 }}>
-                        <XAxis type="number" hide />
-                        <YAxis
-                          dataKey="name"
-                          type="category"
-                          width={200}
-                          stroke="#94a3b8"
-                          fontSize={10}
-                          tickLine={false}
-                          axisLine={false}
-                          tickFormatter={(value) => value.length > 25 ? `${value.substring(0, 22)}...` : value}
-                        />
+                      <PieChart margin={{ top: 4, right: 44, bottom: 4, left: 50 }}>
+                        <Pie
+                          data={analyticsData.most_borrowed || []}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={50}
+                          outerRadius={110}
+                          paddingAngle={2}
+                          dataKey="value"
+                        >
+                          {(analyticsData.most_borrowed || []).map((entry: any, index: number) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                          ))}
+                        </Pie>
                         <Tooltip
-                          cursor={{ fill: '#f8fafc' }}
                           contentStyle={{
                             borderRadius: '8px',
                             border: 'none',
-                            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)'
+                            backgroundColor: 'rgba(254, 254, 254, 0.95)',
+                            color: '#0f172a',
+                            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
+                            padding: '8px 12px',
+                            fontSize: '14px'
                           }}
-                          formatter={(value, name, props) => [value, props.payload.name]}
+                          formatter={(value: any) => `${value} borrows`}
+                          labelFormatter={(label) => label}
                         />
-                        <Bar dataKey="value" fill="#3b82f6" radius={[0, 4, 4, 0]} barSize={18} />
-                      </BarChart>
+                        <Legend 
+                          verticalAlign="middle"
+                          align="right"
+                          layout="vertical"
+                          wrapperStyle={{ paddingLeft: '2px', fontSize: '16px', maxWidth: '500px', transform: 'translateX(60px)' }}
+                          formatter={(value, entry) => {
+                            const item = entry.payload as any;
+                            return `${item.name}: ${item.value}`;
+                          }}
+                        />
+                      </PieChart>
                     </ResponsiveContainer>
                   </div>
                 </div>
 
                 {/* Students Borrowing by Department */}
                 <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 dark:bg-slate-900 dark:border-slate-800">
-                  <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                  <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
                     <Users className="w-5 h-5 text-purple-500" /> Students Borrowing by Department
                   </h3>
                   <div className="h-72">
                     <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={analyticsData.students_borrowing_by_dept || []} layout="vertical" margin={{ left: 20, right: 20, top: 20, bottom: 20 }}>
+                      <BarChart
+                        data={analyticsData.students_borrowing_by_dept || []}
+                        layout="vertical"
+                        margin={{ left: 6, right: 18, top: 6, bottom: 6 }}
+                        barCategoryGap="10%"
+                        barSize={42}
+                      >
                         <XAxis type="number" hide />
                         <YAxis
                           dataKey="name"
                           type="category"
                           width={200}
                           stroke="#94a3b8"
-                          fontSize={10}
                           tickLine={false}
                           axisLine={false}
+                          tick={{ fontSize: 14, fill: '#334155', dx: -10 }}
                           tickFormatter={(value) => value.length > 25 ? `${value.substring(0, 22)}...` : value}
                         />
                         <Tooltip
@@ -908,11 +954,12 @@ export default function AdminDashboard() {
                           contentStyle={{
                             borderRadius: '8px',
                             border: 'none',
-                            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)'
+                            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
+                            fontSize: '14px'
                           }}
                           formatter={(value, name, props) => [value, props.payload.name]}
                         />
-                        <Bar dataKey="value" fill="#8b5cf6" radius={[0, 4, 4, 0]} barSize={18} />
+                        <Bar dataKey="value" fill="#8b5cf6" radius={[0, 10, 10, 0]} barSize={42} />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
