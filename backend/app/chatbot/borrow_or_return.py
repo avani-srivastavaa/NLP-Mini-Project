@@ -8,13 +8,13 @@ import os
 # MAIN HANDLER
 def handle_borrow_return(session, user_message, resolved_book, db: Session):
     try:
-        username = session["username"]
+        user_id = session.get("user_id")
         dept = session["department"]
         
-        # 1. Fetch user from DB to get their user_id
-        user = db.query(User).filter(User.name == username).first()
+        # 1. Fetch user from DB
+        user = db.query(User).filter(User.user_id == user_id).first()
         if not user:
-             return f"Error: User '{username}' not found in database."
+             return f"Error: User with ID '{user_id}' not found in database."
 
         # 2. Fetch books (only from user's department for context)
         db_books = db.query(Book).filter(Book.department.ilike(f"%{dept}%")).all()

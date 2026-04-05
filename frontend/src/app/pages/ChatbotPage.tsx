@@ -29,7 +29,7 @@ export default function ChatbotPage({
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [copyIndex, setCopyIndex] = useState<number | null>(null);
-  const sessionId = 'web-session';
+  const sessionId = user_id || 'web-session';
   const chatEndRef = useRef<HTMLDivElement | null>(null);
 
   const sendMessage = async () => {

@@ -40,14 +40,16 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     if session_id not in user_sessions:
         if user:
             user_sessions[session_id] = {
+                "user_id": user.user_id,
                 "username": user.name,
-                "department": user.departement or "CS",
+                "department": user.department or "CS",
                 "year": user.class_name or "Unknown",
                 "chat_history": []
             }
         else:
             # Fallback for demo/testing
             user_sessions[session_id] = {
+                "user_id": "guest_id",
                 "username": "Guest",
                 "department": "CS",
                 "year": "Unknown",
