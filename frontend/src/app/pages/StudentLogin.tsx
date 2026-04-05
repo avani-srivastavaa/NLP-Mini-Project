@@ -238,8 +238,9 @@ export default function StudentLogin() {
                 className="h-12 w-full rounded-2xl border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-950" 
                 type="button"
                 onClick={handleGoogleLogin}
+                disabled={loading}
               >
-                Login with Google
+                {loading ? 'Connecting...' : 'Login with Google'}
               </Button>
             </>
           ) : (
