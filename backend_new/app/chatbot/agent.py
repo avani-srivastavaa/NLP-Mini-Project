@@ -1,0 +1,429 @@
+
+# GEMINI AI AGENT — DATA MANAGER & FORMATTER
+# ===========================================
+# This file is the "brain" of the library chatbot.
+# Responsibilities:
+#   1. Load book data from CSV files
+#   2. Create and cache AI embeddings (persistent .npy files)
+#   3. Detect user intent using Gemini AI
+#   4. Route intents to specialized modules (recommend, summary, review, borrow)
+#   5. Format recommendation results into premium responses
+
+import os
+import numpy as np
+import pandas as pd
+from google import genai
+from google.genai import types
+from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+from sqlalchemy.orm import Session
+from app.models.models import Book
+
+
+# ============================================================================
+# GLOBAL CACHES (In-Memory)
+# ============================================================================
+BOOKS_CACHE = {}          # { "CS": [book_dict, ...] }
+EMBEDDINGS_CACHE = {}     # { "CS": numpy_array }
+EMBEDDING_MODEL = None    # SentenceTransformer instance (loaded once)
+
+# Paths
+CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
+
+# Map of display name to database filter name (if different)
+DEPARTMENT_MAP = {
+    "CS": "Computer Science",
+    "IT": "Information Technology",
+    "MECH": "Mechanical",
+    "AUTO": "Automobile",
+    "ECS": "ECS",
+    "EXTC": "EXTC",
+    "FY": "First Year",
+}
+
+
+# ============================================================================
+# 1. BOOK DATA LOADING
+# ============================================================================
+def get_books_from_db(db: Session, department: str):
+    """
+    Fetches books from the MySQL database and returns a list of book
+    dictionaries with standardized fields.
+    """
+    dept_filter = DEPARTMENT_MAP.get(department.upper(), department)
+    
+    # Query database
+    db_books = db.query(Book).filter(Book.department == dept_filter).all()
+    
+    books = []
+    for b in db_books:
+        # Map DB fields to what the AI expects
+        title = b.title or "Unknown"
+        author = b.author or "Unknown"
+        
+        # Available copies or Total as fallback
+        rating_value = b.available_copies if b.available_copies is not None else (b.total_copies or 0)
+        
+        search_blob = f"{title} {author}".lower()
+        books.append({
+            "book_id": b.book_id,
+            "title": title,
+            "author": author,
+            "rating": rating_value,
+            "search_blob": search_blob
+        })
+    return books
+
+
+def _get_cache_path(department):
+    """Returns the absolute path to the department's cached embeddings."""
+    return os.path.join(CACHE_DIR, f"{department}_embeddings.npy")
+
+
+def _is_cache_stale(department):
+    """
+    Checks if cached embeddings exist. 
+    (For now, we generate fresh if missing. In prod we'd check timestamps or DB counts).
+    """
+    cache_path = _get_cache_path(department)
+    return not os.path.exists(cache_path)
+
+
+def _load_embedding_model():
+    """Loads the SentenceTransformer model once and caches it globally."""
+    global EMBEDDING_MODEL
+    if EMBEDDING_MODEL is None:
+        EMBEDDING_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+    return EMBEDDING_MODEL
+
+
+def _generate_and_save_embeddings(department, books):
+    """
+    Generates embeddings for all books and saves them to disk as .npy.
+    Returns the numpy array of embeddings.
+    """
+    model = _load_embedding_model()
+    book_texts = [b["search_blob"] for b in books]
+    embeddings = model.encode(book_texts, show_progress_bar=False)
+
+    # Save to disk for persistence
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    cache_path = _get_cache_path(department)
+    np.save(cache_path, embeddings)
+    print(f"[Cache] Saved embeddings for '{department}' → {cache_path}")
+
+    return embeddings
+
+
+def ensure_books_and_embeddings(session, db: Session):
+    """
+    The main "manager" function. Ensures books and embeddings are ready.
+    """
+    dept = session["department"]
+
+    # Load books into memory cache (or database query)
+    if dept not in BOOKS_CACHE:
+        BOOKS_CACHE[dept] = get_books_from_db(db, dept)
+
+    books = BOOKS_CACHE[dept]
+
+    # Check if we need to generate or can load from disk
+    if dept not in EMBEDDINGS_CACHE or _is_cache_stale(dept):
+        cache_path = _get_cache_path(dept)
+
+        if os.path.exists(cache_path):
+            # Load from disk (fast path)
+            embeddings = np.load(cache_path)
+            model = _load_embedding_model()
+            print(f"[Cache] Loaded embeddings for '{dept}' from disk")
+        else:
+            # Generate fresh embeddings and save to disk
+            print(f"[Cache] Generating fresh embeddings for '{dept}'...")
+            embeddings = _generate_and_save_embeddings(dept, books)
+            model = _load_embedding_model()
+
+        EMBEDDINGS_CACHE[dept] = (model, embeddings)
+
+    return books, EMBEDDINGS_CACHE[dept]
+
+
+# ============================================================================
+# 3. GEMINI INTENT DETECTION (with Context Awareness)
+# ============================================================================
+def gemini_agent(session, user_message, db: Session):
+    """
+    Uses Google Gemini AI as the main agent chatbot.
+    Detects the user's intent and routes to the correct handler.
+    """
+    # Ensure books and embeddings are loaded for this department using the DB
+    books, (embedding_model, book_embeddings) = ensure_books_and_embeddings(session, db)
+
+    def build_chat_context(chat_history=None):
+        if chat_history is None:
+            chat_history = []
+        return "\n".join([
+            f"{ctx['user']}: {ctx['user_message']}"
+            for ctx in chat_history
+        ])
+
+    chat_context = build_chat_context(session.get("chat_history", []))
+
+    system_instruction = f"""You are a helpful library assistant for an engineering college.
+The current user is {session['username']} from {session['department']} department, year {session['year']}.
+You have access to the official library information page: https://www.pce.ac.in/library/library-information/
+If the user asks any general or basic questions about the library (such as timings, rules, facilities, or general information), use this page as your reference to answer accurately.
+Your main jobs are:
+1. Understand what the user wants
+2. Extract relevant details
+3. Respond in EXACT format for intents below, OR answer basic library questions using the reference link above.
+4. If the user says a basic greeting like "hi", "hello", or "hey", respond with a warm, friendly greeting using their name and explicitly offer to help them find, review, borrow, or return books.
+5. STRICT OFF-TOPIC RULE: If the user asks anything completely unrelated to books, library catalogs, studies, or casual greetings, you MUST strictly reply: "I can't help you with that. I am here purely as your library assistant!" Do not answer their off-topic question.
+
+CRITICAL - CONTEXT AWARENESS: The conversation history is provided below. When the user uses pronouns or vague references like "it", "that", "this", "this book", "the first one", "that one", or "give me summary of it", you MUST resolve these references by looking at the conversation history to identify the actual book TITLE and AUTHOR being referred to.
+For example:
+- If the bot previously recommended "Introduction to Algorithms" and the user says "review of this", you must output BOOK:Introduction to Algorithms.
+- If the bot recommended multiple books and the user says "the second one", resolve it to the actual book title from the list.
+NEVER output vague references like BOOK:it or BOOK:that or BOOK:this. Always resolve to the real book title. If you fail to resolve, output UNCLEAR.
+
+Supported intents:
+- RECOMMEND
+- SUMMARY
+- REVIEW
+- BORROW
+- RETURN
+- UNCLEAR
+For RECOMMENDATIONS:
+INTENT:RECOMMEND
+TOPIC:[The user's direct query PLUS 2-3 famous global real-world textbook titles that cover this topic. E.g. 'POS Tagging - Speech and Language Processing, Natural Language Processing with Python']
+For SUMMARIES:
+INTENT:SUMMARY
+BOOK:[resolved book name - NEVER use pronouns here]
+For REVIEWS:
+INTENT:REVIEW
+BOOK:[resolved book name - NEVER use pronouns here]
+AUTHOR:[resolved author name - if available, else omit]
+For BORROWING:
+INTENT:BORROW
+BOOK:[resolved book name - NEVER use pronouns here]
+For RETURNING:
+INTENT:RETURN
+BOOK:[resolved book name - NEVER use pronouns here]
+If unclear:
+INTENT:UNCLEAR
+MESSAGE:[ask for clarification]
+If the user asks about the library itself, answer using the information from the reference link above.
+Do NOT answer book/borrow/recommendation queries directly - only detect intent and extract details for those."""
+
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        return "Error: Gemini API key not configured."
+    try:
+        client = genai.Client(api_key=api_key)
+        MODEL_ID = "models/gemini-2.5-flash"
+        config = types.GenerateContentConfig(
+            system_instruction=system_instruction,
+            temperature=0.3
+        )
+        full_prompt = f"{chat_context}\nUser: {user_message}"
+        response = client.models.generate_content(
+            model=MODEL_ID,
+            contents=full_prompt,
+            config=config
+        )
+        gemini_intent = response.text.strip()
+        # Debugging: Uncomment to see Gemini's raw thinking
+        # print(f"--- DEBUG: Gemini Response ---\n{gemini_intent}\n--- END DEBUG ---")
+        return process_intent(gemini_intent, session, user_message, books, embedding_model, book_embeddings, db)
+    except Exception as e:
+        return f"Error: {e}"
+
+
+# ============================================================================
+# 4. INTENT ROUTING
+# ============================================================================
+def process_intent(intent_response, session, user_message, books, embedding_model, book_embeddings, db: Session):
+    """
+    Parses the structured intent from Gemini and routes to the correct handler.
+    For RECOMMEND: calls recommend.py's search engine, then formats with Gemini.
+    """
+    try:
+        lines = intent_response.strip().split('\n')
+        intent_info = {}
+        for line in lines:
+            if ':' in line:
+                key, value = line.split(':', 1)
+                intent_info[key.strip().upper()] = value.strip()
+
+        intent = intent_info.get('INTENT', 'UNCLEAR').upper()
+
+        if intent == 'RECOMMEND':
+            topic = intent_info.get('TOPIC', '')
+            return handle_recommendation(topic, session, books, embedding_model, book_embeddings)
+
+        elif intent == 'SUMMARY':
+            book = intent_info.get('BOOK', '')
+            return call_summary_function(session, book, db)
+
+        elif intent == 'REVIEW':
+            book = intent_info.get('BOOK', '')
+            author = intent_info.get('AUTHOR', '')
+            return call_review_function(session, book, author, db)
+
+        elif intent == 'BORROW' or intent == 'RETURN':
+            book = intent_info.get('BOOK', '')
+            return call_borrow_return_function(session, user_message, book, db)
+
+        elif intent == 'LOCATE':
+            book = intent_info.get('BOOK', '')
+            return call_locate_function(session, book, db)
+
+        elif intent == 'UNCLEAR':
+            return intent_info.get('MESSAGE', 'Please specify your request clearly.')
+
+        else:
+            # For library-related or general responses from Gemini
+            return intent_response
+
+    except Exception as e:
+        return f"Error processing intent: {str(e)}"
+
+
+# ============================================================================
+# 5. RECOMMENDATION HANDLER (Calls recommend.py + Premium Formatting)
+# ============================================================================
+def handle_recommendation(topic, session, books, embedding_model, book_embeddings):
+    """
+    1. Calls recommend.py's search engine to get top books.
+    2. Uses Gemini to format the raw results into a premium, conversational response.
+    """
+    try:
+        from app.chatbot.recommend import get_recommendations
+        # Get scored recommendations (Top 5)
+        scored_books = get_recommendations(topic, books, embedding_model, book_embeddings, top_n=5)
+        
+        # Split into Primary and Related based on Threshold
+        primary = []
+        related = []
+        
+        for score, book in scored_books:
+            # Score threshold for "Direct Match"
+            if score > 0.52:
+                primary.append(book)
+            # Score threshold for "Related"
+            elif score > 0.35:
+                related.append(book)
+                
+        # Limit related to max 2 as requested by user
+        related = related[:2]
+
+        # Format into final conversational response
+        return format_recommendations_with_gemini(primary, related, topic, session)
+    except ImportError:
+        return "Recommendation engine not found. Please ensure recommend.py exists."
+    except Exception as e:
+        return f"Error getting recommendations: {str(e)}"
+
+
+def format_recommendations_with_gemini(primary_books, related_books, user_topic, session):
+    """
+    Uses Gemini to format two lists of books into a premium conversational response.
+    """
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        # Fallback
+        return _simple_format(primary_books + related_books)
+
+    # Build the book info strings
+    def get_book_text(books_list):
+        return "\n".join([
+            f"- {b['title']} by {b['author']} (Available Copies: {b['rating']})"
+            for b in books_list
+        ])
+
+    primary_text = get_book_text(primary_books)
+    related_text = get_book_text(related_books)
+
+    dept = session.get('department', 'Engineering')
+    
+    system_instruction = f"""
+    You are a premium Library Assistant for the {dept} department.
+    A student asked for recommendations on '{user_topic}'.
+
+    I will provide you with two lists of books:
+    1. DIRECT MATCHES: High confidence results.
+    2. RELATED RESOURCES: Lower confidence but still relevant.
+
+    YOUR GOAL:
+    1. Write a friendly response in Markdown.
+    2. Present the DIRECT MATCHES first with brief, helpful descriptions for each.
+    3. Then, add a section starting with the header '### These are some related books'.
+    4. List the RELATED RESOURCES under that header (max 2).
+    5. If no related books are provided, omit that section.
+    6. Be helpful, professional, and explain WHY these books matter.
+    7. Use bold titles and bullet points.
+    """
+
+    prompt = f"DIRECT MATCHES:\n{primary_text}\n\nRELATED RESOURCES:\n{related_text}"
+
+    try:
+        client = genai.Client(api_key=api_key)
+        config = types.GenerateContentConfig(
+            system_instruction=system_instruction,
+            temperature=0.5
+        )
+        response = client.models.generate_content(
+            model="models/gemini-2.5-flash",
+            contents=prompt,
+            config=config
+        )
+        return response.text.strip()
+    except Exception:
+        return _simple_format(primary_books + related_books)
+
+
+def _simple_format(top_books):
+    """Fallback formatting when Gemini is unavailable."""
+    if not top_books:
+        return "Sorry, I couldn't find any recommendations for that topic."
+    return "📚 Recommended books:\n" + "\n".join([
+        f"  • {b['title']} by {b['author']}"
+        for b in top_books
+    ])
+
+
+# ============================================================================
+# 6. MODULE CALLERS (Summary, Review, Borrow/Return)
+# ============================================================================
+def call_summary_function(session, book_name, db: Session):
+    try:
+        from app.chatbot.summary import generate_summary
+        return generate_summary(book_name, session=session, db=db)
+    except ImportError:
+        return "Summary module not found."
+
+
+def call_review_function(session, book_name, author, db: Session):
+    try:
+        from app.chatbot.review import generate_review
+        return generate_review(book_name, author, session=session, db=db)
+    except ImportError:
+        return "Review module not found."
+
+
+def call_borrow_return_function(session, user_message, resolved_book, db: Session):
+    try:
+        from app.chatbot.borrow_or_return import handle_borrow_return
+        return handle_borrow_return(session, user_message, resolved_book, db=db)
+    except ImportError:
+        return "Borrow/Return module not found."
+
+def call_locate_function(session, book_name, db: Session):
+    try:
+        from app.chatbot.locate import handle_locate
+        return handle_locate(book_name, session=session, db=db)
+    except ImportError:
+        return "Locate module not found."

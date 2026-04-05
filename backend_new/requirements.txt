@@ -11,4 +11,3 @@ firebase-admin
 sqlalchemy
 pydantic
 websockets
-plotly
