@@ -53,6 +53,7 @@ npm run dev
 
 ### Semantic Search Engine
 - **NLP Integration**: Uses sentence embeddings for intelligent book matching
+- **[HyDE: Hypothetical Document Embedding]( https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c)**:HyDE embeds a generated ideal answer to improve search results
 - **Fuzzy Matching**: Supports approximate and relevance-based search
 - **Search Analytics**: Logs and analyzes search patterns for insights
 - **Smart Recommendations**: Context-aware book suggestions
@@ -96,10 +97,10 @@ npm run dev
 ## 📊 Data Architecture
 
 ### SQL Data Sources (datasets) — Includes Books, Users, Borrowed_books, and Review tables with catalog, user data, borrowing history, and feedback records.
-- `books-final.csv` - Complete book catalog with metadata (310 books)
-- `students-final.csv` - Student registration data (300+ students)
-- `borrowing_history-final.csv` - Historical transaction records
-- review-final.csv – User reviews and ratings for books
+- `Books` -    Complete book catalog with metadata (310 books)
+- `Students` - Student registration data (300+ students)
+- `Borrowing  history` - Historical borrow and return records
+- Review –    User reviews for books
 
 
 ### SQLite Database Schema
@@ -333,10 +334,11 @@ http://localhost:5173
 
 ## 📚 References
 
-* Scikit-learn Documentation
-* FastAPI Documentation
-* React Documentation
-* Firebase Documentation
+* [Scikit-learn Documentation](https://scikit-learn.org/stable/user_guide.html)
+* [FastAPI Documentation](https://share.google/64GowoMHRYIrMu1K2)
+* [Quick Start – React](https://share.google/NCnHuAE3QPbzATbkS)
+* [SentenceTransformers Documentation](https://share.google/yCp92ffMQYKPmXsow)
+* [Firebase Documentation](https://share.google/7D87aoXyiXYxCS3t7)
 * NLP Tutorials
 * [HyDE: Hypothetical Document Embedding](https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c)
 
