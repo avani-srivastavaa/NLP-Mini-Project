@@ -53,6 +53,7 @@ npm run dev
 
 ### Semantic Search Engine
 - **NLP Integration**: Uses sentence embeddings for intelligent book matching
+- **HyDE: Hypothetical Document Embedding**:HyDE embeds a generated ideal answer to improve search results
 - **Fuzzy Matching**: Supports approximate and relevance-based search
 - **Search Analytics**: Logs and analyzes search patterns for insights
 - **Smart Recommendations**: Context-aware book suggestions
@@ -95,10 +96,12 @@ npm run dev
 
 ## 📊 Data Architecture
 
-### CSV Data Sources (datasets/)
-- `books-final.csv` - Complete book catalog with metadata (310 books)
-- `students-final.csv` - Student registration data (300+ students)
-- `borrowing_history-final.csv` - Historical transaction records
+### SQL Data Sources (datasets) — Includes Books, Users, Borrowed_books, and Review tables with catalog, user data, borrowing history, and feedback records.
+- `Books` -    Complete book catalog with metadata (310 books)
+- `Students` - Student registration data (300+ students)
+- `Borrowing  history` - Historical borrow and return records
+- Review –    User reviews for books
+
 
 ### SQLite Database Schema
 - **Students Table**: User accounts and departmental information
@@ -114,6 +117,9 @@ npm run dev
 - **SQLite**: Lightweight, file-based database
 - **Pandas**: Data processing and CSV manipulation
 - **Sentence Transformers**: AI-powered text embeddings for NLP
+- **Google Generative Al (Gemini 2.5)**: Large Language Model for advanced text reasoning, summarization, and intent extraction
+- **Firebase Admin SDK**: Server-side verification of user authentication tokens
+
 
 ### Frontend (React + Vite)
 - **React 18**: Modern component-based UI framework
@@ -122,6 +128,7 @@ npm run dev
 - **Tailwind CSS**: Utility-first styling system
 - **Recharts**: Interactive data visualization library
 - **Lucide Icons**: Beautiful and consistent iconography
+- **Firebase SDK**: Secure client-side Authentication (Login/Sign-up) and session managemen
 
 ## 📈 Analytics Data Pipeline
 
@@ -329,21 +336,15 @@ http://localhost:5173
 * Nihar Sudheer
 * Vishal Singh
 
-
-
-## 📌 GitHub Contributions
-
-* Team Members – Frontend, database, and system integration
-
-
-
 ## 📚 References
 
-* Scikit-learn Documentation
-* FastAPI Documentation
-* React Documentation
-* Firebase Documentation
+* [Scikit-learn Documentation](https://scikit-learn.org/stable/user_guide.html)
+* [FastAPI Documentation](https://share.google/64GowoMHRYIrMu1K2)
+* [Quick Start – React](https://share.google/NCnHuAE3QPbzATbkS)
+* [SentenceTransformers Documentation](https://share.google/yCp92ffMQYKPmXsow)
+* [Firebase Documentation](https://share.google/7D87aoXyiXYxCS3t7)
 * NLP Tutorials
+* [HyDE: Hypothetical Document Embedding](https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c)
 
 
 
