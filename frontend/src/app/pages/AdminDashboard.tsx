@@ -119,6 +119,7 @@ export default function AdminDashboard() {
   const [dbBorrowRecords, setDbBorrowRecords] = useState<any[]>([]);
   const [dbStudents, setDbStudents] = useState<any[]>([]);
   const [bookSearchQuery, setBookSearchQuery] = useState('');
+  const [studentSearchQuery, setStudentSearchQuery] = useState('');
 
   // Modal state
   const [showAddBookModal, setShowAddBookModal] = useState(false);
@@ -167,18 +168,19 @@ export default function AdminDashboard() {
     }
   };
 
+  const fetchAnalytics = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/analytics");
+      const json = await response.json();
+      setAnalyticsData(json);
+    } catch (error) {
+      console.error("Error loading analytics:", error);
+      // Set demo data if backend fails — use same structure as getDemoAnalyticsData
+      setAnalyticsData(getDemoAnalyticsData());
+    }
+  };
+
   useEffect(() => {
-    const fetchAnalytics = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/analytics");
-        const json = await response.json();
-        setAnalyticsData(json);
-      } catch (error) {
-        console.error("Error loading analytics:", error);
-        // Set demo data if backend fails — use same structure as getDemoAnalyticsData
-        setAnalyticsData(getDemoAnalyticsData());
-      }
-    };
     fetchAnalytics();
   }, []);
 
@@ -231,11 +233,11 @@ export default function AdminDashboard() {
 
   const filteredBooks = bookSearchQuery
     ? dbBooks.filter((b: any) =>
-        (b.title || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
-        (b.author || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
-        (b.book_id || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
-        (b.department || '').toLowerCase().includes(bookSearchQuery.toLowerCase())
-      )
+      (b.title || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+      (b.author || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+      (b.book_id || '').toLowerCase().includes(bookSearchQuery.toLowerCase()) ||
+      (b.department || '').toLowerCase().includes(bookSearchQuery.toLowerCase())
+    )
     : dbBooks;
 
   const getStatusColor = (status: string) => {
@@ -334,7 +336,7 @@ export default function AdminDashboard() {
               <div>
                 <h4 className="font-bold text-slate-900 dark:text-white">{req.type === 'return_request_admin' ? 'Return Request' : 'Borrow Request'}</h4>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                  <strong className="text-slate-800 dark:text-slate-200">{req.student_name}</strong> ({req.student_id}) {req.type === 'return_request_admin' ? 'wants to return' : 'requested to borrow'}: <br/><strong className="text-slate-800 dark:text-slate-200">{req.book_title}</strong>.
+                  <strong className="text-slate-800 dark:text-slate-200">{req.student_name}</strong> ({req.student_id}) {req.type === 'return_request_admin' ? 'wants to return' : 'requested to borrow'}: <br /><strong className="text-slate-800 dark:text-slate-200">{req.book_title}</strong>.
                 </p>
                 <p className="text-xs text-slate-400 mt-1">{req.timestamp}</p>
               </div>
@@ -376,7 +378,7 @@ export default function AdminDashboard() {
               { id: 'analytics', icon: BarChart2, label: 'Analytics' },
               { id: 'books', icon: BookOpen, label: 'Books Management' },
               { id: 'records', icon: Clock, label: 'Borrow Records' },
-              { id: 'students', icon: Users, label: 'Student Directory' },
+              { id: 'students', icon: Users, label: 'User Directory' },
             ].map(item => (
               <button
                 key={item.id}
@@ -405,9 +407,8 @@ export default function AdminDashboard() {
 
         {/* Main Content */}
         <main
-          className={`flex-1 p-6 transition-[margin] duration-200 lg:p-8 ${
-            sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-64'
-          }`}
+          className={`flex-1 p-6 transition-[margin] duration-200 lg:p-8 ${sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-64'
+            }`}
         >
           {activeTab === 'overview' && (
             <div className="space-y-6">
@@ -489,13 +490,12 @@ export default function AdminDashboard() {
                   {recentActivities.length > 0 ? (
                     recentActivities.map((activity: any, index: number) => (
                       <div key={index} className="flex items-start gap-4 p-3 bg-gray-50 rounded-lg dark:bg-slate-800/70">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                          activity.type === 'borrow' 
-                            ? 'bg-blue-100' 
-                            : activity.type === 'return' 
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${activity.type === 'borrow'
+                          ? 'bg-blue-100'
+                          : activity.type === 'return'
                             ? 'bg-green-100'
                             : 'bg-purple-100'
-                        }`}>
+                          }`}>
                           {activity.type === 'borrow' && <BookOpen className="w-4 h-4 text-blue-600" />}
                           {activity.type === 'return' && <CheckCircle className="w-4 h-4 text-green-600" />}
                           {activity.type !== 'borrow' && activity.type !== 'return' && <Plus className="w-4 h-4 text-purple-600" />}
@@ -594,12 +594,12 @@ export default function AdminDashboard() {
                     <h2 className="text-xl font-bold mb-4 dark:text-slate-100">Add New Book</h2>
                     <p className="text-xs text-gray-400 mb-4">Book ID will be auto-generated (B-XXX)</p>
                     <div className="grid gap-3">
-                      <input placeholder="Title *" value={addBookForm.title} onChange={e => setAddBookForm({...addBookForm, title: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
-                      <input placeholder="Author *" value={addBookForm.author} onChange={e => setAddBookForm({...addBookForm, author: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
-                      <input placeholder="Department *" value={addBookForm.department} onChange={e => setAddBookForm({...addBookForm, department: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
-                      <input placeholder="Total Copies" type="number" min={1} value={addBookForm.total_copies} onChange={e => setAddBookForm({...addBookForm, total_copies: parseInt(e.target.value) || 1})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
-                      <input placeholder="Shelf No." value={addBookForm.shelf_no} onChange={e => setAddBookForm({...addBookForm, shelf_no: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
-                      <input placeholder="Rack No." value={addBookForm.rack_no} onChange={e => setAddBookForm({...addBookForm, rack_no: e.target.value})} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Title *" value={addBookForm.title} onChange={e => setAddBookForm({ ...addBookForm, title: e.target.value })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Author *" value={addBookForm.author} onChange={e => setAddBookForm({ ...addBookForm, author: e.target.value })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Department *" value={addBookForm.department} onChange={e => setAddBookForm({ ...addBookForm, department: e.target.value })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Total Copies" type="number" min={1} value={addBookForm.total_copies} onChange={e => setAddBookForm({ ...addBookForm, total_copies: parseInt(e.target.value) || 1 })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Shelf No." value={addBookForm.shelf_no} onChange={e => setAddBookForm({ ...addBookForm, shelf_no: e.target.value })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
+                      <input placeholder="Rack No." value={addBookForm.rack_no} onChange={e => setAddBookForm({ ...addBookForm, rack_no: e.target.value })} className="px-3 py-2 rounded-lg border border-gray-200 text-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100" />
                     </div>
                     <div className="flex gap-3 mt-6 justify-end">
                       <Button variant="ghost" onClick={() => setShowAddBookModal(false)}>Cancel</Button>
@@ -677,7 +677,19 @@ export default function AdminDashboard() {
 
           {activeTab === 'students' && (
             <div className="space-y-6">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Student Directory</h1>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">User Directory</h1>
+
+              {/* Search Bar for Users */}
+              <div className="relative max-w-md">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search by name, email, admission no, or department..."
+                  value={studentSearchQuery}
+                  onChange={e => setStudentSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-400 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100"
+                />
+              </div>
 
               <div className="bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-900 dark:shadow-black/20">
                 <div className="overflow-x-auto">
@@ -689,26 +701,39 @@ export default function AdminDashboard() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Department</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Books Borrowed</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total Borrows</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-slate-800">
-                      {dbStudents.length === 0 ? (
-                        <tr><td colSpan={6} className="px-6 py-12 text-center text-gray-400">No students found</td></tr>
-                      ) : dbStudents.map((student: any) => (
-                        <tr key={student.user_id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{student.admission_number}</td>
-                          <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{student.name}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.email}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.department || '-'}</td>
-                          <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.books_borrowed}</td>
-                          <td className="px-6 py-4">
-                            <Button variant="outline" size="sm" className="rounded-lg" onClick={() => handleViewStudentDetails(student)}>
-                              View Details
-                            </Button>
-                          </td>
-                        </tr>
-                      ))}
+                      {(() => {
+                        const filtered = studentSearchQuery
+                          ? dbStudents.filter((s: any) =>
+                            (s.name || '').toLowerCase().includes(studentSearchQuery.toLowerCase()) ||
+                            (s.email || '').toLowerCase().includes(studentSearchQuery.toLowerCase()) ||
+                            (s.admission_number || '').toLowerCase().includes(studentSearchQuery.toLowerCase()) ||
+                            (s.department || '').toLowerCase().includes(studentSearchQuery.toLowerCase())
+                          )
+                          : dbStudents;
+
+                        return filtered.length === 0 ? (
+                          <tr><td colSpan={7} className="px-6 py-12 text-center text-gray-400">No users found</td></tr>
+                        ) : filtered.map((student: any) => (
+                          <tr key={student.user_id} className="hover:bg-gray-50 dark:hover:bg-slate-800/60">
+                            <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-slate-100">{student.admission_number}</td>
+                            <td className="px-6 py-4 text-sm text-gray-900 dark:text-slate-100">{student.name}</td>
+                            <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.email}</td>
+                            <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.department || '-'}</td>
+                            <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.books_borrowed}</td>
+                            <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">{student.total_borrows || student.books_borrowed}</td>
+                            <td className="px-6 py-4">
+                              <Button variant="outline" size="sm" className="rounded-lg" onClick={() => handleViewStudentDetails(student)}>
+                                View Details
+                              </Button>
+                            </td>
+                          </tr>
+                        ));
+                      })()}
                     </tbody>
                   </table>
                 </div>
@@ -733,8 +758,8 @@ export default function AdminDashboard() {
                         <thead className="bg-gray-50 dark:bg-slate-800">
                           <tr>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Book Title</th>
-                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Issue Date</th>
-                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Issue Time</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Issue Date / Time</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Return Date / Time</th>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
                           </tr>
                         </thead>
@@ -742,8 +767,16 @@ export default function AdminDashboard() {
                           {studentBorrows.map((b: any) => (
                             <tr key={b.issue_id}>
                               <td className="px-4 py-2 text-gray-900 dark:text-slate-100">{b.book_title}</td>
-                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">{b.b_date}</td>
-                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">{b.b_time || '-'}</td>
+                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">
+                                {b.b_date} <span className="text-[10px] opacity-60 ml-1">{b.b_time || ''}</span>
+                              </td>
+                              <td className="px-4 py-2 text-gray-600 dark:text-slate-400">
+                                {b.r_date ? (
+                                  <>
+                                    {b.r_date} <span className="text-[10px] opacity-60 ml-1">{b.r_time || ''}</span>
+                                  </>
+                                ) : '-'}
+                              </td>
                               <td className="px-4 py-2"><Badge className={getStatusColor(b.status)}>{b.status}</Badge></td>
                             </tr>
                           ))}
@@ -769,7 +802,7 @@ export default function AdminDashboard() {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      window.location.reload();
+                      fetchAnalytics();
                     }}
                     className="flex items-center gap-2"
                   >
@@ -975,11 +1008,11 @@ export default function AdminDashboard() {
                           formatter={(value: any) => `${value} borrows`}
                           labelFormatter={(label) => label}
                         />
-                        <Legend 
+                        <Legend
                           verticalAlign="middle"
                           align="right"
                           layout="vertical"
-                          wrapperStyle={{ paddingLeft: '2px', fontSize: '16px', maxWidth: '500px', transform: 'translateX(60px)' }}
+                          wrapperStyle={{ paddingLeft: '2px', fontSize: '10px', maxWidth: '500px', transform: 'translateX(60px)' }}
                           formatter={(value, entry) => {
                             const item = entry.payload as any;
                             return `${item.name}: ${item.value}`;

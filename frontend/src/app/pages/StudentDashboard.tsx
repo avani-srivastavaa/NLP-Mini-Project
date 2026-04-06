@@ -177,7 +177,7 @@ export default function StudentDashboard() {
     const saved = window.localStorage.getItem('smart-library-user');
     return saved ? JSON.parse(saved) : null;
   });
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   // Chatbot Persistent State
@@ -252,6 +252,7 @@ export default function StudentDashboard() {
 
           if (data.status === 'approved') {
             loadUserData();
+            setShowNotifications(true);
           }
         }
 
@@ -260,6 +261,7 @@ export default function StudentDashboard() {
           if (data.reason) setReturnError(data.reason);
           if (data.status === 'approved') {
             loadUserData();
+            setShowNotifications(true);
           }
         }
       };
@@ -738,7 +740,22 @@ export default function StudentDashboard() {
                       </div>
                     ))}
 
-                    {activeBorrows.length === 0 && historyRecords.filter(r => r.status !== 'returned' && r.r_date && new Date() > new Date(r.r_date)).length === 0 && (
+                    {/* Recent Return notifications */}
+                    {historyRecords.filter(r => r.status === 'returned').slice(0, 3).map(r => (
+                      <div key={`returned-${r.issue_id}`} className="p-3 flex gap-3 text-slate-500">
+                        <div className="w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle className="w-4 h-4 text-emerald-600" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-800 dark:text-slate-200">Book Returned</p>
+                          <p className="text-xs text-gray-400 mt-0.5">{r.book_title}</p>
+                        </div>
+                      </div>
+                    ))}
+
+                    {activeBorrows.length === 0 && 
+                     historyRecords.filter(r => r.status !== 'returned' && r.r_date && new Date() > new Date(r.r_date)).length === 0 &&
+                     historyRecords.filter(r => r.status === 'returned').length === 0 && (
                       <div className="p-6 text-center text-sm text-gray-400 dark:text-slate-500">
                         No notifications
                       </div>

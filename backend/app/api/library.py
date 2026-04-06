@@ -198,15 +198,29 @@ def get_all_borrow_records(db: Session = Depends(get_db)):
 @router.get("/admin/students")
 def get_all_students(db: Session = Depends(get_db)):
     """
-    Returns all students with their active borrow counts for the admin student directory.
+    Returns all students with their total and active borrow counts for the admin directory.
+    Only returns students who have at least one record in BorrowedBook.
     """
-    students = db.query(User).all()
+    # Find all user IDs that have at least one borrow record
+    user_ids_with_history = db.query(BorrowedBook.user_id).distinct().all()
+    user_ids = [u[0] for u in user_ids_with_history]
+    
+    if not user_ids:
+        return []
+
+    students = db.query(User).filter(User.user_id.in_(user_ids)).all()
     results = []
 
     for student in students:
-        borrow_count = db.query(BorrowedBook).filter(
+        # Active borrows
+        active_count = db.query(BorrowedBook).filter(
             BorrowedBook.user_id == student.user_id,
             BorrowedBook.status == "issued"
+        ).count()
+        
+        # Total borrows (history)
+        total_count = db.query(BorrowedBook).filter(
+            BorrowedBook.user_id == student.user_id
         ).count()
 
         results.append({
@@ -217,7 +231,8 @@ def get_all_students(db: Session = Depends(get_db)):
             "department": student.department,
             "class_name": student.class_name,
             "contact_no": student.contact_no,
-            "books_borrowed": borrow_count,
+            "books_borrowed": active_count, # Keeping name for frontend compatibility
+            "total_borrows": total_count,
         })
 
     return results

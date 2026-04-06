@@ -15,7 +15,8 @@ class TokenRequest(BaseModel):
 @router.post("/login")
 def google_login(token: TokenRequest, db: Session = Depends(get_db)):
     try:
-        decoded_token = firebase_auth.verify_id_token(token.id_token)
+        # Set clock_skew_seconds to 10 to handle slight clock drift between client and server
+        decoded_token = firebase_auth.verify_id_token(token.id_token, clock_skew_seconds=10)
         email = decoded_token.get("email")
         name = decoded_token.get("name")
 
