@@ -95,10 +95,12 @@ npm run dev
 
 ## 📊 Data Architecture
 
-### CSV Data Sources (datasets/)
+### SQL Data Sources (datasets) — Includes Books, Users, Borrowed_books, and Review tables with catalog, user data, borrowing history, and feedback records.
 - `books-final.csv` - Complete book catalog with metadata (310 books)
 - `students-final.csv` - Student registration data (300+ students)
 - `borrowing_history-final.csv` - Historical transaction records
+- review-final.csv – User reviews and ratings for books
+
 
 ### SQLite Database Schema
 - **Students Table**: User accounts and departmental information
@@ -329,14 +331,6 @@ http://localhost:5173
 * Nihar Sudheer
 * Vishal Singh
 
-
-
-## 📌 GitHub Contributions
-
-* Team Members – Frontend, database, and system integration
-
-
-
 ## 📚 References
 
 * Scikit-learn Documentation
@@ -344,7 +338,7 @@ http://localhost:5173
 * React Documentation
 * Firebase Documentation
 * NLP Tutorials
-* https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c
+* HyDE: Hypothetical Document Embedding
 
 
 
