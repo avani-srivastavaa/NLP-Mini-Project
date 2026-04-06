@@ -344,6 +344,7 @@ http://localhost:5173
 * React Documentation
 * Firebase Documentation
 * NLP Tutorials
+* https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c
 
 
 
