@@ -343,7 +343,6 @@ http://localhost:5173
 * [Quick Start – React](https://share.google/NCnHuAE3QPbzATbkS)
 * [SentenceTransformers Documentation](https://share.google/yCp92ffMQYKPmXsow)
 * [Firebase Documentation](https://share.google/7D87aoXyiXYxCS3t7)
-* NLP Tutorials
 * [HyDE: Hypothetical Document Embedding](https://cgorale111.medium.com/hyde-hypothetical-document-embeddings-3071840e364c)
 
 
