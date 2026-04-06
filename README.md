@@ -128,6 +128,7 @@ npm run dev
 - **Tailwind CSS**: Utility-first styling system
 - **Recharts**: Interactive data visualization library
 - **Lucide Icons**: Beautiful and consistent iconography
+- **Firebase SDK**: Secure client-side Authentication (Login/Sign-up) and session managemen
 
 ## 📈 Analytics Data Pipeline
 
