@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { getAdminBorrowRecords, getAdminStudents, getStudentBorrowDetails, addBook, updateBookCopies, deleteBook, getBooks, BASE_URL, WS_URL } from '../data/api';
 import {
   Shield,
@@ -106,6 +106,7 @@ const getDemoAnalyticsData = () => ({
 });
 
 export default function AdminDashboard() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [analyticsData, setAnalyticsData] = useState<any>(getDemoAnalyticsData());
   const [recentActivities, setRecentActivities] = useState<any[]>([]);
@@ -132,6 +133,12 @@ export default function AdminDashboard() {
   // WebSocket & Borrow Requests State
   const ws = useRef<WebSocket | null>(null);
   const [pendingRequests, setPendingRequests] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (window.localStorage.getItem('smart-library-admin-auth') !== 'true') {
+      navigate('/admin/login', { replace: true });
+    }
+  }, [navigate]);
 
   useEffect(() => {
     // Connect WebSocket
@@ -289,6 +296,7 @@ export default function AdminDashboard() {
   };
   const handleLogout = () => {
     window.localStorage.removeItem('smart-library-admin-auth');
+    navigate('/admin/login', { replace: true });
   };
 
   return (

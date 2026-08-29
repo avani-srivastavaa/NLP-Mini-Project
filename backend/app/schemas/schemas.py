@@ -18,6 +18,16 @@ class UserCreate(BaseModel):
     admission_number: str
     name: str
     department: str
+    email: str
+    password: str
+
+class PasswordReset(BaseModel):
+    admission_number: str
+    email: str
+    new_password: str
+
+class AdminLogin(BaseModel):
+    email: str
     password: str
 
 class GoogleUserCompleteProfile(BaseModel):
@@ -32,6 +42,7 @@ class GoogleUserCreateCredentials(BaseModel):
     email: str
     name: str
     admission_number: str
+    department: str
     password: str
 
 # Borrowed Books Schema

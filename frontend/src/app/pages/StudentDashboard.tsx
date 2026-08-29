@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import ChatbotPage from './ChatbotPage';
 import {
   Book,
@@ -173,6 +173,7 @@ function ProfileCompletionModal({ user, onComplete }: { user: any; onComplete: (
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function StudentDashboard() {
+  const navigate = useNavigate();
   const [user, setUser] = useState<any>(() => {
     const saved = window.localStorage.getItem('smart-library-user');
     return saved ? JSON.parse(saved) : null;
@@ -185,6 +186,12 @@ export default function StudentDashboard() {
   const [chatLoading, setChatLoading] = useState(false);
   const [chatbotInitialized, setChatbotInitialized] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  useEffect(() => {
+    if (window.localStorage.getItem('smart-library-student-auth') !== 'true' || !user) {
+      navigate('/student/login', { replace: true });
+    }
+  }, [navigate, user]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);

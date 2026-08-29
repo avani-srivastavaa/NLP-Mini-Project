@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables from .env file (explicit path so it works from any cwd)
-_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '.env')
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', '.env')
 load_dotenv(_env_path, override=True)
 
 
@@ -54,7 +54,7 @@ RULES:
 
     try:
         client = genai.Client(api_key=api_key)
-        MODEL_ID = "models/gemini-2.5-flash"
+        MODEL_ID = "models/gemini-3.6-flash"
 
         config = types.GenerateContentConfig(
             system_instruction=system_instruction,

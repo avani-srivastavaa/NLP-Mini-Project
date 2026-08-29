@@ -29,6 +29,55 @@ export async function manualLogin(admission_number: string, password: string) {
   return res.json(); // { message, user_id, admission_number, name, department, email }
 }
 
+export async function registerStudent(payload: {
+  admission_number: string;
+  name: string;
+  department: string;
+  email: string;
+  password: string;
+}) {
+  const res = await fetch(`${BASE_URL}/auth/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Could not create account");
+  }
+  return res.json();
+}
+
+export async function resetStudentPassword(payload: {
+  admission_number: string;
+  email: string;
+  new_password: string;
+}) {
+  const res = await fetch(`${BASE_URL}/auth/password-reset`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Could not reset password");
+  }
+  return res.json();
+}
+
+export async function adminLogin(email: string, password: string) {
+  const res = await fetch(`${BASE_URL}/auth/admin/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail ?? "Admin login failed");
+  }
+  return res.json();
+}
+
 // Update User Profile
 export async function updateUserProfile(admission_number: string, profileData: any) {
   const res = await fetch(`${BASE_URL}/auth/profile/${admission_number}`, {
@@ -81,7 +130,7 @@ export async function completeGoogleProfile(payload: any) {
 }
 
 // Create Credentials (Login Step 1)
-export async function createGoogleCredentials(payload: { email: string, name: string, admission_number: string, password: string }) {
+export async function createGoogleCredentials(payload: { email: string, name: string, admission_number: string, department: string, password: string }) {
   const res = await fetch(`${BASE_URL}/auth/google/create-credentials`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

@@ -1,9 +1,12 @@
-fastapi==0.104.1
-uvicorn==0.24.0
+# Current FastAPI supports the AnyIO version required by google-genai.
+fastapi>=0.115,<1.0
+uvicorn>=0.30,<1.0
 pandas==2.1.3
-google-generativeai==0.3.0
+# The chatbot imports `from google import genai`, provided by the current SDK.
+google-genai
 python-dotenv==1.0.0
-sentence-transformers==2.2.2
+# Compatible with the current Hugging Face Hub API used by the chatbot embeddings.
+sentence-transformers>=3,<6
 scikit-learn==1.3.2
 mysql-connector-python==8.2.0
 pymysql==1.1.0

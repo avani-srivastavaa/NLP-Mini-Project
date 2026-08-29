@@ -18,7 +18,7 @@ from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 
 # Load environment variables from .env file (explicit path so it works from any cwd)
-_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '.env')
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', '.env')
 load_dotenv(_env_path, override=True)
 
 from sqlalchemy.orm import Session
@@ -230,7 +230,7 @@ Do NOT answer book/borrow/recommendation queries directly - only detect intent a
         return "Error: Gemini API key not configured."
     try:
         client = genai.Client(api_key=api_key)
-        MODEL_ID = "models/gemini-2.5-flash"
+        MODEL_ID = "models/gemini-3.6-flash"
         config = types.GenerateContentConfig(
             system_instruction=system_instruction,
             temperature=0.3
@@ -383,7 +383,7 @@ def format_recommendations_with_gemini(primary_books, related_books, user_topic,
             temperature=0.5
         )
         response = client.models.generate_content(
-            model="models/gemini-2.5-flash",
+            model="models/gemini-3.6-flash",
             contents=prompt,
             config=config
         )

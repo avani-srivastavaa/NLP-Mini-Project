@@ -6,6 +6,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 
 import { ThemeToggle } from '../components/theme/ThemeToggle';
+import { adminLogin } from '../data/api';
 
 const accessNotes = [
   'Monitor borrowing activity with cleaner oversight',
@@ -17,13 +18,24 @@ export default function AdminLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.localStorage.setItem('smart-library-admin-auth', 'true');
-    window.localStorage.removeItem('smart-library-student-auth');
-    navigate('/admin/dashboard');
+    setError(null);
+    setLoading(true);
+    try {
+      await adminLogin(email, password);
+      window.localStorage.setItem('smart-library-admin-auth', 'true');
+      window.localStorage.removeItem('smart-library-student-auth');
+      navigate('/admin/dashboard');
+    } catch (err: any) {
+      setError(err.message || 'Admin login failed.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,6 +75,7 @@ export default function AdminLogin() {
           </div>
 
           <form onSubmit={handleLogin} className="space-y-5">
+            {error && <p className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-300">{error}</p>}
             <div className="space-y-2">
               <Label htmlFor="email">Admin Email</Label>
               <Input
@@ -89,14 +102,10 @@ export default function AdminLogin() {
               />
             </div>
 
-            <div className="flex items-center justify-end text-sm">
-              <a href="#" className="font-medium text-slate-700 hover:underline dark:text-slate-300">
-                Forgot password?
-              </a>
-            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400">For the local demo: <strong>admin@library.local</strong> / <strong>admin123</strong>. Change these in the root <code>.env</code> before deploying.</p>
 
-            <Button type="submit" className="h-12 w-full rounded-2xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-white">
-              Login to Dashboard
+            <Button type="submit" disabled={loading} className="h-12 w-full rounded-2xl bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-70 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-white">
+              {loading ? 'Signing in...' : 'Login to Dashboard'}
               <ArrowRight className="size-4" />
             </Button>
           </form>

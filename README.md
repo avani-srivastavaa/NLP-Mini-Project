@@ -11,24 +11,40 @@ A comprehensive library management system built with FastAPI (backend) and React
 
 ## 🚀 Quick Start
 
-### Option 1: Automated Setup (Recommended)
-```bash
-# Double-click the start_servers.bat file in the project root
-start_servers.bat
-```
+### Local setup (Windows)
 
-### Option 2: Manual Setup
-```bash
-# Terminal 1: Start Backend
-cd backend_new
-pip install -r requirements.txt
-python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Install Python 3.11+ and Node.js 20+, then run the following from the project root.
 
-# Terminal 2: Start Frontend
+```powershell
+# Create the Python environment and install backend packages
+py -3.11 -m venv nlp_venv
+.\\nlp_venv\\Scripts\\python.exe -m pip install -r requirements.txt
+
+# Create your private configuration file and local SQLite demo database
+Copy-Item .env.example .env
+# Edit .env and set GEMINI_API_KEY if you want the AI chatbot enabled
+.\\nlp_venv\\Scripts\\python.exe seed_database.py
+
+# Install frontend packages and create its private Firebase configuration file
 cd frontend
-npm install
-npm run dev
+npm.cmd install
+Copy-Item .env.example .env
 ```
+
+Keep both `.env` files and `backend/app/credentials/firebase_key.json` private. They are ignored by Git. Firebase is required only for Google sign-in; the seeded local student login works without it (password: `demo123`).
+
+Start the application in two terminals:
+
+```powershell
+# Terminal 1, project root
+.\\nlp_venv\\Scripts\\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+
+# Terminal 2
+cd frontend
+npm.cmd run dev
+```
+
+Open the local address printed by Vite (normally `http://127.0.0.1:5173`).
 
 ## 📊 Advanced Analytics Dashboard
 

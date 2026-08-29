@@ -15,8 +15,6 @@ const parthImage = new URL('../components/assets/developers/parth.png', import.m
 const sarthImage = new URL('../components/assets/developers/sarth.png', import.meta.url).href;
 const vedantImage = new URL('../components/assets/developers/vedant.png', import.meta.url).href;
 const jayeshImage = new URL('../components/assets/developers/jayesh.png', import.meta.url).href;
-const tajeshreeImage = new URL('../components/assets/developers/tajeshree.png', import.meta.url).href;
-const vishalImage = new URL('../components/assets/developers/vishal.png', import.meta.url).href;
 
 const developers = [
   {

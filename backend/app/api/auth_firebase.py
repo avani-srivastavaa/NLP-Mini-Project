@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from backend.app.core.database import get_db
 from backend.app.models.models import User
 from backend.app.schemas.schemas import GoogleUserCompleteProfile, GoogleUserCreateCredentials
+from backend.app.core.security import hash_password
 
 router = APIRouter(prefix="/auth/google", tags=["Google Authentication"])
 
@@ -20,10 +21,10 @@ def google_login(token: TokenRequest, db: Session = Depends(get_db)):
         email = decoded_token.get("email")
         name = decoded_token.get("name")
 
-        if not email or not email.endswith(".mes.ac.in"):
+        if not email or not decoded_token.get("email_verified", False):
             raise HTTPException(
                 status_code=403,
-                detail="Only MES accounts allowed"
+                detail="Please sign in with a verified Google email address"
             )
 
         # Check if the user already exists in MySQL
@@ -50,6 +51,8 @@ def google_login(token: TokenRequest, db: Session = Depends(get_db)):
                 "name": name
             }
 
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Invalid authentication token: {str(e)}")
 
@@ -67,8 +70,9 @@ def create_credentials(data: GoogleUserCreateCredentials, db: Session = Depends(
     new_user = User(
         user_id=str(uuid.uuid4()), # Generate a unique user_id
         admission_number=data.admission_number,
-        password=data.password, 
+        password=hash_password(data.password),
         name=data.name,
+        department=data.department,
         email=data.email
     )
     

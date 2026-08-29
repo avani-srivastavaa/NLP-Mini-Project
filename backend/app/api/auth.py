@@ -1,29 +1,89 @@
+import os
+import uuid
+from hmac import compare_digest
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from backend.app.models.models import User
-from backend.app.schemas.schemas import UserLogin, UserProfileUpdate
+from backend.app.schemas.schemas import AdminLogin, PasswordReset, UserCreate, UserLogin, UserProfileUpdate
 from backend.app.core.database import get_db
+from backend.app.core.security import hash_password, verify_password
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
-@router.post("/login")
-def login(data: UserLogin, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.admission_number == data.admission_number).first()
-    
-    # We use plain text check because the DB currently has dummy plain text passwords
-    if not user or user.password != data.password:
-        raise HTTPException(status_code=400, detail="Invalid admission number or password")
-    
+def _valid_password(password: str) -> bool:
+    return len(password) >= 8
+
+def _password_matches(plain: str, stored: str) -> bool:
+    """Support seeded legacy accounts while all new/updated passwords are hashed."""
+    if stored.startswith("$2"):
+        return verify_password(plain, stored)
+    return compare_digest(plain, stored)
+
+def _user_payload(user: User) -> dict:
     return {
-        "message": "Login successful", 
         "user_id": user.user_id,
         "admission_number": user.admission_number,
         "name": user.name,
         "department": user.department,
         "email": user.email,
         "class_name": user.class_name,
-        "contact_no": user.contact_no
+        "contact_no": user.contact_no,
     }
+
+@router.post("/login")
+def login(data: UserLogin, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.admission_number == data.admission_number).first()
+
+    if not user or not _password_matches(data.password, user.password):
+        raise HTTPException(status_code=400, detail="Invalid admission number or password")
+    return {"message": "Login successful", **_user_payload(user)}
+
+@router.post("/register")
+def register(data: UserCreate, db: Session = Depends(get_db)):
+    if not _valid_password(data.password):
+        raise HTTPException(status_code=400, detail="Password must contain at least 8 characters")
+    if db.query(User).filter(User.admission_number == data.admission_number).first():
+        raise HTTPException(status_code=400, detail="Admission number is already registered")
+    if db.query(User).filter(User.email == data.email.lower()).first():
+        raise HTTPException(status_code=400, detail="Email is already registered")
+    user = User(
+        user_id=str(uuid.uuid4()),
+        admission_number=data.admission_number.strip(),
+        name=data.name.strip(),
+        department=data.department.strip(),
+        email=data.email.lower().strip(),
+        password=hash_password(data.password),
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return {"message": "Account created", **_user_payload(user)}
+
+@router.post("/password-reset")
+def password_reset(data: PasswordReset, db: Session = Depends(get_db)):
+    # This local-demo reset deliberately requires both values. Production must use
+    # an emailed OTP or identity-provider verification before enabling this route.
+    if not os.getenv("ALLOW_DEMO_PASSWORD_RESET", "true").lower() == "true":
+        raise HTTPException(status_code=403, detail="Password reset is disabled by the administrator")
+    if not _valid_password(data.new_password):
+        raise HTTPException(status_code=400, detail="Password must contain at least 8 characters")
+    user = db.query(User).filter(
+        User.admission_number == data.admission_number.strip(),
+        User.email == data.email.lower().strip(),
+    ).first()
+    if not user:
+        raise HTTPException(status_code=400, detail="Admission number and email do not match an account")
+    user.password = hash_password(data.new_password)
+    db.commit()
+    return {"message": "Password updated. Please sign in with your new password."}
+
+@router.post("/admin/login")
+def admin_login(data: AdminLogin):
+    expected_email = os.getenv("ADMIN_EMAIL", "admin@library.local")
+    expected_password = os.getenv("ADMIN_PASSWORD", "admin123")
+    if not (compare_digest(data.email.lower().strip(), expected_email.lower()) and compare_digest(data.password, expected_password)):
+        raise HTTPException(status_code=401, detail="Invalid admin credentials")
+    return {"message": "Admin login successful", "email": expected_email}
 
 
 @router.put("/profile/{admission_number}")

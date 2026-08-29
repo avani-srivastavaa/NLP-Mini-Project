@@ -4,8 +4,10 @@ __pycache__/
 *.pyo
 *.pyd
 nlp_venv/
-.env/
 .env
+.env.*
+!.env.example
+!**/.env.example
 cache/
 # Logs
 *.log
@@ -16,6 +18,8 @@ cache/
 # Credentials folder
 credentials/
 venv/
+*.db
+*.sqlite3
 
 # Node.js
 node_modules/
@@ -27,3 +31,4 @@ dist/
 # Environment files in any folder
 **/.env
 **/.env.*
+!**/.env.example
